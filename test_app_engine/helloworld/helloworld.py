@@ -15,8 +15,8 @@ class MainPage(webapp.RequestHandler):
 
 # app - название важно как ни странно
 app = webapp.WSGIApplication(
-                                     [('/', MainPage)],
-                                     debug=True)
+        [('/', MainPage)],
+        debug=True)
 
 def main():
     run_wsgi_app(app)
