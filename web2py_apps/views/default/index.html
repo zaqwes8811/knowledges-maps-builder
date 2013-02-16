@@ -1,0 +1,18 @@
+<html>
+   <head></head>
+   <body>
+  {{
+    response.files.insert(0,URL('static','js/jquery.js'))
+    response.files.insert(1,URL('static','js/no_w2p.js'))
+    response.files.insert(1,URL('static','js/web2py.js'))
+    response.include_files()
+   }}
+      <div id='button' onclick='on_click()'>Click me</div>
+      
+      <form>
+   <input name="name" onkeyup="ajax('echo', ['name'], 'target')" />
+</form>
+
+<div id="target">sdfadsf</div>
+   </body>
+</html>
