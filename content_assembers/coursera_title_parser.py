@@ -13,7 +13,10 @@ import _http_requester as http_request
 
 def _split_url(url):
     url_copy = url.replace('https://','')
-    return url_copy
+    url_copy = url_copy.replace('http://','')
+    
+    head = url_copy.split('/')[0]
+    return head#url_copy
 
 if __name__=='__main__':
     fname = 'lessions_names.txt'
