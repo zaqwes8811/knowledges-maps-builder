@@ -21,26 +21,30 @@ def _split_url(url):
     head = url_copy.split('/')[0]
     path = url_copy[len(head):]
     return head+' '+path
-    
-#def _iteration():
-    
                 
-def _fill_tree_dict(lst, levels, level_pos, result_dict):
-    #result_dict = {}
+def _fill_tree_dict(lst, levels, level_pos, result_dict, head):
+    print 'level_pos', level_pos
     if level_pos == len(levels)-1:
         return
     
     foldered_list = ('@@@'.join(lst)).split(levels[level_pos])
+    result_dict[head] = {}
+    
     for it in foldered_list:
         splitted = it.split('@@@')
+        # Текущий заголовок
         if splitted[0]:
-            # заполняем
-            #result_dict[splitted[0]] = 
-            print splitted[1:]
+            result_dict[head][splitted[0]] = {}
+
+            _fill_tree_dict(
+                splitted[1:], 
+                levels, 
+                level_pos+1, 
+                result_dict[head], splitted[0])
          
     # Переходим на следующий ярус
     level_pos += 1
-    #return result_dict
+
 
 def main():
     fname = 'lessions_names.txt'
@@ -50,7 +54,7 @@ def main():
     sets['name'] = fname
     
     i = 0
-    result_dict = []
+    result_list = []
     readed_list = iow.file2list(sets)
    
     for at in readed_list:
@@ -60,22 +64,22 @@ def main():
         # Ссылки с содержанием
         if 'pdf' in at or '&format=srt' in at:
             at_copy = at.replace('    <a target="_new" href=', '')
-            result_dict.append('link_to_get '+_split_url(at_copy))
+            result_list.append('link_to_get '+_split_url(at_copy))
 
         # Темы
         if 'min)' in at and 'div' not in at:
-            result_dict.append('name_content '+at)
+            result_list.append('name_content '+at)
             
         # Части-недели
         if '(Week' in at:
             at_copy_list = at.split('&nbsp;')[1].split('</h3>')[0]
-            result_dict.append('folder '+at_copy_list)
+            result_list.append('folder '+at_copy_list)
         i += 1
     
     # теперь нужно запаковать в словарь
     levels = ['folder', 'name_content', 'link_to_get']
     result = {}
-    result = _fill_tree_dict(result_dict, levels, 0, result)
+    _fill_tree_dict(result_list, levels, 0, result, 'root')
     
     # сохраняем результаты в файл
     to_file = [json.dumps(result, sort_keys=True, indent=2)]
