@@ -51,6 +51,18 @@ def _fill_tree_dict(lst, levels, level_pos, result_dict, head):
          
     # Переходим на следующий ярус
     level_pos += 1
+    
+def _tree_walker(tree):
+    if 'list' in str(type(tree)):
+        for at in tree:
+            print '\t\t', at
+        return
+        
+    # Выводим заголовки
+    for key in tree:
+        print 
+        print key
+        _tree_walker(tree[key])
 
 
 def main():
@@ -88,6 +100,8 @@ def main():
     levels = ['folder', 'name_content', 'link_to_get']
     result = {}
     _fill_tree_dict(result_list, levels, 0, result, 'root')
+    
+    _tree_walker(result)
     
     # сохраняем результаты в файл
     to_file = [json.dumps(result, sort_keys=True, indent=2)]
