@@ -23,7 +23,6 @@ def _split_url(url):
     return head+' '+path
                 
 def _fill_tree_dict(lst, levels, level_pos, result_dict, head):
-    print 'level_pos', level_pos
     if level_pos == len(levels)-1:
         return
     
@@ -35,7 +34,15 @@ def _fill_tree_dict(lst, levels, level_pos, result_dict, head):
         # Текущий заголовок
         if splitted[0]:
             result_dict[head][splitted[0]] = {}
-
+            
+            if level_pos != len(levels)-2:
+                result_dict[head][splitted[0]] = {}
+            else:
+                result_dict[head][splitted[0]] = []
+                for at in splitted[1:]:
+                    if at:
+                        result_dict[head][splitted[0]].append(at)
+                
             _fill_tree_dict(
                 splitted[1:], 
                 levels, 
@@ -63,8 +70,9 @@ def main():
         
         # Ссылки с содержанием
         if 'pdf' in at or '&format=srt' in at:
-            at_copy = at.replace('    <a target="_new" href=', '')
-            result_list.append('link_to_get '+_split_url(at_copy))
+            at_copy = at.replace('        <a target="_new" href=', '')
+            #result_list.append('link_to_get '+_split_url(at_copy))
+            result_list.append(_split_url(at_copy))
 
         # Темы
         if 'min)' in at and 'div' not in at:
