@@ -22,18 +22,25 @@ def _split_url(url):
     path = url_copy[len(head):]
     return head+' '+path
     
-def _iteration():
-    foldered_list = ('@@@'.join(lst)).split(levels[0])
+#def _iteration():
+    
+                
+def _fill_tree_dict(lst, levels, level_pos, result_dict):
+    #result_dict = {}
+    if level_pos == len(levels)-1:
+        return
+    
+    foldered_list = ('@@@'.join(lst)).split(levels[level_pos])
     for it in foldered_list:
         splitted = it.split('@@@')
         if splitted[0]:
             # заполняем
-            result_dict[splitted[0]] = splitted[1:]
-                
-def _fill_tree_dict(lst, levels, level_pos, result_dict):
-    result_dict = {}
-  
-    return result_dict
+            #result_dict[splitted[0]] = 
+            print splitted[1:]
+         
+    # Переходим на следующий ярус
+    level_pos += 1
+    #return result_dict
 
 def main():
     fname = 'lessions_names.txt'
@@ -68,7 +75,7 @@ def main():
     # теперь нужно запаковать в словарь
     levels = ['folder', 'name_content', 'link_to_get']
     result = {}
-    result = _fill_tree_dict(result_dict, levels, len(levels), result)
+    result = _fill_tree_dict(result_dict, levels, 0, result)
     
     # сохраняем результаты в файл
     to_file = [json.dumps(result, sort_keys=True, indent=2)]
