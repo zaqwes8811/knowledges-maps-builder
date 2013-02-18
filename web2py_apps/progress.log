@@ -46,3 +46,7 @@
 [2013-02-18 20:40:10] EDIT myapp/views/default/index.html: -4
 [2013-02-18 20:40:27] EDIT myapp/views/default/index.html: 0
 [2013-02-18 20:41:04] EDIT myapp/views/default/index.html: 0
+[2013-02-18 20:42:05] EDIT myapp/views/default/index.html: -90
+[2013-02-18 20:43:21] EDIT myapp/controllers/default.py: 0
+[2013-02-18 20:43:30] EDIT myapp/controllers/default.py: 0
+[2013-02-18 20:43:38] EDIT myapp/controllers/default.py: 0
