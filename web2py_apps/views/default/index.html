@@ -31,6 +31,13 @@
         margin-bottom: 15px;
         padding: 7px 9px;
       }
+      
+      .form-search input[type="text"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 10px;
+        padding:  4px 7px;
+      }
 
     </style>
        
@@ -45,6 +52,8 @@
     
     response.files.insert(4,URL('static','css/bootstrap.css'))
        response.files.insert(5,URL('static','css/bootstrap-responsive.css'))
+       
+       response.files.insert(6,URL('static','css/docs.css'))
     
     response.include_files()
    }}
@@ -70,18 +79,14 @@
    
    
    <div class="container">
-
       <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" class="input-block-level" placeholder="Email address">
         <input type="password" class="input-block-level" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
       </form>
-
     </div> <!-- /container -->
+    
+    
    <form class="bs-docs-example form-horizontal">
             <div class="control-group warning">
               <label class="control-label" for="inputWarning">Input with warning</label>
@@ -93,7 +98,7 @@
             <div class="control-group error">
               <label class="control-label" for="inputError">Input with error</label>
               <div class="controls">
-                <input type="text" id="inputError" class="input-block-level">
+                <input type="text" id="inputError">
                 <span class="help-inline">Please correct the error</span>
               </div>
             </div>
@@ -158,11 +163,7 @@
    <form class="form-search">
   <div class="input-append">
     <input type="text" class="span2 search-query">
-    <button type="submit" class="btn">Search</button>
-  </div>
-  <div class="input-prepend">
-    <button type="submit" class="btn">Search</button>
-    <input type="text" class="span2 search-query">
+    <button type="submit" class="btn" onclick="on_click()")>Search</button>
   </div>
 </form>
    </body>
