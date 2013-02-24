@@ -1,6 +1,6 @@
 <html>
-   <head>
-       <style type="text/css">
+<head>
+<style type="text/css">
       body {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -38,34 +38,87 @@
         margin-bottom: 10px;
         padding:  4px 7px;
       }
-
-    </style>
-       
-       
-   </head>
-   <body>
-  {{
+</style>
+</head>
+   
+<body>
+{{
     response.files.insert(0,URL('static','js/jquery.js'))
     response.files.insert(1,URL('static','js/no_w2p.js'))
     response.files.insert(2,URL('static','js/bootstrap.js'))
     response.files.insert(3,URL('static','js/web2py.js'))
     
     response.files.insert(4,URL('static','css/bootstrap.css'))
-       response.files.insert(5,URL('static','css/bootstrap-responsive.css'))
+    response.files.insert(5,URL('static','css/bootstrap-responsive.css'))
        
-       response.files.insert(6,URL('static','css/docs.css'))
-    
+    response.files.insert(6,URL('static','css/docs.css'))
     response.include_files()
-   }}
+}}
 
-   
-   
-   
-   <form class="form-search">
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#pane1" data-toggle="tab">Tab 1</a></li>
+    <li><a href="#pane2" data-toggle="tab">Tab 2</a></li>
+    <li><a href="#pane3" data-toggle="tab">Tab 3</a></li>
+    <li><a href="#pane4" data-toggle="tab">Tab 4</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="pane1" class="tab-pane active">
+      <h4>The Markup</h4>
+      <pre>Code here ...</pre>
+    </div>
+    <div id="pane2" class="tab-pane">
+    <h4>Pane 2 Content</h4>
+      <p> and so on ...</p>
+    </div>
+    <div id="pane3" class="tab-pane">
+      <h4>Pane 3 Content</h4>
+    </div>
+    <div id="pane4" class="tab-pane">
+      <h4>Pane 4 Content</h4>
+    </div>
+  </div><!-- /.tab-content -->
+</div><!-- /.tabbable -->
+
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a><div class="tab-content">
+   asdfasdfasdf
+  </div></li>
+  
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+    <a href="#profile" data-toggle="tab">Profile</a>
+  </ul>
+  <div class="tab-content">
+    <a href="#profile" data-toggle="tab">Profile</a>
+  </div>
+</div>
+
+<!--div class="form-actions">
+  <button type="submit" class="btn btn-primary" onclick="on_click()">Save changes</button>
+  <button type="button" class="btn">Cancel</button>
+</div-->
+
+<form class="form-search">
   <div class="input-append">
     <input type="text" class="span2 search-query">
-    <button type="submit" class="btn" onclick="on_click()")>Search</button>
+    <button type="button" class="btn btn-mini" onclick="on_click()">Search</button>
   </div>
 </form>
+
+<div class="btn-group" data-toggle="buttons-radio">
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+</div>
+
    </body>
 </html>

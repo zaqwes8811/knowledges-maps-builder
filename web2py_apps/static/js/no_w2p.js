@@ -4,8 +4,8 @@ function on_click() {
     }
     
     
-    var jqxhr = $.getJSON("http://127.0.0.1:8000/myapp/default/myvalues.json", function(data) {
-    //var jqxhr = $.getJSON("/myapp/default/myvalues.json", function(data) {
+    //var jqxhr = $.getJSON("http://127.0.0.1:8000/myapp/default/myvalues.json", function(data) {
+    var jqxhr = $.getJSON("/myapp/default/myvalues.json", function(data) {
       alert(data['values']);
     })
     .success(function() { 

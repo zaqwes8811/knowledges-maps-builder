@@ -29,9 +29,8 @@ def echo():
     return dict()#request.vars.name
     
 def myvalues():
-    #dropbox_test = local_import('test', reload=True)
-    
-    return dict()#dict(values=['a','b','c'])#, dropbox_test.dropbox_auth()])
+    return dict(values=['a','b','c'])
+    #dict(values=['a','b','c'])#, dropbox_test.dropbox_auth()])
     
 def user():
     """
