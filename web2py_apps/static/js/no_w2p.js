@@ -19,3 +19,9 @@ function on_click() {
         //alert("complete"); 
     });
 }
+
+function init() {
+  $(document).ready(function(){
+    $('#scrollbar1').tinyscrollbar();  
+  });
+}
