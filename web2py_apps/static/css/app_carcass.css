@@ -1,0 +1,40 @@
+/*
+
+// web2py
+response.files.insert(6,URL('static','css/app_carcass.css'))
+*/
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+/* Содержит в себе все поля страницы */
+.container_views {
+  height: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+/* Составные части */
+.height_row {
+  height: 100%;
+}
+
+.inner {
+    padding:6px;
+}
+
+.settings_operation_panel {
+  background-color: red;
+  /*height: 100%;*/
+}
+
+.settings_navigation_panel {
+  background-color: blue;
+  /*height: 100%;*/
+}
+ 
+.settings_top_panel {
+  background-color: blue;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
