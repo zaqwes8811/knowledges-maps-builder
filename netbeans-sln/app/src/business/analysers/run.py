@@ -8,12 +8,11 @@
     TODO: Ужесточить фильтрацию ключей
 """
 import sys
-sys.path.append('D:/github-develop')
-
 import re
 import json
 
-import uasio.os_io.io_wrapper as iow
+# App
+import dal.os_dal as dal   # как-то не очень выглядит
 
 _kInsertConst = '@@@@'
 _kCountContentItems = 3
@@ -62,31 +61,15 @@ def _purge_one_sentence(one_sentence):
     result = copy_one_sent
     return result
     
-def _read_file_and_purge_content
 
-if __name__ == '__main__':
+
+def main():
     files = ['srts/Iron Man02x26.srt', 'srts/Iron1and8.srt']
     result = {'it':{'num':0, 'sents':[]}}
     for fname in files:
-        settings = {
-            'name':  fname, 
-            'howOpen': 'r', 
-            'coding': 'cp866' }
-            
-        readed_lst = iow.file2list(settings)
-        purged_lst = list()
-        for at in readed_lst:
-            at_copy = at.replace('\r','')
-            at_copy = at_copy.replace('\n','')
-            if at_copy:
-                if not '-->' in at_copy:
-                    if not _is_content_nums(at_copy):
-                        at_copy = at_copy.replace('<i>','')
-                        at_copy = at_copy.replace('</i>','')
-                        purged_lst.append(at_copy)
+        content_in_one_line = dal.read_file_and_purge_content(fname)
         
-        # Теперь нужно разить на предложения
-        one_line = ' '.join(purged_lst)
+        # Единица контента в одно предложение
         one_line_with_inserts = ''
         for at in one_line:
             one_line_with_inserts += at
@@ -122,3 +105,6 @@ if __name__ == '__main__':
         'coding': 'cp866' }
         
     iow.list2file(settings, to_file)
+    
+if __name__ == '__main__':
+    main()

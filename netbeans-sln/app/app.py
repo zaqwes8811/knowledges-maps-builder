@@ -6,6 +6,9 @@ sys.path.append('./src/py_libs')
 # Other
 import uasio.os_io.io_wrapper as dal
 
+# App
+import business.analysers.run as runner
+
 
 def main():
     pass
