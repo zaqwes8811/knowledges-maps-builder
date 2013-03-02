@@ -61,6 +61,8 @@ def _purge_one_sentence(one_sentence):
     copy_one_sent = copy_one_sent.replace('/','')
     result = copy_one_sent
     return result
+    
+def _read_file_and_purge_content
 
 if __name__ == '__main__':
     files = ['srts/Iron Man02x26.srt', 'srts/Iron1and8.srt']
