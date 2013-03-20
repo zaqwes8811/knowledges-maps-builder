@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/business/analysers/strs_analyser.py=utf-8
+encoding//src/business/content_assembers/_web_example.py=utf-8
+encoding//src/business/originator_frequency_index/orginator.py=utf-8
+encoding//src/business/originator_frequency_index/strs_analyser.py=utf-8
 encoding//src/dal/os_dal.py=utf-8
