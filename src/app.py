@@ -15,17 +15,44 @@ def get_addrs():
     return files
 
 class Index(object):
-    pass
+    _own_index = {}  # ядро системы
+    
+    def do_branch(self, branch_name):
+        # ! Провеить на входимость, иначе затрет!
+        self._own_index = {branch_name:{}}
+    
+    def get_branch(self, branch_name):
+        return self._own_index[branch_name]
+    
+    def print_branch(self, branch_name):
+        branch = self._own_index[branch_name]
+        for at in branch:
+            if branch[at]['num'] > 1:
+                print branch[at]['num'], at
+                
+    def get_map(self):
+        print
+        print "Index map"
+        for at in self._own_index:
+            print at
+    
+    def save(self):
+        to_file = [json.dumps(self._own_index, sort_keys=True, indent=2)]
+        sets = dal.get_utf8_template()
+        sets['name'] = 'index.json'
+        sets['howOpen'] = 'w'
+        dal.list2file(sets, to_file)
 
 def main():
-    
     # Получаем пути к субтитрам
+    # Сборщик контента - отдельный объект!
+    content_item_name = 'Iron Man AA'
     files = get_addrs()
     
     # Хранилище индекса
-    content_item_name = 'Iron Man AA'
-    Index = {content_item_name:{}}  # плохо возвращат хэндл на внутр. объекта
-    
+    index = Index()
+    index.do_branch(content_item_name)
+
     # Получить индекс 
     for fname in files:
         # Выделяем единицы контента в список
@@ -33,28 +60,22 @@ def main():
         
         # Заполняем индекс
         # Разделить на наполнитель индекса и индекс?
+        # Index = {content_item_name:{}}  # плохо возвращат хэндл на внутр. объекта
+    
         orginator.process_list_content_sentences(
                 sentences_lst, 
-                Index[content_item_name])
+                index.get_branch(content_item_name))
         
         # Второй вариант, вернуть ветку индекса и потом уже загрузить
         # в сам индекс - избыточность, но класс индекса может проверить
         # валидность этой ветки
     
-    # Сохраняем в индексе
-    branch = Index[content_item_name]
-    for at in branch:
-        if branch[at]['num'] > 1:
-            print branch[at]['num'], at
-            
-    to_file = [json.dumps(Index, sort_keys=True, indent=2)]
+    # Выводим
+    index.print_branch(content_item_name)
+    index.get_map()
     
-    settings = {
-        'name':  'extracted_words.json', 
-        'howOpen': 'w', 
-        'coding': 'cp866' }
-        
-    dal.list2file(settings, to_file)
+    # Сохраняем в индексе  
+    index.save()
 
 if __name__=='__main__':
     main()
