@@ -92,8 +92,7 @@ class IndexCursor(object):
                           reverse=True) 
         y = []
         for at in src_list:
-            if at[1] < 50:
-                y.append(at[1])
+            y.append(at[1])
         return src_list, y
                   
     def save_branch_cash(self):

@@ -10,38 +10,38 @@ import business.originator_frequency_index.orginator as orginator
 from business.to_text import get_list_content_items_from_str 
 from business.originator_frequency_index.orginator import IndexCursor
 
+import dals.os_io.dirs_walker as dir_walker
+
 def get_addrs():
     files = [
             '../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
             '../statistic_data/srts/Iron Man AA/Iron1and8.srt']
     return files
 
-def main():
-    # Просматриваем индекс
-    index_root = 'indexes'
-    index = IndexCursor(index_root)
-    list_nodes = index.get_list_nodes()
-    print 'Index map: ', list_nodes
+def get_addr_stenf_algs():
+    result = []
+    head = '../statistic_data/srts/Stenf Algs part I'
+    extensions_list, dict_ignore_lists = dir_walker.get_template()
+    extensions_list = ['srt']
+    return dir_walker.find_files_down_tree_PC(head, 
+                                             extensions_list, 
+                                             dict_ignore_lists)
     
-    # Типа выбрали ветку
-    content_item_name = 'Iron Man AA'
-    
+
+def main(index, content_item_name, files):
+    # Создаем ветку, если ее нет и подкл. к ней
     index.assign_branch(content_item_name)
-    
-    # Получаем пути к субтитрам
-    # Сборщик контента - отдельный объект!
-    files = get_addrs()
     
     # Получить индекс 
     print 'Process files. Wait please...'
-    #for fname in files:
-        # Выделяем единицы контента в список
-       # sentences_lst = get_list_content_items_from_str(fname)
-
-      #  index.process_list_content_sentences(sentences_lst)
+    for fname in files:
+        if fname:
+            print fname
+            # Выделяем единицы контента в список
+            sentences_lst = get_list_content_items_from_str(fname)
+            index.process_list_content_sentences(sentences_lst)
     
     # Выводим
-    #index.print_branch(content_item_name)
     sorted_findex, freq = index.get_sorted_forward_idx()
     for at in sorted_findex:
         print at
@@ -50,14 +50,23 @@ def main():
     plot(x, freq)
     grid()
     show()
-    
-    # Сохраняем в индексе  
-    #index.save_branch()
-    #import sys
-    #print sys.argv[0]
 
 if __name__=='__main__':
     print 'Begin'
-    main()
+        # Просматриваем индекс
+    index_root = 'indexes'
+    index = IndexCursor(index_root)
+    list_nodes = index.get_list_nodes()
+    print 'Index map: ', list_nodes
+    
+    # Типа выбрали ветку
+    content_item_name = 'Stenf Online courses'#'Iron Man AA'
+    
+    # Получаем пути к субтитрам
+    # Сборщик контента - отдельный объект!
+    files, msg = get_addr_stenf_algs()#get_addrs()
+    
+    main(index, content_item_name, files)
+    print get_addr_stenf_algs()
     print 'Done'
 
