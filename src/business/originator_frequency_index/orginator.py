@@ -79,6 +79,22 @@ class IndexCursor(object):
         for at in branch:
             if branch[at] > 1:
                 print branch[at], at
+                
+    def get_sorted_forward_idx(self):
+        src_list = []
+        for at in self._branch_cash:
+            src_list.append((at, self._branch_cash[at]))
+            
+        # Сортируем
+        src_list = sorted(
+                          src_list, 
+                          key=lambda record: record[1],
+                          reverse=True) 
+        y = []
+        for at in src_list:
+            if at[1] < 50:
+                y.append(at[1])
+        return src_list, y
                   
     def save_branch_cash(self):
         to_file = [json.dumps(self._branch_cash, sort_keys=True, indent=2)]
