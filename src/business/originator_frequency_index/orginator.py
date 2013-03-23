@@ -41,13 +41,15 @@ class IndexCursor(object):
             Как будет происходит первое подкл. к индексу? Мы не знаем
             есть ли ветки
     """
-    _index_root = ''
-    _branch_cash = {}  # ядро системы - кэш
+    _index_root = None
+    _branch_cash = None  # ядро системы - кэш
     _current_branch = None
     
+    _kForwardIndexName = 'forward_index.json'
+    
     def _get_real_branch_name(self):
-        #return self._
-        pass
+        real_branch_name = self._index_root+'/'+self._current_branch.replace(' ', '$$')
+        return real_branch_name
     
     def __init__(self, index_root, init_branch=None):
         self._index_root = index_root
@@ -55,12 +57,19 @@ class IndexCursor(object):
     def assign_branch(self, branch_name):
         """ Соединяет курсор с узлом. Если узла нет, создается."""
         self._current_branch = branch_name
-        
+        self._branch_cash = {}
         try:
-            os.mkdir(self._index_root+'/'+branch_name.replace(' ', '$$'))
+            os.mkdir(self._get_real_branch_name())
         except OSError as e:
             print 'Branch is exist', e    
             # Загружаем индекс 
+            sets = dal.get_utf8_template()
+            sets['name'] = self._get_real_branch_name()+'/'+self._kForwardIndexName
+            readed_list = dal.file2list(sets)
+            branch_in_json = ' '.join(readed_list)
+            
+            # TODO(zaqwes): долгая операция(несколько секунд), как быть?
+            self._branch_cash = json.loads(branch_in_json)
     
     def print_branch(self, branch_name):
         branch = self._branch_cash[branch_name]
@@ -74,12 +83,15 @@ class IndexCursor(object):
         for at in self._branch_cash:
             print at
     
-    def save_branch(self, branch_name):
+    def _save_branch_cash(self, branch_name):
         to_file = [json.dumps(self._branch_cash, sort_keys=True, indent=2)]
         sets = dal.get_utf8_template()
         sets['name'] = 'index.json'
         sets['howOpen'] = 'w'
         dal.list2file(sets, to_file)
+        
+    def _load_branch_in_cash(self):
+        pass
     
     def get_list_nodes(self):
         list_nodes = os.listdir(self._index_root)
