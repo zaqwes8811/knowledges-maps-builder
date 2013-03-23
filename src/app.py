@@ -1,12 +1,9 @@
 # coding: utf-8
 
-# Other
-import json
-import dals.os_io.io_wrapper as dal
-
 # App
 import business.originator_frequency_index.orginator as orginator
 from business.to_text import get_list_content_items_from_str 
+from business.originator_frequency_index.orginator import IndexCursor
 
 def get_addrs():
     files = [
@@ -14,48 +11,38 @@ def get_addrs():
             '../statistic_data/srts/Iron Man AA/Iron1and8.srt']
     return files
 
-class Index(object):
-    pass
-
 def main():
+    # Просматриваем индекс
+    index_root = 'indexes'
+    index = IndexCursor(index_root)
+    list_nodes = index.get_list_nodes()
+    print 'Index map: ', list_nodes
+    
+    # Типа выбрали ветку
+    content_item_name = 'Iron Man AA'
+    
+    index.assign_branch(content_item_name)
     
     # Получаем пути к субтитрам
+    # Сборщик контента - отдельный объект!
     files = get_addrs()
     
-    # Хранилище индекса
-    content_item_name = 'Iron Man AA'
-    Index = {content_item_name:{}}  # плохо возвращат хэндл на внутр. объекта
-    
     # Получить индекс 
+    print 'Process files. Wait please...'
     for fname in files:
         # Выделяем единицы контента в список
         sentences_lst = get_list_content_items_from_str(fname)
-        
-        # Заполняем индекс
-        # Разделить на наполнитель индекса и индекс?
-        orginator.process_list_content_sentences(
-                sentences_lst, 
-                Index[content_item_name])
-        
-        # Второй вариант, вернуть ветку индекса и потом уже загрузить
-        # в сам индекс - избыточность, но класс индекса может проверить
-        # валидность этой ветки
+
+        index.process_list_content_sentences(sentences_lst)
     
-    # Сохраняем в индексе
-    branch = Index[content_item_name]
-    for at in branch:
-        if branch[at]['num'] > 1:
-            print branch[at]['num'], at
-            
-    to_file = [json.dumps(Index, sort_keys=True, indent=2)]
+    # Выводим
+    index.print_branch(content_item_name)
     
-    settings = {
-        'name':  'extracted_words.json', 
-        'howOpen': 'w', 
-        'coding': 'cp866' }
-        
-    dal.list2file(settings, to_file)
+    # Сохраняем в индексе  
+    #index.save_branch()
 
 if __name__=='__main__':
+    print 'Begin'
     main()
+    print 'Done'
 
