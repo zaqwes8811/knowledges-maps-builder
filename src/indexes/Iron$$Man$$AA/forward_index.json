@@ -1,3638 +1,1214 @@
 {
-    "'cause": {
-      "num": 1
-    }, 
-    "'em": {
-      "num": 1
-    }, 
-    "'s": {
-      "num": 1
-    }, 
-    "1x08": {
-      "num": 1
-    }, 
-    "49th": {
-      "num": 1
-    }, 
-    "87%": {
-      "num": 1
-    }, 
-    "aagh": {
-      "num": 1
-    }, 
-    "aah": {
-      "num": 1
-    }, 
-    "abducted": {
-      "num": 1
-    }, 
-    "abducting": {
-      "num": 1
-    }, 
-    "able": {
-      "num": 1
-    }, 
-    "about": {
-      "num": 14
-    }, 
-    "absolutely": {
-      "num": 1
-    }, 
-    "academy": {
-      "num": 3
-    }, 
-    "activate": {
-      "num": 2
-    }, 
-    "activated": {
-      "num": 1
-    }, 
-    "addic7ed": {
-      "num": 2
-    }, 
-    "adriano_csi": {
-      "num": 1
-    }, 
-    "adventurous": {
-      "num": 1
-    }, 
-    "afraid": {
-      "num": 1
-    }, 
-    "after": {
-      "num": 1
-    }, 
-    "again": {
-      "num": 4
-    }, 
-    "against": {
-      "num": 1
-    }, 
-    "agent": {
-      "num": 1
-    }, 
-    "ago": {
-      "num": 2
-    }, 
-    "ah": {
-      "num": 4
-    }, 
-    "aid": {
-      "num": 1
-    }, 
-    "air": {
-      "num": 1
-    }, 
-    "alarm": {
-      "num": 2
-    }, 
-    "alarms": {
-      "num": 3
-    }, 
-    "alert": {
-      "num": 1
-    }, 
-    "alerts": {
-      "num": 1
-    }, 
-    "alien": {
-      "num": 7
-    }, 
-    "aliens": {
-      "num": 5
-    }, 
-    "align": {
-      "num": 1
-    }, 
-    "all": {
-      "num": 22
-    }, 
-    "alligator": {
-      "num": 1
-    }, 
-    "allow": {
-      "num": 1
-    }, 
-    "allsubs": {
-      "num": 2
-    }, 
-    "almost": {
-      "num": 2
-    }, 
-    "alone": {
-      "num": 1
-    }, 
-    "along": {
-      "num": 1
-    }, 
-    "already": {
-      "num": 3
-    }, 
-    "always": {
-      "num": 6
-    }, 
-    "am": {
-      "num": 6
-    }, 
-    "ammunition": {
-      "num": 1
-    }, 
-    "an": {
-      "num": 9
-    }, 
-    "andand": {
-      "num": 1
-    }, 
-    "angry": {
-      "num": 1
-    }, 
-    "animals": {
-      "num": 1
-    }, 
-    "annihilated": {
-      "num": 1
-    }, 
-    "announcement": {
-      "num": 3
-    }, 
-    "another": {
-      "num": 3
-    }, 
-    "any": {
-      "num": 2
-    }, 
-    "anymore": {
-      "num": 2
-    }, 
-    "anyone": {
-      "num": 1
-    }, 
-    "anything": {
-      "num": 1
-    }, 
-    "apart": {
-      "num": 1
-    }, 
-    "apocalypse": {
-      "num": 1
-    }, 
-    "appropriate": {
-      "num": 1
-    }, 
-    "aptly": {
-      "num": 1
-    }, 
-    "are": {
-      "num": 36
-    }, 
-    "aren't": {
-      "num": 4
-    }, 
-    "arena": {
-      "num": 1
-    }, 
-    "armageddon": {
-      "num": 1
-    }, 
-    "armor": {
-      "num": 19
-    }, 
-    "armored": {
-      "num": 1
-    }, 
-    "armorwearing": {
-      "num": 1
-    }, 
-    "army": {
-      "num": 1
-    }, 
-    "around": {
-      "num": 1
-    }, 
-    "arrest": {
-      "num": 2
-    }, 
-    "arrested": {
-      "num": 1
-    }, 
-    "arrows": {
-      "num": 1
-    }, 
-    "as": {
-      "num": 14
-    }, 
-    "ask": {
-      "num": 1
-    }, 
-    "asked": {
-      "num": 1
-    }, 
-    "at": {
-      "num": 8
-    }, 
-    "attaching": {
-      "num": 1
-    }, 
-    "attack": {
-      "num": 1
-    }, 
-    "attacking": {
-      "num": 1
-    }, 
-    "authorize": {
-      "num": 1
-    }, 
-    "authorized": {
-      "num": 1
-    }, 
-    "aw": {
-      "num": 1
-    }, 
-    "away": {
-      "num": 1
-    }, 
-    "awesome": {
-      "num": 2
-    }, 
-    "b": {
-      "num": 3
-    }, 
-    "b2x26": {
-      "num": 1
-    }, 
-    "babe": {
-      "num": 1
-    }, 
-    "baby": {
-      "num": 2
-    }, 
-    "back": {
-      "num": 11
-    }, 
-    "bad": {
-      "num": 3
-    }, 
-    "ball": {
-      "num": 2
-    }, 
-    "banana": {
-      "num": 1
-    }, 
-    "bank": {
-      "num": 1
-    }, 
-    "bathroom": {
-      "num": 1
-    }, 
-    "batteries": {
-      "num": 1
-    }, 
-    "battle": {
-      "num": 1
-    }, 
-    "be": {
-      "num": 22
-    }, 
-    "beam": {
-      "num": 3
-    }, 
-    "beast": {
-      "num": 1
-    }, 
-    "beat": {
-      "num": 2
-    }, 
-    "because": {
-      "num": 2
-    }, 
-    "been": {
-      "num": 8
-    }, 
-    "beeping": {
-      "num": 3
-    }, 
-    "before": {
-      "num": 8
-    }, 
-    "behind": {
-      "num": 2
-    }, 
-    "being": {
-      "num": 1
-    }, 
-    "beings": {
-      "num": 2
-    }, 
-    "believe": {
-      "num": 4
-    }, 
-    "belong": {
-      "num": 1
-    }, 
-    "below": {
-      "num": 1
-    }, 
-    "best": {
-      "num": 1
-    }, 
-    "bet": {
-      "num": 2
-    }, 
-    "better": {
-      "num": 4
-    }, 
-    "big": {
-      "num": 5
-    }, 
-    "bigeyed": {
-      "num": 1
-    }, 
-    "bigger": {
-      "num": 1
-    }, 
-    "biggest": {
-      "num": 1
-    }, 
-    "bit": {
-      "num": 2
-    }, 
-    "black": {
-      "num": 3
-    }, 
-    "blare": {
-      "num": 1
-    }, 
-    "blast": {
-      "num": 1
-    }, 
-    "blasts": {
-      "num": 1
-    }, 
-    "blaze": {
-      "num": 1
-    }, 
-    "blind": {
-      "num": 1
-    }, 
-    "blink": {
-      "num": 1
-    }, 
-    "blow": {
-      "num": 3
-    }, 
-    "blows": {
-      "num": 1
-    }, 
-    "bones": {
-      "num": 1
-    }, 
-    "boo": {
-      "num": 1
-    }, 
-    "booster": {
-      "num": 1
-    }, 
-    "both": {
-      "num": 4
-    }, 
-    "bought": {
-      "num": 1
-    }, 
-    "brain": {
-      "num": 1
-    }, 
-    "breach": {
-      "num": 1
-    }, 
-    "break": {
-      "num": 4
-    }, 
-    "breath": {
-      "num": 1
-    }, 
-    "bring": {
-      "num": 2
-    }, 
-    "broadway": {
-      "num": 1
-    }, 
-    "broke": {
-      "num": 1
-    }, 
-    "broken": {
-      "num": 1
-    }, 
-    "build": {
-      "num": 1
-    }, 
-    "building": {
-      "num": 14
-    }, 
-    "bunker": {
-      "num": 1
-    }, 
-    "bus": {
-      "num": 4
-    }, 
-    "bust": {
-      "num": 1
-    }, 
-    "busted": {
-      "num": 1
-    }, 
-    "buster": {
-      "num": 1
-    }, 
-    "busy": {
-      "num": 2
-    }, 
-    "but": {
-      "num": 21
-    }, 
-    "buzzing": {
-      "num": 1
-    }, 
-    "by": {
-      "num": 4
-    }, 
-    "cake": {
-      "num": 2
-    }, 
-    "calibrate": {
-      "num": 1
-    }, 
-    "call": {
-      "num": 6
-    }, 
-    "called": {
-      "num": 3
-    }, 
-    "calls": {
-      "num": 1
-    }, 
-    "calm": {
-      "num": 1
-    }, 
-    "came": {
-      "num": 1
-    }, 
-    "camera": {
-      "num": 1
-    }, 
-    "cameras": {
-      "num": 2
-    }, 
-    "can": {
-      "num": 27
-    }, 
-    "can't": {
-      "num": 9
-    }, 
-    "cannon": {
-      "num": 1
-    }, 
-    "canon": {
-      "num": 1
-    }, 
-    "care": {
-      "num": 2
-    }, 
-    "carry": {
-      "num": 1
-    }, 
-    "caught": {
-      "num": 1
-    }, 
-    "cause": {
-      "num": 1
-    }, 
-    "cell": {
-      "num": 1
-    }, 
-    "cells": {
-      "num": 4
-    }, 
-    "certain": {
-      "num": 1
-    }, 
-    "challenge": {
-      "num": 1
-    }, 
-    "champions": {
-      "num": 1
-    }, 
-    "chance": {
-      "num": 2
-    }, 
-    "change": {
-      "num": 2
-    }, 
-    "charities": {
-      "num": 1
-    }, 
-    "charm": {
-      "num": 1
-    }, 
-    "chatter": {
-      "num": 2
-    }, 
-    "check": {
-      "num": 1
-    }, 
-    "cheering": {
-      "num": 2
-    }, 
-    "chime": {
-      "num": 1
-    }, 
-    "chuckling": {
-      "num": 1
-    }, 
-    "cinders": {
-      "num": 1
-    }, 
-    "clang": {
-      "num": 1
-    }, 
-    "clanking": {
-      "num": 1
-    }, 
-    "class": {
-      "num": 1
-    }, 
-    "clean": {
-      "num": 1
-    }, 
-    "clear": {
-      "num": 4
-    }, 
-    "cleared": {
-      "num": 2
-    }, 
-    "clint": {
-      "num": 1
-    }, 
-    "colorcyan": {
-      "num": 2
-    }, 
-    "com": {
-      "num": 2
-    }, 
-    "come": {
-      "num": 14
-    }, 
-    "comes": {
-      "num": 3
-    }, 
-    "comforting": {
-      "num": 1
-    }, 
-    "coming": {
-      "num": 4
-    }, 
-    "community": {
-      "num": 1
-    }, 
-    "company's": {
-      "num": 2
-    }, 
-    "completed": {
-      "num": 2
-    }, 
-    "computer": {
-      "num": 1
-    }, 
-    "concept": {
-      "num": 1
-    }, 
-    "concern": {
-      "num": 1
-    }, 
-    "concludes": {
-      "num": 1
-    }, 
-    "consider": {
-      "num": 1
-    }, 
-    "contact": {
-      "num": 2
-    }, 
-    "contacting": {
-      "num": 1
-    }, 
-    "continue": {
-      "num": 1
-    }, 
-    "control": {
-      "num": 3
-    }, 
-    "convincing": {
-      "num": 1
-    }, 
-    "cool": {
-      "num": 1
-    }, 
-    "core": {
-      "num": 5
-    }, 
-    "correction": {
-      "num": 2
-    }, 
-    "could": {
-      "num": 6
-    }, 
-    "couldn't": {
-      "num": 4
-    }, 
-    "count": {
-      "num": 1
-    }, 
-    "cowards": {
-      "num": 1
-    }, 
-    "crackles": {
-      "num": 1
-    }, 
-    "crash": {
-      "num": 1
-    }, 
-    "crashed": {
-      "num": 1
-    }, 
-    "crazy": {
-      "num": 1
-    }, 
-    "create": {
-      "num": 1
-    }, 
-    "critical": {
-      "num": 2
-    }, 
-    "cruel": {
-      "num": 1
-    }, 
-    "crybaby": {
-      "num": 1
-    }, 
-    "crying": {
-      "num": 1
-    }, 
-    "cue": {
-      "num": 1
-    }, 
-    "cut": {
-      "num": 2
-    }, 
-    "cutting": {
-      "num": 1
-    }, 
-    "da": {
-      "num": 1
-    }, 
-    "dad": {
-      "num": 13
-    }, 
-    "dad's": {
-      "num": 1
-    }, 
-    "daddy": {
-      "num": 1
-    }, 
-    "dangerous": {
-      "num": 1
-    }, 
-    "dark": {
-      "num": 1
-    }, 
-    "daughter": {
-      "num": 3
-    }, 
-    "daughter's": {
-      "num": 1
-    }, 
-    "day": {
-      "num": 2
-    }, 
-    "dead": {
-      "num": 3
-    }, 
-    "deal": {
-      "num": 1
-    }, 
-    "dealing": {
-      "num": 1
-    }, 
-    "demonstration": {
-      "num": 1
-    }, 
-    "demonstrations": {
-      "num": 1
-    }, 
-    "destroyer": {
-      "num": 1
-    }, 
-    "detail": {
-      "num": 1
-    }, 
-    "detonate": {
-      "num": 1
-    }, 
-    "detonation": {
-      "num": 1
-    }, 
-    "device": {
-      "num": 1
-    }, 
-    "did": {
-      "num": 9
-    }, 
-    "didn't": {
-      "num": 1
-    }, 
-    "die": {
-      "num": 1
-    }, 
-    "dinner": {
-      "num": 1
-    }, 
-    "dinosaur": {
-      "num": 1
-    }, 
-    "directly": {
-      "num": 1
-    }, 
-    "disabled": {
-      "num": 1
-    }, 
-    "disc": {
-      "num": 1
-    }, 
-    "disintegrated": {
-      "num": 1
-    }, 
-    "disruptor": {
-      "num": 2
-    }, 
-    "distract": {
-      "num": 1
-    }, 
-    "distraction": {
-      "num": 1
-    }, 
-    "diversion": {
-      "num": 2
-    }, 
-    "dizzy": {
-      "num": 1
-    }, 
-    "do": {
-      "num": 25
-    }, 
-    "does": {
-      "num": 2
-    }, 
-    "doesn't": {
-      "num": 5
-    }, 
-    "doing": {
-      "num": 5
-    }, 
-    "don't": {
-      "num": 19
-    }, 
-    "donate": {
-      "num": 1
-    }, 
-    "done": {
-      "num": 2
-    }, 
-    "doom": {
-      "num": 2
-    }, 
-    "door": {
-      "num": 2
-    }, 
-    "down": {
-      "num": 16
-    }, 
-    "downloaded": {
-      "num": 2
-    }, 
-    "drives": {
-      "num": 2
-    }, 
-    "drone": {
-      "num": 1
-    }, 
-    "drones": {
-      "num": 3
-    }, 
-    "dude": {
-      "num": 3
-    }, 
-    "dudes": {
-      "num": 1
-    }, 
-    "e": {
-      "num": 1
-    }, 
-    "earth": {
-      "num": 5
-    }, 
-    "eat": {
-      "num": 3
-    }, 
-    "edge": {
-      "num": 1
-    }, 
-    "eh": {
-      "num": 1
-    }, 
-    "either": {
-      "num": 2
-    }, 
-    "ejected": {
-      "num": 1
-    }, 
-    "electronic": {
-      "num": 2
-    }, 
-    "elevator": {
-      "num": 2
-    }, 
-    "eloquence": {
-      "num": 1
-    }, 
-    "embarrassing": {
-      "num": 1
-    }, 
-    "empire": {
-      "num": 1
-    }, 
-    "empty": {
-      "num": 1
-    }, 
-    "end": {
-      "num": 3
-    }, 
-    "ended": {
-      "num": 1
-    }, 
-    "endless": {
-      "num": 1
-    }, 
-    "energy": {
-      "num": 2
-    }, 
-    "engines": {
-      "num": 1
-    }, 
-    "enough": {
-      "num": 3
-    }, 
-    "enter": {
-      "num": 2
-    }, 
-    "entertainment": {
-      "num": 1
-    }, 
-    "entire": {
-      "num": 2
-    }, 
-    "equipment": {
-      "num": 1
-    }, 
-    "evac": {
-      "num": 1
-    }, 
-    "even": {
-      "num": 7
-    }, 
-    "ever": {
-      "num": 5
-    }, 
-    "every": {
-      "num": 5
-    }, 
-    "everyone": {
-      "num": 7
-    }, 
-    "everything": {
-      "num": 4
-    }, 
-    "everything's": {
-      "num": 1
-    }, 
-    "evil": {
-      "num": 1
-    }, 
-    "exactly": {
-      "num": 2
-    }, 
-    "except": {
-      "num": 1
-    }, 
-    "excited": {
-      "num": 1
-    }, 
-    "excursion": {
-      "num": 1
-    }, 
-    "existence": {
-      "num": 1
-    }, 
-    "exploding": {
-      "num": 1
-    }, 
-    "explosion": {
-      "num": 4
-    }, 
-    "explosions": {
-      "num": 1
-    }, 
-    "explosive": {
-      "num": 1
-    }, 
-    "explosives": {
-      "num": 1
-    }, 
-    "extermination": {
-      "num": 1
-    }, 
-    "extinct": {
-      "num": 1
-    }, 
-    "extraterrestrial": {
-      "num": 1
-    }, 
-    "extremely": {
-      "num": 1
-    }, 
-    "extremis": {
-      "num": 3
-    }, 
-    "eyes": {
-      "num": 1
-    }, 
-    "f1nc0": {
-      "num": 3
-    }, 
-    "failure": {
-      "num": 1
-    }, 
-    "fair": {
-      "num": 2
-    }, 
-    "faltering": {
-      "num": 1
-    }, 
-    "famous": {
-      "num": 1
-    }, 
-    "fan": {
-      "num": 1
-    }, 
-    "fares": {
-      "num": 1
-    }, 
-    "fast": {
-      "num": 3
-    }, 
-    "faster": {
-      "num": 1
-    }, 
-    "father": {
-      "num": 2
-    }, 
-    "favor": {
-      "num": 1
-    }, 
-    "fear": {
-      "num": 1
-    }, 
-    "federal": {
-      "num": 1
-    }, 
-    "feel": {
-      "num": 2
-    }, 
-    "feeling": {
-      "num": 1
-    }, 
-    "feet": {
-      "num": 1
-    }, 
-    "fell": {
-      "num": 1
-    }, 
-    "few": {
-      "num": 1
-    }, 
-    "field": {
-      "num": 2
-    }, 
-    "fight": {
-      "num": 2
-    }, 
-    "fighting": {
-      "num": 1
-    }, 
-    "finally": {
-      "num": 2
-    }, 
-    "find": {
-      "num": 8
-    }, 
-    "finds": {
-      "num": 1
-    }, 
-    "fine": {
-      "num": 3
-    }, 
-    "finish": {
-      "num": 1
-    }, 
-    "finished": {
-      "num": 4
-    }, 
-    "fire": {
-      "num": 4
-    }, 
-    "first": {
-      "num": 3
-    }, 
-    "flaming": {
-      "num": 1
-    }, 
-    "flee": {
-      "num": 1
-    }, 
-    "flesh": {
-      "num": 1
-    }, 
-    "flick": {
-      "num": 1
-    }, 
-    "floor": {
-      "num": 1
-    }, 
-    "floors": {
-      "num": 1
-    }, 
-    "fly": {
-      "num": 1
-    }, 
-    "foam": {
-      "num": 1
-    }, 
-    "focus": {
-      "num": 2
-    }, 
-    "font": {
-      "num": 4
-    }, 
-    "foolish": {
-      "num": 1
-    }, 
-    "fools": {
-      "num": 1
-    }, 
-    "foot": {
-      "num": 1
-    }, 
-    "footsteps": {
-      "num": 1
-    }, 
-    "for": {
-      "num": 24
-    }, 
-    "forces": {
-      "num": 1
-    }, 
-    "forget": {
-      "num": 2
-    }, 
-    "form": {
-      "num": 1
-    }, 
-    "fought": {
-      "num": 1
-    }, 
-    "four": {
-      "num": 1
-    }, 
-    "freaks": {
-      "num": 1
-    }, 
-    "frequency": {
-      "num": 1
-    }, 
-    "fried": {
-      "num": 1
-    }, 
-    "friendly": {
-      "num": 2
-    }, 
-    "friends": {
-      "num": 1
-    }, 
-    "from": {
-      "num": 10
-    }, 
-    "fry": {
-      "num": 2
-    }, 
-    "fuel": {
-      "num": 1
-    }, 
-    "full": {
-      "num": 1
-    }, 
-    "fullscale": {
-      "num": 1
-    }, 
-    "functions": {
-      "num": 1
-    }, 
-    "fury": {
-      "num": 7
-    }, 
-    "fusion": {
-      "num": 3
-    }, 
-    "game": {
-      "num": 2
-    }, 
-    "games": {
-      "num": 1
-    }, 
-    "gather": {
-      "num": 1
-    }, 
-    "gave": {
-      "num": 1
-    }, 
-    "gene": {
-      "num": 8
-    }, 
-    "general": {
-      "num": 3
-    }, 
-    "genius": {
-      "num": 1
-    }, 
-    "get": {
-      "num": 42
-    }, 
-    "gets": {
-      "num": 2
-    }, 
-    "getting": {
-      "num": 3
-    }, 
-    "giant": {
-      "num": 2
-    }, 
-    "give": {
-      "num": 6
-    }, 
-    "given": {
-      "num": 1
-    }, 
-    "gizmos": {
-      "num": 1
-    }, 
-    "glass": {
-      "num": 1
-    }, 
-    "glory": {
-      "num": 2
-    }, 
-    "go": {
-      "num": 17
-    }, 
-    "goal": {
-      "num": 1
-    }, 
-    "goes": {
-      "num": 1
-    }, 
-    "going": {
-      "num": 17
-    }, 
-    "gone": {
-      "num": 1
-    }, 
-    "gonna": {
-      "num": 7
-    }, 
-    "good": {
-      "num": 10
-    }, 
-    "got": {
-      "num": 15
-    }, 
-    "gotcha": {
-      "num": 1
-    }, 
-    "gothuh": {
-      "num": 1
-    }, 
-    "gotta": {
-      "num": 1
-    }, 
-    "gotten": {
-      "num": 1
-    }, 
-    "grab": {
-      "num": 1
-    }, 
-    "great": {
-      "num": 8
-    }, 
-    "greed": {
-      "num": 1
-    }, 
-    "green": {
-      "num": 1
-    }, 
-    "grew": {
-      "num": 2
-    }, 
-    "grey": {
-      "num": 1
-    }, 
-    "greyskinned": {
-      "num": 1
-    }, 
-    "grid": {
-      "num": 1
-    }, 
-    "groaning": {
-      "num": 5
-    }, 
-    "groans": {
-      "num": 1
-    }, 
-    "grounded": {
-      "num": 1
-    }, 
-    "group": {
-      "num": 1
-    }, 
-    "guardian": {
-      "num": 1
-    }, 
-    "guess": {
-      "num": 2
-    }, 
-    "guessed": {
-      "num": 1
-    }, 
-    "guessing": {
-      "num": 1
-    }, 
-    "guy": {
-      "num": 1
-    }, 
-    "guys": {
-      "num": 6
-    }, 
-    "ha": {
-      "num": 1
-    }, 
-    "had": {
-      "num": 2
-    }, 
-    "hah": {
-      "num": 6
-    }, 
-    "haha": {
-      "num": 1
-    }, 
-    "hall": {
-      "num": 1
-    }, 
-    "hallway": {
-      "num": 1
-    }, 
-    "hand": {
-      "num": 3
-    }, 
-    "handle": {
-      "num": 2
-    }, 
-    "handles": {
-      "num": 1
-    }, 
-    "hands": {
-      "num": 1
-    }, 
-    "hangar": {
-      "num": 1
-    }, 
-    "happen": {
-      "num": 1
-    }, 
-    "happened": {
-      "num": 3
-    }, 
-    "happening": {
-      "num": 1
-    }, 
-    "happens": {
-      "num": 1
-    }, 
-    "happier": {
-      "num": 1
-    }, 
-    "happy": {
-      "num": 2
-    }, 
-    "hard": {
-      "num": 4
-    }, 
-    "has": {
-      "num": 5
-    }, 
-    "hate": {
-      "num": 1
-    }, 
-    "have": {
-      "num": 39
-    }, 
-    "haven't": {
-      "num": 3
-    }, 
-    "having": {
-      "num": 3
-    }, 
-    "hawkeye": {
-      "num": 4
-    }, 
-    "hazardous": {
-      "num": 1
-    }, 
-    "hazmat": {
-      "num": 1
-    }, 
-    "he": {
-      "num": 18
-    }, 
-    "he'd": {
-      "num": 1
-    }, 
-    "he's": {
-      "num": 11
-    }, 
-    "head": {
-      "num": 2
-    }, 
-    "heads": {
-      "num": 1
-    }, 
-    "hear": {
-      "num": 3
-    }, 
-    "heard": {
-      "num": 3
-    }, 
-    "hearing": {
-      "num": 1
-    }, 
-    "hehe": {
-      "num": 1
-    }, 
-    "help": {
-      "num": 10
-    }, 
-    "helping": {
-      "num": 1
-    }, 
-    "helps": {
-      "num": 1
-    }, 
-    "her": {
-      "num": 2
-    }, 
-    "here": {
-      "num": 24
-    }, 
-    "here's": {
-      "num": 1
-    }, 
-    "hero": {
-      "num": 2
-    }, 
-    "heroes": {
-      "num": 3
-    }, 
-    "heroism": {
-      "num": 1
-    }, 
-    "hey": {
-      "num": 4
-    }, 
-    "hi": {
-      "num": 1
-    }, 
-    "high": {
-      "num": 2
-    }, 
-    "him": {
-      "num": 15
-    }, 
-    "his": {
-      "num": 9
-    }, 
-    "hisses": {
-      "num": 1
-    }, 
-    "hit": {
-      "num": 3
-    }, 
-    "hitech": {
-      "num": 1
-    }, 
-    "hmm": {
-      "num": 3
-    }, 
-    "hold": {
-      "num": 2
-    }, 
-    "holographic": {
-      "num": 1
-    }, 
-    "home": {
-      "num": 2
-    }, 
-    "homework": {
-      "num": 3
-    }, 
-    "honorable": {
-      "num": 1
-    }, 
-    "hop": {
-      "num": 1
-    }, 
-    "hope": {
-      "num": 3
-    }, 
-    "hopeful": {
-      "num": 1
-    }, 
-    "hour": {
-      "num": 1
-    }, 
-    "how": {
-      "num": 17
-    }, 
-    "how's": {
-      "num": 2
-    }, 
-    "hug": {
-      "num": 1
-    }, 
-    "huh": {
-      "num": 6
-    }, 
-    "hulk": {
-      "num": 7
-    }, 
-    "human": {
-      "num": 2
-    }, 
-    "humans": {
-      "num": 1
-    }, 
-    "hundreds": {
-      "num": 1
-    }, 
-    "hungry": {
-      "num": 1
-    }, 
-    "i": {
-      "num": 103
-    }, 
-    "i'd": {
-      "num": 6
-    }, 
-    "i'll": {
-      "num": 17
-    }, 
-    "i'm": {
-      "num": 35
-    }, 
-    "i've": {
-      "num": 11
-    }, 
-    "idea": {
-      "num": 1
-    }, 
-    "if": {
-      "num": 16
-    }, 
-    "ignored": {
-      "num": 1
-    }, 
-    "ii'll": {
-      "num": 1
-    }, 
-    "iit's": {
-      "num": 1
-    }, 
-    "image": {
-      "num": 2
-    }, 
-    "immediately": {
-      "num": 1
-    }, 
-    "important": {
-      "num": 1
-    }, 
-    "in": {
-      "num": 42
-    }, 
-    "incoming": {
-      "num": 1
-    }, 
-    "individual": {
-      "num": 1
-    }, 
-    "inexpensive": {
-      "num": 1
-    }, 
-    "inferior": {
-      "num": 1
-    }, 
-    "initiative": {
-      "num": 2
-    }, 
-    "inside": {
-      "num": 6
-    }, 
-    "insignificant": {
-      "num": 1
-    }, 
-    "intentions": {
-      "num": 1
-    }, 
-    "interesting": {
-      "num": 1
-    }, 
-    "international": {
-      "num": 5
-    }, 
-    "into": {
-      "num": 5
-    }, 
-    "intrigue": {
-      "num": 1
-    }, 
-    "intruders": {
-      "num": 1
-    }, 
-    "intuition": {
-      "num": 1
-    }, 
-    "invasion": {
-      "num": 3
-    }, 
-    "invented": {
-      "num": 1
-    }, 
-    "inventions": {
-      "num": 1
-    }, 
-    "invisible": {
-      "num": 1
-    }, 
-    "involved": {
-      "num": 1
-    }, 
-    "iron": {
-      "num": 19
-    }, 
-    "is": {
-      "num": 45
-    }, 
-    "isn't": {
-      "num": 3
-    }, 
-    "it": {
-      "num": 68
-    }, 
-    "it'll": {
-      "num": 2
-    }, 
-    "it's": {
-      "num": 35
-    }, 
-    "its": {
-      "num": 1
-    }, 
-    "jam": {
-      "num": 2
-    }, 
-    "james": {
-      "num": 2
-    }, 
-    "jealous": {
-      "num": 1
-    }, 
-    "jersey": {
-      "num": 1
-    }, 
-    "jibberjabber": {
-      "num": 1
-    }, 
-    "job": {
-      "num": 1
-    }, 
-    "joke": {
-      "num": 1
-    }, 
-    "jokes": {
-      "num": 1
-    }, 
-    "jump": {
-      "num": 1
-    }, 
-    "just": {
-      "num": 28
-    }, 
-    "keep": {
-      "num": 7
-    }, 
-    "keeps": {
-      "num": 1
-    }, 
-    "khan": {
-      "num": 1
-    }, 
-    "kicked": {
-      "num": 3
-    }, 
-    "kicking": {
-      "num": 1
-    }, 
-    "kid": {
-      "num": 1
-    }, 
-    "klein": {
-      "num": 1
-    }, 
-    "knew": {
-      "num": 2
-    }, 
-    "know": {
-      "num": 15
-    }, 
-    "knows": {
-      "num": 5
-    }, 
-    "lab": {
-      "num": 1
-    }, 
-    "labs": {
-      "num": 1
-    }, 
-    "laser": {
-      "num": 4
-    }, 
-    "last": {
-      "num": 2
-    }, 
-    "late": {
-      "num": 1
-    }, 
-    "laughing": {
-      "num": 3
-    }, 
-    "laughs": {
-      "num": 4
-    }, 
-    "laughter": {
-      "num": 1
-    }, 
-    "lead": {
-      "num": 1
-    }, 
-    "leader": {
-      "num": 1
-    }, 
-    "least": {
-      "num": 1
-    }, 
-    "leaving": {
-      "num": 1
-    }, 
-    "left": {
-      "num": 5
-    }, 
-    "less": {
-      "num": 1
-    }, 
-    "let": {
-      "num": 10
-    }, 
-    "let's": {
-      "num": 9
-    }, 
-    "level": {
-      "num": 1
-    }, 
-    "levels": {
-      "num": 1
-    }, 
-    "liar": {
-      "num": 1
-    }, 
-    "lie": {
-      "num": 2
-    }, 
-    "life": {
-      "num": 1
-    }, 
-    "lift": {
-      "num": 1
-    }, 
-    "like": {
-      "num": 11
-    }, 
-    "line": {
-      "num": 3
-    }, 
-    "liquefy": {
-      "num": 1
-    }, 
-    "listen": {
-      "num": 1
-    }, 
-    "little": {
-      "num": 3
-    }, 
-    "live": {
-      "num": 3
-    }, 
-    "lives": {
-      "num": 1
-    }, 
-    "living": {
-      "num": 1
-    }, 
-    "lizard": {
-      "num": 2
-    }, 
-    "lizards": {
-      "num": 1
-    }, 
-    "lock": {
-      "num": 1
-    }, 
-    "lockdown": {
-      "num": 2
-    }, 
-    "long": {
-      "num": 6
-    }, 
-    "look": {
-      "num": 6
-    }, 
-    "looked": {
-      "num": 1
-    }, 
-    "looking": {
-      "num": 1
-    }, 
-    "loose": {
-      "num": 1
-    }, 
-    "losers": {
-      "num": 1
-    }, 
-    "lost": {
-      "num": 1
-    }, 
-    "lot": {
-      "num": 2
-    }, 
-    "loud": {
-      "num": 2
-    }, 
-    "love": {
-      "num": 6
-    }, 
-    "loves": {
-      "num": 1
-    }, 
-    "low": {
-      "num": 1
-    }, 
-    "lowly": {
-      "num": 1
-    }, 
-    "luck": {
-      "num": 2
-    }, 
-    "lunch": {
-      "num": 2
-    }, 
-    "ma": {
-      "num": 1
-    }, 
-    "machine": {
-      "num": 3
-    }, 
-    "machines": {
-      "num": 1
-    }, 
-    "mad": {
-      "num": 1
-    }, 
-    "made": {
-      "num": 2
-    }, 
-    "maintain": {
-      "num": 1
-    }, 
-    "major": {
-      "num": 1
-    }, 
-    "make": {
-      "num": 5
-    }, 
-    "makes": {
-      "num": 1
-    }, 
-    "making": {
-      "num": 1
-    }, 
-    "makluan": {
-      "num": 11
-    }, 
-    "makluans": {
-      "num": 1
-    }, 
-    "man": {
-      "num": 28
-    }, 
-    "mandarin": {
-      "num": 1
-    }, 
-    "manhattan": {
-      "num": 1
-    }, 
-    "maniacal": {
-      "num": 1
-    }, 
-    "many": {
-      "num": 1
-    }, 
-    "mass": {
-      "num": 1
-    }, 
-    "massacre": {
-      "num": 1
-    }, 
-    "material": {
-      "num": 1
-    }, 
-    "matter": {
-      "num": 1
-    }, 
-    "may": {
-      "num": 2
-    }, 
-    "maybe": {
-      "num": 3
-    }, 
-    "me": {
-      "num": 36
-    }, 
-    "meal": {
-      "num": 1
-    }, 
-    "mean": {
-      "num": 4
-    }, 
-    "meant": {
-      "num": 1
-    }, 
-    "meet": {
-      "num": 1
-    }, 
-    "meltdown": {
-      "num": 3
-    }, 
-    "members": {
-      "num": 1
-    }, 
-    "menace": {
-      "num": 1
-    }, 
-    "mere": {
-      "num": 1
-    }, 
-    "merrier": {
-      "num": 1
-    }, 
-    "messing": {
-      "num": 1
-    }, 
-    "microscopic": {
-      "num": 1
-    }, 
-    "middle": {
-      "num": 1
-    }, 
-    "might": {
-      "num": 3
-    }, 
-    "military": {
-      "num": 1
-    }, 
-    "minute": {
-      "num": 1
-    }, 
-    "minutes": {
-      "num": 3
-    }, 
-    "miss": {
-      "num": 1
-    }, 
-    "missing": {
-      "num": 1
-    }, 
-    "mission": {
-      "num": 1
-    }, 
-    "missions": {
-      "num": 1
-    }, 
-    "mode": {
-      "num": 1
-    }, 
-    "modulator": {
-      "num": 1
-    }, 
-    "molten": {
-      "num": 1
-    }, 
-    "mom": {
-      "num": 4
-    }, 
-    "mongo": {
-      "num": 1
-    }, 
-    "monitor": {
-      "num": 1
-    }, 
-    "monkey": {
-      "num": 2
-    }, 
-    "monster": {
-      "num": 1
-    }, 
-    "month": {
-      "num": 1
-    }, 
-    "months": {
-      "num": 2
-    }, 
-    "more": {
-      "num": 9
-    }, 
-    "morning": {
-      "num": 1
-    }, 
-    "most": {
-      "num": 2
-    }, 
-    "mother": {
-      "num": 1
-    }, 
-    "mothership": {
-      "num": 2
-    }, 
-    "move": {
-      "num": 7
-    }, 
-    "movie": {
-      "num": 1
-    }, 
-    "movies": {
-      "num": 1
-    }, 
-    "moving": {
-      "num": 2
-    }, 
-    "mr": {
-      "num": 6
-    }, 
-    "much": {
-      "num": 2
-    }, 
-    "music": {
-      "num": 5
-    }, 
-    "must": {
-      "num": 3
-    }, 
-    "my": {
-      "num": 21
-    }, 
-    "nah": {
-      "num": 1
-    }, 
-    "name": {
-      "num": 1
-    }, 
-    "nara": {
-      "num": 1
-    }, 
-    "nation": {
-      "num": 1
-    }, 
-    "natural": {
-      "num": 1
-    }, 
-    "ne": {
-      "num": 1
-    }, 
-    "need": {
-      "num": 7
-    }, 
-    "needed": {
-      "num": 1
-    }, 
-    "needs": {
-      "num": 1
-    }, 
-    "nervous": {
-      "num": 1
-    }, 
-    "nervously": {
-      "num": 2
-    }, 
-    "never": {
-      "num": 7
-    }, 
-    "new": {
-      "num": 3
-    }, 
-    "next": {
-      "num": 1
-    }, 
-    "nice": {
-      "num": 1
-    }, 
-    "nick": {
-      "num": 3
-    }, 
-    "nick's": {
-      "num": 2
-    }, 
-    "night": {
-      "num": 2
-    }, 
-    "no": {
-      "num": 37
-    }, 
-    "noble": {
-      "num": 1
-    }, 
-    "nobody": {
-      "num": 1
-    }, 
-    "none": {
-      "num": 1
-    }, 
-    "nose": {
-      "num": 2
-    }, 
-    "not": {
-      "num": 17
-    }, 
-    "nothing": {
-      "num": 8
-    }, 
-    "now": {
-      "num": 32
-    }, 
-    "nuclear": {
-      "num": 1
-    }, 
-    "nullify": {
-      "num": 1
-    }, 
-    "o'brien": {
-      "num": 5
-    }, 
-    "o'clock": {
-      "num": 1
-    }, 
-    "of": {
-      "num": 55
-    }, 
-    "off": {
-      "num": 5
-    }, 
-    "oh": {
-      "num": 22
-    }, 
-    "okay": {
-      "num": 15
-    }, 
-    "old": {
-      "num": 2
-    }, 
-    "on": {
-      "num": 31
-    }, 
-    "once": {
-      "num": 2
-    }, 
-    "one": {
-      "num": 20
-    }, 
-    "one's": {
-      "num": 1
-    }, 
-    "only": {
-      "num": 7
-    }, 
-    "ooh": {
-      "num": 1
-    }, 
-    "oohoohooh": {
-      "num": 1
-    }, 
-    "opening": {
-      "num": 2
-    }, 
-    "or": {
-      "num": 7
-    }, 
-    "org": {
-      "num": 2
-    }, 
-    "other": {
-      "num": 2
-    }, 
-    "our": {
-      "num": 6
-    }, 
-    "out": {
-      "num": 38
-    }, 
-    "outside": {
-      "num": 3
-    }, 
-    "over": {
-      "num": 4
-    }, 
-    "overlord": {
-      "num": 9
-    }, 
-    "overlord's": {
-      "num": 1
-    }, 
-    "overlords": {
-      "num": 1
-    }, 
-    "owes": {
-      "num": 1
-    }, 
-    "own": {
-      "num": 1
-    }, 
-    "panicky": {
-      "num": 1
-    }, 
-    "panther": {
-      "num": 2
-    }, 
-    "panther's": {
-      "num": 1
-    }, 
-    "paperwork": {
-      "num": 1
-    }, 
-    "parental": {
-      "num": 1
-    }, 
-    "parents'": {
-      "num": 1
-    }, 
-    "paris": {
-      "num": 1
-    }, 
-    "part": {
-      "num": 2
-    }, 
-    "particularly": {
-      "num": 1
-    }, 
-    "passes": {
-      "num": 3
-    }, 
-    "patricia": {
-      "num": 1
-    }, 
-    "peel": {
-      "num": 1
-    }, 
-    "people": {
-      "num": 2
-    }, 
-    "pep": {
-      "num": 1
-    }, 
-    "pepper": {
-      "num": 7
-    }, 
-    "per": {
-      "num": 1
-    }, 
-    "perfectly": {
-      "num": 1
-    }, 
-    "perhaps": {
-      "num": 2
-    }, 
-    "permission": {
-      "num": 1
-    }, 
-    "pet": {
-      "num": 1
-    }, 
-    "phone": {
-      "num": 1
-    }, 
-    "piece": {
-      "num": 2
-    }, 
-    "pinpoint": {
-      "num": 1
-    }, 
-    "pity": {
-      "num": 1
-    }, 
-    "place": {
-      "num": 6
-    }, 
-    "plan": {
-      "num": 6
-    }, 
-    "planet": {
-      "num": 6
-    }, 
-    "planning": {
-      "num": 1
-    }, 
-    "plant": {
-      "num": 1
-    }, 
-    "plasma": {
-      "num": 1
-    }, 
-    "playing": {
-      "num": 1
-    }, 
-    "please": {
-      "num": 2
-    }, 
-    "pleasure": {
-      "num": 2
-    }, 
-    "point": {
-      "num": 1
-    }, 
-    "police": {
-      "num": 1
-    }, 
-    "port": {
-      "num": 1
-    }, 
-    "potts": {
-      "num": 3
-    }, 
-    "power": {
-      "num": 10
-    }, 
-    "powerful": {
-      "num": 1
-    }, 
-    "precise": {
-      "num": 1
-    }, 
-    "pretty": {
-      "num": 1
-    }, 
-    "primitive": {
-      "num": 1
-    }, 
-    "principal": {
-      "num": 1
-    }, 
-    "prisoner": {
-      "num": 1
-    }, 
-    "probably": {
-      "num": 3
-    }, 
-    "problem": {
-      "num": 5
-    }, 
-    "problemo": {
-      "num": 1
-    }, 
-    "proclaiming": {
-      "num": 1
-    }, 
-    "professor": {
-      "num": 1
-    }, 
-    "progress": {
-      "num": 1
-    }, 
-    "project": {
-      "num": 1
-    }, 
-    "projector": {
-      "num": 1
-    }, 
-    "protect": {
-      "num": 1
-    }, 
-    "protector": {
-      "num": 1
-    }, 
-    "protectors": {
-      "num": 1
-    }, 
-    "protocol": {
-      "num": 1
-    }, 
-    "proved": {
-      "num": 2
-    }, 
-    "pure": {
-      "num": 1
-    }, 
-    "put": {
-      "num": 2
-    }, 
-    "queasy": {
-      "num": 1
-    }, 
-    "question": {
-      "num": 1
-    }, 
-    "quiet": {
-      "num": 1
-    }, 
-    "quinjet": {
-      "num": 2
-    }, 
-    "quit": {
-      "num": 1
-    }, 
-    "race": {
-      "num": 2
-    }, 
-    "radar": {
-      "num": 1
-    }, 
-    "rapid": {
-      "num": 1
-    }, 
-    "rat": {
-      "num": 1
-    }, 
-    "rather": {
-      "num": 1
-    }, 
-    "reactor": {
-      "num": 6
-    }, 
-    "reactors": {
-      "num": 1
-    }, 
-    "ready": {
-      "num": 2
-    }, 
-    "readying": {
-      "num": 1
-    }, 
-    "real": {
-      "num": 1
-    }, 
-    "reality": {
-      "num": 1
-    }, 
-    "really": {
-      "num": 10
-    }, 
-    "reason": {
-      "num": 2
-    }, 
-    "reboot": {
-      "num": 1
-    }, 
-    "recycled": {
-      "num": 1
-    }, 
-    "rednecked": {
-      "num": 1
-    }, 
-    "reduced": {
-      "num": 1
-    }, 
-    "refrigerator's": {
-      "num": 1
-    }, 
-    "regroup": {
-      "num": 1
-    }, 
-    "rejoin": {
-      "num": 1
-    }, 
-    "relax": {
-      "num": 2
-    }, 
-    "remote": {
-      "num": 1
-    }, 
-    "replace": {
-      "num": 1
-    }, 
-    "report": {
-      "num": 2
-    }, 
-    "reports": {
-      "num": 1
-    }, 
-    "rescue": {
-      "num": 9
-    }, 
-    "residual": {
-      "num": 1
-    }, 
-    "responding": {
-      "num": 1
-    }, 
-    "rest": {
-      "num": 2
-    }, 
-    "returned": {
-      "num": 1
-    }, 
-    "rhodes": {
-      "num": 3
-    }, 
-    "rhodey": {
-      "num": 3
-    }, 
-    "rhodey's": {
-      "num": 3
-    }, 
-    "rick": {
-      "num": 1
-    }, 
-    "rid": {
-      "num": 1
-    }, 
-    "right": {
-      "num": 22
-    }, 
-    "ring": {
-      "num": 1
-    }, 
-    "rings": {
-      "num": 8
-    }, 
-    "roaring": {
-      "num": 2
-    }, 
-    "rob": {
-      "num": 1
-    }, 
-    "robbers": {
-      "num": 1
-    }, 
-    "roberta": {
-      "num": 1
-    }, 
-    "robodragon": {
-      "num": 1
-    }, 
-    "robojerk's": {
-      "num": 1
-    }, 
-    "robot": {
-      "num": 1
-    }, 
-    "robotic": {
-      "num": 1
-    }, 
-    "robots": {
-      "num": 1
-    }, 
-    "rocket": {
-      "num": 1
-    }, 
-    "room": {
-      "num": 3
-    }, 
-    "rooms": {
-      "num": 1
-    }, 
-    "rule": {
-      "num": 1
-    }, 
-    "run": {
-      "num": 1
-    }, 
-    "running": {
-      "num": 1
-    }, 
-    "safe": {
-      "num": 1
-    }, 
-    "safety": {
-      "num": 1
-    }, 
-    "said": {
-      "num": 5
-    }, 
-    "same": {
-      "num": 2
-    }, 
-    "satellite": {
-      "num": 2
-    }, 
-    "saved": {
-      "num": 1
-    }, 
-    "saw": {
-      "num": 1
-    }, 
-    "say": {
-      "num": 8
-    }, 
-    "saying": {
-      "num": 1
-    }, 
-    "scared": {
-      "num": 1
-    }, 
-    "scattered": {
-      "num": 1
-    }, 
-    "school": {
-      "num": 6
-    }, 
-    "science": {
-      "num": 2
-    }, 
-    "scientists": {
-      "num": 1
-    }, 
-    "scifi": {
-      "num": 1
-    }, 
-    "scrambled": {
-      "num": 1
-    }, 
-    "screaming": {
-      "num": 5
-    }, 
-    "screams": {
-      "num": 1
-    }, 
-    "screw": {
-      "num": 1
-    }, 
-    "scum": {
-      "num": 1
-    }, 
-    "searched": {
-      "num": 1
-    }, 
-    "searching": {
-      "num": 1
-    }, 
-    "second": {
-      "num": 1
-    }, 
-    "seconds": {
-      "num": 2
-    }, 
-    "secure": {
-      "num": 1
-    }, 
-    "security": {
-      "num": 5
-    }, 
-    "see": {
-      "num": 15
-    }, 
-    "seeds": {
-      "num": 1
-    }, 
-    "seeing": {
-      "num": 1
-    }, 
-    "seek": {
-      "num": 1
-    }, 
-    "seems": {
-      "num": 1
-    }, 
-    "seen": {
-      "num": 1
-    }, 
-    "selfcentered": {
-      "num": 1
-    }, 
-    "selfish": {
-      "num": 1
-    }, 
-    "sense": {
-      "num": 1
-    }, 
-    "sensors": {
-      "num": 2
-    }, 
-    "series": {
-      "num": 1
-    }, 
-    "serious": {
-      "num": 1
-    }, 
-    "seriously": {
-      "num": 4
-    }, 
-    "set": {
-      "num": 2
-    }, 
-    "setting": {
-      "num": 1
-    }, 
-    "shall": {
-      "num": 1
-    }, 
-    "shatters": {
-      "num": 1
-    }, 
-    "ship": {
-      "num": 6
-    }, 
-    "ships": {
-      "num": 2
-    }, 
-    "shoddy": {
-      "num": 1
-    }, 
-    "short": {
-      "num": 1
-    }, 
-    "shortcut": {
-      "num": 1
-    }, 
-    "should": {
-      "num": 2
-    }, 
-    "shouldn't": {
-      "num": 1
-    }, 
-    "show": {
-      "num": 2
-    }, 
-    "showed": {
-      "num": 1
-    }, 
-    "showing": {
-      "num": 2
-    }, 
-    "shrill": {
-      "num": 2
-    }, 
-    "shut": {
-      "num": 2
-    }, 
-    "shutdown": {
-      "num": 1
-    }, 
-    "shutting": {
-      "num": 1
-    }, 
-    "sick": {
-      "num": 1
-    }, 
-    "side": {
-      "num": 2
-    }, 
-    "sigh": {
-      "num": 1
-    }, 
-    "sighs": {
-      "num": 1
-    }, 
-    "sign": {
-      "num": 1
-    }, 
-    "signatures": {
-      "num": 1
-    }, 
-    "signed": {
-      "num": 1
-    }, 
-    "simians": {
-      "num": 1
-    }, 
-    "since": {
-      "num": 1
-    }, 
-    "single": {
-      "num": 2
-    }, 
-    "sir": {
-      "num": 8
-    }, 
-    "size": {
-      "num": 1
-    }, 
-    "skies": {
-      "num": 1
-    }, 
-    "skyscraper": {
-      "num": 1
-    }, 
-    "sleeve": {
-      "num": 1
-    }, 
-    "slingshot": {
-      "num": 1
-    }, 
-    "slinky": {
-      "num": 1
-    }, 
-    "slips": {
-      "num": 1
-    }, 
-    "smack": {
-      "num": 1
-    }, 
-    "smaller": {
-      "num": 1
-    }, 
-    "smash": {
-      "num": 2
-    }, 
-    "smell": {
-      "num": 1
-    }, 
-    "sneak": {
-      "num": 3
-    }, 
-    "sneaky": {
-      "num": 1
-    }, 
-    "snorts": {
-      "num": 1
-    }, 
-    "so": {
-      "num": 15
-    }, 
-    "sob": {
-      "num": 1
-    }, 
-    "soldiers": {
-      "num": 1
-    }, 
-    "some": {
-      "num": 5
-    }, 
-    "someone": {
-      "num": 4
-    }, 
-    "something": {
-      "num": 8
-    }, 
-    "son": {
-      "num": 6
-    }, 
-    "soon": {
-      "num": 2
-    }, 
-    "sorry": {
-      "num": 3
-    }, 
-    "sounds": {
-      "num": 1
-    }, 
-    "sources": {
-      "num": 1
-    }, 
-    "space": {
-      "num": 2
-    }, 
-    "split": {
-      "num": 1
-    }, 
-    "stairs": {
-      "num": 1
-    }, 
-    "stands": {
-      "num": 1
-    }, 
-    "stane": {
-      "num": 11
-    }, 
-    "stane's": {
-      "num": 2
-    }, 
-    "stark": {
-      "num": 17
-    }, 
-    "stark's": {
-      "num": 2
-    }, 
-    "static": {
-      "num": 1
-    }, 
-    "station": {
-      "num": 3
-    }, 
-    "status": {
-      "num": 1
-    }, 
-    "stay": {
-      "num": 4
-    }, 
-    "stays": {
-      "num": 1
-    }, 
-    "stealth": {
-      "num": 2
-    }, 
-    "step": {
-      "num": 1
-    }, 
-    "still": {
-      "num": 4
-    }, 
-    "stood": {
-      "num": 2
-    }, 
-    "stop": {
-      "num": 1
-    }, 
-    "storm": {
-      "num": 1
-    }, 
-    "story": {
-      "num": 3
-    }, 
-    "straight": {
-      "num": 1
-    }, 
-    "strategize": {
-      "num": 1
-    }, 
-    "strategy": {
-      "num": 1
-    }, 
-    "streets": {
-      "num": 1
-    }, 
-    "strong": {
-      "num": 2
-    }, 
-    "strongest": {
-      "num": 1
-    }, 
-    "stubborn": {
-      "num": 1
-    }, 
-    "student": {
-      "num": 1
-    }, 
-    "students": {
-      "num": 1
-    }, 
-    "stuff": {
-      "num": 2
-    }, 
-    "stupid": {
-      "num": 2
-    }, 
-    "sublevel": {
-      "num": 1
-    }, 
-    "success": {
-      "num": 1
-    }, 
-    "such": {
-      "num": 1
-    }, 
-    "suit": {
-      "num": 2
-    }, 
-    "superhero": {
-      "num": 1
-    }, 
-    "superheroes": {
-      "num": 2
-    }, 
-    "supposed": {
-      "num": 4
-    }, 
-    "supreme": {
-      "num": 1
-    }, 
-    "sure": {
-      "num": 9
-    }, 
-    "surrender": {
-      "num": 1
-    }, 
-    "surveillance": {
-      "num": 2
-    }, 
-    "suspect": {
-      "num": 1
-    }, 
-    "suspicious": {
-      "num": 1
-    }, 
-    "sweep": {
-      "num": 2
-    }, 
-    "switched": {
-      "num": 1
-    }, 
-    "sync": {
-      "num": 3
-    }, 
-    "system": {
-      "num": 3
-    }, 
-    "systems": {
-      "num": 1
-    }, 
-    "t": {
-      "num": 1
-    }, 
-    "take": {
-      "num": 16
-    }, 
-    "takes": {
-      "num": 1
-    }, 
-    "taking": {
-      "num": 2
-    }, 
-    "talk": {
-      "num": 1
-    }, 
-    "talking": {
-      "num": 2
-    }, 
-    "tank": {
-      "num": 1
-    }, 
-    "target": {
-      "num": 1
-    }, 
-    "targeting": {
-      "num": 2
-    }, 
-    "tasha": {
-      "num": 2
-    }, 
-    "team": {
-      "num": 6
-    }, 
-    "teams": {
-      "num": 3
-    }, 
-    "tech": {
-      "num": 5
-    }, 
-    "technology": {
-      "num": 1
-    }, 
-    "teenage": {
-      "num": 1
-    }, 
-    "tell": {
-      "num": 4
-    }, 
-    "tells": {
-      "num": 2
-    }, 
-    "temporarily": {
-      "num": 1
-    }, 
-    "tense": {
-      "num": 1
-    }, 
-    "terrible": {
-      "num": 1
-    }, 
-    "test": {
-      "num": 1
-    }, 
-    "tested": {
-      "num": 1
-    }, 
-    "testing": {
-      "num": 1
-    }, 
-    "than": {
-      "num": 8
-    }, 
-    "thank": {
-      "num": 1
-    }, 
-    "thanks": {
-      "num": 5
-    }, 
-    "that": {
-      "num": 46
-    }, 
-    "that's": {
-      "num": 3
-    }, 
-    "the": {
-      "num": 203
-    }, 
-    "their": {
-      "num": 6
-    }, 
-    "theiroh": {
-      "num": 1
-    }, 
-    "them": {
-      "num": 5
-    }, 
-    "then": {
-      "num": 3
-    }, 
-    "theoretically": {
-      "num": 1
-    }, 
-    "theorize": {
-      "num": 1
-    }, 
-    "there": {
-      "num": 12
-    }, 
-    "there's": {
-      "num": 16
-    }, 
-    "thermal": {
-      "num": 1
-    }, 
-    "these": {
-      "num": 8
-    }, 
-    "they": {
-      "num": 4
-    }, 
-    "they'd": {
-      "num": 1
-    }, 
-    "they'll": {
-      "num": 1
-    }, 
-    "they're": {
-      "num": 2
-    }, 
-    "they've": {
-      "num": 1
-    }, 
-    "thing": {
-      "num": 11
-    }, 
-    "things": {
-      "num": 2
-    }, 
-    "thingy": {
-      "num": 1
-    }, 
-    "think": {
-      "num": 6
-    }, 
-    "thinking": {
-      "num": 1
-    }, 
-    "this": {
-      "num": 40
-    }, 
-    "those": {
-      "num": 2
-    }, 
-    "though": {
-      "num": 1
-    }, 
-    "thought": {
-      "num": 5
-    }, 
-    "thoughtless": {
-      "num": 1
-    }, 
-    "thousands": {
-      "num": 1
-    }, 
-    "three": {
-      "num": 3
-    }, 
-    "throne": {
-      "num": 2
-    }, 
-    "through": {
-      "num": 3
-    }, 
-    "thx": {
-      "num": 1
-    }, 
-    "ties": {
-      "num": 1
-    }, 
-    "tights": {
-      "num": 1
-    }, 
-    "till": {
-      "num": 1
-    }, 
-    "time": {
-      "num": 16
-    }, 
-    "timer": {
-      "num": 2
-    }, 
-    "times": {
-      "num": 1
-    }, 
-    "tin": {
-      "num": 1
-    }, 
-    "to": {
-      "num": 152
-    }, 
-    "today": {
-      "num": 1
-    }, 
-    "today's": {
-      "num": 2
-    }, 
-    "told": {
-      "num": 1
-    }, 
-    "tomorrow": {
-      "num": 2
-    }, 
-    "tony": {
-      "num": 25
-    }, 
-    "tony's": {
-      "num": 1
-    }, 
-    "too": {
-      "num": 6
-    }, 
-    "took": {
-      "num": 3
-    }, 
-    "tools": {
-      "num": 1
-    }, 
-    "top": {
-      "num": 1
-    }, 
-    "totally": {
-      "num": 2
-    }, 
-    "tough": {
-      "num": 1
-    }, 
-    "tour": {
-      "num": 4
-    }, 
-    "tours": {
-      "num": 1
-    }, 
-    "toward": {
-      "num": 1
-    }, 
-    "toxic": {
-      "num": 1
-    }, 
-    "transmission": {
-      "num": 1
-    }, 
-    "transportation": {
-      "num": 1
-    }, 
-    "trapped": {
-      "num": 1
-    }, 
-    "trashed": {
-      "num": 1
-    }, 
-    "tricia": {
-      "num": 1
-    }, 
-    "trick": {
-      "num": 1
-    }, 
-    "tricks": {
-      "num": 1
-    }, 
-    "tried": {
-      "num": 2
-    }, 
-    "trip": {
-      "num": 4
-    }, 
-    "triumphant": {
-      "num": 1
-    }, 
-    "trouble": {
-      "num": 4
-    }, 
-    "trust": {
-      "num": 1
-    }, 
-    "truth": {
-      "num": 1
-    }, 
-    "try": {
-      "num": 1
-    }, 
-    "trying": {
-      "num": 5
-    }, 
-    "turn": {
-      "num": 1
-    }, 
-    "two": {
-      "num": 6
-    }, 
-    "ugly": {
-      "num": 1
-    }, 
-    "uh": {
-      "num": 22
-    }, 
-    "uhoh": {
-      "num": 5
-    }, 
-    "ultimo": {
-      "num": 1
-    }, 
-    "um": {
-      "num": 4
-    }, 
-    "uncle": {
-      "num": 2
-    }, 
-    "under": {
-      "num": 1
-    }, 
-    "understood": {
-      "num": 1
-    }, 
-    "unite": {
-      "num": 2
-    }, 
-    "units": {
-      "num": 1
-    }, 
-    "universe": {
-      "num": 1
-    }, 
-    "unlike": {
-      "num": 1
-    }, 
-    "unlocked": {
-      "num": 1
-    }, 
-    "until": {
-      "num": 2
-    }, 
-    "up": {
-      "num": 29
-    }, 
-    "upset": {
-      "num": 1
-    }, 
-    "us": {
-      "num": 23
-    }, 
-    "used": {
-      "num": 2
-    }, 
-    "useless": {
-      "num": 2
-    }, 
-    "value": {
-      "num": 1
-    }, 
-    "vault": {
-      "num": 5
-    }, 
-    "verge": {
-      "num": 1
-    }, 
-    "versus": {
-      "num": 1
-    }, 
-    "very": {
-      "num": 2
-    }, 
-    "video": {
-      "num": 1
-    }, 
-    "vigilantes": {
-      "num": 1
-    }, 
-    "vile": {
-      "num": 1
-    }, 
-    "violations": {
-      "num": 1
-    }, 
-    "visitor's": {
-      "num": 2
-    }, 
-    "visual": {
-      "num": 2
-    }, 
-    "voice": {
-      "num": 1
-    }, 
-    "wail": {
-      "num": 2
-    }, 
-    "wait": {
-      "num": 7
-    }, 
-    "waiting": {
-      "num": 1
-    }, 
-    "walk": {
-      "num": 1
-    }, 
-    "walking": {
-      "num": 1
-    }, 
-    "want": {
-      "num": 13
-    }, 
-    "wanted": {
-      "num": 5
-    }, 
-    "wanting": {
-      "num": 1
-    }, 
-    "wants": {
-      "num": 1
-    }, 
-    "war": {
-      "num": 3
-    }, 
-    "warning": {
-      "num": 2
-    }, 
-    "warriors": {
-      "num": 1
-    }, 
-    "was": {
-      "num": 17
-    }, 
-    "wasn't": {
-      "num": 1
-    }, 
-    "waste": {
-      "num": 1
-    }, 
-    "way": {
-      "num": 13
-    }, 
-    "ways": {
-      "num": 1
-    }, 
-    "we": {
-      "num": 45
-    }, 
-    "we'll": {
-      "num": 6
-    }, 
-    "we're": {
-      "num": 15
-    }, 
-    "we've": {
-      "num": 4
-    }, 
-    "weak": {
-      "num": 1
-    }, 
-    "weapons": {
-      "num": 1
-    }, 
-    "wear": {
-      "num": 1
-    }, 
-    "weeks": {
-      "num": 2
-    }, 
-    "weird": {
-      "num": 2
-    }, 
-    "well": {
-      "num": 9
-    }, 
-    "went": {
-      "num": 4
-    }, 
-    "were": {
-      "num": 5
-    }, 
-    "what": {
-      "num": 34
-    }, 
-    "what's": {
-      "num": 5
-    }, 
-    "whatever": {
-      "num": 1
-    }, 
-    "whatsits": {
-      "num": 1
-    }, 
-    "when": {
-      "num": 14
-    }, 
-    "where": {
-      "num": 6
-    }, 
-    "where's": {
-      "num": 1
-    }, 
-    "which": {
-      "num": 1
-    }, 
-    "while": {
-      "num": 1
-    }, 
-    "whiplash": {
-      "num": 1
-    }, 
-    "whirring": {
-      "num": 2
-    }, 
-    "whitney": {
-      "num": 8
-    }, 
-    "who": {
-      "num": 2
-    }, 
-    "whoa": {
-      "num": 4
-    }, 
-    "whoever": {
-      "num": 1
-    }, 
-    "whole": {
-      "num": 2
-    }, 
-    "whoops": {
-      "num": 1
-    }, 
-    "why": {
-      "num": 4
-    }, 
-    "wide": {
-      "num": 1
-    }, 
-    "widow": {
-      "num": 3
-    }, 
-    "will": {
-      "num": 15
-    }, 
-    "win": {
-      "num": 1
-    }, 
-    "wipe": {
-      "num": 3
-    }, 
-    "with": {
-      "num": 21
-    }, 
-    "without": {
-      "num": 5
-    }, 
-    "won't": {
-      "num": 4
-    }, 
-    "wonderful": {
-      "num": 1
-    }, 
-    "woo": {
-      "num": 1
-    }, 
-    "words": {
-      "num": 1
-    }, 
-    "work": {
-      "num": 6
-    }, 
-    "worked": {
-      "num": 2
-    }, 
-    "working": {
-      "num": 2
-    }, 
-    "works": {
-      "num": 2
-    }, 
-    "world": {
-      "num": 7
-    }, 
-    "worried": {
-      "num": 1
-    }, 
-    "worry": {
-      "num": 1
-    }, 
-    "worth": {
-      "num": 1
-    }, 
-    "would": {
-      "num": 4
-    }, 
-    "wouldn't": {
-      "num": 2
-    }, 
-    "wow": {
-      "num": 2
-    }, 
-    "wrong": {
-      "num": 1
-    }, 
-    "www": {
-      "num": 2
-    }, 
-    "yah": {
-      "num": 1
-    }, 
-    "yeah": {
-      "num": 13
-    }, 
-    "yet": {
-      "num": 1
-    }, 
-    "yo": {
-      "num": 1
-    }, 
-    "you": {
-      "num": 120
-    }, 
-    "you'd": {
-      "num": 2
-    }, 
-    "you'll": {
-      "num": 1
-    }, 
-    "you're": {
-      "num": 19
-    }, 
-    "you've": {
-      "num": 3
-    }, 
-    "your": {
-      "num": 21
-    }, 
-    "yourselves": {
-      "num": 1
-    }, 
-    "z": {
-      "num": 1
-    }, 
-    "zap": {
-      "num": 1
-    }, 
-    "\u266a": {
-      "num": 14
-    }, 
-    "\ufeff1": {
-      "num": 1
-    }
+  "'cause": 2, 
+  "'em": 2, 
+  "'s": 2, 
+  "1x08": 2, 
+  "49th": 2, 
+  "87%": 2, 
+  "aagh": 2, 
+  "aah": 2, 
+  "abducted": 2, 
+  "abducting": 2, 
+  "able": 2, 
+  "about": 28, 
+  "absolutely": 2, 
+  "academy": 6, 
+  "activate": 4, 
+  "activated": 2, 
+  "addic7ed": 4, 
+  "adriano_csi": 2, 
+  "adventurous": 2, 
+  "afraid": 2, 
+  "after": 2, 
+  "again": 8, 
+  "against": 2, 
+  "agent": 2, 
+  "ago": 4, 
+  "ah": 8, 
+  "aid": 2, 
+  "air": 2, 
+  "alarm": 4, 
+  "alarms": 6, 
+  "alert": 2, 
+  "alerts": 2, 
+  "alien": 14, 
+  "aliens": 10, 
+  "align": 2, 
+  "all": 44, 
+  "alligator": 2, 
+  "allow": 2, 
+  "allsubs": 4, 
+  "almost": 4, 
+  "alone": 2, 
+  "along": 2, 
+  "already": 6, 
+  "always": 12, 
+  "am": 12, 
+  "ammunition": 2, 
+  "an": 18, 
+  "andand": 2, 
+  "angry": 2, 
+  "animals": 2, 
+  "annihilated": 2, 
+  "announcement": 6, 
+  "another": 6, 
+  "any": 4, 
+  "anymore": 4, 
+  "anyone": 2, 
+  "anything": 2, 
+  "apart": 2, 
+  "apocalypse": 2, 
+  "appropriate": 2, 
+  "aptly": 2, 
+  "are": 72, 
+  "aren't": 8, 
+  "arena": 2, 
+  "armageddon": 2, 
+  "armor": 38, 
+  "armored": 2, 
+  "armorwearing": 2, 
+  "army": 2, 
+  "around": 2, 
+  "arrest": 4, 
+  "arrested": 2, 
+  "arrows": 2, 
+  "as": 28, 
+  "ask": 2, 
+  "asked": 2, 
+  "at": 16, 
+  "attaching": 2, 
+  "attack": 2, 
+  "attacking": 2, 
+  "authorize": 2, 
+  "authorized": 2, 
+  "aw": 2, 
+  "away": 2, 
+  "awesome": 4, 
+  "b": 6, 
+  "b2x26": 2, 
+  "babe": 2, 
+  "baby": 4, 
+  "back": 22, 
+  "bad": 6, 
+  "ball": 4, 
+  "banana": 2, 
+  "bank": 2, 
+  "bathroom": 2, 
+  "batteries": 2, 
+  "battle": 2, 
+  "be": 44, 
+  "beam": 6, 
+  "beast": 2, 
+  "beat": 4, 
+  "because": 4, 
+  "been": 16, 
+  "beeping": 6, 
+  "before": 16, 
+  "behind": 4, 
+  "being": 2, 
+  "beings": 4, 
+  "believe": 8, 
+  "belong": 2, 
+  "below": 2, 
+  "best": 2, 
+  "bet": 4, 
+  "better": 8, 
+  "big": 10, 
+  "bigeyed": 2, 
+  "bigger": 2, 
+  "biggest": 2, 
+  "bit": 4, 
+  "black": 6, 
+  "blare": 2, 
+  "blast": 2, 
+  "blasts": 2, 
+  "blaze": 2, 
+  "blind": 2, 
+  "blink": 2, 
+  "blow": 6, 
+  "blows": 2, 
+  "bones": 2, 
+  "boo": 2, 
+  "booster": 2, 
+  "both": 8, 
+  "bought": 2, 
+  "brain": 2, 
+  "breach": 2, 
+  "break": 8, 
+  "breath": 2, 
+  "bring": 4, 
+  "broadway": 2, 
+  "broke": 2, 
+  "broken": 2, 
+  "build": 2, 
+  "building": 28, 
+  "bunker": 2, 
+  "bus": 8, 
+  "bust": 2, 
+  "busted": 2, 
+  "buster": 2, 
+  "busy": 4, 
+  "but": 42, 
+  "buzzing": 2, 
+  "by": 8, 
+  "cake": 4, 
+  "calibrate": 2, 
+  "call": 12, 
+  "called": 6, 
+  "calls": 2, 
+  "calm": 2, 
+  "came": 2, 
+  "camera": 2, 
+  "cameras": 4, 
+  "can": 54, 
+  "can't": 18, 
+  "cannon": 2, 
+  "canon": 2, 
+  "care": 4, 
+  "carry": 2, 
+  "caught": 2, 
+  "cause": 2, 
+  "cell": 2, 
+  "cells": 8, 
+  "certain": 2, 
+  "challenge": 2, 
+  "champions": 2, 
+  "chance": 4, 
+  "change": 4, 
+  "charities": 2, 
+  "charm": 2, 
+  "chatter": 4, 
+  "check": 2, 
+  "cheering": 4, 
+  "chime": 2, 
+  "chuckling": 2, 
+  "cinders": 2, 
+  "clang": 2, 
+  "clanking": 2, 
+  "class": 2, 
+  "clean": 2, 
+  "clear": 8, 
+  "cleared": 4, 
+  "clint": 2, 
+  "colorcyan": 4, 
+  "com": 4, 
+  "come": 28, 
+  "comes": 6, 
+  "comforting": 2, 
+  "coming": 8, 
+  "community": 2, 
+  "company's": 4, 
+  "completed": 4, 
+  "computer": 2, 
+  "concept": 2, 
+  "concern": 2, 
+  "concludes": 2, 
+  "consider": 2, 
+  "contact": 4, 
+  "contacting": 2, 
+  "continue": 2, 
+  "control": 6, 
+  "convincing": 2, 
+  "cool": 2, 
+  "core": 10, 
+  "correction": 4, 
+  "could": 12, 
+  "couldn't": 8, 
+  "count": 2, 
+  "cowards": 2, 
+  "crackles": 2, 
+  "crash": 2, 
+  "crashed": 2, 
+  "crazy": 2, 
+  "create": 2, 
+  "critical": 4, 
+  "cruel": 2, 
+  "crybaby": 2, 
+  "crying": 2, 
+  "cue": 2, 
+  "cut": 4, 
+  "cutting": 2, 
+  "da": 2, 
+  "dad": 26, 
+  "dad's": 2, 
+  "daddy": 2, 
+  "dangerous": 2, 
+  "dark": 2, 
+  "daughter": 6, 
+  "daughter's": 2, 
+  "day": 4, 
+  "dead": 6, 
+  "deal": 2, 
+  "dealing": 2, 
+  "demonstration": 2, 
+  "demonstrations": 2, 
+  "destroyer": 2, 
+  "detail": 2, 
+  "detonate": 2, 
+  "detonation": 2, 
+  "device": 2, 
+  "did": 18, 
+  "didn't": 2, 
+  "die": 2, 
+  "dinner": 2, 
+  "dinosaur": 2, 
+  "directly": 2, 
+  "disabled": 2, 
+  "disc": 2, 
+  "disintegrated": 2, 
+  "disruptor": 4, 
+  "distract": 2, 
+  "distraction": 2, 
+  "diversion": 4, 
+  "dizzy": 2, 
+  "do": 50, 
+  "does": 4, 
+  "doesn't": 10, 
+  "doing": 10, 
+  "don't": 38, 
+  "donate": 2, 
+  "done": 4, 
+  "doom": 4, 
+  "door": 4, 
+  "down": 32, 
+  "downloaded": 4, 
+  "drives": 4, 
+  "drone": 2, 
+  "drones": 6, 
+  "dude": 6, 
+  "dudes": 2, 
+  "e": 2, 
+  "earth": 10, 
+  "eat": 6, 
+  "edge": 2, 
+  "eh": 2, 
+  "either": 4, 
+  "ejected": 2, 
+  "electronic": 4, 
+  "elevator": 4, 
+  "eloquence": 2, 
+  "embarrassing": 2, 
+  "empire": 2, 
+  "empty": 2, 
+  "end": 6, 
+  "ended": 2, 
+  "endless": 2, 
+  "energy": 4, 
+  "engines": 2, 
+  "enough": 6, 
+  "enter": 4, 
+  "entertainment": 2, 
+  "entire": 4, 
+  "equipment": 2, 
+  "evac": 2, 
+  "even": 14, 
+  "ever": 10, 
+  "every": 10, 
+  "everyone": 14, 
+  "everything": 8, 
+  "everything's": 2, 
+  "evil": 2, 
+  "exactly": 4, 
+  "except": 2, 
+  "excited": 2, 
+  "excursion": 2, 
+  "existence": 2, 
+  "exploding": 2, 
+  "explosion": 8, 
+  "explosions": 2, 
+  "explosive": 2, 
+  "explosives": 2, 
+  "extermination": 2, 
+  "extinct": 2, 
+  "extraterrestrial": 2, 
+  "extremely": 2, 
+  "extremis": 6, 
+  "eyes": 2, 
+  "f1nc0": 6, 
+  "failure": 2, 
+  "fair": 4, 
+  "faltering": 2, 
+  "famous": 2, 
+  "fan": 2, 
+  "fares": 2, 
+  "fast": 6, 
+  "faster": 2, 
+  "father": 4, 
+  "favor": 2, 
+  "fear": 2, 
+  "federal": 2, 
+  "feel": 4, 
+  "feeling": 2, 
+  "feet": 2, 
+  "fell": 2, 
+  "few": 2, 
+  "field": 4, 
+  "fight": 4, 
+  "fighting": 2, 
+  "finally": 4, 
+  "find": 16, 
+  "finds": 2, 
+  "fine": 6, 
+  "finish": 2, 
+  "finished": 8, 
+  "fire": 8, 
+  "first": 6, 
+  "flaming": 2, 
+  "flee": 2, 
+  "flesh": 2, 
+  "flick": 2, 
+  "floor": 2, 
+  "floors": 2, 
+  "fly": 2, 
+  "foam": 2, 
+  "focus": 4, 
+  "font": 8, 
+  "foolish": 2, 
+  "fools": 2, 
+  "foot": 2, 
+  "footsteps": 2, 
+  "for": 48, 
+  "forces": 2, 
+  "forget": 4, 
+  "form": 2, 
+  "fought": 2, 
+  "four": 2, 
+  "freaks": 2, 
+  "frequency": 2, 
+  "fried": 2, 
+  "friendly": 4, 
+  "friends": 2, 
+  "from": 20, 
+  "fry": 4, 
+  "fuel": 2, 
+  "full": 2, 
+  "fullscale": 2, 
+  "functions": 2, 
+  "fury": 14, 
+  "fusion": 6, 
+  "game": 4, 
+  "games": 2, 
+  "gather": 2, 
+  "gave": 2, 
+  "gene": 16, 
+  "general": 6, 
+  "genius": 2, 
+  "get": 84, 
+  "gets": 4, 
+  "getting": 6, 
+  "giant": 4, 
+  "give": 12, 
+  "given": 2, 
+  "gizmos": 2, 
+  "glass": 2, 
+  "glory": 4, 
+  "go": 34, 
+  "goal": 2, 
+  "goes": 2, 
+  "going": 34, 
+  "gone": 2, 
+  "gonna": 14, 
+  "good": 20, 
+  "got": 30, 
+  "gotcha": 2, 
+  "gothuh": 2, 
+  "gotta": 2, 
+  "gotten": 2, 
+  "grab": 2, 
+  "great": 16, 
+  "greed": 2, 
+  "green": 2, 
+  "grew": 4, 
+  "grey": 2, 
+  "greyskinned": 2, 
+  "grid": 2, 
+  "groaning": 10, 
+  "groans": 2, 
+  "grounded": 2, 
+  "group": 2, 
+  "guardian": 2, 
+  "guess": 4, 
+  "guessed": 2, 
+  "guessing": 2, 
+  "guy": 2, 
+  "guys": 12, 
+  "ha": 2, 
+  "had": 4, 
+  "hah": 12, 
+  "haha": 2, 
+  "hall": 2, 
+  "hallway": 2, 
+  "hand": 6, 
+  "handle": 4, 
+  "handles": 2, 
+  "hands": 2, 
+  "hangar": 2, 
+  "happen": 2, 
+  "happened": 6, 
+  "happening": 2, 
+  "happens": 2, 
+  "happier": 2, 
+  "happy": 4, 
+  "hard": 8, 
+  "has": 10, 
+  "hate": 2, 
+  "have": 78, 
+  "haven't": 6, 
+  "having": 6, 
+  "hawkeye": 8, 
+  "hazardous": 2, 
+  "hazmat": 2, 
+  "he": 36, 
+  "he'd": 2, 
+  "he's": 22, 
+  "head": 4, 
+  "heads": 2, 
+  "hear": 6, 
+  "heard": 6, 
+  "hearing": 2, 
+  "hehe": 2, 
+  "help": 20, 
+  "helping": 2, 
+  "helps": 2, 
+  "her": 4, 
+  "here": 48, 
+  "here's": 2, 
+  "hero": 4, 
+  "heroes": 6, 
+  "heroism": 2, 
+  "hey": 8, 
+  "hi": 2, 
+  "high": 4, 
+  "him": 30, 
+  "his": 18, 
+  "hisses": 2, 
+  "hit": 6, 
+  "hitech": 2, 
+  "hmm": 6, 
+  "hold": 4, 
+  "holographic": 2, 
+  "home": 4, 
+  "homework": 6, 
+  "honorable": 2, 
+  "hop": 2, 
+  "hope": 6, 
+  "hopeful": 2, 
+  "hour": 2, 
+  "how": 34, 
+  "how's": 4, 
+  "hug": 2, 
+  "huh": 12, 
+  "hulk": 14, 
+  "human": 4, 
+  "humans": 2, 
+  "hundreds": 2, 
+  "hungry": 2, 
+  "i": 206, 
+  "i'd": 12, 
+  "i'll": 34, 
+  "i'm": 70, 
+  "i've": 22, 
+  "idea": 2, 
+  "if": 32, 
+  "ignored": 2, 
+  "ii'll": 2, 
+  "iit's": 2, 
+  "image": 4, 
+  "immediately": 2, 
+  "important": 2, 
+  "in": 84, 
+  "incoming": 2, 
+  "individual": 2, 
+  "inexpensive": 2, 
+  "inferior": 2, 
+  "initiative": 4, 
+  "inside": 12, 
+  "insignificant": 2, 
+  "intentions": 2, 
+  "interesting": 2, 
+  "international": 10, 
+  "into": 10, 
+  "intrigue": 2, 
+  "intruders": 2, 
+  "intuition": 2, 
+  "invasion": 6, 
+  "invented": 2, 
+  "inventions": 2, 
+  "invisible": 2, 
+  "involved": 2, 
+  "iron": 38, 
+  "is": 90, 
+  "isn't": 6, 
+  "it": 136, 
+  "it'll": 4, 
+  "it's": 70, 
+  "its": 2, 
+  "jam": 4, 
+  "james": 4, 
+  "jealous": 2, 
+  "jersey": 2, 
+  "jibberjabber": 2, 
+  "job": 2, 
+  "joke": 2, 
+  "jokes": 2, 
+  "jump": 2, 
+  "just": 56, 
+  "keep": 14, 
+  "keeps": 2, 
+  "khan": 2, 
+  "kicked": 6, 
+  "kicking": 2, 
+  "kid": 2, 
+  "klein": 2, 
+  "knew": 4, 
+  "know": 30, 
+  "knows": 10, 
+  "lab": 2, 
+  "labs": 2, 
+  "laser": 8, 
+  "last": 4, 
+  "late": 2, 
+  "laughing": 6, 
+  "laughs": 8, 
+  "laughter": 2, 
+  "lead": 2, 
+  "leader": 2, 
+  "least": 2, 
+  "leaving": 2, 
+  "left": 10, 
+  "less": 2, 
+  "let": 20, 
+  "let's": 18, 
+  "level": 2, 
+  "levels": 2, 
+  "liar": 2, 
+  "lie": 4, 
+  "life": 2, 
+  "lift": 2, 
+  "like": 22, 
+  "line": 6, 
+  "liquefy": 2, 
+  "listen": 2, 
+  "little": 6, 
+  "live": 6, 
+  "lives": 2, 
+  "living": 2, 
+  "lizard": 4, 
+  "lizards": 2, 
+  "lock": 2, 
+  "lockdown": 4, 
+  "long": 12, 
+  "look": 12, 
+  "looked": 2, 
+  "looking": 2, 
+  "loose": 2, 
+  "losers": 2, 
+  "lost": 2, 
+  "lot": 4, 
+  "loud": 4, 
+  "love": 12, 
+  "loves": 2, 
+  "low": 2, 
+  "lowly": 2, 
+  "luck": 4, 
+  "lunch": 4, 
+  "ma": 2, 
+  "machine": 6, 
+  "machines": 2, 
+  "mad": 2, 
+  "made": 4, 
+  "maintain": 2, 
+  "major": 2, 
+  "make": 10, 
+  "makes": 2, 
+  "making": 2, 
+  "makluan": 22, 
+  "makluans": 2, 
+  "man": 56, 
+  "mandarin": 2, 
+  "manhattan": 2, 
+  "maniacal": 2, 
+  "many": 2, 
+  "mass": 2, 
+  "massacre": 2, 
+  "material": 2, 
+  "matter": 2, 
+  "may": 4, 
+  "maybe": 6, 
+  "me": 72, 
+  "meal": 2, 
+  "mean": 8, 
+  "meant": 2, 
+  "meet": 2, 
+  "meltdown": 6, 
+  "members": 2, 
+  "menace": 2, 
+  "mere": 2, 
+  "merrier": 2, 
+  "messing": 2, 
+  "microscopic": 2, 
+  "middle": 2, 
+  "might": 6, 
+  "military": 2, 
+  "minute": 2, 
+  "minutes": 6, 
+  "miss": 2, 
+  "missing": 2, 
+  "mission": 2, 
+  "missions": 2, 
+  "mode": 2, 
+  "modulator": 2, 
+  "molten": 2, 
+  "mom": 8, 
+  "mongo": 2, 
+  "monitor": 2, 
+  "monkey": 4, 
+  "monster": 2, 
+  "month": 2, 
+  "months": 4, 
+  "more": 18, 
+  "morning": 2, 
+  "most": 4, 
+  "mother": 2, 
+  "mothership": 4, 
+  "move": 14, 
+  "movie": 2, 
+  "movies": 2, 
+  "moving": 4, 
+  "mr": 12, 
+  "much": 4, 
+  "music": 10, 
+  "must": 6, 
+  "my": 42, 
+  "nah": 2, 
+  "name": 2, 
+  "nara": 2, 
+  "nation": 2, 
+  "natural": 2, 
+  "ne": 2, 
+  "need": 14, 
+  "needed": 2, 
+  "needs": 2, 
+  "nervous": 2, 
+  "nervously": 4, 
+  "never": 14, 
+  "new": 6, 
+  "next": 2, 
+  "nice": 2, 
+  "nick": 6, 
+  "nick's": 4, 
+  "night": 4, 
+  "no": 74, 
+  "noble": 2, 
+  "nobody": 2, 
+  "none": 2, 
+  "nose": 4, 
+  "not": 34, 
+  "nothing": 16, 
+  "now": 64, 
+  "nuclear": 2, 
+  "nullify": 2, 
+  "o'brien": 10, 
+  "o'clock": 2, 
+  "of": 110, 
+  "off": 10, 
+  "oh": 44, 
+  "okay": 30, 
+  "old": 4, 
+  "on": 62, 
+  "once": 4, 
+  "one": 40, 
+  "one's": 2, 
+  "only": 14, 
+  "ooh": 2, 
+  "oohoohooh": 2, 
+  "opening": 4, 
+  "or": 14, 
+  "org": 4, 
+  "other": 4, 
+  "our": 12, 
+  "out": 76, 
+  "outside": 6, 
+  "over": 8, 
+  "overlord": 18, 
+  "overlord's": 2, 
+  "overlords": 2, 
+  "owes": 2, 
+  "own": 2, 
+  "panicky": 2, 
+  "panther": 4, 
+  "panther's": 2, 
+  "paperwork": 2, 
+  "parental": 2, 
+  "parents'": 2, 
+  "paris": 2, 
+  "part": 4, 
+  "particularly": 2, 
+  "passes": 6, 
+  "patricia": 2, 
+  "peel": 2, 
+  "people": 4, 
+  "pep": 2, 
+  "pepper": 14, 
+  "per": 2, 
+  "perfectly": 2, 
+  "perhaps": 4, 
+  "permission": 2, 
+  "pet": 2, 
+  "phone": 2, 
+  "piece": 4, 
+  "pinpoint": 2, 
+  "pity": 2, 
+  "place": 12, 
+  "plan": 12, 
+  "planet": 12, 
+  "planning": 2, 
+  "plant": 2, 
+  "plasma": 2, 
+  "playing": 2, 
+  "please": 4, 
+  "pleasure": 4, 
+  "point": 2, 
+  "police": 2, 
+  "port": 2, 
+  "potts": 6, 
+  "power": 20, 
+  "powerful": 2, 
+  "precise": 2, 
+  "pretty": 2, 
+  "primitive": 2, 
+  "principal": 2, 
+  "prisoner": 2, 
+  "probably": 6, 
+  "problem": 10, 
+  "problemo": 2, 
+  "proclaiming": 2, 
+  "professor": 2, 
+  "progress": 2, 
+  "project": 2, 
+  "projector": 2, 
+  "protect": 2, 
+  "protector": 2, 
+  "protectors": 2, 
+  "protocol": 2, 
+  "proved": 4, 
+  "pure": 2, 
+  "put": 4, 
+  "queasy": 2, 
+  "question": 2, 
+  "quiet": 2, 
+  "quinjet": 4, 
+  "quit": 2, 
+  "race": 4, 
+  "radar": 2, 
+  "rapid": 2, 
+  "rat": 2, 
+  "rather": 2, 
+  "reactor": 12, 
+  "reactors": 2, 
+  "ready": 4, 
+  "readying": 2, 
+  "real": 2, 
+  "reality": 2, 
+  "really": 20, 
+  "reason": 4, 
+  "reboot": 2, 
+  "recycled": 2, 
+  "rednecked": 2, 
+  "reduced": 2, 
+  "refrigerator's": 2, 
+  "regroup": 2, 
+  "rejoin": 2, 
+  "relax": 4, 
+  "remote": 2, 
+  "replace": 2, 
+  "report": 4, 
+  "reports": 2, 
+  "rescue": 18, 
+  "residual": 2, 
+  "responding": 2, 
+  "rest": 4, 
+  "returned": 2, 
+  "rhodes": 6, 
+  "rhodey": 6, 
+  "rhodey's": 6, 
+  "rick": 2, 
+  "rid": 2, 
+  "right": 44, 
+  "ring": 2, 
+  "rings": 16, 
+  "roaring": 4, 
+  "rob": 2, 
+  "robbers": 2, 
+  "roberta": 2, 
+  "robodragon": 2, 
+  "robojerk's": 2, 
+  "robot": 2, 
+  "robotic": 2, 
+  "robots": 2, 
+  "rocket": 2, 
+  "room": 6, 
+  "rooms": 2, 
+  "rule": 2, 
+  "run": 2, 
+  "running": 2, 
+  "safe": 2, 
+  "safety": 2, 
+  "said": 10, 
+  "same": 4, 
+  "satellite": 4, 
+  "saved": 2, 
+  "saw": 2, 
+  "say": 16, 
+  "saying": 2, 
+  "scared": 2, 
+  "scattered": 2, 
+  "school": 12, 
+  "science": 4, 
+  "scientists": 2, 
+  "scifi": 2, 
+  "scrambled": 2, 
+  "screaming": 10, 
+  "screams": 2, 
+  "screw": 2, 
+  "scum": 2, 
+  "searched": 2, 
+  "searching": 2, 
+  "second": 2, 
+  "seconds": 4, 
+  "secure": 2, 
+  "security": 10, 
+  "see": 30, 
+  "seeds": 2, 
+  "seeing": 2, 
+  "seek": 2, 
+  "seems": 2, 
+  "seen": 2, 
+  "selfcentered": 2, 
+  "selfish": 2, 
+  "sense": 2, 
+  "sensors": 4, 
+  "series": 2, 
+  "serious": 2, 
+  "seriously": 8, 
+  "set": 4, 
+  "setting": 2, 
+  "shall": 2, 
+  "shatters": 2, 
+  "ship": 12, 
+  "ships": 4, 
+  "shoddy": 2, 
+  "short": 2, 
+  "shortcut": 2, 
+  "should": 4, 
+  "shouldn't": 2, 
+  "show": 4, 
+  "showed": 2, 
+  "showing": 4, 
+  "shrill": 4, 
+  "shut": 4, 
+  "shutdown": 2, 
+  "shutting": 2, 
+  "sick": 2, 
+  "side": 4, 
+  "sigh": 2, 
+  "sighs": 2, 
+  "sign": 2, 
+  "signatures": 2, 
+  "signed": 2, 
+  "simians": 2, 
+  "since": 2, 
+  "single": 4, 
+  "sir": 16, 
+  "size": 2, 
+  "skies": 2, 
+  "skyscraper": 2, 
+  "sleeve": 2, 
+  "slingshot": 2, 
+  "slinky": 2, 
+  "slips": 2, 
+  "smack": 2, 
+  "smaller": 2, 
+  "smash": 4, 
+  "smell": 2, 
+  "sneak": 6, 
+  "sneaky": 2, 
+  "snorts": 2, 
+  "so": 30, 
+  "sob": 2, 
+  "soldiers": 2, 
+  "some": 10, 
+  "someone": 8, 
+  "something": 16, 
+  "son": 12, 
+  "soon": 4, 
+  "sorry": 6, 
+  "sounds": 2, 
+  "sources": 2, 
+  "space": 4, 
+  "split": 2, 
+  "stairs": 2, 
+  "stands": 2, 
+  "stane": 22, 
+  "stane's": 4, 
+  "stark": 34, 
+  "stark's": 4, 
+  "static": 2, 
+  "station": 6, 
+  "status": 2, 
+  "stay": 8, 
+  "stays": 2, 
+  "stealth": 4, 
+  "step": 2, 
+  "still": 8, 
+  "stood": 4, 
+  "stop": 2, 
+  "storm": 2, 
+  "story": 6, 
+  "straight": 2, 
+  "strategize": 2, 
+  "strategy": 2, 
+  "streets": 2, 
+  "strong": 4, 
+  "strongest": 2, 
+  "stubborn": 2, 
+  "student": 2, 
+  "students": 2, 
+  "stuff": 4, 
+  "stupid": 4, 
+  "sublevel": 2, 
+  "success": 2, 
+  "such": 2, 
+  "suit": 4, 
+  "superhero": 2, 
+  "superheroes": 4, 
+  "supposed": 8, 
+  "supreme": 2, 
+  "sure": 18, 
+  "surrender": 2, 
+  "surveillance": 4, 
+  "suspect": 2, 
+  "suspicious": 2, 
+  "sweep": 4, 
+  "switched": 2, 
+  "sync": 6, 
+  "system": 6, 
+  "systems": 2, 
+  "t": 2, 
+  "take": 32, 
+  "takes": 2, 
+  "taking": 4, 
+  "talk": 2, 
+  "talking": 4, 
+  "tank": 2, 
+  "target": 2, 
+  "targeting": 4, 
+  "tasha": 4, 
+  "team": 12, 
+  "teams": 6, 
+  "tech": 10, 
+  "technology": 2, 
+  "teenage": 2, 
+  "tell": 8, 
+  "tells": 4, 
+  "temporarily": 2, 
+  "tense": 2, 
+  "terrible": 2, 
+  "test": 2, 
+  "tested": 2, 
+  "testing": 2, 
+  "than": 16, 
+  "thank": 2, 
+  "thanks": 10, 
+  "that": 92, 
+  "that's": 6, 
+  "the": 406, 
+  "their": 12, 
+  "theiroh": 2, 
+  "them": 10, 
+  "then": 6, 
+  "theoretically": 2, 
+  "theorize": 2, 
+  "there": 24, 
+  "there's": 32, 
+  "thermal": 2, 
+  "these": 16, 
+  "they": 8, 
+  "they'd": 2, 
+  "they'll": 2, 
+  "they're": 4, 
+  "they've": 2, 
+  "thing": 22, 
+  "things": 4, 
+  "thingy": 2, 
+  "think": 12, 
+  "thinking": 2, 
+  "this": 80, 
+  "those": 4, 
+  "though": 2, 
+  "thought": 10, 
+  "thoughtless": 2, 
+  "thousands": 2, 
+  "three": 6, 
+  "throne": 4, 
+  "through": 6, 
+  "thx": 2, 
+  "ties": 2, 
+  "tights": 2, 
+  "till": 2, 
+  "time": 32, 
+  "timer": 4, 
+  "times": 2, 
+  "tin": 2, 
+  "to": 304, 
+  "today": 2, 
+  "today's": 4, 
+  "told": 2, 
+  "tomorrow": 4, 
+  "tony": 50, 
+  "tony's": 2, 
+  "too": 12, 
+  "took": 6, 
+  "tools": 2, 
+  "top": 2, 
+  "totally": 4, 
+  "tough": 2, 
+  "tour": 8, 
+  "tours": 2, 
+  "toward": 2, 
+  "toxic": 2, 
+  "transmission": 2, 
+  "transportation": 2, 
+  "trapped": 2, 
+  "trashed": 2, 
+  "tricia": 2, 
+  "trick": 2, 
+  "tricks": 2, 
+  "tried": 4, 
+  "trip": 8, 
+  "triumphant": 2, 
+  "trouble": 8, 
+  "trust": 2, 
+  "truth": 2, 
+  "try": 2, 
+  "trying": 10, 
+  "turn": 2, 
+  "two": 12, 
+  "ugly": 2, 
+  "uh": 44, 
+  "uhoh": 10, 
+  "ultimo": 2, 
+  "um": 8, 
+  "uncle": 4, 
+  "under": 2, 
+  "understood": 2, 
+  "unite": 4, 
+  "units": 2, 
+  "universe": 2, 
+  "unlike": 2, 
+  "unlocked": 2, 
+  "until": 4, 
+  "up": 58, 
+  "upset": 2, 
+  "us": 46, 
+  "used": 4, 
+  "useless": 4, 
+  "value": 2, 
+  "vault": 10, 
+  "verge": 2, 
+  "versus": 2, 
+  "very": 4, 
+  "video": 2, 
+  "vigilantes": 2, 
+  "vile": 2, 
+  "violations": 2, 
+  "visitor's": 4, 
+  "visual": 4, 
+  "voice": 2, 
+  "wail": 4, 
+  "wait": 14, 
+  "waiting": 2, 
+  "walk": 2, 
+  "walking": 2, 
+  "want": 26, 
+  "wanted": 10, 
+  "wanting": 2, 
+  "wants": 2, 
+  "war": 6, 
+  "warning": 4, 
+  "warriors": 2, 
+  "was": 34, 
+  "wasn't": 2, 
+  "waste": 2, 
+  "way": 26, 
+  "ways": 2, 
+  "we": 90, 
+  "we'll": 12, 
+  "we're": 30, 
+  "we've": 8, 
+  "weak": 2, 
+  "weapons": 2, 
+  "wear": 2, 
+  "weeks": 4, 
+  "weird": 4, 
+  "well": 18, 
+  "went": 8, 
+  "were": 10, 
+  "what": 68, 
+  "what's": 10, 
+  "whatever": 2, 
+  "whatsits": 2, 
+  "when": 28, 
+  "where": 12, 
+  "where's": 2, 
+  "which": 2, 
+  "while": 2, 
+  "whiplash": 2, 
+  "whirring": 4, 
+  "whitney": 16, 
+  "who": 4, 
+  "whoa": 8, 
+  "whoever": 2, 
+  "whole": 4, 
+  "whoops": 2, 
+  "why": 8, 
+  "wide": 2, 
+  "widow": 6, 
+  "will": 30, 
+  "win": 2, 
+  "wipe": 6, 
+  "with": 42, 
+  "without": 10, 
+  "won't": 8, 
+  "wonderful": 2, 
+  "woo": 2, 
+  "words": 2, 
+  "work": 12, 
+  "worked": 4, 
+  "working": 4, 
+  "works": 4, 
+  "world": 14, 
+  "worried": 2, 
+  "worry": 2, 
+  "worth": 2, 
+  "would": 8, 
+  "wouldn't": 4, 
+  "wow": 4, 
+  "wrong": 2, 
+  "www": 4, 
+  "yah": 2, 
+  "yeah": 26, 
+  "yet": 2, 
+  "yo": 2, 
+  "you": 240, 
+  "you'd": 4, 
+  "you'll": 2, 
+  "you're": 38, 
+  "you've": 6, 
+  "your": 42, 
+  "yourselves": 2, 
+  "z": 2, 
+  "zap": 2, 
+  "\u266a": 28, 
+  "\ufeff1": 2
 }

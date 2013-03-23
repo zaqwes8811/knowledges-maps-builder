@@ -58,13 +58,16 @@ class IndexCursor(object):
         """ Соединяет курсор с узлом. Если узла нет, создается."""
         self._current_branch = branch_name
         self._branch_cash = {}
+        findex_name = self._get_real_branch_name()+'/'+self._kForwardIndexName
+        sets = dal.get_utf8_template()
+        sets['name'] = findex_name
         try:
             os.mkdir(self._get_real_branch_name())
+            sets['howOpen'] = 'w'
+            dal.list2file(sets, ["{}"])
         except OSError as e:
-            print 'Branch is exist', e    
+            print 'Branch is exist'  
             # Загружаем индекс 
-            sets = dal.get_utf8_template()
-            sets['name'] = self._get_real_branch_name()+'/'+self._kForwardIndexName
             readed_list = dal.file2list(sets)
             branch_in_json = ' '.join(readed_list)
             
@@ -72,26 +75,20 @@ class IndexCursor(object):
             self._branch_cash = json.loads(branch_in_json)
     
     def print_branch(self, branch_name):
-        branch = self._branch_cash[branch_name]
+        branch = self._branch_cash
         for at in branch:
-            if branch[at]['num'] > 1:
-                print branch[at]['num'], at
-                
-    def get_map(self):
-        print
-        print "IndexCursor map"
-        for at in self._branch_cash:
-            print at
-    
-    def _save_branch_cash(self, branch_name):
+            if branch[at] > 1:
+                print branch[at], at
+                  
+    def save_branch_cash(self):
         to_file = [json.dumps(self._branch_cash, sort_keys=True, indent=2)]
         sets = dal.get_utf8_template()
-        sets['name'] = 'index.json'
+        sets['name'] = self._get_real_branch_name()+'/'+self._kForwardIndexName
         sets['howOpen'] = 'w'
         dal.list2file(sets, to_file)
         
-    def _load_branch_in_cash(self):
-        pass
+    #def _load_branch_in_cash(self):
+    #    pass
     
     def get_list_nodes(self):
         list_nodes = os.listdir(self._index_root)
@@ -115,12 +112,12 @@ class IndexCursor(object):
                         if at in self._branch_cash:
                             #if IndexCursor[at]['num'] < _kCountContentItems+1:
                             #    IndexCursor[at]['sents'].append(one_sentence)
-                            self._branch_cash[at]['num'] += 1
+                            self._branch_cash[at] += 1
                         else:
                             # Первое включение
                             if _is_key_enabled(at):
-                                self._branch_cash[at] = {'num':1 }#, 'sents':[one_sentence]}
-
+                                self._branch_cash[at] = 1 #, 'sents':[one_sentence]}
+        self.save_branch_cash()
 
 if __name__ == '__main__':
     #run()
