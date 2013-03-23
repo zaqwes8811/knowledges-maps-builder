@@ -31,7 +31,7 @@ def _is_key_enabled(key_value):
     return True
 
 
-def process_list_content_sentences(sentences_lst, Index):
+def process_list_content_sentences(sentences_lst, IndexCursor):
     # Обработка
     for one_sentence in sentences_lst:
         if one_sentence:
@@ -41,15 +41,17 @@ def process_list_content_sentences(sentences_lst, Index):
             set_words = pure_sentence.split(' ')
             for at in set_words:
                 if at != ' ' and at:
-                    if at in Index:
-                        if Index[at]['num'] < _kCountContentItems+1:
-                            Index[at]['sents'].append(one_sentence)
-                        Index[at]['num'] += 1
+                    if at in IndexCursor:
+                        #if IndexCursor[at]['num'] < _kCountContentItems+1:
+                        #    IndexCursor[at]['sents'].append(one_sentence)
+                        IndexCursor[at]['num'] += 1
                     else:
+                        # Первое включение
                         if _is_key_enabled(at):
-                            Index[at] = {'num':1, 'sents':[one_sentence]}
+                            IndexCursor[at] = {'num':1 }#, 'sents':[one_sentence]}
 
 
 
 if __name__ == '__main__':
-    run()
+    #run()
+    pass
