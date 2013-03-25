@@ -132,7 +132,7 @@ public class PyCaller {
      * @param engineName что за интерпр. используем
      *
      * */
-    private ScriptEngine initScriptEngine(String engineName) throws JSRException {
+    private ScriptEngine initScriptEngine(String engineName) { // throws JSRException {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine engine = manager.getEngineByName(TYPE_ENGINE);
         return  engine;
@@ -165,17 +165,46 @@ public class PyCaller {
                 result = inv.invokeFunction(function_name, arg);
             }
             catch (NoSuchMethodException ex) {
-                throw new JSRException(1, "No such method in module");
+                //throw new JSRException(1, "No such method in module");
             }
         }
         catch (FileNotFoundException ex) {
-            throw new JSRException(2, "No found script file");
+            //throw new JSRException(2, "No found script file");
         }
         catch (ScriptException ex) {
-            throw new JSRException(3, "Error in script");
+            //throw new JSRException(3, "Error in script");
         }
         return (String)result;
     }
+
+    public Object py_call_with_return(String fname,
+                                      String function_name,
+                                      String arg) {
+
+        // Загрузка движка
+        ScriptEngine engine = initScriptEngine(TYPE_ENGINE);
+
+        // Сам вызов
+        Object result = "";
+        try {
+            engine.eval(new FileReader(fname));
+            Invocable inv = (Invocable) engine;
+            try {
+                result = inv.invokeFunction(function_name, arg);
+            }
+            catch (NoSuchMethodException ex) {
+                System.out.println("No such method in module");
+            }
+        }
+        catch (FileNotFoundException ex) {
+            System.out.println("No found script file");
+        }
+        catch (ScriptException ex) {
+            System.out.println("Error in script");
+        }
+        return (String)result;
+    }
+    
     public String run_py_str_function_str(
         String fname,
         String function_name,
