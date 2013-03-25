@@ -1,6 +1,6 @@
 import jsr.PyCaller;
 
-
+import  java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
@@ -13,5 +13,10 @@ public class Main {
 
         String result = (String)caller.py_call_with_return(fname, function_name, arg);
         System.out.println(result);
+
+        function_name = "get_list";
+        ArrayList resultlist = (ArrayList)caller.py_call_with_return(fname, function_name, arg);
+        resultlist.add("Java string");
+        System.out.println(resultlist);
     }
 }
