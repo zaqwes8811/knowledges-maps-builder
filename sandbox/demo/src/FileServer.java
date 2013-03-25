@@ -75,11 +75,11 @@ public class FileServer
             
             Gson gson = new Gson();
 
-    		Collection<Collection<Float>> ints = new ArrayList<Collection<Float>>(10000);
+            ArrayList<ArrayList<Float>> ints = new ArrayList<ArrayList<Float>>(10000);
 
     		Random randomGenerator = new Random();
     	    for (float idx = 0; idx < 14.0; idx += 0.1){
-              Collection<Float> tmp = new  ArrayList<Float>();
+              ArrayList<Float> tmp = new  ArrayList<Float>();
     	      float randomInt = randomGenerator.nextFloat();
               tmp.add(idx);
               tmp.add(randomInt/10);
