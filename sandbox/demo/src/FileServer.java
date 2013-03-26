@@ -78,7 +78,7 @@ public class FileServer
             ArrayList<ArrayList<Float>> ints = new ArrayList<ArrayList<Float>>(10000);
 
     		Random randomGenerator = new Random();
-    	    for (float idx = 0; idx < 14.0; idx += 0.1){
+    	    for (float idx = 0; idx < 700.0; idx += 0.1){
               ArrayList<Float> tmp = new  ArrayList<Float>();
     	      float randomInt = randomGenerator.nextFloat();
               tmp.add(idx);

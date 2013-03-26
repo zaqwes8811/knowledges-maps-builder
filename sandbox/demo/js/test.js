@@ -24,10 +24,6 @@ $(function() {
       grid: {
         hoverable: true,
         clickable: true
-      },
-      yaxis: {
-        min: -1.2,
-        max: 1.2
       }
     });
 
@@ -117,32 +113,34 @@ function process_response(data) {
 
   var tmp = $.parseJSON(data);
 
-  for (var i = 0; i < 14; i += 0.1) {
-    sin.push([i, Math.random()]);
-    cos.push([i, Math.random()]);
+  for (var i = 0; i < 4; i += 0.1) {
+    //sin.push([i, Math.random()]);
+    //sin.push([i, Math.random()]);
+    //cos.push([i, Math.random()]);
+    cos.push([i, 1]);
   }
   
   // Функция рисования
   var plot = $.plot("#placeholder", [
-    { data: tmp, label: "cos(x)"}   ,
-    { data: cos, label: "cos(x)"}
+    { data: tmp, label: "cos(x)"}//   ,
+    //{ data: cos, label: "cos(x)"}
   ], {
     series: {
       lines: {
         show: true
       },
       points: {
-        show: true
+        show: false //true
       }
     },
     grid: {
       hoverable: true,
       clickable: true
-    },
-    yaxis: {
-      min: -1.2,
-      max: 1.2
-    }
+    }//,
+    //yaxis: {
+   //   min: -0.2,
+ //     max: 1.2
+ //   }
   });
   
 }
