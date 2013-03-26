@@ -80,7 +80,13 @@ public class FileServer
     		Random randomGenerator = new Random();
     	    for (float idx = 0; idx < 700.0; idx += 0.1){
               ArrayList<Float> tmp = new  ArrayList<Float>();
-    	      float randomInt = randomGenerator.nextFloat();
+              float randomInt = 0.5f;
+              if (idx < 350.0) {
+                  randomInt = 0.5f;
+              } else {
+                  randomInt = 0.2f;
+              }
+    	      randomInt += randomGenerator.nextFloat();
               tmp.add(idx);
               tmp.add(randomInt/10);
     	      ints.add(tmp);

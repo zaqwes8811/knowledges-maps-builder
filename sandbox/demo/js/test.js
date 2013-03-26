@@ -77,7 +77,7 @@ $(function() {
 
     // Add the Flot version string to the footer
 
-    $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+    //$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
   });
 
 function get_data() {
@@ -108,39 +108,29 @@ function get_data() {
 }
 
 function process_response(data) {
-  var sin = [],
-  cos = [];
 
-  var tmp = $.parseJSON(data);
-
-  for (var i = 0; i < 4; i += 0.1) {
-    //sin.push([i, Math.random()]);
-    //sin.push([i, Math.random()]);
-    //cos.push([i, Math.random()]);
-    cos.push([i, 1]);
-  }
+  var getted_axises = $.parseJSON(data);
   
+  // Нужно усреднять данные на отрезках, а через zoom увеличивать.
+  var save = 0;
+  var zoomed_data = [];
+  var catch_every = 100;
+  for(var i = 0; i < getted_axises.length; ++i) {
+    if (i%catch_every === 0) {
+      zoomed_data.push(getted_axises[i]);
+    }
+  }
+
   // Функция рисования
-  var plot = $.plot("#placeholder", [
-    { data: tmp, label: "cos(x)"}//   ,
-    //{ data: cos, label: "cos(x)"}
-  ], {
+  var plot = $.plot("#placeholder", [{ data: zoomed_data, label: "uniform(x)"}], {
     series: {
-      lines: {
-        show: true
-      },
-      points: {
-        show: false //true
-      }
+      lines: {show: true},
+      points: {show: true}
     },
     grid: {
       hoverable: true,
       clickable: true
-    }//,
-    //yaxis: {
-   //   min: -0.2,
- //     max: 1.2
- //   }
+    }
   });
   
 }
