@@ -75,20 +75,14 @@ public class FileServer
             
             Gson gson = new Gson();
 
-            ArrayList<ArrayList<Float>> ints = new ArrayList<ArrayList<Float>>(10000);
+            ArrayList<ArrayList<Integer>> ints = new ArrayList<ArrayList<Integer>>(10000);
 
     		Random randomGenerator = new Random();
-    	    for (float idx = 0; idx < 700.0; idx += 0.1){
-              ArrayList<Float> tmp = new  ArrayList<Float>();
-              float randomInt = 0.5f;
-              if (idx < 350.0) {
-                  randomInt = 0.5f;
-              } else {
-                  randomInt = 0.2f;
-              }
-    	      randomInt += randomGenerator.nextFloat();
+    	    for (Integer idx = 0; idx < 700; idx += 1){
+              ArrayList<Integer> tmp = new  ArrayList<Integer>();
+              int randomInt = randomGenerator.nextInt(20);
               tmp.add(idx);
-              tmp.add(randomInt/10);
+              tmp.add(randomInt);
     	      ints.add(tmp);
     	    }
             //ints.add(new Float(0.0));

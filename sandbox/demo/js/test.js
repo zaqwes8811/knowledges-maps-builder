@@ -43,12 +43,13 @@ $(function() {
     var previousPoint = null;
     $("#placeholder").bind("plothover", function (event, pos, item) {
 
-      if ($("#enablePosition:checked").length > 0) {
+      // Показ координат
+      /*if ($("#enablePosition:checked").length > 0) {
         var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
         $("#hoverdata").text(str);
-      }
+      }*/
 
-      if ($("#enableTooltip:checked").length > 0) {
+      //if ($("#enableTooltip:checked").length > 0) {
         if (item) {
           if (previousPoint != item.dataIndex) {
 
@@ -58,22 +59,22 @@ $(function() {
             var x = item.datapoint[0].toFixed(2),
             y = item.datapoint[1].toFixed(2);
 
-            showTooltip(item.pageX, item.pageY,
-                item.series.label + " of " + x + " = " + y);
+            showTooltip(item.pageX, item.pageY, g_map[Math.floor(x)]);
+                //item.series.label + " of " + x + " = " + y);
           }
         } else {
           $("#tooltip").remove();
           previousPoint = null;            
         }
-      }
+      //}
     });
 
-    $("#placeholder").bind("plotclick", function (event, pos, item) {
+    /*$("#placeholder").bind("plotclick", function (event, pos, item) {
       if (item) {
         $("#clickdata").text(" - click point " + item.dataIndex + " in " + item.series.label);
         plot.highlight(item.series, item.datapoint);
       }
-    });
+    });*/
 
     // Add the Flot version string to the footer
 
@@ -107,6 +108,8 @@ function get_data() {
 
 }
 
+var g_map = {}
+
 function process_response(data) {
 
   var getted_axises = $.parseJSON(data);
@@ -114,10 +117,11 @@ function process_response(data) {
   // Нужно усреднять данные на отрезках, а через zoom увеличивать.
   var save = 0;
   var zoomed_data = [];
-  var catch_every = 100;
+  var catch_every = 1;
   for(var i = 0; i < getted_axises.length; ++i) {
     if (i%catch_every === 0) {
       zoomed_data.push(getted_axises[i]);
+      g_map[getted_axises[i][0]] = 'Position : '+getted_axises[i][0]+'/'+getted_axises[i][1]
     }
   }
 
