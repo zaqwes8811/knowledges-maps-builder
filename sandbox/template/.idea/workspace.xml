@@ -10,7 +10,7 @@
     <file path="/HelloWorld.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364134549513" ignored="false" />
     <file path="/a.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364489706589" ignored="false" />
     <file path="/sample.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364489704887" ignored="false" />
-    <file path="/AppContainer.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364492922999" ignored="false" />
+    <file path="/AppContainer.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364493263032" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="26" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.432282">
+            <state line="98" column="72" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.62152135">
               <folding>
                 <element signature="e#2157#2177#0" expanded="true" />
                 <element signature="e#2329#2338#0" expanded="true" />
@@ -432,7 +432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.432282">
+        <state line="98" column="72" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.62152135">
           <folding>
             <element signature="e#2157#2177#0" expanded="true" />
             <element signature="e#2329#2338#0" expanded="true" />

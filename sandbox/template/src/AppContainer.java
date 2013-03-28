@@ -93,6 +93,10 @@ public class AppContainer {
       //
       // Вариант N:
       // есть еще какие-то альтарнативы
+      //
+      // Плохой вариант - линейный поиск - свич по именам
+      //
+      // И как быть с потокозащитой хэша? Кстати доступ только на чтение
       String json_response = _getOxOy();
   		
       response.getWriter().println(json_response);
