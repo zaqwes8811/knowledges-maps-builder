@@ -10,7 +10,7 @@
     <file path="/HelloWorld.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364134549513" ignored="false" />
     <file path="/a.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364489706589" ignored="false" />
     <file path="/sample.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364489704887" ignored="false" />
-    <file path="/AppContainer.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364489812537" ignored="false" />
+    <file path="/AppContainer.java" changelist="85efd973-97a4-4322-b179-6d397756f90d" time="1364492922999" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +73,10 @@
       <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="990" selection-end="990" vertical-scroll-proportion="0.22077923">
+            <state line="85" column="26" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.432282">
               <folding>
-                <element signature="e#2272#2292#0" expanded="true" />
-                <element signature="e#2448#2457#0" expanded="true" />
+                <element signature="e#2157#2177#0" expanded="true" />
+                <element signature="e#2329#2338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,6 +142,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -339,12 +349,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" />
+        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" />
+        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
@@ -354,7 +368,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" />
+        <state line="12" column="31" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/test.js">
@@ -399,7 +415,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.027552674" />
+        <state line="12" column="25" selection-start="842" selection-end="842" vertical-scroll-proportion="0.027552674">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/jsr/PyCallerTest.java">
@@ -414,10 +432,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="990" selection-end="990" vertical-scroll-proportion="0.22077923">
+        <state line="85" column="26" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.432282">
           <folding>
-            <element signature="e#2272#2292#0" expanded="true" />
-            <element signature="e#2448#2457#0" expanded="true" />
+            <element signature="e#2157#2177#0" expanded="true" />
+            <element signature="e#2329#2338#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -54,27 +54,48 @@ public class AppContainer {
   
   // Servlets
   public static class App extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      response.setContentType("text/html");
-      response.setStatus(HttpServletResponse.SC_OK);
-      
+    /* Блок классов приложения? Должны быть потокозащищенными
+    private  */
+
+    private String _getOxOy() {
       Gson gson = new Gson();
 
       ArrayList<ArrayList<Integer>> ints = new ArrayList<ArrayList<Integer>>(10000);
 
       Random randomGenerator = new Random();
-        for (Integer idx = 0; idx < 700; idx += 1){
-          ArrayList<Integer> tmp = new  ArrayList<Integer>();
-          int randomInt = randomGenerator.nextInt(100);
-          tmp.add(idx);
-          tmp.add(randomInt);
+      for (Integer idx = 0; idx < 700; idx += 1){
+        ArrayList<Integer> tmp = new  ArrayList<Integer>();
+        int randomInt = randomGenerator.nextInt(100);
+        tmp.add(idx);  // Ox sample
+        tmp.add(randomInt);  // Oy sample
         ints.add(tmp);
-        }
+      }
 
       // Сереализуем
-      String json = gson.toJson(ints);
+      String json_response = gson.toJson(ints);
+      return  json_response;
+    }
+
+    protected void doGet(
+        HttpServletRequest request,
+        HttpServletResponse response) throws ServletException, IOException {
+      response.setContentType("text/html");
+      response.setStatus(HttpServletResponse.SC_OK);
+
+      // Можно сделат table call map   map<string, (?)аналог_указателя_на_функции_в_си>
+      //
+      // Вариант 1:
+      // в java 6 нет лямбд и замыканий(?)
+      // кажется нужна будет обертка для класса и интерфейс - как соединить все вместе?
+      //
+      // Вариант 2:
+      // reflection - slow
+      //
+      // Вариант N:
+      // есть еще какие-то альтарнативы
+      String json_response = _getOxOy();
   		
-      response.getWriter().println(json);
+      response.getWriter().println(json_response);
     }
    }
 }
