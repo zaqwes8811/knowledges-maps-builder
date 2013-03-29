@@ -1,7 +1,7 @@
 import jsr.PyCaller;
 
 import  java.util.ArrayList;
-public class Main {
+public class TestCallJy {
 
     public static void main(String[] args) {
 	// write your code here
