@@ -37,7 +37,7 @@ $(function() {
 
 function get_data() {
   var request_processor = '/app';
-  var response_branch = {'hello':'hallo'};
+  var response_branch = {'name':'get_axis'};
   var jqxhr = $.get(request_processor, response_branch)
     .success(function(data) {
       process_response(data);
@@ -89,4 +89,9 @@ function process_response(data) {
       clickable: true
     }
   });
+}
+
+function get_list_items() {
+
+
 }

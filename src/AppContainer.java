@@ -15,6 +15,8 @@ import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
+//import java.util.
+
 import com.google.gson.Gson;
 import java.util.*;
 import java.util.Random;
@@ -79,6 +81,12 @@ public class AppContainer {
     protected void doGet(
         HttpServletRequest request,
         HttpServletResponse response) throws ServletException, IOException {
+      
+      //
+
+      // Проверить бы на наличие
+      String name_requester = request.getParameter("name");
+
       response.setContentType("text/html");
       response.setStatus(HttpServletResponse.SC_OK);
 

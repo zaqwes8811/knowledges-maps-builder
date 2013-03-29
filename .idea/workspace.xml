@@ -2,89 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\.settings\org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\controllers\appadmin.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\controllers\default.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\controllers\default.py.bak" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\models\db.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\models\menu.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\error.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\css\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\static\js\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\appadmin.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\default\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\default\index.html.bak" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\default\index_save.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\default\test_bootstrap.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\default\user.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.ics" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.jsonp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.load" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.map" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.pdf" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.rss" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\generic.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\layout.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app\views\web2py_ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\build.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\jython.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\manifest.mf" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\build-impl.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\genfiles.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\private\private.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\private\private.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\project.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\nbproject\project.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\sandbox\template\src\app-wrapping.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\sandbox\template\src\app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\app.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content-translate-assistant.iml" afterPath="$PROJECT_DIR$/content-translate-assistant.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\error.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\css\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\images\twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\share.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\content-translate-assistant\app-web2py-static\js\web2py_bootstrap.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppContainer.java" afterPath="$PROJECT_DIR$/src/AppContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test.js" afterPath="$PROJECT_DIR$/js/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/template/.idea/workspace.xml" afterPath="$PROJECT_DIR$/sandbox/template/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364564987363" ignored="false" />
+    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364567194592" ignored="false" />
     <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364566326157" ignored="false" />
-    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364566401216" ignored="false" />
+    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364569162937" ignored="false" />
+    <file path="/index.html" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364568292902" ignored="false" />
+    <file path="/AppContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364580222819" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,9 +112,32 @@
       <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="23" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-1.4502164">
+            <state line="91" column="26" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.57596374">
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="157" column="18" selection-start="10788" selection-end="10788" vertical-scroll-proportion="-6.3076925">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,7 +146,7 @@
       <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="31" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
+            <state line="39" column="41" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +170,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/index_flot.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/src/AppContainer.java" />
       </list>
     </option>
   </component>
@@ -284,7 +276,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="content-translate-assistant" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -322,24 +320,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4249147" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33105803" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33105803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8327645" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1672355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.79692835" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20307167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -407,19 +405,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jsr/SimpleEmbedded.java">
+    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
+        <state line="91" column="12" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jsr/TPKFilterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="151" selection-end="151" vertical-scroll-proportion="0.1852861">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -430,9 +421,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsr/SimpleEmbedded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jsr/TPKFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="151" selection-end="151" vertical-scroll-proportion="0.1852861" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_flot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="196" selection-end="196" vertical-scroll-proportion="0.063432835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="41" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="18" selection-start="10788" selection-end="10788" vertical-scroll-proportion="-6.3076925">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-1.4502164">
+        <state line="91" column="26" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.57596374">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
