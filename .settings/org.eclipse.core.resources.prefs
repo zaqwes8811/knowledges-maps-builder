@@ -1,7 +1,0 @@
-eclipse.preferences.version=1
-encoding//src/app.py=utf-8
-encoding//src/business/content_assembers/_web_example.py=utf-8
-encoding//src/business/originator_frequency_index/_content_filters.py=utf-8
-encoding//src/business/originator_frequency_index/orginator.py=utf-8
-encoding//src/business/to_text.py=utf-8
-encoding//src/dal/os_dal.py=utf-8
