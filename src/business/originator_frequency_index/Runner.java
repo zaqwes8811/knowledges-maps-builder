@@ -15,5 +15,13 @@ public class Runner {
     IIndexCursor ptr = factory.create(indexRoot);
 
     System.out.print(ptr.getListNodes());
+
+    // Подключаемся к ветке
+    String contentItemName = "Iron Man AA";
+
+    ptr.assignBranch(contentItemName);
+
+    // Получаем индекс
+    System.out.print(ptr.getSortedForwardIdx());
   }
 }

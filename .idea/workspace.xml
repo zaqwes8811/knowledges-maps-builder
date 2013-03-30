@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\__init__$py.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\_http_requester.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\_web_example.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\bat.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\coursera_title_parser.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\extracted_from_html.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\lessions_html_code.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\lessions_names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\content_assembers\read_pdf.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\IndexCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\__init__$py.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\_content_filters$py.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\_content_filters.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\generator_java_wrapper.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\orginator$py.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\originator_frequency_index\orginator.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\to_text$py.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\content-translate-assistant\src\business\to_text.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jysrc/business/originator_frequency_index/IndexCursor.py" afterPath="$PROJECT_DIR$/jysrc/business/originator_frequency_index/IndexCursor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +16,7 @@
     <file path="/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364628126711" ignored="false" />
     <file path="/Building.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364637461199" ignored="false" />
     <file path="/IIndexCursor.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364645648945" ignored="false" />
-    <file path="/Runner.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364653413493" ignored="false" />
+    <file path="/Runner.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364661107935" ignored="false" />
     <file path="/IndexCursorFactory.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652383333" ignored="false" />
     <file path="/IndexCursor.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652746323" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,7 +110,16 @@
       <file leaf-file-name="Runner.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="32" selection-start="126" selection-end="126" vertical-scroll-proportion="0.26984128">
+            <state line="24" column="47" selection-start="636" selection-end="636" vertical-scroll-proportion="0.9100529">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IIndexCursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,7 +128,7 @@
       <file leaf-file-name="IndexCursorFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="27" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+            <state line="24" column="24" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -244,6 +233,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content-translate-assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content-translate-assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content-translate-assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content-translate-assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="originator_frequency_index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,7 +395,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -525,16 +554,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+        <state line="24" column="24" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="126" selection-end="126" vertical-scroll-proportion="0.26984128">
+        <state line="24" column="47" selection-start="636" selection-end="636" vertical-scroll-proportion="0.9100529">
           <folding />
         </state>
       </provider>
