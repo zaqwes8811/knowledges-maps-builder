@@ -1,10 +1,13 @@
+import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
  
 import java.io.IOException;
- 
+
+import business.originator_frequency_index.IIndexCursor;
+import business.originator_frequency_index.IndexCursorFactory;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -22,6 +25,7 @@ import business.IndexContainer;
 import com.google.gson.Gson;
 import java.util.*;
 import java.util.Random;
+
 
 public class AppContainer {
   public static void main(String[] args) throws Exception {
@@ -60,8 +64,33 @@ public class AppContainer {
   public static class App extends HttpServlet {
     /* Блок классов приложения? Должны быть потокозащищенными
     private  */
+    private  IIndexCursor ptr;
 
-    IndexContainer indexContainer = new IndexContainer();
+    public void init() throws ServletException {
+      IndexCursorFactory factory = new IndexCursorFactory();
+
+      String indexRoot = "src/indexes";
+      ptr = factory.create(indexRoot);
+
+      System.out.print(ptr.getListNodes());
+
+      // Подключаемся к ветке
+      String contentItemName = "Iron Man AA";
+
+      ptr.assignBranch(contentItemName);
+
+      // Получаем индекс
+      //System.out.print();
+
+    }
+
+    //IndexContainer indexContainer = new IndexContainer();
+
+    private String getIndex() {
+      Gson gson = new Gson();
+      String result = gson.toJson(ptr.getSortedForwardIdx());
+      return  result;
+    }
 
     private String _getOxOy() {
       Gson gson = new Gson();
@@ -78,7 +107,7 @@ public class AppContainer {
       }
 
       // Jython test
-      indexContainer.testCall();
+      //indexContainer.testCall();
 
       // Сереализуем
       String json_response = gson.toJson(ints);
@@ -114,7 +143,7 @@ public class AppContainer {
       // И как быть с потокозащитой хэша? Кстати доступ только на чтение
       String json_response = "";
       if (name_requester.equals("get_axis")) {
-        json_response = _getOxOy();
+        json_response = getIndex();
       }
   		
       response.getWriter().println(json_response);

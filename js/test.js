@@ -72,10 +72,20 @@ function process_response(data) {
   var zoomed_data = [];
   var catch_every = 1;
   for(var i = 0; i < getted_axises.length; ++i) {
-    if (i%catch_every === 0) {
-      zoomed_data.push(getted_axises[i]);
-      g_map[getted_axises[i][0]] = 'Position : '+getted_axises[i][0]+'/'+getted_axises[i][1]
-    }
+    ///if (i%catch_every === 0) {
+      tmp = []
+      for(var name in getted_axises[i])
+      {
+          if (getted_axises[i].hasOwnProperty(name))
+          {
+              tmp.push(i);
+              tmp.push(getted_axises[i][name]);
+          }
+          g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
+      }
+      zoomed_data.push(tmp);
+
+    //}
   }
 
   // Функция рисования

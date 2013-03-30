@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jysrc/business/originator_frequency_index/IndexCursor.py" afterPath="$PROJECT_DIR$/jysrc/business/originator_frequency_index/IndexCursor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppContainer.java" afterPath="$PROJECT_DIR$/src/AppContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test.js" afterPath="$PROJECT_DIR$/js/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364655497145" ignored="false" />
-    <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364653445913" ignored="false" />
-    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364569162937" ignored="false" />
+    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364662881194" ignored="false" />
+    <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364661541109" ignored="false" />
+    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364663100930" ignored="false" />
     <file path="/index.html" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364568292902" ignored="false" />
-    <file path="/AppContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364628181828" ignored="false" />
+    <file path="/AppContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364663465617" ignored="false" />
     <file path="/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364628126711" ignored="false" />
     <file path="/Building.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364637461199" ignored="false" />
     <file path="/IIndexCursor.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364645648945" ignored="false" />
@@ -33,7 +33,64 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/business/IndexContainer.java" line="23" class="business.IndexContainer" package="business">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="72" class="AppContainer.App" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="123" class="AppContainer.App" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="148" class="AppContainer.App" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -68,36 +125,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="80" class="AppContainer.App" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/business/IndexContainer.java" line="23" class="business.IndexContainer" package="business">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -107,10 +135,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Runner.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Runner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="47" selection-start="636" selection-end="636" vertical-scroll-proportion="0.9100529">
+            <state line="0" column="8" selection-start="8" selection-end="43" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="0" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.7171904">
               <folding />
             </state>
           </provider>
@@ -119,7 +156,25 @@
       <file leaf-file-name="IIndexCursor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+            <state line="12" column="24" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="share.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/share.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="40" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,9 +184,7 @@
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="24" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,8 +209,6 @@
       <list>
         <option value="$PROJECT_DIR$/index_flot.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/test.js" />
-        <option value="$PROJECT_DIR$/src/AppContainer.java" />
         <option value="$PROJECT_DIR$/src/business/IndexContainer.java" />
         <option value="$PROJECT_DIR$/src/BuildingType.java" />
         <option value="$PROJECT_DIR$/src/org/jython/book/interfaces/BuildingType.java" />
@@ -168,14 +219,16 @@
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursor.py" />
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java" />
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" />
+        <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/src/AppContainer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-1288" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -204,6 +257,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,53 +286,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content-translate-assistant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content-translate-assistant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content-translate-assistant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content-translate-assistant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="originator_frequency_index" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,10 +309,10 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Runner">
-    <configuration default="false" name="Runner" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.AppContainer">
+    <configuration default="false" name="AppContainer" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="business.originator_frequency_index.Runner" />
+      <option name="MAIN_CLASS_NAME" value="AppContainer" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -356,11 +369,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
+      <item index="0" class="java.lang.String" itemvalue="Application.AppContainer" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
+        <item index="0" class="java.lang.String" itemvalue="Application.AppContainer" />
       </list>
     </recent_temporary>
   </component>
@@ -394,14 +407,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46928328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32660332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -410,8 +423,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757575" sideWeight="0.6894198" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3105802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22204214" sideWeight="0.67339665" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2209026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -479,21 +492,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/jython/book/util/BuildingFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="989" selection-end="989" vertical-scroll-proportion="0.4232143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/jython/book/util/RunnerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="478" selection-end="769" vertical-scroll-proportion="0.54464287" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app-wrapping-jyja.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="309" selection-end="516" vertical-scroll-proportion="0.33392859" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/jython/book/interfaces/Building.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="32" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" />
@@ -501,16 +499,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_call_jy/JavaImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_call_jy/Beach.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="19" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsr/PyCaller.java">
@@ -520,9 +514,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestCallJy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="314" selection-end="314" vertical-scroll-proportion="0.3153989">
-          <folding />
-        </state>
+        <state line="12" column="25" selection-start="314" selection-end="314" vertical-scroll-proportion="0.3153989" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_scripts/SimpleTask.py">
@@ -547,30 +539,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_call_jy/IJythonTestInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="30" selection-start="294" selection-end="294" vertical-scroll-proportion="0.60382515">
-          <folding />
-        </state>
+        <state line="13" column="30" selection-start="294" selection-end="294" vertical-scroll-proportion="0.60382515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="24" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+        <state line="12" column="24" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/share.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="40" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="47" selection-start="636" selection-end="636" vertical-scroll-proportion="0.9100529">
+        <state line="0" column="8" selection-start="8" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="0" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.7171904">
           <folding />
         </state>
       </provider>
