@@ -42,9 +42,11 @@ def main():
     
     # Выводим
     #index.print_branch(content_item_name)
-    sorted_findex, freq = index.get_sorted_forward_idx()
+    freq = []
+    sorted_findex = index.get_sorted_forward_idx()
     for at in sorted_findex:
         print at
+        freq.append(at[1])
     
     x = range(len(freq))
     plot(x, freq)
