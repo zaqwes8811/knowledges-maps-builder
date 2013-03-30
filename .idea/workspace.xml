@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppContainer.java" afterPath="$PROJECT_DIR$/src/AppContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test.js" afterPath="$PROJECT_DIR$/js/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364662881194" ignored="false" />
     <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364661541109" ignored="false" />
-    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364663100930" ignored="false" />
+    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364664326976" ignored="false" />
     <file path="/index.html" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364568292902" ignored="false" />
     <file path="/AppContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364663465617" ignored="false" />
     <file path="/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364628126711" ignored="false" />
@@ -35,48 +33,6 @@
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/business/IndexContainer.java" line="23" class="business.IndexContainer" package="business">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="72" class="AppContainer.App" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="123" class="AppContainer.App" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/AppContainer.java" line="148" class="AppContainer.App" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -144,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="0" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.7171904">
+            <state line="72" column="0" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,19 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="share.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/share.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="40" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0">
+            <state line="94" column="26" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.43438077">
               <folding />
             </state>
           </provider>
@@ -219,8 +166,8 @@
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursor.py" />
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java" />
         <option value="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" />
-        <option value="$PROJECT_DIR$/js/test.js" />
         <option value="$PROJECT_DIR$/src/AppContainer.java" />
+        <option value="$PROJECT_DIR$/js/test.js" />
       </list>
     </option>
   </component>
@@ -549,9 +496,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
+    <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="0" column="8" selection-start="8" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -563,23 +517,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="40" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="0" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.7171904">
+        <state line="94" column="26" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.43438077">
           <folding />
         </state>
       </provider>

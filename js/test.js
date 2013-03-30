@@ -92,7 +92,7 @@ function process_response(data) {
   var plot = $.plot("#placeholder", [{ data: zoomed_data, label: "uniform(x)"}], {
     series: {
       lines: {show: true},
-      points: {show: true}
+      points: {show: false}
     },
     grid: {
       hoverable: true,
