@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
+encoding//scripts/regenerator_python_code.py=utf-8
 encoding//src/app-translate-assistant.py=utf-8
 encoding//src/business/originator_frequency_index/IndexCursor.py=utf-8
-encoding//src/business/originator_frequency_index/gen_java_wrapper.py=utf-8
+encoding//src/business/originator_frequency_index/generator_java_wrapper.py=utf-8
 encoding//src/business/originator_frequency_index/orginator.py=utf-8

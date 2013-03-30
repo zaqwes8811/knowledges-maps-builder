@@ -6,6 +6,7 @@
 package org.jython.book.util;
 
 import org.jython.book.interfaces.BuildingType;
+
 import org.python.core.PyObject;
 import org.python.core.PyString;
 import org.python.util.PythonInterpreter;
@@ -43,5 +44,4 @@ public class BuildingFactory {
       new PyString(id));
     return (BuildingType)buildingObject.__tojava__(BuildingType.class);
   }
-
 }
