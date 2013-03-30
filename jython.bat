@@ -1,1 +1,0 @@
-java -jar D:\work-libs\jython.jar %1
