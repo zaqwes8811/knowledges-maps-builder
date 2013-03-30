@@ -16,6 +16,8 @@ import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
 //import java.util.
+// App
+import business.IndexContainer;
 
 import com.google.gson.Gson;
 import java.util.*;
@@ -59,6 +61,8 @@ public class AppContainer {
     /* Блок классов приложения? Должны быть потокозащищенными
     private  */
 
+    IndexContainer indexContainer = new IndexContainer();
+
     private String _getOxOy() {
       Gson gson = new Gson();
 
@@ -72,6 +76,9 @@ public class AppContainer {
         tmp.add(randomInt);  // Oy sample
         ints.add(tmp);
       }
+
+      // Jython test
+      indexContainer.testCall();
 
       // Сереализуем
       String json_response = gson.toJson(ints);
@@ -105,9 +112,12 @@ public class AppContainer {
       // Плохой вариант - линейный поиск - свич по именам
       //
       // И как быть с потокозащитой хэша? Кстати доступ только на чтение
-      String json_response = _getOxOy();
+      String json_response = "";
+      if (name_requester.equals("get_axis")) {
+        json_response = _getOxOy();
+      }
   		
       response.getWriter().println(json_response);
     }
-   }
+  }
 }
