@@ -15,6 +15,5 @@ public class Runner {
     IIndexCursor ptr = factory.create(indexRoot);
 
     System.out.print(ptr.getListNodes());
-
   }
 }

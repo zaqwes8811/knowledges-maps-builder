@@ -2,8 +2,9 @@
 # coding: utf-8
 import sys
 sys.path.append('d:/github')
+sys.path.append('.')
 import os
-#sys.path.append(os.getcwd().replace('\\', '/'))
+print os.getcwd()
 
 print sys.path
 
@@ -28,11 +29,8 @@ import dals.os_io.io_wrapper as dal
 import java.util.ArrayList as ArrayList
 
 # App
-
-#from business.originator_frequency_index.
-from _content_filters import _purge_one_sentence
-#from business.
-from to_text import is_content_nums 
+from jysrc.business.originator_frequency_index._content_filters import _purge_one_sentence
+from jysrc.business.to_text import is_content_nums 
 
 def python_lst_to_java_lst(py_list):
     """

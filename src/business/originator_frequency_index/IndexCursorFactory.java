@@ -22,11 +22,8 @@ public class IndexCursorFactory {
   public IndexCursorFactory() {
     PythonInterpreter interpreter = new PythonInterpreter();
     interpreter.exec("import sys");
-    interpreter.exec("sys.path.append('D:\\github\\content-translate-assistant\\out\\production\\content-translate-assistant//business/');");
-    interpreter.exec("sys.path.append('D:\\github\\content-translate-assistant\\out\\production\\content-translate-assistant/business/originator_frequency_index')");
-    //interpreter.exec("import business.originator_frequency_index.IndexCursor.IndexCursor as IndexCursor");
-    //interpreter.exec("from business.originator_frequency_index.IndexCursor import IndexCursor");
-    interpreter.exec("from IndexCursor import IndexCursor");
+    interpreter.exec("sys.path.append('.');");
+    interpreter.exec("from jysrc.business.originator_frequency_index.IndexCursor import IndexCursor");
     buildingClass = interpreter.get("IndexCursor");
   }
 
