@@ -25,6 +25,8 @@ public class BuildingFactory {
 
   public BuildingFactory() {
     PythonInterpreter interpreter = new PythonInterpreter();
+    interpreter.exec("import sys");
+    interpreter.exec("sys.path.append('D:/github/content-translate-assistant/src/org/jython/book/interfaces')");
     interpreter.exec("from Building import Building");
     buildingClass = interpreter.get("Building");
   }

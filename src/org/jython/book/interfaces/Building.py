@@ -3,10 +3,14 @@
 from org.jython.book.interfaces import BuildingType
 
 class Building(BuildingType):
+    name = None
+    address = None
+    id = None
     def __init__(self, name, address, id):
         self.name = name
         self.address = address
         self.id = id
+        print id
 
     def getBuildingName(self):
         return self.name
@@ -14,5 +18,6 @@ class Building(BuildingType):
     def getBuildingAddress(self):
         return self.address
 
-    def getBuldingId(self):
+    def getBuildingId(self):
+        print self.id
         return self.id
