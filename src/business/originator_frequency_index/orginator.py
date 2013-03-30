@@ -80,7 +80,7 @@ class IndexCursor(object):#public
             if branch[at] > 1:
                 print branch[at], at
                 
-    def get_sorted_forward_idx(self):#list<list<string, int>>
+    def get_sorted_forward_idx(self):#list<map<string, int>>
         src_list = []
         for at in self._branch_cash:
             src_list.append([at, self._branch_cash[at]])

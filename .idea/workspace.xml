@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app-translate-assistant.py" afterPath="$PROJECT_DIR$/src/app-translate-assistant.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursor.py" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/gen_java_wrapper.py" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/gen_java_wrapper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/originator_frequency_index/orginator.py" afterPath="$PROJECT_DIR$/src/business/originator_frequency_index/orginator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,8 +132,10 @@
       <file leaf-file-name="IIndexCursor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="32" selection-start="271" selection-end="271" vertical-scroll-proportion="0.25373134">
-              <folding />
+            <state line="12" column="38" selection-start="392" selection-end="392" vertical-scroll-proportion="0.33830845">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -643,8 +648,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="271" selection-end="271" vertical-scroll-proportion="0.25373134">
-          <folding />
+        <state line="12" column="38" selection-start="392" selection-end="392" vertical-scroll-proportion="0.33830845">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

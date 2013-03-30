@@ -82,7 +82,7 @@ class IndexCursor(IIndexCursor):
             if branch[at] > 1:
                 print branch[at], at
                 
-    def getSortedForwardIdx(self):#list<list<string, int>>
+    def getSortedForwardIdx(self):#list<map<string, int>>
         src_list = []
         for at in self._branch_cash:
             src_list.append([at, self._branch_cash[at]])
