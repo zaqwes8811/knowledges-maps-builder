@@ -180,13 +180,13 @@ def generate_java_code(source_content):
             package_path+';')  
     tmp = tmp.replace(
             'import org.jython.book.interfaces.BuildingType;', 
-            package_path+'.'+header+';') 
+            'import '+package_path.replace('package ', '')+'.'+header+';') 
     
     tmp = tmp.replace('BuildingFactory', header[1:]+'Factory')
     
     tmp = tmp.replace('BuildingType', header) 
     tmp = tmp.replace('Building', header[1:])
-    tmp = tmp.replace('D:/github/content-translate-assistant/src/org/jython/book/interfaces', os.getcwd())
+    tmp = tmp.replace('D:/github/content-translate-assistant/src/org/jython/book/interfaces', os.getcwd().replace('\\','/'))
     
     write_source(header[1:]+'Factory'+'.java', [tmp])
     

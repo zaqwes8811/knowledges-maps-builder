@@ -1,6 +1,6 @@
 package business.originator_frequency_index;
 
-package business.originator_frequency_index.IIndexCursor;
+import business.originator_frequency_index.IIndexCursor;
 
 import org.python.core.PyObject;
 import org.python.core.PyString;
@@ -22,7 +22,10 @@ public class IndexCursorFactory {
   public IndexCursorFactory() {
     PythonInterpreter interpreter = new PythonInterpreter();
     interpreter.exec("import sys");
-    interpreter.exec("sys.path.append('D:\github\content-translate-assistant\src\business\originator_frequency_index')");
+    interpreter.exec("sys.path.append('D:\\github\\content-translate-assistant\\out\\production\\content-translate-assistant//business/');");
+    interpreter.exec("sys.path.append('D:\\github\\content-translate-assistant\\out\\production\\content-translate-assistant/business/originator_frequency_index')");
+    //interpreter.exec("import business.originator_frequency_index.IndexCursor.IndexCursor as IndexCursor");
+    //interpreter.exec("from business.originator_frequency_index.IndexCursor import IndexCursor");
     interpreter.exec("from IndexCursor import IndexCursor");
     buildingClass = interpreter.get("IndexCursor");
   }
@@ -32,9 +35,9 @@ public class IndexCursorFactory {
    * coercion of the referenced python module into Java bytecode
    */
 
-  public IIndexCursor create() {
+  public IIndexCursor create(String indexRoot) {
 
-    PyObject buildingObject = buildingClass.__call__();
+    PyObject buildingObject = buildingClass.__call__(new PyString(indexRoot));
     return (IIndexCursor)buildingObject.__tojava__(IIndexCursor.class);
   }
 }
