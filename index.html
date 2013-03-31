@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="css/docs.css">
+    <link href="css/app.css" rel="stylesheet" type="text/css"/>
 
     <!-- App -->
     <link rel="stylesheet" href="css/website.css">
@@ -39,8 +40,24 @@
       
     <div class="row-fluid show-grid">
     
-<div class="span3">
+<div id="list_nodes_container" class="span3">
   Content spaces panel
+    <button onclick="get_list_items()" class="btn btn-warning">Get list</button>
+    <!-- Сюда будут дорисовываться имена узлов -->
+
+    <div class="one_line_container">
+        <div class="first_one8"><div class="parent">
+            <div class="child">Marker</div>
+            <div class="helper"></div>
+        </div></div>
+    </div>
+
+    <div class="one_line_container">
+        <div class="first_one8"><div class="parent">
+            <div class="child">Marker</div>
+            <div class="helper"></div>
+        </div></div>
+    </div>
 </div>
       
 <div class="span9" style="padding-bottom:10px;">
@@ -147,13 +164,15 @@
 
     <p>A tooltip is easy to build with a bit of jQuery code and the data returned from the plot.</p>
     <p><label><input id="enableTooltip" type="checkbox">Enable tooltip</label></p>
+
+    <!-- Action -->
+    <button class="btn" onclick="get_data()">Do ajax request</button>
 </div>
 
 
-<!-- Action -->
-<button class="btn btn-danger" onclick="get_data()">Do ajax request</button>
 
-<button onclick="get_list_items()" class="btn">Get list</button>
+
+
 
 
 
