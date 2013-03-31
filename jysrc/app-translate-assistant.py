@@ -36,9 +36,9 @@ def main():
     print 'Process files. Wait please...'
     #for fname in files:
         # Выделяем единицы контента в список
-       # sentences_lst = get_list_content_items_from_str(fname)
+        #sentences_lst = get_list_content_items_from_str(fname)
 
-      #  index.process_list_content_sentences(sentences_lst)
+        #index.process_list_content_sentences(sentences_lst)
     
     # Выводим
     #index.print_branch(content_item_name)

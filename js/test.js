@@ -112,6 +112,8 @@ function get_line_template(id, content) {
 
 function get_list_items() {
     var list_names = ['IM', 'AA'];
+
+    // Будет замкнута
     var i = 0;
     for (i = 0; i < 2 ; ++i) {
         // TODO():А что если имена одинаковые?
@@ -122,16 +124,29 @@ function get_list_items() {
         // Нужно связать не на прямую, а на Item в линии - он шире
         var bind_obj = { click:
             (function(x) {
-                return function(  ) {
+                return function() {
                     $('#'+list_names[x]).val("Clicked");
-                    alert($('#'+list_names[x]).text())
+
+                    //alert($('#'+list_names[x]).text())
+
+                    var request_processor = '/app';
+                    var response_branch = {'name':'get_axis'};
+                    $.ajax({
+                            url: request_processor,
+                            type: "GET",
+                            data: response_branch})
+                    .done(function(data) {
+                        //process_response(data);
+                        alert('Done');
+                    })
+                    .error(function(data) {
+                        if (data.status == 404) {}
+                        if (data.status == 500) {}
+                        if (data.status == 0) {}
+                    });
                 }
             })(i)
         };
-         $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(
-         //$('#'+list_names[i]).bind(
-         bind_obj
-             );
-
+        $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(bind_obj);
     }
 }
