@@ -101,7 +101,37 @@ function process_response(data) {
   });
 }
 
+function get_line_template(id, content) {
+    return '<div class="one_line_container">'+
+        '  <div class="first_one8"><div class="parent">'+
+        '    <div id="'+id+'" class="child">'+content+'</div>'+
+        '    <div class="helper"></div>'+
+        '  </div></div>'+
+        '</div>';
+}
+
 function get_list_items() {
+    var list_names = ['IM', 'AA'];
+    var i = 0;
+    for (i = 0; i < 2 ; ++i) {
+        // TODO():А что если имена одинаковые?
+        $('#list_nodes_container').append(get_line_template(list_names[i], list_names[i]));
 
 
+        // Соединяем с обработчиком нажатия
+        // Нужно связать не на прямую, а на Item в линии - он шире
+        var bind_obj = { click:
+            (function(x) {
+                return function(  ) {
+                    $('#'+list_names[x]).val("Clicked");
+                    alert($('#'+list_names[x]).text())
+                }
+            })(i)
+        };
+         $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(
+         //$('#'+list_names[i]).bind(
+         bind_obj
+             );
+
+    }
 }

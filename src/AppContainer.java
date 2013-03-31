@@ -72,12 +72,7 @@ public class AppContainer {
       String indexRoot = "src/indexes";
       ptr = factory.create(indexRoot);
 
-      System.out.print(ptr.getListNodes());
 
-      // Подключаемся к ветке
-      String contentItemName = "Iron Man AA";
-
-      ptr.assignBranch(contentItemName);
 
       // Получаем индекс
       //System.out.print();
@@ -88,8 +83,21 @@ public class AppContainer {
 
     private String getIndex() {
       Gson gson = new Gson();
+      //System.out.print(ptr.getListNodes());
+
+      // Подключаемся к ветке
+      String contentItemName = "Iron Man AA";
+
+      ptr.assignBranch(contentItemName);
+
       String result = gson.toJson(ptr.getSortedForwardIdx());
       return  result;
+    }
+
+    private String getListNodes() {
+      Gson gson = new Gson();
+      List<String> noPackedResponse = ptr.getListNodes();
+      return gson.toJson(noPackedResponse);
     }
 
     private String _getOxOy() {
@@ -144,7 +152,12 @@ public class AppContainer {
       String json_response = "";
       if (name_requester.equals("get_axis")) {
         json_response = getIndex();
+      } else if (name_requester.equals("get_nodes")) {
+        json_response = getListNodes();
+      } else {
+        // No implemented
       }
+
   		
       response.getWriter().println(json_response);
     }
