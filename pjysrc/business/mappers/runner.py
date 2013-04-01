@@ -4,6 +4,7 @@
 #from pylab import plot
 #from pylab import show
 #from pylab import grid
+import json
 
 # App
 #import business.originator_frequency_index.orginator as orginator
@@ -11,10 +12,13 @@
 from business.originators_text_data.srt_to_text import srt_to_text_line
 
 def get_addrs():
+    # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
+    # Можно подставить имя
     files = [
              ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line],
-            ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', srt_to_text_line]]
+                srt_to_text_line, None],
+             ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
+                srt_to_text_line, None]]
     return files
 
 def mapper(url):
@@ -24,7 +28,16 @@ def mapper(url):
         
         # Получем текст
         text = item[1](path)
+        
+        # теперь можно раздробить на единицы контента
+        content_items = []
+        if item[2]:
+            content_items = item[2](text)
+        else:
+            content_items = [text]
 
+        # Теперь можно составлять индекс
+        print key
         
     map(print_pathes, url[1])
 
@@ -66,6 +79,8 @@ if __name__=='__main__':
     print 'Begin'
     main()
     print 'Done'
+    
+    #print json.dumps(main)  # NO WAY
     
     
 
