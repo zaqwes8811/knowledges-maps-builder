@@ -30,15 +30,16 @@ def main():
     
     # Получаем пути к субтитрам
     # Сборщик контента - отдельный объект!
-    files = get_addrs()
+    files = None#get_addrs()
     
     # Получить индекс 
     print 'Process files. Wait please...'
-    #for fname in files:
-        # Выделяем единицы контента в список
-        #sentences_lst = get_list_content_items_from_str(fname)
-
-        #index.process_list_content_sentences(sentences_lst)
+    if files:
+        for fname in files:
+            # Выделяем единицы контента в список
+            sentences_lst = get_list_content_items_from_str(fname)
+    
+            index.process_list_content_sentences(sentences_lst)
     
     # Выводим
     #index.print_branch(content_item_name)
