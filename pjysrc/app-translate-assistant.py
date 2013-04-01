@@ -8,7 +8,7 @@ from pylab import grid
 # App
 import business.originator_frequency_index.orginator as orginator
 from business.to_text import get_list_content_items_from_str 
-from business.originator_frequency_index.orginator import IndexCursor
+from business.originators_text_data import IndexCursor
 
 def get_addrs():
     files = [

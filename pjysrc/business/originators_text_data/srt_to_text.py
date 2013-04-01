@@ -33,6 +33,11 @@ def _split_to_sentences(one_line):
 
 def get_list_content_items_from_str(url):
     """ Тотлько для субтитров. """
+    result = _split_to_sentences(srt_to_text_line(url))
+    return result
+
+def srt_to_text_line(url):
+    """ Тотлько для субтитров. """
     sets = dal.get_utf8_template()
     sets['name'] = url
         
@@ -51,6 +56,5 @@ def get_list_content_items_from_str(url):
     
     # Теперь нужно разить на предложения
     one_line = ' '.join(purged_lst)
-    result = _split_to_sentences(one_line)
     
-    return result
+    return one_line
