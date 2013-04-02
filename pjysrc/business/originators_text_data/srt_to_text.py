@@ -1,8 +1,6 @@
 # coding: utf-8
 '''
-Created on 20.03.2013
-
-@author: кей
+    TODO(zaqwes): Как быть если запуск многопоточный, а файл включен в несколько узлов?
 '''
 # Sys
 
@@ -17,24 +15,6 @@ def is_content_nums(string):
         #s = match.group()
         return True
     return False
-
-def _split_to_sentences(one_line):
-    """ Сделано супер просто. Но реально алгоритмы не таки простые. """
-    _kInsertConst = '@@@@'
-    one_line_with_inserts = ''
-    for at in one_line:
-        one_line_with_inserts += at
-        if at == '.' or at == '!' or at == '?' or at == ']':
-            one_line_with_inserts += _kInsertConst
-            
-    # Чистый контент - набор предложений
-    sentences_lst = one_line_with_inserts.split(_kInsertConst)
-    return sentences_lst
-
-def get_list_content_items_from_str(url):
-    """ Тотлько для субтитров. """
-    result = _split_to_sentences(srt_to_text_line(url))
-    return result
 
 def srt_to_text_line(url):
     """ Тотлько для субтитров. """

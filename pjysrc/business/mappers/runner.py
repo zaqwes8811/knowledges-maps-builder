@@ -1,4 +1,9 @@
 # coding: utf-8
+''' 
+
+Происходит дублирование информации - потери в памяти, но это позволяет
+  запускать задачи параллельно
+'''
 
 # Other
 #from pylab import plot
@@ -9,6 +14,8 @@ import json
 # App
 #import business.originator_frequency_index.orginator as orginator
 #from business.to_text import get_list_content_items_from_str 
+
+# Преобразователи ресурса в текст
 from business.originators_text_data.srt_to_text import srt_to_text_line
 
 def get_scheme_actions():
@@ -16,12 +23,16 @@ def get_scheme_actions():
     # Можно подставить имя
     
     def one_node_action_fake():
-        files = [
-                 ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                    srt_to_text_line, None],
-                 ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
-                    srt_to_text_line, None]]
-        return files
+        content_pkge = \
+            [
+                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                srt_to_text_line, 
+                None],  # Дробитель контекста
+                ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
+                srt_to_text_line, 
+                None]
+             ]
+        return content_pkge
     
     node_name1 = 'Iron Man AA1'
     node_name2 = 'Iron Man AA2'
@@ -31,26 +42,28 @@ def get_scheme_actions():
     return readed_data
 
 def mapper(url):
-    key = url[0]
-    result = {key: []}
-    def print_pathes(item):
-        path = item[0]
+    """ (node_name, [[], [], []])"""
+    node_name = url[0]
+    result = []
+    list_jobs = url[1]
+    def process_url(one_job):
+        url = one_job[0]
         
         # Получем текст
-        text = item[1](path)
+        text_extractor = one_job[1]
+        text = text_extractor(url)
         
-        # теперь можно раздробить на единицы контента
-        #content_items = []
-        #if item[2]:
-            #content_items = item[2](text)
-        #else:
-            #content_items = [text]
-
         # Теперь можно составлять индекс
-        result[key].append([text, item[2]])
-        
-        
-    map(print_pathes, url[1])
+        tokenizer = one_job[2]
+        parallel_pkg = [
+                text, # текс для дальнейшей обработки
+                tokenizer,  # просто перепаковка для транзита
+                node_name,  # Имя будущего узла для Suffle-части
+                url]  # Для обратного индекса
+        result.append(parallel_pkg)
+     
+    # Делаем "работы"   
+    map(process_url, list_jobs)
     return result
 
 def main():
@@ -65,11 +78,11 @@ def main():
     print
     print 'Plotting results...'
     
-    def printer(value):
-        for at in value:
-            for it in value[at]:
-                print it    
-    map(printer, map_result)
+    #def printer(value):
+    #    for at in value:
+    #        for it in value[at]:
+    #            print it    
+    #map(printer, map_result)
     
     # Выводим
     #index.print_branch(content_item_name)

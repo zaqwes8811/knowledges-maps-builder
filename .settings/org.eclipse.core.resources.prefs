@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//jysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/business/mappers/runner.py=utf-8
+encoding//pjysrc/business/nlp_components/tokenizers.py=utf-8
 encoding//pjysrc/business/originators_text_data/srt_to_text.py=utf-8
 encoding//scripts/regenerator_python_code.py=utf-8
 encoding//src/app-translate-assistant.py=utf-8
