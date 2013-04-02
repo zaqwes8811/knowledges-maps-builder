@@ -41,25 +41,24 @@ def get_scheme_actions():
           node_name2: one_node_action_fake()}
     return readed_data
 
-def mapper(url):
+def job_splitter(full_job):
     """ (node_name, [[], [], []])"""
-    node_name = url[0]
+    node_name, list_jobs = full_job
     result = []
-    list_jobs = url[1]
     def process_url(one_job):
         url = one_job[0]
+        text_extractor = one_job[1]
+        tokenizer = one_job[2]
         
         # Получем текст
-        text_extractor = one_job[1]
         text = text_extractor(url)
         
         # Теперь можно составлять индекс
-        tokenizer = one_job[2]
         parallel_pkg = [
-                text, # текс для дальнейшей обработки
+                text[:20], # текс для дальнейшей обработки
                 tokenizer,  # просто перепаковка для транзита
-                node_name,  # Имя будущего узла для Suffle-части
-                url]  # Для обратного индекса
+                url,  # Для обратного индекса
+                node_name]  # Имя будущего узла для Suffle-части
         result.append(parallel_pkg)
      
     # Делаем "работы"   
@@ -67,13 +66,15 @@ def mapper(url):
     return result
 
 def main():
+    def printer(item):
+        print item
     # План действий
     readed_data = get_scheme_actions()
-
     
     # Получить индекс 
     print 'Process files. Wait please...'
-    map_result = map(mapper, readed_data.items())
+    job_items = map(job_splitter, readed_data.items())
+    map(printer, job_items)
     print 'Extract text done.'
     print
     print 'Plotting results...'
