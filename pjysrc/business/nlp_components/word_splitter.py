@@ -7,27 +7,48 @@ Created on 03.04.2013
 import re
 
 from business.nlp_components._content_filters import _purge_one_sentence
-from business.nlp_components.filters import _is_key_enabled
+from business.nlp_components.filters import is_key_enabled
 
 # Processors
-def processListContentSentences(list_s_sentences):#void
+def processListContentSentences(list_s_sentences, tokenizer):#void
     """ Получает список предложений и заполняет ветку индекса. """
-    _branch_cash = {}
+    one_node_hash = {}
+    summ_sents_len = None
+    count_sents = None
+    if tokenizer:
+        count_sents = len(list_s_sentences) 
+        summ_sents_len = 0
     
     # Обработка
-    for one_sentence in list_s_sentences:
-        if one_sentence:
-            pure_sentence = _purge_one_sentence(one_sentence)
-            
+    #def _process_one_sentence(sentence):
+    for  sentence in list_s_sentences:
+        if sentence:
+            pure_sentence = _purge_one_sentence(sentence)
+
             # Лексические единицы одного предложения
             set_words = pure_sentence.split(' ')
+            if tokenizer:
+                summ_sents_len += len(set_words)
+            
             for at in set_words:
                 if at != ' ' and at:
-                    if at in _branch_cash:
-                        _branch_cash[at] += 1
+                    # Темперь пропускаем через стеммер
+                    stemmed_key = at
+                    if stemmed_key in one_node_hash:
+                        one_node_hash[stemmed_key]['N'] += 1
+                        one_node_hash[stemmed_key]['S'].add(at)
                     else:
                         # Первое включение
-                        if _is_key_enabled(at):
-                            _branch_cash[at] = 1
+                        if is_key_enabled(stemmed_key):                          
+                            # Все что соответсвует слову
+                            one_node_hash[stemmed_key] = {}
                             
-    return _branch_cash
+                            # Формируем структуру, соотв. одному корню слова
+                            one_node_hash[stemmed_key]['N'] = 1
+                            one_node_hash[stemmed_key]['S'] = set()
+                            one_node_hash[stemmed_key]['S'].add(at)
+                            
+    #map(_process_one_sentence, list_s_sentences)
+        
+                            
+    return one_node_hash, (count_sents, summ_sents_len)

@@ -66,8 +66,11 @@ def mapper(full_job):
             lits_content_items = [text]
         
         # Теперь можно составлять индекс
-        index = processListContentSentences(lits_content_items)
+        index, (count_sents, summ_sents_len) = processListContentSentences(
+                                                                           lits_content_items,
+                                                                           tokenizer)
         map(printer, index.items())
+        print (count_sents, summ_sents_len)
         
         """parallel_pkg = (
                 node_name,

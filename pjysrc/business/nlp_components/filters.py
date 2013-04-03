@@ -6,7 +6,7 @@ Created on 03.04.2013
 '''
 import re
 
-def _is_key_enabled(key_value):
+def is_key_enabled(key_value):
     if key_value == 'and' or \
             is_content_nums(key_value) or \
             key_value == 'a' or \
