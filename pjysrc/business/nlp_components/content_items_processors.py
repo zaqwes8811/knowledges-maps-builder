@@ -8,12 +8,12 @@ import re
 
 from business.nlp_components._content_filters import _purge_one_sentence
 from business.nlp_components.filters import is_key_enabled
-from business.nlp_components.word_compressors import simple_word_splitter
-from business.nlp_components.word_compressors import fake_compressor
+from business.nlp_components.word_level_processors import simple_word_splitter
+from business.nlp_components.word_level_processors import fake_compressor
 
 # Processors
 def process_list_content_sentences(list_s_sentences, tokenizer):#void
-    """ Получает список предложений и заполняет ветку индекса. """
+    """ Получает список предложений и заполняет узел индекса. """
     one_node_hash = {}
     summ_sents_len = None
     count_sents = None
@@ -22,8 +22,23 @@ def process_list_content_sentences(list_s_sentences, tokenizer):#void
         summ_sents_len = 0
     
     # Обработка
-    #def _process_one_sentence(sentence):
     for  sentence in list_s_sentences:
+        def add_new_record(key_name):
+            if is_key_enabled(key_name):                          
+                # Все что соответсвует слову
+                one_node_hash[key_name] = {}
+                
+                # Формируем структуру, соотв. одному корню слова
+                one_node_hash[key_name]['N'] = 1
+                one_node_hash[key_name]['S'] = []  # Не сереализутеся
+                one_node_hash[key_name]['S'].append(at)
+        
+        def edit_exist_node(key_name):
+            one_node_hash[key_name]['N'] += 1
+            if at not in one_node_hash[key_name]['S']:
+                one_node_hash[key_name]['S'].append(at)
+                
+        # Сама обработка   
         if sentence:
             pure_sentence = _purge_one_sentence(sentence)
 
@@ -34,24 +49,11 @@ def process_list_content_sentences(list_s_sentences, tokenizer):#void
             
             for at in set_words:
                 if at != ' ' and at:
-                    # Темперь пропускаем через стеммер
-                    stemmed_key = fake_compressor(at)
-                    if stemmed_key in one_node_hash:
-                        one_node_hash[stemmed_key]['N'] += 1
-                        if at not in one_node_hash[stemmed_key]['S']:
-                            one_node_hash[stemmed_key]['S'].append(at)
+                    # Обрабатываем один ключ
+                    compressed_key = fake_compressor(at)
+                    if compressed_key in one_node_hash:
+                        edit_exist_node(compressed_key)
                     else:
-                        # Первое включение
-                        if is_key_enabled(stemmed_key):                          
-                            # Все что соответсвует слову
-                            one_node_hash[stemmed_key] = {}
-                            
-                            # Формируем структуру, соотв. одному корню слова
-                            one_node_hash[stemmed_key]['N'] = 1
-                            one_node_hash[stemmed_key]['S'] = []  # Не сереализутеся
-                            one_node_hash[stemmed_key]['S'].append(at)
-                            
-    #map(_process_one_sentence, list_s_sentences)
-        
-                            
+                        add_new_record(compressed_key)
+                                       
     return one_node_hash, (count_sents, summ_sents_len)

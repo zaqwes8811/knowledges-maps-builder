@@ -13,7 +13,8 @@ import json
 
 # App
 from business.nlp_components.tokenizers import roughly_split_to_sentences
-from business.nlp_components.content_items_processors import process_list_content_sentences
+from business.mappers import mapper
+
 
 # Преобразователи ресурса в текст
 from business.originators_text_data.srt_to_text import srt_to_text_line
@@ -55,58 +56,24 @@ def plan_to_jobs_convertor(scheme):
             result.append(it)
     return result
 
-def mapper(job):
-    """ [.., .., .., node_name]"""
-    url = job[0]
-    text_extractor = job[1]
-    tokenizer = job[2]
-    node_name = job[3]
-
-    # Получем текст
-    text = text_extractor(url)
-    
-    # Токенизация
-    lits_content_items = []
-    if tokenizer:
-        lits_content_items = tokenizer(text)
-    else:
-        lits_content_items = [text]
-    
-    # Теперь можно составлять индекс
-    index, (count_sents, summ_sents_len) = process_list_content_sentences(
-                                                                       lits_content_items,
-                                                                       tokenizer)
-    #map(printer, index.items())
-    #print (count_sents, summ_sents_len)
-       
-    parallel_pkg = (node_name, index, (count_sents, summ_sents_len), url)
-    return parallel_pkg
-
 def main():
-    
-    # План действий
+    print 'Get task plan.'
     scheme = get_scheme_actions()
     
-    # Делаем из него работы
+    print 'Split task to job.'
     jobs = plan_to_jobs_convertor(scheme)
-    map(printer, jobs)
+    #map(printer, jobs)
     
-    # Map stage
-    print 'Process files. Wait please...'
+    print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
     
     """sets = get_utf8_template()
     sets['name'] = 'tmp.json'
     sets['howOpen'] = 'w'
-    list2file(sets, [json.dumps(map_stage_results, sort_keys=True, indent=2)])
-    """
-
-    #map(printer, map_stage_results)
-    print 'Extract text done.'
-    print
-    print 'Plotting results...'
-       
+    list2file(sets, [json.dumps(map_stage_results, sort_keys=True, indent=2)])"""
+      
     # Suffle stage
+    print 'Begin Suffle stage. Wait please...'
     
     #def printer(value):
     #    for at in value:
