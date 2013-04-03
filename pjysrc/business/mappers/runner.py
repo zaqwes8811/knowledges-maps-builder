@@ -13,10 +13,12 @@ import json
 
 # App
 from business.nlp_components.tokenizers import roughly_split_to_sentences
-from business.nlp_components.word_splitter import processListContentSentences
+from business.nlp_components.content_items_processors import process_list_content_sentences
 
 # Преобразователи ресурса в текст
 from business.originators_text_data.srt_to_text import srt_to_text_line
+from dals.os_io.io_wrapper import list2file
+from dals.os_io.io_wrapper import get_utf8_template
 
 def printer(item):
     print item
@@ -44,61 +46,66 @@ def get_scheme_actions():
           node_name2: one_node_action_fake()}
     return readed_data
 
-def mapper(full_job):
-    """ (node_name, [[], [], []])"""
-    node_name, list_jobs = full_job
+def plan_to_jobs_convertor(scheme):
     result = []
-    def process_url(one_job):
-        url = one_job[0]
-        text_extractor = one_job[1]
-        tokenizer = one_job[2]
-        
-        # Получем текст
-        text = text_extractor(url)
-        
-        # Токенизация
-        need_add_content_to_index = False
-        lits_content_items = []
-        if tokenizer:
-            lits_content_items = tokenizer(text)
-            need_add_content_to_index = True
-        else:
-            lits_content_items = [text]
-        
-        # Теперь можно составлять индекс
-        index, (count_sents, summ_sents_len) = processListContentSentences(
-                                                                           lits_content_items,
-                                                                           tokenizer)
-        map(printer, index.items())
-        print (count_sents, summ_sents_len)
-        
-        """parallel_pkg = (
-                node_name,
-                text[:20], # текс для дальнейшей обработки
-                ,  # просто перепаковка для транзита
-                url  # Для обратного индекса
-                )  # Имя будущего узла для Suffle-части
-        """
-        parallel_pkg = (node_name)
-        result.append(parallel_pkg)
-     
-    # Делаем "работы"   
-    map(process_url, list_jobs)
+    for at in scheme:
+        slice = scheme[at]
+        for it in slice:
+            it.append(at)
+            result.append(it)
     return result
+
+def mapper(job):
+    """ [.., .., .., node_name]"""
+    url = job[0]
+    text_extractor = job[1]
+    tokenizer = job[2]
+    node_name = job[3]
+
+    # Получем текст
+    text = text_extractor(url)
+    
+    # Токенизация
+    lits_content_items = []
+    if tokenizer:
+        lits_content_items = tokenizer(text)
+    else:
+        lits_content_items = [text]
+    
+    # Теперь можно составлять индекс
+    index, (count_sents, summ_sents_len) = process_list_content_sentences(
+                                                                       lits_content_items,
+                                                                       tokenizer)
+    #map(printer, index.items())
+    #print (count_sents, summ_sents_len)
+       
+    parallel_pkg = (node_name, index, (count_sents, summ_sents_len), url)
+    return parallel_pkg
 
 def main():
     
     # План действий
-    readed_data = get_scheme_actions()
+    scheme = get_scheme_actions()
+    
+    # Делаем из него работы
+    jobs = plan_to_jobs_convertor(scheme)
+    map(printer, jobs)
     
     # Map stage
     print 'Process files. Wait please...'
-    job_items = map(mapper, readed_data.items())
-    map(printer, job_items)
+    map_stage_results = map(mapper, jobs)
+    
+    """sets = get_utf8_template()
+    sets['name'] = 'tmp.json'
+    sets['howOpen'] = 'w'
+    list2file(sets, [json.dumps(map_stage_results, sort_keys=True, indent=2)])
+    """
+
+    #map(printer, map_stage_results)
     print 'Extract text done.'
     print
     print 'Plotting results...'
-    
+       
     # Suffle stage
     
     #def printer(value):
