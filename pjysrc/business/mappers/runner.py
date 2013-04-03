@@ -13,9 +13,13 @@ import json
 
 # App
 from business.nlp_components.tokenizers import roughly_split_to_sentences
+from business.nlp_components.word_splitter import processListContentSentences
 
 # Преобразователи ресурса в текст
 from business.originators_text_data.srt_to_text import srt_to_text_line
+
+def printer(item):
+    print item
 
 def get_scheme_actions():
     # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
@@ -62,6 +66,9 @@ def mapper(full_job):
             lits_content_items = [text]
         
         # Теперь можно составлять индекс
+        index = processListContentSentences(lits_content_items)
+        map(printer, index.items())
+        
         """parallel_pkg = (
                 node_name,
                 text[:20], # текс для дальнейшей обработки
@@ -69,7 +76,7 @@ def mapper(full_job):
                 url  # Для обратного индекса
                 )  # Имя будущего узла для Suffle-части
         """
-        parallel_pkg = ()
+        parallel_pkg = (node_name)
         result.append(parallel_pkg)
      
     # Делаем "работы"   
@@ -77,8 +84,7 @@ def mapper(full_job):
     return result
 
 def main():
-    def printer(item):
-        print item
+    
     # План действий
     readed_data = get_scheme_actions()
     

@@ -8,13 +8,7 @@
 import re
 import dals.os_io.io_wrapper as dal
 
-def is_content_nums(string):
-    pattern = '^\d*?$'
-    result = re.finditer(pattern, string)
-    for match in result :
-        #s = match.group()
-        return True
-    return False
+from  business.nlp_components.filters import is_content_nums
 
 def srt_to_text_line(url):
     """ Тотлько для субтитров. """
