@@ -12,8 +12,7 @@
 import json
 
 # App
-#import business.originator_frequency_index.orginator as orginator
-#from business.to_text import get_list_content_items_from_str 
+from business.nlp_components.tokenizers import roughly_split_to_sentences
 
 # Преобразователи ресурса в текст
 from business.originators_text_data.srt_to_text import srt_to_text_line
@@ -27,7 +26,7 @@ def get_scheme_actions():
             [
                 ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
                 srt_to_text_line, 
-                None],  # Дробитель контекста
+                roughly_split_to_sentences],  # Дробитель контекста
                 ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
                 srt_to_text_line, 
                 None]
@@ -41,7 +40,7 @@ def get_scheme_actions():
           node_name2: one_node_action_fake()}
     return readed_data
 
-def job_splitter(full_job):
+def mapper(full_job):
     """ (node_name, [[], [], []])"""
     node_name, list_jobs = full_job
     result = []
@@ -53,12 +52,24 @@ def job_splitter(full_job):
         # Получем текст
         text = text_extractor(url)
         
+        # Токенизация
+        need_add_content_to_index = False
+        lits_content_items = []
+        if tokenizer:
+            lits_content_items = tokenizer(text)
+            need_add_content_to_index = True
+        else:
+            lits_content_items = [text]
+        
         # Теперь можно составлять индекс
-        parallel_pkg = [
+        """parallel_pkg = (
+                node_name,
                 text[:20], # текс для дальнейшей обработки
-                tokenizer,  # просто перепаковка для транзита
-                url,  # Для обратного индекса
-                node_name]  # Имя будущего узла для Suffle-части
+                ,  # просто перепаковка для транзита
+                url  # Для обратного индекса
+                )  # Имя будущего узла для Suffle-части
+        """
+        parallel_pkg = ()
         result.append(parallel_pkg)
      
     # Делаем "работы"   
@@ -71,13 +82,15 @@ def main():
     # План действий
     readed_data = get_scheme_actions()
     
-    # Получить индекс 
+    # Map stage
     print 'Process files. Wait please...'
-    job_items = map(job_splitter, readed_data.items())
+    job_items = map(mapper, readed_data.items())
     map(printer, job_items)
     print 'Extract text done.'
     print
     print 'Plotting results...'
+    
+    # Suffle stage
     
     #def printer(value):
     #    for at in value:
