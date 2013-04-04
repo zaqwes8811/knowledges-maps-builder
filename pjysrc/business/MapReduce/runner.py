@@ -13,7 +13,9 @@ import json
 
 # App
 from business.nlp_components.tokenizers import roughly_split_to_sentences
-from business.mappers import mapper
+from business.MapReduce.mappers import mapper
+from business.MapReduce.sufflers import suffler
+from business.MapReduce.reduces import base_reducer 
 
 
 # Преобразователи ресурса в текст
@@ -66,38 +68,19 @@ def main():
     
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
-    
-    """sets = get_utf8_template()
-    sets['name'] = 'tmp.json'
-    sets['howOpen'] = 'w'
-    list2file(sets, [json.dumps(map_stage_results, sort_keys=True, indent=2)])"""
       
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
+    suffle_stage_results = suffler(map_stage_results)
+            
+    # Reduce
+    result = base_reducer(suffle_stage_results)
     
-    #def printer(value):
-    #    for at in value:
-    #        for it in value[at]:
-    #            print it    
-    #map(printer, map_result)
     
-    # Выводим
-    #index.print_branch(content_item_name)
-    '''freq = []
-    sorted_findex = index.get_sorted_forward_idx()
-    for at in sorted_findex:
-        print at
-        freq.append(at[1])
-    
-    x = range(len(freq))'''
-    #plot(x, freq)
-    #grid()
-    #show()
-    
-    # Сохраняем в индексе  
-    #index.save_branch()
-    #import sys
-    #print sys.argv[0]
+    sets = get_utf8_template()
+    sets['name'] = 'tmp.json'
+    sets['howOpen'] = 'w'
+    list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
 
 if __name__=='__main__':
     print 'Begin'
