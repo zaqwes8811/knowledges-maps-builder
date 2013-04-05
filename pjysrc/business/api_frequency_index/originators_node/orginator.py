@@ -99,6 +99,12 @@ class IndexCursor(object):#public
         sets['howOpen'] = 'w'
         dal.list2file(sets, to_file)
         
+        # Сохняем сортированный
+        to_file = [json.dumps(self.get_sorted_forward_idx()[0], sort_keys=True, indent=2)]
+        sets['name'] = self._get_real_branch_name()+'/'+'sorted_result.json'
+        sets['howOpen'] = 'w'
+        dal.list2file(sets, to_file)
+        
     #def _load_branch_in_cash(self):
     #    pass
     
