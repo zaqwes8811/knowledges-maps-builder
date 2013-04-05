@@ -2,7 +2,7 @@
 from business.nlp_components.content_items_processors import process_list_content_sentences
 
 def mapper(job):
-    """ [.., .., .., node_name]"""
+    """ [node_name, .., .., .., ]"""
     url = job[0]
     text_extractor = job[1]
     tokenizer = job[2]
@@ -24,5 +24,5 @@ def mapper(job):
                 lits_content_items,
                 tokenizer)
 
-    parallel_pkg = (node_name, index, (count_sents, summ_sents_len), url)
+    parallel_pkg = (node_name, index, [count_sents, summ_sents_len], url)
     return parallel_pkg
