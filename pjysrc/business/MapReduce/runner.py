@@ -84,8 +84,8 @@ def main():
     
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
-    for at in map_stage_results:
-        print at[2]
+    #for at in map_stage_results:
+    #    print at[2]
       
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
@@ -93,20 +93,22 @@ def main():
             
     # Reduce
     for at in suffle_stage_results:
-        print at
+        #print at
         one_node = suffle_stage_results[at]
-        print len(one_node)
+        #print len(one_node)
         
         # Проверка слияния
-        #print len(one_node[0][0]), len(one_node[1][0])
+        #A = len(set(one_node[0][0].keys()) & set(one_node[1][0]))
+        #print A
+        #, len(one_node[1][0])
         result = base_reducer(one_node)
-        print len(result[0][0])
+        #print len(result[0][0])
         
     
-    #sets = get_utf8_template()
-    #sets['name'] = 'tmp.json'
-    #sets['howOpen'] = 'w'
-    #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
+        #sets = get_utf8_template()
+        #sets['name'] = 'tmp.json'
+        #sets['howOpen'] = 'w'
+        #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
 
 if __name__=='__main__':
     print 'Begin'
