@@ -28,14 +28,15 @@ src_list_d = [
 
 list_int = [1,2,3,4,5,6,7]
 
-def split_and_merge(C, n):
+def split_and_merge(C):
+    n = len(C)
     if n == 1:
         return C
     else:
         A_raw = C[:n/2]
         B_raw = C[n/2:]
-        A = split_and_merge(A_raw, len(A_raw))
-        B = split_and_merge(B_raw, len(B_raw))
+        A = split_and_merge(A_raw)
+        B = split_and_merge(B_raw)
         D = merge(A, B)
         return D
 
@@ -51,7 +52,7 @@ def merge(A, B):
 
 
 # Run()
-print split_and_merge(src_list, len(src_list))
+print split_and_merge(src_list)
 
 """
 B = [{'a': 1, 'b':1, 'c':2}]

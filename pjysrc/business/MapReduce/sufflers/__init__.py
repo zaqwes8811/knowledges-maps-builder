@@ -5,5 +5,5 @@ def suffler(map_stage_results):
         node_name = at[0]
         if node_name not in shuffle_result:
             shuffle_result[node_name] = []
-        shuffle_result[node_name].append([at[1:]])
+        shuffle_result[node_name].append(list(at[1:]))
     return shuffle_result 

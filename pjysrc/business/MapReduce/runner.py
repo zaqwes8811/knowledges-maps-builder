@@ -16,6 +16,7 @@ from business.nlp_components.tokenizers import roughly_split_to_sentences
 from business.MapReduce.mappers import mapper
 from business.MapReduce.sufflers import suffler
 from business.MapReduce.reduces import base_reducer 
+from business.MapReduce.reduces import base_merge
 
 
 # Преобразователи ресурса в текст
@@ -38,7 +39,22 @@ def get_scheme_actions():
                 roughly_split_to_sentences],  # Дробитель контекста
                 ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
                 srt_to_text_line, 
-                None]
+                roughly_split_to_sentences]
+             ]
+        return content_pkge
+    
+    def one_node_action_fake2():
+        content_pkge = \
+            [
+                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                srt_to_text_line, 
+                roughly_split_to_sentences],  # Дробитель контекста
+                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                srt_to_text_line, 
+                roughly_split_to_sentences],
+                ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
+                srt_to_text_line, 
+                roughly_split_to_sentences]
              ]
         return content_pkge
     
@@ -46,7 +62,7 @@ def get_scheme_actions():
     node_name2 = 'Iron Man AA2'
     readed_data = {
           node_name1: one_node_action_fake(),
-          node_name2: one_node_action_fake()}
+          node_name2: one_node_action_fake2()}
     return readed_data
 
 def plan_to_jobs_convertor(scheme):
@@ -68,19 +84,29 @@ def main():
     
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
+    for at in map_stage_results:
+        print at[2]
       
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
     suffle_stage_results = suffler(map_stage_results)
             
     # Reduce
-    result = base_reducer(suffle_stage_results)
+    for at in suffle_stage_results:
+        print at
+        one_node = suffle_stage_results[at]
+        print len(one_node)
+        
+        # Проверка слияния
+        #print len(one_node[0][0]), len(one_node[1][0])
+        result = base_reducer(one_node)
+        print len(result[0][0])
+        
     
-    
-    sets = get_utf8_template()
-    sets['name'] = 'tmp.json'
-    sets['howOpen'] = 'w'
-    list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
+    #sets = get_utf8_template()
+    #sets['name'] = 'tmp.json'
+    #sets['howOpen'] = 'w'
+    #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
 
 if __name__=='__main__':
     print 'Begin'
