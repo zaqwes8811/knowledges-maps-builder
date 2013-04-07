@@ -116,7 +116,7 @@ if __name__=='__main__':
     reader.assignNode(node_name)
     
     # Вывод индекса
-    print reader.getSortedForwardIdx()
+    map(printer, reader.getSortedForwardIdx())
     
     
     
