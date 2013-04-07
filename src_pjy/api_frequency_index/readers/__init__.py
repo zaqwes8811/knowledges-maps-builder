@@ -6,6 +6,11 @@ import os
 # No Jython2.5
 import json
 
+# Other
+from pylab import plot
+from pylab import show
+from pylab import grid
+
 # App
 import dals.os_io.io_wrapper as dal
 
@@ -42,7 +47,7 @@ class BaseReader(object):
             sets['howOpen'] = 'w'
             dal.list2file(sets, ["{}"])
         except OSError as e:
-            print 'Branch is exist'  
+            print 'Node is exist'  
             # Загружаем индекс 
             readed_list = dal.file2list(sets)
             branch_in_json = ' '.join(readed_list)
@@ -57,6 +62,10 @@ class BaseReader(object):
                 print node[at], at
                 
     def getSortedForwardIdx(self):#list<map<string, int>>
+        """ 
+        
+        TODO(zaqwes): Возможно нужно с фильтром
+        """
         src_list = []
         for at in self._node_cash:
             src_list.append([at, self._node_cash[at]])
@@ -85,6 +94,13 @@ class BaseReader(object):
             result.append(at.replace('$$', ' '))
         return result
     
+    def to_filter(self):
+        """ Переводит индекс в фильтр """
+        return None
+    
+    def try_merge(self):
+        pass
+    
     
 if __name__=='__main__':
     index_root = '../../../index'
@@ -94,6 +110,13 @@ if __name__=='__main__':
         
     list_nodes = reader.getListNodes()
     map(printer, list_nodes)
+    
+    # Загружаем узел
+    node_name = 'Iron Man AA'
+    reader.assignNode(node_name)
+    
+    # Вывод индекса
+    print reader.getSortedForwardIdx()
     
     
     
