@@ -1,5 +1,5 @@
 # coding: utf-8
-from business.nlp_components.content_items_processors import process_list_content_sentences
+from nlp_components.content_items_processors import process_list_content_sentences
 
 def mapper(job):
     """ [node_name, .., .., .., ]"""

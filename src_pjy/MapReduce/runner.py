@@ -12,15 +12,15 @@
 import json
 
 # App
-from business.nlp_components.tokenizers import roughly_split_to_sentences
-from business.MapReduce.mappers import mapper
-from business.MapReduce.sufflers import suffler
-from business.MapReduce.reduces import base_reducer 
-from business.MapReduce.reduces import base_merge
+from nlp_components.tokenizers import roughly_split_to_sentences
+from MapReduce.mappers import mapper
+from MapReduce.sufflers import suffler
+from MapReduce.reduces import base_reducer 
+from MapReduce.reduces import base_merge
 
 
 # Преобразователи ресурса в текст
-from business.originators_text_data.srt_to_text import srt_to_text_line
+from originators_text_data.srt_to_text import srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
 
@@ -34,10 +34,10 @@ def get_scheme_actions():
     def one_node_action_fake():
         content_pkge = \
             [
-                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
                 srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
+                ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
                 srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
@@ -46,13 +46,13 @@ def get_scheme_actions():
     def one_node_action_fake2():
         content_pkge = \
             [
-                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
                 srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
+                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
                 srt_to_text_line, 
                 roughly_split_to_sentences],
-                ['../../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
+                ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
                 srt_to_text_line, 
                 roughly_split_to_sentences]
              ]

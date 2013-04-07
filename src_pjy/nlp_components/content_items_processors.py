@@ -6,10 +6,10 @@ Created on 03.04.2013
 '''
 import re
 
-from business.nlp_components._content_filters import _purge_one_sentence
-from business.nlp_components.filters import is_key_enabled
-from business.nlp_components.word_level_processors import simple_word_splitter
-from business.nlp_components.word_level_processors import fake_compressor
+from nlp_components._content_filters import _purge_one_sentence
+from nlp_components.filters import is_key_enabled
+from nlp_components.word_level_processors import simple_word_splitter
+from nlp_components.word_level_processors import fake_compressor
 
 # Processors
 def process_list_content_sentences(list_s_sentences, tokenizer):#void

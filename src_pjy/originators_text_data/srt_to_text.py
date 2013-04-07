@@ -8,7 +8,7 @@
 import re
 import dals.os_io.io_wrapper as dal
 
-from  business.nlp_components.filters import is_content_nums
+from  nlp_components.filters import is_content_nums
 
 def srt_to_text_line(url):
     """ Тотлько для субтитров. """
