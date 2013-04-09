@@ -22,12 +22,15 @@ response.files.insert(6,URL('static','css/app_carcass.css'))
 }
 .show-grid [class*="span"]:hover {
   background-color: #ddd;
+
 }
 .show-grid .show-grid {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 0;
-  margin-left: 10px;
-  margin-right: 10px;
+
+  /*padding-left: 10px;
+  padding-right: 10px;  */
+  height: 100px;
 }
 .show-grid .show-grid [class*="span"] {
   margin-top: 5px;
@@ -78,7 +81,7 @@ html,body { height: 100%; margin: 0px; padding: 0px; }/**/
 
 /* Настройка рабочей панали программы */
 .work_panel_settings {
-    /*padding-left: 100px; */
+    height: 100%;
 }
 
 
