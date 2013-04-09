@@ -3,6 +3,42 @@
 // web2py
 response.files.insert(6,URL('static','css/app_carcass.css'))
 */
+
+/* Special grid styles
+-------------------------------------------------- */
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;
+}
+.show-grid [class*="span"]:hover {
+  background-color: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.show-grid .show-grid [class*="span"] {
+  margin-top: 5px;
+}
+.show-grid [class*="span"] [class*="span"] {
+  background-color: #ccc;
+}
+.show-grid [class*="span"] [class*="span"] [class*="span"] {
+  background-color: #999;
+}
+
 /**/
 html,body { height: 100%; margin: 0px; padding: 0px; }/**/
 
@@ -38,6 +74,11 @@ html,body { height: 100%; margin: 0px; padding: 0px; }/**/
   background-color: blue;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+/* Настройка рабочей панали программы */
+.work_panel_settings {
+    /*padding-left: 100px; */
 }
 
 
