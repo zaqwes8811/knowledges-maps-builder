@@ -17,6 +17,7 @@ FTPADDR = "some ftp address"
 
 import unittest
 import re
+import dis
 
 # 
 import dals.os_io.io_wrapper as dal
@@ -27,6 +28,7 @@ def parser_target_for_spider(target_fname):
     list_lines, err = dal.efile2list(sets)
     if err[0]:
         yield None, err
+        raise StopIteration
     
     # Utils
     remove_forward_and_back_spaces = lambda line: \
@@ -47,6 +49,7 @@ def parser_target_for_spider(target_fname):
     # В первой информационной строке должно быть имя узла
     if not is_node(result_job_list[0]):
         yield None, [2, 'Неверный формат файла - первое имя узла должно быть до адресов.']
+        raise StopIteration
     
     get_node_name = lambda src_node_name: remove_forward_and_back_spaces(
                                         src_node_name.replace('[', '').replace(']', ''))
@@ -62,10 +65,11 @@ class Test(unittest.TestCase):
 
 
     def test_parser_target_bad_file(self):
-        #target_fname = 'test_spider_target.txt_f'
-        #result, err = parser_target_for_spider(target_fname)
-        #self.assertIsNone(result, "File no exist")
-        pass
+        target_fname = 'test_spider_target.txt_f'
+        gen = parser_target_for_spider(target_fname)
+        for at in gen:
+            self.assertIsNone(at[0], "File no exist")
+
         
     def test_parser_target(self):
         target_fname = 'test_data/test_spider_target.txt'
@@ -75,10 +79,11 @@ class Test(unittest.TestCase):
             self.assertIsNotNone(at[0], "File exist")
         
     def test_parser_target_bad_format(self):
-        #target_fname = 'test_data/test_spider_target_bad.txt'
-        #result, err = parser_target_for_spider(target_fname)
-        #self.assertEqual(err[0], 2, "Ошибка форматирование файла задания")
-        pass
+        target_fname = 'test_data/test_spider_target_bad.txt'
+        gen = parser_target_for_spider(target_fname)
+        for at in gen:
+            tmp, err = at
+            self.assertEqual(err[0], 2, "Ошибка форматирование файла задания")
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
