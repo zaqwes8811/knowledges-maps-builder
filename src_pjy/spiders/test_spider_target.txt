@@ -1,5 +1,0 @@
-[Node1]  # Comment
-../../aaa.str
-# Comment
-
-[Node2]

@@ -1,0 +1,8 @@
+# Всегда первый узловой!
+[Node1]  # Comment
+../../aaa.str  # Comment
+# Comment
+
+[Node2 ]
+../../aaa.str  # Comment
+../../aaa.str  # Comment
