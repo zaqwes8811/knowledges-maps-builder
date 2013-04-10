@@ -43,15 +43,20 @@ def parser_target_for_spider(target_fname):
     map(lambda line: result_job_list.append(line) if line else None, list_without_comments)
     
     is_node = lambda line: True if '[' in line and ']' in line else False
+    
+    # В первой информационной строке должно быть имя узла
     if not is_node(result_job_list[0]):
         return None, [2, 'Неверный формат файла - первое имя узла должно быть до адресов.']
     
+    get_node_name = lambda src_node_name: remove_forward_and_back_spaces(
+                                        src_node_name.replace('[', '').replace(']', ''))
+    
+    current_node = get_node_name(result_job_list[0])
     for at in result_job_list:
         if is_node(at):
-            node_name = at.replace('[', '').replace(']', '')
-            print remove_forward_and_back_spaces(node_name)
+            current_node = get_node_name(at)
         else:
-            print at
+            print (current_node, at)
     
     
     # Tmp
@@ -68,7 +73,7 @@ class Test(unittest.TestCase):
     def test_parser_target(self):
         target_fname = 'test_data/test_spider_target.txt'
         result, err = parser_target_for_spider(target_fname)
-        self.assertIsNotNone(result, "File no exist")
+        self.assertIsNotNone(result, "File exist")
         
     def test_parser_target_bad_format(self):
         target_fname = 'test_data/test_spider_target_bad.txt'
