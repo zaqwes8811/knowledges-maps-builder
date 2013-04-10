@@ -102,6 +102,7 @@ def main():
         #print A
         #, len(one_node[1][0])
         result = base_reducer(one_node)
+        pass
         #print len(result[0][0])
         
     

@@ -52,12 +52,10 @@ class IndexCursor(object):#public
         return real_branch_name
     
     def __init__(self, index_root, init_branch=None):
-        self._index_root = index_root
-      
-    def assign_branch(self, str_branch_name):#void
+        self._index_root = index_root_current_node_nameef assign_branch(self, str_branch_name):#void
         """ Соединяет курсор с узлом. Если узла нет, создается."""
         self._current_branch = str_branch_name
-        self._branch_cash = {}
+   _current_node_namech_cash = {}
         findex_name = self._get_real_branch_name()+'/'+self._kForwardIndexName
         sets = dal.get_utf8_template()
         sets['name'] = findex_name
@@ -65,8 +63,7 @@ class IndexCursor(object):#public
             os.mkdir(self._get_real_branch_name())
             sets['howOpen'] = 'w'
             dal.list2file(sets, ["{}"])
-        except OSError as e:
-            print 'Branch is exist'  
+        except OSError a_current_node_name   print 'Branch is exist'  
             # Загружаем индекс 
             readed_list = dal.file2list(sets)
             branch_in_json = ' '.join(readed_list)
