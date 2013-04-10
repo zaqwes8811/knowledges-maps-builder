@@ -28,8 +28,8 @@ import java.util.HashMap as HashMap
 
 # App
 # Именно так нужно импортировать! c jysrc просто bussines как выше не выйдет
-from jysrc.business.originator_frequency_index._content_filters import _purge_one_sentence
-from jysrc.business.to_text import is_content_nums 
+from originator_frequency_index._content_filters import _purge_one_sentence
+from to_text import is_content_nums 
 
 def python_lst_to_java_lst(py_list):
     """
@@ -74,12 +74,12 @@ class IndexCursor(IIndexCursor):
     """
     _index_root = None
     _branch_cash = None  # ядро системы - кэш
-    _current_branch = None
+    _current_node_name = None
     
     _kForwardIndexName = 'forward_index.json'
     
     def _get_real_branch_name(self):#string
-        real_branch_name = self._index_root+'/'+self._current_branch.replace(' ', '$$')
+        real_branch_name = self._index_root+'/'+self._current_node_name.replace(' ', '$$')
         return real_branch_name
     
     def __init__(self, index_root, init_branch=None):
@@ -87,7 +87,7 @@ class IndexCursor(IIndexCursor):
       
     def assignBranch(self, str_branch_name):#void
         """ Соединяет курсор с узлом. Если узла нет, создается."""
-        self._current_branch = str_branch_name
+        self._current_node_name = str_branch_name
         self._branch_cash = {}
         findex_name = self._get_real_branch_name()+'/'+self._kForwardIndexName
         sets = dal.get_utf8_template()
