@@ -26,7 +26,7 @@ def parser_target_for_spider(target_fname):
     sets['name'] = target_fname
     list_lines, err = dal.efile2list(sets)
     if err[0]:
-        return None, err
+        yield None, err
     
     # Utils
     remove_forward_and_back_spaces = lambda line: \
@@ -46,7 +46,7 @@ def parser_target_for_spider(target_fname):
     
     # В первой информационной строке должно быть имя узла
     if not is_node(result_job_list[0]):
-        return None, [2, 'Неверный формат файла - первое имя узла должно быть до адресов.']
+        yield None, [2, 'Неверный формат файла - первое имя узла должно быть до адресов.']
     
     get_node_name = lambda src_node_name: remove_forward_and_back_spaces(
                                         src_node_name.replace('[', '').replace(']', ''))
@@ -56,30 +56,29 @@ def parser_target_for_spider(target_fname):
         if is_node(at):
             current_node = get_node_name(at)
         else:
-            print (current_node, at)
-    
-    
-    # Tmp
-    return "", [0, '']
+            yield (current_node, at), [0, '']
 
 class Test(unittest.TestCase):
 
 
     def test_parser_target_bad_file(self):
-        target_fname = 'test_spider_target.txt_f'
-        result, err = parser_target_for_spider(target_fname)
-        self.assertIsNone(result, "File no exist")
+        #target_fname = 'test_spider_target.txt_f'
+        #result, err = parser_target_for_spider(target_fname)
+        #self.assertIsNone(result, "File no exist")
+        pass
         
     def test_parser_target(self):
         target_fname = 'test_data/test_spider_target.txt'
-        result, err = parser_target_for_spider(target_fname)
-        self.assertIsNotNone(result, "File exist")
+        gen = parser_target_for_spider(target_fname)
+        for at in gen:
+            print at
+            self.assertIsNotNone(at[0], "File exist")
         
     def test_parser_target_bad_format(self):
-        target_fname = 'test_data/test_spider_target_bad.txt'
-        result, err = parser_target_for_spider(target_fname)
-        self.assertEqual(err[0], 2, "Ошибка форматирование файла задания")
-
+        #target_fname = 'test_data/test_spider_target_bad.txt'
+        #result, err = parser_target_for_spider(target_fname)
+        #self.assertEqual(err[0], 2, "Ошибка форматирование файла задания")
+        pass
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
