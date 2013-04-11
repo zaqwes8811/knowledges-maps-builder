@@ -47,6 +47,7 @@ def parser_target_for_spider(target_fname):
     for at in result_job_list:
         if is_node(at):
             current_node = get_node_name(at)
+            i = 0
         else:
             i += 1
             yield [[current_node, at, i], [0, '']]
