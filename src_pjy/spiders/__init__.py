@@ -12,6 +12,8 @@ from spiders._utils import parser_target_for_spider
 
 # Convertors but how custome 
 from spiders.std_to_text_convertors.srt_to_text import srt_to_text_line
+# std_to_text_map =
+# custom_to_text_map =
 
 def _do_tmp_node_folder(node_name, tmp_dir_path):
     try:
