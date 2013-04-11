@@ -23,3 +23,4 @@ encoding//src_pjy/api_frequency_index/readers/__init__.py=utf-8
 encoding//src_pjy/app-translate-assistant.py=utf-8
 encoding//src_pjy/nlp_components/content_items_processors.py=utf-8
 encoding//src_pjy/spiders/test_spider.py=utf-8
+encoding/app-spider.py=utf-8

@@ -55,11 +55,13 @@ def parser_target_for_spider(target_fname):
                                         src_node_name.replace('[', '').replace(']', ''))
     
     current_node = get_node_name(result_job_list[0])
+    i = 0
     for at in result_job_list:
         if is_node(at):
             current_node = get_node_name(at)
         else:
-            yield [[current_node, at], [0, '']]
+            i += 1
+            yield [[current_node, at, i], [0, '']]
 
 class Test(unittest.TestCase):
 
@@ -80,19 +82,6 @@ class Test(unittest.TestCase):
         print  
         g_for_reduce = parser_target_for_spider(target_fname)
         
-        """
-        def f(x, y):
-            x = x[0]
-            print x
-            x.append(y[0])
-            print x
-            #yield x
-            return x
-        
-        result = reduce(f, g_for_reduce)
-        print result
-    #@for at in result:
-     #       print at"""
         
     def test_parser_target_bad_format(self):
         target_fname = 'test_data/test_spider_target_bad.txt'
