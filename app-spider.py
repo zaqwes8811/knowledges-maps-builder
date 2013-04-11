@@ -22,6 +22,11 @@ if __name__=='__main__':
     
     # Запускаем паука
     target_name = 'iron_man_aa_target.txt'
+    
+    # TODO(zaqwes): базовая проверка целостности задания
+    #   это нужно для того, чтобы не запускать все с нуля
+    # target_check_rpt = ...
+    
     # TODO(zaqwes): сделать отчет по преобразованию
     rpt = base_spider(kSpiderTargetsPath+target_name)
     map(printer, rpt)

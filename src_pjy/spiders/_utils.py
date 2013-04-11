@@ -11,6 +11,15 @@ import re
 import dals.os_io.io_wrapper as dal
 
 def parser_target_for_spider(target_fname):
+    """ 
+    
+    Thinks:
+        А что если файл пустой?
+        
+        
+    TODO:
+        Сделать кастомизацию преобразоватлелей в текст
+    """
     sets = dal.get_utf8_template()
     sets['name'] = target_fname
     list_lines, err = dal.efile2list(sets)
