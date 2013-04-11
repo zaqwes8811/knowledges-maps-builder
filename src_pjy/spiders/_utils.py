@@ -50,4 +50,4 @@ def parser_target_for_spider(target_fname):
             i = 0
         else:
             i += 1
-            yield [[current_node, at, i], [0, '']]
+            yield (current_node, at, i)

@@ -1,7 +1,7 @@
 {
   App: {
     Spider: {
-      targets_folder: "./app-spider-targets/"
+      targets_folder: "./app-spider-targets/",
       intermedia_storage: "./app-folder/intermedia_storage/"
     }
   }
