@@ -11,6 +11,9 @@ Created on 11.04.2013
 from spiders import base_spider
 from crosscuttings import tools
 
+def printer(msg):
+    print msg
+
 if __name__=='__main__':
     
     # Инициализируем паука
@@ -19,5 +22,6 @@ if __name__=='__main__':
     
     # Запускаем паука
     target_name = 'iron_man_aa_target.txt'
-    result, err = base_spider(kSpiderTargetsPath+target_name)
-    print (result, err)
+    # TODO(zaqwes): сделать отчет по преобразованию
+    rpt = base_spider(kSpiderTargetsPath+target_name)
+    map(printer, rpt)

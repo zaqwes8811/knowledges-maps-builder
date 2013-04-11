@@ -9,7 +9,9 @@ from dals.os_io.io_wrapper import get_utf8_template
 # App
 import crosscuttings.tools as tools
 from spiders._utils import parser_target_for_spider
-from spiders.srt_to_text import srt_to_text_line
+
+# Convertors but how custome 
+from spiders.std_to_text_convertors.srt_to_text import srt_to_text_line
 
 def _do_tmp_node_folder(node_name, tmp_dir_path):
     try:
@@ -44,11 +46,21 @@ def text_extracte(url):
     return result
 
 def base_spider(target_fname):
-    target_generator = parser_target_for_spider(target_fname)
+    """ 
     
-    tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storage']
+    Danger:
+        Узел записывается поверх, а не добавляется, временные файлы затираются
+        Хорошо бы вообще очистить временную папку. Пусть целевой файл паука
+        создает все заново.
+        
+        Пока все
+    """
+    rpt = []
+    target_generator = parser_target_for_spider(target_fname)
+
     for at in target_generator:
         if at[0]:
+            tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storage']
             node_name, url, file_idx = at
             
             # Строем папку
@@ -60,8 +72,10 @@ def base_spider(target_fname):
             # Пишем во временный файл
             tmp_fname = path_to_node+'/tmp'+str(file_idx)+'.txt'
             _save_temp_file(tmp_fname, text_content)
+            
+            rpt.append('ok')
 
         else:
-            return at
-    return '', [0,'']
+            rpt.append('failure')
+    return rpt
         
