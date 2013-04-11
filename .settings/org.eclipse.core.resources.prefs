@@ -24,5 +24,6 @@ encoding//src_pjy/crosscuttings/tools.py=utf-8
 encoding//src_pjy/nlp_components/content_items_processors.py=utf-8
 encoding//src_pjy/spiders/__init__.py=utf-8
 encoding//src_pjy/spiders/_utils.py=utf-8
+encoding//src_pjy/spiders/srt_to_text.py=utf-8
 encoding//src_pjy/spiders/test_spider.py=utf-8
 encoding/app-spider.py=utf-8
