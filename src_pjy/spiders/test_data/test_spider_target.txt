@@ -1,8 +1,13 @@
+# Файл пользовательский! А значит нужна хорошая его проверка
 # Всегда первый узловой!
+# Узел только один 
+# TODO(zaqwes): возможно можно сделать слитие узлов, но предупреждать об этом
 [Node1]  # Comment
-../../aaa.str  # Comment
+# @ могут быть в путях. и пробелы тоже могут быть в путях
+# url  [ключ: значени и инфо] [ключ : значение]
+../../aa a.str [to_text: std_fake_call_back_name] [to_text std_fake_call_back_name]# Comment
 # Comment
 
 [Node2 ]
-../../aaa.str  # Comment
+../../aaa.str  [to_text: custome_fake_call_back_name # Comment
 ../../aaa.str  # Comment
