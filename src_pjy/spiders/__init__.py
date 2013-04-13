@@ -1,6 +1,7 @@
 # coding: utf-8
 # Sys
 import os
+import json
 
 # Other
 from dals.os_io.io_wrapper import list2file
@@ -51,6 +52,50 @@ def text_extracte(url):
     result.append(text_content)
     return result
 
+def check_availabel_resourses(target_fname):
+    """ Проверка доступности ресурсов до запуска паука."""
+    rpt = []
+    all_right = True
+    target_generator = parser_target_for_spider(target_fname)
+    for at in target_generator:
+        info = at[0]
+        head_rpt_msg = 'Name node: ['+info[0]+']\nUrl: ['+info[1]+']\n'
+        
+        # Проверка ключей
+        params = json.loads(info[3])
+        available_keys = tools.get_app_cfg()['App']['Spider']['available_keys']
+        for at in params:
+            if at not in available_keys:
+                all_right = False
+                rpt.append(head_rpt_msg+"\tError: find desabled key params.")
+                
+        # Проверка преобразователя
+        if 'to_text' in params:
+            available_convertors = tools.get_app_cfg()['App']['Spider']['to_text_convertors']
+            if params['to_text'] not in available_convertors:
+                all_right = False
+                rpt.append(head_rpt_msg+"\tError: no registred to-text-convertor. May be registred in"+
+                           " /app-cfgs/spider_cfg.yaml file.")
+        
+        # Проверка преобразователя по умолчанию
+        url = info[1]
+        extenton = url.split('.')[-1]
+        if not params:
+            auto_detected_urls = tools.get_app_cfg()['App']['Spider']['auto_detected_urls']
+            if extenton not in auto_detected_urls:
+                all_right = False
+                rpt.append(head_rpt_msg+"\tError: url не распознан и пользовательски настройки не задны")
+    
+        # Проверка доступности ресурса
+        # Файл файловой системы
+        url_exist = os.path.exists(url)
+        if not url_exist:
+            all_right = False
+            rpt.append(head_rpt_msg+"\tError: url найден в пределах операционной системы.")
+      
+        
+    return all_right, rpt
+
 def base_spider(target_fname):
     """ 
     
@@ -65,24 +110,23 @@ def base_spider(target_fname):
     target_generator = parser_target_for_spider(target_fname)
 
     for at in target_generator:
-        if at[0]:
-            tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storage']
-            node_name, url, file_idx = at
-            
-            # Строем папку
-            path_to_node = _do_tmp_node_folder(node_name, tmp_dir_path)
-            
-            # Можно заполнять контентом
-            text_content = text_extracte(url)
-            
-            # Пишем во временный файл
-            tmp_fname = path_to_node+'/tmp'+str(file_idx)+'.txt'
-            _save_temp_file(tmp_fname, text_content)
-            
-            rpt.append('ok')
+        tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storage']
+        node_name, url, file_idx = at
+        
+        # Строем папку
+        path_to_node = _do_tmp_node_folder(node_name, tmp_dir_path)
+        
+        # Можно заполнять контентом
+        text_content = text_extracte(url)
+        
+        # Пишем во временный файл
+        tmp_fname = path_to_node+'/tmp'+str(file_idx)+'.txt'
+        _save_temp_file(tmp_fname, text_content)
+        
+        rpt.append('ok')
 
-        else:
-            rpt.append('failure')
+    else:
+        rpt.append('failure')
     return rpt
 
 

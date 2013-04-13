@@ -10,6 +10,7 @@ Created on 11.04.2013
 # App
 from spiders import base_spider
 from spiders import parser_target_for_spider
+from spiders import check_availabel_resourses
 from crosscuttings import tools
 
 def printer(msg):
@@ -27,10 +28,10 @@ def main():
     while True:
         parse_file_rpt = []
         for at in parser_target_for_spider(target_name):
-            print at
             result, err_code, rpt = at
             if rpt:
                 parse_file_rpt.append(rpt)
+                print at
         if not parse_file_rpt:
             break
         
@@ -56,6 +57,11 @@ def main():
     # - все ли преобразователи найдены
     # - ...
     # target_check_rpt = ...
+    all_right, rpt = check_availabel_resourses(target_name)
+    if not all_right:
+        print 'Rpt:'
+        map(printer, rpt)
+            
     
     # TODO(zaqwes): сделать отчет по преобразованию
     #rpt = base_spider(target_name)
