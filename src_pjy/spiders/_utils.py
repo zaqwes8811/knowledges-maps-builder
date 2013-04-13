@@ -6,6 +6,7 @@ Created on 11.04.2013
 '''
 # Sys
 import re
+import json
 
 # Own
 import dals.os_io.io_wrapper as dal
@@ -18,11 +19,22 @@ def _parse_target_params(str_params):
     if str_params.count(':') != str_params.count('[') or \
         str_params.count(':') != str_params.count(']'):
         return None, 1, "\tError: [Format param - [anything : something]]"
+    
+    params = str_params.replace('[', '')
+    params = params.split(']')
+    params_map = {}
+    for at in params:
+        if at:
+            pair = remove_forward_and_back_spaces(at)
+            key, value = remove_fandb_spaces_in_tuple(tuple(pair.split(':')))
+            # Запрещаем второе значени, соотв. ключу
+            if key not in params_map:
+                params_map[key] = value
+            else:
+                return None, 1, "\tError: only one params key permitted"
 
-    if 'std' in str_params:
-        return '', 1, "Test rpt"
-    else:
-        return '', 0, None
+    params_json = json.dumps(params_map)
+    return params_json, 0, None
 
     
 def _is_node(line):
@@ -40,6 +52,13 @@ def remove_forward_and_back_spaces(line):
         return re.sub("^\s+|\n|\r|\s+$", '', line)
     else:
         return None
+    
+def remove_fandb_spaces_in_tuple(src):
+    tmp = []
+    for at in src:
+        tmp.append(remove_forward_and_back_spaces(at))
+        
+    return tuple(tmp)
 
 def parser_target_for_spider(target_fname):
     """ 
@@ -91,7 +110,7 @@ def parser_target_for_spider(target_fname):
                         at[:pos_first_settings_item])
                 params, code_err, rpt = _parse_target_params(params)
                 if code_err != 0 and rpt:
-                    rpt = 'Name node: ['+current_node+']\nUrl: ['+url+']\n\t'+rpt+''
+                    rpt = 'Name node: ['+current_node+']\nUrl: ['+url+']\n'+rpt
                 yield (current_node, url, i, params), 0, rpt
             else:
                 rpt = None

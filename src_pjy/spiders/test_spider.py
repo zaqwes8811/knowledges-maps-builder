@@ -37,6 +37,7 @@ class Test(unittest.TestCase):
         target_fname = 'test_data/test_spider_target.txt'
         parse_file_rpt = []
         for at in parser_target_for_spider(target_fname):
+            print at
             result, err_code, rpt = at
             if rpt:
                 parse_file_rpt.append(rpt)
