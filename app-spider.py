@@ -15,6 +15,9 @@ from crosscuttings import tools
 
 def printer(msg):
     print msg
+    
+def run_other():
+    pass
 
 def main():
     
@@ -25,26 +28,22 @@ def main():
     # Запускаем паука
     # Проверяем файл целей
     target_name = kSpiderTargetsPath+'iron_man_aa_target.txt'
-    while True:
-        parse_file_rpt = []
-        for at in parser_target_for_spider(target_name):
-            result, err_code, rpt = at
-            if rpt:
-                parse_file_rpt.append(rpt)
-                print at
-        if not parse_file_rpt:
-            break
-        
+    parse_file_rpt = []
+    for at in parser_target_for_spider(target_name):
+        result, err_code, rpt = at
+        if rpt:
+            parse_file_rpt.append(rpt)
+            print at[0]
+    if parse_file_rpt:
         # Есть замечания
         print 'Rpt:'
         map(printer, parse_file_rpt)
         
-        cmd = str(raw_input('Файл отред. можно продолжать/Выход [y/q]'))
         
         # Несколько раз спрашиваем
-        if cmd == 'y':
-            continue
-        elif cmd == 'q':
+        print "Исправльте ошибки и попробуйте еще раз."
+        cmd = str(raw_input('Продолжить?[y/n]'))
+        if cmd == 'n':
             return
         else:
             print 'Комманда не опознана'
@@ -61,6 +60,14 @@ def main():
     if not all_right:
         print 'Rpt:'
         map(printer, rpt)
+        
+        print "Исправльте ошибки и попробуйте еще раз."
+        cmd = str(raw_input('Продолжить?[y/n]'))
+        if cmd == 'n':
+            return
+        else:
+            print 'Комманда не опознана'
+            return
             
     
     # TODO(zaqwes): сделать отчет по преобразованию

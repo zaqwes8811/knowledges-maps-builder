@@ -74,8 +74,16 @@ def check_availabel_resourses(target_fname):
             available_convertors = tools.get_app_cfg()['App']['Spider']['to_text_convertors']
             if params['to_text'] not in available_convertors:
                 all_right = False
-                rpt.append(head_rpt_msg+"\tError: no registred to-text-convertor. May be registred in"+
+                rpt.append(head_rpt_msg+"\tError: no registred to-text-convertor - "+
+                           params['to_text']+
+                           ". May be registred in"+
                            " /app-cfgs/spider_cfg.yaml file.")
+            else:
+                if 'std_' not in params['to_text'] and 'custom_' not in params['to_text']:
+                    all_right = False
+                    rpt.append(head_rpt_msg+"\tError: bad name to-text-convertor - "+
+                           params['to_text']+
+                           ". Must begin with std_ or custom_ prefix.")
         
         # Проверка преобразователя по умолчанию
         url = info[1]
@@ -91,9 +99,15 @@ def check_availabel_resourses(target_fname):
         url_exist = os.path.exists(url)
         if not url_exist:
             all_right = False
-            rpt.append(head_rpt_msg+"\tError: url найден в пределах операционной системы.")
+            rpt.append(head_rpt_msg+"\tError: url найден в пределах операционной системы."+
+                       " Если это сетевой адрес задайте пареметры [external_url: yes get(or post) add params]")
       
-        
+            # Проверка доступности сетевого адреса
+            if 'external_url' in params:
+                all_right = False
+                rpt.append(head_rpt_msg+"\tError: проверка внешних адресов не реализована")
+        # Проверки пройдены
+                
     return all_right, rpt
 
 def base_spider(target_fname):
