@@ -19,7 +19,7 @@ import unittest
 import dis
 
 # 
-from spiders._utils import parser_target_for_spider
+from spiders import parser_target_for_spider
 from spiders import _utils
 
 def printer(msg):
