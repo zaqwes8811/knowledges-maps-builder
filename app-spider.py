@@ -15,7 +15,7 @@ from crosscuttings import tools
 def printer(msg):
     print msg
 
-if __name__=='__main__':
+def main():
     
     # Инициализируем паука
     configuration = tools.get_app_cfg()
@@ -38,9 +38,16 @@ if __name__=='__main__':
         print 'Rpt:'
         map(printer, parse_file_rpt)
         
+        cmd = str(raw_input('Файл отред. можно продолжать/Выход [y/q]'))
+        
         # Несколько раз спрашиваем
-        if True:
-            break
+        if cmd == 'y':
+            continue
+        elif cmd == 'q':
+            return
+        else:
+            print 'Комманда не опознана'
+            return
     
     # TODO(zaqwes): базовая проверка целостности задания
     #   это нужно для того, чтобы не запускать все с нуля
@@ -53,3 +60,8 @@ if __name__=='__main__':
     # TODO(zaqwes): сделать отчет по преобразованию
     #rpt = base_spider(target_name)
     #map(printer, rpt)
+    
+    
+if __name__=='__main__':
+    main()
+    print 'Done'
