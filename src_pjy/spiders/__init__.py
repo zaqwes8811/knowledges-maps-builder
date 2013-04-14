@@ -105,7 +105,7 @@ def check_availabel_resourses(target_fname):
             # Проверка доступности сетевого адреса
             if 'external_url' in params:
                 all_right = False
-                rpt.append(head_rpt_msg+"\tError: проверка внешних адресов не реализована")
+                rpt.append(head_rpt_msg+"\tWarning: проверка внешних адресов не реализована")
         # Проверки пройдены
                 
     return all_right, rpt
@@ -124,12 +124,18 @@ def base_spider(target_fname):
     target_generator = parser_target_for_spider(target_fname)
 
     for at in target_generator:
-        tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storage']
-        node_name, url, file_idx = at
+        try:
+            tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storagew']
+        except KeyError as e:
+            return 
+        
+        print at
+        node_name, url, file_idx, params = at[0]
         
         # Строем папку
         path_to_node = _do_tmp_node_folder(node_name, tmp_dir_path)
         
+        """
         # Можно заполнять контентом
         text_content = text_extracte(url)
         
@@ -137,10 +143,8 @@ def base_spider(target_fname):
         tmp_fname = path_to_node+'/tmp'+str(file_idx)+'.txt'
         _save_temp_file(tmp_fname, text_content)
         
-        rpt.append('ok')
+        rpt.append('ok')"""
 
-    else:
-        rpt.append('failure')
     return rpt
 
 

@@ -17,7 +17,16 @@ def printer(msg):
     print msg
     
 def run_other():
-    pass
+    # Несколько раз спрашиваем
+    print "Исправльте ошибки и попробуйте еще раз."
+    cmd = str(raw_input('Продолжить?[y/n]'))
+    if cmd == 'y':
+        return True
+    if cmd == 'n':
+        return False
+    else:
+        print 'Комманда не опознана'
+        return False
 
 def main():
     
@@ -38,40 +47,21 @@ def main():
         # Есть замечания
         print 'Rpt:'
         map(printer, parse_file_rpt)
-        
-        
-        # Несколько раз спрашиваем
-        print "Исправльте ошибки и попробуйте еще раз."
-        cmd = str(raw_input('Продолжить?[y/n]'))
-        if cmd == 'n':
+        if not run_other():
             return
-        else:
-            print 'Комманда не опознана'
-            return
+        
     
-    # TODO(zaqwes): базовая проверка целостности задания
-    #   это нужно для того, чтобы не запускать все с нуля
-    #
-    # - доступны ли url
-    # - все ли преобразователи найдены
-    # - ...
-    # target_check_rpt = ...
+    # Базовая проверка целостности задания
     all_right, rpt = check_availabel_resourses(target_name)
     if not all_right:
         print 'Rpt:'
         map(printer, rpt)
-        
-        print "Исправльте ошибки и попробуйте еще раз."
-        cmd = str(raw_input('Продолжить?[y/n]'))
-        if cmd == 'n':
-            return
-        else:
-            print 'Комманда не опознана'
+        if not run_other():
             return
             
     
     # TODO(zaqwes): сделать отчет по преобразованию
-    #rpt = base_spider(target_name)
+    rpt = base_spider(target_name)
     #map(printer, rpt)
     
     

@@ -8,3 +8,7 @@ def get_app_cfg():
     f.close()
     return configuration
 
+#def get_app_cfg_by_path(path):
+#    list
+    
+
