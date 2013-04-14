@@ -34,7 +34,8 @@ def _save_temp_file(fname, text_content):
     sets['howOpen'] = 'w'
     list2file(sets, text_content)
     
-def text_extracte(url):
+def extracte_text(url, params):
+    # Добавляем адрес для послед. сост. обратного индекса
     result = ['url: '+url]
     result.append('')
     
@@ -125,6 +126,8 @@ def base_spider(target_fname):
     target_generator = parser_target_for_spider(target_fname)
 
     for at in target_generator:
+        # TODO(zaqwes): Не очень эфф. но что если обработка распр? А как быть с конф.
+        #   файлом если нужно запустить распределенно? Наверное лучше вынести
         path = 'App/Spider/intermedia_storage'
         tmp_dir_path = get_app_cfg_by_path(path)
         if not tmp_dir_path:
@@ -136,16 +139,12 @@ def base_spider(target_fname):
         # Строем папку
         path_to_node = _do_tmp_node_folder(node_name, tmp_dir_path)
         
-        """
         # Можно заполнять контентом
-        text_content = text_extracte(url)
+        text_content = extracte_text(url, params)
         
         # Пишем во временный файл
         tmp_fname = path_to_node+'/tmp'+str(file_idx)+'.txt'
         _save_temp_file(tmp_fname, text_content)
-        
-        rpt.append('ok')"""
-
     return rpt
 
 
