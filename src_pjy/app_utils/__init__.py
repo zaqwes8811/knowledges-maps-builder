@@ -2,6 +2,8 @@
 # Std
 import re
 
+
+
 def remove_forward_and_back_spaces(line):
     if line:
         return re.sub("^\s+|\n|\r|\s+$", '', line)

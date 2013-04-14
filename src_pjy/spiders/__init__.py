@@ -10,8 +10,9 @@ import dals.os_io.io_wrapper as dal
 
 # App
 import crosscuttings.tools as tools
+from crosscuttings.tools import get_app_cfg_by_path
 from spiders._utils import _parse_target_params
-from spiders._utils import remove_forward_and_back_spaces
+from app_utils import remove_forward_and_back_spaces
 from spiders._utils import get_node_name
 from spiders._utils import is_node
 
@@ -125,9 +126,11 @@ def base_spider(target_fname):
 
     for at in target_generator:
         try:
+            path = 'App/Spider/intermedia_storage'
+            get_app_cfg_by_path(path)
             tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storagew']
         except KeyError as e:
-            return 
+            return rpt
         
         print at
         node_name, url, file_idx, params = at[0]

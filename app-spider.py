@@ -62,7 +62,7 @@ def main():
     
     # TODO(zaqwes): сделать отчет по преобразованию
     rpt = base_spider(target_name)
-    #map(printer, rpt)
+    map(printer, rpt)
     
     
 if __name__=='__main__':
