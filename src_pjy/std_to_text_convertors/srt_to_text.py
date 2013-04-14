@@ -10,7 +10,7 @@ import dals.os_io.io_wrapper as dal
 
 from  nlp_components.filters import is_content_nums
 
-def srt_to_text_line(url):
+def std_srt_to_text_line(url):
     """ Тотлько для субтитров. """
     sets = dal.get_utf8_template()
     sets['name'] = url

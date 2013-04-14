@@ -17,7 +17,8 @@ from spiders._utils import get_node_name
 from spiders._utils import is_node
 
 # Convertors but how custome 
-from spiders.std_to_text_convertors.srt_to_text import srt_to_text_line
+from std_to_text_convertors.srt_to_text import std_srt_to_text_line
+from std_to_text_convertors import get_call_map
 # std_to_text_map =
 # custom_to_text_map =
 
@@ -34,10 +35,26 @@ def _save_temp_file(fname, text_content):
     sets['howOpen'] = 'w'
     list2file(sets, text_content)
     
-def extracte_text(url, params):
+def extracte_text(url, sparams):
     # Добавляем адрес для послед. сост. обратного индекса
     result = ['url: '+url]
     result.append('')
+    
+    params = json.loads(sparams)
+    
+    # TODO(zaqwes): пока рассм. только файлы операционной системы
+    if 'external_url' in params:
+        return None, "Error: No implement processing external url."
+    
+    # Файлы файловой системы
+    if 'to_text' in params:
+        convertor_name = params['to_text']
+        call_map = get_call_map()
+        text_content = call_map[convertor_name](url)
+        result.append(text_content)
+        return result
+        
+    # Обработка по умолчанию
     
     # Сам контент
     # TODO(zaqwes): url for GET может быть разным
@@ -47,11 +64,11 @@ def extracte_text(url, params):
     
     text_content = ''
     if extention == 'srt':
-        text_content = srt_to_text_line(url)
+        text_content = std_srt_to_text_line(url)
     else:
         print 'Error: No implemented. Recognize only *.srt files. It *.'+extention
-    
     result.append(text_content)
+    
     return result
 
 def check_availabel_resourses(target_fname):
