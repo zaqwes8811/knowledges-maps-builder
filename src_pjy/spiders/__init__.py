@@ -125,14 +125,12 @@ def base_spider(target_fname):
     target_generator = parser_target_for_spider(target_fname)
 
     for at in target_generator:
-        try:
-            path = 'App/Spider/intermedia_storage'
-            get_app_cfg_by_path(path)
-            tmp_dir_path = tools.get_app_cfg()['App']['Spider']['intermedia_storagew']
-        except KeyError as e:
+        path = 'App/Spider/intermedia_storage'
+        tmp_dir_path = get_app_cfg_by_path(path)
+        if not tmp_dir_path:
+            rpt.append("Error: Params app no found - "+path)
             return rpt
-        
-        print at
+
         node_name, url, file_idx, params = at[0]
         
         # Строем папку

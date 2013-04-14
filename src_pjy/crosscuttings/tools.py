@@ -16,12 +16,13 @@ def get_app_cfg_by_path(path):
     """ 's1/s2/s3' -> ['s1', 's2', 's3']"""
     tuple_settings = tuple(path.split('/'))
     result_settings = remove_fandb_spaces_in_tuple(tuple_settings)
-    for at in result_settings:
-        print at
-        
     try:
-        tmp_dir_path = get_app_cfg()['App']['Spider']['intermedia_storagew']
+        tmp = get_app_cfg()
+        for at in result_settings:
+            tmp = tmp[at]
+            
+        return tmp
     except KeyError as e:
-        pass
+        return None
     
 
