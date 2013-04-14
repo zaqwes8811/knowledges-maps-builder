@@ -2,7 +2,17 @@
   App: {
     Spider: {
       targets_folder: "./app-spider-targets/",
-      intermedia_storage: "./app-folder/intermedia_storage/"
+      intermedia_storage: "./app-folder/intermedia_storage/",
+      
+      # Доступные ключи
+      available_keys: ["to_text", "external_url"],
+      
+      # Доступные конверторы
+      to_text_convertors: [ 
+        "std_fake_call_back"],
+      
+      # Могут автоматически детектироваться
+      auto_detected_urls: ["srt", "txt"]
     }
   }
 }
