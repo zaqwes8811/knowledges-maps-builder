@@ -1,3 +1,5 @@
+*.class
+out
 *.py[cod]
 
 # C extensions
@@ -33,3 +35,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+/netbeans-sln/business-layer/nbproject/private/
+/netbeans-sln/app/nbproject/private/
