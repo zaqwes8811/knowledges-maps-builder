@@ -92,13 +92,10 @@ def main():
     map_stage_results = map(mapper, jobs)
     #map(printer, map_stage_results)
     #print map_stage_results[1][1]
-    top_index = map_stage_results[1][1]
-    for at in top_index:
-        print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
+    #top_index = map_stage_results[1][1]
+    #for at in top_index:
+    #    print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
     
-    
-
-    """
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
     suffle_stage_results = suffler(map_stage_results)
@@ -106,13 +103,14 @@ def main():
     # Reduce
     for at in suffle_stage_results:
         one_node = suffle_stage_results[at]
-        print one_node
+        #print one_node
         
         # Проверка слияния
         result = base_reducer(one_node)
-        print result
+        node_index = result[0][0]
+        for jat in node_index:
+            print jat, node_index[jat]['N']
 
-    """
         #sets = get_utf8_template()
         #sets['name'] = 'tmp.json'
         #sets['howOpen'] = 'w'
