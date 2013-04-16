@@ -9,7 +9,7 @@
       
       # Доступные конверторы
       to_text_convertors: [ 
-        "std_fake_call_back"],
+        "std_srt_to_text_line"],
       
       # Могут автоматически детектироваться
       auto_detected_urls: ["srt", "txt"]

@@ -7,7 +7,7 @@ from app_utils import remove_forward_and_back_spaces
 from app_utils import remove_fandb_spaces_in_tuple
 
 def get_app_cfg():
-    f = open('app-cfgs/spider_cfg.yaml', 'r')
+    f = open('./app-cfgs/spider_cfg.yaml', 'r')
     configuration = yaml.load(f)
     f.close()
     return configuration
