@@ -20,7 +20,7 @@ from MapReduce.reduces import base_merge
 
 
 # Преобразователи ресурса в текст
-from originators_text_data.srt_to_text import srt_to_text_line
+from std_to_text_convertors.srt_to_text import std_srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
 
@@ -34,11 +34,13 @@ def get_scheme_actions():
     def one_node_action_fake():
         content_pkge = \
             [
-                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                ['../../statistic_data/srts/Stenf Algs part I/'+
+                    '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
-                srt_to_text_line, 
+                ['../../statistic_data/srts/Stenf Algs part I/'+
+                    '5 - 1 - Quicksort- Overview (12 min).srt', 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
         return content_pkge
@@ -46,14 +48,17 @@ def get_scheme_actions():
     def one_node_action_fake2():
         content_pkge = \
             [
-                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                ['../../statistic_data/srts/Stenf Algs part I/'+
+                    '5 - 1 - Quicksort- Overview (12 min).srt', 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                ['../../statistic_data/srts/Stenf Algs part I/'+
+                    '5 - 2 - Partitioning Around a Pivot (25 min).srt', 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],
-                ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
-                srt_to_text_line, 
+                ['../../statistic_data/srts/Stenf Algs part I/'+
+                 '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
         return content_pkge
@@ -93,18 +98,11 @@ def main():
             
     # Reduce
     for at in suffle_stage_results:
-        #print at
         one_node = suffle_stage_results[at]
-        #print len(one_node)
         
         # Проверка слияния
-        #A = len(set(one_node[0][0].keys()) & set(one_node[1][0]))
-        #print A
-        #, len(one_node[1][0])
         result = base_reducer(one_node)
-        pass
-        #print len(result[0][0])
-        
+
     
         #sets = get_utf8_template()
         #sets['name'] = 'tmp.json'
