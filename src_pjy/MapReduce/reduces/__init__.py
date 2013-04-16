@@ -43,7 +43,6 @@ def base_merge(A, B):
         try:
             B[0][0][at]['N'] += A[0][0][at]['N']
             for iat in A[0][0][at]['S']:
-                print 'T', iat
                 B[0][0][at]['S'].append(iat)
             
             # Сжатие
@@ -54,7 +53,6 @@ def base_merge(A, B):
             B[0][0][at] = {'S': [], 'N': 0}
             B[0][0][at]['N'] = A[0][0][at]['N']
             for iat in A[0][0][at]['S']:
-                print 'E', iat
                 B[0][0][at]['S'].append(iat)
                 
             # Сжатие

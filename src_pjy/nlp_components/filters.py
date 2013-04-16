@@ -15,6 +15,10 @@ def is_key_enabled(key_value):
     if key_value == 'and' or \
             is_content_nums(key_value) or \
             key_value == 'a' or \
+            key_value == 'the' or \
+            key_value == 'that' or \
+            key_value == 'than' or \
+            key_value == 'you' or \
             '(' in key_value or \
             ')' in key_value or \
             '(' in key_value or \
