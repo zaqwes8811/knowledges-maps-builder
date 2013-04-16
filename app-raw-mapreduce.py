@@ -103,13 +103,14 @@ def main():
     # Reduce
     for at in suffle_stage_results:
         one_node = suffle_stage_results[at]
-        #print one_node
+        #print one_node[1][0]
         
         # Проверка слияния
-        result = base_reducer(one_node)
-        node_index = result[0][0]
-        for jat in node_index:
-            print jat, node_index[jat]['N']
+        #result = base_reducer(one_node)
+        #node_index = result[0][0]
+        #for jat in node_index:
+        #    pass
+            #print jat, node_index[jat]['N']
 
         #sets = get_utf8_template()
         #sets['name'] = 'tmp.json'
