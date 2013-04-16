@@ -92,9 +92,9 @@ def main():
     map_stage_results = map(mapper, jobs)
     #map(printer, map_stage_results)
     #print map_stage_results[1][1]
-    #top_index = map_stage_results[1][1]
-    #for at in top_index:
-    #    print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
+    top_index = map_stage_results[1][1]
+    for at in top_index:
+        print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
     
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'

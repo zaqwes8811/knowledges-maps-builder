@@ -10,6 +10,7 @@ from nlp_components._content_filters import _purge_one_sentence
 from nlp_components.filters import is_key_enabled
 from nlp_components.word_level_processors import simple_word_splitter
 from nlp_components.word_level_processors import fake_compressor
+from nlp_components.word_level_processors import real_english_stemmer
 
 # Processors
 def process_list_content_sentences(list_s_sentences, tokenizer):#void
@@ -50,7 +51,8 @@ def process_list_content_sentences(list_s_sentences, tokenizer):#void
             for at in set_words:
                 if at != ' ' and at:
                     # Обрабатываем один ключ
-                    compressed_key = fake_compressor(at)
+                    #compressed_key = fake_compressor(at)
+                    compressed_key = real_english_stemmer(at)
                     if compressed_key in one_node_hash:
                         edit_exist_node(compressed_key)
                     else:

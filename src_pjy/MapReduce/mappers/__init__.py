@@ -26,3 +26,11 @@ def mapper(job):
 
     parallel_pkg = (node_name, index, [count_sents, summ_sents_len], url)
     return parallel_pkg
+
+
+
+
+
+
+
+

@@ -39,18 +39,25 @@ def merge(A, B):
 def base_merge(A, B):
     """ [{index}, [count_sents, summ_sents_len], url] """
     for at in A[0][0]:
-        #print 'A', at,  A[0][0][at]['N']
+        #print at
         try:
             B[0][0][at]['N'] += A[0][0][at]['N']
-            for at in A[0][0][at]['S']:
-                B[0][0][at]['S'].append(at)
+            for iat in A[0][0][at]['S']:
+                print 'T', iat
+                B[0][0][at]['S'].append(iat)
+            
+            # Сжатие
             tmp = set(B[0][0][at]['S'])
             B[0][0][at]['S'] = list(tmp)
+            
         except KeyError as e:
             B[0][0][at] = {'S': [], 'N': 0}
             B[0][0][at]['N'] = A[0][0][at]['N']
-            for at in A[0][0][at]['S']:
-                B[0][0][at]['S'].append(at)
+            for iat in A[0][0][at]['S']:
+                print 'E', iat
+                B[0][0][at]['S'].append(iat)
+                
+            # Сжатие
             tmp = set(B[0][0][at]['S'])
             B[0][0][at]['S'] = list(tmp)
             
