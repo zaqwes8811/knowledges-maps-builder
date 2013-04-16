@@ -42,8 +42,18 @@ def base_merge(A, B):
         #print 'A', at,  A[0][0][at]['N']
         try:
             B[0][0][at]['N'] += A[0][0][at]['N']
+            for at in A[0][0][at]['S']:
+                B[0][0][at]['S'].append(at)
+            tmp = set(B[0][0][at]['S'])
+            B[0][0][at]['S'] = list(tmp)
         except KeyError as e:
             B[0][0][at] = {'S': [], 'N': 0}
             B[0][0][at]['N'] = A[0][0][at]['N']
+            for at in A[0][0][at]['S']:
+                B[0][0][at]['S'].append(at)
+            tmp = set(B[0][0][at]['S'])
+            B[0][0][at]['S'] = list(tmp)
+            
+    # Сжать списки слов возникшие после работы стеммера
     #print B   
     return B

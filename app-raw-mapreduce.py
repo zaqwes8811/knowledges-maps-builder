@@ -106,11 +106,13 @@ def main():
         #print one_node[1][0]
         
         # Проверка слияния
-        #result = base_reducer(one_node)
-        #node_index = result[0][0]
-        #for jat in node_index:
-        #    pass
-            #print jat, node_index[jat]['N']
+        result = base_reducer(one_node)
+        
+        node_index = result[0][0]
+        for jat in node_index:
+            pass
+            print jat, node_index[jat]['S']
+        break
 
         #sets = get_utf8_template()
         #sets['name'] = 'tmp.json'
