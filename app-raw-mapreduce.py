@@ -34,11 +34,11 @@ def get_scheme_actions():
     def one_node_action_fake():
         content_pkge = \
             [
-                ['../../statistic_data/srts/Stenf Algs part I/'+
+                ['statistic_data/srts/Stenf Algs part I/'+
                     '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
                 std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../statistic_data/srts/Stenf Algs part I/'+
+                ['statistic_data/srts/Stenf Algs part I/'+
                     '5 - 1 - Quicksort- Overview (12 min).srt', 
                 std_srt_to_text_line, 
                 roughly_split_to_sentences]
@@ -48,23 +48,23 @@ def get_scheme_actions():
     def one_node_action_fake2():
         content_pkge = \
             [
-                ['../../statistic_data/srts/Stenf Algs part I/'+
+                ['statistic_data/srts/Stenf Algs part I/'+
                     '5 - 1 - Quicksort- Overview (12 min).srt', 
                 std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
-                ['../../statistic_data/srts/Stenf Algs part I/'+
+                ['statistic_data/srts/Stenf Algs part I/'+
                     '5 - 2 - Partitioning Around a Pivot (25 min).srt', 
                 std_srt_to_text_line, 
                 roughly_split_to_sentences],
-                ['../../statistic_data/srts/Stenf Algs part I/'+
+                ['statistic_data/srts/Stenf Algs part I/'+
                  '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
                 std_srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
         return content_pkge
     
-    node_name1 = 'Iron Man AA1'
-    node_name2 = 'Iron Man AA2'
+    node_name1 = 'Stenf. courses I'
+    node_name2 = 'Stenf. courses II'
     readed_data = {
           node_name1: one_node_action_fake(),
           node_name2: one_node_action_fake2()}
@@ -85,13 +85,20 @@ def main():
     
     print 'Split task to job.'
     jobs = plan_to_jobs_convertor(scheme)
-    #map(printer, jobs)
+    map(printer, jobs)
     
+   
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
-    #for at in map_stage_results:
-    #    print at[2]
-      
+    #map(printer, map_stage_results)
+    #print map_stage_results[1][1]
+    top_index = map_stage_results[1][1]
+    for at in top_index:
+        print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
+    
+    
+
+    """
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
     suffle_stage_results = suffler(map_stage_results)
@@ -99,11 +106,13 @@ def main():
     # Reduce
     for at in suffle_stage_results:
         one_node = suffle_stage_results[at]
+        print one_node
         
         # Проверка слияния
         result = base_reducer(one_node)
+        print result
 
-    
+    """
         #sets = get_utf8_template()
         #sets['name'] = 'tmp.json'
         #sets['howOpen'] = 'w'
