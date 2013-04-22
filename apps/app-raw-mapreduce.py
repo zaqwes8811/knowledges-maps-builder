@@ -23,6 +23,7 @@ from MapReduce.reduces import base_merge
 # Java
 import java.text.BreakIterator as BreakIterator
 import java.util.Locale as Locale
+import org.apache.tika.language.ProfilingWriter as ProfilingWriter
 
 
 # Преобразователи ресурса в текст
@@ -42,10 +43,17 @@ def split_to_sentents(text, result_list):
     bi = BreakIterator.getSentenceInstance();
     bi.setText(text)
     index = 0
+    writer = ProfilingWriter()  # для определения языка
     while bi.next() != BreakIterator.DONE:
         sentence = text[index:bi.current()]
+        writer.append(sentence)
         result_list.append(sentence)
         index = bi.current()
+        
+    # Статистику накопили и теперь определяем язык
+    identifier = writer.getLanguage();
+    lang = identifier.getLanguage()
+    return lang
         
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
@@ -136,15 +144,18 @@ def get_scheme_actions():
     def spider_str_processor(job):
         print job
         metadata = {'node_name':job[0]}
-        result = [json.dumps(metadata), '']
-        
         url = job[1]
+        metadata['url'] = url
         
+        result = ['meta', '']
         # Очищаем файлы
         purged_content_file = std_srt_to_text_line(url)
         
         # делем не предложения и определяем язык
-        split_to_sentents(purged_content_file, result)
+        lang = split_to_sentents(purged_content_file, result)
+        metadata['lang'] = lang
+        
+        result[0] = json.dumps(metadata)
         write_result_file(result, 'tmp/'+url.split('/')[-1]+'.txt')
         #map(printer, result)
         

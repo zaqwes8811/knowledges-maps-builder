@@ -1,4 +1,4 @@
-{"node_name": "Stenf. courses II"}
+{"url": "../statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt", "node_name": "Stenf. courses II", "lang": "en"}
 
 So now we come to one of my favorite sequence of lectures, where we going to discuss the famous QuickSort algorithm. 
 If you ask professional computer scientists and professional programmers to draw up a list of their top five, top ten favorite algorithms, I'll bet you'd see QuickSort on many of those, those peoples' lists. 

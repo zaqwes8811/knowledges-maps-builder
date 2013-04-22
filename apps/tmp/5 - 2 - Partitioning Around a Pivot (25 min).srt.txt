@@ -1,4 +1,4 @@
-{"node_name": "Stenf. courses II"}
+{"url": "../statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt", "node_name": "Stenf. courses II", "lang": "en"}
 
 The goal of this video is to provide more details about the implementation of the QuickSort algorithm and, in particular, if you're ever going to drill down on the key Partition subroutine, just let me remind you what the job of the Partition subroutine is in the context of sorting an array. 
 So recall that key idea in QuickSort is to partition the input array around a pivot element. 

@@ -1,4 +1,4 @@
-{"node_name": "Stenf. courses II"}
+{"url": "../statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt", "node_name": "Stenf. courses II", "lang": "en"}
 
 I just got the number of divide and conquer algorithms and, so far, I've been short shrift to proofs of correctness. 
 This has been a conscience decision on my part. 
