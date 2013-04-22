@@ -88,7 +88,7 @@ def main():
     jobs = plan_to_jobs_convertor(scheme)
     map(printer, jobs)
     
-    mappers = [mapper, mapper_real]
+    mappers = [mapper]#, mapper_real]
     for mappr in mappers:
         print 'Begin Map stage. Wait please...'
         map_stage_results = map(mappr, jobs)
