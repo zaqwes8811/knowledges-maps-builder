@@ -150,24 +150,15 @@ def main():
 
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
-    for at in map_stage_results:
-        print at[-1]
-    #map(printer, map_stage_results)
-    #print map_stage_results[1][1]
-    top_index = map_stage_results[1][1]
-    for at in top_index:
-        #print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
-        pass
     
-    """
     # Suffle stage
     print 'Begin Suffle stage. Wait please...'
     suffle_stage_results = suffler(map_stage_results)
-            
+      
+          
     # Reduce
     for at in suffle_stage_results:
         one_node = suffle_stage_results[at]
-        #print one_node[1][0]
         
         # Проверка слияния
         result = base_reducer(one_node)
@@ -178,29 +169,11 @@ def main():
             axises.append((node_index[jat]['N'], jat))
             
         src_list = sorted(
-                          axises, 
-                          #key=lambda record: record[0],
-                          reverse=True) 
-        tmp = []
-        for jat in src_list:
-            print jat
-            tmp.append(jat[0])
-            
-        print range(len(tmp))
-        print tmp
-        #plot(range(len(tmp)), tmp)
-            
-            
-            
-            break"""
-    
-            #sets = get_utf8_template()
-            #sets['name'] = 'tmp.json'
-            #sets['howOpen'] = 'w'
-            #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
-    #grid()
-    #show()
-    #"""
+                axises, 
+                key=lambda record: record[0],
+                reverse=True) 
+
+        print src_list
 
 if __name__=='__main__':
     print 'Begin'

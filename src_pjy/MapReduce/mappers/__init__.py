@@ -29,7 +29,7 @@ def mapper(job):
     index, (count_sents, summ_sents_len) = process_list_content_sentences(
                 list_content_items)
 
-    parallel_pkg = (node_name, index, [count_sents, summ_sents_len], url, lang)
+    parallel_pkg = (node_name, index, [count_sents, summ_sents_len], (url, lang))
     return parallel_pkg
 
 def mapper_real(job):
