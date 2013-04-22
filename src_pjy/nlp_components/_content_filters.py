@@ -34,4 +34,5 @@ def _purge_one_sentence(one_sentence):
     copy_one_sent = copy_one_sent.replace('~','')
     copy_one_sent = copy_one_sent.replace('/','')
     result = copy_one_sent
+    result = result.replace('\n', ' ')
     return result
