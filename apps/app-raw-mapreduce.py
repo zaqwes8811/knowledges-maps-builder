@@ -92,33 +92,9 @@ def plan_to_jobs_convertor_simpler(scheme):
 def get_scheme_actions():
     # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
     # Можно подставить имя
-    
-    """def one_node_action_fake():
-        content_pkge = \
-            [
-                [ 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],  # Дробитель контекста
-                [, 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences]
-             ]
-        return content_pkge
-    
-    def one_node_action_fake2():
-        content_pkge = \
-            [
-                [
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],  # Дробитель контекста
-                [
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],
-                [
-                std_srt_to_text_line, 
-                roughly_split_to_sentences]
-             ]
-        return content_pkge"""
+    """ 
+    [node, url, std_srt_to_text_line, roughly_split_to_sentences]
+    """
         
     # Запускаем spider-processor
     node_name1 = 'Stenf. courses I'
@@ -145,7 +121,6 @@ def get_scheme_actions():
     # Запускаем spider-processor
     
     def spider_str_processor(job):
-        print job
         metadata = {'node_name':job[0]}
         node_name = job[0]
         url = job[1]
@@ -161,71 +136,60 @@ def get_scheme_actions():
         metadata['lang'] = lang
         
         result[0] = json.dumps(metadata)
-        write_result_file(result, 'tmp/'+node_name+'_N'+str(number)+'.txt')
-        #map(printer, result)
+        path_to_file = 'tmp/'+node_name+'_N'+str(number)+'.txt'
+        write_result_file(result, path_to_file)
+        return (node_name, path_to_file)
         
-    map(spider_str_processor, jobs)              
-    
-    
-    """readed_data = {
-          node_name1: one_node_action_fake(),
-          node_name2: one_node_action_fake2()}"""
-    return readed_data
-
-
+    initial_jobs = map(spider_str_processor, jobs)
+    return initial_jobs             
 
 def main():
     print 'Get task plan.'
-    scheme = get_scheme_actions()
+    jobs = get_scheme_actions()
+    map(printer, jobs)
+
+    print 'Begin Map stage. Wait please...'
+    map_stage_results = map(mapper, jobs)
+    #map(printer, map_stage_results)
+    #print map_stage_results[1][1]
+    #top_index = map_stage_results[1][1]
+    #for at in top_index:
+    #    print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
     
     """
-    print 'Split task to job.'
-    jobs = plan_to_jobs_convertor(scheme)
-    map(printer, jobs)
-    
-    mappers = [mapper, mapper_real]
-    for mappr in mappers:
-        print 'Begin Map stage. Wait please...'
-        map_stage_results = map(mappr, jobs)
-        #map(printer, map_stage_results)
-        #print map_stage_results[1][1]
-        #top_index = map_stage_results[1][1]
-        #for at in top_index:
-        #    print at, ' : ', top_index[at]['S'], ' : ', top_index[at]['N']
+    # Suffle stage
+    print 'Begin Suffle stage. Wait please...'
+    suffle_stage_results = suffler(map_stage_results)
+            
+    # Reduce
+    for at in suffle_stage_results:
+        one_node = suffle_stage_results[at]
+        #print one_node[1][0]
         
-        # Suffle stage
-        print 'Begin Suffle stage. Wait please...'
-        suffle_stage_results = suffler(map_stage_results)
-                
-        # Reduce
-        for at in suffle_stage_results:
-            one_node = suffle_stage_results[at]
-            #print one_node[1][0]
+        # Проверка слияния
+        result = base_reducer(one_node)
+        
+        node_index = result[0][0]
+        axises = []
+        for jat in node_index:
+            axises.append((node_index[jat]['N'], jat))
             
-            # Проверка слияния
-            result = base_reducer(one_node)
+        src_list = sorted(
+                          axises, 
+                          #key=lambda record: record[0],
+                          reverse=True) 
+        tmp = []
+        for jat in src_list:
+            print jat
+            tmp.append(jat[0])
             
-            node_index = result[0][0]
-            axises = []
-            for jat in node_index:
-                axises.append((node_index[jat]['N'], jat))
-                
-            src_list = sorted(
-                              axises, 
-                              #key=lambda record: record[0],
-                              reverse=True) 
-            tmp = []
-            for jat in src_list:
-                print jat
-                tmp.append(jat[0])
-                
-            print range(len(tmp))
-            print tmp
-            #plot(range(len(tmp)), tmp)
+        print range(len(tmp))
+        print tmp
+        #plot(range(len(tmp)), tmp)
             
             
             
-            break
+            break"""
     
             #sets = get_utf8_template()
             #sets['name'] = 'tmp.json'
@@ -233,7 +197,7 @@ def main():
             #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
     #grid()
     #show()
-    """
+    #"""
 
 if __name__=='__main__':
     print 'Begin'

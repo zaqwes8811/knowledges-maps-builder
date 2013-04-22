@@ -13,14 +13,13 @@ from nlp_components.word_level_processors import fake_compressor
 from nlp_components.word_level_processors import real_english_stemmer
 
 # Processors
-def process_list_content_sentences(list_s_sentences, tokenizer):#void
+def process_list_content_sentences(list_s_sentences):#void
     """ Получает список предложений и заполняет узел индекса. """
     one_node_hash = {}
     summ_sents_len = None
     count_sents = None
-    if tokenizer:
-        count_sents = len(list_s_sentences) 
-        summ_sents_len = 0
+    count_sents = len(list_s_sentences) 
+    summ_sents_len = 0
     
     # Обработка
     for  sentence in list_s_sentences:
@@ -45,8 +44,7 @@ def process_list_content_sentences(list_s_sentences, tokenizer):#void
 
             # Лексические единицы одного предложения
             set_words = simple_word_splitter(pure_sentence)
-            if tokenizer:
-                summ_sents_len += len(set_words)
+            summ_sents_len += len(set_words)
             
             for at in set_words:
                 if at != ' ' and at:
