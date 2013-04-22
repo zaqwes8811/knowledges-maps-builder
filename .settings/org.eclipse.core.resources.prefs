@@ -3,6 +3,7 @@
 >>>>>>>=inner_branch_0
 eclipse.preferences.version=1
 encoding//apps/app-raw-mapreduce.py=utf-8
+encoding//apps/app-spider-processor.py=utf-8
 encoding//jysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/business/MapReduce/mappers/__init__.py=utf-8
@@ -35,6 +36,8 @@ encoding//src_pjy/spiders/__init__.py=utf-8
 encoding//src_pjy/spiders/_utils.py=utf-8
 encoding//src_pjy/spiders/std_to_text_convertors/srt_to_text.py=utf-8
 encoding//src_pjy/spiders/test_spider.py=utf-8
+encoding//src_pjy/spiders_processors/__init__.py=utf-8
+encoding//src_pjy/spiders_processors/docs_spider.py=utf-8
 encoding//src_pjy/std_to_text_convertors/__init__.py=utf-8
 encoding//src_pjy/std_to_text_convertors/srt_to_text.py=utf-8
 encoding//src_pjy/subtitles_to_text.py=utf-8

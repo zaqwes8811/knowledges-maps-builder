@@ -30,6 +30,8 @@ from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
 import dals.os_io.io_wrapper as dal
 
+import spiders_processors.docs_spider as docs_spider
+
 # No DRY!!!
 def split_to_sentents(text, result_list):
     """ 
@@ -162,10 +164,10 @@ def get_scheme_actions_srt(readed_data):
 def main():
     # Запускаем краулер
     print 'Run crawler'
-    result_crawler = fake_crawler_one()
+    #result_crawler = docs_spider.get_docs()#fake_crawler_one()
     
     print 'Get task plan.'
-    jobs = get_scheme_actions_srt(result_crawler)
+    jobs = docs_spider.get_docs()#get_scheme_actions_srt(result_crawler)
     map(printer, jobs)
 
     print 'Begin Map stage. Wait please...'
