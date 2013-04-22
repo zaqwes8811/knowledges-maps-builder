@@ -13,7 +13,7 @@ from nlp_components.word_level_processors import fake_compressor
 from nlp_components.word_level_processors import real_english_stemmer
 
 # Processors
-def process_list_content_sentences(list_s_sentences):#void
+def process_list_content_sentences(list_s_sentences, lang):#void
     """ Получает список предложений и заполняет узел индекса. """
     one_node_hash = {}
     summ_sents_len = None
@@ -49,8 +49,12 @@ def process_list_content_sentences(list_s_sentences):#void
             for at in set_words:
                 if at != ' ' and at:
                     # Обрабатываем один ключ
-                    compressed_key = fake_compressor(at)
-                    #compressed_key = real_english_stemmer(at)
+                    if lang == 'en':
+                        compressed_key = real_english_stemmer(at)
+                        #print 'en'
+                    else:
+                        compressed_key = fake_compressor(at)
+                    #
                     if compressed_key in one_node_hash:
                         edit_exist_node(compressed_key)
                     else:

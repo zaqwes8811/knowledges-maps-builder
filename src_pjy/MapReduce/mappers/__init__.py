@@ -27,7 +27,7 @@ def mapper(job):
     
     # Теперь можно составлять индекс
     index, (count_sents, summ_sents_len) = process_list_content_sentences(
-                list_content_items)
+                list_content_items, lang)
 
     parallel_pkg = (node_name, index, [count_sents, summ_sents_len], (url, lang))
     return parallel_pkg
