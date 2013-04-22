@@ -3,6 +3,9 @@ from nlp_components.content_items_processors import process_list_content_sentenc
 from nlp_components.content_items_processors import process_list_content_sentences_real
 
 import dals.os_io.io_wrapper as dal
+
+import json
+
 # NO DRY!!
 def read_utf_txt_file(fname):
     sets = dal.get_utf8_template()
@@ -10,18 +13,23 @@ def read_utf_txt_file(fname):
     return dal.file2list(sets) 
 
 def mapper(job):
-    """ [node_name, .., .., .., ]"""
-    url = job[1]
+    """ [node_name, index_word, [count_sent, summ_sent_len], url, lang]"""
+    url_tmp_file = job[1]
     node_name = job[0]
 
     # Получем текст
-    list_content_items = read_utf_txt_file(url)
+    file_content = read_utf_txt_file(url_tmp_file)
+    metadata = file_content[0]
+    settings = json.loads(metadata)
+    url = settings['url']
+    lang = settings['lang']
+    list_content_items = file_content[1:]
     
     # Теперь можно составлять индекс
     index, (count_sents, summ_sents_len) = process_list_content_sentences(
                 list_content_items)
 
-    parallel_pkg = (node_name, index, [count_sents, summ_sents_len], url)
+    parallel_pkg = (node_name, index, [count_sents, summ_sents_len], url, lang)
     return parallel_pkg
 
 def mapper_real(job):
