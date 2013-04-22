@@ -27,50 +27,7 @@ from dals.os_io.io_wrapper import get_utf8_template
 
 def printer(item):
     print item
-
-def get_scheme_actions():
-    # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
-    # Можно подставить имя
     
-    def one_node_action_fake():
-        content_pkge = \
-            [
-                ['statistic_data/srts/Stenf Algs part I/'+
-                    '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],  # Дробитель контекста
-                ['statistic_data/srts/Stenf Algs part I/'+
-                    '5 - 1 - Quicksort- Overview (12 min).srt', 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences]
-             ]
-        return content_pkge
-    
-    def one_node_action_fake2():
-        content_pkge = \
-            [
-                ['statistic_data/srts/Stenf Algs part I/'+
-                    '5 - 1 - Quicksort- Overview (12 min).srt', 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],  # Дробитель контекста
-                ['statistic_data/srts/Stenf Algs part I/'+
-                    '5 - 2 - Partitioning Around a Pivot (25 min).srt', 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences],
-                ['statistic_data/srts/Stenf Algs part I/'+
-                 '5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
-                std_srt_to_text_line, 
-                roughly_split_to_sentences]
-             ]
-        return content_pkge
-    
-    node_name1 = 'Stenf. courses I'
-    node_name2 = 'Stenf. courses II'
-    readed_data = {
-          node_name1: one_node_action_fake(),
-          node_name2: one_node_action_fake2()}
-    return readed_data
-
 def plan_to_jobs_convertor(scheme):
     result = []
     for at in scheme:
@@ -80,10 +37,64 @@ def plan_to_jobs_convertor(scheme):
             result.append(it)
     return result
 
+def get_scheme_actions():
+    # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
+    # Можно подставить имя
+    
+    """def one_node_action_fake():
+        content_pkge = \
+            [
+                [ 
+                std_srt_to_text_line, 
+                roughly_split_to_sentences],  # Дробитель контекста
+                [, 
+                std_srt_to_text_line, 
+                roughly_split_to_sentences]
+             ]
+        return content_pkge
+    
+    def one_node_action_fake2():
+        content_pkge = \
+            [
+                [
+                std_srt_to_text_line, 
+                roughly_split_to_sentences],  # Дробитель контекста
+                [
+                std_srt_to_text_line, 
+                roughly_split_to_sentences],
+                [
+                std_srt_to_text_line, 
+                roughly_split_to_sentences]
+             ]
+        return content_pkge"""
+    
+    node_name1 = 'Stenf. courses I'
+    node_name2 = 'Stenf. courses II'
+    readed_data = {node_name1:[], node_name2:[]}
+    
+    'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt'
+    'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt'
+    
+    
+    
+    'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt' 
+    'statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt'
+    'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt'
+                    
+    
+    
+    """readed_data = {
+          node_name1: one_node_action_fake(),
+          node_name2: one_node_action_fake2()}"""
+    return readed_data
+
+
+
 def main():
     print 'Get task plan.'
     scheme = get_scheme_actions()
     
+    """
     print 'Split task to job.'
     jobs = plan_to_jobs_convertor(scheme)
     map(printer, jobs)
@@ -138,6 +149,7 @@ def main():
             #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
     #grid()
     #show()
+    """
 
 if __name__=='__main__':
     print 'Begin'
