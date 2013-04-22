@@ -19,11 +19,28 @@ from MapReduce.sufflers import suffler
 from MapReduce.reduces import base_reducer 
 from MapReduce.reduces import base_merge
 
+# Java
+import java.text.BreakIterator as BreakIterator
+import java.util.Locale as Locale
+
 
 # Преобразователи ресурса в текст
 from std_to_text_convertors.srt_to_text import std_srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
+
+# No DRY!!!
+def split_to_sentents(text_list, result_list):
+    text = ' '.join(text_list)
+    bi = BreakIterator.getSentenceInstance();
+    bi.setText(text)
+    index = 0
+    while bi.next() != BreakIterator.DONE:
+        sentence = text[index:bi.current()]
+        #print sentence.replace(' ', '')
+        result_list.append(sentence)
+        index = bi.current()
+
 
 def printer(item):
     print item
@@ -83,25 +100,39 @@ def get_scheme_actions():
     
     # Как бы результат работы spider-extractor and crawler
     node1_urls = [
-            'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt',
-            'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt']
+            '../statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt',
+            '../statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt']
     
     
     node2_urls = [
-            'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
-            'statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt',
-            'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt']
+            '../statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
+            '../statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt',
+            '../statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt']
     
     readed_data[node_name1] = node1_urls
     readed_data[node_name2] = node2_urls
     
     jobs = plan_to_jobs_convertor_simpler(readed_data)
-    map(printer, jobs)
+   # map(printer, jobs)
 
     # Запускаем spider-processor
-    def spider_str_processor(jobs):
-        pass
-                            
+    def spider_str_processor(job):
+        print job
+        metadata = {'node_name':job[0]}
+        result = [json.dumps(metadata), '']
+        
+        url = job[1]
+        
+        # Очищаем файлы
+        purged_content_file = std_srt_to_text_line(url)
+        
+        # делем не предложения и определяем язык
+        split_to_sentents(purged_content_file, result)
+        #map(printer, result)
+        
+        
+              
+    map(spider_str_processor, jobs)              
     
     
     """readed_data = {

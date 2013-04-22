@@ -42,6 +42,6 @@ def std_srt_to_text_line(url):
     one_line = re.sub('\~.*?\~', ' ', one_line)
     one_line = re.sub('\<.*?\</.*?\>', ' ', one_line)
     
-    one_line = '\n'.join(one_line.split('@@@@'))
+    one_line = ' '.join(one_line.split('@@@@'))
     
     return one_line
