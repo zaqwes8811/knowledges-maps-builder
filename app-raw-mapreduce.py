@@ -6,9 +6,9 @@
 '''
 
 # Other
-from pylab import plot
-from pylab import show
-from pylab import grid
+#from pylab import plot
+#from pylab import show
+#from pylab import grid
 import json
 
 # App
@@ -126,7 +126,7 @@ def main():
                 
             print range(len(tmp))
             print tmp
-            plot(range(len(tmp)), tmp)
+            #plot(range(len(tmp)), tmp)
             
             
             
@@ -136,8 +136,8 @@ def main():
             #sets['name'] = 'tmp.json'
             #sets['howOpen'] = 'w'
             #list2file(sets, [json.dumps(suffle_stage_results, sort_keys=True, indent=2)])
-    grid()
-    show()
+    #grid()
+    #show()
 
 if __name__=='__main__':
     print 'Begin'
