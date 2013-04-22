@@ -19,6 +19,7 @@ from MapReduce.sufflers import suffler
 from MapReduce.reduces import base_reducer 
 from MapReduce.reduces import base_merge
 
+
 # Java
 import java.text.BreakIterator as BreakIterator
 import java.util.Locale as Locale
@@ -28,18 +29,34 @@ import java.util.Locale as Locale
 from std_to_text_convertors.srt_to_text import std_srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
+import dals.os_io.io_wrapper as dal
 
 # No DRY!!!
-def split_to_sentents(text_list, result_list):
-    text = ' '.join(text_list)
+def split_to_sentents(text, result_list):
+    """ 
+    
+    Danger:
+        Почему-то между буквами добавляются пробелы
+    
+    """
     bi = BreakIterator.getSentenceInstance();
     bi.setText(text)
     index = 0
     while bi.next() != BreakIterator.DONE:
         sentence = text[index:bi.current()]
-        #print sentence.replace(' ', '')
         result_list.append(sentence)
         index = bi.current()
+        
+def write_result_file(result_list, fname):
+    sets = dal.get_utf8_template()
+    sets['howOpen'] = 'w'
+    sets['name'] = fname
+    dal.list2file(sets, result_list)
+    
+def read_utf_txt_file(fname):
+    sets = dal.get_utf8_template()
+    sets['name'] = fname
+    return dal.file2list(sets) 
 
 
 def printer(item):
@@ -128,6 +145,7 @@ def get_scheme_actions():
         
         # делем не предложения и определяем язык
         split_to_sentents(purged_content_file, result)
+        write_result_file(result, 'tmp/'+url.split('/')[-1]+'.txt')
         #map(printer, result)
         
         
