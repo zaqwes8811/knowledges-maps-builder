@@ -8,6 +8,8 @@
 import re
 import dals.os_io.io_wrapper as dal
 
+
+
 from  nlp_components.filters import is_content_nums
 
 def std_srt_to_text_line(url):
@@ -15,8 +17,7 @@ def std_srt_to_text_line(url):
     sets = dal.get_utf8_template()
     sets['name'] = url
         
-
-    readed_lst = dal.file2list(sets)
+    readed_lst, err = dal.efile2list(sets)
     purged_lst = list()
     if readed_lst:
         for at in readed_lst:
@@ -42,6 +43,6 @@ def std_srt_to_text_line(url):
     one_line = re.sub('\~.*?\~', ' ', one_line)
     one_line = re.sub('\<.*?\</.*?\>', ' ', one_line)
     
-    one_line = ' '.join(one_line.split('@@@@'))
+    one_line = '\n'.join(one_line.split('@@@@'))
     
     return one_line
