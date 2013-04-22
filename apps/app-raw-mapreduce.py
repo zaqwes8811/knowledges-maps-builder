@@ -81,10 +81,12 @@ def plan_to_jobs_convertor(scheme):
 
 def plan_to_jobs_convertor_simpler(scheme):
     result = []
+    j = 0
     for at in scheme:
         slice = scheme[at]
         for it in slice:
-            result.append((at, it))
+            j += 1
+            result.append((at, it, j))
     return result
 
 def get_scheme_actions():
@@ -141,10 +143,13 @@ def get_scheme_actions():
    # map(printer, jobs)
 
     # Запускаем spider-processor
+    
     def spider_str_processor(job):
         print job
         metadata = {'node_name':job[0]}
+        node_name = job[0]
         url = job[1]
+        number = job[2]
         metadata['url'] = url
         
         result = ['meta', '']
@@ -156,11 +161,9 @@ def get_scheme_actions():
         metadata['lang'] = lang
         
         result[0] = json.dumps(metadata)
-        write_result_file(result, 'tmp/'+url.split('/')[-1]+'.txt')
+        write_result_file(result, 'tmp/'+node_name+'_N'+str(number)+'.txt')
         #map(printer, result)
         
-        
-              
     map(spider_str_processor, jobs)              
     
     
