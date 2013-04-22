@@ -20,7 +20,7 @@ from MapReduce.reduces import base_merge
 
 
 # Преобразователи ресурса в текст
-from originators_text_data.srt_to_text import srt_to_text_line
+from std_to_text_convertors.srt_to_text import std_srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
 
@@ -35,10 +35,10 @@ def get_scheme_actions():
         content_pkge = \
             [
                 ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
                 ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
-                srt_to_text_line, 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
         return content_pkge
@@ -47,13 +47,13 @@ def get_scheme_actions():
         content_pkge = \
             [
                 ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],  # Дробитель контекста
                 ['../../statistic_data/srts/Iron Man AA/Iron Man02x26.srt', 
-                srt_to_text_line, 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences],
                 ['../../statistic_data/srts/Iron Man AA/Iron1and8.srt', 
-                srt_to_text_line, 
+                std_srt_to_text_line, 
                 roughly_split_to_sentences]
              ]
         return content_pkge

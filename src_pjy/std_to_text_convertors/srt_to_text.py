@@ -15,7 +15,7 @@ def std_srt_to_text_line(url):
     sets = dal.get_utf8_template()
     sets['name'] = url
         
-    readed_lst, err = dal.efile2list(sets)
+    readed_lst = dal.file2list(sets)
     purged_lst = list()
     if readed_lst:
         for at in readed_lst:
