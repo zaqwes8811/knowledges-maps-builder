@@ -37,6 +37,14 @@ def plan_to_jobs_convertor(scheme):
             result.append(it)
     return result
 
+def plan_to_jobs_convertor_simpler(scheme):
+    result = []
+    for at in scheme:
+        slice = scheme[at]
+        for it in slice:
+            result.append((at, it))
+    return result
+
 def get_scheme_actions():
     # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
     # Можно подставить имя
@@ -67,20 +75,33 @@ def get_scheme_actions():
                 roughly_split_to_sentences]
              ]
         return content_pkge"""
-    
+        
+    # Запускаем spider-processor
     node_name1 = 'Stenf. courses I'
     node_name2 = 'Stenf. courses II'
     readed_data = {node_name1:[], node_name2:[]}
     
-    'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt'
-    'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt'
+    # Как бы результат работы spider-extractor and crawler
+    node1_urls = [
+            'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt',
+            'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt']
     
     
+    node2_urls = [
+            'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
+            'statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt',
+            'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt']
     
-    'statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt' 
-    'statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt'
-    'statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt'
-                    
+    readed_data[node_name1] = node1_urls
+    readed_data[node_name2] = node2_urls
+    
+    jobs = plan_to_jobs_convertor_simpler(readed_data)
+    map(printer, jobs)
+
+    # Запускаем spider-processor
+    def spider_str_processor(jobs):
+        pass
+                            
     
     
     """readed_data = {

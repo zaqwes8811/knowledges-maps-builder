@@ -1,4 +1,8 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=inner_branch_0
 eclipse.preferences.version=1
+encoding//apps/app-raw-mapreduce.py=utf-8
 encoding//jysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/business/MapReduce/mappers/__init__.py=utf-8
@@ -16,11 +20,8 @@ encoding//pjysrc/business/originators_text_data/srt_to_text.py=utf-8
 encoding//scripts/regenerator_python_code.py=utf-8
 encoding//src/app-translate-assistant.py=utf-8
 encoding//src_pjy/MapReduce/mappers/__init__.py=utf-8
-<<<<<<< HEAD
-encoding//src_pjy/MapReduce/runner_mapreduce.py=utf-8
-=======
 encoding//src_pjy/MapReduce/reduces/__init__.py=utf-8
->>>>>>> inner_branch_0
+encoding//src_pjy/MapReduce/runner_mapreduce.py=utf-8
 encoding//src_pjy/api_frequency_index/mutators/__init__.py=utf-8
 encoding//src_pjy/api_frequency_index/originators_node/IndexCursor.py=utf-8
 encoding//src_pjy/api_frequency_index/readers/__init__.py=utf-8
@@ -37,5 +38,4 @@ encoding//src_pjy/spiders/test_spider.py=utf-8
 encoding//src_pjy/std_to_text_convertors/__init__.py=utf-8
 encoding//src_pjy/std_to_text_convertors/srt_to_text.py=utf-8
 encoding//src_pjy/subtitles_to_text.py=utf-8
-encoding/app-raw-mapreduce.py=utf-8
 encoding/app-spider.py=utf-8
