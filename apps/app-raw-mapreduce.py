@@ -6,9 +6,7 @@
 '''
 
 # Other
-#from pylab import plot
-#from pylab import show
-#from pylab import grid
+#from org.math.plot import *
 import json
 
 # App
@@ -89,8 +87,8 @@ def plan_to_jobs_convertor_simpler(scheme):
             result.append((at, it, j))
     return result
 
-def get_scheme_actions():
-    # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
+def fake_crawler_zero():
+        # TODO(zaqwes): Во что сереализуется указатель на функцию - Нельзя его сереализовать
     # Можно подставить имя
     """ 
     [node, url, std_srt_to_text_line, roughly_split_to_sentences]
@@ -114,12 +112,30 @@ def get_scheme_actions():
     
     readed_data[node_name1] = node1_urls
     readed_data[node_name2] = node2_urls
-    
-    jobs = plan_to_jobs_convertor_simpler(readed_data)
-   # map(printer, jobs)
+    return readed_data
 
+def fake_crawler_one():
+    list_files = [
+            '../statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt',
+            '../statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt',
+            '../statistic_data/srts/Stenf Algs part I/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt', 
+            '../statistic_data/srts/Stenf Algs part I/5 - 2 - Partitioning Around a Pivot (25 min).srt',
+            '../statistic_data/srts/Stenf Algs part I/5 - 1 - Quicksort- Overview (12 min).srt']
+        
     # Запускаем spider-processor
+    readed_data = {}
+    i = 0
+    for at in list_files:
+        node_name = at.split('/')[-1][:-3]+'_N'+str(i)
+        readed_data[node_name] = [at]
+        i += 1
+
+    return readed_data
     
+def get_scheme_actions_srt(readed_data):
+    jobs = plan_to_jobs_convertor_simpler(readed_data)
+    
+    # Запускаем spider-processor
     def spider_str_processor(job):
         metadata = {'node_name':job[0]}
         node_name = job[0]
@@ -144,8 +160,12 @@ def get_scheme_actions():
     return initial_jobs             
 
 def main():
+    # Запускаем краулер
+    print 'Run crawler'
+    result_crawler = fake_crawler_one()
+    
     print 'Get task plan.'
-    jobs = get_scheme_actions()
+    jobs = get_scheme_actions_srt(result_crawler)
     map(printer, jobs)
 
     print 'Begin Map stage. Wait please...'
@@ -157,7 +177,9 @@ def main():
       
           
     # Reduce
+    result_reduce = {}
     for at in suffle_stage_results:
+        
         one_node = suffle_stage_results[at]
         
         # Проверка слияния
@@ -173,11 +195,38 @@ def main():
                 key=lambda record: record[0],
                 reverse=True) 
 
-        print src_list
+        result_reduce[at] = src_list
+
+    # Result MapReduce
+    json_result = json.dumps(result_reduce)
+    fname = 'indexes/first_index.json'
+    write_result_file([json_result], fname)
+    print json_result
+    
+    #map(printer, result_reduce.items())
 
 if __name__=='__main__':
     print 'Begin'
     main()
+    
+    
+  
+    """
+    double[] x = ...
+    double[] y = ...
+    
+    # create your PlotPanel (you can use it as a JPanel)
+    """
+    #plot = Plot2DPanel()
+    """
+    # add a line plot to the PlotPanel
+    plot.addLinePlot("my plot", x, y);
+    
+    # put the PlotPanel in a JFrame, as a JPanel
+    JFrame frame = new JFrame("a plot panel");
+    frame.setContentPane(plot);
+    frame.setVisible(true);"""
+  
     print 'Done'
     
     #print json.dumps(main)  # NO WAY
