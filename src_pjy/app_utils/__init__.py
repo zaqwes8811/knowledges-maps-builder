@@ -2,9 +2,22 @@
 import nltk.data
 import dals
 
-# coding: utf-8
+
+
 # Std
 import re
+import dals.os_io.io_wrapper as dal
+
+def write_result_file(result_list, fname):
+    sets = dal.get_utf8_template()
+    sets['howOpen'] = 'w'
+    sets['name'] = fname
+    dal.list2file(sets, result_list)
+    
+def read_utf_txt_file(fname):
+    sets = dal.get_utf8_template()
+    sets['name'] = fname
+    return dal.file2list(sets) 
 
 
 

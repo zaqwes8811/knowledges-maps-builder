@@ -38,6 +38,7 @@ def get_docs():
     index_file = 0
     result_ = []
     for txt_fname in list_targets:
+        print 'Process file:', txt_fname
         file_content_in_list = read_utf_txt_file(txt_fname)
         meta = file_content_in_list[0]
         content = file_content_in_list[1:]
