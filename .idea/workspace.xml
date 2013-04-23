@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestLuceneStemmer.java" afterPath="$PROJECT_DIR$/src/TestLuceneStemmer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/out.txt" afterPath="$PROJECT_DIR$/apps/out.txt" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +19,7 @@
     <file path="/IndexCursorFactory.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652383333" ignored="false" />
     <file path="/IndexCursor.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652746323" ignored="false" />
     <file path="$PROJECT_DIR$/src/business/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364711165357" ignored="false" />
-    <file path="/TestLuceneStemmer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366702876463" ignored="false" />
+    <file path="/TestLuceneStemmer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366703028169" ignored="false" />
     <file path="/tmp.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366695223929" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,13 +84,12 @@
       <file leaf-file-name="TestLuceneStemmer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="21" column="14" selection-start="712" selection-end="712" vertical-scroll-proportion="0.6307421">
               <folding>
-                <element signature="e#0#5070#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#2084#2138#0" expanded="true" />
-                <element signature="e#2266#2310#0" expanded="true" />
-                <element signature="e#3015#3032#0" expanded="true" />
+                <element signature="e#0#5164#0" expanded="true" />
+                <element signature="e#1846#1890#0" expanded="true" />
+                <element signature="e#2186#2240#0" expanded="true" />
+                <element signature="e#2947#2964#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -326,7 +325,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -342,7 +341,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10777958" sideWeight="0.7022539" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29774615" sideWeight="0.9889841" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29774615" sideWeight="0.9889841" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -414,24 +413,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#5070#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2084#2138#0" expanded="true" />
-            <element signature="e#2266#2310#0" expanded="true" />
-            <element signature="e#3015#3032#0" expanded="true" />
+            <element signature="e#0#5164#0" expanded="true" />
+            <element signature="e#1846#1890#0" expanded="true" />
+            <element signature="e#2186#2240#0" expanded="true" />
+            <element signature="e#2947#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="21" column="14" selection-start="712" selection-end="712" vertical-scroll-proportion="0.6307421">
           <folding>
-            <element signature="e#0#5070#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2084#2138#0" expanded="true" />
-            <element signature="e#2266#2310#0" expanded="true" />
-            <element signature="e#3015#3032#0" expanded="true" />
+            <element signature="e#0#5164#0" expanded="true" />
+            <element signature="e#1846#1890#0" expanded="true" />
+            <element signature="e#2186#2240#0" expanded="true" />
+            <element signature="e#2947#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -52,7 +52,10 @@ public class TestLuceneStemmer {
             BufferedReader in = new BufferedReader(
                     new FileReader("apps/indexes/first_index.json"));
             String s;
-            PrintWriter out = new PrintWriter("apps/out.txt");
+
+
+            HashMap<String, LinkedHashTreeMap<String, Integer>> result_collection =
+                    new HashMap<String, LinkedHashTreeMap<String, Integer>>();
             while ((s = in.readLine())!= null) {
 
                 Gson gson = new Gson();
@@ -62,8 +65,7 @@ public class TestLuceneStemmer {
                 HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>> collectionType =
                     new HashMap<String, ArrayList<LinkedHashTreeMap<Integer,String>>>();
 
-                HashMap<String, LinkedHashTreeMap<String, Integer>> result_collection =
-                        new HashMap<String, LinkedHashTreeMap<String, Integer>>();
+
                 //new Map<String, List<Map<Integer, String>>>();
                 HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>>  type =
                         gson.fromJson(s, collectionType.getClass());
@@ -107,9 +109,13 @@ public class TestLuceneStemmer {
 
 
                 // Пишем результат
-                //out.println(word);
+
             }
-            //out.close();
+            Gson gson = new Gson();
+            String json_index = gson.toJson(result_collection);
+            PrintWriter out = new PrintWriter("apps/out.txt");
+            out.println(json_index);
+            out.close();
 
 
             /*word = "смотрим";
