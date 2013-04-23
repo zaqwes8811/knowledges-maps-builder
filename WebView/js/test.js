@@ -30,10 +30,12 @@ function get_one_line(json_string, result_axises, legend) {
           g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+axis_map[j][1]+'/'+tmp[1]
 
           result_axises.push(tmp);
+          if (j > 750) break;
         }
 
         result = {data: result_axises, label: legend}
         summary.push(result)
+        break;
     }
 
     return summary
