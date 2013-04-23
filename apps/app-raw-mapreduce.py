@@ -28,24 +28,30 @@ def printer(item):
     
 def main():
     # Запускаем краулер
+    print
     print 'Run crawler'
     #result_crawler = docs_spider.get_docs()#fake_crawler_one()
     
+    print
     print 'Get task plan.'
     jobs = docs_spider.get_docs()#get_scheme_actions_srt(result_crawler)
     print 
     print 'Jobs'
     map(printer, jobs)
 
+    print
     print 'Begin Map stage. Wait please...'
     map_stage_results = map(mapper, jobs)
     
     # Suffle stage
+    print
     print 'Begin Suffle stage. Wait please...'
     suffle_stage_results = suffler(map_stage_results)
       
           
     # Reduce
+    print
+    print 'Begin reduce stage...'
     result_reduce = {}
     for at in suffle_stage_results:
         
