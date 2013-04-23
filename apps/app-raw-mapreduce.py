@@ -196,8 +196,10 @@ def main():
                 axises, 
                 key=lambda record: record[0],
                 reverse=True) 
-
-        result_reduce[at] = src_list
+        tmp = []
+        for it in src_list:
+            tmp.append({it[0]: it[1]})
+        result_reduce[at] = tmp
 
     # Result MapReduce
     json_result = json.dumps(result_reduce)

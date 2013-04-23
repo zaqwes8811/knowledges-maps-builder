@@ -16,9 +16,12 @@ def read_utf_txt_file(fname):
 
 string = 'смотрела'
 
-result = read_utf_txt_file('../tmp.txt')
-write_result_file(result, '../tmp2.txt')
+result = read_utf_txt_file('tmp.txt')
+write_result_file(result, 'tmp2.txt')
 
 stemmer = TestLuceneStemmer()
-stemmer.stem('../tmp.txt')
+stemmer.stem('tmp.txt')
+
+from subprocess import call
+call(["java", "TestLuceneStemmer"])
 print 'Done'

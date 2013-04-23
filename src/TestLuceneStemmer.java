@@ -18,10 +18,13 @@ import org.apache.lucene.analysis.ru.RussianLightStemmer;     */
 
 import org.tartarus.snowball.ext.russianStemmer;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOError;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gson.Gson;
 
 public class TestLuceneStemmer {
     public String stem(String fname) {
@@ -45,16 +48,35 @@ public class TestLuceneStemmer {
     }
     public static void main(String[] args) {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("tmp2.txt"));
+            BufferedReader in = new BufferedReader(
+                    new FileReader("apps/indexes/first_index.json"));
             String s;
+            PrintWriter out = new PrintWriter("apps/out.txt");
             while ((s = in.readLine())!= null) {
-                //System.out.println(s);
                 String word = s;
+                System.out.println(s);
                 russianStemmer rs_new = new russianStemmer();
                 rs_new.setCurrent(word);
                 rs_new.stem();
-                System.out.println(rs_new.getCurrent());
+                String result = rs_new.getCurrent();
+
+                Gson gson = new Gson();
+
+
+                //System.out.println(gson.fromJson(result, List.class));
+                HashMap<String, ArrayList<HashMap<Integer, String>>> collectionType =
+                    new HashMap<String, ArrayList<HashMap<Integer,String>>>();
+                //new Map<String, List<Map<Integer, String>>>();
+                Map<String, List<Map<Integer, String>>> type =
+                        gson.fromJson(result, collectionType.getClass());
+
+                // Можно обрабатывать
+                System.out.println(type);
+
+                // Пишем результат
+                //out.println(word);
             }
+            //out.close();
 
 
             /*word = "смотрим";
