@@ -6,15 +6,12 @@
 '''
 
 # Other
-#from org.math.plot import *
 import json
 
 # App
 from MapReduce.mappers import mapper
-from MapReduce.mappers import mapper_real
 from MapReduce.sufflers import suffler
 from MapReduce.reduces import base_reducer 
-from MapReduce.reduces import base_merge
 
 # Преобразователи ресурса в текст
 import spiders_processors.docs_spider as docs_spider
