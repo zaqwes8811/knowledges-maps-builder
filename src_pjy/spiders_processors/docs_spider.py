@@ -44,11 +44,11 @@ def get_docs():
         content = file_content_in_list[1:]
         
         node_name = txt_fname.split('/')[-1]+'_N'
-        print node_name
+        #print node_name
         meta_info = json.loads(meta)
         meta_info['node_name'] = node_name
         meta = json.dumps(meta_info)
-        print meta
+        #print meta
         
         # Пишем заголовок
         result =[meta, '']

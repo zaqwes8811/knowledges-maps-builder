@@ -33,6 +33,8 @@ def main():
     
     print 'Get task plan.'
     jobs = docs_spider.get_docs()#get_scheme_actions_srt(result_crawler)
+    print 
+    print 'Jobs'
     map(printer, jobs)
 
     print 'Begin Map stage. Wait please...'
