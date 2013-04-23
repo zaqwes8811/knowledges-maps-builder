@@ -38,8 +38,9 @@ def merge(A, B):
 
 def base_merge(A, B):
     """ [{index}, [count_sents, summ_sents_len], url] """
+    #print A[1], B[1]
+    #asfdasd
     for at in A[0][0]:
-        #print at
         try:
             B[0][0][at]['N'] += A[0][0][at]['N']
             for iat in A[0][0][at]['S']:

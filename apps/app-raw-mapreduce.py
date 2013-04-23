@@ -32,6 +32,7 @@ def main():
     print
     print 'Get task plan.'
     jobs = docs_spider.get_docs()#get_scheme_actions_srt(result_crawler)
+    #jobs = [jobs[0]]
     print 
     print 'Jobs'
     map(printer, jobs)
@@ -55,6 +56,9 @@ def main():
         one_node = suffle_stage_results[at]
         
         # Проверка слияния
+        print at
+        print '  Средняя длина предложения (Оценка Sent_Mean):',one_node[0][1][1]*1.0/one_node[0][1][0]/1.5, 'слов'
+            
         result = base_reducer(one_node)
         
         node_index = result[0][0]
