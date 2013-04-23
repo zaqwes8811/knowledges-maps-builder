@@ -18,23 +18,53 @@ import org.apache.lucene.analysis.ru.RussianLightStemmer;     */
 
 import org.tartarus.snowball.ext.russianStemmer;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOError;
+import java.io.IOException;
 
 public class TestLuceneStemmer {
+    public String stem(String fname) {
+        try {
+            BufferedReader in = new BufferedReader(new FileReader(fname));
+            String s;
+            while ((s = in.readLine())!= null) {
+                String word = s;
+                russianStemmer rs_new = new russianStemmer();
+                rs_new.setCurrent(word);
+                rs_new.stem();
+                System.out.println(rs_new.getCurrent());
+            }
+        } catch (IOError e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "Test return";
+
+    }
     public static void main(String[] args) {
         try {
-            String word = "смотрела";
-            russianStemmer rs_new = new russianStemmer();
-            rs_new.setCurrent(word);
-            rs_new.stem();
-            System.out.println(rs_new.getCurrent());
+            BufferedReader in = new BufferedReader(new FileReader("tmp2.txt"));
+            String s;
+            while ((s = in.readLine())!= null) {
+                //System.out.println(s);
+                String word = s;
+                russianStemmer rs_new = new russianStemmer();
+                rs_new.setCurrent(word);
+                rs_new.stem();
+                System.out.println(rs_new.getCurrent());
+            }
 
-            word = "смотрим";
+
+            /*word = "смотрим";
             rs_new.setCurrent(word);
             rs_new.stem();
-            System.out.println(rs_new.getCurrent());
+            System.out.println(rs_new.getCurrent());  */
         } catch (IOError e) {
-            e.getStackTrace();
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
