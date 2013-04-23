@@ -12,7 +12,6 @@ import json
 from app_utils import remove_forward_and_back_spaces
 from app_utils import remove_fandb_spaces_in_tuple
 
-
 def _parse_target_params(str_params):
     rpt = []
     if str_params.count('[') != str_params.count(']'):
