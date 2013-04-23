@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0197dd94-c86c-4eda-9572-70ae379b6ccd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/index.html" afterPath="$PROJECT_DIR$/WebView/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/js/test.js" afterPath="$PROJECT_DIR$/WebView/js/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366703361390" ignored="false" />
-    <file path="/test.js" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366704880406" ignored="false" />
+    <file path="/test.js" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366705687037" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="105902" selection-end="105902" vertical-scroll-proportion="0.31637716">
+            <state line="37" column="28" selection-start="106429" selection-end="106429" vertical-scroll-proportion="0.780397">
               <folding />
             </state>
           </provider>
@@ -396,7 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="105902" selection-end="105902" vertical-scroll-proportion="0.31637716">
+        <state line="37" column="28" selection-start="106429" selection-end="106429" vertical-scroll-proportion="0.780397">
           <folding />
         </state>
       </provider>

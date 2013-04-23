@@ -4,23 +4,41 @@ var json_string = '{"Государственная пошлина.pdf.txt_N":{"
 var getted_axises = $.parseJSON(json_string);
 var result_axises = [];
 var jjjj = 0;
+var axis_map = []
 for(var node_name in getted_axises) {
   if (getted_axises.hasOwnProperty(node_name)) {
         var node_name_value =  getted_axises[node_name];
         for(var word in node_name_value) {
           if (node_name_value.hasOwnProperty(word)) {
+          var obj = {};
+            obj[word] = node_name_value[word];
                var tmp = [];
                tmp.push(jjjj);
                tmp.push(node_name_value[word]);
                result_axises.push(tmp);
                jjjj++;
+               axis_map.push(obj);
           }
         }
   }
   //g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
   break;
 }
-alert(getted_axises);
+
+axis_map.sort(
+    function(a, b){
+    var value0;
+    for(var node_name in a) if (a.hasOwnProperty(node_name)){
+       value0 = a[node_name];
+    }
+    var value1;
+        for(var node_name in b) if (b.hasOwnProperty(node_name)){
+           value1 = b[node_name];
+        }
+        return value1-value0;
+    }
+);
+//alert(getted_axises);
 
 $(function() {
   function showTooltip(x, y, contents) {
