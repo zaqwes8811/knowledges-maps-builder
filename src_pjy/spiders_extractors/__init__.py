@@ -11,14 +11,14 @@ import dals.os_io.io_wrapper as dal
 # App
 import crosscuttings.tools as tools
 from crosscuttings.tools import get_app_cfg_by_path
-from spiders._utils import _parse_target_params
+from spiders_extractors._utils import _parse_target_params
 from app_utils import remove_forward_and_back_spaces
-from spiders._utils import get_node_name
-from spiders._utils import is_node
+from spiders_extractors._utils import get_node_name
+from spiders_extractors._utils import is_node
 
 # Convertors but how custome 
-from std_to_text_convertors.srt_to_text import std_srt_to_text_line
-from std_to_text_convertors import get_call_map
+from spiders_processors.std_to_text_convertors.srt_to_text import std_srt_to_text_line
+from spiders_processors.std_to_text_convertors import get_call_map
 # std_to_text_map =
 # custom_to_text_map =
 

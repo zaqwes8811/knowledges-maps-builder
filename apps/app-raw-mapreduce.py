@@ -25,7 +25,7 @@ import org.apache.tika.language.ProfilingWriter as ProfilingWriter
 
 
 # Преобразователи ресурса в текст
-from std_to_text_convertors.srt_to_text import std_srt_to_text_line
+from spiders_processors.std_to_text_convertors.srt_to_text import std_srt_to_text_line
 from dals.os_io.io_wrapper import list2file
 from dals.os_io.io_wrapper import get_utf8_template
 import dals.os_io.io_wrapper as dal

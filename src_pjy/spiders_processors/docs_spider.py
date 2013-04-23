@@ -11,9 +11,9 @@ import java.util.Locale as Locale
 import java.lang.System as System
 
 # App
-from to_text.tika_wrapper import read_utf_txt_file
-from to_text.tika_wrapper import write_result_file
-from to_text.tika_wrapper import printer
+from spiders_extractors.tika_wrapper import read_utf_txt_file
+from spiders_extractors.tika_wrapper import write_result_file
+from spiders_extractors.tika_wrapper import printer
 
 def split_to_sentents(text_list, result_list):
     text = ' '.join(text_list)

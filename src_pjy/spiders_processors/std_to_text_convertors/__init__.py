@@ -2,8 +2,8 @@
 
 from crosscuttings.tools import get_app_cfg_by_path
 
-from custom_to_text_convertors import *
-from std_to_text_convertors.srt_to_text import *
+from spiders_processors.custom_to_text_convertors import *
+from spiders_processors.std_to_text_convertors.srt_to_text import *
 
 _std_convertors_map = {'std_srt_to_text_line': std_srt_to_text_line}
 
