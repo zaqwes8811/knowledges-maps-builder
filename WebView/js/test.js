@@ -5,39 +5,33 @@ var getted_axises = $.parseJSON(json_string);
 var result_axises = [];
 var jjjj = 0;
 var axis_map = []
-for(var node_name in getted_axises) {
-  if (getted_axises.hasOwnProperty(node_name)) {
-        var node_name_value =  getted_axises[node_name];
-        for(var word in node_name_value) {
-          if (node_name_value.hasOwnProperty(word)) {
-          var obj = {};
-            obj[word] = node_name_value[word];
-               var tmp = [];
-               tmp.push(jjjj);
-               tmp.push(node_name_value[word]);
-               result_axises.push(tmp);
-               jjjj++;
-               axis_map.push(obj);
-          }
-        }
-  }
-  //g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
+var g_map = {}
+var legend;
+for(var node_name in getted_axises) if (getted_axises.hasOwnProperty(node_name)) {
+    var node_name_value =  getted_axises[node_name];
+    legend =  node_name;
+    for(var word in node_name_value) if (node_name_value.hasOwnProperty(word)) {
+        var obj = [node_name_value[word], word];
+        axis_map.push(obj);
+    }
+
   break;
 }
 
 axis_map.sort(
     function(a, b){
-    var value0;
-    for(var node_name in a) if (a.hasOwnProperty(node_name)){
-       value0 = a[node_name];
-    }
-    var value1;
-        for(var node_name in b) if (b.hasOwnProperty(node_name)){
-           value1 = b[node_name];
-        }
-        return value1-value0;
+        return b[0]-a[0];
     }
 );
+
+for(var j = 0; j < axis_map.length; j++) {
+  var tmp = [];
+  tmp.push(j);
+  tmp.push(axis_map[j][0]);
+  g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+axis_map[j][1]+'/'+tmp[1]
+
+  result_axises.push(tmp);
+}
 //alert(getted_axises);
 
 $(function() {
@@ -102,7 +96,7 @@ function get_data() {
     });  */
 }
 
-var g_map = {}
+
 
 function process_response(data) {
 
@@ -136,7 +130,7 @@ function process_response(data) {
 
   // Функция рисования
   try {
-  var plot = $.plot("#placeholder", [{ data: result_axises, label: "uniform(x)"}], {
+  var plot = $.plot("#placeholder", [{ data: result_axises, label: legend}], {
     series: {
       lines: {show: true},
       points: {show: false}

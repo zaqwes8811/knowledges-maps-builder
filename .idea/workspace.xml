@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0197dd94-c86c-4eda-9572-70ae379b6ccd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/index.html" afterPath="$PROJECT_DIR$/WebView/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/js/test.js" afterPath="$PROJECT_DIR$/WebView/js/test.js" />
     </list>
     <ignored path="content-translate-assistant.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366703361390" ignored="false" />
-    <file path="/test.js" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366705687037" ignored="false" />
+    <file path="/test.js" changelist="0197dd94-c86c-4eda-9572-70ae379b6ccd" time="1366706560901" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebView/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="27" selection-start="802" selection-end="802" vertical-scroll-proportion="-8.5">
+            <state line="167" column="18" selection-start="11290" selection-end="11290" vertical-scroll-proportion="0.73846155">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -88,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="28" selection-start="106429" selection-end="106429" vertical-scroll-proportion="0.780397">
+            <state line="139" column="30" selection-start="108860" selection-end="108860" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,8 +116,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/WebView/index.html" />
         <option value="$PROJECT_DIR$/WebView/js/test.js" />
+        <option value="$PROJECT_DIR$/WebView/index.html" />
       </list>
     </option>
   </component>
@@ -372,9 +373,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="30" selection-start="108860" selection-end="108860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebView/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="802" selection-end="802" vertical-scroll-proportion="-8.5">
+        <state line="167" column="18" selection-start="11290" selection-end="11290" vertical-scroll-proportion="0.73846155">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -389,13 +397,6 @@
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="106429" selection-end="106429" vertical-scroll-proportion="0.780397">
-          <folding />
         </state>
       </provider>
     </entry>
