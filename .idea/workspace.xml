@@ -19,7 +19,7 @@
     <file path="/IndexCursorFactory.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652383333" ignored="false" />
     <file path="/IndexCursor.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652746323" ignored="false" />
     <file path="$PROJECT_DIR$/src/business/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364711165357" ignored="false" />
-    <file path="/TestLuceneStemmer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366700931396" ignored="false" />
+    <file path="/TestLuceneStemmer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366702876463" ignored="false" />
     <file path="/tmp.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366695223929" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,9 +86,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#4478#0" expanded="true" />
+                <element signature="e#0#5070#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2354#2408#0" expanded="true" />
+                <element signature="e#2084#2138#0" expanded="true" />
+                <element signature="e#2266#2310#0" expanded="true" />
+                <element signature="e#3015#3032#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,9 +134,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="233" />
-    <option name="width" value="916" />
-    <option name="height" value="984" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -322,24 +325,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="233" y="0" width="916" height="984" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32648125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31801692" sideWeight="0.9977503" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31791222" sideWeight="0.9977503" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1557377" sideWeight="0.6952842" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30471584" sideWeight="0.9889841" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10777958" sideWeight="0.7022539" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29774615" sideWeight="0.9889841" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -411,9 +414,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#4478#0" expanded="true" />
+            <element signature="e#0#5070#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#2354#2408#0" expanded="true" />
+            <element signature="e#2084#2138#0" expanded="true" />
+            <element signature="e#2266#2310#0" expanded="true" />
+            <element signature="e#3015#3032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,9 +427,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#4478#0" expanded="true" />
+            <element signature="e#0#5070#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#2354#2408#0" expanded="true" />
+            <element signature="e#2084#2138#0" expanded="true" />
+            <element signature="e#2266#2310#0" expanded="true" />
+            <element signature="e#3015#3032#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -54,12 +54,6 @@ public class TestLuceneStemmer {
             String s;
             PrintWriter out = new PrintWriter("apps/out.txt");
             while ((s = in.readLine())!= null) {
-                /*String word = s;
-                //System.out.println(s);
-                russianStemmer rs_new = new russianStemmer();
-                rs_new.setCurrent(word);
-                rs_new.stem();
-                String result = rs_new.getCurrent();     */
 
                 Gson gson = new Gson();
 
@@ -67,40 +61,50 @@ public class TestLuceneStemmer {
                 //System.out.println(gson.fromJson(result, List.class));
                 HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>> collectionType =
                     new HashMap<String, ArrayList<LinkedHashTreeMap<Integer,String>>>();
+
+                HashMap<String, LinkedHashTreeMap<String, Integer>> result_collection =
+                        new HashMap<String, LinkedHashTreeMap<String, Integer>>();
                 //new Map<String, List<Map<Integer, String>>>();
                 HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>>  type =
                         gson.fromJson(s, collectionType.getClass());
 
                 // Можно обрабатывать
-                //System.out.println(type);
-                //for(String str: type.keySet()) {
-                //    System.out.println(type[str]);
-                //}
 
                 for (Map.Entry<String, ArrayList<LinkedHashTreeMap<Integer, String>>> entry : type.entrySet()) {
+                    String node_name = entry.getKey();
                     ArrayList<LinkedHashTreeMap<Integer, String>> value = entry.getValue();
-                    System.out.println(value);
+                    System.out.println("src: "+value.size());
+                    LinkedHashTreeMap<String, Integer> result_list = new
+                            LinkedHashTreeMap<String, Integer>();
+                    //System.out.println(value);
+                    result_collection.put(node_name, result_list);
                     int len = value.size();
                     for(int i = 0; i < len; ++i) {
                         LinkedHashTreeMap<Integer, String> wordTuple = value.get(i);
-                        //System.out.println(wordTuple);
                         // Слова
                         for (Map.Entry<Integer, String> entry_word : wordTuple.entrySet()) {
+                            Object count = entry_word.getKey();
                             String wordOne = entry_word.getValue();
-
                             String word = wordOne;
-                            //System.out.println(s);
                             russianStemmer rs_new = new russianStemmer();
                             rs_new.setCurrent(word);
                             rs_new.stem();
                             String result = rs_new.getCurrent();
 
-                            System.out.println(result);
+                            //System.out.println(result);
+                            if (result_collection.get(node_name).containsKey(result)) {
+                                Integer addValue = Integer.parseInt((String)count);
+                                result_collection.get(node_name).put(result, result_collection.get(node_name).get(result)+addValue);
+                            } else {
+                                result_collection.get(node_name).put(result, Integer.parseInt((String)count));
+                            }
                         }
                     }
-                    break;
+                    System.out.println("result: "+result_collection.get(node_name).size());
+                    //break;
                     // Do things with the list
                 }
+
 
                 // Пишем результат
                 //out.println(word);
