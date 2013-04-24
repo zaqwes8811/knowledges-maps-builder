@@ -32,6 +32,8 @@ def process_list_content_sentences(list_s_sentences, lang):#void
                 one_node_hash[key_name]['N'] = 1
                 one_node_hash[key_name]['S'] = []  # Не сереализутеся
                 one_node_hash[key_name]['S'].append(at)
+                return True
+            return False
         
         def edit_exist_node(key_name):
             one_node_hash[key_name]['N'] += 1
@@ -40,11 +42,12 @@ def process_list_content_sentences(list_s_sentences, lang):#void
                 
         # Сама обработка   
         if sentence:
+            len_one_sent = 0
             pure_sentence = _purge_one_sentence(sentence)
 
             # Лексические единицы одного предложения
             set_words = simple_word_splitter(pure_sentence)
-            summ_sents_len += len(set_words)
+            
             
             for at in set_words:
                 if at != ' ' and at:
@@ -54,11 +57,16 @@ def process_list_content_sentences(list_s_sentences, lang):#void
                         #print 'en'
                     else:
                         compressed_key = fake_compressor(at)
-                    #
+                    # Уже включен
                     if compressed_key in one_node_hash:
-                        edit_exist_node(compressed_key)
+                        added = edit_exist_node(compressed_key)
+                        if added:
+                            len_one_sent += 1
                     else:
                         add_new_record(compressed_key)
+                        len_one_sent += 1
+                        
+            summ_sents_len += len_one_sent
                                        
     return one_node_hash, (count_sents, summ_sents_len)
 

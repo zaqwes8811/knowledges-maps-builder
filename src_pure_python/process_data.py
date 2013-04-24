@@ -7,7 +7,7 @@ Created on 22.04.2013
 import json
 import dals.os_io.io_wrapper as dal
 
-from pylab import *
+#from pylab import *
 
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
@@ -22,9 +22,19 @@ def read_utf_txt_file(fname):
 
 if __name__=='__main__':
     fname = '../apps/out.txt'
+    
+    Sent_Mean = [13.4729808251 ,
+                17.6414814815 ,
+                16.3385826772 ,
+                18.2022900763 ,
+                10.7733674776 ,
+                15.4782608696 ]
+    notes = []
+    
     data = read_utf_txt_file(fname)
     data_for_processing = json.loads(data[0])
     
+    i = 0
     for node in data_for_processing:
         list_for_sort = []
         node_data = data_for_processing[node]
@@ -51,13 +61,16 @@ if __name__=='__main__':
             #if partina_summ > 0.8*summ_words:
             #    break
             
-        print 'Уникальных слов в индексе: ', len(list_for_sort)
+        """print 'Уникальных слов в индексе: ', len(list_for_sort)
         print 'Отобрано Оценка High (20% числа уникальных слов): ', index
         print 'Отбошено Оценка Low (80% числа уникальных слов): ', len(list_for_sort)-index
         print 'Они составляют 80% И 20% от общего числа слов в частотном индексе: ', partina_summ
         print 'Сумма всех частот в индексе - число рассматрив. слов в тексте 100%:', summ_words
-        print
+        print"""
         
+        notes.append((Sent_Mean[i], index, len(list_for_sort)-index))
+
+        i += 1        
         """def get_y_axis(data):
             y = []
             for it in data:
@@ -68,6 +81,20 @@ if __name__=='__main__':
         print y_axis
         p, = plot(x, y_axis)#, label='Node name : '+at)
         """
+     
+    base_note =  notes[0] 
+    k1, k2, k3 = (1,2,1)
+    print 'k_i', k1, k2, k3
+    print "Sent_mean,", 'High,', 'Low,', 'Сomplex note' 
+    for note in notes:
+        sent_mean = int(note[0]/base_note[0]*1000)*1.0/1000
+        high = int(note[1]*1.0/base_note[1]*1000)*1.0/1000
+        low = int(1.0*note[2]/base_note[2]*1000)*1.0/1000
+        complex_note = sent_mean*k1+high*k2+low*k3      
+        print sent_mean, ',', high, ',',low, ',',complex_note
+        
+        
+        
     #legend( loc='upper left' )
         
     #ylabel('The number of mentions of the word')

@@ -51,15 +51,18 @@ def main():
     print
     print 'Begin reduce stage...'
     result_reduce = {}
+    resultttt = []
     for at in suffle_stage_results:
         
         one_node = suffle_stage_results[at]
         
         # Проверка слияния
         print at
-        print '  Средняя длина предложения (Оценка Sent_Mean):',one_node[0][1][1]*1.0/one_node[0][1][0]/1.5, 'слов'
+        print '  Средняя длина предложения (Оценка Sent_Mean):',one_node[0][1][1]*1.0/one_node[0][1][0], 'слов'
             
         result = base_reducer(one_node)
+        
+        resultttt.append(one_node[0][1][1]*1.0/one_node[0][1][0])
         
         node_index = result[0][0]
         axises = []
@@ -81,7 +84,8 @@ def main():
     write_result_file([json_result], fname)
     #print json_result
     
-    #map(printer, result_reduce.items())
+    for at in resultttt:
+        print at, ','
 
 if __name__=='__main__':
     print 'Begin'
