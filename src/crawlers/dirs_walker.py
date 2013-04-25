@@ -59,9 +59,11 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
                                     bResult = False
                             
                         if bResult:
-                            slash = '\\'
+                            slash = '/'
                             full_path = root+slash+name
-                            result_list.append(unicode(str(unicode(str(full_path), 'cp1251')), 'utf8'))
+                            full_path = unicode(str(unicode(str(full_path), 'cp1251')), 'utf8')
+                            full_path = full_path.replace('\\','/')
+                            result_list.append(full_path)
     except CrawlerException as e:
         return None, (1, str(e))
 
@@ -73,7 +75,8 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
 """ How use it """
 if __name__ == '__main__':
     root = 'D:/doc_pdf_odt'
-    extension_list = ['pdf']
+    root = 'D:/Dropbox'
+    extension_list = ['doc', 'odt']
     
     # поиск
     result_list, err = find_files_down_tree(root, extension_list)
