@@ -2,19 +2,32 @@
 """ Нужно получить все
     
     thinks : walk and regex
+    
+    http://docs.python.org/2/tutorial/errors.html
 """
 import os
 slash = '\\'
- 
 
-def _check_extension(string, list_of_extension, listOfIgnoreExtention):
-    """ может быть ошибка, хотя маловероятна. Точка вероятность повышает """
-    for k in list_of_extension:
+import sys, traceback
+ 
+class CrawlerException(Exception):
+    def __init__(self, value):
+        self.value = value
+        
+    def __str__(self):
+        return str(self.value)
+
+def _check_extension(string, extension_list, ignored_extentions):
+    """ может быть ошибка, хотя маловероятна. Точка вероятность повышает 
+    
+    TODO(zaqwes): проверка заперщенных расширений
+    """
+    for k in extension_list:
         if '.'+k == string[-len(k)-1:].lower():
             return True
     return False
 
-def find_files_down_tree_PC(head, list_of_extension, ignoreDictOfLists):
+def find_files_down_tree(root, extension_list, ignored_extentions=None, ignored_dirs=None):
     """ Получить список файлов заданных типов с полными путями
 
     Args:
@@ -29,73 +42,56 @@ def find_files_down_tree_PC(head, list_of_extension, ignoreDictOfLists):
             принимать из функции два значения
     """
     
-    def on_error_walk(err):
-        """ Error handler """
-        print err
-        
+    def on_error_walk(err):      
         # TODO: сделать свой класс обработки ошибок
-        raise OSError
+        raise CrawlerException(err)
     
-    resultList = list('')
-    msg = ''
+    result_list = list('')
     # получаем объект для обхода
     # Если корня нет исключение генерируется при доступе
     try:
-        gettedList = os.walk(head, onerror=on_error_walk)
-        for root, dirs, files in gettedList:
-            for name in files:
-                if _check_extension(name, list_of_extension, ignoreDictOfLists['Extentions']):
-                    bResult = True
-                    if ignoreDictOfLists['Dirs']:
-                        for it in ignoreDictOfLists['Dirs']:
-                            if it in root:
-                                bResult = False
-                        
-                    if bResult:
-                        resultList.append(root+slash+name)
-    except OSError:
-        msg = 'OSError on dir walk.'
-        return None, msg
+        getted_list = os.walk(root, onerror=on_error_walk)
+        for root, dirs, files in getted_list:
+            if files:
+                for name in files:
+                    if _check_extension(name, extension_list, ignored_extentions):
+                        bResult = True
+                        if ignored_dirs:
+                            for it in ignored_dirs:
+                                if it in root:
+                                    bResult = False
+                            
+                        if bResult:
+                            result_list.append(root+slash+name)
+    except CrawlerException as e:
+        return None, (1, str(e))
 
     # возвращаем что насобирали
-    return resultList, msg    # может в питоне и нече, но вообеще-то...?
+    return result_list, (0, '')    # может в питоне и нече, но вообеще-то...?
         # вобщем нужно подумать над обработкой ошибок
 
-""" Mapping """
-find_files_down_tree_ = find_files_down_tree_PC    # поиск по обычному компьютеру
-
-def get_template():
-    head = 'head'
-    list_of_extension = ['']
-    
-    # Ignore
-    listOfIgnoreExtention = []
-    listOfIgnoreDirectories = []
-    ignoreDictOfLists = {}
-    ignoreDictOfLists['Extentions'] = listOfIgnoreExtention
-    ignoreDictOfLists['Dirs'] = listOfIgnoreDirectories
-    
-    return list_of_extension, ignoreDictOfLists
 
 """ How use it """
 if __name__ == '__main__':
-    head = 'tmp'
-    list_of_extension = ['py']
+    root = 'ds'
+    extension_list = ['py']
     
     # Ignore
-    listOfIgnoreExtention = [ 'pyc' ]
-    listOfIgnoreDirectories = list('')
-    ignoreDictOfLists = {}
-    ignoreDictOfLists[ 'Extentions' ] = listOfIgnoreExtention
-    ignoreDictOfLists[ 'Dirs' ] = listOfIgnoreDirectories
+    ignore_extentions = ['pyc']
     
     # поиск
-    resultList, msg = find_files_down_tree_(head, list_of_extension, ignoreDictOfLists)
+    result_list, err = find_files_down_tree(root, extension_list)
+    print unicode(str(unicode(str(err[1]), 'cp1251')), 'utf8')
     
+    def printer(msg):
+        print msg
+
+        
     # список получен, можно его обработать
     # в принципе можно передать указатель на функцию обработки
-    for at in resultList:
-        print at
+    #map(printer, result_list)
+    
+    print 'Done'
 
 
 
