@@ -6,9 +6,6 @@
     http://docs.python.org/2/tutorial/errors.html
 """
 import os
-slash = '\\'
-
-import sys, traceback
  
 class CrawlerException(Exception):
     def __init__(self, value):
@@ -17,7 +14,7 @@ class CrawlerException(Exception):
     def __str__(self):
         return str(self.value)
 
-def _check_extension(string, extension_list, ignored_extentions):
+def _check_extension(string, extension_list):
     """ может быть ошибка, хотя маловероятна. Точка вероятность повышает 
     
     TODO(zaqwes): проверка заперщенных расширений
@@ -27,7 +24,7 @@ def _check_extension(string, extension_list, ignored_extentions):
             return True
     return False
 
-def find_files_down_tree(root, extension_list, ignored_extentions=None, ignored_dirs=None):
+def find_files_down_tree(root, extension_list, ignored_dirs=None):
     """ Получить список файлов заданных типов с полными путями
 
     Args:
@@ -54,7 +51,7 @@ def find_files_down_tree(root, extension_list, ignored_extentions=None, ignored_
         for root, dirs, files in getted_list:
             if files:
                 for name in files:
-                    if _check_extension(name, extension_list, ignored_extentions):
+                    if _check_extension(name, extension_list):
                         bResult = True
                         if ignored_dirs:
                             for it in ignored_dirs:
@@ -62,7 +59,9 @@ def find_files_down_tree(root, extension_list, ignored_extentions=None, ignored_
                                     bResult = False
                             
                         if bResult:
-                            result_list.append(root+slash+name)
+                            slash = '\\'
+                            full_path = root+slash+name
+                            result_list.append(unicode(str(unicode(str(full_path), 'cp1251')), 'utf8'))
     except CrawlerException as e:
         return None, (1, str(e))
 
@@ -73,23 +72,16 @@ def find_files_down_tree(root, extension_list, ignored_extentions=None, ignored_
 
 """ How use it """
 if __name__ == '__main__':
-    root = 'ds'
-    extension_list = ['py']
-    
-    # Ignore
-    ignore_extentions = ['pyc']
+    root = 'D:/doc_pdf_odt'
+    extension_list = ['pdf']
     
     # поиск
     result_list, err = find_files_down_tree(root, extension_list)
-    print unicode(str(unicode(str(err[1]), 'cp1251')), 'utf8')
     
     def printer(msg):
         print msg
 
-        
-    # список получен, можно его обработать
-    # в принципе можно передать указатель на функцию обработки
-    #map(printer, result_list)
+    map(printer, result_list)
     
     print 'Done'
 
