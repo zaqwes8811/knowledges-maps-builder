@@ -19,7 +19,13 @@ def _check_extension(string, extension_list):
     
     TODO(zaqwes): проверка заперщенных расширений
     """
+    if not extension_list:
+        raise CrawlerException('Error: List extentions is empty.')
+    
     for k in extension_list:
+        if not k:
+            raise CrawlerException('Error: Extention is empty.')
+        
         if '.'+k == string[-len(k)-1:].lower():
             return True
     return False
@@ -28,13 +34,12 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
     """ Получить список файлов заданных типов с полными путями
 
     Args:
-        ignoreList
-            1. пути - папки
-            2. расширения, которые похожи на разрешенные
-            3. целые файлы (с путем(1 шт) и без(может быть много))
-            4. регулярные выражения - подстроки
+        1. пути - папки
+        2. расширения, которые похожи на разрешенные
+        3. целые файлы (с путем(1 шт) и без(может быть много))
+        4. регулярные выражения - подстроки
         
-    troubles testing :
+    Troubles:
         разные типы данных - возвр. знач. и сообщение - но нужно 
             принимать из функции два значения
     """
@@ -52,13 +57,13 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
             if files:
                 for name in files:
                     if _check_extension(name, extension_list):
-                        bResult = True
+                        path_enabled = True
                         if ignored_dirs:
                             for it in ignored_dirs:
                                 if it in root:
-                                    bResult = False
+                                    path_enabled = False
                             
-                        if bResult:
+                        if path_enabled:
                             slash = '/'
                             full_path = root+slash+name
                             full_path = unicode(str(unicode(str(full_path), 'cp1251')), 'utf8')
@@ -74,18 +79,24 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
 
 """ How use it """
 if __name__ == '__main__':
-    root = 'D:/doc_pdf_odt'
-    root = 'D:/Dropbox'
-    extension_list = ['doc', 'odt']
-    
-    # поиск
-    result_list, err = find_files_down_tree(root, extension_list)
-    
-    def printer(msg):
-        print msg
+    def main():
+        root = 'D:/doc_pdf_odt'
+        #root = 'D:/Dropbox'
+        extension_list = ['doc', 'odt']
+        
+        # поиск
+        result_list, err = find_files_down_tree(root, extension_list)
+        if err[0]:
+            print err[1]
+            return
 
-    map(printer, result_list)
+        def printer(msg):
+            print '['+msg.split('/')[-1]+']'
+            print msg
     
+        map(printer, result_list)
+    
+    main()
     print 'Done'
 
 
