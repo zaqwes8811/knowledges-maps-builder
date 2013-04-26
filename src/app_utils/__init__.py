@@ -1,12 +1,12 @@
 # coding: utf-8
-import nltk.data
-import dals
-
 
 
 # Std
 import re
-import dals.os_io.io_wrapper as dal
+
+# Other
+import dals
+import dals.local_host.local_host_io_wrapper as dal
 
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
@@ -46,8 +46,8 @@ if __name__=='__main__':
     #nltk.download()
     
      
-    tokenizer = nltk.data.load('nltk:tokenizers/punkt/english.pickle')
-    tokenizer.tokenize('Hello.  This is a test.  It works!')
+    #tokenizer = nltk.data.load('nltk:tokenizers/punkt/english.pickle')
+    #tokenizer.tokenize('Hello.  This is a test.  It works!')
 """ 
 sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 

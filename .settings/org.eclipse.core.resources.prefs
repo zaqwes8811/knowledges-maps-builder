@@ -22,6 +22,7 @@ encoding//scripts/regenerator_python_code.py=utf-8
 encoding//src/app-translate-assistant.py=utf-8
 encoding//src/app_utils/__init__.py=utf-8
 encoding//src/crawlers/dirs_walker.py=utf-8
+encoding//src/crosscuttings/tools.py=utf-8
 encoding//src/dals/local_host/local_host_io_wrapper.py=utf-8
 encoding//src_pjy/spiders/std_to_text_convertors/srt_to_text.py=utf-8
 encoding/app-raw-mapreduce.py=utf-8
