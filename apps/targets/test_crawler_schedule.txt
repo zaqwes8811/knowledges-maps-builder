@@ -1,10 +1,4 @@
 index name: test_index
-
-#
-root: d:/tmp
-ext. list:
-ignored dirs:
-
-root: d:/Dropbox
-ext. list:
+roots: d:/Dropbox; d:/tmp
+extention list: odt pdf doc
 ignored dirs:
