@@ -71,7 +71,7 @@ def FabricOpen(settings):
     f = None
     try:
         # создаем реальный файловый объект и передаем его обертке
-        f = codecs.open(fname_, how_open, encoding=xcoding)
+        f = codecs.open(fname, how_open, encoding=xcoding)
         wrapper = File(f)
         return wrapper
     
@@ -150,9 +150,21 @@ def read_utf_file_to_list_lines(fname):
     
 # RUNNER
 if __name__=='__main__':
-    fname = 'fake.txt'
-    fname = '__init__.py'
-    result, err = read_utf_file_to_list_lines(fname)
-    print result, err
+    import unittest
+    
+    class TestSequenceFunctions(unittest.TestCase):
+        def setUp(self):
+            self.seq = range(10)
+    
+        def test_file_exist(self):
+            fname = '__init__.py'
+            result, err = read_utf_file_to_list_lines(fname)
+            self.assertEqual(err[0], 0, 'File must exist')
+            
+        def test_file_no_xist(self):
+            fname = 'fake.txt'
+            result, err = read_utf_file_to_list_lines(fname)
+            self.assertEqual(err[0], 1, 'File no must exist')
 
+    unittest.main()
     print 'Done'
