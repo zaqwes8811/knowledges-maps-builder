@@ -6,24 +6,31 @@
             читает и пишет правильно, но тип текущей локали определят
                 не правильно, поэтому выводит на консоль неправильно
     connect : import usaio.io_wrapper
-"""
-import codecs
 
-""" 
     Класс для работы с файлами на компьютере
 """
 
-class LocalHostException(Exception):
-    pass
+
+import codecs
+import sys
+
+class LocalHostDALException(Exception):
+    def __init__(self, value):
+        self.value = value
+        
+    def __str__(self):
+        return str(self.value)
 
 class File():
     _fhandle = None
     
     """ Инициализация дискриптора. Передача по ссылке! """
     def __init__(self, fhandle):
-
+        #print 'Init'
         self._fhandle = fhandle
+        
     def __del__(self):
+        #print 'Del'
         self._fhandle.close()  # TODO(zaqwes): иногда выдает ошибк (jython)
     
     def to_list(self):
@@ -36,55 +43,42 @@ class File():
                 result.append(at.replace('\r', '').replace('\n', ''))
             return result
         
-        except UnicodeDecodeError, e:
-            print 'UnicodeDecodeError', e
-            return None
+        except UnicodeDecodeError as e:
+            raise LocalHostDALException(e)
             
-        except IOError, e:
-            print 'IOError : ', e
-            return None
-    
+        except IOError as e:
+            raise LocalHostDALException(e)
+
     def write(self, str):
         try:
-            try : 
-                self._fhandle.write(str)
-            except UnicodeEncodeError, e:
-                print 'UnicodeEncodingError:', e
+            self._fhandle.write(str)
+            
+        except UnicodeEncodeError, e:
+            raise LocalHostDALException(e)
+        
         except IOError, e:
-            print 'IOError : ', e
+            raise LocalHostDALException(e)
         
 """ Выдает файловые объекты """
 def FabricOpen(settings):
     fname = settings['name']
     how_open = settings['how_open']
     xcoding = settings['coding']
+    f = None
     try:
         # создаем реальный файловый объект и передаем его обертке
         f = codecs.open(fname, how_open, encoding=xcoding)
         wrapper = File(f)
-
         return wrapper
     
     # Скорее всего путь не тот
-    except IOError, e:
-        print 'IOError : ', e
-        return None
-
-
-""" 
-    Запись в файл ну формате 1251 c windews end line(\r\n)
-    на вхоже список строк в unicode endline \n
-"""
-
-def write_file_from_list(targetFname, listLines):
-    sum = ''
-    for at in listLines:
-        sum+=at[:-1]+'\r\n'
-    import codecs
-    f = codecs.open(targetFname, 'wb', encoding='cp1251')
-    f.write(sum)
-    f.close
+    #except IOError as e:
+    #    raise LocalHostDALException(e)
     
+    finally:
+        if f:
+            f.close()
+   
 def get_utf8_template():
     return {'name':  'fname', 'how_open': 'r', 'coding': 'utf_8'}
 
@@ -94,25 +88,22 @@ def file2list_int(sets):
     try:
         for at in readed_list:
             result.append(int(at))
+        return result    
     except ValueError as e:
-        print 'ValueError', e
-        result = None
-        
-    return result
+        raise LocalHostDALException(e)
         
 def file2list(sets):
-    """ """
-    file = FabricOpen(sets)
-    listLines = None
-    if file != None:
-        # читаем все 
-        listLines = file.to_list()
-        #print listLines
-        #if listLines != None:
-            #for at in listLines:
-                #print at
-                #.encode('cp866')    # for jython
-    return listLines
+    try:
+        file = FabricOpen(sets)
+        list_lines = None
+        if file != None:
+            list_lines = file.to_list()
+        return list_lines, (0, '')
+    
+    except LocalHostDALException as e:
+        return (1, str(e))
+    except:
+        raise LocalHostDALException("Unexpected error:"+str(sys.exc_info()[0]))
 
 def list2file(sets, lst):
     file = FabricOpen(sets)
@@ -128,18 +119,28 @@ def app_str(sets, string):
     else :
         print "app_str error occure"
         
+# HIGHER ABSTRACTION
 def write_result_file(result_list, fname):
     sets = get_utf8_template()
     sets['how_open'] = 'w'
     sets['name'] = fname
     list2file(sets, result_list)
     
-def read_utf_txt_file(fname):
-    sets = get_utf8_template()
-    sets['name'] = fname
-    return file2list(sets) 
+def read_utf_file_to_list_lines(fname):
+    try:
+        sets = get_utf8_template()
+        sets['name'] = fname
+        readed_list = file2list(sets) 
+    except LocalHostDALException as e:
+        return None, (1, str(e))
+    return readed_list, (0, '')
     
     
+# RUNNER
 if __name__=='__main__':
-    
+    fname = 'fake.txt'
+    #fname = '__init__.py'
+    result, err = read_utf_file_to_list_lines(fname)
+    print result, err
+
     print 'Done'
