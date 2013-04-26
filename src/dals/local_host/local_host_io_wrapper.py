@@ -13,6 +13,7 @@
 
 import codecs
 import sys
+import traceback
 
 class LocalHostDALException(Exception):
     def __init__(self, value):
@@ -70,7 +71,7 @@ def FabricOpen(settings):
     f = None
     try:
         # создаем реальный файловый объект и передаем его обертке
-        f = codecs.open(fname, how_open, encoding=xcoding)
+        f = codecs.open(fname_, how_open, encoding=xcoding)
         wrapper = File(f)
         return wrapper
     
@@ -111,8 +112,10 @@ def file2list(sets):
         return None, (1, str(e))
     
     except:
-        print 'Err'
-        raise LocalHostDALException("Unexpected error:"+str(sys.exc_info()[0]))
+        formatted_lines = traceback.format_exc().splitlines()
+        err_msg = '\n'.join(formatted_lines)
+        #traceback.print_exc(file=sys.s)
+        raise LocalHostDALException("Unexpected error:"+err_msg)
 
 def list2file(sets, lst):
     file = FabricOpen(sets)
@@ -140,7 +143,7 @@ def read_utf_file_to_list_lines(fname):
     sets['name'] = fname
     readed_list, err = file2list(sets) 
     if err[0]:
-       return None, (1, err[1]) 
+        return None, (1, err[1]) 
     else:
         return readed_list, (0, '')
     
