@@ -1,0 +1,10 @@
+index name: test_index
+
+#
+root: d:/tmp
+ext. list:
+ignored dirs:
+
+root: d:/Dropbox
+ext. list:
+ignored dirs:
