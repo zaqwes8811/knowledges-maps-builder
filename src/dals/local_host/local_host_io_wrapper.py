@@ -26,15 +26,15 @@ class File():
     
     """ Инициализация дискриптора. Передача по ссылке! """
     def __init__(self, fhandle):
-        #print 'Init'
         self._fhandle = fhandle
+        # Возможно лучше открыть файл в конструкторе, но может возникнуть исключение!
         
     def __del__(self):
-        #print 'Del'
         self._fhandle.close()  # TODO(zaqwes): иногда выдает ошибк (jython)
     
     def to_list(self):
         try:
+            
             list_lines = self._fhandle.readlines() 
              
             # Удалить переводы строк
@@ -47,6 +47,9 @@ class File():
             raise LocalHostDALException(e)
             
         except IOError as e:
+            raise LocalHostDALException(e)
+        
+        except ValueError as e:
             raise LocalHostDALException(e)
 
     def write(self, str):
@@ -72,12 +75,13 @@ def FabricOpen(settings):
         return wrapper
     
     # Скорее всего путь не тот
-    #except IOError as e:
-    #    raise LocalHostDALException(e)
+    except IOError as e:
+        raise LocalHostDALException(e)
     
-    finally:
-        if f:
-            f.close()
+    # Файл Закрывается!!
+    #finally:  # Мы передает ссылку, поэтому закрыть нельзя!
+    #    if f:
+    #        f.close()
    
 def get_utf8_template():
     return {'name':  'fname', 'how_open': 'r', 'coding': 'utf_8'}
@@ -88,7 +92,8 @@ def file2list_int(sets):
     try:
         for at in readed_list:
             result.append(int(at))
-        return result    
+        return result
+        
     except ValueError as e:
         raise LocalHostDALException(e)
         
@@ -98,11 +103,15 @@ def file2list(sets):
         list_lines = None
         if file != None:
             list_lines = file.to_list()
-        return list_lines, (0, '')
+            return list_lines, (0, '')
+        else:
+            return None, (1, 'Error: cant open file')
     
     except LocalHostDALException as e:
-        return (1, str(e))
+        return None, (1, str(e))
+    
     except:
+        print 'Err'
         raise LocalHostDALException("Unexpected error:"+str(sys.exc_info()[0]))
 
 def list2file(sets, lst):
@@ -127,19 +136,19 @@ def write_result_file(result_list, fname):
     list2file(sets, result_list)
     
 def read_utf_file_to_list_lines(fname):
-    try:
-        sets = get_utf8_template()
-        sets['name'] = fname
-        readed_list = file2list(sets) 
-    except LocalHostDALException as e:
-        return None, (1, str(e))
-    return readed_list, (0, '')
+    sets = get_utf8_template()
+    sets['name'] = fname
+    readed_list, err = file2list(sets) 
+    if err[0]:
+       return None, (1, err[1]) 
+    else:
+        return readed_list, (0, '')
     
     
 # RUNNER
 if __name__=='__main__':
     fname = 'fake.txt'
-    #fname = '__init__.py'
+    fname = '__init__.py'
     result, err = read_utf_file_to_list_lines(fname)
     print result, err
 
