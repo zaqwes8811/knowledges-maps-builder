@@ -24,8 +24,11 @@ def scribe_index(target, spider_target_fname):
     app_folder = tools.get_app_cfg_by_path(path)
     
     # Производные пути
+    print 'App folder root -', app_folder
+    
     index_path = app_folder+'/'+index_name
     index_root = index_path+'/index'
+    print 'Index root -', index_path
     tmp_root = index_path+'/tmp'
     
     if not os.path.exists(app_folder):

@@ -4,13 +4,22 @@ Created on 26.04.2013
 
 @author: Igor
 '''
-import sys
-sys.path.append('../src')
-import json
-
-from crawlers import get_target
-
-from dals.local_host.local_host_io_wrapper import write_result_file
+import traceback
+try:
+    import sys
+   
+    import json
+    
+    # App
+    sys.path.append('../src')
+    from crawlers import get_target
+    from dals.local_host.local_host_io_wrapper import write_result_file
+except:
+    formatted_lines = traceback.format_exc().splitlines()
+    err_msg = '\n'.join(formatted_lines) 
+    print err_msg
+    print sys.path
+    var = raw_input("Press any key.")
 
 def printer(msg):
     print msg
@@ -29,3 +38,4 @@ if __name__=='__main__':
     write_result_file([json_target], spider_target_fname)
 
     print 'Done'
+    var = raw_input("Press any key.")

@@ -60,6 +60,7 @@ def find_files_down_tree(root, extension_list, ignored_dirs=None):
                         path_enabled = True
                         if ignored_dirs:
                             for it in ignored_dirs:
+                                print it
                                 if it in root:
                                     path_enabled = False
                             
@@ -102,6 +103,7 @@ def find_files_down_tree_roots(roots, extension_list, ignored_dirs=None):
             try:
                 getted_list = os.walk(root_path, onerror=on_error_walk)
                 for root, dirs, files in getted_list:
+                    root = root.replace('\\', '/')
                     if files:
                         for name in files:
                             if _check_extension(name, extension_list):

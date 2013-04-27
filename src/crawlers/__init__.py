@@ -40,7 +40,8 @@ def get_target(target_fname, spider_target_fname):
     print 'Begin finding'
     roots = target[kKeyRoot]
     extension_list = target[kKeyTargetExts]
-    result_list, err = os_walker.find_files_down_tree_roots(roots, extension_list)
+    ignored_dirs = target[kKeyIgnoredDir]
+    result_list, err = os_walker.find_files_down_tree_roots(roots, extension_list, ignored_dirs)
     if err[0]:
         print err[1]
     print 'End finding'
@@ -159,3 +160,14 @@ def fill_target_for_spider(result_list):
 
     map(filler_target, result_list)
     return target_for_spider, rpt
+
+def get_node_name(line):
+    line = line.split('*')[0]
+    line = line.replace('[','')
+    node = util.remove_forward_and_back_spaces(line.replace(']',''))
+    return node
+
+def get_url(line):
+    line = line.split('*')[1]
+    node = util.remove_forward_and_back_spaces(line)
+    return node

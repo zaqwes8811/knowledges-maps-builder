@@ -11,3 +11,4 @@ root: d:/doc_pdf_odt
 # Не рассматриваемые директории
 ignored dir: c:/
 ignored dir: f:/
+ignored dir: d:/Dropbox/.dropbox.cache

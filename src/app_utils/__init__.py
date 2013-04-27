@@ -8,6 +8,9 @@ import re
 import dals
 import dals.local_host.local_host_io_wrapper as dal
 
+def printer(msg):
+    print msg
+
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
     sets['howOpen'] = 'w'
