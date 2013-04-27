@@ -27,12 +27,19 @@ if __name__=='__main__':
         # TODO(zaqwes): очистить от комментов
         target = {}
         def process_one_line(line):
-            splitted_line = line.find(':')
-            print splitted_line
-            key = util.remove_forward_and_back_spaces(line[0:splitted_line])
-            target[key] = util.remove_forward_and_back_spaces(line[splitted_line+1:])
+            ptr = line.find(':')
+            key = util.remove_forward_and_back_spaces(line[0:ptr])
+            target[key] = util.remove_forward_and_back_spaces(line[ptr+1:])
         
         map(process_one_line, raw_target)
+        
+        # Подчищаем
+        # Расширения
+        list_ext = target['extention list'].split(' ')
+        target['extention list'] = util.remove_fandb_spaces_in_tuple(tuple(list_ext))
+        
+        # Точки входа
+        
         return target
         
     raw_target, err = local_dal.read_utf_file_to_list_lines(target_fname)
@@ -41,7 +48,7 @@ if __name__=='__main__':
     map(printer, target.items())
     
     # Проверяем задание
-    path_to_settings = "App/Crawler/enabled_extention"
+    path_to_settings = "App/Spider extractor/auto_detected_extention"
     print tools.get_app_cfg_by_path(path_to_settings)
     
     print 'Done'
