@@ -3,13 +3,13 @@
 >>>>>>>=iss55
 eclipse.preferences.version=1
 encoding//apps/crawler-app.py=utf-8
-encoding//apps/dev-spider-extractor-jy.py=utf-8
 encoding//apps/dev-spider-processor-jy.py=utf-8
 encoding//apps/hided/app-raw-mapreduce.py=utf-8
 encoding//apps/hided/app-spider.py=utf-8
 encoding//apps/hided/app-test-stem.py=utf-8
 encoding//apps/hided/dev-spider-extractor.py=utf-8
 encoding//apps/scriber-app.py=utf-8
+encoding//apps/spider-extractor-jy-app.py=utf-8
 encoding//jysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/business/MapReduce/mappers/__init__.py=utf-8

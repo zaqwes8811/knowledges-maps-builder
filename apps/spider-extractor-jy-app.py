@@ -26,11 +26,10 @@ from crawlers import kKeyIndexName
 # ToText convertors
 from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
 
-def main():
-    rpt = []
+def main(spider_target_fname):
     # Задание получено в предыдущий сериях
-    spider_target_fname = 'targets/spider_extractor_target'
-    
+    rpt = []
+
     # Задание загружаем из файла
     json_target, err = dal.read_utf_file_to_list_lines(spider_target_fname+'.json')
     if not json_target:
@@ -50,9 +49,7 @@ def main():
         
     nodes_and_urls_pkt = map(get_node_and_url, nodes_and_urls)
     
-    # Можно переводить в текст
-    #full_name = path_to_node1+fname
-    
+    # Можно переводить в текст   
     for pair in nodes_and_urls_pkt:
         # Почему-то нужно создавать каждый раз!
         extractor = TextExtractorFromOdtDocPdf()
@@ -62,9 +59,17 @@ def main():
         app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
         path_to_index = tmp_root
         path_to_tmp_node = tmp_root+'/'+node
-        result, err = extractor.process(url, path_to_tmp_node)   
+        result, err = extractor.process(url, path_to_tmp_node)
+        if err[0]:
+            rpt.append(err[1])   
+        
+    return rpt
 
     
 if __name__=='__main__':
-    main()
+    spider_target_fname = 'targets/spider_extractor_target'
+    rpt = main(spider_target_fname)
+    if rpt:
+        print 'Rpt:'
+        map(printer, rpt)
     print 'Done'

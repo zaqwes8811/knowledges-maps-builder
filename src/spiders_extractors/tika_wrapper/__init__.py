@@ -118,7 +118,7 @@ class TextExtractorFromOdtDocPdf(object):
             return False
             
         if not file_is_enabled(ifname):
-            return None, 1, 'File must *.doc, *.docx, *.pdf, *.odt. File skipped.'
+            return None, (1, 'File must *.doc, *.docx, *.pdf, *.odt. File skipped.')
         
         input_var = None
         
