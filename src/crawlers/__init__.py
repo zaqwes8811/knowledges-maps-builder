@@ -1,7 +1,12 @@
 # coding: utf-8
+# Sys
+import os#.path.exists
 
 # App
 import app_utils as util
+
+# crosscuttings
+import crosscuttings.tools as tools 
 
 kKeyTargetExts = 'extention list'
 kKeyIgnoredDir = 'ignored dir'
@@ -23,27 +28,27 @@ def check_crawler_target(target):
             
     # Доствпность корней
     roots = target[kKeyRoot]
-    for dir in roots:
-        if not os.path.exists(dir):
-            roots.remove(dir)
-            rpt.append('Root dir no found - '+dir+'. Path removed from target.')
+    for diro in roots:
+        if not os.path.exists(diro):
+            roots.remove(diro)
+            rpt.append('Root dir no found - '+diro+'. Path removed from target.')
             
     # Доствпность игнорируемых папок
     ignored = target[kKeyIgnoredDir]
-    for dir in ignored:
-        if not os.path.exists(dir):
-            ignored.remove(dir)
-            rpt.append('Ignored dir no found - '+dir+'. Path removed from target.')
+    for diro in ignored:
+        if not os.path.exists(diro):
+            ignored.remove(diro)
+            rpt.append('Ignored dir no found - '+diro+'. Path removed from target.')
             
-    for dir in ignored:         
+    for diro in ignored:         
         # игнорируемый путь должен исходит из одного из корней
         content = False
         for root in roots:
-            if root in dir:
+            if root in diro:
                 content = True
             
         if not content:    
-            rpt.append('Ignored dir int root path - '+dir+'. Path removed from target.')
+            rpt.append('Ignored dir int root path - '+diro+'. Path removed from target.')
     return rpt
 
 def get_target_object(raw_target):
@@ -63,6 +68,7 @@ def get_target_object(raw_target):
             if key not in target: 
                 target[key] = []
             target[key].append(value)
+            target[key] = list(set(target[key]))
             
         elif key == kKeyTargetExts:
             list_ext = value.split(',')
@@ -73,6 +79,7 @@ def get_target_object(raw_target):
             if key not in target: 
                 target[key] = []
             target[key].append(value)
+            target[key] = list(set(target[key]))
         else:
             print 'No used'
     
