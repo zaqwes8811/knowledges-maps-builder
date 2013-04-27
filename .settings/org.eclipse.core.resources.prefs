@@ -21,6 +21,7 @@ encoding//pjysrc/business/originators_text_data/srt_to_text.py=utf-8
 encoding//scripts/regenerator_python_code.py=utf-8
 encoding//src/app-translate-assistant.py=utf-8
 encoding//src/app_utils/__init__.py=utf-8
+encoding//src/crawlers/__init__.py=utf-8
 encoding//src/crawlers/dirs_walker.py=utf-8
 encoding//src/crosscuttings/tools.py=utf-8
 encoding//src/dals/local_host/local_host_io_wrapper.py=utf-8

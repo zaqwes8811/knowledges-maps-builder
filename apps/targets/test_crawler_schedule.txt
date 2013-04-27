@@ -1,10 +1,11 @@
 # ! Поиск пока только по расширениям
 index name: test_index  # Одно на задание, два быть не может
 
-extention list: odt, pdf, doc
+extention list: odt, pdf, doc, asfd, srt
 
 root: d:/Dropbox 
 root: d:/tmp
 
 # Не рассматриваемые директории
 ignored dir: c:/
+ignored dir: f:/
