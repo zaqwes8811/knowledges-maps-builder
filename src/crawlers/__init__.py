@@ -85,3 +85,26 @@ def get_target_object(raw_target):
     
     map(process_one_line, list_without_comments)
     return target
+
+def fill_target_for_spider(result_list):
+    list_nodes = {}
+    target_for_spider = []
+    rpt = []
+    def filler_target(msg):
+        # * - не может быть в пути к файл, поэтому можно будет разделить имя узла и адрес
+        file_name = msg.split('/')[-1]
+        node_name = '.'.join(file_name.split('.')[:-1])
+        if node_name not in list_nodes:
+            list_nodes[node_name] = -1
+        else:
+            rpt.append('Finded eq. named files. File - '+msg)
+            
+        list_nodes[node_name] += 1
+        
+        if list_nodes[node_name] != 0:
+            node_name += str(list_nodes[node_name])
+            
+        target_for_spider.append('['+node_name+']* '+msg)
+
+    map(filler_target, result_list)
+    return target_for_spider, rpt

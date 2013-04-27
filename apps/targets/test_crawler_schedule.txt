@@ -6,7 +6,7 @@ extention list: odt, doc, asfd, srt, pdf
 #root: d:/Dropbox 
 #root: d:/github_ 
 root: d:/doc_pdf_odt
-root: d:/doc_pdf_odt_t
+#root: d:/doc_pdf_odt_t
 
 # Не рассматриваемые директории
 ignored dir: c:/
