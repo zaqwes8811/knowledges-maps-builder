@@ -171,3 +171,9 @@ def get_url(line):
     line = line.split('*')[1]
     node = util.remove_forward_and_back_spaces(line)
     return node
+
+def get_path_tasks(spider_target_fname):
+    """ Нужно удалить комментарии """
+    jobs_list, err =  local_dal.read_utf_file_to_list_lines(spider_target_fname)
+    jobs_list = util.remove_comments_from_task(jobs_list)
+    return jobs_list, err

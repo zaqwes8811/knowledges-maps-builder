@@ -37,6 +37,7 @@ encoding//src/scriber/__init__.py=utf-8
 encoding//src/spiders_extractors/__init__.py=utf-8
 encoding//src/spiders_extractors/_utils.py=utf-8
 encoding//src/spiders_extractors/test_spider.py=utf-8
+encoding//src/spiders_extractors/tika_wrapper/__init__.py=utf-8
 encoding//src/spiders_processors/__init__.py=utf-8
 encoding//src_pjy/spiders/std_to_text_convertors/srt_to_text.py=utf-8
 encoding/app-raw-mapreduce.py=utf-8

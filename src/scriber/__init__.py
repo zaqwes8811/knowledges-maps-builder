@@ -11,6 +11,7 @@ import os
 import crosscuttings.tools as tools 
 
 from crawlers import kKeyIndexName
+from crawlers import get_path_tasks
 
 import dals.local_host.local_host_io_wrapper as dal
 
@@ -20,16 +21,12 @@ def scribe_index(target, spider_target_fname):
     rpt = []
     # Запускаем разметчик
     index_name = target[kKeyIndexName]
-    path = 'App/Scriber/app_folder'
-    app_folder = tools.get_app_cfg_by_path(path)
+    app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
     
-    # Производные пути
+    
+    
     print 'App folder root -', app_folder
-    
-    index_path = app_folder+'/'+index_name
-    index_root = index_path+'/index'
     print 'Index root -', index_path
-    tmp_root = index_path+'/tmp'
     
     if not os.path.exists(app_folder):
         os.makedirs(app_folder)
@@ -66,8 +63,11 @@ def scribe_index(target, spider_target_fname):
         line = line.replace('[','')
         node = util.remove_forward_and_back_spaces(line.replace(']',''))
         return node
-        
-    jobs_list, err =  dal.read_utf_file_to_list_lines(spider_target_fname)
+
+    jobs_list, err =  get_path_tasks(spider_target_fname)
+    if err[0]:
+        rpt.append(err)
+    #map(util.printer, jobs_list)
     nodes = map(get_one_node, jobs_list)
     for node in nodes:
         path_to_node_tmp = tmp_root+'/'+node

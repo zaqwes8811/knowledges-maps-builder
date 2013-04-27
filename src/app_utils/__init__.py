@@ -37,6 +37,14 @@ def remove_fandb_spaces_in_tuple(src):
         
     return tuple(tmp)
 
+def remove_comments_from_task(raw_target):
+    list_without_comments = []
+    for line in raw_target:
+        tmp_line = remove_forward_and_back_spaces(line.split('#')[0])
+        if tmp_line:
+            list_without_comments.append(tmp_line)
+    return list_without_comments
+
 if __name__=='__main__':
     print 'Done'
     

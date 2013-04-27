@@ -24,5 +24,17 @@ def get_app_cfg_by_path(path):
         return tmp
     except KeyError as e:
         return None
+ 
+def get_pathes_complect(index_name):   
+    path = 'App/Scriber/app_folder'
+    app_folder = get_app_cfg_by_path(path)
+    
+    # Производные пути
+    index_path = app_folder+'/'+index_name
+    index_root = index_path+'/index'
+    tmp_root = index_path+'/tmp'
+    
+    return app_folder, index_path, index_root, tmp_root
+
     
 

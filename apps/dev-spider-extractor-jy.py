@@ -15,10 +15,13 @@ import java.lang.System as System
 import dals.local_host.local_host_io_wrapper as dal
 from nlp_components import split_to_sentents
 from app_utils import printer
+from crosscuttings import tools
 
 # units
 from crawlers import get_node_name
 from crawlers import get_url
+from crawlers import get_path_tasks
+from crawlers import kKeyIndexName
 
 # ToText convertors
 from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
@@ -39,7 +42,7 @@ def main():
     target = json.loads(' '.join(json_target))
     
     # Рельные задание с именами файлов и узлов
-    nodes_and_urls, err = dal.read_utf_file_to_list_lines(spider_target_fname+'.txt')
+    nodes_and_urls, err = get_path_tasks(spider_target_fname+'.txt')
     def get_node_and_url(line):
         node = get_node_name(line)
         url = get_url(line)
@@ -48,7 +51,18 @@ def main():
     nodes_and_urls_pkt = map(get_node_and_url, nodes_and_urls)
     
     # Можно переводить в текст
+    #full_name = path_to_node1+fname
     
+    for pair in nodes_and_urls_pkt:
+        # Почему-то нужно создавать каждый раз!
+        extractor = TextExtractorFromOdtDocPdf()
+        node = pair[0]
+        url = pair[1]
+        index_name = target[kKeyIndexName]
+        app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
+        path_to_index = tmp_root
+        path_to_tmp_node = tmp_root+'/'+node
+        result, err = extractor.process(url, path_to_tmp_node)   
 
     
 if __name__=='__main__':

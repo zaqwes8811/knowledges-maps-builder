@@ -8,9 +8,6 @@ Fails:
 import re
 import json
 
-# Develop
-import dals.os_io.io_wrapper as dal
-
 # Java
 import java.io.BufferedInputStream as BufferedInputStream
 import java.io.File as File
@@ -54,21 +51,10 @@ import org.apache.tika.sax.TeeContentHandler as TeeContentHandler
 
 # App 
 from filters import is_content_letter
-
-def write_result_file(result_list, fname):
-    sets = dal.get_utf8_template()
-    sets['howOpen'] = 'w'
-    sets['name'] = fname
-    dal.list2file(sets, result_list)
-    
-def read_utf_txt_file(fname):
-    sets = dal.get_utf8_template()
-    sets['name'] = fname
-    return dal.file2list(sets) 
-
-def printer(msg):
-    print msg
-    
+from app_utils import printer
+# Develop
+import dals.local_host.local_host_io_wrapper as dal
+   
 def _no_space_in_line():
     return True
 
@@ -97,7 +83,8 @@ class TextExtractorFromOdtDocPdf(object):
         
     _enabled_extentons = ['doc', 'docx', 'pdf', 'odt']
         
-    def process(self, ifname, tmp_file_root):
+    def process(self, ifname, path_to_node):
+        print ifname
         """ 
         Присутствует фильта входных файлов, что упрощает обработку папок с разнородными
         файлами.
@@ -114,7 +101,13 @@ class TextExtractorFromOdtDocPdf(object):
         def get_fname_for_save(fname):
             fname = fname.replace('\\','/')
             only_fname = fname.split('/')[-1]
-            ofname = tmp_file_root+'/'+only_fname+'.txt'
+            ofname = path_to_node+'/'+only_fname+'.ptxt'
+            return ofname
+        
+        def get_fname_for_save_meta(fname):
+            fname = fname.replace('\\','/')
+            only_fname = fname.split('/')[-1]
+            ofname = path_to_node+'/'+only_fname+'.meta'
             return ofname
         
         print 'Processing file : ', ifname
@@ -131,6 +124,7 @@ class TextExtractorFromOdtDocPdf(object):
         
         ofname = get_fname_for_save(ifname)  # Файл временный, он же выходной
         out_file = File(ofname)  # Врядли выкенет исключение
+        lang = None
         try:
             # TODO(zaqwes): не очень понятно, что здесь происходит
             url = URL
@@ -144,7 +138,7 @@ class TextExtractorFromOdtDocPdf(object):
             # Начинаем обработку
             metadata = {'url':ifname}
             
-            result_utf8 = ['metadata','']  # формат строгий!!
+            result_utf8 = []#['metadata','']  # формат строгий!!
               
             # На данный момент сохраняем в промежуточный файл на диске, но можно и ускорить
             # например, через отображение на память
@@ -180,9 +174,11 @@ class TextExtractorFromOdtDocPdf(object):
             metadata['lang'] = lang
             #print identifier.isReasonablyCertain()  # Всегда False
             #System.out.println(identifier.getLanguage());
-            result_utf8[0] = json.dumps(metadata)
+            
+            meta_fname = get_fname_for_save_meta(ifname)
             # Сохраняем результат 
-            write_result_file(result_utf8, ofname)
+            dal.write_result_file(result_utf8, ofname)
+            dal.write_result_file([json.dumps(metadata, sort_keys=True, indent=2)], meta_fname)
         
         except IOException as e:
             err_code = 1
@@ -202,7 +198,7 @@ class TextExtractorFromOdtDocPdf(object):
                     e.printStackTrace();
                     
         # Подводим итоги
-        return ((ofname, lang), 0, '')
+        return ((ofname, lang), (0, ''))
         
         
     # TODO(zaqwes): русский язык определить не может    
@@ -250,135 +246,12 @@ class TextExtractorFromOdtDocPdf(object):
         print extractedText
         
 
-def doc_to_txt(ipdf_file, otxt_file):
-    """ 
-    
-    Returns:
-        Нефильтрованный текстовой файл в формате utf-8
-    """
-    err_code = 0
-    err_msg = ''
-    tmp_file = ipdf_file+'.tmp'
-    istr = None
-    ostream = None
-    try:
-        istr = BufferedInputStream(FileInputStream(File(ipdf_file)));
-        parser = AutoDetectParser();
-        ostream = FileOutputStream(tmp_file)
-        handler = BodyContentHandler(System.out)#ostream)
-        
-        metadata = Metadata();
-        
-        # Выдает в stdout text
-        parser.parse(istr, handler, metadata, ParseContext());
-        
-        for name in metadata.names():
-           value = metadata.get(name);
-           System.out.println("Metadata Name:  " + name);
-           System.out.println("Metadata Value: " + value);
-
-        
-            # Преобразуем в unicode
-        java_in = BufferedReader(FileReader(tmp_file))
-        s = String()
-        result_utf8 = []
-        while True:
-            s = java_in.readLine()
-            if s == None:
-                break
-            result_utf8.append(unicode(str(s), 'utf-8'))
-            #print s
-            #result_utf8.append(s)
-    
-        sets = dal.get_utf8_template()
-        sets['howOpen'] = 'w'
-        sets['name'] = otxt_file
-        dal.list2file(sets, result_utf8)
-       
-    except IOException as e:
-        err_code = 1
-        err_msg = 'Error: io.'
-    except TikaException as e:
-        e.printStackTrace()
-    except SAXException as e:
-        e.printStackTrace()
-    finally:
-        if ostream:
-            try:
-                istr.close();
-            except IOException as e:
-                e.printStackTrace();
-        if istr:
-            try:
-                istr.close();
-            except IOException as e:
-                e.printStackTrace();
-    return err_code, err_msg
-
-def pdf_cp1251_to_text_utf8(ipdf_file, otxt_file):
-    """ 
-    
-    Returns:
-        Нефильтрованный текстовой файл в формате utf-8
-    """
-    err_code = 0
-    err_msg = ''
-    tmp_file = ipdf_file+'.tmp'
-    istr = None
-    ostream = None
-    try:
-        istr = BufferedInputStream(FileInputStream(File(ipdf_file)));
-        parser = AutoDetectParser();
-        ostream = FileOutputStream(tmp_file)
-        handler = BodyContentHandler(ostream)
-        
-        metadata = Metadata();
-        
-        # Выдает в stdout text
-        parser.parse(istr, handler, metadata, ParseContext());
-        
-            # Преобразуем в unicode
-        java_in = BufferedReader(FileReader(tmp_file))
-        s = String()
-        result_utf8 = []
-        while True:
-            s = java_in.readLine()
-            if s == None:
-                break
-            result_utf8.append(unicode(str(s), 'utf-8'))
-            #print s
-            #result_utf8.append(s)
-    
-        sets = dal.get_utf8_template()
-        sets['howOpen'] = 'w'
-        sets['name'] = otxt_file
-        dal.list2file(sets, result_utf8)
-       
-    except IOException as e:
-        err_code = 1
-        err_msg = 'Error: io.'
-    except TikaException as e:
-        e.printStackTrace()
-    except SAXException as e:
-        e.printStackTrace()
-    finally:
-        if ostream:
-            try:
-                istr.close();
-            except IOException as e:
-                e.printStackTrace();
-        if istr:
-            try:
-                istr.close();
-            except IOException as e:
-                e.printStackTrace();
-    return err_code, err_msg
 
 
 if __name__=='__main__':
-    extractor = TextExtractor()
+    """extractor = TextExtractor()
     extractor.parse_with_lang_detection('t.pdf')
     extractor.process('t.pdf')
-    extractor.print_string()
+    extractor.print_string()"""
     print
     print 'Done'
