@@ -4,6 +4,7 @@ Created on 26.04.2013
 
 @author: Igor
 '''
+import sys
 
 from crawlers import get_target
 
