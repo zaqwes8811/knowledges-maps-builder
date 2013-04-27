@@ -26,8 +26,9 @@
       auto_detected_extention: ["doc", "odt", "pdf", "srt", "ptxt"]
     },
     Scriber : {
-    	index_root: "./indexes",
-    	dir_with_extr_texts: "d:/test_extr"
+      index_root: "d:/test_extr/indexes",
+      dir_with_extr_texts: "d:/test_extr/tmp",
+      app_folder: "d:/app_folder"
     }
   }
 }

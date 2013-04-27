@@ -3,7 +3,7 @@
 >>>>>>>=iss55
 eclipse.preferences.version=1
 encoding//apps/app-raw-mapreduce.py=utf-8
-encoding//apps/dev-os-crawler.py=utf-8
+encoding//apps/dev-crawler.py=utf-8
 encoding//apps/dev-scriber.py=utf-8
 encoding//jysrc/app-translate-assistant.py=utf-8
 encoding//pjysrc/app-translate-assistant.py=utf-8

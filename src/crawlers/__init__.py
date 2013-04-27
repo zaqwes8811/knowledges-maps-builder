@@ -2,6 +2,12 @@
 # Sys
 import os#.path.exists
 
+# DAL
+import dals.local_host.local_host_io_wrapper as local_dal
+
+# Exist API
+import crawlers.dirs_walker as os_walker
+
 # App
 import app_utils as util
 
@@ -11,6 +17,49 @@ import crosscuttings.tools as tools
 kKeyTargetExts = 'extention list'
 kKeyIgnoredDir = 'ignored dir'
 kKeyRoot = 'root'
+kKeyIndexName = 'index name'
+
+def get_target(target_fname, spider_target_fname):
+    def printer(msg):
+        print msg
+
+    raw_target, err = local_dal.read_utf_file_to_list_lines(target_fname)
+    target = get_target_object(raw_target)
+    
+    print 'Source target: '
+    map(printer, target.items())
+
+    rpt = check_crawler_target(target)
+    print 
+    print 'Rpt:'
+    map(printer, rpt)
+
+    # Можно передавать краулеру на посик файлов - DataIsSafe
+    # поиск
+    print 
+    print 'Begin finding'
+    roots = target[kKeyRoot]
+    extension_list = target[kKeyTargetExts]
+    result_list, err = os_walker.find_files_down_tree_roots(roots, extension_list)
+    if err[0]:
+        print err[1]
+    print 'End finding'
+        
+    # Разбираем не узлы
+    target_for_spider, rpt = fill_target_for_spider(result_list)
+    if rpt:
+        print 
+        print 'Rpt:'
+        map(printer, rpt)
+    
+    fname = spider_target_fname
+    local_dal.write_result_file(target_for_spider, fname)
+    
+    print '\nResult target:'
+    map(printer, target.items())
+    print
+    print 'Nodes and urls write to file - '+fname
+    return target
 
 def check_crawler_target(target):
     rpt = []
@@ -49,6 +98,8 @@ def check_crawler_target(target):
             
         if not content:    
             rpt.append('Ignored dir int root path - '+diro+'. Path removed from target.')
+            ignored.remove(diro)
+            
     return rpt
 
 def get_target_object(raw_target):
@@ -73,7 +124,7 @@ def get_target_object(raw_target):
         elif key == kKeyTargetExts:
             list_ext = value.split(',')
             target[key] = list(util.remove_fandb_spaces_in_tuple(tuple(list_ext)))
-        elif key == 'index name':
+        elif key == kKeyIndexName:
             target[key] = util.remove_forward_and_back_spaces(value)
         elif key == kKeyIgnoredDir:
             if key not in target: 
