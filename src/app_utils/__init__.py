@@ -1,12 +1,15 @@
 # coding: utf-8
-import nltk.data
-import dals
-
 
 
 # Std
 import re
-import dals.os_io.io_wrapper as dal
+
+# Other
+import dals
+import dals.local_host.local_host_io_wrapper as dal
+
+def printer(msg):
+    print msg
 
 def write_result_file(result_list, fname):
     sets = dal.get_utf8_template()
@@ -34,6 +37,14 @@ def remove_fandb_spaces_in_tuple(src):
         
     return tuple(tmp)
 
+def remove_comments_from_task(raw_target):
+    list_without_comments = []
+    for line in raw_target:
+        tmp_line = remove_forward_and_back_spaces(line.split('#')[0])
+        if tmp_line:
+            list_without_comments.append(tmp_line)
+    return list_without_comments
+
 if __name__=='__main__':
     print 'Done'
     
@@ -46,8 +57,8 @@ if __name__=='__main__':
     #nltk.download()
     
      
-    tokenizer = nltk.data.load('nltk:tokenizers/punkt/english.pickle')
-    tokenizer.tokenize('Hello.  This is a test.  It works!')
+    #tokenizer = nltk.data.load('nltk:tokenizers/punkt/english.pickle')
+    #tokenizer.tokenize('Hello.  This is a test.  It works!')
 """ 
 sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 

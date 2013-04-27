@@ -2,37 +2,23 @@
 '''
 Created on 22.04.2013
 
-@author: кей
+@author: Igor
 '''
-import json
-# Java
-import java.text.BreakIterator as BreakIterator
-import java.util.Locale as Locale
-import java.lang.System as System
+import spiders_processors.docs_spider as docs_spider
 
-# App
-from spiders_extractors.tika_wrapper import read_utf_txt_file
-from spiders_extractors.tika_wrapper import write_result_file
-from spiders_extractors.tika_wrapper import printer
 
-def split_to_sentents(text_list, result_list):
-    text = ' '.join(text_list)
-    bi = BreakIterator.getSentenceInstance();
-    bi.setText(text)
-    index = 0
-    while bi.next() != BreakIterator.DONE:
-        sentence = text[index:bi.current()]
-        #System.out.println("Sentence: " + sentence)
-        result_list.append(sentence)
-        index = bi.current();
+        
+def printer(msg):
+    print msg
 
-def get_docs():
-    # Получает задание
-    path_to_targets = 'spider-targets/'
-    target_file = path_to_targets+'_test_task.txt'
-    list_targets = read_utf_txt_file(target_file)
-    #map(printer, list_targets)
+if __name__=='__main__':
     
+    
+    result = docs_spider.get_docs()
+    map(printer, result)
+    
+        
+    """
     # Каждый файл отдельно
     #
     index_file = 0
@@ -62,5 +48,7 @@ def get_docs():
         write_result_file(result, url)
         index_file += 1
         
-        result_.append((node_name, url))
-    return result_
+        result_.append((node_name, url))"""
+    #return result_
+
+    print 'Done'
