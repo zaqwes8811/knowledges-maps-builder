@@ -55,8 +55,8 @@ def get_target(target_fname, spider_target_fname):
     fname = spider_target_fname
     local_dal.write_result_file(target_for_spider, fname)
     
-    print '\nResult target:'
-    map(printer, target.items())
+    #print '\nResult target:'
+    #map(printer, target.items())
     print
     print 'Nodes and urls write to file - '+fname
     return target

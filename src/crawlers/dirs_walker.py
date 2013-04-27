@@ -114,8 +114,11 @@ def find_files_down_tree_roots(roots, extension_list, ignored_dirs=None):
                                 if path_enabled:
                                     slash = '/'
                                     full_path = root+slash+name
-                                    full_path = unicode(str(full_path), 'utf8')
+                                    #full_path = unicode(str(full_path), 'utf8')
+                                    
+                                    #full_path = unicode(str(unicode(full_path, 'cp1251')), 'utf8')
                                     full_path = full_path.replace('\\','/')
+                                    print full_path
                                     result_list.append(full_path)
             except CrawlerException as e:
                 rpt.append(str(e))

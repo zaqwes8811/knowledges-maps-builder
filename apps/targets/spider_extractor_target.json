@@ -1,0 +1,13 @@
+{
+  "extention list": [
+    "odt", 
+    "doc", 
+    "srt", 
+    "pdf"
+  ], 
+  "ignored dir": [], 
+  "index name": "test_index", 
+  "root": [
+    "d:/doc_pdf_odt"
+  ]
+}
