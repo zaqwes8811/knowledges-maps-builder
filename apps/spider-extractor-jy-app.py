@@ -75,8 +75,10 @@ def main(spider_target_fname):
         path_to_index = tmp_root
         path_to_tmp_node = tmp_root+'/'+node
         result, err = extractor.process(url, path_to_tmp_node)
+        print result, err
         if err[0]:
-            rpt.append(err[1])   
+            rpt.append(err[1])  
+        break 
         
     return rpt
 

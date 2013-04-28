@@ -4,19 +4,52 @@ Created on 22.04.2013
 
 @author: Igor
 '''
-import spiders_processors.docs_spider as docs_spider
+# Sys
+import json
+import os
 
-
-        
-def printer(msg):
-    print msg
+# App
+import dals.local_host.local_host_io_wrapper as dal
+from app_utils import printer
+from crawlers import kKeyIndexName
+from crosscuttings import tools
+import nlp_components as nlp
 
 if __name__=='__main__':
+    spider_target_fname = 'targets/spider_extractor_target' 
+    # Задание загружаем из файла
+    json_target, err = dal.read_utf_file_to_list_lines(spider_target_fname+'.json')
+    if not json_target:
+        print 'Failure occure: ', err[1]
+        var = raw_input("Press any key.")
+        print 'Quit'
+        exit()
+
+    target = json.loads(' '.join(json_target))
+    map(printer, target.items())
+    index_name = target[kKeyIndexName]
+    app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
+    print app_folder, index_path, index_root, tmp_root
     
-    
-    result = docs_spider.get_docs()
-    map(printer, result)
-    
+    # TODO(zaqwes): узлы лучше брать из задания
+    nodes = [d for d in os.listdir(tmp_root) if os.path.isdir(os.path.join(tmp_root, d))]
+    for node in nodes:
+        path_to_node = tmp_root+'/'+node
+        items = [path_to_node+'/'+d for d in os.listdir(path_to_node) if d.split('.')[-1] == 'ptxt']
+        # Для каждого из файлов в узле
+        result_data_one = []
+        for item in items:
+            print item
+            content_list, err = dal.read_utf_file_to_list_lines(item)
+            print content_list, err
+            nlp.split_to_sentents(content_list, result_data_one)
+            
+        map(printer, result_data_one)
+        # Пути к файлам готов
+        break
+        
+        
+    # Получаем список узлов
         
     """
     # Каждый файл отдельно
