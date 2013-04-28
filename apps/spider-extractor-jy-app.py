@@ -4,27 +4,42 @@ Created on 22.04.2013
 
 @author: кей
 '''
-import json
+import traceback
+try:
+    import sys
+    import json
+    
+    sys.path.append('../src')
+    sys.path.append('../no-jython-libs')
+    sys.path.append('D:/work-libs/java/tika-app-1.3.jar')
+    
+    # Java
+    import java.text.BreakIterator as BreakIterator
+    import java.util.Locale as Locale
+    import java.lang.System as System
+    
+    # App
+    import dals.local_host.local_host_io_wrapper as dal
+    from nlp_components import split_to_sentents
+    from app_utils import printer
+    from crosscuttings import tools
+    
+    # units
+    from crawlers import get_node_name
+    from crawlers import get_url
+    from crawlers import get_path_tasks
+    from crawlers import kKeyIndexName
+    
+    # ToText convertors
+    from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
 
-# Java
-import java.text.BreakIterator as BreakIterator
-import java.util.Locale as Locale
-import java.lang.System as System
-
-# App
-import dals.local_host.local_host_io_wrapper as dal
-from nlp_components import split_to_sentents
-from app_utils import printer
-from crosscuttings import tools
-
-# units
-from crawlers import get_node_name
-from crawlers import get_url
-from crawlers import get_path_tasks
-from crawlers import kKeyIndexName
-
-# ToText convertors
-from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
+except:
+    formatted_lines = traceback.format_exc().splitlines()
+    err_msg = '\n'.join(formatted_lines) 
+    print err_msg
+    print sys.path
+    var = raw_input("Press any key.")
+    exit()
 
 def main(spider_target_fname):
     # Задание получено в предыдущий сериях
