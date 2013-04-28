@@ -1,4 +1,5 @@
 # coding: utf-8
+# Rewrite to Java! No work in standalone!
 '''
 Created on 22.04.2013
 
@@ -7,10 +8,13 @@ Created on 22.04.2013
 import traceback
 try:
     import sys
+    import os
     import json
     
     sys.path.append('../src')
     sys.path.append('../no-jython-libs')
+    
+    #"""
     sys.path.append('D:/work-libs/java/tika-app-1.3.jar')
     sys.path.append('C:/Program Files (x86)/Java/jre6/lib/resources.jar')
     sys.path.append('C:/Program Files (x86)/Java/jre6/lib/rt.jar')
@@ -21,12 +25,7 @@ try:
     sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/localedata.jar')
     sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunjce_provider.jar')
     sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunmscapi.jar')
-    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunpkcs11.jar')
-    
-    # Java
-    import java.text.BreakIterator as BreakIterator
-    import java.util.Locale as Locale
-    import java.lang.System as System
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunpkcs11.jar')#"""
     
     # App
     import dals.local_host.local_host_io_wrapper as dal
@@ -42,15 +41,28 @@ try:
     
     # ToText convertors
     from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
+    
+    # Java
+    import java.text.BreakIterator as BreakIterator
+    import java.util.Locale as Locale
+    import java.lang.System as System
+    
+    
 
 except:
+    from app_utils import printer
     formatted_lines = traceback.format_exc().splitlines()
     err_msg = '\n'.join(formatted_lines) 
     print err_msg
-    print sys.path
+    #print sys.path
+    
+    map(printer, sys.path)
+    map(printer, os.environ.items())
+
     var = raw_input("Press any key.")
     exit()
 map(printer, sys.path)
+map(printer, os.environ.items())
 
 def main(spider_target_fname):
     # Задание получено в предыдущий сериях
