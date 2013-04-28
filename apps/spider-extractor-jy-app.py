@@ -12,6 +12,16 @@ try:
     sys.path.append('../src')
     sys.path.append('../no-jython-libs')
     sys.path.append('D:/work-libs/java/tika-app-1.3.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/resources.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/rt.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/jsse.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/jce.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/charsets.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/dnsns.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/localedata.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunjce_provider.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunmscapi.jar')
+    sys.path.append('C:/Program Files (x86)/Java/jre6/lib/ext/sunpkcs11.jar')
     
     # Java
     import java.text.BreakIterator as BreakIterator
@@ -40,6 +50,7 @@ except:
     print sys.path
     var = raw_input("Press any key.")
     exit()
+map(printer, sys.path)
 
 def main(spider_target_fname):
     # Задание получено в предыдущий сериях

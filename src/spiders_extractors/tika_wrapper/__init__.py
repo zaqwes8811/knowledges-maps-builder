@@ -87,14 +87,14 @@ class TextExtractorFromOdtDocPdf(object):
         def get_fname_for_save(fname):
             fname = fname.replace('\\','/')
             only_fname = fname.split('/')[-1]
-            ofname = path_to_node+'/'+only_fname+'.ptxt'
-            return ofname
+            output_fname = path_to_node+'/'+only_fname+'.ptxt'
+            return output_fname
         
         def get_fname_for_save_meta(fname):
             fname = fname.replace('\\','/')
             only_fname = fname.split('/')[-1]
-            ofname = path_to_node+'/'+only_fname+'.meta'
-            return ofname
+            output_fname = path_to_node+'/'+only_fname+'.meta'
+            return output_fname
         
         
         def file_is_enabled(fname):
@@ -129,8 +129,10 @@ class TextExtractorFromOdtDocPdf(object):
         
         input_var = None
         
-        ofname = get_fname_for_save(input_fname)  # Файл временный, он же выходной
-        out_file = File(ofname)  # Врядли выкенет исключение
+        output_fname = get_fname_for_save(input_fname)  # Файл временный, он же выходной
+        print output_fname
+        out_file = File(output_fname)  # Врядли выкенет исключение
+        ofile_stream = FileOutputStream(out_file)
         lang = None
         try:
             # TODO(zaqwes): не очень понятно, что здесь происходит
@@ -150,11 +152,15 @@ class TextExtractorFromOdtDocPdf(object):
             # На данный момент сохраняем в промежуточный файл на диске, но можно и ускорить
             # например, через отображение на память
             input_var = TikaInputStream.get(url, self._metadata);
-            handler = BodyContentHandler(FileOutputStream(out_file))#self._outputstream);
+            handler = BodyContentHandler(ofile_stream)
             self._parser.parse(input_var, handler, self._metadata, self._context);
             
+            if ofile_stream:
+                ofile_stream.close()
+                
+            return 'TEST', (1, 'TEST')
             # Преобразуем в unicode
-            java_in = BufferedReader(FileReader(ofname))
+            java_in = BufferedReader(FileReader(output_fname))
             writer = ProfilingWriter();
             while True:
                 s = String()
@@ -178,14 +184,14 @@ class TextExtractorFromOdtDocPdf(object):
             
             meta_fname = get_fname_for_save_meta(input_fname)
             # Сохраняем результат 
-            dal.write_result_file(result_utf8, ofname)
+            dal.write_result_file(result_utf8, output_fname)
             dal.write_result_file([json.dumps(metadata, sort_keys=True, indent=2)], meta_fname)
         
         except IOException as e:
             err_code = 1
             err_msg = 'Error: io.'
             e.printStackTrace()
-            return ofname, err_code, err_msg
+            return output_fname, err_code, err_msg
         except TikaException as e:
             # Отключит обработку? Нет не отключит, т.к. исключение поймано
             e.printStackTrace()
@@ -199,7 +205,7 @@ class TextExtractorFromOdtDocPdf(object):
                     e.printStackTrace();
                     
         # Подводим итоги
-        return ((ofname, lang), (0, ''))
+        return ((output_fname, lang), (0, ''))
         
         
     # TODO(zaqwes): русский язык определить не может    
