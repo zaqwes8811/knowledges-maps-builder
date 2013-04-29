@@ -17,10 +17,11 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ProcessorTargets {
-  final static int NODE_NAME = 1;
+  final static int NODE_NAME = 0;
   final static int INDEX_URL = 1;
 
   public void runParser(String targetPartPath) {
+    // Строка задания = [Node name]*url*...
     try {
       BufferedReader java_in = new BufferedReader(new FileReader(targetPartPath+".txt"));
       //writer = ProfilingWriter();
@@ -29,10 +30,13 @@ public class ProcessorTargets {
         if (s == null)
           break;
 
-        Iterable<String> result = Splitter.on('*')
-                                          .trimResults()
-                                          .omitEmptyStrings()
-                                          .split(s);
+        Iterable<String> result =
+            Splitter.on('*')
+                    .trimResults()
+                    .omitEmptyStrings()
+                    .split(s);
+
+        // Строка задания по частям
         List<String> elements = Lists.newArrayList(result);
         String url = elements.get(INDEX_URL);
         print(url);
