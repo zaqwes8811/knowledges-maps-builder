@@ -20,11 +20,13 @@ public class ProcessorTargets {
   final static int NODE_NAME = 0;
   final static int INDEX_URL = 1;
 
-  public void runParser(String targetPartPath) {
+  public void runParser(String targetPartPath) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
+    String  targetPartPathUrlMapper = targetPartPath+".txt";
     try {
-      BufferedReader java_in = new BufferedReader(new FileReader(targetPartPath+".txt"));
-      //writer = ProfilingWriter();
+      BufferedReader java_in = new BufferedReader(new FileReader(targetPartPathUrlMapper));
+
+      // Получаем строку задания
       while (true) {
         String s = java_in.readLine();
         if (s == null)
@@ -40,15 +42,14 @@ public class ProcessorTargets {
         List<String> elements = Lists.newArrayList(result);
         String url = elements.get(INDEX_URL);
         print(url);
-
       }
     } catch (FileNotFoundException e) {
       e.printStackTrace();
-
+      throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
     }
     catch (IOException e) {
       e.printStackTrace();
-
+      throw new CrosscuttingsException("Error on read file - "+targetPartPathUrlMapper);
     }
   }
 

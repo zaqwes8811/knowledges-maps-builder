@@ -11,10 +11,14 @@ import org.junit.Test;
  */
 public class ProcessorTargetsTest {
   @Test
-  public void testRunParser() throws Exception {
+  public void testRunParser() {
     ProcessorTargets testObj = new ProcessorTargets();
 
     String spiderTargetFname = "apps/targets/spider_extractor_target";
-    testObj.runParser(spiderTargetFname);
+    try {
+      testObj.runParser(spiderTargetFname);
+    } catch (CrosscuttingsException e) {
+      System.out.println(e.getMessage());
+    }
   }
 }
