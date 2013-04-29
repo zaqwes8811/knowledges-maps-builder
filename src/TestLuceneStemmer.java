@@ -25,8 +25,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
-//import com.google.gson.internal.LinkedHashTreeMap;
-//import com.google.gson.internal
+//import com.google.gson.internal.LinkedHashTreeMap;  // in 2.2.3 not in 2.2.2
+import com.google.gson.internal.LinkedHashTreeMap;
 
 public class TestLuceneStemmer {
     public String stem(String fname) {
