@@ -27,7 +27,7 @@ public class ProcessorTargets {
   final static int NODE_NAME = 0;
   final static int INDEX_URL = 1;
 
-  public void runParser(String targetPartPath) throws CrosscuttingsException {
+  public List<List<String>> runParser(String targetPartPath) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
     String  targetPartPathUrlMapper = targetPartPath+".txt";
     List<List<String>> listUrls = new ArrayList<List<String>>();
@@ -57,7 +57,7 @@ public class ProcessorTargets {
 
         print(resultItem);
       }
-
+      return listUrls;
     } catch (FileNotFoundException e) {
       e.printStackTrace();
       throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
@@ -72,7 +72,7 @@ public class ProcessorTargets {
     //}
   }
 
-  private void print(Object msg) {
+  public static void print(Object msg) {
       System.out.println(msg);
   }
 

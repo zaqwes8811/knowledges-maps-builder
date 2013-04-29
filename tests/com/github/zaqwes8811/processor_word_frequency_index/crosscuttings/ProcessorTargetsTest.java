@@ -2,6 +2,8 @@ package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
 
 import org.junit.Test;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: кей
@@ -16,7 +18,9 @@ public class ProcessorTargetsTest {
 
     String spiderTargetFname = "apps/targets/spider_extractor_target";
     try {
-      testObj.runParser(spiderTargetFname);
+      List<List<String>> listTargets = testObj.runParser(spiderTargetFname);
+      for (List<String> target : listTargets)
+        ProcessorTargets.print(target);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }
