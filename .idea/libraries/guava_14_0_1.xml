@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="snakeyaml-1.12">
+  <library name="guava-14.0.1">
     <CLASSES>
-      <root url="jar://D:/home/work-libs/java/snakeyaml-1.12.jar!/" />
+      <root url="jar://D:/home/work-libs/java/guava-14.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

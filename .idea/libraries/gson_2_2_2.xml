@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="snakeyaml-1.12">
+  <library name="gson-2.2.2">
     <CLASSES>
-      <root url="jar://D:/home/work-libs/java/snakeyaml-1.12.jar!/" />
+      <root url="jar://D:/home/work-libs/java/gson-2.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
