@@ -9,16 +9,28 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+      Main configurer = new Main();
+      System.out.println(configurer.getPathToAppFolder());
+    }
 
-      String path_to_cfg = "";
+    public String getPathToAppFolder() {
+      String path_to_cfg = "apps/cfgs/app_cfg.yaml";
       Yaml yaml = new Yaml();
+      //InputStream input;
       try {
-        InputStream input = new FileInputStream(new File("apps/cfgs/app_cfg.yaml"));
+        InputStream input = new FileInputStream(new File(path_to_cfg));
         Map<String, Object> object = (Map<String, Object>) yaml.load(input);
-        System.out.println(object);
+        Map topCfg = (Map)object;
+        Map scriberCfg = (Map)((Map)topCfg.get("App")).get("Scriber");
+
+
+        return (String)scriberCfg.get("app_folder");
       } catch (FileNotFoundException e) {
         e.printStackTrace();
+      } finally {
+        //if (input != null)
+        //  input.close();
       }
+      return null;
     }
 }
