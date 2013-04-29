@@ -6,31 +6,23 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Map;
 
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
+
 public class Main {
 
     public static void main(String[] args) {
-      Main configurer = new Main();
-      System.out.println(configurer.getPathToAppFolder());
-    }
-
-    public String getPathToAppFolder() {
-      String path_to_cfg = "apps/cfgs/app_cfg.yaml";
-      Yaml yaml = new Yaml();
-      //InputStream input;
+      AppConfigurer configurer = new AppConfigurer();
       try {
-        InputStream input = new FileInputStream(new File(path_to_cfg));
-        Map<String, Object> object = (Map<String, Object>) yaml.load(input);
-        Map topCfg = (Map)object;
-        Map scriberCfg = (Map)((Map)topCfg.get("App")).get("Scriber");
+        String pathToAppFolder = configurer.getPathToAppFolder();
+        //
+        System.out.println(pathToAppFolder);
 
-
-        return (String)scriberCfg.get("app_folder");
-      } catch (FileNotFoundException e) {
-        e.printStackTrace();
-      } finally {
-        //if (input != null)
-        //  input.close();
+      } catch (CrosscuttingsException e) {
+        System.out.println(e.getMessage());
       }
-      return null;
+
+
+
     }
 }
