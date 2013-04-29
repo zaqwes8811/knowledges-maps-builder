@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/snakeyaml_1_12.xml" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\.idea\ant.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\app-raw-mapreduce.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\content-translate-assistant.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/spider_extractor_jy_app.py" afterPath="$PROJECT_DIR$/apps/spider_extractor_jy_app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\Main_.java" afterPath="$PROJECT_DIR$/src/TikaWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367248849023" ignored="false" />
     <file path="/TikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367249762687" ignored="false" />
+    <file path="/Main.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367249837356" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +66,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+            <state line="5" column="30" selection-start="122" selection-end="122" vertical-scroll-proportion="0.1574074">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TikaWrapper.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TikaWrapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TikaWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="14" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.72407407">
+            <state line="60" column="14" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,6 +103,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/TikaWrapper.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -322,16 +317,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/TikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+        <state line="60" column="14" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TikaWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="14" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.72407407">
+        <state line="5" column="30" selection-start="122" selection-end="122" vertical-scroll-proportion="0.1574074">
           <folding />
         </state>
       </provider>
