@@ -16,7 +16,7 @@ import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.ContentHandler;
 import org.apache.tika.Tika;
 
-public class Main {
+public class TikaWrapper {
   private OutputStream outputstream;
   private ParseContext context;
   private Detector detector;
@@ -24,7 +24,7 @@ public class Main {
   private Metadata metadata;
   private String extractedText;
 
-  public Main() {
+  public TikaWrapper() {
     context = new ParseContext();
     detector = new DefaultDetector();
     parser = new AutoDetectParser(detector);
@@ -56,7 +56,7 @@ public class Main {
   }
 
   public static void main(String args[]) throws Exception {
-      Main textExtractor = new Main();
+    TikaWrapper textExtractor = new TikaWrapper();
       String file = "t.odt";
       textExtractor.process(file);
       textExtractor.getString();

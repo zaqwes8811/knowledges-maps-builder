@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/content-translate-assistant.iml" filepath="$PROJECT_DIR$/content-translate-assistant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/processor-word-frequency-index.iml" filepath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
     </modules>
   </component>
 </project>
