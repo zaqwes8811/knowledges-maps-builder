@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
+//import com.google.gson.internal.LinkedHashTreeMap;  // in 2.2.3 not in 2.2.2
 import com.google.gson.internal.LinkedHashTreeMap;
 
 public class TestLuceneStemmer {
@@ -54,35 +55,35 @@ public class TestLuceneStemmer {
             String s;
 
 
-            HashMap<String, LinkedHashTreeMap<String, Integer>> result_collection =
-                    new HashMap<String, LinkedHashTreeMap<String, Integer>>();
+            HashMap<String, HashMap<String, Integer>> result_collection =
+                    new HashMap<String, HashMap<String, Integer>>();
             while ((s = in.readLine())!= null) {
 
                 Gson gson = new Gson();
 
 
                 //System.out.println(gson.fromJson(result, List.class));
-                HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>> collectionType =
-                    new HashMap<String, ArrayList<LinkedHashTreeMap<Integer,String>>>();
+                HashMap<String, ArrayList<HashMap<Integer, String>>> collectionType =
+                    new HashMap<String, ArrayList<HashMap<Integer,String>>>();
 
 
                 //new Map<String, List<Map<Integer, String>>>();
-                HashMap<String, ArrayList<LinkedHashTreeMap<Integer, String>>>  type =
+                HashMap<String, ArrayList<HashMap<Integer, String>>>  type =
                         gson.fromJson(s, collectionType.getClass());
 
                 // Можно обрабатывать
 
-                for (Map.Entry<String, ArrayList<LinkedHashTreeMap<Integer, String>>> entry : type.entrySet()) {
+                for (Map.Entry<String, ArrayList<HashMap<Integer, String>>> entry : type.entrySet()) {
                     String node_name = entry.getKey();
-                    ArrayList<LinkedHashTreeMap<Integer, String>> value = entry.getValue();
+                    ArrayList<HashMap<Integer, String>> value = entry.getValue();
                     System.out.println("src: "+value.size());
-                    LinkedHashTreeMap<String, Integer> result_list = new
-                            LinkedHashTreeMap<String, Integer>();
+                    HashMap<String, Integer> result_list = new
+                            HashMap<String, Integer>();
                     //System.out.println(value);
                     result_collection.put(node_name, result_list);
                     int len = value.size();
                     for(int i = 0; i < len; ++i) {
-                        LinkedHashTreeMap<Integer, String> wordTuple = value.get(i);
+                        HashMap<Integer, String> wordTuple = value.get(i);
                         // Слова
                         for (Map.Entry<Integer, String> entry_word : wordTuple.entrySet()) {
                             Object count = entry_word.getKey();

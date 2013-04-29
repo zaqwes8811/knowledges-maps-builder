@@ -1,30 +1,58 @@
 # coding: utf-8
+# Rewrite to Java! No work in standalone!
 '''
 Created on 22.04.2013
 
 @author: кей
 '''
-import json
+import traceback
+try:
+    import sys
+    import os
+    import json
+    
+    sys.path.append('../src')
+    sys.path.append('../no-jython-libs')
+    
+    #"""
 
-# Java
-import java.text.BreakIterator as BreakIterator
-import java.util.Locale as Locale
-import java.lang.System as System
+    
+    # App
+    import dals.local_host.local_host_io_wrapper as dal
+    from nlp_components import split_to_sentents
+    from app_utils import printer
+    from crosscuttings import tools
+    
+    # units
+    from crawlers import get_node_name
+    from crawlers import get_url
+    from crawlers import get_path_tasks
+    from crawlers import kKeyIndexName
+    
+    # ToText convertors
+    from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
+    
+    # Java
+    import java.text.BreakIterator as BreakIterator
+    import java.util.Locale as Locale
+    import java.lang.System as System
+    
+    
 
-# App
-import dals.local_host.local_host_io_wrapper as dal
-from nlp_components import split_to_sentents
-from app_utils import printer
-from crosscuttings import tools
+except:
+    from app_utils import printer
+    formatted_lines = traceback.format_exc().splitlines()
+    err_msg = '\n'.join(formatted_lines) 
+    print err_msg
+    #print sys.path
+    
+    map(printer, sys.path)
+    map(printer, os.environ.items())
 
-# units
-from crawlers import get_node_name
-from crawlers import get_url
-from crawlers import get_path_tasks
-from crawlers import kKeyIndexName
-
-# ToText convertors
-from spiders_extractors.tika_wrapper import TextExtractorFromOdtDocPdf
+    var = raw_input("Press any key.")
+    exit()
+map(printer, sys.path)
+map(printer, os.environ.items())
 
 def main(spider_target_fname):
     # Задание получено в предыдущий сериях
@@ -60,8 +88,10 @@ def main(spider_target_fname):
         path_to_index = tmp_root
         path_to_tmp_node = tmp_root+'/'+node
         result, err = extractor.process(url, path_to_tmp_node)
+        print result, err
         if err[0]:
-            rpt.append(err[1])   
+            rpt.append(err[1])  
+        break 
         
     return rpt
 

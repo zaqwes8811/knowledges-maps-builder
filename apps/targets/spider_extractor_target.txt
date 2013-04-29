@@ -1,5 +1,4 @@
-[11832]* d:/doc_pdf_odt/11832.pdf
-# afsdf
+[ 11832 ]* d:/doc_pdf_odt/11832.pdf
 [date_time]* d:/doc_pdf_odt/date_time.doc
 [drm_ethe1a]* d:/doc_pdf_odt/drm_ethe1a.doc
 [JSF_AV_C++_Coding_Standards_Rev_C]* d:/doc_pdf_odt/JSF_AV_C++_Coding_Standards_Rev_C.doc
