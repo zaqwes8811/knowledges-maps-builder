@@ -1,3 +1,5 @@
+package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper;
+
 import java.io.File;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -14,26 +16,16 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 
 import org.xml.sax.ContentHandler;
-import org.apache.tika.Tika;
 
 public class TikaWrapper {
-  private OutputStream outputstream;
-  private ParseContext context;
-  private Detector detector;
-  private Parser parser;
-  private Metadata metadata;
-  private String extractedText;
-
-  public TikaWrapper() {
-    context = new ParseContext();
-    detector = new DefaultDetector();
-    parser = new AutoDetectParser(detector);
+  public void process(String filename) {
+    ParseContext context = new ParseContext();
+    Detector detector = new DefaultDetector();
+    Parser parser = new AutoDetectParser(detector);
     context.set(Parser.class, parser);
-    outputstream = new ByteArrayOutputStream();
-    metadata = new Metadata();
-  }
+    OutputStream outputstream = new ByteArrayOutputStream();
+    Metadata metadata = new Metadata();
 
-  public void process(String filename) throws Exception {
     URL url;
     File file = new File(filename);
     if (file.isFile()) {
@@ -45,20 +37,10 @@ public class TikaWrapper {
     ContentHandler handler = new BodyContentHandler(outputstream);
     parser.parse(input, handler, metadata, context);
     input.close();
-  }
 
-
-  public void getString() {
     //Get the text into a String object
-    extractedText = outputstream.toString();
+    String extractedText = outputstream.toString();
     //Do whatever you want with this String object.
     System.out.println(extractedText);
-  }
-
-  public static void main(String args[]) throws Exception {
-    TikaWrapper textExtractor = new TikaWrapper();
-      String file = "t.odt";
-      textExtractor.process(file);
-      textExtractor.getString();
   }
 }

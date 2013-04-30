@@ -3,6 +3,7 @@ package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
+import com.google.common.io.Closer;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -23,6 +24,18 @@ import java.util.List;
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
+// TODO(zaqwes): разобраться с Guava Closer
+  /*
+  * Closer closer = Closer.create();
+try {
+   OutputStream stream = closer.register(openOutputStream());
+   // что-то делаем со stream
+} catch (Throwable e) { // ловим абсолютно все исключения (и даже Error'ы)
+   throw closer.rethrow(e);
+} finally {
+   closer.close();
+}
+  * */
 public class ProcessorTargets {
   final static int NODE_NAME = 0;
   final static int INDEX_URL = 1;
@@ -31,8 +44,11 @@ public class ProcessorTargets {
     // Строка задания = [Node name]*url*...
     String  targetPartPathUrlMapper = targetPartPath+".txt";
     List<List<String>> listUrls = new ArrayList<List<String>>();
+    //Closer closer = Closer.create();
+
     try {
       BufferedReader in = new BufferedReader(new FileReader(targetPartPathUrlMapper));
+      //closer.register(in);
 
       // Получаем строку задания
       while (true) {

@@ -20,7 +20,7 @@ import java.util.Map;
 public class AppConfigurer {
 
   public String getPathToAppFolder() throws CrosscuttingsException {
-    String path_to_cfg = "apps/cfgs/app_cfg.yamlr";
+    String path_to_cfg = "apps/cfgs/app_cfg.yaml";
     Yaml yaml = new Yaml();
     //InputStream input;
     try {
