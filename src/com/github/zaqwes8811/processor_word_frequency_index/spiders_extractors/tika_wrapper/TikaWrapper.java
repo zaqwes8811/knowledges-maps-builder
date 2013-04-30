@@ -23,7 +23,7 @@ public class TikaWrapper {
       Detector detector = new DefaultDetector();
       Parser parser = new AutoDetectParser(detector);
       context.set(Parser.class, parser);
-      OutputStream outputstream = new ByteArrayOutputStream();
+      OutputStream outputstream = new ByteArrayOutputStream(); // TODO(zaqwes): bad!!! No closed!!
       Metadata metadata = new Metadata();
 
       URL url;
@@ -36,11 +36,12 @@ public class TikaWrapper {
       InputStream input = TikaInputStream.get(url, metadata);
       ContentHandler handler = new BodyContentHandler(outputstream);
       parser.parse(input, handler, metadata, context);
+
+      // TODO(zaqwes): bad!!!
       input.close();
 
-      //Get the text into a String object
+      // Get the text into a String object
       String extractedText = outputstream.toString();
-      //Do whatever you want with this String object.
 
       // Пишем в файл. Формать должен быть UTF-8
       System.out.println(extractedText);

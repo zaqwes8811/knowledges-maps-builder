@@ -12,6 +12,7 @@ import org.junit.Test;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.TikaWrapper;
 
 public class SpiderExtractorTest {
 
@@ -27,12 +28,17 @@ public class SpiderExtractorTest {
         ProcessorTargets processorTargets = new ProcessorTargets();
         String spiderTargetFname = "apps/targets/spider_extractor_target";
         List<List<String>> listTargets = processorTargets.runParser(spiderTargetFname);
-        for (List<String> target : listTargets)
-          ProcessorTargets.print(target);
+        for (List<String> target : listTargets) {
+          //ProcessorTargets.print(target);
 
         // Выделяем текст
         // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
-
+        //for (List<String> target : listTargets) {
+          ProcessorTargets.print(target);
+          TikaWrapper tikaWrapper = new TikaWrapper();
+          tikaWrapper.process(target.get(1));
+          break;
+        }
 
       } catch (CrosscuttingsException e) {
         System.out.println(e.getMessage());

@@ -71,7 +71,8 @@ public class ProcessorTargets {
         List<String> resultItem = elements.subList(NODE_NAME, INDEX_URL+1);
         resultItem.set(NODE_NAME, purgedNodeName);
 
-        print(resultItem);
+        //print(resultItem);
+        listUrls.add(resultItem);
       }
       return listUrls;
     } catch (FileNotFoundException e) {
