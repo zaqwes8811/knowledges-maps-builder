@@ -44,42 +44,39 @@ public class ProcessorTargets {
     // Строка задания = [Node name]*url*...
     String  targetPartPathUrlMapper = targetPartPath+".txt";
     List<List<String>> listUrls = new ArrayList<List<String>>();
-    //Closer closer = Closer.create();
-
     try {
-      BufferedReader in = new BufferedReader(new FileReader(targetPartPathUrlMapper));
-      //closer.register(in);
+      Closer closer = Closer.create();
+      try {
+        BufferedReader in = closer.register(new BufferedReader(new FileReader(targetPartPathUrlMapper)));
+        // Получаем строку задания
+        while (true) {
+          String s = in.readLine();
+          if (s == null) break;
 
-      // Получаем строку задания
-      while (true) {
-        String s = in.readLine();
-        if (s == null)
-          break;
+          // Дробим задания на блоки
+          Iterable<String> result =
+              Splitter.on('*').trimResults().omitEmptyStrings().split(s);
 
-        // Дробим задания на блоки
-        Iterable<String> result =
-            Splitter.on('*')
-                    .trimResults()
-                    .omitEmptyStrings()
-                    .split(s);
+          // Строка задания по частям
+          List<String> elements = Lists.newArrayList(result);
+          String nodeName = elements.get(NODE_NAME);
 
-        // Строка задания по частям
-        List<String> elements = Lists.newArrayList(result);
-        String nodeName = elements.get(NODE_NAME);
+          String purgedNodeName = extractNodeName(nodeName);
+          List<String> resultItem = elements.subList(NODE_NAME, INDEX_URL+1);
+          resultItem.set(NODE_NAME, purgedNodeName);
 
-        String purgedNodeName = extractNodeName(nodeName);
-        List<String> resultItem = elements.subList(NODE_NAME, INDEX_URL+1);
-        resultItem.set(NODE_NAME, purgedNodeName);
-
-        //print(resultItem);
-        listUrls.add(resultItem);
+          listUrls.add(resultItem);
+        }
+        return listUrls;
+      } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
+      } catch (Throwable e) { // must catch Throwable
+        throw closer.rethrow(e);
+      } finally {
+         closer.close();
       }
-      return listUrls;
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-      throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
-    }
-    catch (IOException e) {
+    } catch (IOException e) {
       e.printStackTrace();
       throw new CrosscuttingsException("Error on read file - "+targetPartPathUrlMapper);
     }

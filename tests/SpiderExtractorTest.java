@@ -36,7 +36,8 @@ public class SpiderExtractorTest {
         //for (List<String> target : listTargets) {
           ProcessorTargets.print(target);
           TikaWrapper tikaWrapper = new TikaWrapper();
-          tikaWrapper.process(target.get(1));
+          String url = target.get(1);
+          tikaWrapper.process(url);
           break;
         }
 
