@@ -4,12 +4,16 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -106,17 +110,50 @@ public class ProcessorTargets {
     Joiner joiner = Joiner.on("").skipNulls();
 
     Iterable<String> purgeNode =
-      Splitter.on('[')
-      .trimResults()
-      .omitEmptyStrings()
-      .split(line);
+        Splitter.on('[').trimResults().omitEmptyStrings().split(line);
 
     String tmp = joiner.join(purgeNode);
     purgeNode =
-      Splitter.on(']')
-        .trimResults()
-        .omitEmptyStrings()
-        .split(tmp);
+      Splitter.on(']').trimResults().omitEmptyStrings().split(tmp);
     return joiner.join(purgeNode);
+  }
+
+  public String getNodeName() {
+    String indexCfgFilename = "apps/targets/spider_extractor_target.json";
+    try {
+      Closer closer = Closer.create();
+      try {
+        BufferedReader in = closer.register(
+          new BufferedReader(new FileReader(indexCfgFilename)));
+
+        String s;
+        StringBuilder readedBuffer = new StringBuilder();
+        while ((s = in.readLine())!= null) {  // TODO(zaqwes) TOTH: может лучше разом прочитать?
+          readedBuffer.append(s);
+        }
+        String jsonSettings = readedBuffer.toString();
+        print(jsonSettings);
+
+        // Разбираем
+        // TODO(zaqwes) TOTH: Может все конфигурирование через yaml сделать, хотя в json проще на веб
+        // TODO(zaqwes) TOTH:   передавать, а задание я на веб буду передавать?
+        Gson gson = new Gson();
+        Type type = new TypeToken<HashMap<String, ArrayList<String>>>() {}.getType();
+        HashMap<String, List<String>> settings = gson.fromJson(jsonSettings, type);
+        print(settings);
+
+        //
+        return "TEST";
+      } catch (Throwable e) { // must catch Throwable
+        throw closer.rethrow(e);
+      } finally {
+        closer.close();
+      }
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return "TEST";
   }
 }

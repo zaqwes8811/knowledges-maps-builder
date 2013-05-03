@@ -27,6 +27,7 @@ public class SpiderExtractorTest {
         // Получаем имя индекса
         ProcessorTargets processorTargets = new ProcessorTargets();
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.json";
+        processorTargets.getNodeName();
 
         // Получаем цели
         /*

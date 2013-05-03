@@ -8,7 +8,7 @@
   "ignored dir": [
     "d:/Dropbox/.dropbox.cache"
   ], 
-  "index name": "test_index", 
+  "index name": ["test_index"],
   "root": [
     "d:/doc_pdf_odt"
   ]
