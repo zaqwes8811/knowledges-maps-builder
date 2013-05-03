@@ -19,26 +19,27 @@ public class SpiderExtractorTest {
   @Test
   public void testDevelopSpider() {
       try {
+        // Получаем путь к папке приложения
         AppConfigurer configurer = new AppConfigurer();
         String pathToAppFolder = configurer.getPathToAppFolder();
-        //
-        System.out.println(pathToAppFolder);
+        ProcessorTargets.print(pathToAppFolder);
 
-        // Получаем работы
+        // Получаем цели
         ProcessorTargets processorTargets = new ProcessorTargets();
-        String spiderTargetFname = "apps/targets/spider_extractor_target";
-        List<List<String>> listTargets = processorTargets.runParser(spiderTargetFname);
-        for (List<String> target : listTargets) {
-          //ProcessorTargets.print(target);
-
-        // Выделяем текст
-        // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
-        //for (List<String> target : listTargets) {
+        String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
+        List<List<String>> targets = processorTargets.runParser(spiderTargetsFilename);
+        for (List<String> target : targets) {
           ProcessorTargets.print(target);
+          String nodeName = target.get(ProcessorTargets.RESULT_NODE_NAME);
+          String pathToFile = target.get(ProcessorTargets.RESULT_PATH);
+          String fileName = target.get(ProcessorTargets.RESULT_FILENAME);
+
+          // Выделяем текст
+          // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
           TikaWrapper tikaWrapper = new TikaWrapper();
-          String url = target.get(1);
-          String nodeName = target.get(0);
-          tikaWrapper.process(url, nodeName, pathToAppFolder);
+          tikaWrapper.process(fileName, pathToFile, nodeName, pathToAppFolder);
+
+          // Формируем метаданные для каждой задачи
           break;
         }
 

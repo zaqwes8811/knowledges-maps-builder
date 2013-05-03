@@ -28,7 +28,10 @@ public class TikaWrapper {
 
 
 
-  public void process(String inFileName, String nodeName, String pathToAppFolder) {
+  public void process(String inFileName,
+                      String pathToSrcFile,
+                      String nodeName,
+                      String pathToAppFolder) {
     try {
       // Настраиваем пути
       String pathToNode = pathToAppFolder+"/"+nodeName;

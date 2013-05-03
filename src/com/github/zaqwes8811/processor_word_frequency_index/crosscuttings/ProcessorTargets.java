@@ -28,8 +28,13 @@ public class ProcessorTargets {
   public static void print(Object msg) {
     System.out.println(msg);
   }
-  final static int NODE_NAME = 0;
-  final static int INDEX_URL = 1;
+  public final static int NODE_NAME = 0;
+  public static int INDEX_URL = 1;
+
+  //
+  public static int RESULT_NODE_NAME = 0;
+  public static int RESULT_PATH = 1;
+  public static int RESULT_FILENAME = 2;
 
   // @precond: разделители пути как в linux - '/'
   //
@@ -55,36 +60,35 @@ public class ProcessorTargets {
     return result;
   }
 
-  public List<List<String>> runParser(String targetPartPath) throws CrosscuttingsException {
+  public List<List<String>> runParser(String pathToTarget) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
-    String  targetPartPathUrlMapper = targetPartPath+".txt";
     List<List<String>> resultTargets = new ArrayList<List<String>>();
     try {
       Closer closer = Closer.create();
       try {
-        BufferedReader in = closer.register(new BufferedReader(new FileReader(targetPartPathUrlMapper)));
+        BufferedReader in = closer.register(new BufferedReader(new FileReader(pathToTarget)));
         // Получаем строку задания
         while (true) {
           String s = in.readLine();
           if (s == null) break;
 
-          // Дробим задания на блоки
           Iterable<String> oneRawTarget =
               Splitter.on('*').trimResults().omitEmptyStrings().split(s);
 
-          // Строка задания по частям
           List<String> elements = Lists.newArrayList(oneRawTarget);
           String nodeName = elements.get(NODE_NAME);
           String url = elements.get(INDEX_URL);
+
           List<String> resultTarget = new ArrayList<String>();
-          resultTarget.add(extractNodeName(nodeName));
-          resultTarget.addAll(splitUrlToFilenameAndPath(url));
+          resultTarget.add(extractNodeName(nodeName));  // 0
+          resultTarget.addAll(splitUrlToFilenameAndPath(url));  // 1, 2
+
           resultTargets.add(resultTarget);
         }
         return resultTargets;
       } catch (FileNotFoundException e) {
         e.printStackTrace();
-        throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
+        throw new CrosscuttingsException("File no found - "+pathToTarget);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
@@ -92,7 +96,7 @@ public class ProcessorTargets {
       }
     } catch (IOException e) {
       e.printStackTrace();
-      throw new CrosscuttingsException("Error on read file - "+targetPartPathUrlMapper);
+      throw new CrosscuttingsException("Error on read file - "+pathToTarget);
     }
   }
 

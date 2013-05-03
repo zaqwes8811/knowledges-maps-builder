@@ -3,20 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367564075268" ignored="false" />
-    <file path="/TikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367563670251" ignored="false" />
+    <file path="/Dummy.txt" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367592548212" ignored="false" />
+    <file path="/TikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367594658415" ignored="false" />
     <file path="/Main.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255199465" ignored="false" />
     <file path="/TestLuceneStemmer.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367251621356" ignored="false" />
     <file path="/CrosscuttingsException.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255124086" ignored="false" />
     <file path="/AppConfigurer.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255050578" ignored="false" />
-    <file path="/fragment.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367564075268" ignored="false" />
+    <file path="/fragment.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367592555678" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367565385812" ignored="false" />
-    <file path="/ProcessorTargets.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367589599107" ignored="false" />
-    <file path="/SpiderExtractorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367407614079" ignored="false" />
+    <file path="/ProcessorTargets.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367592933500" ignored="false" />
+    <file path="/SpiderExtractorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367594576602" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,25 +76,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="35" selection-start="3135" selection-end="3135" vertical-scroll-proportion="-0.33638024">
+            <state line="82" column="21" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1773#1781#0" expanded="true" />
-                <element signature="e#2246#2260#0" expanded="true" />
-                <element signature="e#2970#2978#0" expanded="true" />
+                <element signature="e#1907#1915#0" expanded="true" />
+                <element signature="e#2317#2331#0" expanded="true" />
+                <element signature="e#2956#2964#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpiderExtractorTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SpiderExtractorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/SpiderExtractorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="36" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
+            <state line="36" column="30" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.60912055">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TikaWrapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="42" selection-start="1003" selection-end="1016" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,10 +148,10 @@
         <option value="$PROJECT_DIR$/apps/targets/spider_extractor_target.txt" />
         <option value="$PROJECT_DIR$/tests/Main.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurer.java" />
-        <option value="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java" />
+        <option value="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
       </list>
     </option>
   </component>
@@ -258,6 +270,68 @@
               <option name="myItemId" value="processor_word_frequency_index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders_extractors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor_word_frequency_index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders_extractors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tika_wrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor_word_frequency_index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -296,32 +370,15 @@
       <recent name="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProcessorTargetsTest">
-    <configuration default="false" name="TestProcessorTargets" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TestProcessorTargets" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.SpiderExtractorTest">
     <configuration default="false" name="TestLuceneStemmer" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TestLuceneStemmer" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -398,14 +455,36 @@
     <configuration default="false" name="ProcessorTargetsTest" type="JUnit" factoryName="JUnit">
       <module name="processor-word-frequency-index" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.processor_word_frequency_index.crosscuttings" />
       <option name="MAIN_CLASS_NAME" value="com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargetsTest" />
-      <option name="METHOD_NAME" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SpiderExtractorTest" type="JUnit" factoryName="JUnit">
+      <module name="processor-word-frequency-index" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpiderExtractorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -418,15 +497,14 @@
       <method />
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All tests" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TestProcessorTargets" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessorTargetsTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All tests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProcessorTargetsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SpiderExtractorTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestProcessorTargets" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
       </list>
     </recent_temporary>
   </component>
@@ -456,8 +534,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36547813" sideWeight="0.695962" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30403802" sideWeight="0.79254454" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36547813" sideWeight="0.760095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23990498" sideWeight="0.79254454" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -574,33 +652,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="200" selection-end="200" vertical-scroll-proportion="0.5175644" />
-      </provider>
-    </entry>
     <entry file="jar://D:/home/work-libs/java/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="864" selection-end="864" vertical-scroll-proportion="0.38202247" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="179" column="45" selection-start="5910" selection-end="6562" vertical-scroll-proportion="0.8018868" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="29" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tika_tmp.txt">
@@ -617,22 +676,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/SpiderExtractorTest.java">
+    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="36" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
+        <state line="13" column="32" selection-start="200" selection-end="200" vertical-scroll-proportion="0.3726813">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="934" selection-end="934" vertical-scroll-proportion="0.42429283">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="35" selection-start="3135" selection-end="3135" vertical-scroll-proportion="-0.33638024">
+        <state line="82" column="21" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1773#1781#0" expanded="true" />
-            <element signature="e#2246#2260#0" expanded="true" />
-            <element signature="e#2970#2978#0" expanded="true" />
+            <element signature="e#1907#1915#0" expanded="true" />
+            <element signature="e#2317#2331#0" expanded="true" />
+            <element signature="e#2956#2964#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/TikaWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="42" selection-start="1003" selection-end="1016" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/SpiderExtractorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="30" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.60912055">
+          <folding />
         </state>
       </provider>
     </entry>
