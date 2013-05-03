@@ -37,7 +37,8 @@ public class SpiderExtractorTest {
           ProcessorTargets.print(target);
           TikaWrapper tikaWrapper = new TikaWrapper();
           String url = target.get(1);
-          tikaWrapper.process(url);
+          String nodeName = target.get(0);
+          tikaWrapper.process(url, nodeName, pathToAppFolder);
           break;
         }
 

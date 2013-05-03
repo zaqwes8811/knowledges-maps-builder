@@ -14,6 +14,7 @@ import java.util.List;
 public class ProcessorTargetsTest {
   @Test
   public void testRunParser() {
+    print("\nNEW TEST");
     ProcessorTargets testObj = new ProcessorTargets();
 
     String spiderTargetFname = "apps/targets/spider_extractor_target";
@@ -24,5 +25,23 @@ public class ProcessorTargetsTest {
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }
+  }
+
+  @Test
+  public void testPathSplitter() {
+    print("\nNEW TEST");
+    ProcessorTargets testObj = new ProcessorTargets();
+
+    String spiderTargetFname = "apps/targets/spider_extractor_target.json";
+    try {
+      List<String> splittedPath =  testObj.splitPathToFile(spiderTargetFname);
+      print(splittedPath);
+    } catch (CrosscuttingsException e) {
+      System.out.println(e.getMessage());
+    }
+  }
+
+  static void print(Object msg) {
+    System.out.println(msg);
   }
 }

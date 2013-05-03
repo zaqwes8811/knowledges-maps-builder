@@ -24,21 +24,30 @@ import java.util.List;
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
-// TODO(zaqwes): разобраться с Guava Closer
-  /*
-  * Closer closer = Closer.create();
-try {
-   OutputStream stream = closer.register(openOutputStream());
-   // что-то делаем со stream
-} catch (Throwable e) { // ловим абсолютно все исключения (и даже Error'ы)
-   throw closer.rethrow(e);
-} finally {
-   closer.close();
-}
-  * */
 public class ProcessorTargets {
+  public static void print(Object msg) {
+    System.out.println(msg);
+  }
   final static int NODE_NAME = 0;
   final static int INDEX_URL = 1;
+
+  // @precond: разделители пути как в linux - '/'
+  //
+  // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
+  //   *.ptxt or *.meta
+  public List<String> splitPathToFile(String pathToFile) throws CrosscuttingsException {
+    print(pathToFile);
+    // Запрещаем windows-разделители
+    if (pathToFile.indexOf('\\') != -1) {
+      throw new CrosscuttingsException("Path content disabled separators. "+
+        "Need use *nix format - '/'. Path - "+pathToFile+"; Pos - "+pathToFile.indexOf('\\'));
+    }
+
+    // Путь первую проверку прошел
+    int lastIdx =  pathToFile.lastIndexOf('/');
+    print(pathToFile.substring(lastIdx+1, pathToFile.length()));
+    return null;
+  }
 
   public List<List<String>> runParser(String targetPartPath) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
@@ -65,6 +74,12 @@ public class ProcessorTargets {
           List<String> resultItem = elements.subList(NODE_NAME, INDEX_URL+1);
           resultItem.set(NODE_NAME, purgedNodeName);
 
+          // Имя файла
+          splitPathToFile(elements.get(INDEX_URL));
+          Iterable<String> splittedPath =
+            Splitter.on('/').trimResults().omitEmptyStrings().split("TEST");
+          List<String> elementsInvSlash = Lists.newArrayList(splittedPath);
+          resultItem.add(elementsInvSlash.get(elementsInvSlash.size()-1));
           listUrls.add(resultItem);
         }
         return listUrls;
@@ -80,15 +95,9 @@ public class ProcessorTargets {
       e.printStackTrace();
       throw new CrosscuttingsException("Error on read file - "+targetPartPathUrlMapper);
     }
-    // TODO(zaqwes) : Как быть с закрытием ресурса?
-    //finally {
-    //  in.close();
-    //}
   }
 
-  public static void print(Object msg) {
-      System.out.println(msg);
-  }
+
 
   // TODO(zaqwes): impl. very bad!!
   private String extractNodeName(String line) {
@@ -107,8 +116,6 @@ public class ProcessorTargets {
         .trimResults()
         .omitEmptyStrings()
         .split(tmp);
-
-    //print('*'+joiner.join(purgeNode)+'*');
     return joiner.join(purgeNode);
   }
 }
