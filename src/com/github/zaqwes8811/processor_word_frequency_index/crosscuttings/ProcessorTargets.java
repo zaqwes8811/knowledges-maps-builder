@@ -29,6 +29,11 @@ import java.util.List;
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
 public class ProcessorTargets {
+  /**
+   * @param msg - начало периода
+   * @throws IllegalArgument – если начало периода указано после конца
+   * @throws NullPointerException – если начало или конец периода нулевые
+   */
   public static void print(Object msg) {
     System.out.println(msg);
   }

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\apps\log.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tika_tmp.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tmp.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,24 +75,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="46" selection-start="5201" selection-end="5201" vertical-scroll-proportion="0.0">
+            <state line="34" column="24" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.45921987">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2035#2043#0" expanded="true" />
-                <element signature="e#2445#2459#0" expanded="true" />
-                <element signature="e#3084#3092#0" expanded="true" />
+                <element signature="e#2225#2233#0" expanded="true" />
+                <element signature="e#2635#2649#0" expanded="true" />
+                <element signature="e#3274#3282#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app_cfg.yaml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/cfgs/app_cfg.yaml">
+      <file leaf-file-name="crawler_schedule.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/targets/crawler_schedule.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.6028369">
+            <state line="8" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -249,24 +245,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cfgs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,7 +440,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -477,7 +455,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34764993" sideWeight="0.72565323" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34764993" sideWeight="0.72565323" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2743468" sideWeight="0.79254454" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -556,13 +534,6 @@
         <state line="179" column="45" selection-start="5910" selection-end="6562" vertical-scroll-proportion="0.8018868" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="934" selection-end="934" vertical-scroll-proportion="0.42429283">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="41" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.6123778">
@@ -622,6 +593,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/targets/crawler_schedule.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="33" selection-start="945" selection-end="945" vertical-scroll-proportion="0.46279493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="30" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
@@ -629,22 +614,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
+    <entry file="file://$PROJECT_DIR$/apps/cfgs/app_cfg.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="46" selection-start="5201" selection-end="5201" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2035#2043#0" expanded="true" />
-            <element signature="e#2445#2459#0" expanded="true" />
-            <element signature="e#3084#3092#0" expanded="true" />
-          </folding>
+        <state line="16" column="23" selection-start="428" selection-end="428" vertical-scroll-proportion="0.4822695">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cfgs/app_cfg.yaml">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.6028369">
-          <folding />
+        <state line="34" column="24" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.45921987">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2225#2233#0" expanded="true" />
+            <element signature="e#2635#2649#0" expanded="true" />
+            <element signature="e#3274#3282#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
