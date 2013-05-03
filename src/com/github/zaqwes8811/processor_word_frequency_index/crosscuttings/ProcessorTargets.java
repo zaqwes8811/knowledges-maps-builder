@@ -4,7 +4,6 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
-import sun.swing.BakedArrayList;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -36,7 +35,7 @@ public class ProcessorTargets {
   //
   // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
   //   *.ptxt or *.meta
-  public List<String> splitPathToFile(String fullPathToFile) throws CrosscuttingsException {
+  public List<String> splitUrlToFilenameAndPath(String fullPathToFile) throws CrosscuttingsException {
     // Запрещаем windows-разделители
     if (fullPathToFile.indexOf('\\') != -1) {
       throw new CrosscuttingsException("Path content disabled separators. "+
@@ -59,7 +58,7 @@ public class ProcessorTargets {
   public List<List<String>> runParser(String targetPartPath) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
     String  targetPartPathUrlMapper = targetPartPath+".txt";
-    List<List<String>> listUrls = new ArrayList<List<String>>();
+    List<List<String>> resultTargets = new ArrayList<List<String>>();
     try {
       Closer closer = Closer.create();
       try {
@@ -70,22 +69,19 @@ public class ProcessorTargets {
           if (s == null) break;
 
           // Дробим задания на блоки
-          Iterable<String> result =
+          Iterable<String> oneRawTarget =
               Splitter.on('*').trimResults().omitEmptyStrings().split(s);
 
           // Строка задания по частям
-          List<String> elements = Lists.newArrayList(result);
+          List<String> elements = Lists.newArrayList(oneRawTarget);
           String nodeName = elements.get(NODE_NAME);
-          String purgedNodeName = extractNodeName(nodeName);
-          List<String> resultItem = new ArrayList<String>();
-          resultItem.add(purgedNodeName);
-
-          // Имя файла
-          List<String> splittedPath = splitPathToFile(elements.get(INDEX_URL));
-          resultItem.addAll(splittedPath);
-          listUrls.add(resultItem);
+          String url = elements.get(INDEX_URL);
+          List<String> resultTarget = new ArrayList<String>();
+          resultTarget.add(extractNodeName(nodeName));
+          resultTarget.addAll(splitUrlToFilenameAndPath(url));
+          resultTargets.add(resultTarget);
         }
-        return listUrls;
+        return resultTargets;
       } catch (FileNotFoundException e) {
         e.printStackTrace();
         throw new CrosscuttingsException("File no found - "+targetPartPathUrlMapper);
@@ -99,8 +95,6 @@ public class ProcessorTargets {
       throw new CrosscuttingsException("Error on read file - "+targetPartPathUrlMapper);
     }
   }
-
-
 
   // TODO(zaqwes): impl. very bad!!
   private String extractNodeName(String line) {

@@ -34,7 +34,7 @@ public class ProcessorTargetsTest {
 
     String spiderTargetFname = "apps/targets/spider_extractor_target.json";
     try {
-      List<String> splittedPath =  testObj.splitPathToFile(spiderTargetFname);
+      List<String> splittedPath =  testObj.splitUrlToFilenameAndPath(spiderTargetFname);
       print(splittedPath);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
