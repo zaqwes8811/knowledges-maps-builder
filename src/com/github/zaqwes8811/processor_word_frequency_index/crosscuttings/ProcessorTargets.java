@@ -140,7 +140,7 @@ public class ProcessorTargets {
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, ArrayList<String>>>() {}.getType();
         HashMap<String, List<String>> settings = gson.fromJson(jsonSettings, type);
-        print(settings);
+        print(settings.get("index name").get(0));
 
         //
         return "TEST";
