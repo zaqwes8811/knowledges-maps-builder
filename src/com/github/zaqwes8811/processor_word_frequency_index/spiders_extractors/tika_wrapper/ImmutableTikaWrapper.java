@@ -3,6 +3,9 @@ package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.
 import java.io.*;
 import java.net.URL;
 
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 import com.google.common.base.Splitter;
 import com.google.common.io.Closer;
 import org.apache.tika.detect.DefaultDetector;
@@ -21,34 +24,45 @@ import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
-public class TikaWrapper {
+final public class ImmutableTikaWrapper {
   public static void print(Object msg) {
     System.out.println(msg);
   }
 
+  // Fields
+  final private String pathToAppFolder_;
+  final private String indexName_;
 
+  public ImmutableTikaWrapper(
+      String pathToAppFolder,
+      String indexName)
+    {
+    pathToAppFolder_ = pathToAppFolder;
+    indexName_ = indexName;
+  }
 
-  public void process(String inFileName,
-                      String pathToSrcFile,
-                      String nodeName,
-                      String pathToAppFolder) {
+  public final void process(
+      String inFileName,
+      String pathToSrcFile,
+      String nodeName) {
     try {
+
       // Настраиваем пути
-      String pathToNode = pathToAppFolder+"/"+nodeName;
-      print(pathToNode);
-      // outFileNameRaw = getTmpFileName(
-      //    inFileName, pathToNode);  // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
-      //return;
-      String outFileNameRaw = "tmp.txt";
+      String pathToNode = pathToAppFolder_+"/"+nodeName;
+      // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
+      String outFileNameRaw = pathToNode+'/'+inFileName+".ptxt";
+      print(outFileNameRaw);
+
       // Извлекаем содержимое файла
-      URL url;
-      File file = new File(inFileName);
       Closer closer = Closer.create();
       try {
+        String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
+        File file = new File(fullNameSrcFile);
+        URL url;
         if (file.isFile()) {
           url = file.toURI().toURL();
         } else {
-          url = new URL(inFileName);
+          url = new URL(fullNameSrcFile);
         }
         ParseContext context = new ParseContext();
         Detector detector = new DefaultDetector();
@@ -86,6 +100,10 @@ public class TikaWrapper {
         LanguageIdentifier identifier = writer.getLanguage();
         String lang = identifier.getLanguage();
         print(lang);
+
+        // Заполняем метадынные файла
+        String metaFileName = inFileName+".meta";
+
       } catch (Throwable e) { // must catch Throwable
         throw closerLangDetector.rethrow(e);
       } finally {

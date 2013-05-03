@@ -1,3 +1,4 @@
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.ImmutableTikaWrapper;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
@@ -12,7 +13,6 @@ import org.junit.Test;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
-import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.TikaWrapper;
 
 public class SpiderExtractorTest {
 
@@ -24,8 +24,12 @@ public class SpiderExtractorTest {
         String pathToAppFolder = configurer.getPathToAppFolder();
         ProcessorTargets.print(pathToAppFolder);
 
-        // Получаем цели
+        // Получаем имя индекса
         ProcessorTargets processorTargets = new ProcessorTargets();
+        String spiderTargetsFilename = "apps/targets/spider_extractor_target.json";
+
+        // Получаем цели
+        /*
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
         List<List<String>> targets = processorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
@@ -36,12 +40,12 @@ public class SpiderExtractorTest {
 
           // Выделяем текст
           // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
-          TikaWrapper tikaWrapper = new TikaWrapper();
-          tikaWrapper.process(fileName, pathToFile, nodeName, pathToAppFolder);
+          ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder);
+          tikaWrapper.process(fileName, pathToFile, nodeName);
 
           // Формируем метаданные для каждой задачи
           break;
-        }
+        }  */
 
       } catch (CrosscuttingsException e) {
         System.out.println(e.getMessage());
