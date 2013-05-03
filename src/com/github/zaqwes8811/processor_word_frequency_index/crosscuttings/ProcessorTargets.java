@@ -4,6 +4,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
+import sun.swing.BakedArrayList;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -35,18 +36,24 @@ public class ProcessorTargets {
   //
   // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
   //   *.ptxt or *.meta
-  public List<String> splitPathToFile(String pathToFile) throws CrosscuttingsException {
-    print(pathToFile);
+  public List<String> splitPathToFile(String fullPathToFile) throws CrosscuttingsException {
     // Запрещаем windows-разделители
-    if (pathToFile.indexOf('\\') != -1) {
+    if (fullPathToFile.indexOf('\\') != -1) {
       throw new CrosscuttingsException("Path content disabled separators. "+
-        "Need use *nix format - '/'. Path - "+pathToFile+"; Pos - "+pathToFile.indexOf('\\'));
+        "Need use *nix format - '/'. Path - "+fullPathToFile+"; Pos - "+fullPathToFile.indexOf('\\'));
     }
 
     // Путь первую проверку прошел
-    int lastIdx =  pathToFile.lastIndexOf('/');
-    print(pathToFile.substring(lastIdx+1, pathToFile.length()));
-    return null;
+    int lastIdx =  fullPathToFile.lastIndexOf('/');
+    int lengthInString = fullPathToFile.length();
+
+    // Разделяем и пакуем
+    List<String> result = new ArrayList<String>();
+    String fname = fullPathToFile.substring(lastIdx + 1, lengthInString);
+    String pathToFile = fullPathToFile.substring(0, lastIdx);
+    result.add(pathToFile);
+    result.add(fname);
+    return result;
   }
 
   public List<List<String>> runParser(String targetPartPath) throws CrosscuttingsException {
@@ -69,17 +76,13 @@ public class ProcessorTargets {
           // Строка задания по частям
           List<String> elements = Lists.newArrayList(result);
           String nodeName = elements.get(NODE_NAME);
-
           String purgedNodeName = extractNodeName(nodeName);
-          List<String> resultItem = elements.subList(NODE_NAME, INDEX_URL+1);
-          resultItem.set(NODE_NAME, purgedNodeName);
+          List<String> resultItem = new ArrayList<String>();
+          resultItem.add(purgedNodeName);
 
           // Имя файла
-          splitPathToFile(elements.get(INDEX_URL));
-          Iterable<String> splittedPath =
-            Splitter.on('/').trimResults().omitEmptyStrings().split("TEST");
-          List<String> elementsInvSlash = Lists.newArrayList(splittedPath);
-          resultItem.add(elementsInvSlash.get(elementsInvSlash.size()-1));
+          List<String> splittedPath = splitPathToFile(elements.get(INDEX_URL));
+          resultItem.addAll(splittedPath);
           listUrls.add(resultItem);
         }
         return listUrls;
