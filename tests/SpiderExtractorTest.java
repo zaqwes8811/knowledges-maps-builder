@@ -1,8 +1,11 @@
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.ImmutableTikaWrapper;
 import org.junit.Test;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
+
+import java.util.List;
 
 public class SpiderExtractorTest {
   static void print(Object msg) {
@@ -16,16 +19,14 @@ public class SpiderExtractorTest {
         // Получаем путь к папке приложения
         AppConfigurer configurer = new AppConfigurer();
         String pathToAppFolder = configurer.getPathToAppFolder();
-        ProcessorTargets.print(pathToAppFolder);
+        print(pathToAppFolder);
 
         // Получаем имя индекса
         ProcessorTargets processorTargets = new ProcessorTargets();
-        String spiderTargetsFilename = "apps/targets/spider_extractor_target.json";
         String idxName = processorTargets.getIndexName();
         print(idxName);
 
         // Получаем цели
-        /*
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
         List<List<String>> targets = processorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
@@ -41,7 +42,7 @@ public class SpiderExtractorTest {
 
           // Формируем метаданные для каждой задачи
           break;
-        }  */
+        }
 
       } catch (CrosscuttingsException e) {
         System.out.println(e.getMessage());
