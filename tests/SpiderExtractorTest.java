@@ -24,7 +24,6 @@ public class SpiderExtractorTest {
         // Получаем имя индекса
         ProcessorTargets processorTargets = new ProcessorTargets();
         String idxName = processorTargets.getIndexName();
-        print(idxName);
 
         // Получаем цели
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
@@ -37,7 +36,7 @@ public class SpiderExtractorTest {
 
           // Выделяем текст
           // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
-          ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder);
+          ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder, idxName);
           tikaWrapper.process(fileName, pathToFile, nodeName);
 
           // Формируем метаданные для каждой задачи

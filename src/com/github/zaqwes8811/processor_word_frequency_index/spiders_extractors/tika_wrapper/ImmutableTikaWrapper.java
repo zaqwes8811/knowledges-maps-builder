@@ -33,10 +33,7 @@ final public class ImmutableTikaWrapper {
   final private String pathToAppFolder_;
   final private String indexName_;
 
-  public ImmutableTikaWrapper(
-      String pathToAppFolder,
-      String indexName)
-    {
+  public ImmutableTikaWrapper(String pathToAppFolder,  String indexName) {
     pathToAppFolder_ = pathToAppFolder;
     indexName_ = indexName;
   }
@@ -48,7 +45,7 @@ final public class ImmutableTikaWrapper {
     try {
 
       // Настраиваем пути
-      String pathToNode = pathToAppFolder_+"/"+nodeName;
+      String pathToNode = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName;
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = pathToNode+'/'+inFileName+".ptxt";
       print(outFileNameRaw);
