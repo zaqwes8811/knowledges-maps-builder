@@ -21,8 +21,6 @@ except:
     print err_msg
     print sys.path
     var = raw_input("Press any key.")
-    
-
 
 def printer(msg):
     print msg

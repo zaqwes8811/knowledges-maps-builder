@@ -31,7 +31,7 @@ import java.util.List;
 public class ProcessorTargets {
   /**
    * @param msg - начало периода
-   * @throws IllegalArgument – если начало периода указано после конца
+   //* @throws IllegalArgument – если начало периода указано после конца
    * @throws NullPointerException – если начало или конец периода нулевые
    */
   public static void print(Object msg) {
@@ -123,7 +123,7 @@ public class ProcessorTargets {
     return joiner.join(purgeNode);
   }
 
-  public String getNodeName() {
+  public String getIndexName() {
     String indexCfgFilename = "apps/targets/spider_extractor_target.json";
     try {
       Closer closer = Closer.create();
@@ -137,7 +137,7 @@ public class ProcessorTargets {
           readedBuffer.append(s);
         }
         String jsonSettings = readedBuffer.toString();
-        print(jsonSettings);
+        //print(jsonSettings);
 
         // Разбираем
         // TODO(zaqwes) TOTH: Может все конфигурирование через yaml сделать, хотя в json проще на веб
@@ -145,10 +145,8 @@ public class ProcessorTargets {
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, ArrayList<String>>>() {}.getType();
         HashMap<String, List<String>> settings = gson.fromJson(jsonSettings, type);
-        print(settings.get("index name").get(0));
-
         //
-        return "TEST";
+        return settings.get("index name").get(0);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {

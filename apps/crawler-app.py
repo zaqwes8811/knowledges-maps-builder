@@ -29,6 +29,7 @@ if __name__=='__main__':
     target_fname = 'targets/crawler_schedule.txt'
     spider_target_fname = 'targets/spider_extractor_target'#.txt'
     target = get_target(target_fname, spider_target_fname+'.txt')
+    print target
     
     json_target = json.dumps(target, sort_keys=True, indent=2)
     print '\nResult target:'

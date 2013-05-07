@@ -20,7 +20,7 @@ import app_utils as util
 def scribe_index(target, spider_target_fname):
     rpt = []
     # Запускаем разметчик
-    index_name = target[kKeyIndexName]
+    index_name = target[kKeyIndexName][0]
     app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
     
     

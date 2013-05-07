@@ -126,7 +126,8 @@ def get_target_object(raw_target):
             list_ext = value.split(',')
             target[key] = list(util.remove_fandb_spaces_in_tuple(tuple(list_ext)))
         elif key == kKeyIndexName:
-            target[key] = util.remove_forward_and_back_spaces(value)
+            # Тоже список, хотя из одного элемента. Удобно при дальнейшей обработке
+            target[key] = [util.remove_forward_and_back_spaces(value)]
         elif key == kKeyIgnoredDir:
             if key not in target: 
                 target[key] = []

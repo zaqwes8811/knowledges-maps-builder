@@ -1,13 +1,3 @@
-import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.ImmutableTikaWrapper;
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Map;
-
 import org.junit.Test;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
@@ -15,6 +5,10 @@ import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.Crossc
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 
 public class SpiderExtractorTest {
+  static void print(Object msg) {
+     System.out.println(msg);
+
+  }
 
   @Test
   public void testDevelopSpider() {
@@ -27,7 +21,8 @@ public class SpiderExtractorTest {
         // Получаем имя индекса
         ProcessorTargets processorTargets = new ProcessorTargets();
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.json";
-        processorTargets.getNodeName();
+        String idxName = processorTargets.getIndexName();
+        print(idxName);
 
         // Получаем цели
         /*
