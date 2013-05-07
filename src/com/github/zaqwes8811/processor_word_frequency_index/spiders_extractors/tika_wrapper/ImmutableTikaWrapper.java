@@ -2,6 +2,8 @@ package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.
 
 import java.io.*;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
@@ -38,22 +40,18 @@ final public class ImmutableTikaWrapper {
     indexName_ = indexName;
   }
 
-  public final void process(
-      String inFileName,
-      String pathToSrcFile,
-      String nodeName) {
+  public final void process(String inFileName, String pathToSrcFile, String nodeName) {
     try {
 
       // Настраиваем пути
-      String pathToNode = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName;
+      String fullOutFilenameNoExt = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName+'/'+inFileName;
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
-      String outFileNameRaw = pathToNode+'/'+inFileName+".ptxt";
-      print(outFileNameRaw);
+      String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
+      String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
       try {
-        String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
         File file = new File(fullNameSrcFile);
         URL url;
         if (file.isFile()) {
@@ -84,9 +82,9 @@ final public class ImmutableTikaWrapper {
 
       // Определяем язык - приходится читать файл еще раз, но по другому пока не ясно как
       //   язык определяется как литовский
-      Closer closerLangDetector = Closer.create();
+      Closer postprocessCloser = Closer.create();
       try {
-        BufferedReader inExtractedFile = closerLangDetector.register(
+        BufferedReader inExtractedFile = postprocessCloser.register(
             new BufferedReader(new FileReader(outFileNameRaw)));
         ProfilingWriter writer = new ProfilingWriter();
         while (true) {
@@ -96,15 +94,27 @@ final public class ImmutableTikaWrapper {
         }
         LanguageIdentifier identifier = writer.getLanguage();
         String lang = identifier.getLanguage();
-        print(lang);
 
         // Заполняем метадынные файла
-        String metaFileName = inFileName+".meta";
+        // {url: path_to_file, lang: ru}
+        String metaFileName = fullOutFilenameNoExt+".meta";
+        print(metaFileName);
+        Map<String, String> meta = new HashMap<String, String>();
+        meta.put("lang", lang);
+        meta.put("src_url", fullNameSrcFile);
+        print(meta);
+
+        PrintWriter metaOut = postprocessCloser.register(
+            new PrintWriter(
+              new BufferedWriter(
+                new FileWriter(metaFileName))));
+        metaOut.println("meta");
+
 
       } catch (Throwable e) { // must catch Throwable
-        throw closerLangDetector.rethrow(e);
+        throw postprocessCloser.rethrow(e);
       } finally {
-        closerLangDetector.close();
+        postprocessCloser.close();
       }
     } catch (IOException e) {
       e.printStackTrace();
