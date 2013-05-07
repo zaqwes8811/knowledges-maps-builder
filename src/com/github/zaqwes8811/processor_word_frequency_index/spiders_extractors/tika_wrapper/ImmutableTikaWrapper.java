@@ -10,6 +10,7 @@ import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.Crossc
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 import com.google.common.base.Splitter;
 import com.google.common.io.Closer;
+import com.google.gson.Gson;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
@@ -102,13 +103,15 @@ final public class ImmutableTikaWrapper {
         Map<String, String> meta = new HashMap<String, String>();
         meta.put("lang", lang);
         meta.put("src_url", fullNameSrcFile);
-        print(meta);
+       // print(meta);
 
         PrintWriter metaOut = postprocessCloser.register(
             new PrintWriter(
               new BufferedWriter(
                 new FileWriter(metaFileName))));
-        metaOut.println("meta");
+
+        Gson gson = new Gson();
+        metaOut.println(gson.toJson(meta));
 
 
       } catch (Throwable e) { // must catch Throwable

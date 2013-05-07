@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/ImmutableTikaWrapper.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/ImmutableTikaWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +16,7 @@
     <file path="/ProcessorTargetsTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367565385812" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367922631197" ignored="false" />
     <file path="/SpiderExtractorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367922680290" ignored="false" />
-    <file path="/ImmutableTikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367931699420" ignored="false" />
+    <file path="/ImmutableTikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367932008353" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,10 +87,10 @@
       <file leaf-file-name="ImmutableTikaWrapper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/ImmutableTikaWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="29" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.32539684">
+            <state line="105" column="9" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.23544973">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3887#3903#0" expanded="true" />
+                <element signature="e#3916#3932#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -642,10 +641,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/ImmutableTikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="29" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.32539684">
+        <state line="105" column="9" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.23544973">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3887#3903#0" expanded="true" />
+            <element signature="e#3916#3932#0" expanded="true" />
           </folding>
         </state>
       </provider>
