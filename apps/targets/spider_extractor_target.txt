@@ -1,16 +1,2 @@
-[11832]* d:/doc_pdf_odt/11832.pdf
-[date_time]* d:/doc_pdf_odt/date_time.doc
-[drm_ethe1a]* d:/doc_pdf_odt/drm_ethe1a.doc
-[JSF_AV_C++_Coding_Standards_Rev_C]* d:/doc_pdf_odt/JSF_AV_C++_Coding_Standards_Rev_C.doc
-[MIT6_01SCS11_chap04]* d:/doc_pdf_odt/MIT6_01SCS11_chap04.pdf
-[Qt 4.7_ Getting Started Programming with QML.mht]* d:/doc_pdf_odt/Qt 4.7_ Getting Started Programming with QML.mht.doc
-[Review]* d:/doc_pdf_odt/Review.doc
-[test.1]* d:/doc_pdf_odt/test.1.doc
-[Zadania_Dlya_Testa]* d:/doc_pdf_odt/Zadania_Dlya_Testa.doc
-[Бакалаврская Шиповалов Н.С.4092.2]* d:/doc_pdf_odt/Бакалаврская Шиповалов Н.С.4092.2.doc
-[Акцизы]* d:/doc_pdf_odt/Gmail/Акцизы.pdf
-[Аудит]* d:/doc_pdf_odt/Gmail/Аудит.pdf
-[Водный налог]* d:/doc_pdf_odt/Gmail/Водный налог.pdf
-[Государственная пошлина]* d:/doc_pdf_odt/Gmail/Государственная пошлина.pdf
 [Налоговое администрирование]* d:/doc_pdf_odt/Gmail/Налоговое администрирование.pdf
 [противод коррупции в сфере Госупр]* d:/doc_pdf_odt/Gmail/противод коррупции в сфере Госупр.pdf

@@ -1,0 +1,1 @@
+java -Dfile.encoding=UTF8 -jar ./out/artifacts/processor_word_frequency_index_jar/processor-word-frequency-index.jar

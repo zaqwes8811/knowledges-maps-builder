@@ -53,13 +53,14 @@ final public class ImmutableTikaWrapper {
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
+      //String str = new String(fullNameSrcFile.getBytes("UTF-8"), "windows-1251");
       try {
         File file = new File(fullNameSrcFile);
         URL url;
         if (file.isFile()) {
           url = file.toURI().toURL();
         } else {
-          url = new URL(fullNameSrcFile);
+          url = new URL("file:///"+fullNameSrcFile);
         }
         ParseContext context = new ParseContext();
         Detector detector = new DefaultDetector();

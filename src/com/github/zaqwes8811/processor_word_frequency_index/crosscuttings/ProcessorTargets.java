@@ -1,5 +1,6 @@
 package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
 
+import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
@@ -128,12 +129,14 @@ public class ProcessorTargets {
     try {
       Closer closer = Closer.create();
       try {
-        BufferedReader in = closer.register(
-          new BufferedReader(new FileReader(indexCfgFilename)));
+        FileReader reader = new FileReader(indexCfgFilename);
+        print(reader.getEncoding());
+        BufferedReader in = closer.register(new BufferedReader(reader));
 
         String s;
         StringBuilder readedBuffer = new StringBuilder();
         while ((s = in.readLine())!= null) {  // TODO(zaqwes) TOTH: может лучше разом прочитать?
+          //readedBuffer.append(s);
           readedBuffer.append(s);
         }
         String jsonSettings = readedBuffer.toString();
