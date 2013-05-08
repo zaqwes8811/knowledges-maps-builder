@@ -26,6 +26,9 @@ public class MinimalSpiderProcessor {
   static void print(Object msg) {
     System.out.println(msg);
   }
+  static final int IDX_LANG = 0;
+  static final int IDX_SRC_URL = 1;
+  static final int IDX_TMP_FILE = 2;
   public String getPathToIndex() {
     String pathToIndex = "";
     try {
@@ -63,19 +66,18 @@ public class MinimalSpiderProcessor {
 
   /*
   *
-  * @return: [[lang0, filename0], []]
+  * @return: [[lang0, src_url0 filename0], []]
   * */
-  public List<List<String>> getFilenameAndLang(String pathToNode) {
+  public List<List<String>> getTarget(String pathToNode) {
     List<List<String>> targetsInfo = new ArrayList<List<String>>();
     List<String> listNamesMetaFiles = getListNamesMetaFiles(pathToNode);
     for (String filename: listNamesMetaFiles) {
       List<String> oneTarget = new ArrayList<String>();
       // Получаем язык файла, оцененный или заранее известрый, это отражено в мета-файле
       String metafilename = pathToNode+'/'+filename;
-      oneTarget.add(getLang(metafilename));
+      oneTarget.addAll(getAllMetaData(metafilename));
 
       // Получаем имя файла с контентом
-      //metafilename.g
       String fileWithContent = metafilename.substring(0, metafilename.lastIndexOf('.'))+".ptxt";
       oneTarget.add(fileWithContent);
       targetsInfo.add(oneTarget);
@@ -83,8 +85,8 @@ public class MinimalSpiderProcessor {
     return targetsInfo;
   }
 
-  private String getLang(String metafilename) {
-    String lang = "unknown";
+  private List<String> getAllMetaData(String metafilename) {
+    List<String> allMetaData = new ArrayList<String>();
     try {
       Closer closer = Closer.create();
       try{
@@ -99,7 +101,8 @@ public class MinimalSpiderProcessor {
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, String>>() {}.getType();
         HashMap<String, String> meta = gson.fromJson(jsonMeta, type);
-        lang = meta.get("lang");
+        allMetaData.add(meta.get("lang"));
+        allMetaData.add(meta.get("src_url"));
 
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
@@ -109,7 +112,7 @@ public class MinimalSpiderProcessor {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return lang;
+    return allMetaData;
   }
 }
 
