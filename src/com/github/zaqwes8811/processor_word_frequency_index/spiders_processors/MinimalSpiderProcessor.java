@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -113,6 +114,88 @@ public class MinimalSpiderProcessor {
       e.printStackTrace();
     }
     return allMetaData;
+  }
+
+  public void processOneNode(String node) {
+    StringBuilder summaryContent = new StringBuilder();
+    String pathToNode = getPathToIndex()+"/tmp/"+node;
+    List<List<String>> summaryMeta = new ArrayList<List<String>>();
+    List<List<String>> targets = getTarget(pathToNode);
+    //StringBuilder
+    for (List<String> target: targets) {
+      try {  // внутри, чтобы не прервалась обработка из-за одного файла
+        Closer readCloser = Closer.create();
+        try {
+          String lang = target.get(MinimalSpiderProcessor.IDX_LANG);
+          String srcUrl = target.get(MinimalSpiderProcessor.IDX_SRC_URL);
+          String tmpFilename = target.get(MinimalSpiderProcessor.IDX_TMP_FILE);
+          summaryMeta.add(new ArrayList<String>(Arrays.asList(srcUrl, lang)));
+
+          // Reader
+          BufferedReader reader = readCloser.register(new BufferedReader(new FileReader(tmpFilename)));
+          StringBuilder buffer = new StringBuilder();
+          String s;
+          while ((s = reader.readLine())!= null) buffer.append(s+'\n');
+
+          // разбиваем не единицы и пишем
+          // TODO(zaqwes) TOTH: maybi slow!
+          String dataForSplitting = buffer.toString().replace('\n', ' ');
+
+          BreakIterator bi = BreakIterator.getSentenceInstance();
+          bi.setText(dataForSplitting);
+          int index = 0;
+          while (bi.next() != BreakIterator.DONE) {
+            String sentence = dataForSplitting.substring(index, bi.current());
+            String oneRecord = lang+' '+sentence+'\n';
+            summaryContent.append(oneRecord);
+            index = bi.current();
+          }
+
+        } catch (Throwable e) { // must catch Throwable
+          throw readCloser.rethrow(e);
+        } finally {
+          readCloser.close();
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      //break;  // DEVELOP
+    }
+
+    // Можно писать результат
+    try {  // внутри, чтобы не прервалась обработка из-за одного файла
+      Closer writeCloser = Closer.create();
+      try {
+        String path = getPathToIndex()+"/index/"+node;
+
+        // записываем контетн
+        BufferedWriter contentOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/content.txt")));
+        contentOut.write(summaryContent.toString());
+        // записываем матеданные
+        Gson gson = new Gson();
+        BufferedWriter metaOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/meta.txt")));
+        metaOut.write(gson.toJson(summaryMeta));
+      } catch (Throwable e) { // must catch Throwable
+        throw writeCloser.rethrow(e);
+      } finally {
+        writeCloser.close();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  // Main()
+  public static void main(String [ ] args) {
+    MinimalSpiderProcessor spiderProcessor = new MinimalSpiderProcessor();
+
+    // Processing
+    List<String> nodes = spiderProcessor.getListNodes();
+
+    // Обрабатываем каждый узел в отдельности
+    for (String node : nodes) {
+      spiderProcessor.processOneNode(node);
+    }
   }
 }
 
