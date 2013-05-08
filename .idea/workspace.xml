@@ -7,9 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\apps\targets\spider_extractor_target — копия.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run-jar.bat" afterPath="$PROJECT_DIR$/run-jar.bat" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
@@ -28,6 +25,7 @@
     <file path="/MinimalSpiderProcessor.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368017039248" ignored="false" />
     <file path="/MinimalSpiderProcessorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368016114889" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368018076370" ignored="false" />
+    <file path="/run-jar.bat" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368021758860" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.36363637">
+            <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2267#2275#0" expanded="true" />
@@ -111,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run-jar.bat" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="run-jar.bat" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run-jar.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="19" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+            <state line="6" column="96" selection-start="442" selection-end="442" vertical-scroll-proportion="0.27272728">
               <folding />
             </state>
           </provider>
@@ -163,9 +161,9 @@
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java" />
-        <option value="$PROJECT_DIR$/run-jar.bat" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
+        <option value="$PROJECT_DIR$/run-jar.bat" />
       </list>
     </option>
   </component>
@@ -637,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run-jar.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="101" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
@@ -656,13 +647,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.36363637">
+        <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2267#2275#0" expanded="true" />
             <element signature="e#2677#2691#0" expanded="true" />
             <element signature="e#3316#3324#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-jar.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="96" selection-start="442" selection-end="442" vertical-scroll-proportion="0.27272728">
+          <folding />
         </state>
       </provider>
     </entry>
