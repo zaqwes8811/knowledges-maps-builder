@@ -130,7 +130,7 @@ public class ProcessorTargets {
       Closer closer = Closer.create();
       try {
         FileReader reader = new FileReader(indexCfgFilename);
-        print(reader.getEncoding());
+        //print(reader.getEncoding());
         BufferedReader in = closer.register(new BufferedReader(reader));
 
         String s;

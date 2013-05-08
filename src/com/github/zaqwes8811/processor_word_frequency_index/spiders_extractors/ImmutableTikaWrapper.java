@@ -29,7 +29,7 @@ import org.xml.sax.SAXException;
 
 final public class ImmutableTikaWrapper {
   public static void print(Object msg) {
-    System.out.println(msg);
+    System.console().writer().println(msg);
   }
 
   // Fields
@@ -49,7 +49,9 @@ final public class ImmutableTikaWrapper {
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
       String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
-      print("Src File: "+fullNameSrcFile);
+
+      // TODO(zaqwes): Как установить читабельными русски буквы?
+      print("Process file: "+fullNameSrcFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
@@ -101,7 +103,7 @@ final public class ImmutableTikaWrapper {
         // Заполняем метадынные файла
         // {url: path_to_file, lang: ru}
         String metaFileName = fullOutFilenameNoExt+".meta";
-        print(metaFileName);
+        //print(metaFileName);
         Map<String, String> meta = new HashMap<String, String>();
         meta.put("lang", lang);
         meta.put("src_url", fullNameSrcFile);
