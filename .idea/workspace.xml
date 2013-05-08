@@ -1,18 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="" />
+    <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sandbox/ImmutableRGB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/processor_word_frequency_index_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run-jar.bat" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\apps\log.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\content-translate-assistant.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\Main.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\TikaWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Iron Man AA\Iron Man- Armored Adventures - 02x14 - Mandarin's Quest.[UM].English.C.updated.Addic7ed.com.srt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Iron Man AA\Iron Man02x26.srt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Iron Man AA\Iron1and8.srt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Stenf Algs part I\5 - 1 - Quicksort- Overview (12 min).srt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Stenf Algs part I\5 - 2 - Partitioning Around a Pivot (25 min).srt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\statistic_data\srts\Stenf Algs part I\5 - 3 - Correctness of Quicksort [Review - Optional] (11 min).srt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurer.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crawlers/__init__.py" afterPath="$PROJECT_DIR$/src/crawlers/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scriber/__init__.py" afterPath="$PROJECT_DIR$/src/scriber/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/crawler-app.py" afterPath="$PROJECT_DIR$/apps/crawler-app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processor-word-frequency-index.iml" afterPath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/scriber-app.py" afterPath="$PROJECT_DIR$/apps/scriber-app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/targets/spider_extractor_target.json" afterPath="$PROJECT_DIR$/apps/targets/spider_extractor_target.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/targets/spider_extractor_target.txt" afterPath="$PROJECT_DIR$/apps/targets/spider_extractor_target.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\app.css" afterPath="$PROJECT_DIR$/web_view/css/app.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\app_carcass.css" afterPath="$PROJECT_DIR$/web_view/css/app_carcass.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\app_liq.css" afterPath="$PROJECT_DIR$/web_view/css/app_liq.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\bootstrap-responsive.css" afterPath="$PROJECT_DIR$/web_view/css/bootstrap-responsive.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/web_view/css/bootstrap-responsive.min.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\bootstrap.css" afterPath="$PROJECT_DIR$/web_view/css/bootstrap.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/web_view/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\bottom.css" afterPath="$PROJECT_DIR$/web_view/css/bottom.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\calendar.css" afterPath="$PROJECT_DIR$/web_view/css/calendar.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\docs.css" afterPath="$PROJECT_DIR$/web_view/css/docs.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\error.txt" afterPath="$PROJECT_DIR$/web_view/css/error.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\examples.css" afterPath="$PROJECT_DIR$/web_view/css/examples.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\print.css" afterPath="$PROJECT_DIR$/web_view/css/print.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\style.css" afterPath="$PROJECT_DIR$/web_view/css/style.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\summary.css" afterPath="$PROJECT_DIR$/web_view/css/summary.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\web2py.css" afterPath="$PROJECT_DIR$/web_view/css/web2py.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\web2py_bootstrap.css" afterPath="$PROJECT_DIR$/web_view/css/web2py_bootstrap.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/web_view/css/web2py_bootstrap_nojs.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\css\website.css" afterPath="$PROJECT_DIR$/web_view/css/website.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\bg-scrollbar-thumb-y.png" afterPath="$PROJECT_DIR$/web_view/images/bg-scrollbar-thumb-y.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\bg-scrollbar-track-y.png" afterPath="$PROJECT_DIR$/web_view/images/bg-scrollbar-track-y.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\bg-scrollbar-trackend-y.png" afterPath="$PROJECT_DIR$/web_view/images/bg-scrollbar-trackend-y.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\facebook.png" afterPath="$PROJECT_DIR$/web_view/images/facebook.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\favicon.ico" afterPath="$PROJECT_DIR$/web_view/images/favicon.ico" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\favicon.png" afterPath="$PROJECT_DIR$/web_view/images/favicon.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/web_view/images/glyphicons-halflings-white.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\glyphicons-halflings.png" afterPath="$PROJECT_DIR$/web_view/images/glyphicons-halflings.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\gplus-32.png" afterPath="$PROJECT_DIR$/web_view/images/gplus-32.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\images\twitter.png" afterPath="$PROJECT_DIR$/web_view/images/twitter.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\add.png" afterPath="$PROJECT_DIR$/web_view/img/add.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bar2.gif" afterPath="$PROJECT_DIR$/web_view/img/bar2.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bg.gif" afterPath="$PROJECT_DIR$/web_view/img/bg.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bg_1.gif" afterPath="$PROJECT_DIR$/web_view/img/bg_1.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bullet.gif" afterPath="$PROJECT_DIR$/web_view/img/bullet.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bullet_m.bmp" afterPath="$PROJECT_DIR$/web_view/img/bullet_m.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\bullet_p.bmp" afterPath="$PROJECT_DIR$/web_view/img/bullet_p.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\button_bg.gif" afterPath="$PROJECT_DIR$/web_view/img/button_bg.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\button_left.gif" afterPath="$PROJECT_DIR$/web_view/img/button_left.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\button_left_xon.gif" afterPath="$PROJECT_DIR$/web_view/img/button_left_xon.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\button_right.gif" afterPath="$PROJECT_DIR$/web_view/img/button_right.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\button_right_xon.gif" afterPath="$PROJECT_DIR$/web_view/img/button_right_xon.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\del.png" afterPath="$PROJECT_DIR$/web_view/img/del.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\ed.png" afterPath="$PROJECT_DIR$/web_view/img/ed.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\favicon.ico" afterPath="$PROJECT_DIR$/web_view/img/favicon.ico" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\footerbg.gif" afterPath="$PROJECT_DIR$/web_view/img/footerbg.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/web_view/img/glyphicons-halflings-white.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\glyphicons-halflings.png" afterPath="$PROJECT_DIR$/web_view/img/glyphicons-halflings.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\go.png" afterPath="$PROJECT_DIR$/web_view/img/go.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\headerbg.gif" afterPath="$PROJECT_DIR$/web_view/img/headerbg.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\led_alm.bmp" afterPath="$PROJECT_DIR$/web_view/img/led_alm.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\led_of.gif" afterPath="$PROJECT_DIR$/web_view/img/led_of.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\led_on.gif" afterPath="$PROJECT_DIR$/web_view/img/led_on.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\logo.bmp" afterPath="$PROJECT_DIR$/web_view/img/logo.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\logo_new.jpg" afterPath="$PROJECT_DIR$/web_view/img/logo_new.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\logo_new1.jpg" afterPath="$PROJECT_DIR$/web_view/img/logo_new1.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\logo_new2.jpg" afterPath="$PROJECT_DIR$/web_view/img/logo_new2.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\map.jpg" afterPath="$PROJECT_DIR$/web_view/img/map.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon.gif" afterPath="$PROJECT_DIR$/web_view/img/phon.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon1.gif" afterPath="$PROJECT_DIR$/web_view/img/phon1.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon_b.bmp" afterPath="$PROJECT_DIR$/web_view/img/phon_b.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon_b1.bmp" afterPath="$PROJECT_DIR$/web_view/img/phon_b1.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon_b2.bmp" afterPath="$PROJECT_DIR$/web_view/img/phon_b2.bmp" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon_big.jpg" afterPath="$PROJECT_DIR$/web_view/img/phon_big.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\phon_big2.jpg" afterPath="$PROJECT_DIR$/web_view/img/phon_big2.jpg" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\rel.png" afterPath="$PROJECT_DIR$/web_view/img/rel.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\sw_of.gif" afterPath="$PROJECT_DIR$/web_view/img/sw_of.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\sw_on.gif" afterPath="$PROJECT_DIR$/web_view/img/sw_on.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\tableft.gif" afterPath="$PROJECT_DIR$/web_view/img/tableft.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\tabright.gif" afterPath="$PROJECT_DIR$/web_view/img/tabright.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\temp1.gif" afterPath="$PROJECT_DIR$/web_view/img/temp1.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\img\temp2.gif" afterPath="$PROJECT_DIR$/web_view/img/temp2.gif" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\index.html" afterPath="$PROJECT_DIR$/web_view/index.html" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\index_flot.html" afterPath="$PROJECT_DIR$/web_view/index_flot.html" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\analytics.js" afterPath="$PROJECT_DIR$/web_view/js/analytics.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\bootstrap.js" afterPath="$PROJECT_DIR$/web_view/js/bootstrap.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/web_view/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\calendar.js" afterPath="$PROJECT_DIR$/web_view/js/calendar.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\cross-browser-print.js" afterPath="$PROJECT_DIR$/web_view/js/cross-browser-print.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\dd_belatedpng.js" afterPath="$PROJECT_DIR$/web_view/js/dd_belatedpng.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\excanvas.min.js" afterPath="$PROJECT_DIR$/web_view/js/excanvas.min.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\jquery-1.8.2.js" afterPath="$PROJECT_DIR$/web_view/js/jquery-1.8.2.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\jquery.flot.js" afterPath="$PROJECT_DIR$/web_view/js/jquery.flot.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\jquery.js" afterPath="$PROJECT_DIR$/web_view/js/jquery.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\jquery.tinyscrollbar.min.js" afterPath="$PROJECT_DIR$/web_view/js/jquery.tinyscrollbar.min.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\js_hided_settings.js" afterPath="$PROJECT_DIR$/web_view/js/js_hided_settings.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\left-nspace.js" afterPath="$PROJECT_DIR$/web_view/js/left-nspace.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\modernizr.custom.js" afterPath="$PROJECT_DIR$/web_view/js/modernizr.custom.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\new_journal.js" afterPath="$PROJECT_DIR$/web_view/js/new_journal.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\no_w2p.js" afterPath="$PROJECT_DIR$/web_view/js/no_w2p.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\qunit-1.10.0.css" afterPath="$PROJECT_DIR$/web_view/js/qunit-1.10.0.css" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\qunit-1.10.0.js" afterPath="$PROJECT_DIR$/web_view/js/qunit-1.10.0.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\qunit.html" afterPath="$PROJECT_DIR$/web_view/js/qunit.html" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\settings-checkers.js" afterPath="$PROJECT_DIR$/web_view/js/settings-checkers.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\settings-crosscuts.js" afterPath="$PROJECT_DIR$/web_view/js/settings-crosscuts.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\share.js" afterPath="$PROJECT_DIR$/web_view/js/share.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\stat-html-save.htm" afterPath="$PROJECT_DIR$/web_view/js/stat-html-save.htm" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\statistic-to-call.js" afterPath="$PROJECT_DIR$/web_view/js/statistic-to-call.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\statistic-to-names.txt" afterPath="$PROJECT_DIR$/web_view/js/statistic-to-names.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\statistic.js" afterPath="$PROJECT_DIR$/web_view/js/statistic.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\statistic.txt" afterPath="$PROJECT_DIR$/web_view/js/statistic.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\summator-info.js" afterPath="$PROJECT_DIR$/web_view/js/summator-info.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\sys-settings-engine.js" afterPath="$PROJECT_DIR$/web_view/js/sys-settings-engine.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\test.js" afterPath="$PROJECT_DIR$/web_view/js/test.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\thinks.txt" afterPath="$PROJECT_DIR$/web_view/js/thinks.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\tvct-lib-1.0.0.js" afterPath="$PROJECT_DIR$/web_view/js/tvct-lib-1.0.0.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\used-regex.txt" afterPath="$PROJECT_DIR$/web_view/js/used-regex.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\web2py.js" afterPath="$PROJECT_DIR$/web_view/js/web2py.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\js\web2py_bootstrap.js" afterPath="$PROJECT_DIR$/web_view/js/web2py_bootstrap.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\out.js" afterPath="$PROJECT_DIR$/web_view/out.js" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\WebView\subs\sys-settings-new.htm" afterPath="$PROJECT_DIR$/web_view/subs/sys-settings-new.htm" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\dev-spider-processor-jy.py" afterPath="$PROJECT_DIR$/hided/dev-spider-processor-jy.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\_test_task.txt" afterPath="$PROJECT_DIR$/hided/_test_task.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\app-raw-mapreduce.py" afterPath="$PROJECT_DIR$/hided/app-raw-mapreduce.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\app-spider.py" afterPath="$PROJECT_DIR$/hided/app-spider.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\app-test-stem.py" afterPath="$PROJECT_DIR$/hided/app-test-stem.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\dev-spider-extractor.py" afterPath="$PROJECT_DIR$/hided/dev-spider-extractor.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\index\Iron$$Man$$AA\forward_index.json" afterPath="$PROJECT_DIR$/hided/folder/index/Iron$$Man$$AA/forward_index.json" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\index\Stenf$$Online$$courses\forward_index.json" afterPath="$PROJECT_DIR$/hided/folder/index/Stenf$$Online$$courses/forward_index.json" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\index\Stenf$$Online$$courses\sorted_result.txt" afterPath="$PROJECT_DIR$/hided/folder/index/Stenf$$Online$$courses/sorted_result.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\intermedia_storage\Iron Man AA 1\tmp1.txt" afterPath="$PROJECT_DIR$/hided/folder/intermedia_storage/Iron Man AA 1/tmp1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\intermedia_storage\Iron Man AA 1\tmp2.txt" afterPath="$PROJECT_DIR$/hided/folder/intermedia_storage/Iron Man AA 1/tmp2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\intermedia_storage\Iron Man AA 2\tmp1.txt" afterPath="$PROJECT_DIR$/hided/folder/intermedia_storage/Iron Man AA 2/tmp1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\intermedia_storage\Iron Man AA 2\tmp2.txt" afterPath="$PROJECT_DIR$/hided/folder/intermedia_storage/Iron Man AA 2/tmp2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\folder\intermedia_storage\Iron Man AA 2\tmp3.txt" afterPath="$PROJECT_DIR$/hided/folder/intermedia_storage/Iron Man AA 2/tmp3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\iron_man_aa_target (2).txt" afterPath="$PROJECT_DIR$/hided/iron_man_aa_target (2).txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\iron_man_aa_target.txt" afterPath="$PROJECT_DIR$/hided/iron_man_aa_target.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\out.txt" afterPath="$PROJECT_DIR$/hided/out.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp0.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp0.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp1.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp2.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp3.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp4.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp4.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\tmp5.txt" afterPath="$PROJECT_DIR$/hided/result_folder/tmp5.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\Акцизы.pdf.txt_N0.txt" afterPath="$PROJECT_DIR$/hided/result_folder/Акцизы.pdf.txt_N0.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\Аудит.pdf.txt_N1.txt" afterPath="$PROJECT_DIR$/hided/result_folder/Аудит.pdf.txt_N1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\Водный налог.pdf.txt_N2.txt" afterPath="$PROJECT_DIR$/hided/result_folder/Водный налог.pdf.txt_N2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\Государственная пошлина.pdf.txt_N3.txt" afterPath="$PROJECT_DIR$/hided/result_folder/Государственная пошлина.pdf.txt_N3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\Налоговое администрирование.pdf.txt_N4.txt" afterPath="$PROJECT_DIR$/hided/result_folder/Налоговое администрирование.pdf.txt_N4.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\result_folder\противод коррупции в сфере Госупр.pdf.txt_N5.txt" afterPath="$PROJECT_DIR$/hided/result_folder/противод коррупции в сфере Госупр.pdf.txt_N5.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp.txt" afterPath="$PROJECT_DIR$/hided/tmp.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp2.txt" afterPath="$PROJECT_DIR$/hided/tmp2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 1 - Quicksort- Overview (12 min)._N0_N2.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 1 - Quicksort- Overview (12 min)._N0_N2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 1 - Quicksort- Overview (12 min)._N0_N4.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 1 - Quicksort- Overview (12 min)._N0_N4.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 1 - Quicksort- Overview (12 min)._N4_N1.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 1 - Quicksort- Overview (12 min)._N4_N1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 2 - Partitioning Around a Pivot (25 min)._N0_N3.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 2 - Partitioning Around a Pivot (25 min)._N0_N3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 2 - Partitioning Around a Pivot (25 min)._N3_N2.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 2 - Partitioning Around a Pivot (25 min)._N3_N2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N0_N1.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N0_N1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N1_N3.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N1_N3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N2_N5.txt" afterPath="$PROJECT_DIR$/hided/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N2_N5.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\Stenf. courses II_N3.txt" afterPath="$PROJECT_DIR$/hided/tmp/Stenf. courses II_N3.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\Stenf. courses II_N4.txt" afterPath="$PROJECT_DIR$/hided/tmp/Stenf. courses II_N4.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\Stenf. courses II_N5.txt" afterPath="$PROJECT_DIR$/hided/tmp/Stenf. courses II_N5.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\Stenf. courses I_N1.txt" afterPath="$PROJECT_DIR$/hided/tmp/Stenf. courses I_N1.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp\Stenf. courses I_N2.txt" afterPath="$PROJECT_DIR$/hided/tmp/Stenf. courses I_N2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\Акцизы.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/Акцизы.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\Аудит.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/Аудит.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\Водный налог.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/Водный налог.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\Государственная пошлина.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/Государственная пошлина.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\Налоговое администрирование.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/Налоговое администрирование.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\apps\hided\tmp_folder\противод коррупции в сфере Госупр.pdf.txt" afterPath="$PROJECT_DIR$/hided/tmp_folder/противод коррупции в сфере Госупр.pdf.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\_to_langs\Impl.py" afterPath="$PROJECT_DIR$/hided/mkts/_to_langs/Impl.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\_to_langs\__init__.py" afterPath="$PROJECT_DIR$/hided/mkts/_to_langs/__init__.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\_to_langs\_app_reuse.py" afterPath="$PROJECT_DIR$/hided/mkts/_to_langs/_app_reuse.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\_to_langs\mkt_to_java.py" afterPath="$PROJECT_DIR$/hided/mkts/_to_langs/mkt_to_java.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\_to_langs\mkt_to_python.py" afterPath="$PROJECT_DIR$/hided/mkts/_to_langs/mkt_to_python.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\bale_mkt.py" afterPath="$PROJECT_DIR$/hided/mkts/bale_mkt.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\mkts\mkt_parser.py" afterPath="$PROJECT_DIR$/hided/mkts/mkt_parser.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\__init__.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/__init__.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\composer.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/composer.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\constructor.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/constructor.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\cyaml.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/cyaml.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\dumper.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/dumper.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\emitter.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/emitter.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\error.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/error.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\events.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/events.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\loader.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/loader.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\nodes.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/nodes.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\parser.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/parser.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\reader.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/reader.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\representer.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/representer.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\resolver.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/resolver.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\scanner.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/scanner.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\serializer.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/serializer.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\no-jython-libs\yaml\tokens.py" afterPath="$PROJECT_DIR$/hided/no-jython-libs/yaml/tokens.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\rpts\p3.png" afterPath="$PROJECT_DIR$/hided/rpts/p3.png" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\rpts\v2.csv" afterPath="$PROJECT_DIR$/hided/rpts/v2.csv" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\rpts\v2.txt" afterPath="$PROJECT_DIR$/hided/rpts/v2.txt" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\TestLuceneStemmer.java" afterPath="$PROJECT_DIR$/tests/TestLuceneStemmer.java" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\TestSentSplitter.java" afterPath="$PROJECT_DIR$/tests/TestSentSplitter.java" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors\_utils.py" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/hided/_utils.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors\spider_extractor_jy_app.py" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/hided/spider_extractor_jy_app.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors\test_spider.py" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/hided/test_spider.py" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors\tika_wrapper\trash.py" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/hided/trash.py" />
+    </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367263196218" ignored="false" />
-    <file path="/TikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367249762687" ignored="false" />
-    <file path="/Main.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255199465" ignored="false" />
-    <file path="/TestLuceneStemmer.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367251621356" ignored="false" />
-    <file path="/CrosscuttingsException.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255124086" ignored="false" />
-    <file path="/AppConfigurer.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367255050578" ignored="false" />
-    <file path="/fragment.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367258142112" ignored="false" />
-    <file path="/ProcessorTargetsTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367262417848" ignored="false" />
-    <file path="/ProcessorTargets.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367262340539" ignored="false" />
+    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368022744335" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +246,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -69,86 +287,12 @@
   <component name="FavoritesManager">
     <favorites_list name="processor-word-frequency-index" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="15" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spider_extractor_target.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrosscuttingsException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/CrosscuttingsException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessorTargetsTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="44" selection-start="650" selection-end="650" vertical-scroll-proportion="1.3453237">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="12" selection-start="5910" selection-end="6172" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/TikaWrapper.java" />
-        <option value="$PROJECT_DIR$/src/TestLuceneStemmer.java" />
-        <option value="$PROJECT_DIR$/apps/cfgs/app_cfg.yaml" />
-        <option value="$PROJECT_DIR$/src/crosscuttings/AppConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/CrosscuttingsException.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurer.java" />
-        <option value="$PROJECT_DIR$/tests/TestProcessorTargets.java" />
-        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurerTest.java" />
-        <option value="$PROJECT_DIR$/apps/targets/spider_extractor_target.txt" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
-        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java" />
-      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -164,7 +308,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -183,8 +327,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,136 +337,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="targets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="D:/home/work-libs/java/hamcrest-core-1.3.jar!/" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.github.zaqwes8811.processor_word_frequency_index.crosscuttings" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\processor_word_frequency_index\spiders_extractors" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.All tests">
-    <configuration default="false" name="TestProcessorTargets" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TestProcessorTargets" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="false" name="TestLuceneStemmer" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TestLuceneStemmer" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -340,9 +426,9 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -352,46 +438,18 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="All tests" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.github.zaqwes8811.processor_word_frequency_index.crosscuttings" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All tests" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TestProcessorTargets" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
-    </list>
-    <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestProcessorTargets" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="" />
-      <created>1367248846008</created>
-      <updated>1367248846008</updated>
+      <changelist id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="" />
+      <created>1368022744006</created>
+      <updated>1368022744006</updated>
     </task>
     <servers />
   </component>
@@ -399,26 +457,25 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4829932" sideWeight="0.2471637" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3159091" sideWeight="0.5170068" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48337293" sideWeight="0.7471637" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32779098" sideWeight="0.41815236" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -475,180 +532,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TikaWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TikaWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="78" selection-start="905" selection-end="905" vertical-scroll-proportion="-1.6944444" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cfgs/app_cfg.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.6938776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="356" selection-end="356" vertical-scroll-proportion="0.5046382" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/AppConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="10" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/spider_extractor_jy_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="33" selection-start="2515" selection-end="2515" vertical-scroll-proportion="1.5361781" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="12" selection-start="5910" selection-end="6172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_43/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="11" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.3319149" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/CrosscuttingsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/targets/spider_extractor_target.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="15" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargetsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="44" selection-start="650" selection-end="650" vertical-scroll-proportion="1.3453237">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>processor-word-frequency-index</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>hamcrest-core-1.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
 

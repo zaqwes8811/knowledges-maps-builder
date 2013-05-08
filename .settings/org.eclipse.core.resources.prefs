@@ -3,7 +3,6 @@
 >>>>>>>=iss55
 eclipse.preferences.version=1
 encoding//apps/crawler-app.py=utf-8
-encoding//apps/dev-spider-processor-jy.py=utf-8
 encoding//apps/hided/app-raw-mapreduce.py=utf-8
 encoding//apps/hided/app-spider.py=utf-8
 encoding//apps/hided/app-test-stem.py=utf-8
@@ -40,5 +39,4 @@ encoding//src/spiders_extractors/test_spider.py=utf-8
 encoding//src/spiders_extractors/tika_wrapper/__init__.py=utf-8
 encoding//src/spiders_processors/__init__.py=utf-8
 encoding//src_pjy/spiders/std_to_text_convertors/srt_to_text.py=utf-8
-encoding/app-raw-mapreduce.py=utf-8
 encoding/app-spider.py=utf-8
