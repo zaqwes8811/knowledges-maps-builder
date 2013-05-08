@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper;
+package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
 
 import java.io.*;
 import java.net.URL;

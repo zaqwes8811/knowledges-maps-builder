@@ -1,4 +1,4 @@
-import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.tika_wrapper.ImmutableTikaWrapper;
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
@@ -34,13 +34,15 @@ public class SpiderExtractorTest {
           String pathToFile = target.get(ProcessorTargets.RESULT_PATH);
           String fileName = target.get(ProcessorTargets.RESULT_FILENAME);
 
+          // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
+
           // Выделяем текст
           // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
           ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder, idxName);
           tikaWrapper.process(fileName, pathToFile, nodeName);
 
           // Формируем метаданные для каждой задачи
-          break;
+          //break;
         }
 
       } catch (CrosscuttingsException e) {
