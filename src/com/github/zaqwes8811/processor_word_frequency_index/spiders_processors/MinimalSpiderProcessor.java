@@ -171,7 +171,7 @@ public class MinimalSpiderProcessor {
         // записываем контетн
         BufferedWriter contentOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/content.txt")));
         contentOut.write(summaryContent.toString());
-        print(summaryContent.toString());
+        //print(summaryContent.toString());
         // записываем матеданные
         Gson gson = new Gson();
         BufferedWriter metaOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/meta.txt")));
@@ -195,8 +195,9 @@ public class MinimalSpiderProcessor {
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
+      System.console().writer().println(node);
       spiderProcessor.processOneNode(node);
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
   }
 }

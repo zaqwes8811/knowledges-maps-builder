@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run-jar.bat" afterPath="$PROJECT_DIR$/run-jar.bat" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
@@ -22,10 +24,10 @@
     <file path="/ProcessorTargets.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368020075952" ignored="false" />
     <file path="/SpiderExtractorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1367994939039" ignored="false" />
     <file path="/ImmutableTikaWrapper.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368021420296" ignored="false" />
-    <file path="/MinimalSpiderProcessor.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368017039248" ignored="false" />
+    <file path="/MinimalSpiderProcessor.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368022134936" ignored="false" />
     <file path="/MinimalSpiderProcessorTest.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368016114889" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368018076370" ignored="false" />
-    <file path="/run-jar.bat" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368021758860" ignored="false" />
+    <file path="/run-jar.bat" changelist="fbe99d8a-f92c-46fb-ab07-0b91471a73ba" time="1368021979376" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <file leaf-file-name="MinimalSpiderExtractor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+            <state line="18" column="27" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,24 +97,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
+      <file leaf-file-name="MinimalSpiderProcessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0">
+            <state line="187" column="9" selection-start="6786" selection-end="6786" vertical-scroll-proportion="0.27272728">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2267#2275#0" expanded="true" />
-                <element signature="e#2677#2691#0" expanded="true" />
-                <element signature="e#3316#3324#0" expanded="true" />
+                <element signature="e#1680#1688#0" expanded="true" />
+                <element signature="e#2384#2398#0" expanded="true" />
+                <element signature="e#2567#2575#0" expanded="true" />
+                <element signature="e#3125#3133#0" expanded="true" />
+                <element signature="e#4226#4240#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run-jar.bat" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="run-jar.bat" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run-jar.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="96" selection-start="442" selection-end="442" vertical-scroll-proportion="0.27272728">
+            <state line="5" column="4" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,11 +163,11 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/tika_wrapper/ImmutableTikaWrapper.java" />
         <option value="$PROJECT_DIR$/tests/SpiderExtractorTest.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/ImmutableTikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java" />
         <option value="$PROJECT_DIR$/run-jar.bat" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
       </list>
     </option>
   </component>
@@ -215,6 +219,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,7 +473,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -470,7 +488,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19545455" sideWeight="0.6825939" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25454545" sideWeight="0.6825939" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31740615" sideWeight="0.79254454" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -605,33 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="33" selection-start="6969" selection-end="6969" vertical-scroll-proportion="0.3017857">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1680#1688#0" expanded="true" />
-            <element signature="e#2384#2398#0" expanded="true" />
-            <element signature="e#2567#2575#0" expanded="true" />
-            <element signature="e#3125#3133#0" expanded="true" />
-            <element signature="e#4226#4240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/SpiderExtractorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="24" selection-start="584" selection-end="2008" vertical-scroll-proportion="1.315508">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,9 +640,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run-jar.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/crosscuttings/ProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0">
+        <state line="132" column="10" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.36363637">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2267#2275#0" expanded="true" />
@@ -657,10 +659,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run-jar.bat">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_extractors/MinimalSpiderExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="96" selection-start="442" selection-end="442" vertical-scroll-proportion="0.27272728">
-          <folding />
+        <state line="18" column="27" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="9" selection-start="6786" selection-end="6786" vertical-scroll-proportion="0.27272728">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1680#1688#0" expanded="true" />
+            <element signature="e#2384#2398#0" expanded="true" />
+            <element signature="e#2567#2575#0" expanded="true" />
+            <element signature="e#3125#3133#0" expanded="true" />
+            <element signature="e#4226#4240#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
