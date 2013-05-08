@@ -49,6 +49,7 @@ final public class ImmutableTikaWrapper {
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
       String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
+      print("Src File: "+fullNameSrcFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();

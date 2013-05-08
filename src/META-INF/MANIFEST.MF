@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.github.zaqwes8811.processor_word_frequency_index.spide
+ rs_extractors.MinimalSpiderExtractor
+
