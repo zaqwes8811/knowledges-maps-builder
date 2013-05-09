@@ -1,7 +1,7 @@
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
 
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 
@@ -17,8 +17,7 @@ public class SpiderExtractorTest {
   public void testDevelopSpider() {
       try {
         // Получаем путь к папке приложения
-        AppConfigurer configurer = new AppConfigurer();
-        String pathToAppFolder = configurer.getPathToAppFolder();
+        String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
         //print(pathToAppFolder);
 
         // Получаем имя индекса

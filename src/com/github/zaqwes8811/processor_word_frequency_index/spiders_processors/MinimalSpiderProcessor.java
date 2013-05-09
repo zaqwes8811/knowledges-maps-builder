@@ -1,7 +1,7 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -34,8 +34,7 @@ public class MinimalSpiderProcessor {
     String pathToIndex = "";
     try {
       // Получаем путь к папке приложения
-      AppConfigurer configurer = new AppConfigurer();
-      String pathToAppFolder = configurer.getPathToAppFolder();
+      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
 
       // Получаем имя индекса
       ProcessorTargets processorTargets = new ProcessorTargets();

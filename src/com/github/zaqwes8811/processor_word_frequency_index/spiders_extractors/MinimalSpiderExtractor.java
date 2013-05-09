@@ -1,8 +1,7 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 
 import java.util.List;
@@ -24,8 +23,7 @@ public class MinimalSpiderExtractor {
   public static void main(String [ ] args) {
     try {
       // Получаем путь к папке приложения
-      //AppConfigurer configurer = new AppConfigurer();
-      String pathToAppFolder = AppConfigurer.getPathToAppFolder();
+      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
       print(pathToAppFolder);
 
       // Получаем имя индекса
