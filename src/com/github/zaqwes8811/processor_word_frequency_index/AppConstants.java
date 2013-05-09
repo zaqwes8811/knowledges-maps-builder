@@ -15,4 +15,7 @@ final public class AppConstants {
   // Index folders
   public final static java.lang.String CONTENT_FOLDER = "content";
   public final static java.lang.String TMP_FOLDER = "tmp";
+
+  //
+  public final static java.lang.String PURGED_TXT_FILE_EXT = ".ptxt";
 }

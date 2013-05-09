@@ -2,12 +2,15 @@ package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
 
 import java.io.*;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
+import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import org.apache.tika.detect.DefaultDetector;
@@ -30,16 +33,25 @@ final public class ImmutableTikaWrapper {
   public static final String LANG_META = "lang";
   public static final String SOURCE_URL = "src_url";
 
-  public static void extractAndSaveText(String inFileName, String pathToSrcFile, String nodeName) {
+  public static void extractAndSaveText(List<String> target) {
+    String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
+    String pathToSrcFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
+    String inFileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
     try {
       // Настраиваем пути
-      String fullOutFilenameNoExt =
-          ImmutableProcessorTargets.getPathToIndex()+"/"+
-          AppConstants.TMP_FOLDER+"/"+nodeName+'/'+inFileName;
+      String fullOutFilenameNoExt = Joiner.on("/")
+          .join(Arrays.asList(
+              ImmutableProcessorTargets.getPathToIndex(),
+              AppConstants.TMP_FOLDER,
+              nodeName,
+              inFileName));
 
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
-      String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
-      String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
+      String outFileNameRaw = fullOutFilenameNoExt+AppConstants.PURGED_TXT_FILE_EXT;
+      String fullNameSrcFile = Joiner.on("/")
+          .join(Arrays.asList(
+              pathToSrcFile,
+              inFileName));
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
       ImmutableAppUtils.print("Process file: " + fullNameSrcFile);
@@ -80,7 +92,10 @@ final public class ImmutableTikaWrapper {
   }
 
   // {url: path_to_file, lang: ru}
-  public static String extractAndSaveMetadata(String inFileName, String pathToSrcFile, String nodeName) {
+  public static String extractAndSaveMetadata(List<String> target) {
+    String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
+    String pathToSrcFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
+    String inFileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
     try {
       // Настраиваем пути
       // Настраиваем пути

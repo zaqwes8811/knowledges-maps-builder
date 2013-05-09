@@ -13,16 +13,11 @@ public class MinimalSpiderExtractor {
   public static void main(String [ ] args) {
     try {
       // Получаем цели
-      String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
-      List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
+      List<List<String>> targets = ImmutableProcessorTargets.runParser(AppConstants.SPIDER_TARGETS_FILENAME);
       for (List<String> target : targets) {
-        String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
-        String pathToFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
-        String fileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
-
         // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
-        ImmutableTikaWrapper.extractAndSaveText(fileName, pathToFile, nodeName);
-        ImmutableTikaWrapper.extractAndSaveMetadata(fileName, pathToFile, nodeName);
+        ImmutableTikaWrapper.extractAndSaveText(target);
+        ImmutableTikaWrapper.extractAndSaveMetadata(target);
         //break;  // DEVELOP
       }
     } catch (CrosscuttingsException e) {
