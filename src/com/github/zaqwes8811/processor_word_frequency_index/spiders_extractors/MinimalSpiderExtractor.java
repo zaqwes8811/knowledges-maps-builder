@@ -24,15 +24,16 @@ public class MinimalSpiderExtractor {
   public static void main(String [ ] args) {
     try {
       // Получаем путь к папке приложения
-      AppConfigurer configurer = new AppConfigurer();
-      String pathToAppFolder = configurer.getPathToAppFolder();
+      //AppConfigurer configurer = new AppConfigurer();
+      String pathToAppFolder = AppConfigurer.getPathToAppFolder();
+      print(pathToAppFolder);
 
       // Получаем имя индекса
       ProcessorTargets processorTargets = new ProcessorTargets();
       String idxName = processorTargets.getIndexName();
 
       // Получаем цели
-      String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
+      /*String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
       List<List<String>> targets = processorTargets.runParser(spiderTargetsFilename);
       for (List<String> target : targets) {
         String nodeName = target.get(ProcessorTargets.RESULT_NODE_NAME);
@@ -48,7 +49,7 @@ public class MinimalSpiderExtractor {
         // Формируем метаданные для каждой задачи
         //break;  // DEVELOP
       }
-
+          */
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }

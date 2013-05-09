@@ -16,8 +16,8 @@ import java.util.Map;
  * Time: 20:51
  * To change this template use File | Settings | File Templates.
  */
-public class AppConfigurer {
-  public String getPathToAppFolder() throws CrosscuttingsException {
+final public class ImmutableAppConfigurator {
+  public static String getPathToAppFolder() throws CrosscuttingsException {
     String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
     Yaml yaml = new Yaml();
     try {
@@ -26,9 +26,10 @@ public class AppConfigurer {
         InputStream input = closer.register(new FileInputStream(new File(fullCfgFilename)));
         Map<String, Object> object = (Map<String, Object>) yaml.load(input);
         Map topCfg = (Map)object;
-        Map scriberCfg = (Map)((Map)topCfg.get("App")).get("Scriber");
+        Map scriberConfiguration = (Map)((Map)topCfg.get("App")).get("Scriber");
 
-        return (String)scriberCfg.get("app_folder");
+        String appFolder =(String)scriberConfiguration.get("app_folder");
+        return appFolder;
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
