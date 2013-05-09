@@ -34,6 +34,20 @@ import java.util.List;
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
 final public class ImmutableProcessorTargets {
+  public static String getPathToIndex() {
+    String pathToIndex = "";
+    try {
+      // Получаем путь к папке приложения
+      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
+
+      // Получаем имя индекса
+      String idxName = getIndexName();
+      pathToIndex = pathToAppFolder+'/'+idxName;
+    } catch (CrosscuttingsException e) {
+      System.out.println(e.getMessage());
+    }
+    return pathToIndex;
+  }
   /**
    * @param msg - начало периода
    //* @throws IllegalArgument – если начало периода указано после конца

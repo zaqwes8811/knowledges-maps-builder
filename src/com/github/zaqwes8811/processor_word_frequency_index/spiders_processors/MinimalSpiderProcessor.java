@@ -1,9 +1,11 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 
+import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 
+import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -31,30 +33,6 @@ public class MinimalSpiderProcessor {
   static final int IDX_LANG = 0;
   static final int IDX_SRC_URL = 1;
   static final int IDX_TMP_FILE = 2;
-  public String getPathToIndex() {
-    String pathToIndex = "";
-    try {
-      // Получаем путь к папке приложения
-      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
-
-      // Получаем имя индекса
-      String idxName = ImmutableProcessorTargets.getIndexName();
-      pathToIndex = pathToAppFolder+'/'+idxName;
-    } catch (CrosscuttingsException e) {
-      System.out.println(e.getMessage());
-    }
-    return pathToIndex;
-  }
-  public List<String> getListNodes() {
-    List<String> listNodes = new ArrayList<String>();
-    // Получаем список узлов по папкам, а на по заданиям
-    String pathToTmpFolder = getPathToIndex()+"/tmp";
-    File rootTmp = new File(pathToTmpFolder);
-
-    // Итоговый список
-    listNodes.addAll(Arrays.asList(rootTmp.list()));
-    return listNodes;
-  }
 
   public List<String> getListNamesMetaFiles(String pathToNode) {
     File nodeContainer = new File(pathToNode);
@@ -117,7 +95,7 @@ public class MinimalSpiderProcessor {
 
   public void processOneNode(String node) {
     StringBuilder summaryContent = new StringBuilder();
-    String pathToNode = getPathToIndex()+"/tmp/"+node;
+    String pathToNode = ImmutableProcessorTargets.getPathToIndex()+"/tmp/"+node;
     List<List<String>> summaryMeta = new ArrayList<List<String>>();
     List<List<String>> targets = getTarget(pathToNode);
     //StringBuilder
@@ -165,12 +143,12 @@ public class MinimalSpiderProcessor {
     try {  // внутри, чтобы не прервалась обработка из-за одного файла
       Closer writeCloser = Closer.create();
       try {
-        String path = getPathToIndex()+"/index/"+node;
+        String path = ImmutableProcessorTargets.getPathToIndex()+"/"+ AppConstants.CONTENT_FOLDER+"/"+node;
 
-        // записываем контетн
+        // записываем контент
         BufferedWriter contentOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/content.txt")));
         contentOut.write(summaryContent.toString());
-        //print(summaryContent.toString());
+
         // записываем матеданные
         Gson gson = new Gson();
         BufferedWriter metaOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/meta.txt")));
@@ -190,14 +168,15 @@ public class MinimalSpiderProcessor {
     MinimalSpiderProcessor spiderProcessor = new MinimalSpiderProcessor();
 
     // Processing
-    List<String> nodes = spiderProcessor.getListNodes();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
-      System.console().writer().println(node);
+      //System.console().writer().println(node);
       spiderProcessor.processOneNode(node);
-      //break;  // DEVELOP
+      break;  // DEVELOP
     }
+    System.out.print("Done\n");
   }
 }
 

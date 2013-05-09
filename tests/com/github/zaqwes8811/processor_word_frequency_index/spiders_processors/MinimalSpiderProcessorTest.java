@@ -1,5 +1,6 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 
+import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import org.junit.Test;
@@ -27,7 +28,7 @@ public class MinimalSpiderProcessorTest {
     MinimalSpiderProcessor spiderProcessor = new MinimalSpiderProcessor();
 
     // Processing
-    List<String> nodes = spiderProcessor.getListNodes();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
