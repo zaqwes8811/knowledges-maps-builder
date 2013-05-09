@@ -1,11 +1,10 @@
 package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
 
+import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
+import com.google.common.io.Closer;
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Map;
 
 //import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
@@ -18,26 +17,29 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class AppConfigurer {
-
   public String getPathToAppFolder() throws CrosscuttingsException {
-    String path_to_cfg = "apps/cfgs/app_cfg.yaml";
+    String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
     Yaml yaml = new Yaml();
-    //InputStream input;
     try {
-      InputStream input = new FileInputStream(new File(path_to_cfg));
-      Map<String, Object> object = (Map<String, Object>) yaml.load(input);
-      Map topCfg = (Map)object;
-      Map scriberCfg = (Map)((Map)topCfg.get("App")).get("Scriber");
+      Closer closer = Closer.create();
+      try {
+        InputStream input = closer.register(new FileInputStream(new File(fullCfgFilename)));
+        Map<String, Object> object = (Map<String, Object>) yaml.load(input);
+        Map topCfg = (Map)object;
+        Map scriberCfg = (Map)((Map)topCfg.get("App")).get("Scriber");
 
-
-      return (String)scriberCfg.get("app_folder");
+        return (String)scriberCfg.get("app_folder");
+      } catch (Throwable e) { // must catch Throwable
+        throw closer.rethrow(e);
+      } finally {
+        closer.close();
+      }
     } catch (FileNotFoundException e) {
-      //e.printStackTrace();
-      throw new CrosscuttingsException("File with cfg, no found. File name - "+path_to_cfg);
-    } finally {
-      //if (input != null)
-      //  input.close();
+      e.printStackTrace();
+      throw new CrosscuttingsException("File with cfg, no found. File name - "+fullCfgFilename);
+    } catch (IOException e) {
+      e.printStackTrace();
+      throw new CrosscuttingsException("Error on read file - "+fullCfgFilename);
     }
-    //return null;
   }
 }
