@@ -3,9 +3,11 @@ package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 
 import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -27,30 +29,33 @@ import java.util.regex.Pattern;
  * To change this template use File | Settings | File Templates.
  */
 public class MinimalSpiderProcessor {
+  // DEVELOP
   static void print(Object msg) {
     System.out.println(msg);
   }
+  // DEVELOP
+
   static final int IDX_LANG = 0;
   static final int IDX_SRC_URL = 1;
   static final int IDX_TMP_FILE = 2;
 
   public List<String> getListNamesMetaFiles(String pathToNode) {
-    File nodeContainer = new File(pathToNode);
     String regex = ".+\\.meta";
-    List<String> result =
-        Arrays.asList(nodeContainer.list(new DirFilter(regex)));
+    List<String> result = ImmutableAppUtils.getListNamesMetaFiles(pathToNode, regex);
     return result;
   }
 
   /*
   *
-  * @return: [[lang0, src_url0 filename0], []]
+  * @return: [[lang_mean0, src_url0 filename0], []]
   * */
   public List<List<String>> getTarget(String pathToNode) {
     List<List<String>> targetsInfo = new ArrayList<List<String>>();
     List<String> listNamesMetaFiles = getListNamesMetaFiles(pathToNode);
     for (String filename: listNamesMetaFiles) {
+
       List<String> oneTarget = new ArrayList<String>();
+
       // Получаем язык файла, оцененный или заранее известрый, это отражено в мета-файле
       String metafilename = pathToNode+'/'+filename;
       oneTarget.addAll(getAllMetaData(metafilename));
@@ -79,8 +84,8 @@ public class MinimalSpiderProcessor {
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, String>>() {}.getType();
         HashMap<String, String> meta = gson.fromJson(jsonMeta, type);
-        allMetaData.add(meta.get("lang"));
-        allMetaData.add(meta.get("src_url"));
+        allMetaData.add(meta.get(ImmutableTikaWrapper.LANG_META));
+        allMetaData.add(meta.get(ImmutableTikaWrapper.SOURCE_URL));
 
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
@@ -95,10 +100,10 @@ public class MinimalSpiderProcessor {
 
   public void processOneNode(String node) {
     StringBuilder summaryContent = new StringBuilder();
-    String pathToNode = ImmutableProcessorTargets.getPathToIndex()+"/tmp/"+node;
+    String pathToNodeInTmpFolder = ImmutableProcessorTargets.getPathToIndex()+"/"+AppConstants.TMP_FOLDER+"/"+node;
     List<List<String>> summaryMeta = new ArrayList<List<String>>();
-    List<List<String>> targets = getTarget(pathToNode);
-    //StringBuilder
+    List<List<String>> targets = getTarget(pathToNodeInTmpFolder);
+
     for (List<String> target: targets) {
       try {  // внутри, чтобы не прервалась обработка из-за одного файла
         Closer readCloser = Closer.create();
@@ -116,7 +121,8 @@ public class MinimalSpiderProcessor {
 
           // разбиваем не единицы и пишем
           // TODO(zaqwes) TOTH: maybi slow!
-          String dataForSplitting = buffer.toString().replace('\n', ' ');
+          // Убираем переносы строк - могут быть ошибки! Некоторые слова с дефисом могут быть перенес. по дуфису
+          String dataForSplitting = buffer.toString().replace("-\n", "\n").replace('\n', ' ');
 
           BreakIterator bi = BreakIterator.getSentenceInstance();
           bi.setText(dataForSplitting);
@@ -136,7 +142,7 @@ public class MinimalSpiderProcessor {
       } catch (IOException e) {
         e.printStackTrace();
       }
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
 
     // Можно писать результат
@@ -173,19 +179,12 @@ public class MinimalSpiderProcessor {
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
       //System.console().writer().println(node);
+      print(node);
       spiderProcessor.processOneNode(node);
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
     System.out.print("Done\n");
   }
 }
 
-class DirFilter implements FilenameFilter {
-  private Pattern pattern;
-  public DirFilter(String regex) {
-    pattern = Pattern.compile(regex);
-  }
-  public boolean accept(File dir, String name) {
-    return  pattern.matcher(name).matches();
-  }
-}
+

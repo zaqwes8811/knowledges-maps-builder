@@ -5,6 +5,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppUtils;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import org.apache.tika.detect.DefaultDetector;
@@ -23,33 +26,23 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
 final public class ImmutableTikaWrapper {
-  public static void print(Object msg) {
-    if (System.console() == null) {
-      System.out.println(msg);
-    } else {
-      System.console().writer().println(msg);
-    }
-  }
-
   // Fields
-  final private String pathToAppFolder_;
-  final private String indexName_;
+  public static final String LANG_META = "lang";
+  public static final String SOURCE_URL = "src_url";
 
-  public ImmutableTikaWrapper(String pathToAppFolder,  String indexName) {
-    pathToAppFolder_ = pathToAppFolder;
-    indexName_ = indexName;
-  }
-
-  public final void extractAndSaveText(String inFileName, String pathToSrcFile, String nodeName) {
+  public static void extractAndSaveText(String inFileName, String pathToSrcFile, String nodeName) {
     try {
       // Настраиваем пути
-      String fullOutFilenameNoExt = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName+'/'+inFileName;
+      String fullOutFilenameNoExt =
+          ImmutableProcessorTargets.getPathToIndex()+"/"+
+          AppConstants.TMP_FOLDER+"/"+nodeName+'/'+inFileName;
+
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
       String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
-      print("Process file: "+fullNameSrcFile);
+      ImmutableAppUtils.print("Process file: " + fullNameSrcFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
@@ -87,10 +80,14 @@ final public class ImmutableTikaWrapper {
   }
 
   // {url: path_to_file, lang: ru}
-  public String extractAndSaveMetadata(String inFileName, String pathToSrcFile, String nodeName) {
+  public static String extractAndSaveMetadata(String inFileName, String pathToSrcFile, String nodeName) {
     try {
       // Настраиваем пути
-      String fullOutFilenameNoExt = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName+'/'+inFileName;
+      // Настраиваем пути
+      String fullOutFilenameNoExt =
+        ImmutableProcessorTargets.getPathToIndex()+"/"+
+        AppConstants.TMP_FOLDER+"/"+nodeName+'/'+inFileName;
+
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
       String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
@@ -113,8 +110,8 @@ final public class ImmutableTikaWrapper {
         // Заполняем метадынные файла
         String metaFileName = fullOutFilenameNoExt+".meta";
         Map<String, String> meta = new HashMap<String, String>();
-        meta.put("lang", lang);
-        meta.put("src_url", fullNameSrcFile);
+        meta.put(LANG_META, lang);
+        meta.put(SOURCE_URL, fullNameSrcFile);
 
         PrintWriter metaOut = postprocessCloser.register(
           new PrintWriter(

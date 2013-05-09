@@ -1,3 +1,4 @@
+import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
@@ -16,18 +17,10 @@ public class SpiderExtractorTest {
   @Test
   public void testDevelopSpider() {
       try {
-        // Получаем путь к папке приложения
-        String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
-        //print(pathToAppFolder);
-
-        // Получаем имя индекса
-        String idxName = ImmutableProcessorTargets.getIndexName();
-
         // Получаем цели
-        String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
+        String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
         List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
-          //ProcessorTargets.print(target);
           String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
           String pathToFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
           String fileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
@@ -36,7 +29,7 @@ public class SpiderExtractorTest {
 
           // Выделяем текст
           // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
-          ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder, idxName);
+          ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper();
           tikaWrapper.extractAndSaveText(fileName, pathToFile, nodeName);
 
           // Формируем метаданные для каждой задачи

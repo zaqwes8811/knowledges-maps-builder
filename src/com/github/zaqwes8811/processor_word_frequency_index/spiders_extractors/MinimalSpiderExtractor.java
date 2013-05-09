@@ -9,20 +9,9 @@ import java.util.List;
 
 
 public class MinimalSpiderExtractor {
-  static void print(Object msg) {
-    System.out.println(msg);
-  }
-
-
   // Main()
   public static void main(String [ ] args) {
     try {
-      // Получаем путь к папке приложения
-      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
-
-      // Получаем имя индекса
-      String idxName = ImmutableProcessorTargets.getIndexName();
-
       // Получаем цели
       String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
       List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
@@ -32,12 +21,10 @@ public class MinimalSpiderExtractor {
         String fileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
 
         // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
-        ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder, idxName);
-        tikaWrapper.extractAndSaveText(fileName, pathToFile, nodeName);
-        tikaWrapper.extractAndSaveMetadata(fileName, pathToFile, nodeName);
+        ImmutableTikaWrapper.extractAndSaveText(fileName, pathToFile, nodeName);
+        ImmutableTikaWrapper.extractAndSaveMetadata(fileName, pathToFile, nodeName);
         //break;  // DEVELOP
       }
-
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }

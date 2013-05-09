@@ -14,4 +14,5 @@ final public class AppConstants {
 
   // Index folders
   public final static java.lang.String CONTENT_FOLDER = "content";
+  public final static java.lang.String TMP_FOLDER = "tmp";
 }
