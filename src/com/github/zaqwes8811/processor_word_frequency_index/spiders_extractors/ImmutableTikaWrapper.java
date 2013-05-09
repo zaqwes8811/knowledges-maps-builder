@@ -5,10 +5,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.AppConfigurer;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
-import com.google.common.base.Splitter;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import org.apache.tika.detect.DefaultDetector;
@@ -16,7 +12,6 @@ import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.io.TikaInputStream;
 import org.apache.tika.language.LanguageIdentifier;
-import org.apache.tika.language.ProfilingHandler;
 import org.apache.tika.language.ProfilingWriter;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.AutoDetectParser;
@@ -29,7 +24,11 @@ import org.xml.sax.SAXException;
 
 final public class ImmutableTikaWrapper {
   public static void print(Object msg) {
-    System.console().writer().println(msg);
+    if (System.console() == null) {
+      System.out.println(msg);
+    } else {
+      System.console().writer().println(msg);
+    }
   }
 
   // Fields
@@ -41,9 +40,8 @@ final public class ImmutableTikaWrapper {
     indexName_ = indexName;
   }
 
-  public final void process(String inFileName, String pathToSrcFile, String nodeName) {
+  public final void extractAndSaveText(String inFileName, String pathToSrcFile, String nodeName) {
     try {
-
       // Настраиваем пути
       String fullOutFilenameNoExt = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName+'/'+inFileName;
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
@@ -55,7 +53,6 @@ final public class ImmutableTikaWrapper {
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
-      //String str = new String(fullNameSrcFile.getBytes("UTF-8"), "windows-1251");
       try {
         File file = new File(fullNameSrcFile);
         URL url;
@@ -84,13 +81,26 @@ final public class ImmutableTikaWrapper {
       } finally {
         closer.close();
       }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  // {url: path_to_file, lang: ru}
+  public String extractAndSaveMetadata(String inFileName, String pathToSrcFile, String nodeName) {
+    try {
+      // Настраиваем пути
+      String fullOutFilenameNoExt = pathToAppFolder_+"/"+indexName_+"/tmp/"+nodeName+'/'+inFileName;
+      // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
+      String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
+      String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
 
       // Определяем язык - приходится читать файл еще раз, но по другому пока не ясно как
       //   язык определяется как литовский
       Closer postprocessCloser = Closer.create();
       try {
         BufferedReader inExtractedFile = postprocessCloser.register(
-            new BufferedReader(new FileReader(outFileNameRaw)));
+          new BufferedReader(new FileReader(outFileNameRaw)));
         ProfilingWriter writer = new ProfilingWriter();
         while (true) {
           String s = inExtractedFile.readLine();
@@ -101,22 +111,19 @@ final public class ImmutableTikaWrapper {
         String lang = identifier.getLanguage();
 
         // Заполняем метадынные файла
-        // {url: path_to_file, lang: ru}
         String metaFileName = fullOutFilenameNoExt+".meta";
-        //print(metaFileName);
         Map<String, String> meta = new HashMap<String, String>();
         meta.put("lang", lang);
         meta.put("src_url", fullNameSrcFile);
-       // print(meta);
 
         PrintWriter metaOut = postprocessCloser.register(
-            new PrintWriter(
-              new BufferedWriter(
-                new FileWriter(metaFileName))));
+          new PrintWriter(
+            new BufferedWriter(
+              new FileWriter(metaFileName))));
 
         Gson gson = new Gson();
         metaOut.println(gson.toJson(meta));
-
+        return lang;
 
       } catch (Throwable e) { // must catch Throwable
         throw postprocessCloser.rethrow(e);
@@ -125,7 +132,7 @@ final public class ImmutableTikaWrapper {
       }
     } catch (IOException e) {
       e.printStackTrace();
+      return "error occure";
     }
-
   }
 }

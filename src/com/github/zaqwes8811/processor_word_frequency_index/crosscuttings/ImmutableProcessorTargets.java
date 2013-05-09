@@ -67,10 +67,10 @@ final public class ImmutableProcessorTargets {
 
     // Разделяем и пакуем
     List<String> result = new ArrayList<String>();
-    String fname = fullPathToFile.substring(lastIdx + 1, lengthInString);
+    String filename = fullPathToFile.substring(lastIdx + 1, lengthInString);
     String pathToFile = fullPathToFile.substring(0, lastIdx);
     result.add(pathToFile);
-    result.add(fname);
+    result.add(filename);
     return result;
   }
 

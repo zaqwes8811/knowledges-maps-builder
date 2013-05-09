@@ -37,7 +37,7 @@ public class SpiderExtractorTest {
           // Выделяем текст
           // Нужно передать имя исходного файла, и путь к итоговому(без расширения)
           ImmutableTikaWrapper tikaWrapper = new ImmutableTikaWrapper(pathToAppFolder, idxName);
-          tikaWrapper.process(fileName, pathToFile, nodeName);
+          tikaWrapper.extractAndSaveText(fileName, pathToFile, nodeName);
 
           // Формируем метаданные для каждой задачи
           //break;
