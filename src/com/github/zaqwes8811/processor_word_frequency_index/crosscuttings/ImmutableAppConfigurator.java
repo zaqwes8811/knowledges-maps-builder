@@ -7,14 +7,14 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.*;
 import java.util.Map;
 
-//import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-
 /**
  * Created with IntelliJ IDEA.
  * User: кей
  * Date: 29.04.13
  * Time: 20:51
  * To change this template use File | Settings | File Templates.
+ *
+ * Кофигуратор приложения
  */
 final public class ImmutableAppConfigurator {
   public static String getPathToAppFolder() throws CrosscuttingsException {

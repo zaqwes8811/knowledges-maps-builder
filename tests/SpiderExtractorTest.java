@@ -1,9 +1,9 @@
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
 
 import java.util.List;
 
@@ -21,17 +21,16 @@ public class SpiderExtractorTest {
         //print(pathToAppFolder);
 
         // Получаем имя индекса
-        ProcessorTargets processorTargets = new ProcessorTargets();
-        String idxName = processorTargets.getIndexName();
+        String idxName = ImmutableProcessorTargets.getIndexName();
 
         // Получаем цели
         String spiderTargetsFilename = "apps/targets/spider_extractor_target.txt";
-        List<List<String>> targets = processorTargets.runParser(spiderTargetsFilename);
+        List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
           //ProcessorTargets.print(target);
-          String nodeName = target.get(ProcessorTargets.RESULT_NODE_NAME);
-          String pathToFile = target.get(ProcessorTargets.RESULT_PATH);
-          String fileName = target.get(ProcessorTargets.RESULT_FILENAME);
+          String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
+          String pathToFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
+          String fileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
 
           // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
 

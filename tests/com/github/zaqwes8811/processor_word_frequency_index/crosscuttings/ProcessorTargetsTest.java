@@ -14,14 +14,11 @@ import java.util.List;
 public class ProcessorTargetsTest {
   @Test
   public void testRunParser() {
-    print("\nNEW TEST");
-    ProcessorTargets testObj = new ProcessorTargets();
-
     String spiderTargetFname = "apps/targets/spider_extractor_target";
     try {
-      List<List<String>> listTargets = testObj.runParser(spiderTargetFname);
+      List<List<String>> listTargets = ImmutableProcessorTargets.runParser(spiderTargetFname);
       for (List<String> target : listTargets)
-        ProcessorTargets.print(target);
+        ImmutableProcessorTargets.print(target);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }
@@ -30,11 +27,9 @@ public class ProcessorTargetsTest {
   @Test
   public void testPathSplitter() {
     print("\nNEW TEST");
-    ProcessorTargets testObj = new ProcessorTargets();
-
     String spiderTargetFname = "apps/targets/spider_extractor_target.json";
     try {
-      List<String> splittedPath =  testObj.splitUrlToFilenameAndPath(spiderTargetFname);
+      List<String> splittedPath =  ImmutableProcessorTargets.splitUrlToFilenameAndPath(spiderTargetFname);
       print(splittedPath);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());

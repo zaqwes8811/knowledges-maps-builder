@@ -2,17 +2,9 @@ package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
 
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ProcessorTargets;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 
-import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 08.05.13
- * Time: 16:45
- * To change this template use File | Settings | File Templates.
- */
 public class MinimalSpiderExtractor {
   static void print(Object msg) {
     System.out.println(msg);
@@ -24,11 +16,9 @@ public class MinimalSpiderExtractor {
     try {
       // Получаем путь к папке приложения
       String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
-      print(pathToAppFolder);
 
       // Получаем имя индекса
-      ProcessorTargets processorTargets = new ProcessorTargets();
-      String idxName = processorTargets.getIndexName();
+      String idxName = ImmutableProcessorTargets.getIndexName();
 
       // Получаем цели
       /*String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;

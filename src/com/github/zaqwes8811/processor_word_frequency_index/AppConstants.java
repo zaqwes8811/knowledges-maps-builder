@@ -9,5 +9,6 @@ package com.github.zaqwes8811.processor_word_frequency_index;
  */
 final public class AppConstants {
   public final static java.lang.String SPIDER_TARGETS_FILENAME = "apps/targets/spider_extractor_target.txt";
+  public final static java.lang.String SPIDER_TARGETS_FILENAME_GLOBAL = "apps/targets/spider_extractor_target.json";
   public final static java.lang.String APP_CFG_FILENAME = "apps/cfgs/app_cfg.yaml";
 }
