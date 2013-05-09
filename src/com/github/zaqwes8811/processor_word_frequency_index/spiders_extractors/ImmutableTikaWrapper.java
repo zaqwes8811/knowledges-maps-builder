@@ -33,7 +33,7 @@ final public class ImmutableTikaWrapper {
   public static final String LANG_META = "lang";
   public static final String SOURCE_URL = "src_url";
 
-  public static void extractAndSaveText(List<String> target) {
+  public static void extractAndSaveText(List<String> target) throws ExtractorException {
     String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
     String pathToSrcFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
     String inFileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
@@ -41,30 +41,30 @@ final public class ImmutableTikaWrapper {
       // Настраиваем пути
       String fullOutFilenameNoExt = Joiner.on("/")
           .join(Arrays.asList(
-              ImmutableProcessorTargets.getPathToIndex(),
-              AppConstants.TMP_FOLDER,
-              nodeName,
-              inFileName));
+            ImmutableProcessorTargets.getPathToIndex(),
+            AppConstants.TMP_FOLDER,
+            nodeName,
+            inFileName));
 
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
       String outFileNameRaw = fullOutFilenameNoExt+AppConstants.PURGED_TXT_FILE_EXT;
-      String fullNameSrcFile = Joiner.on("/")
+      String fullNameSourceFile = Joiner.on("/")
           .join(Arrays.asList(
-              pathToSrcFile,
-              inFileName));
+            pathToSrcFile,
+            inFileName));
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
-      ImmutableAppUtils.print("Process file: " + fullNameSrcFile);
+      ImmutableAppUtils.print("Process file: " + fullNameSourceFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
       try {
-        File file = new File(fullNameSrcFile);
+        File file = new File(fullNameSourceFile);
         URL url;
         if (file.isFile()) {
           url = file.toURI().toURL();
         } else {
-          url = new URL("file:///"+fullNameSrcFile);
+          url = new URL("file:///"+fullNameSourceFile);
         }
         ParseContext context = new ParseContext();
         Detector detector = new DefaultDetector();
@@ -78,56 +78,61 @@ final public class ImmutableTikaWrapper {
 
       // Обработка ошибок
       } catch (SAXException e) {
-        e.printStackTrace();
+        // LOG()
+        throw new ExtractorException("Error on parse file "+fullNameSourceFile);
       } catch (TikaException e) {
-        e.printStackTrace();
+        // LOG()
+        throw new ExtractorException("Error on parse file "+fullNameSourceFile);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
         closer.close();
       }
     } catch (IOException e) {
-      e.printStackTrace();
+      throw new ExtractorException("Error on parse file. I/O error.");
     }
   }
 
   // {url: path_to_file, lang: ru}
   public static String extractAndSaveMetadata(List<String> target) {
     String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
-    String pathToSrcFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
-    String inFileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
+    String onlyPathPartSourceFilename = target.get(ImmutableProcessorTargets.RESULT_PATH);
+    String onlyNameSourceFile = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
     try {
       // Настраиваем пути
-      // Настраиваем пути
-      String fullOutFilenameNoExt =
-        ImmutableProcessorTargets.getPathToIndex()+"/"+
-        AppConstants.TMP_FOLDER+"/"+nodeName+'/'+inFileName;
+      String fullOutFilenameNoExt = Joiner.on("/")
+        .join(Arrays.asList(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.TMP_FOLDER,
+          nodeName,
+          onlyNameSourceFile));
 
       // имя файла старое! для сохр. нужно добавть *.ptxt or *.meta
-      String outFileNameRaw = fullOutFilenameNoExt+".ptxt";
-      String fullNameSrcFile = pathToSrcFile+'/'+inFileName;
+      String nameFileWithContent = fullOutFilenameNoExt+AppConstants.PURGED_TXT_FILE_EXT;
+      String sourceFilename = Joiner.on("/")
+        .join(Arrays.asList(
+          onlyPathPartSourceFilename,
+          onlyNameSourceFile));
 
       // Определяем язык - приходится читать файл еще раз, но по другому пока не ясно как
       //   язык определяется как литовский
       Closer postprocessCloser = Closer.create();
       try {
         BufferedReader inExtractedFile = postprocessCloser.register(
-          new BufferedReader(new FileReader(outFileNameRaw)));
+          new BufferedReader(new FileReader(nameFileWithContent)));
         ProfilingWriter writer = new ProfilingWriter();
-        while (true) {
-          String s = inExtractedFile.readLine();
-          if (s == null)  break;
-          writer.append(s);
-        }
+        String s;
+        while ((s = inExtractedFile.readLine()) != null) writer.append(s);
         LanguageIdentifier identifier = writer.getLanguage();
         String lang = identifier.getLanguage();
 
         // Заполняем метадынные файла
-        String metaFileName = fullOutFilenameNoExt+".meta";
         Map<String, String> meta = new HashMap<String, String>();
         meta.put(LANG_META, lang);
-        meta.put(SOURCE_URL, fullNameSrcFile);
+        meta.put(SOURCE_URL, sourceFilename);
 
+        // Запись
+        String metaFileName = fullOutFilenameNoExt+AppConstants.META_FILE_EXT;
         PrintWriter metaOut = postprocessCloser.register(
           new PrintWriter(
             new BufferedWriter(
