@@ -17,6 +17,7 @@ import java.util.Map;
  * Кофигуратор приложения
  */
 final public class ImmutableAppConfigurator {
+  private static final String ROOT_NAME = "App";
   public static String getPathToAppFolder() throws CrosscuttingsException {
     String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
     Yaml yaml = new Yaml();
@@ -26,7 +27,7 @@ final public class ImmutableAppConfigurator {
         InputStream input = closer.register(new FileInputStream(new File(fullCfgFilename)));
         Map<String, Object> object = (Map<String, Object>) yaml.load(input);
         Map topCfg = (Map)object;
-        Map scriberConfiguration = (Map)((Map)topCfg.get("App")).get("Scriber");
+        Map scriberConfiguration = (Map)((Map)topCfg.get(ROOT_NAME)).get("Scriber");
 
         String appFolder =(String)scriberConfiguration.get("app_folder");
         return appFolder;
