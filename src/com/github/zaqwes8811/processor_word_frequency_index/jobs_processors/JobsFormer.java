@@ -1,8 +1,12 @@
 package com.github.zaqwes8811.processor_word_frequency_index.jobs_processors;
 
+import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
 import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
+import com.google.common.base.Joiner;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,11 +20,18 @@ import java.util.List;
  */
 final public class JobsFormer {
   public static List<List<String>> getJobs() {
+    List<List<String>> jobs = new ArrayList<List<String>>();
+    //
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
     for (String node: nodes) {
-      ImmutableAppUtils.print(node);
-      //ImmutableAppUtils.getListFilenamesByExtention()
+      String contentFilename = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.CONTENT_FOLDER,
+          node,
+          AppConstants.CONTENT_FILENAME);
+      jobs.add(Arrays.asList(node, contentFilename));
     }
-    return null;
+    return jobs;
   }
 }

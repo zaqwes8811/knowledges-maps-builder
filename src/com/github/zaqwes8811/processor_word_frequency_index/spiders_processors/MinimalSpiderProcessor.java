@@ -99,7 +99,10 @@ public class MinimalSpiderProcessor {
 
   public void processOneNode(String node) {
     StringBuilder summaryContent = new StringBuilder();
-    String pathToNodeInTmpFolder = ImmutableProcessorTargets.getPathToIndex()+"/"+AppConstants.TMP_FOLDER+"/"+node;
+    String pathToNodeInTmpFolder = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(ImmutableProcessorTargets.getPathToIndex(),
+              AppConstants.TMP_FOLDER,
+              node);
     List<List<String>> summaryMeta = new ArrayList<List<String>>();
     List<List<String>> targets = getTarget(pathToNodeInTmpFolder);
 

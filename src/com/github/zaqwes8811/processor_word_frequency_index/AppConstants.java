@@ -17,6 +17,9 @@ final public class AppConstants {
   public final static java.lang.String TMP_FOLDER = "tmp";
 
   //
+  public final static java.lang.String CONTENT_FILENAME = "content.txt";
+
+  //
   public final static java.lang.String PURGED_TXT_FILE_EXT = ".ptxt";
   public final static java.lang.String META_FILE_EXT = ".meta";
   public final static java.lang.String PATH_SPLITTER = "/";  // *nix splitter
