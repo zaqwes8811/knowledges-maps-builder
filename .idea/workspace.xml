@@ -27,11 +27,11 @@
     <file path="/JobsFormerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185478097" ignored="false" />
     <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368204585931" ignored="false" />
     <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
-    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368201596277" ignored="false" />
+    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207687769" ignored="false" />
     <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368199903962" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368192251567" ignored="false" />
-    <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207098324" ignored="false" />
-    <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368205488098" ignored="false" />
+    <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207291189" ignored="false" />
+    <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207722723" ignored="false" />
     <file path="/Summators.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368200291657" ignored="false" />
     <file path="/BaseTokenizerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368203813118" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,7 +95,7 @@
       <file leaf-file-name="RunnerSentencesLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+            <state line="36" column="33" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#848#854#0" expanded="true" />
@@ -105,44 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableReduces.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImmutableReduces.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="83" selection-start="1009" selection-end="1017" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="32" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2071#2079#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="16" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.5814394">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTokenizerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="30" selection-start="1112" selection-end="1215" vertical-scroll-proportion="0.0">
+            <state line="53" column="13" selection-start="2057" selection-end="2057" vertical-scroll-proportion="1.030303">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,11 +145,11 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/Summators.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/ImmutableSummators.java" />
-        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" />
+        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
       </list>
     </option>
   </component>
@@ -613,7 +579,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -629,7 +595,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23662885" sideWeight="0.65795726" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34204274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34204274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -771,17 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#854#0" expanded="true" />
-            <element signature="e#1243#1249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/ImmutableSummators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="287" selection-end="297" vertical-scroll-proportion="0.43589744">
@@ -800,18 +755,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="1112" selection-end="1215" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="83" selection-start="1009" selection-end="1017" vertical-scroll-proportion="0.0">
+        <state line="44" column="30" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.42045453">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -820,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="32" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
+        <state line="41" column="32" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.16098484">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2071#2079#0" expanded="true" />
@@ -828,9 +774,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="16" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.5814394">
+        <state line="24" column="19" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.67045456">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="33" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#848#854#0" expanded="true" />
+            <element signature="e#1243#1249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="13" selection-start="2057" selection-end="2057" vertical-scroll-proportion="1.030303">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

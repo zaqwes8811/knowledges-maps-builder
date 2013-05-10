@@ -43,11 +43,12 @@ final public class BaseSyllableCounter {
       }
 
       // Некоторые парные буквы пары слогов не образуют
+      // НО ИНОГДА ЭТО ДВА ЗВУКА!
       for (int i = 0; i < ENGLISH_VOWEL_PAIRS.length; ++i) {
         count -= StringUtils.countMatches(workCopy, ENGLISH_VOWEL_PAIRS[i]);
       }
 
-      ImmutableAppUtils.print(count+" "+workCopy);
+      //ImmutableAppUtils.print(count+" "+workCopy);
       return count;
     } else {
       return -1;

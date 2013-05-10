@@ -35,7 +35,9 @@ public class RunnerSentencesLevelProcessingTest {
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> result_reduce_stage = new ArrayList<List>();
     for (List task: result_shuffle_stage) {
-      result_reduce_stage.add(ImmutableReduces.reduce_sentences_level(task));
+      List one = ImmutableReduces.reduce_sentences_level(task);
+      ImmutableAppUtils.print(one);
+      result_reduce_stage.add(one);
     }
   }
 }
