@@ -1,13 +1,9 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 
-import com.google.common.io.Closer;
-import com.google.gson.Gson;
+import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
+import com.github.zaqwes8811.text_processor.spiders_processors.MinimalSpiderProcessor;
 import org.junit.Test;
 
-import java.io.*;
-import java.text.BreakIterator;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,7 +23,7 @@ public class MinimalSpiderProcessorTest {
     MinimalSpiderProcessor spiderProcessor = new MinimalSpiderProcessor();
 
     // Processing
-    List<String> nodes = spiderProcessor.getListNodes();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {

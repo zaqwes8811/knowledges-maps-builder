@@ -23,8 +23,13 @@ def scribe_index(target, spider_target_fname):
     index_name = target[kKeyIndexName][0]
     app_folder, index_path, index_root, tmp_root = tools.get_pathes_complect(index_name)
     
-    
-    
+    # Ключевые папки в индексе, в них располагаются узлы 
+    tmp_root = index_path+"/freq_index"  # путь к папке с временными файлами
+    content_root = index_path+"/content"  # папка с раздроблеммым контентом и готовым к обработке
+    index_root = index_path+"/tmp"  # путь к индексу?
+    compressed_index_root = index_path+"/compressed_freq_index"  # путь к сжатому индексу
+    folders = [tmp_root, content_root, index_root, compressed_index_root]
+       
     print 'App folder root -', app_folder
     print 'Index root -', index_path
     
@@ -70,10 +75,8 @@ def scribe_index(target, spider_target_fname):
     #map(util.printer, jobs_list)
     nodes = map(get_one_node, jobs_list)
     for node in nodes:
-        path_to_node_tmp = tmp_root+'/'+node
-        index_node = index_root+'/'+node
-        if not os.path.exists(path_to_node_tmp):
-            os.makedirs(path_to_node_tmp)
-        if not os.path.exists(index_node):
-            os.makedirs(index_node)
+        for folder in folders:
+            path = folder+'/'+node
+            if not os.path.exists(path):
+                os.makedirs(path)
     return rpt

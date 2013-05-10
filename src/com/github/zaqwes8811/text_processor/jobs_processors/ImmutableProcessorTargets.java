@@ -1,6 +1,8 @@
-package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
+package com.github.zaqwes8811.text_processor.jobs_processors;
 
-import com.google.common.base.Charsets;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.text_processor.crosscuttings.ImmutableAppConfigurator;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
@@ -23,13 +25,30 @@ import java.util.List;
  * Date: 29.04.13
  * Time: 21:10
  * To change this template use File | Settings | File Templates.
+ *
+ * Обработка задания для индекса. Индексов может быть несколько, и заданий может быть несколько.
+ * Задание - результат работы краулера
  */
 
 // TODO(zaqwes): Как убрать боковые пробелы из строки без сплиттера и джоинера?
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
-public class ProcessorTargets {
+final public class ImmutableProcessorTargets {
+  public static String getPathToIndex() {
+    String pathToIndex = "";
+    try {
+      // Получаем путь к папке приложения
+      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
+
+      // Получаем имя индекса
+      String idxName = getIndexName();
+      pathToIndex = pathToAppFolder+'/'+idxName;
+    } catch (CrosscuttingsException e) {
+      System.out.println(e.getMessage());
+    }
+    return pathToIndex;
+  }
   /**
    * @param msg - начало периода
    //* @throws IllegalArgument – если начало периода указано после конца
@@ -50,7 +69,8 @@ public class ProcessorTargets {
   //
   // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
   //   *.ptxt or *.meta
-  public List<String> splitUrlToFilenameAndPath(String fullPathToFile) throws CrosscuttingsException {
+  public static List<String> splitUrlToFilenameAndPath(String fullPathToFile)
+      throws CrosscuttingsException {
     // Запрещаем windows-разделители
     if (fullPathToFile.indexOf('\\') != -1) {
       throw new CrosscuttingsException("Path content disabled separators. "+
@@ -63,14 +83,14 @@ public class ProcessorTargets {
 
     // Разделяем и пакуем
     List<String> result = new ArrayList<String>();
-    String fname = fullPathToFile.substring(lastIdx + 1, lengthInString);
+    String filename = fullPathToFile.substring(lastIdx + 1, lengthInString);
     String pathToFile = fullPathToFile.substring(0, lastIdx);
     result.add(pathToFile);
-    result.add(fname);
+    result.add(filename);
     return result;
   }
 
-  public List<List<String>> runParser(String pathToTarget) throws CrosscuttingsException {
+  public static List<List<String>> runParser(String pathToTarget) throws CrosscuttingsException {
     // Строка задания = [Node name]*url*...
     List<List<String>> resultTargets = new ArrayList<List<String>>();
     try {
@@ -111,40 +131,35 @@ public class ProcessorTargets {
   }
 
   // TODO(zaqwes): impl. very bad!!
-  private String extractNodeName(String line) {
+  private static String extractNodeName(String line) {
     // Очищаем имя узла
     Joiner joiner = Joiner.on("").skipNulls();
 
-    Iterable<String> purgeNode =
-        Splitter.on('[').trimResults().omitEmptyStrings().split(line);
+    Iterable<String> purgeNode = Splitter.on('[').trimResults().omitEmptyStrings().split(line);
 
     String tmp = joiner.join(purgeNode);
-    purgeNode =
-      Splitter.on(']').trimResults().omitEmptyStrings().split(tmp);
+    purgeNode = Splitter.on(']').trimResults().omitEmptyStrings().split(tmp);
     return joiner.join(purgeNode);
   }
 
-  public String getIndexName() {
-    String indexCfgFilename = "apps/targets/spider_extractor_target.json";
+  public static String getIndexName() {
+    String indexCfgFilename = AppConstants.SPIDER_TARGETS_FILENAME_GLOBAL;
     try {
       Closer closer = Closer.create();
       try {
         FileReader reader = new FileReader(indexCfgFilename);
-        //print(reader.getEncoding());
         BufferedReader in = closer.register(new BufferedReader(reader));
 
         String s;
-        StringBuilder readedBuffer = new StringBuilder();
-        while ((s = in.readLine())!= null) {  // TODO(zaqwes) TOTH: может лучше разом прочитать?
-          //readedBuffer.append(s);
-          readedBuffer.append(s);
-        }
-        String jsonSettings = readedBuffer.toString();
-        //print(jsonSettings);
+        StringBuilder readBuffer = new StringBuilder();
 
-        // Разбираем
+        // TODO(zaqwes) TOTH: может лучше разом прочитать?
+        while ((s = in.readLine())!= null) readBuffer.append(s);
+        String jsonSettings = readBuffer.toString();
+
         // TODO(zaqwes) TOTH: Может все конфигурирование через yaml сделать, хотя в json проще на веб
         // TODO(zaqwes) TOTH:   передавать, а задание я на веб буду передавать?
+        // Разбираем
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, ArrayList<String>>>() {}.getType();
         HashMap<String, List<String>> settings = gson.fromJson(jsonSettings, type);
@@ -160,6 +175,7 @@ public class ProcessorTargets {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return "TEST";
+    // TODO(zaqwes): BAD! REF IT!
+    return "ERROR OCCURE";
   }
 }
