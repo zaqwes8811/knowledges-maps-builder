@@ -1,7 +1,7 @@
 package com.github.zaqwes8811.processor_word_frequency_index;
 
 import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.JobsFormer;
+import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
 
 /**
@@ -15,7 +15,7 @@ public class JobsFormerTest {
 
   @Test
   public void testDevelop() {
-    ImmutableAppUtils.print(JobsFormer.getJobs());
+    ImmutableAppUtils.print(ImmutableJobsFormer.getJobs());
 
   }
 }

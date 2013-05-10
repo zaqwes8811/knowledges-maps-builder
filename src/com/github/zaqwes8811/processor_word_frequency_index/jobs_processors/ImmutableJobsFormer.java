@@ -17,8 +17,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  *
  * Состояние для класса - это файлы индекса
+ *
+ * Возможно похожий класс может дробить файлы узла для балансировки нагрузки
  */
-final public class JobsFormer {
+final public class ImmutableJobsFormer {
   public static List<List<String>> getJobs() {
     List<List<String>> jobs = new ArrayList<List<String>>();
     //
