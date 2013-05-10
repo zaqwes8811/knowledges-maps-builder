@@ -5,7 +5,9 @@ import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppU
 import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableProcessorTargets;
 
 import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
+import com.github.zaqwes8811.processor_word_frequency_index.nlp.BaseTokenizer;
 import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
+import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -115,22 +117,7 @@ public class MinimalSpiderProcessor {
           StringBuilder buffer = new StringBuilder();
           String s;
           while ((s = reader.readLine())!= null) buffer.append(s+'\n');
-
-          // разбиваем не единицы и пишем
-          // TODO(zaqwes) TOTH: maybi slow!
-          // Убираем переносы строк - могут быть ошибки! Некоторые слова с дефисом могут быть перенес. по дуфису
-          String dataForSplitting = buffer.toString().replace("-\n", "\n").replace('\n', ' ');
-
-          BreakIterator bi = BreakIterator.getSentenceInstance();
-          bi.setText(dataForSplitting);
-          int index = 0;
-          while (bi.next() != BreakIterator.DONE) {
-            String sentence = dataForSplitting.substring(index, bi.current());
-            String oneRecord = lang+' '+sentence+'\n';
-            summaryContent.append(oneRecord);
-            index = bi.current();
-          }
-
+          summaryContent = BaseTokenizer.splitToSentences(buffer, lang);
         } catch (Throwable e) { // must catch Throwable
           throw readCloser.rethrow(e);
         } finally {
@@ -146,15 +133,20 @@ public class MinimalSpiderProcessor {
     try {  // внутри, чтобы не прервалась обработка из-за одного файла
       Closer writeCloser = Closer.create();
       try {
-        String path = ImmutableProcessorTargets.getPathToIndex()+"/"+ AppConstants.CONTENT_FOLDER+"/"+node;
+        String path = Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(ImmutableProcessorTargets.getPathToIndex(),
+                AppConstants.CONTENT_FOLDER,
+                node);
 
         // записываем контент
-        BufferedWriter contentOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/content.txt")));
+        BufferedWriter contentOut = writeCloser.register(new BufferedWriter(
+            new FileWriter(path+"/content.txt")));
         contentOut.write(summaryContent.toString());
 
         // записываем матеданные
         Gson gson = new Gson();
-        BufferedWriter metaOut = writeCloser.register(new BufferedWriter(new FileWriter(path+"/meta.txt")));
+        BufferedWriter metaOut = writeCloser.register(new BufferedWriter(
+            new FileWriter(path+"/meta.txt")));
         metaOut.write(gson.toJson(summaryMeta));
       } catch (Throwable e) { // must catch Throwable
         throw writeCloser.rethrow(e);
@@ -175,8 +167,7 @@ public class MinimalSpiderProcessor {
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
-      //System.console().writer().println(node);
-      print(node);
+      ImmutableAppUtils.print(node);
       spiderProcessor.processOneNode(node);
       //break;  // DEVELOP
     }
