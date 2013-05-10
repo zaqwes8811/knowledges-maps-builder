@@ -1,5 +1,6 @@
 package com.github.zaqwes8811.processor_word_frequency_index.mapreduce;
 
+import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
 
@@ -20,7 +21,9 @@ public class RunnerSentencesLevelProcessingTest {
 
     // Map Stage
     for (List<String> job : jobs) {
-
+      List resultMapping = ImmutableMappers.mapper_sentences_level(job);
+      List<Integer> s = (List<Integer>)resultMapping.get(ImmutableMappers.IDX_SENTENCES_LENS);
+      ImmutableAppUtils.print(s);
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл

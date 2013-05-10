@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +25,8 @@
     <file path="/JobsFormerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185478097" ignored="false" />
     <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368183969825" ignored="false" />
     <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
-    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368186617632" ignored="false" />
-    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368187037767" ignored="false" />
+    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368187646168" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368187735406" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,21 +88,9 @@
       <file leaf-file-name="RunnerSentencesLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="42" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
+            <state line="17" column="27" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableJobsFormer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="38" selection-start="748" selection-end="767" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#905#919#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,9 +99,11 @@
       <file leaf-file-name="ImmutableMappers.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="4" selection-start="725" selection-end="725" vertical-scroll-proportion="0.9158249">
+            <state line="36" column="19" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.5993266">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#868#877#0" expanded="true" />
+                <element signature="e#931#940#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/JobsFormer.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/JobsFormerTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessing.java" />
-        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java" />
+        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java" />
       </list>
     </option>
@@ -717,18 +705,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="42" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="748" selection-end="767" vertical-scroll-proportion="0.0">
+        <state line="21" column="41" selection-start="728" selection-end="728" vertical-scroll-proportion="0.6010101">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#905#919#0" expanded="true" />
@@ -736,11 +715,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="4" selection-start="725" selection-end="725" vertical-scroll-proportion="0.9158249">
+        <state line="17" column="27" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.5993266">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#868#877#0" expanded="true" />
+            <element signature="e#931#940#0" expanded="true" />
           </folding>
         </state>
       </provider>
