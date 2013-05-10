@@ -32,17 +32,21 @@ final public class ImmutableReduces {
 
     String lang = (String)result_shuffle_stage.get(ImmutableMappers.IDX_LANG);
     if (lang.equals("ru")) {
-      Double RE = (206.835 - 60.1*meanLengthSyllable - 1.3*meanLengthSentence);
+      /*Double RE = (206.835 - 60.1*meanLengthSyllable - 1.3*meanLengthSentence);
       ImmutableAppUtils.print(
           Joiner.on(" ")
               .join(lang,
                     RE.toString(),
                     result_reduce_stage,
-                    result_shuffle_stage.get(ImmutableMappers.IDX_NODE_NAME)));
+                    result_shuffle_stage.get(ImmutableMappers.IDX_NODE_NAME)));*/
     } else if (lang.equals("en")) {
-      //Double RE = (206.835 - 84.6*meanLengthSyllable - 1.015*meanLengthSentence);
-      //ImmutableAppUtils.print(lang+" "+RE.toString());
-      //ImmutableAppUtils.print(result_reduce_stage);
+      Double RE = (206.835 - 84.6*meanLengthSyllable - 1.015*meanLengthSentence);
+      ImmutableAppUtils.print(
+        Joiner.on(" ")
+          .join(lang,
+            RE.toString(),
+            result_reduce_stage,
+            result_shuffle_stage.get(ImmutableMappers.IDX_NODE_NAME)));
     }
     return result_reduce_stage;
   }
