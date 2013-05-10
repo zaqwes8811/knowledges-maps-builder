@@ -2,6 +2,7 @@ package com.github.zaqwes8811.text_processor.mapreduce;
 
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
 import com.google.common.io.Closer;
 
@@ -42,11 +43,16 @@ final public class ImmutableMappers {
         while ((s = reader.readLine()) != null) {
           //ImmutableAppUtils.print(s);
           int langPtr = s.indexOf(' ');
-          BaseTokenizer.extractWords(s.substring(langPtr, s.length()));
+          List<String> words = BaseTokenizer.extractWords(s.substring(langPtr, s.length()));
+          sentencesLengths.add(words.size());
 
           // Получаем язык, нужно для деления на слоги
           String lang = s.substring(0, langPtr);
-          //ImmutableAppUtils.print(lang);
+          for (String word : words) {
+            int count = BaseSyllableCounter.calc(word, lang);
+            ImmutableAppUtils.print(word+" "+count);
+          }
+          //
         }
 
       } catch (Throwable e) {

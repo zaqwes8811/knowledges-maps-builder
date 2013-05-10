@@ -1,6 +1,8 @@
 package com.github.zaqwes8811.text_processor.nlp;
 
 import java.text.BreakIterator;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,22 +34,22 @@ final public class BaseTokenizer {
   }
 
   // Split to words
-  public static void extractWords(String target/*, BreakIterator wordIterator*/) {
+  public static List<String> extractWords(String target/*, BreakIterator wordIterator*/) {
     BreakIterator wordIterator =
       BreakIterator.getWordInstance();
     wordIterator.setText(target);
     int start = wordIterator.first();
     int end = wordIterator.next();
 
+    List<String> resultWordList = new ArrayList<String>();
     while (end != BreakIterator.DONE) {
       String word = target.substring(start,end);
       if (Character.isLetterOrDigit(word.charAt(0))) {
-        System.out.print(word+" ");
+        resultWordList.add(word);
       }
       start = end;
       end = wordIterator.next();
     }
-    System.out.println(" ");
+    return resultWordList;
   }
-
 }
