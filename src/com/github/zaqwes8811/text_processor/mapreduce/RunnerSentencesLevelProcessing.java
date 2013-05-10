@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.processor_word_frequency_index.mapreduce;
+package com.github.zaqwes8811.text_processor.mapreduce;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,8 +1,8 @@
-package com.github.zaqwes8811.processor_word_frequency_index.jobs_processors;
+package com.github.zaqwes8811.text_processor.jobs_processors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.text_processor.crosscuttings.ImmutableAppConfigurator;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;

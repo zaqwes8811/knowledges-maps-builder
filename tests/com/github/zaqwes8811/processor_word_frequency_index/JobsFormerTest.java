@@ -1,7 +1,7 @@
 package com.github.zaqwes8811.processor_word_frequency_index;
 
-import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
 
 /**

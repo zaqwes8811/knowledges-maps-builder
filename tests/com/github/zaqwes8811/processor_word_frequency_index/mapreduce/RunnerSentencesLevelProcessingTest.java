@@ -1,7 +1,8 @@
 package com.github.zaqwes8811.processor_word_frequency_index.mapreduce;
 
-import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.mapreduce.ImmutableMappers;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class RunnerSentencesLevelProcessingTest {
       List resultMapping = ImmutableMappers.mapper_sentences_level(job);
       List<Integer> s = (List<Integer>)resultMapping.get(ImmutableMappers.IDX_SENTENCES_LENS);
       ImmutableAppUtils.print(s);
+      break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл

@@ -1,8 +1,7 @@
-package com.github.zaqwes8811.processor_word_frequency_index.jobs_processors;
+package com.github.zaqwes8811.text_processor.jobs_processors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
 import com.google.common.base.Joiner;
 
 import java.util.ArrayList;
@@ -22,6 +21,8 @@ import java.util.List;
  */
 final public class ImmutableJobsFormer {
   public static final int IDX_NODE_NAME = 0;
+  public static final int IDX_FILENAME = 1;
+
   public static List<List<String>> getJobs() {
     List<List<String>> jobs = new ArrayList<List<String>>();
     //

@@ -1,12 +1,12 @@
-package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
+package com.github.zaqwes8811.text_processor.spiders_processors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableProcessorTargets;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 
-import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
-import com.github.zaqwes8811.processor_word_frequency_index.nlp.BaseTokenizer;
-import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
+import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
+import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
+import com.github.zaqwes8811.text_processor.spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -14,7 +14,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -143,7 +142,7 @@ public class MinimalSpiderProcessor {
 
         // записываем контент
         BufferedWriter contentOut = writeCloser.register(new BufferedWriter(
-            new FileWriter(path+"/content.txt")));
+          new FileWriter(path + "/content.txt")));
         contentOut.write(summaryContent.toString());
 
         // записываем матеданные

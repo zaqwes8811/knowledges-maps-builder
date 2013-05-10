@@ -1,8 +1,12 @@
-package com.github.zaqwes8811.processor_word_frequency_index.mapreduce;
+package com.github.zaqwes8811.text_processor.mapreduce;
 
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
+import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
 import com.google.common.io.Closer;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,18 +30,32 @@ final public class ImmutableMappers {
   public static List mapper_sentences_level(List<String> job) {
     List response = new ArrayList();
     String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
+    String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
     List<Integer> sentencesLengths = new ArrayList<Integer>();
     List<Integer> syllablesLengths = new ArrayList<Integer>();
 
     try {
       Closer closer = Closer.create();
       try {
+        BufferedReader reader = closer.register(new BufferedReader(new FileReader(filename)));
+        String s;
+        while ((s = reader.readLine()) != null) {
+          //ImmutableAppUtils.print(s);
+          int langPtr = s.indexOf(' ');
+          BaseTokenizer.extractWords(s.substring(langPtr, s.length()));
 
+          // Получаем язык, нужно для деления на слоги
+          String lang = s.substring(0, langPtr);
+          //ImmutableAppUtils.print(lang);
+        }
+
+      } catch (Throwable e) {
+        closer.rethrow(e);
       } finally {
         closer.close();
       }
     } catch (IOException e) {
-
+       e.printStackTrace();
     }
 
     //
@@ -47,7 +65,7 @@ final public class ImmutableMappers {
 
   /*
   *
-  *
+  * Mapper for word level processing
   * */
 
  }

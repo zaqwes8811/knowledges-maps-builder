@@ -1,9 +1,9 @@
-package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
+package com.github.zaqwes8811.text_processor.spiders_extractors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableProcessorTargets;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 
 import java.util.List;
 

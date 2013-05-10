@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors;
+package com.github.zaqwes8811.text_processor.spiders_extractors;
 
 /**
  * Created with IntelliJ IDEA.

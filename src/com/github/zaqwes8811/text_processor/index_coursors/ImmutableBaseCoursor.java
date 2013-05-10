@@ -6,10 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package com.github.zaqwes8811.processor_word_frequency_index.index_coursors;
+package com.github.zaqwes8811.text_processor.index_coursors;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableProcessorTargets;
+import com.github.zaqwes8811.text_processor.AppConstants;
+import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 
 import java.io.File;

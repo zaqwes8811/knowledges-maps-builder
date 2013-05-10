@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.processor_word_frequency_index.nlp;
+package com.github.zaqwes8811.text_processor.nlp;
 
 import java.text.BreakIterator;
 
@@ -30,4 +30,24 @@ final public class BaseTokenizer {
     }
     return summaryContent;
   }
+
+  // Split to words
+  public static void extractWords(String target/*, BreakIterator wordIterator*/) {
+    BreakIterator wordIterator =
+      BreakIterator.getWordInstance();
+    wordIterator.setText(target);
+    int start = wordIterator.first();
+    int end = wordIterator.next();
+
+    while (end != BreakIterator.DONE) {
+      String word = target.substring(start,end);
+      if (Character.isLetterOrDigit(word.charAt(0))) {
+        System.out.print(word+" ");
+      }
+      start = end;
+      end = wordIterator.next();
+    }
+    System.out.println(" ");
+  }
+
 }

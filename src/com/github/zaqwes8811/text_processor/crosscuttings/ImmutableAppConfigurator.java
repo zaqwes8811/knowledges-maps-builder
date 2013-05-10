@@ -1,6 +1,6 @@
-package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
+package com.github.zaqwes8811.text_processor.crosscuttings;
 
-import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
+import com.github.zaqwes8811.text_processor.AppConstants;
 import com.google.common.io.Closer;
 import org.yaml.snakeyaml.Yaml;
 
