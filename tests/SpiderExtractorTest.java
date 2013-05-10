@@ -1,6 +1,8 @@
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
+import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
+import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ExtractorException;
 import com.github.zaqwes8811.processor_word_frequency_index.spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
 
@@ -21,11 +23,15 @@ public class SpiderExtractorTest {
         String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
         List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
-          // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
-
-          // Выделяем текст
-           ImmutableTikaWrapper.extractAndSaveText(target);
-          //break;
+          try {
+            // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
+            ImmutableTikaWrapper.extractAndSaveText(target);
+            ImmutableTikaWrapper.extractAndSaveMetadata(target);
+            //break;  // DEVELOP
+          } catch (ExtractorException e) {
+            // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
+            ImmutableAppUtils.print(e.getMessage());
+          }
         }
 
       } catch (CrosscuttingsException e) {

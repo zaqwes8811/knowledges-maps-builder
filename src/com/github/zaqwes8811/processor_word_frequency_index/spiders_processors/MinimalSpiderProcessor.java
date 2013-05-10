@@ -1,9 +1,7 @@
 package com.github.zaqwes8811.processor_word_frequency_index.spiders_processors;
 
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppUtils;
+import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 
 import com.github.zaqwes8811.processor_word_frequency_index.index_coursors.ImmutableBaseCoursor;
@@ -19,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.

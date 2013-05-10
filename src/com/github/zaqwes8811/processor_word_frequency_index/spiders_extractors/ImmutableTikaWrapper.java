@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppUtils;
+import com.github.zaqwes8811.processor_word_frequency_index.common.ImmutableAppUtils;
 import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;

@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
+package com.github.zaqwes8811.processor_word_frequency_index.common;
 
 import java.io.File;
 import java.io.FilenameFilter;
