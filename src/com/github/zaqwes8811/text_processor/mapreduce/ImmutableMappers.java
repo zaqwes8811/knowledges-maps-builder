@@ -21,8 +21,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 final public class ImmutableMappers {
+  public final static int IDX_NODE_NAME = 0;
   public final static int IDX_SENTENCES_LENS = 1;
   public final static int IDX_COUNT_SYLLABLES = 2;
+  public final static int IDX_LANG = 3;
   /*
   *
   * [node_name, [len0, len1, ...], [syllable0, syllable1, ...]]
@@ -40,7 +42,7 @@ final public class ImmutableMappers {
     String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
     List<Integer> sentencesLengths = new ArrayList<Integer>();
     List<Integer> syllablesLengths = new ArrayList<Integer>();
-
+    String meanLang = "unknown";
     try {
       Closer closer = Closer.create();
       try {
@@ -52,7 +54,7 @@ final public class ImmutableMappers {
           sentencesLengths.add(words.size());
 
           // Получаем язык, нужно для деления на слоги
-          String meanLang = s.substring(0, langPtr);  // язык средний по доукменту
+          meanLang = s.substring(0, langPtr);  // язык средний по доукменту
           int countSyllable = 0;
           for (String word : words) {
             countSyllable += BaseSyllableCounter.calc(word, meanLang);
@@ -69,7 +71,7 @@ final public class ImmutableMappers {
     }
 
     //
-    response.addAll(Arrays.asList(node, sentencesLengths, syllablesLengths));
+    response.addAll(Arrays.asList(node, sentencesLengths, syllablesLengths, meanLang));
     return response;
   }
 

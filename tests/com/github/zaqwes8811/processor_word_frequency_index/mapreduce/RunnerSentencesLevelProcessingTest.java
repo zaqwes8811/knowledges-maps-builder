@@ -26,16 +26,16 @@ public class RunnerSentencesLevelProcessingTest {
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
       result_map_stage.add(ImmutableMappers.mapper_sentences_level(job));
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
     List<List> result_shuffle_stage  = result_map_stage;
 
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
-    List<List> result_reduce_stage;
+    List<List> result_reduce_stage = new ArrayList<List>();
     for (List task: result_shuffle_stage) {
-      result_reduce_stage = ImmutableReduces.reduce_sentences_level(task);
+      result_reduce_stage.add(ImmutableReduces.reduce_sentences_level(task));
     }
   }
 }

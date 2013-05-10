@@ -1,5 +1,8 @@
 package com.github.zaqwes8811.text_processor.nlp;
 
+import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import com.google.common.base.Splitter;
+
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +15,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 final public class BaseTokenizer {
+  public static Iterable<String> splitDocFormat(String line) {
+    return Splitter.onPattern("(-|[0-9])?[:;]")
+      .trimResults()
+      .omitEmptyStrings()
+      .split(line);
+  }
 
   // Встроенный в SDK дробитель на предложения - похоже безсловарный, поэтому грубоватый
   public static StringBuilder splitToSentences(StringBuilder buffer, String lang) {
@@ -26,8 +35,15 @@ final public class BaseTokenizer {
     StringBuilder summaryContent = new StringBuilder();
     while (bi.next() != BreakIterator.DONE) {
       String sentence = dataForSplitting.substring(index, bi.current());
-      String oneRecord = lang+' '+sentence+'\n';
-      summaryContent.append(oneRecord);
+      // Разбираем предложение еще не части
+      // Для документов характерно наличие 1), 2)...
+      Iterable<String> additionSplit = splitDocFormat(sentence);
+      for (String item : additionSplit) {
+        String oneRecord = lang+' '+item+'\n';
+        summaryContent.append(oneRecord);
+      }
+
+      // добавляем
       index = bi.current();
     }
     return summaryContent;

@@ -9,10 +9,10 @@
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185629155" ignored="false" />
+    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368203584856" ignored="false" />
     <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368184804432" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
-    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185635258" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368204691089" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
     <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368184386647" ignored="false" />
@@ -25,13 +25,15 @@
     <file path="/SpiderExtractorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368094195501" ignored="false" />
     <file path="/JobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368186970145" ignored="false" />
     <file path="/JobsFormerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185478097" ignored="false" />
-    <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368193445864" ignored="false" />
+    <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368204585931" ignored="false" />
     <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
-    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368199506801" ignored="false" />
-    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368197645052" ignored="false" />
+    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368201596277" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368199903962" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368192251567" ignored="false" />
     <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368196190940" ignored="false" />
-    <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368199481035" ignored="false" />
+    <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368202753186" ignored="false" />
+    <file path="/Summators.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368200291657" ignored="false" />
+    <file path="/BaseTokenizerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368203813118" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +92,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RunnerSentencesLevelProcessingTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RunnerSentencesLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="28" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.8294314">
+            <state line="23" column="27" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#848#854#0" expanded="true" />
+                <element signature="e#1243#1249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,29 +108,30 @@
       <file leaf-file-name="ImmutableReduces.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableMappers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="27" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+            <state line="24" column="12" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1515#1524#0" expanded="true" />
-                <element signature="e#1578#1587#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
+      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="15" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+            <state line="45" column="40" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.7291667">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2071#2079#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseTokenizerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="30" selection-start="1112" selection-end="1215" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,9 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_formers/JobsFormer.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableProcessorTargets.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/nlp/BaseTokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/AppConstants.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/JobsFormer.java" />
@@ -164,11 +165,14 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/ImmutableMappers.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/jobs_processors/ImmutableJobsFormer.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/Summators.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
+        <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java" />
       </list>
     </option>
   </component>
@@ -252,6 +256,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="zaqwes8811" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zaqwes8811" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="processor_word_frequency_index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -306,7 +332,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mapreduce" />
+              <option name="myItemId" value="nlp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,7 +343,7 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/com/github/zaqwes8811" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
@@ -337,6 +363,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.zaqwes8811.text_processor.nlp" />
       <recent name="com.github.zaqwes8811.processor_word_frequency_index.mapreduce" />
       <recent name="com.github.zaqwes8811.processor_word_frequency_index" />
     </key>
@@ -451,7 +478,7 @@
       <method />
     </configuration>
     <configuration default="false" name="MinimalSpiderProcessor" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.github.zaqwes8811.processor_word_frequency_index.spiders_processors.MinimalSpiderProcessor" />
+      <option name="MAIN_CLASS_NAME" value="com.github.zaqwes8811.text_processor.spiders_processors.MinimalSpiderProcessor" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -510,11 +537,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="BaseTokenizerTest" type="JUnit" factoryName="JUnit">
+      <module name="processor-word-frequency-index" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
+      <option name="MAIN_CLASS_NAME" value="com.github.zaqwes8811.text_processor.nlp.BaseTokenizerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.MinimalSpiderExtractor" />
       <item index="1" class="java.lang.String" itemvalue="Application.MinimalSpiderProcessor" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.JobsFormerTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.RunnerSentencesLevelProcessingTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BaseTokenizerTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -567,8 +617,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33468395" sideWeight="0.7410926" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25890738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23662885" sideWeight="0.65795726" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34204274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,22 +686,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/common/ImmutableAppUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="40" selection-start="850" selection-end="850" vertical-scroll-proportion="0.41408935">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/crosscuttings/ImmutableAppConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.6494845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/index_coursors/ImmutableBaseCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.11805555">
@@ -719,25 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="35" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.8251748">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1546#1554#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="15" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/RunnerSentencesLevelProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="4" selection-start="277" selection-end="277" vertical-scroll-proportion="0.3830156">
@@ -745,30 +760,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="27" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+        <state line="28" column="15" selection-start="826" selection-end="826" vertical-scroll-proportion="0.71571904">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1515#1524#0" expanded="true" />
-            <element signature="e#1578#1587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#848#854#0" expanded="true" />
+            <element signature="e#1243#1249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+        <state line="24" column="12" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/math/ImmutableSummators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="30" selection-start="287" selection-end="297" vertical-scroll-proportion="0.43589744">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.8294314">
+        <state line="25" column="18" selection-start="841" selection-end="841" vertical-scroll-proportion="0.3276515">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#848#854#0" expanded="true" />
+            <element signature="e#1600#1609#0" expanded="true" />
+            <element signature="e#1663#1672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/BaseTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="30" selection-start="1112" selection-end="1215" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="40" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.7291667">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2071#2079#0" expanded="true" />
           </folding>
         </state>
       </provider>
