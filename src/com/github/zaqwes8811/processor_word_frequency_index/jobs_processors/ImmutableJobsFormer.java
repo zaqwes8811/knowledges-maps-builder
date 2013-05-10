@@ -21,6 +21,7 @@ import java.util.List;
  * Возможно похожий класс может дробить файлы узла для балансировки нагрузки
  */
 final public class ImmutableJobsFormer {
+  public static final int IDX_NODE_NAME = 0;
   public static List<List<String>> getJobs() {
     List<List<String>> jobs = new ArrayList<List<String>>();
     //

@@ -19,9 +19,12 @@ public class RunnerSentencesLevelProcessingTest {
     List<List<String>> jobs = ImmutableJobsFormer.getJobs();
 
     // Map Stage
+    for (List<String> job : jobs) {
 
-    // Shuffle Stage
+    }
 
-    // Reduce Stage
+    // Shuffle Stage - сейчас фактически нет - один узел - один файл
+
+    // Reduce Stage  - так же нет, т.к. - один узел - один файл
   }
 }
