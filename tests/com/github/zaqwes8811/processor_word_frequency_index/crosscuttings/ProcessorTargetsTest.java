@@ -1,5 +1,6 @@
 package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
 
+import com.github.zaqwes8811.processor_word_frequency_index.jobs_processors.ImmutableProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;

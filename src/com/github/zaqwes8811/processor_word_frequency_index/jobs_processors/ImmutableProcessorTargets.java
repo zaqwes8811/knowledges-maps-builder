@@ -1,7 +1,8 @@
-package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
+package com.github.zaqwes8811.processor_word_frequency_index.jobs_processors;
 
 import com.github.zaqwes8811.processor_word_frequency_index.AppConstants;
-import com.google.common.base.Charsets;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.CrosscuttingsException;
+import com.github.zaqwes8811.processor_word_frequency_index.crosscuttings.ImmutableAppConfigurator;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
@@ -68,7 +69,8 @@ final public class ImmutableProcessorTargets {
   //
   // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
   //   *.ptxt or *.meta
-  public static List<String> splitUrlToFilenameAndPath(String fullPathToFile) throws CrosscuttingsException {
+  public static List<String> splitUrlToFilenameAndPath(String fullPathToFile)
+      throws CrosscuttingsException {
     // Запрещаем windows-разделители
     if (fullPathToFile.indexOf('\\') != -1) {
       throw new CrosscuttingsException("Path content disabled separators. "+
@@ -173,6 +175,7 @@ final public class ImmutableProcessorTargets {
     } catch (IOException e) {
       e.printStackTrace();
     }
+    // TODO(zaqwes): BAD! REF IT!
     return "ERROR OCCURE";
   }
 }

@@ -27,6 +27,11 @@ final public class ImmutableAppUtils {
       System.console().writer().println(msg);
     }
   }
+
+  public static List<String> getListFilenamesByExtention(String path, String regex) {
+    List<String> result = Arrays.asList(new File(path).list(new DirFilter(regex)));
+    return result;
+  }
 }
 
 final class DirFilter implements FilenameFilter {
