@@ -3,8 +3,10 @@ package com.github.zaqwes8811.processor_word_frequency_index.mapreduce;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.mapreduce.ImmutableMappers;
+import com.github.zaqwes8811.text_processor.mapreduce.ImmutableReduces;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,15 +23,19 @@ public class RunnerSentencesLevelProcessingTest {
     List<List<String>> jobs = ImmutableJobsFormer.getJobs();
 
     // Map Stage
+    List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      List resultMapping = ImmutableMappers.mapper_sentences_level(job);
-      List<Integer> s = (List<Integer>)resultMapping.get(ImmutableMappers.IDX_SENTENCES_LENS);
-      ImmutableAppUtils.print(s);
+      result_map_stage.add(ImmutableMappers.mapper_sentences_level(job));
       break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
+    List<List> result_shuffle_stage  = result_map_stage;
 
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
+    List<List> result_reduce_stage;
+    for (List task: result_shuffle_stage) {
+      result_reduce_stage = ImmutableReduces.reduce_sentences_level(task);
+    }
   }
 }

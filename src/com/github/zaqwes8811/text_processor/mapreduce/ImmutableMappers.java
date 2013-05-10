@@ -22,6 +22,7 @@ import java.util.List;
  */
 final public class ImmutableMappers {
   public final static int IDX_SENTENCES_LENS = 1;
+  public final static int IDX_COUNT_SYLLABLES = 2;
   /*
   *
   * [node_name, [len0, len1, ...], [syllable0, syllable1, ...]]
@@ -57,7 +58,6 @@ final public class ImmutableMappers {
             countSyllable += BaseSyllableCounter.calc(word, meanLang);
           }
           syllablesLengths.add(countSyllable);
-          ImmutableAppUtils.print(words.size()+" "+countSyllable);
         }
       } catch (Throwable e) {
         closer.rethrow(e);
