@@ -28,7 +28,7 @@
     <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368193445864" ignored="false" />
     <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
     <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368192586327" ignored="false" />
-    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368196123480" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368197387547" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368192251567" ignored="false" />
     <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368196190940" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,23 +100,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableMappers.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImmutableMappers.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="43" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
+            <state line="33" column="102" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.7056856">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1161#1170#0" expanded="true" />
-                <element signature="e#1224#1233#0" expanded="true" />
+                <element signature="e#1464#1473#0" expanded="true" />
+                <element signature="e#1527#1536#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="29" selection-start="624" selection-end="624" vertical-scroll-proportion="0.6340326">
+            <state line="28" column="15" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/processor_word_frequency_index/mapreduce/RunnerSentencesLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
       </list>
     </option>
   </component>
@@ -556,8 +556,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33468395" sideWeight="0.54038006" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45961994" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33468395" sideWeight="0.7410926" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25890738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -731,17 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="43" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1161#1170#0" expanded="true" />
-            <element signature="e#1224#1233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="35" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.8251748">
@@ -754,9 +743,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="624" selection-end="624" vertical-scroll-proportion="0.6340326">
+        <state line="28" column="15" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="102" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.7056856">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1473#0" expanded="true" />
+            <element signature="e#1527#1536#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -26,7 +26,7 @@ final public class BaseSyllableCounter {
       }
       return count;
     } else {
-      return 0;
+      return -1;
     }
   }
 }
