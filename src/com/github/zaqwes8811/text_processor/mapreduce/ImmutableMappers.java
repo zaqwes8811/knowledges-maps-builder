@@ -4,7 +4,12 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
+import org.apache.lucene.morphology.LuceneMorphology;
+import org.apache.lucene.morphology.WrongCharaterException;
+import org.apache.lucene.morphology.russian.RussianLuceneMorphology;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -80,4 +85,54 @@ final public class ImmutableMappers {
   * Mapper for word level processing
   * */
 
+  public static List mapper_word_level(List<String> job) {
+    List response = new ArrayList();
+    String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
+    String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
+
+    // Processing
+    try {
+      Closer closer = Closer.create();
+      try {
+        BufferedReader reader = closer.register(new BufferedReader(new FileReader(filename)));
+        String s;
+        int sentenceNumber = 1;
+        Multiset<String> wordsFrequenceMultymap = HashMultiset.create();
+        while ((s = reader.readLine()) != null) {
+          String workCopy = s.toLowerCase();
+          int langPtr = workCopy.indexOf(' ');
+          List<String> words = BaseTokenizer.extractWords(workCopy.substring(langPtr, workCopy.length()));
+          wordsFrequenceMultymap.addAll(words);
+
+          // Получаем язык, нужно для деления на слоги
+          //LuceneMorphology luceneMorph = new RussianLuceneMorphology();
+
+          for (String word : words) {
+            //try {
+              ImmutableAppUtils.print(word);
+              //List<String> wordBaseForms = luceneMorph.getMorphInfo(word);
+              //ImmutableAppUtils.print(wordBaseForms);
+            //} catch (WrongCharaterException e) {
+              //ImmutableAppUtils.print(e.getMessage());
+            //}
+
+            // Вот числа нужно убрать
+          }
+
+          // Указываем не следующее
+          sentenceNumber++;
+        }
+
+         //ImmutableAppUtils.print(wordsFrequenceMultymap.entrySet());
+      } catch (Throwable e) {
+        closer.rethrow(e);
+      } finally {
+        closer.close();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    //
+    return null;
+  }
  }
