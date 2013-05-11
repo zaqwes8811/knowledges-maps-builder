@@ -22,25 +22,23 @@ public class RunnerWordLevelProcessingTest {
     // Получаем работы
     List<List<String>> jobs = ImmutableJobsFormer.getJobs();
 
-    //String text = "now we can use wordsMultiset.count(String) to find the count of a word";
-    //Multiset<String> wordsMultiset = HashMultiset.create();
-    //wordsMultiset.addAll(words);
-
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
       List one = ImmutableMappers.mapper_word_level(job);
       result_map_stage.add(one);
-
-      ImmutableAppUtils.print(job);
-      ImmutableAppUtils.print(one);
+      ImmutableMappers.mapper_word_level_with_compression(
+          (Multiset<String>)one.get(ImmutableMappers.IDX_FREQ_INDEX));
       break;  // DEVELOP
     }
 
-    /*
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
     List<List> result_shuffle_stage  = result_map_stage;
 
+    // Compression Stage
+
+
+    /*
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> result_reduce_stage = new ArrayList<List>();
     for (List task: result_shuffle_stage) {
@@ -49,7 +47,7 @@ public class RunnerWordLevelProcessingTest {
       result_reduce_stage.add(one);
     } */
 
-    // Filtration Stage
+
 
   }
 }

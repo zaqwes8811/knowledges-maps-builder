@@ -4,13 +4,14 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
+import com.google.common.base.CharMatcher;
+import com.google.common.collect.*;
 import com.google.common.io.Closer;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.morphology.LuceneMorphology;
 import org.apache.lucene.morphology.WrongCharaterException;
 import org.apache.lucene.morphology.russian.RussianLuceneMorphology;
+import org.tartarus.snowball.ext.russianStemmer;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -85,7 +86,9 @@ final public class ImmutableMappers {
   *
   * Mapper for word level processing
   * */
-
+  public final static int IDX_FREQ_INDEX = 1;
+  public final static int IDX_LANG_MAP = 2;
+  public final static int IDX_SENT_MAP = 3;
   public static List mapper_word_level(List<String> job) {
     List response = new ArrayList();
     String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
@@ -98,6 +101,7 @@ final public class ImmutableMappers {
         int sentenceNumber = 1;
         Multiset<String> wordsFrequenceMultyset = HashMultiset.create();
         HashMultimap<String, String> langMap = HashMultimap.create();
+        HashMultimap<String, Integer> sentencesPtrsMap = HashMultimap.create();
 
         // Reading
         BufferedReader reader = closer.register(new BufferedReader(new FileReader(filename)));
@@ -115,18 +119,22 @@ final public class ImmutableMappers {
           for (String word : words) {
             //ImmutableAppUtils.print(word);
             langMap.put(word, lang);
-
-            // Вот числа нужно убрать
+            sentencesPtrsMap.put(word, sentenceNumber);
           }
 
           // Указываем не следующее
           sentenceNumber++;
         }
 
-         //ImmutableAppUtils.print(wordsFrequenceMultymap.entrySet());
-        for (String key: langMap.keySet()) {
-          ImmutableAppUtils.print(langMap.get(key));
-        }
+        //for (String key: sentencesPtrsMap.keySet()) {
+         // ImmutableAppUtils.print(sentencesPtrsMap.get(key));
+        //}
+
+        // Make result
+        response.add(node);
+        response.add(wordsFrequenceMultyset);
+        response.add(langMap);
+        response.add(sentencesPtrsMap);
       } catch (Throwable e) {
         closer.rethrow(e);
       } finally {
@@ -136,6 +144,53 @@ final public class ImmutableMappers {
       e.printStackTrace();
     }
     //
+    return response;
+  }
+
+  public static List mapper_word_level_with_compression(Multiset<String> frequencies) {
+    Multiset<String> frequenciesCompressed = HashMultiset.create();
+    Multimap<String, String> frequenciesWordRest = HashMultimap.create();
+    Multimap<String, Integer> frequenciesCompressedTest = ArrayListMultimap.create();
+
+    // Компрессоры
+    russianStemmer ruStemmer = new russianStemmer();
+
+    // Перебираем слова
+    for (String key: frequencies.elementSet()) {
+      if (isEnabled(key)) {
+        // Сжимаем ключ
+        ruStemmer.setCurrent(key);
+        ruStemmer.stem();
+        String compressedKey = ruStemmer.getCurrent();
+
+        frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
+        frequenciesWordRest.put(compressedKey, key);
+      }
+    }
+
+    // Смотрим результат
+    for (String key: frequenciesCompressedTest.keySet()) {
+      ImmutableAppUtils.print(frequenciesCompressedTest.get(key)+" "+frequenciesWordRest.get(key));
+    }
+
     return null;
+  }
+
+  // Base filters
+  public static final int MIN_COUNT_LETTERS_IN_WORD = 2;
+  private static boolean isEnabled(String key) {
+    String noDigits = CharMatcher.JAVA_DIGIT.replaceFrom(key, "*"); // star out all digits
+    int countDigits = StringUtils.countMatches(noDigits, "*");
+    if (countDigits == 0) {
+      // в ключе чисел нет
+      if (key.length() > MIN_COUNT_LETTERS_IN_WORD) {
+        // однобуквенные удаляем
+        if (StringUtils.countMatches(key, ".") == 0) {
+          // Нет точек в слове
+          return true;
+        }
+      }
+    }
+    return false;
   }
  }
