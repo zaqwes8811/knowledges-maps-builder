@@ -12,7 +12,16 @@ if __name__=="__main__":
     sets = get_utf8_template()
     sets['name'] = '../info/preposition_ru.txt'
     readed = file2list(sets)
-    print readed[0]
-    print len(readed[0][0].split(" "))
-    print len(set(readed[0][0].split(" ")))
+    result_set = set(readed[0][0].split(" "))
+    
+    # Добавляем делее
+    sets['name'] = '../info/stop_words_ru.txt'
+    readed, err = file2list(sets)
+    for line in readed:
+        work_copy = line[2:]
+        result_set |= set(work_copy.split(" "))
+
+    for it in result_set:
+        print '\"'+it+'\", '
+    print len(result_set)
     print 'Done'
