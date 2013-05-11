@@ -9,6 +9,7 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import org.apache.commons.lang3.StringUtils;
+import org.tartarus.snowball.ext.englishStemmer;
 import org.tartarus.snowball.ext.russianStemmer;
 
 import java.io.BufferedReader;
@@ -142,6 +143,11 @@ final public class ImmutableMappers {
     List one = ImmutableMappers.mapper_word_level(job);
     Multiset<String> frequencies = (Multiset<String>)one.get(ImmutableMappers.IDX_FREQ_INDEX);
 
+    // Буду брать только нулевыой элемент, но из-за того, что язык опред. по документу
+    //   одному слову может соотв. несколько языков
+    HashMultimap<String, String> langPerWordMap =
+        (HashMultimap<String, String>)one.get(ImmutableMappers.IDX_LANG_MAP);
+
     // Результаты стадии
     Multiset<String> frequenciesCompressed = HashMultiset.create();
     Multimap<String, String> frequenciesWordRest = HashMultimap.create();
@@ -149,17 +155,29 @@ final public class ImmutableMappers {
 
     // Компрессоры
     russianStemmer ruStemmer = new russianStemmer();
+    englishStemmer enStemmer = new englishStemmer();
 
     // Перебираем слова
     for (String key: frequencies.elementSet()) {
-      if (isEnabled(key)) {
-        // Сжимаем ключ
-        ruStemmer.setCurrent(key);
-        ruStemmer.stem();
-        String compressedKey = ruStemmer.getCurrent();
-        if (RUSSIAN_STOP_WORDS.contains(compressedKey)) {
-          // Нет в списке стоп-слов
-          continue;
+       if (isEnabled(key)) {
+        String compressedKey = key;
+        String meanLangWord = (new ArrayList<String>(langPerWordMap.get(key))).get(0);
+        if (meanLangWord.equals("ru")) {
+          // Сжимаем ключ
+          ruStemmer.setCurrent(key);
+          ruStemmer.stem();
+          compressedKey = ruStemmer.getCurrent();
+          if (RUSSIAN_STOP_WORDS.contains(compressedKey)) {
+            // Нет в списке стоп-слов
+            continue;
+          }
+        } else if (meanLangWord.equals("en")) {
+          // Сжимаем ключ
+          enStemmer.setCurrent(key);
+          enStemmer.stem();
+          compressedKey = enStemmer.getCurrent();
+        } else {
+          compressedKey = key;
         }
 
         frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
