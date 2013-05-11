@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableSavers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
-    </list>
+    <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="" />
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368271174965" ignored="false" />
@@ -109,7 +104,7 @@
       <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="27" selection-start="2020" selection-end="2020" vertical-scroll-proportion="1.3405676">
+            <state line="34" column="7" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.6310518">
               <folding>
                 <element signature="e#1400#1406#0" expanded="true" />
               </folding>
@@ -855,7 +850,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="27" selection-start="2020" selection-end="2020" vertical-scroll-proportion="1.3405676">
+        <state line="34" column="7" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.6310518">
           <folding>
             <element signature="e#1400#1406#0" expanded="true" />
           </folding>
