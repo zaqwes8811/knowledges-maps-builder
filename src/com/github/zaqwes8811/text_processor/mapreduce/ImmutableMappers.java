@@ -5,6 +5,7 @@ import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;
+import com.google.common.base.Joiner;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import org.apache.commons.lang3.StringUtils;
@@ -164,13 +165,19 @@ final public class ImmutableMappers {
         String compressedKey = ruStemmer.getCurrent();
 
         frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
+        frequenciesCompressed.add(compressedKey, frequencies.count(key));
         frequenciesWordRest.put(compressedKey, key);
       }
     }
 
     // Смотрим результат
     for (String key: frequenciesCompressedTest.keySet()) {
-      ImmutableAppUtils.print(frequenciesCompressedTest.get(key)+" "+frequenciesWordRest.get(key));
+      ImmutableAppUtils.print(
+        Joiner.on(" ").join(
+          key,
+          frequenciesCompressed.count(key),
+          frequenciesCompressedTest.get(key),
+          frequenciesWordRest.get(key)));
     }
 
     return null;
@@ -179,6 +186,8 @@ final public class ImmutableMappers {
   // Base filters
   public static final int MIN_COUNT_LETTERS_IN_WORD = 2;
   private static boolean isEnabled(String key) {
+    // предлоги
+    //
     String noDigits = CharMatcher.JAVA_DIGIT.replaceFrom(key, "*"); // star out all digits
     int countDigits = StringUtils.countMatches(noDigits, "*");
     if (countDigits == 0) {
@@ -193,4 +202,6 @@ final public class ImmutableMappers {
     }
     return false;
   }
+  /*
+  * */
  }

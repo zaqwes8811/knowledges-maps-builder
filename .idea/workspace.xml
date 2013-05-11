@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +25,7 @@
     <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368204585931" ignored="false" />
     <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
     <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207687769" ignored="false" />
-    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368264048070" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368268015517" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368192251567" ignored="false" />
     <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368262442234" ignored="false" />
     <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207722723" ignored="false" />
@@ -115,11 +113,11 @@
       <file leaf-file-name="ImmutableMappers.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="96" selection-start="6160" selection-end="6160" vertical-scroll-proportion="1.6131387">
+            <state line="141" column="35" selection-start="5135" selection-end="5135" vertical-scroll-proportion="-0.7611511">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1956#1965#0" expanded="true" />
-                <element signature="e#2019#2028#0" expanded="true" />
+                <element signature="e#1994#2003#0" expanded="true" />
+                <element signature="e#2057#2066#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -570,7 +568,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -585,8 +583,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3119935" sideWeight="0.35629454" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6437055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16936791" sideWeight="0.8562945" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14370546" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -772,11 +770,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="96" selection-start="6160" selection-end="6160" vertical-scroll-proportion="1.6131387">
+        <state line="141" column="35" selection-start="5135" selection-end="5135" vertical-scroll-proportion="-0.7611511">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1956#1965#0" expanded="true" />
-            <element signature="e#2019#2028#0" expanded="true" />
+            <element signature="e#1994#2003#0" expanded="true" />
+            <element signature="e#2057#2066#0" expanded="true" />
           </folding>
         </state>
       </provider>
