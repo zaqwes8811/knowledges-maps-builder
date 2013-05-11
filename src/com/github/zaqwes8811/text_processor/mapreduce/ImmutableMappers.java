@@ -122,6 +122,8 @@ final public class ImmutableMappers {
           sentenceNumber++;
         }
 
+        ImmutableAppUtils.print("Size Raw = "+wordsFrequenceMultyset.elementSet().size());
+
         // Make result
         response.add(node);
         response.add(wordsFrequenceMultyset);
@@ -142,6 +144,7 @@ final public class ImmutableMappers {
   public static List mapper_word_level_with_compression(List<String> job) {
     List one = ImmutableMappers.mapper_word_level(job);
     Multiset<String> frequencies = (Multiset<String>)one.get(ImmutableMappers.IDX_FREQ_INDEX);
+    String node = (String)one.get(ImmutableMappers.IDX_NODE_NAME);
 
     // Буду брать только нулевыой элемент, но из-за того, что язык опред. по документу
     //   одному слову может соотв. несколько языков
@@ -180,23 +183,29 @@ final public class ImmutableMappers {
           compressedKey = key;
         }
 
-        frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
+        //frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
         frequenciesCompressed.add(compressedKey, frequencies.count(key));
         frequenciesWordRest.put(compressedKey, key);
       }
     }
 
     // Смотрим результат
-    for (String key: frequenciesCompressedTest.keySet()) {
-      ImmutableAppUtils.print(
+    for (String key: frequenciesCompressed.elementSet()) {
+      /*ImmutableAppUtils.print(
         Joiner.on(" ").join(
           key,
           frequenciesCompressed.count(key),
-          frequenciesCompressedTest.get(key),
-          frequenciesWordRest.get(key)));
+          //frequenciesCompressedTest.get(key),
+          frequenciesWordRest.get(key))); */
     }//*/
-    ImmutableAppUtils.print("Size = "+frequenciesCompressed.size());
+    ImmutableAppUtils.print("Size = "+frequenciesCompressed.elementSet().size()+" "+node);
 
+    // Make result
+    // Имя узла
+    // Частотный индекс
+    // Языковой индекс
+    // Предложения
+    // Остаточный индекс
     return null;
   }
 
