@@ -4,6 +4,7 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
@@ -94,27 +95,26 @@ final public class ImmutableMappers {
     try {
       Closer closer = Closer.create();
       try {
+        int sentenceNumber = 1;
+        Multiset<String> wordsFrequenceMultyset = HashMultiset.create();
+        HashMultimap<String, String> langMap = HashMultimap.create();
+
+        // Reading
         BufferedReader reader = closer.register(new BufferedReader(new FileReader(filename)));
         String s;
-        int sentenceNumber = 1;
-        Multiset<String> wordsFrequenceMultymap = HashMultiset.create();
         while ((s = reader.readLine()) != null) {
           String workCopy = s.toLowerCase();
           int langPtr = workCopy.indexOf(' ');
           List<String> words = BaseTokenizer.extractWords(workCopy.substring(langPtr, workCopy.length()));
-          wordsFrequenceMultymap.addAll(words);
+          String lang = workCopy.substring(0, langPtr);
+
+          // Добавляем в частотный индекс
+          wordsFrequenceMultyset.addAll(words);
 
           // Получаем язык, нужно для деления на слоги
-          //LuceneMorphology luceneMorph = new RussianLuceneMorphology();
-
           for (String word : words) {
-            //try {
-              ImmutableAppUtils.print(word);
-              //List<String> wordBaseForms = luceneMorph.getMorphInfo(word);
-              //ImmutableAppUtils.print(wordBaseForms);
-            //} catch (WrongCharaterException e) {
-              //ImmutableAppUtils.print(e.getMessage());
-            //}
+            //ImmutableAppUtils.print(word);
+            langMap.put(word, lang);
 
             // Вот числа нужно убрать
           }
@@ -124,6 +124,9 @@ final public class ImmutableMappers {
         }
 
          //ImmutableAppUtils.print(wordsFrequenceMultymap.entrySet());
+        for (String key: langMap.keySet()) {
+          ImmutableAppUtils.print(langMap.get(key));
+        }
       } catch (Throwable e) {
         closer.rethrow(e);
       } finally {
