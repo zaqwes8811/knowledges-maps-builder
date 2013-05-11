@@ -1,4 +1,4 @@
-/**
+package com.github.zaqwes8811.text_processor.sandbox; /**
  * Created with IntelliJ IDEA.
  * User: Igor
  * Date: 22.04.13

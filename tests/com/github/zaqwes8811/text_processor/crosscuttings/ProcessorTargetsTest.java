@@ -1,7 +1,6 @@
-package com.github.zaqwes8811.processor_word_frequency_index.crosscuttings;
+package com.github.zaqwes8811.text_processor.crosscuttings;
 
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
-import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
 import org.junit.Test;
 
 import java.util.List;

@@ -112,6 +112,8 @@ public class MinimalSpiderProcessor {
           String lang = target.get(MinimalSpiderProcessor.IDX_LANG);
           String srcUrl = target.get(MinimalSpiderProcessor.IDX_SRC_URL);
           String tmpFilename = target.get(MinimalSpiderProcessor.IDX_TMP_FILE);
+
+          // Добавляем метаданные для узла
           summaryMeta.add(new ArrayList<String>(Arrays.asList(srcUrl, lang)));
 
           // Reader
@@ -149,7 +151,10 @@ public class MinimalSpiderProcessor {
         Gson gson = new Gson();
         BufferedWriter metaOut = writeCloser.register(new BufferedWriter(
             new FileWriter(path+"/meta.txt")));
+
+        gson.toJson(summaryMeta);
         metaOut.write(gson.toJson(summaryMeta));
+        print(gson.toJson(summaryMeta));
       } catch (Throwable e) { // must catch Throwable
         throw writeCloser.rethrow(e);
       } finally {
@@ -171,7 +176,7 @@ public class MinimalSpiderProcessor {
     for (String node : nodes) {
       ImmutableAppUtils.print(node);
       spiderProcessor.processOneNode(node);
-      //break;  // DEVELOP
+      break;  // DEVELOP
     }
     System.out.print("Done\n");
   }

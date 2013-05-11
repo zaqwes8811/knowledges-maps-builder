@@ -19,6 +19,7 @@ final public class AppConstants {
 
   //
   public final static java.lang.String CONTENT_FILENAME = "content.txt";
+  public final static java.lang.String STATIC_NOTES_FILENAME = "static_notes.txt";
 
   //
   public final static java.lang.String PURGED_TXT_FILE_EXT = ".ptxt";
