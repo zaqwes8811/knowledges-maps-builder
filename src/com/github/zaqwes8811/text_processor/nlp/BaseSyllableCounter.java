@@ -20,6 +20,8 @@ final public class BaseSyllableCounter {
   private static final String RUSSIAN_VOWEL[] = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"};
 
   // English
+  //
+  //Guava : anyOf(CharSequence)	 Specify all the characters you wish matched. For example, CharMatcher.anyOf("aeiou") matches lowercase English vowels.
   private static final String ENGLISH_VOWEL[] = {"a", "e", "i", "o", "u", "y"};
   private static final String ENGLISH_VOWEL_PAIRS[] = {"ai", "ay", "ee", "ei", "ie", "ie", "oi", "oy", "ue", "oo", "ou"};
   public static int calc (String word, String lang) {
