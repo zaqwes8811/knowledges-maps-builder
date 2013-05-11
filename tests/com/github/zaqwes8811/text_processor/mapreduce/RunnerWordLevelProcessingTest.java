@@ -25,10 +25,9 @@ public class RunnerWordLevelProcessingTest {
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      List one = ImmutableMappers.mapper_word_level(job);
+      //if ()
+      List one = ImmutableMappers.mapper_word_level_with_compression(job);
       result_map_stage.add(one);
-      ImmutableMappers.mapper_word_level_with_compression(
-          (Multiset<String>)one.get(ImmutableMappers.IDX_FREQ_INDEX));
       break;  // DEVELOP
     }
 
@@ -46,8 +45,5 @@ public class RunnerWordLevelProcessingTest {
       ImmutableAppUtils.print(one);
       result_reduce_stage.add(one);
     } */
-
-
-
   }
 }
