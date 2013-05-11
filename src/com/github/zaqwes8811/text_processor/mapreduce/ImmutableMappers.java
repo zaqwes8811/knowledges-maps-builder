@@ -86,6 +86,7 @@ final public class ImmutableMappers {
   public final static int IDX_FREQ_INDEX = 1;
   public final static int IDX_LANG_MAP = 2;
   public final static int IDX_SENT_MAP = 3;
+  public final static int IDX_RESTS_MAP = 4;
   public static List mapper_word_level(List<String> job) {
     List response = new ArrayList();
     String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
@@ -122,13 +123,14 @@ final public class ImmutableMappers {
           sentenceNumber++;
         }
 
-        ImmutableAppUtils.print("Size Raw = "+wordsFrequenceMultyset.elementSet().size());
+        ImmutableAppUtils.print("Size Raw = " + wordsFrequenceMultyset.elementSet().size());
 
         // Make result
         response.add(node);
         response.add(wordsFrequenceMultyset);
         response.add(langMap);
         response.add(sentencesPtrsMap);
+        response.add(null);
       } catch (Throwable e) {
         closer.rethrow(e);
       } finally {
@@ -151,10 +153,15 @@ final public class ImmutableMappers {
     HashMultimap<String, String> langPerWordMap =
         (HashMultimap<String, String>)one.get(ImmutableMappers.IDX_LANG_MAP);
 
+    // Номера единиц контента
+    HashMultimap<String, Integer> sentencesRawMap =
+      (HashMultimap<String, Integer>)one.get(ImmutableMappers.IDX_SENT_MAP);
+
     // Результаты стадии
     Multiset<String> frequenciesCompressed = HashMultiset.create();
     Multimap<String, String> frequenciesWordRest = HashMultimap.create();
-    Multimap<String, Integer> frequenciesCompressedTest = ArrayListMultimap.create();
+    Multimap<String, String> langMeanMapCompressed = HashMultimap.create();
+    Multimap<String, Integer> sentencesCompressed = HashMultimap.create();
 
     // Компрессоры
     russianStemmer ruStemmer = new russianStemmer();
@@ -162,7 +169,7 @@ final public class ImmutableMappers {
 
     // Перебираем слова
     for (String key: frequencies.elementSet()) {
-       if (isEnabled(key)) {
+      if (isEnabled(key)) {
         String compressedKey = key;
         String meanLangWord = (new ArrayList<String>(langPerWordMap.get(key))).get(0);
         if (meanLangWord.equals("ru")) {
@@ -171,7 +178,9 @@ final public class ImmutableMappers {
           ruStemmer.stem();
           compressedKey = ruStemmer.getCurrent();
           if (RUSSIAN_STOP_WORDS.contains(compressedKey)) {
-            // Нет в списке стоп-слов
+            // В списке стоп-слов
+            // Отброшенное слово при второй фильтарции
+            //ImmutableAppUtils.print(key);
             continue;
           }
         } else if (meanLangWord.equals("en")) {
@@ -183,30 +192,39 @@ final public class ImmutableMappers {
           compressedKey = key;
         }
 
-        //frequenciesCompressedTest.put(compressedKey, frequencies.count(key));
         frequenciesCompressed.add(compressedKey, frequencies.count(key));
+        langMeanMapCompressed.put(compressedKey, meanLangWord);
         frequenciesWordRest.put(compressedKey, key);
+        sentencesCompressed.putAll(compressedKey, sentencesRawMap.get(key));
+      } else {
+        // Отброшенное слово при перой фильтарции
+        //ImmutableAppUtils.print(key);
       }
     }
 
     // Смотрим результат
+    /*
     for (String key: frequenciesCompressed.elementSet()) {
-      /*ImmutableAppUtils.print(
+      ImmutableAppUtils.print(
         Joiner.on(" ").join(
+          node,
           key,
           frequenciesCompressed.count(key),
-          //frequenciesCompressedTest.get(key),
-          frequenciesWordRest.get(key))); */
-    }//*/
+          langMeanMapCompressed.get(key),
+          sentencesCompressed.get(key),
+          frequenciesWordRest.get(key)));
+    }
+    //*/
     ImmutableAppUtils.print("Size = "+frequenciesCompressed.elementSet().size()+" "+node);
 
     // Make result
-    // Имя узла
-    // Частотный индекс
-    // Языковой индекс
-    // Предложения
-    // Остаточный индекс
-    return null;
+    List result = new ArrayList();
+    result.add(node);  // Имя узла
+    result.add(frequenciesCompressed);  // Частотный индекс
+    result.add(langMeanMapCompressed);  // Языковой индекс
+    result.add(sentencesCompressed);  // Предложения
+    result.add(frequenciesWordRest);  // Остаточный индекс
+    return result;
   }
 
   // Base filters
@@ -229,6 +247,4 @@ final public class ImmutableMappers {
     }
     return false;
   }
-  /*
-  * */
  }
