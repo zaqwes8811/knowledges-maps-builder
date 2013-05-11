@@ -19,6 +19,7 @@ final public class ImmutableReduces {
   public static final int IDX_SENT_LENGTH_MEAN = 1;
   public static final int IDX_RE = 2;
   public static final int IDX_LANG = 3;
+  public static final int IDX_SORTED_IDX = 4;
 
 
   public static List reduce_sentences_level(List result_shuffle_stage) {
