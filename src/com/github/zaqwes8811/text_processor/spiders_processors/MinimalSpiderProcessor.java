@@ -154,7 +154,7 @@ public class MinimalSpiderProcessor {
 
         gson.toJson(summaryMeta);
         metaOut.write(gson.toJson(summaryMeta));
-        print(gson.toJson(summaryMeta));
+        //print(gson.toJson(summaryMeta));
       } catch (Throwable e) { // must catch Throwable
         throw writeCloser.rethrow(e);
       } finally {
@@ -171,14 +171,15 @@ public class MinimalSpiderProcessor {
 
     // Processing
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    //ImmutableAppUtils.print(nodes);
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
-      ImmutableAppUtils.print(node);
+      ImmutableAppUtils.print("Process node: "+node);
       spiderProcessor.processOneNode(node);
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
-    System.out.print("Done\n");
+    ImmutableAppUtils.print("Done. Spider processor.\n");
   }
 }
 

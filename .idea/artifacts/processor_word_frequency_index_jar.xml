@@ -3,13 +3,14 @@
     <output-path>$PROJECT_DIR$/out/artifacts/processor_word_frequency_index_jar</output-path>
     <root id="archive" name="processor-word-frequency-index.jar">
       <element id="module-output" name="processor-word-frequency-index" />
-      <element id="extracted-dir" path="D:/home/work-libs/java/tika-app-1.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="D:/home/work-libs/java/hamcrest-core-1.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="D:/home/work-libs/java/junit-4.11.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="D:/home/work-libs/java/snakeyaml-1.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="D:/home/work-libs/java/apache-log4j-1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="D:/home/work-libs/java/guava-14.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/junit-4.11.jar" path-in-jar="/" />
       <element id="extracted-dir" path="D:/home/work-libs/java/google-gson-2.2.3/gson-2.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/snakeyaml-1.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/hamcrest-core-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/commons-lang3-3.1/commons-lang3-3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/tika-app-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/home/work-libs/java/guava-14.0.1.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

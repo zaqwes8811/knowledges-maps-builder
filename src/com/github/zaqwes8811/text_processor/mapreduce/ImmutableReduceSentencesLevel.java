@@ -20,20 +20,20 @@ final public class ImmutableReduceSentencesLevel {
 
   public static final double RU_MEAN_SPEED_READ = 250.0;  // word/min
 
-  public static Map<String, String> reduce_sentences_level(List result_shuffle_stage) {
+  public static Map<String, String> reduce_sentences_level(List task) {
     // Средняя длина предложения
-    List<Integer> s = (List<Integer>)result_shuffle_stage.get(
+    List<Integer> s = (List<Integer>)task.get(
         ImmutableMapperSentencesLevel.IDX_SENTENCES_LENS);
     Double meanLengthSentence = ImmutableSummators.meanList(s);
     Double countWords = ImmutableSummators.sumIntList(s)*1.0;
 
     // Средняя длина слога
-    s = (List<Integer>)result_shuffle_stage.get(ImmutableMapperSentencesLevel.IDX_COUNT_SYLLABLES);
+    s = (List<Integer>)task.get(ImmutableMapperSentencesLevel.IDX_COUNT_SYLLABLES);
     Double meanLengthSyllable = ImmutableSummators.sumIntList(s)/countWords;
 
     Double RE = new Double(-1);
     Double timeForRead = new Double(-1);
-    String lang = (String)result_shuffle_stage.get(ImmutableMapperSentencesLevel.IDX_LANG);
+    String lang = (String)task.get(ImmutableMapperSentencesLevel.IDX_LANG);
     if (lang.equals("ru")) {
       RE = (206.835 - 60.1*meanLengthSyllable - 1.3*meanLengthSentence);
 
@@ -42,7 +42,8 @@ final public class ImmutableReduceSentencesLevel {
       RE = (206.835 - 84.6*meanLengthSyllable - 1.015*meanLengthSentence);
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else {
-      ImmutableAppUtils.print("Lang no used");
+      String nodeName = (String)task.get(ImmutableMappers.IDX_NODE_NAME);
+      ImmutableAppUtils.print("Warning: Lang no used - "+lang+". Node - "+nodeName);
     }
 
     // Make results

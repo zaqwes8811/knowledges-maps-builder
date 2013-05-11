@@ -26,7 +26,8 @@ public class MinimalSpiderExtractor {
         }
       }
     } catch (CrosscuttingsException e) {
-      System.out.println(e.getMessage());
+      ImmutableAppUtils.print(e.getMessage());
     }
+    ImmutableAppUtils.print("Done. Spider extractor.\n");
   }
 }

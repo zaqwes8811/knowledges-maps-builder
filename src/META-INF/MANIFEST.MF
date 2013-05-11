@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: com.github.zaqwes8811.processor_word_frequency_index.spide
- rs_processors.MinimalSpiderProcessor
+Main-Class: com.github.zaqwes8811.text_processor.spiders_extractors.Mi
+ nimalSpiderExtractor
 

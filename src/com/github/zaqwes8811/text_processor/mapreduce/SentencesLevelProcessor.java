@@ -57,17 +57,16 @@ public class SentencesLevelProcessor {
       try {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String resultInJson = gson.toJson(result_reduce_stage);
-        ImmutableAppUtils.print(resultInJson);
-
         // Write
         String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
             ImmutableProcessorTargets.getPathToIndex(),
             AppConstants.STATIC_NOTES_FILENAME);
 
-        ImmutableAppUtils.print(path_for_save);
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
+
+        ImmutableAppUtils.print("Notes write to file : "+path_for_save);
 
       } catch (Throwable e) {
         closer.rethrow(e);
@@ -77,5 +76,6 @@ public class SentencesLevelProcessor {
     } catch (IOException e) {
       e.printStackTrace();
     }
+    ImmutableAppUtils.print("Done. Sentences level processing.");
   }
 }
