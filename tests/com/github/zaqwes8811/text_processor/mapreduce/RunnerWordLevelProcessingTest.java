@@ -6,8 +6,7 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,7 +24,6 @@ public class RunnerWordLevelProcessingTest {
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      //if ()
       List one = ImmutableMappers.mapper_word_level_with_compression(job);
       result_map_stage.add(one);
       break;  // DEVELOP
@@ -34,16 +32,16 @@ public class RunnerWordLevelProcessingTest {
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
     List<List> result_shuffle_stage  = result_map_stage;
 
-    // Compression Stage
-
-
-    /*
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> result_reduce_stage = new ArrayList<List>();
     for (List task: result_shuffle_stage) {
-      List one = ImmutableReduces.reduce_sentences_level(task);
-      ImmutableAppUtils.print(one);
+      List one = ImmutableReduces.reduce_word_level_base(task);
       result_reduce_stage.add(one);
-    } */
+    }
+
+    // Save results
+    for (List result: result_reduce_stage) {
+      // имя и путь к узлу
+    }
   }
 }

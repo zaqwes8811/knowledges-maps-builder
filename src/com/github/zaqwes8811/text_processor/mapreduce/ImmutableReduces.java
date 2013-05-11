@@ -3,9 +3,9 @@ package com.github.zaqwes8811.text_processor.mapreduce;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.math.ImmutableSummators;
 import com.google.common.base.Joiner;
+import com.google.common.collect.Multiset;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -59,5 +59,38 @@ final public class ImmutableReduces {
     // Язык
     result_reduce_stage.add(lang);
     return result_reduce_stage;
+  }
+
+  public static List reduce_word_level_base(List task) {
+    List one = new ArrayList();
+    // Сортируем индекс частот
+    Multiset<String> unsorted_index = (Multiset<String>)task.get(ImmutableMappers.IDX_FREQ_INDEX);
+
+
+    Set<String> elems = unsorted_index.elementSet();
+    Map<String, Integer> unsorted_map = new HashMap<String, Integer>();
+    for (String elem: elems) {
+      unsorted_map.put(elem, unsorted_index.count(elem));
+    }
+    List<Map.Entry<String, Integer>> list = new LinkedList(unsorted_map.entrySet());
+
+    // sort list based on comparator
+    Collections.sort(list, new Comparator() {
+      public int compare(Object o1, Object o2) {
+        return ((Comparable) ((Map.Entry) (o2)).getValue())
+          .compareTo(((Map.Entry) (o1)).getValue());
+      }
+    });
+
+    // Сортированный список
+    List<String> sorted_result_list = new ArrayList<String>();
+    for (Map.Entry<String, Integer> entry : list) {
+      sorted_result_list.add(entry.getKey());
+    }
+
+    // Добаляем к результатам
+    one.addAll(task);
+    one.add(sorted_result_list);
+    return one;
   }
 }
