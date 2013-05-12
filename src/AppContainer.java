@@ -171,7 +171,7 @@ public class AppContainer {
         // No implemented
       }
 
-  		
+      response.setCharacterEncoding("UTF-8");
       response.getWriter().println(json_response);
     }
   }
