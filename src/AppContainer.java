@@ -13,6 +13,7 @@ import java.io.IOException;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import com.google.gson.Gson;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -50,7 +51,7 @@ public class AppContainer {
     ResourceHandler resource_handler = new ResourceHandler();
     resource_handler.setDirectoriesListed(true);
     resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-    resource_handler.setResourceBase("./src/web_view");
+    resource_handler.setResourceBase("./apps/web_view");
 
 
     // Список обработчиков?
@@ -136,7 +137,7 @@ public class AppContainer {
         HttpServletResponse response) throws ServletException, IOException {
       
       //
-      ImmutableAppUtils.print(ImmutableBaseCoursor.getListNodes());
+      List<String> listNodes = ImmutableBaseCoursor.getListNodes();
 
       // Проверить бы на наличие
       String name_requester = request.getParameter("name");
@@ -161,9 +162,11 @@ public class AppContainer {
       // И как быть с потокозащитой хэша? Кстати доступ только на чтение
       String json_response = "";
       if (name_requester.equals("get_axis")) {
-        json_response = "get_axis";//getIndex();
+        json_response = "get_axis";
       } else if (name_requester.equals("get_nodes")) {
-        json_response = "get_nodes";//getListNodes();
+        Gson gson = new Gson();
+        json_response = gson.toJson(listNodes);
+        ImmutableAppUtils.print(json_response);
       } else {
         // No implemented
       }

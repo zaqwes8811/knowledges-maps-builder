@@ -110,12 +110,28 @@ function get_line_template(id, content) {
         '</div>';
 }
 
-function get_list_items() {
-    var list_names = ['IM', 'AA'];
+function get_list_nodes_develop() {
+  var request_processor = '/app';
+  var response_branch = {'name':'get_nodes'};
+  $.ajax({
+          url: request_processor,
+          type: "GET",
+          data: response_branch})
+  .done(function(data) {
+  alert(data);
+      get_list_nodes(jQuery.parseJSON(data));
+  })
+  .error(function(data) {
+      if (data.status == 404) {}
+      if (data.status == 500) {}
+      if (data.status == 0) {}
+  });
+}
 
+function get_list_nodes(list_names) {
     // Будет замкнута
     var i = 0;
-    for (i = 0; i < 2 ; ++i) {
+    for (i = 0; i < list_names.length ; ++i) {
         // TODO():А что если имена одинаковые?
         $('#list_nodes_container').append(get_line_template(list_names[i], list_names[i]));
 
@@ -126,9 +142,6 @@ function get_list_items() {
             (function(x) {
                 return function() {
                     $('#'+list_names[x]).val("Clicked");
-
-                    //alert($('#'+list_names[x]).text())
-
                     var request_processor = '/app';
                     var response_branch = {'name':'get_axis'};
                     $.ajax({

@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/processor-word-frequency-index.iml" filepath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spiders-extractors/spiders-extractors.iml" filepath="$PROJECT_DIR$/spiders-extractors/spiders-extractors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spiders/spiders.iml" filepath="$PROJECT_DIR$/spiders/spiders.iml" />
     </modules>
   </component>
 </project>
