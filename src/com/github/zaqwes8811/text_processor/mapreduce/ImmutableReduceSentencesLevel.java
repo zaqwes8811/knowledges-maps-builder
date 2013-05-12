@@ -35,7 +35,7 @@ final public class ImmutableReduceSentencesLevel {
     Double timeForRead = new Double(-1);
     String lang = (String)task.get(ImmutableMapperSentencesLevel.IDX_LANG);
     if (lang.equals("ru")) {
-      RE = (206.835 - 60.1*meanLengthSyllable - 1.3*meanLengthSentence);
+      RE = (206.835 - 60.1*meanLengthSyllable - 1.015*meanLengthSentence);
 
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else if (lang.equals("en")) {

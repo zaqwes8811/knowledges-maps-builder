@@ -163,6 +163,7 @@ public class AppContainer {
       String json_response = "";
       if (name_requester.equals("get_axis")) {
         json_response = "get_axis";
+        ImmutableAppUtils.print(request.getParameter("node_name"));
       } else if (name_requester.equals("get_nodes")) {
         Gson gson = new Gson();
         json_response = gson.toJson(listNodes);

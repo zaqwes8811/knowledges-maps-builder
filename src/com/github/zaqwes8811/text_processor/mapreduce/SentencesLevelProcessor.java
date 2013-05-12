@@ -65,6 +65,7 @@ public class SentencesLevelProcessor {
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
+        ImmutableAppUtils.print(resultInJson);
 
         ImmutableAppUtils.print("Notes write to file : "+path_for_save);
 

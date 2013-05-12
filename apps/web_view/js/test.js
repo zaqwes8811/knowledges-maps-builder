@@ -103,8 +103,8 @@ function process_response(data) {
 
 function get_line_template(id, content) {
     return '<div class="one_line_container">'+
-        '  <div class="first_one8"><div class="parent">'+
-        '    <div id="'+id+'" class="child">'+content+'</div>'+
+        '  <div class="first_one8"><div class="parent_msg">'+
+        '    <div id="'+id+'" class="child" >'+content+'</div>'+
         '    <div class="helper"></div>'+
         '  </div></div>'+
         '</div>';
@@ -118,7 +118,7 @@ function get_list_nodes_develop() {
           type: "GET",
           data: response_branch})
   .done(function(data) {
-  alert(data);
+  //alert(data);
       get_list_nodes(jQuery.parseJSON(data));
   })
   .error(function(data) {
@@ -133,7 +133,7 @@ function get_list_nodes(list_names) {
     var i = 0;
     for (i = 0; i < list_names.length ; ++i) {
         // TODO():А что если имена одинаковые?
-        $('#list_nodes_container').append(get_line_template(list_names[i], list_names[i]));
+        $('#list_nodes_container').append(get_line_template(list_names[i].split(" ").join("_"), list_names[i]));
 
 
         // Соединяем с обработчиком нажатия
@@ -143,14 +143,14 @@ function get_list_nodes(list_names) {
                 return function() {
                     $('#'+list_names[x]).val("Clicked");
                     var request_processor = '/app';
-                    var response_branch = {'name':'get_axis'};
+                    var response_branch = {'name':'get_axis', 'node_name':list_names[x]};
                     $.ajax({
                             url: request_processor,
                             type: "GET",
                             data: response_branch})
                     .done(function(data) {
                         //process_response(data);
-                        alert('Done');
+                        console.log('Done');
                     })
                     .error(function(data) {
                         if (data.status == 404) {}
@@ -160,6 +160,6 @@ function get_list_nodes(list_names) {
                 }
             })(i)
         };
-        $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(bind_obj);
+        $('#'+list_names[i].split(" ").join("_")).parent(".parent_msg").parent(".first_one8").bind(bind_obj);
     }
 }
