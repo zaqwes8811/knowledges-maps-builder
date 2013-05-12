@@ -49,7 +49,7 @@
   text-align: right;
 }
 
-/* Размещает в диве элемент */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .parent {
   width: 100%; /*450px; */
   height: 100%; /*50px; */
@@ -92,7 +92,11 @@
   height: 25px;
   /*margin-bottom: 3px;*/
 }
-/* Восемь частей внешнего div */
+.one_line_container_full {
+  height: 100%;
+  /*margin-bottom: 3px;*/
+}
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ div */
 .first_one8, 
 .first_one7, 
 .first_one5, 
@@ -130,7 +134,7 @@
 .one5, .first_one5 { width: 60%; }
 .one6 { width: 64%; }
 
-/* Четыре части внешнего div */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ div */
 .one4, .first_one4 { width: 48%; }
 .one3, .first_one3 { width: 32%; }
 .one2, .first_one2 { width: 24%; }

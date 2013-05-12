@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppContainer.java" afterPath="$PROJECT_DIR$/src/AppContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/SentencesLevelProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/index.html" afterPath="$PROJECT_DIR$/apps/web_view/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/css/journal.css" afterPath="$PROJECT_DIR$/apps/web_view/css/journal.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/js/test.js" afterPath="$PROJECT_DIR$/apps/web_view/js/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +47,9 @@
     <file path="/ImmutableReduceSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368298139405" ignored="false" />
     <file path="$PROJECT_DIR$/web_view/src/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368334564455" ignored="false" />
     <file path="/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368338857412" ignored="false" />
-    <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368377976583" ignored="false" />
-    <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368377515153" ignored="false" />
+    <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378700026" ignored="false" />
+    <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368379635938" ignored="false" />
+    <file path="/journal.css" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378423026" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/web_view/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="27" selection-start="1867" selection-end="1867" vertical-scroll-proportion="-17.653847">
+            <state line="34" column="59" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-16.346153">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -133,16 +131,7 @@
       <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="69" selection-start="4802" selection-end="4802" vertical-scroll-proportion="0.7292035">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app_carcass.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/web_view/css/app_carcass.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="13" selection-start="1982" selection-end="1982" vertical-scroll-proportion="-4.96">
+            <state line="171" column="43" selection-start="5047" selection-end="5047" vertical-scroll-proportion="0.74067795">
               <folding />
             </state>
           </provider>
@@ -151,7 +140,7 @@
       <file leaf-file-name="journal.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/web_view/css/journal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="11" selection-start="959" selection-end="969" vertical-scroll-proportion="0.0">
+            <state line="82" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/nlp/BaseSyllableCounter.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/nlp/CompressorsTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableSavers.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
@@ -189,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/SentencesLevelProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" />
         <option value="$PROJECT_DIR$/src/AppContainer.java" />
+        <option value="$PROJECT_DIR$/apps/web_view/css/journal.css" />
         <option value="$PROJECT_DIR$/apps/web_view/index.html" />
         <option value="$PROJECT_DIR$/apps/web_view/js/test.js" />
       </list>
@@ -863,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="43" selection-start="5265" selection-end="5265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/css/docs.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="15" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0033898305">
@@ -886,14 +868,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/css/journal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="11" selection-start="959" selection-end="969" vertical-scroll-proportion="0.0">
+        <state line="82" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="43" selection-start="5265" selection-end="5265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="27" selection-start="1867" selection-end="1867" vertical-scroll-proportion="-17.653847">
+        <state line="34" column="59" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-16.346153">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -902,7 +891,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="69" selection-start="4802" selection-end="4802" vertical-scroll-proportion="0.7292035">
+        <state line="171" column="43" selection-start="5047" selection-end="5047" vertical-scroll-proportion="0.74067795">
           <folding />
         </state>
       </provider>

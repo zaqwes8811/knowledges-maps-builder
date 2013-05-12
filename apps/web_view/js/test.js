@@ -102,12 +102,16 @@ function process_response(data) {
 }
 
 function get_line_template(id, content) {
-    return '<div class="one_line_container">'+
+    /*return '<div class="one_line_container">'+
         '  <div class="first_one8"><div class="parent_msg">'+
         '    <div id="'+id+'" class="child" >'+content+'</div>'+
         '    <div class="helper"></div>'+
         '  </div></div>'+
-        '</div>';
+        '</div>';  */
+
+    return '<div class="row">'+
+            '    <div id="'+id+'" class="span12" >'+content+'</div>'+
+            '</div>';
 }
 
 function get_list_nodes_develop() {
@@ -128,12 +132,17 @@ function get_list_nodes_develop() {
   });
 }
 
+function get_purged_node(node_name) {
+    // удаляем пробелы и точки в имени
+    return node_name.split(" ").join("_").split(".").join("_");
+}
+
 function get_list_nodes(list_names) {
     // Будет замкнута
     var i = 0;
     for (i = 0; i < list_names.length ; ++i) {
         // TODO():А что если имена одинаковые?
-        $('#list_nodes_container').append(get_line_template(list_names[i].split(" ").join("_"), list_names[i]));
+        $('#list_nodes_container').append(get_line_template(get_purged_node(list_names[i]), list_names[i]));
 
 
         // Соединяем с обработчиком нажатия
@@ -160,6 +169,6 @@ function get_list_nodes(list_names) {
                 }
             })(i)
         };
-        $('#'+list_names[i].split(" ").join("_")).parent(".parent_msg").parent(".first_one8").bind(bind_obj);
+        $('#'+get_purged_node(list_names[i])).parent(".row").bind(bind_obj);
     }
 }
