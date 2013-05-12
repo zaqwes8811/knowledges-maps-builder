@@ -7,129 +7,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_view/.idea/ant.xml" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\.idea\libraries\hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\error.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\css\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\index_flot.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\js\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\out.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\subs\sys-settings-new.htm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/spiders_extractors/MinimalSpiderExtractor.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/spiders_extractors/MinimalSpiderExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_view/.idea/libraries/guava_14_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jetty_all_7_0_2_v20100331.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api_2_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_view/.idea/libraries/snakeyaml_1_12.xml" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\.idea\libraries\tika_app_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\spiders_extractors\ExtractorException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\spiders_extractors\ImmutableTikaWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\spiders_extractors\MinimalSpiderExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\spiders_processors\MinimalSpiderProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\AppContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\css\hided\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\del.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\ed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\go.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\rel.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\img\twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\index_.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\share.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\hided\web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\web_view\src\web_view\subs\sys-settings-new.htm" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processor-word-frequency-index.iml" afterPath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/processor_word_frequency_index_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/processor_word_frequency_index_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_view/web_view.iml" afterPath="$PROJECT_DIR$/web_view/web_view.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_view/.idea/workspace.xml" afterPath="$PROJECT_DIR$/web_view/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368334133158" ignored="false" />
     <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368296610982" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
-    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368331954684" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368336974154" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
     <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368297570859" ignored="false" />
@@ -218,29 +222,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/jobs_processors/ImmutableProcessorTargets.java">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+            <state line="53" column="26" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimalSpiderExtractor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/spiders_extractors/MinimalSpiderExtractor.java">
+      <file leaf-file-name="MinimalSpiderProcessorTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/MinimalSpiderProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="14" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/index_coursors/ImmutableBaseCoursor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="43" selection-start="876" selection-end="876" vertical-scroll-proportion="0.39464286">
-              <folding />
+            <state line="14" column="26" selection-start="412" selection-end="412" vertical-scroll-proportion="0.46484375">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -283,10 +280,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-1288" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -370,107 +367,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders_extractors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index_coursors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text_processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ImmutableAppUtils.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/sandbox" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="D:/home/work-libs/java/google-gson-2.2.3/gson-2.2.3.jar!/" />
+    <property name="last_opened_file_path" value="D:/home/work-libs/java/servlet-api-2.5.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -499,7 +408,7 @@
       <recent name="D:\github\processor-word-frequency-index" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MinimalSpiderExtractor">
+  <component name="RunManager" selected="Application.AppContainer">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -598,7 +507,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -614,7 +523,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -630,7 +539,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -653,7 +562,7 @@
       <method />
     </configuration>
     <configuration default="false" name="JobsFormerTest" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor" />
@@ -675,7 +584,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerSentencesLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -697,7 +606,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BaseTokenizerTest" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -719,7 +628,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerWordLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -741,7 +650,7 @@
       <method />
     </configuration>
     <configuration default="false" name="CompressorsTest" type="JUnit" factoryName="JUnit">
-      <module name="processor-word-frequency-index" />
+      <module name="spiders-extractors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -808,8 +717,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -819,13 +728,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56825936" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36104512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35075757" sideWeight="0.4317406" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26109216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3752026" sideWeight="0.6389549" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25890738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -919,17 +828,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/spiders_extractors/MinimalSpiderExtractor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/index_coursors/ImmutableBaseCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="14" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.0">
+        <state line="36" column="19" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/index_coursors/ImmutableBaseCoursor.java">
+    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="43" selection-start="876" selection-end="876" vertical-scroll-proportion="0.39464286">
+        <state line="53" column="26" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/MinimalSpiderProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="26" selection-start="412" selection-end="412" vertical-scroll-proportion="0.46484375">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -987,12 +905,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>processor-word-frequency-index</last-edited>
+          <last-edited>spiders-extractors</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1000,7 +917,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>gson-2.2.3</last-edited>
+          <last-edited>snakeyaml-1.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
