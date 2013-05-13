@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/index.html" afterPath="$PROJECT_DIR$/apps/web_view/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/css/journal.css" afterPath="$PROJECT_DIR$/apps/web_view/css/journal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/web_view/js/test.js" afterPath="$PROJECT_DIR$/apps/web_view/js/test.js" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +45,7 @@
     <file path="/ImmutableReduceSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368298139405" ignored="false" />
     <file path="$PROJECT_DIR$/web_view/src/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368334564455" ignored="false" />
     <file path="/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368338857412" ignored="false" />
-    <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378700026" ignored="false" />
+    <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368430390297" ignored="false" />
     <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368379635938" ignored="false" />
     <file path="/journal.css" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378423026" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -111,16 +109,16 @@
       <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="43" selection-start="5265" selection-end="5265" vertical-scroll-proportion="0.0">
+            <state line="170" column="32" selection-start="5531" selection-end="5531" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/web_view/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="59" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-16.346153">
+            <state line="49" column="33" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.6985816">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -128,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="43" selection-start="5047" selection-end="5047" vertical-scroll-proportion="0.74067795">
+            <state line="169" column="32" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,8 +176,8 @@
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" />
         <option value="$PROJECT_DIR$/src/AppContainer.java" />
         <option value="$PROJECT_DIR$/apps/web_view/css/journal.css" />
-        <option value="$PROJECT_DIR$/apps/web_view/index.html" />
         <option value="$PROJECT_DIR$/apps/web_view/js/test.js" />
+        <option value="$PROJECT_DIR$/apps/web_view/index.html" />
       </list>
     </option>
   </component>
@@ -713,7 +711,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32009724" sideWeight="0.74703085" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14262562" sideWeight="0.74703085" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25296912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -875,24 +873,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="43" selection-start="5265" selection-end="5265" vertical-scroll-proportion="0.0">
+        <state line="170" column="32" selection-start="5531" selection-end="5531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="32" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="59" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-16.346153">
+        <state line="49" column="33" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.6985816">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="43" selection-start="5047" selection-end="5047" vertical-scroll-proportion="0.74067795">
-          <folding />
         </state>
       </provider>
     </entry>
