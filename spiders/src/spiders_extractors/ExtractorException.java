@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.spiders_extractors;
+package spiders_extractors;
 
 /**
  * Created with IntelliJ IDEA.

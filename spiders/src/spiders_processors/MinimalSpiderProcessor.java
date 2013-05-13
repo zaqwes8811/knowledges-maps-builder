@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.spiders_processors;
+package spiders_processors;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
@@ -6,7 +6,7 @@ import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTa
 
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
 import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
-import com.github.zaqwes8811.text_processor.spiders_extractors.ImmutableTikaWrapper;
+import spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
