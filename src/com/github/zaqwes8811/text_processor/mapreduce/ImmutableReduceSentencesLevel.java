@@ -18,6 +18,11 @@ final public class ImmutableReduceSentencesLevel {
   public static final int IDX_RE = 2;
   public static final int IDX_LANG = 3;
 
+  public static final String NOTE_MEAN_LEN_SENT = "mean_length_sentence";
+  public static final String NOTE_RE = "RE";
+  public static final String NOTE_MEAN_TIME_FOR_READ = "mean_time_for_read";
+  public static final String NOTE_MEAN_LANG = "mean_language";
+
   public static final double RU_MEAN_SPEED_READ = 250.0;  // word/min
 
   public static Map<String, String> reduce_sentences_level(List task) {
