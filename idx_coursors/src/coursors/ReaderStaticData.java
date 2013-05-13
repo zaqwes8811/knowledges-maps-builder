@@ -119,15 +119,30 @@ public class ReaderStaticData {
       // сам частотынй индекс индекс
       HashMap<String, Integer> sorted_freq_idx = get_freq_idx(node);
 
+      Integer total_amount = 0;
       for (String word: sorted_fall_idx) {
-        ImmutableAppUtils.print(word+" "+sorted_freq_idx.get(word));
+        total_amount += sorted_freq_idx.get(word);
       }
+      ImmutableAppUtils.print(total_amount);
+      Double threshold = total_amount*0.8;
 
       // Оценка - 20% слов
       Integer count_unique_words = sorted_fall_idx.size();
-      Integer
+      Double N20 = count_unique_words*0.2;
+      ImmutableAppUtils.print(N20);
+      Double N80 = count_unique_words - N20;
 
       // Оценка - 80% интегральной частоты
+      Double sum = new Double(0);
+      Integer N80_Amount = 0;
+      for (String word: sorted_fall_idx) {
+        if (sum > threshold) {
+          break;
+        }
+        N80_Amount++;
+        sum += sorted_freq_idx.get(word);
+      }
+      ImmutableAppUtils.print(N80_Amount);
 
       break;
     }
