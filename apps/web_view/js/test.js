@@ -132,6 +132,18 @@ function get_list_nodes_develop() {
   });
 }
 
+function process_node_data(data) {
+  var notes = jQuery.parseJSON(data);
+  var notes_to_id_map = {};
+  notes_to_id_map["RE"] = "n1";
+  for(var note in notes_to_id_map) if (notes_to_id_map.hasOwnProperty(note)) {
+      var value = Math.floor((parseFloat(notes[note])*1000))*1.0/1000.0;
+      console.log(value);
+      $('#'+notes_to_id_map[note]).html(value.toString());
+  }
+
+}
+
 function get_purged_node(node_name) {
     // удаляем пробелы и точки в имени
     return node_name.split(" ").join("_").split(".").join("_");
@@ -158,8 +170,7 @@ function get_list_nodes(list_names) {
                             type: "GET",
                             data: response_branch})
                     .done(function(data) {
-                        //process_response(data);
-                        console.log('Done');
+                        process_node_data(data);
                     })
                     .error(function(data) {
                         if (data.status == 404) {}

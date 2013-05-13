@@ -14,6 +14,7 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 import com.google.gson.Gson;
+import coursors.ReaderStaticData;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -163,7 +164,9 @@ public class AppContainer {
       String json_response = "";
       if (name_requester.equals("get_axis")) {
         json_response = "get_axis";
-        ImmutableAppUtils.print(request.getParameter("node_name"));
+        String node = request.getParameter("node_name");
+        json_response = ReaderStaticData.json_get_notes_for_node(node);
+        //ImmutableAppUtils.print();
       } else if (name_requester.equals("get_nodes")) {
         Gson gson = new Gson();
         json_response = gson.toJson(listNodes);
