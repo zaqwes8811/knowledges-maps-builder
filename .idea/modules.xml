@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/idx_coursors/idx_coursors.iml" filepath="$PROJECT_DIR$/idx_coursors/idx_coursors.iml" />
       <module fileurl="file://$PROJECT_DIR$/processor-word-frequency-index.iml" filepath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
       <module fileurl="file://$PROJECT_DIR$/spiders/spiders.iml" filepath="$PROJECT_DIR$/spiders/spiders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-wrapper/web-wrapper.iml" filepath="$PROJECT_DIR$/web-wrapper/web-wrapper.iml" />
     </modules>
   </component>
 </project>

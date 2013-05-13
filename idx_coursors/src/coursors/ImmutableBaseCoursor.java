@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package com.github.zaqwes8811.text_processor.index_coursors;
+package coursors;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
