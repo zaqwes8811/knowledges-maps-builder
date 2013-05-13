@@ -25,7 +25,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ReaderStaticData {
-  static private String getMetaFileContent(String filename) {
+  static public String file2string(String filename) {
     try {
       Closer closer = Closer.create();
       try {
@@ -44,6 +44,8 @@ public class ReaderStaticData {
     }
     return null;
   }
+
+  //static private Map<>
   static public void main(String [] args) {
     // Получаем адреса соответствующие узлам и оцененный язык
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
@@ -59,7 +61,7 @@ public class ReaderStaticData {
           AppConstants.CONTENT_META_FILENAME);
 
       // Преобразуем в json
-      String settingsInJson = getMetaFileContent(pathToMetaFile);
+      String settingsInJson = file2string(pathToMetaFile);
       Gson gson = new Gson();
       Type type = new TypeToken<List<List<String>>>() {}.getType();
       List<List<String>> metadata = gson.fromJson(settingsInJson, type);
@@ -73,7 +75,23 @@ public class ReaderStaticData {
       // Получаем статические данные по сложности
       // Заголовки столбцов таблицы
       //ImmutableAppUtils.print("Сложность");
-      ImmutableAppUtils.print("Имя, Флеш, Средняя длина преложения, 80, 20");
+      ImmutableAppUtils.print("Имя, Флеш, Средняя длина преложения, Время на прочтение, 80, 20");
+
+      //
+      String pathToStaticContentMeta = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          pathToIdx,
+          AppConstants.STATIC_NOTES_FILENAME);
+
+      String staticNotesJson = file2string(pathToStaticContentMeta);
+
+      Type typeStaticNotes = new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType();
+      HashMap<String, HashMap<String, String>> metadataStaticNotes =
+          gson.fromJson(staticNotesJson, typeStaticNotes);
+      ImmutableAppUtils.print(metadataStaticNotes.get(node));
+
+
+      // Данные для каждого из индексов по 80/20
       break;
     }
   }

@@ -16,7 +16,7 @@ import java.util.*;
  */
 final public class ImmutableReduces {
 
-  public static final int IDX_SORTED_IDX = 4;
+  public static final int IDX_SORTED_IDX = 5;
 
   public static List reduce_word_level_base(List task) {
     List one = new ArrayList();
