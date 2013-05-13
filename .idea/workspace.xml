@@ -2,28 +2,24 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="processor-word-frequency-index:jar" />
+      <artifact name="spiders:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/tika_app_1_3.xml" />
-      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\spiders\src\Main.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/spiders.iml" afterPath="$PROJECT_DIR$/spiders/spiders.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spiders/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/spiders_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\spiders\spiders_extractors\ExtractorException.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_extractors/ExtractorException.java" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\spiders\spiders_extractors\ImmutableTikaWrapper.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\spiders\spiders_extractors\MinimalSpiderExtractor.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\spiders\spiders_processors\MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\AppContainer.java" afterPath="$PROJECT_DIR$/idx_coursors/src/AppContainer.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368444525366" ignored="false" />
     <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368296610982" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
-    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368444711072" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368447701726" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
     <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368297570859" ignored="false" />
@@ -57,6 +53,7 @@
     <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368430390297" ignored="false" />
     <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368379635938" ignored="false" />
     <file path="/journal.css" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378423026" ignored="false" />
+    <file path="/ReaderStaticData.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368447797213" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,16 +115,16 @@
       <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="32" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0">
+            <state line="155" column="21" selection-start="4424" selection-end="4424" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimalSpiderExtractor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+            <state line="55" column="44" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,42 +132,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimalSpiderProcessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java">
+      <file leaf-file-name="ReaderStaticData.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableTikaWrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="25" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
+            <state line="25" column="26" selection-start="831" selection-end="831" vertical-scroll-proportion="0.7048093">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinimalSpiderProcessorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="18" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpiderExtractorTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="7" selection-start="325" selection-end="325" vertical-scroll-proportion="0.17525773">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -178,7 +146,7 @@
       <file leaf-file-name="journal.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/web_view/css/journal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
+            <state line="82" column="18" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -202,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMappers.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableMapperSentencesLevel.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" />
@@ -218,6 +185,7 @@
         <option value="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" />
         <option value="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
       </list>
     </option>
   </component>
@@ -287,7 +255,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
+              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,11 +269,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
+              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,7 +311,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="D:/home/work-libs/java/tika-app-1.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/processor-word-frequency-index" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -342,6 +332,8 @@
       <recent name="com.github.zaqwes8811.processor_word_frequency_index" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\processor-word-frequency-index\idx_coursors\src" />
+      <recent name="D:\github\processor-word-frequency-index\idx_coursors" />
       <recent name="D:\github\processor-word-frequency-index\spiders\src" />
       <recent name="D:\github\processor-word-frequency-index\apps" />
       <recent name="D:\github\processor-word-frequency-index" />
@@ -351,7 +343,7 @@
       <recent name="com.github.zaqwes8811.text_processor" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MinimalSpiderExtractor">
+  <component name="RunManager" selected="Application.ReaderStaticData">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -450,7 +442,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -466,7 +458,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="idx_coursors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -482,7 +474,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="idx_coursors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -498,14 +490,36 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="processor-word-frequency-index" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ReaderStaticData" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.ReaderStaticData" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="JobsFormerTest" type="JUnit" factoryName="JUnit">
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor" />
@@ -527,7 +541,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerSentencesLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -549,7 +563,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BaseTokenizerTest" type="JUnit" factoryName="JUnit">
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -571,7 +585,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerWordLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -593,7 +607,7 @@
       <method />
     </configuration>
     <configuration default="false" name="CompressorsTest" type="JUnit" factoryName="JUnit">
-      <module name="spiders" />
+      <module name="idx_coursors" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -614,16 +628,17 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="9">
+    <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Application.MinimalSpiderExtractor" />
       <item index="1" class="java.lang.String" itemvalue="Application.MinimalSpiderProcessor" />
       <item index="2" class="java.lang.String" itemvalue="Application.SentencesLevelProcessor" />
       <item index="3" class="java.lang.String" itemvalue="Application.AppContainer" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JobsFormerTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RunnerSentencesLevelProcessingTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.BaseTokenizerTest" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.RunnerWordLevelProcessingTest" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.CompressorsTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ReaderStaticData" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.JobsFormerTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.RunnerSentencesLevelProcessingTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.BaseTokenizerTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.RunnerWordLevelProcessingTest" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.CompressorsTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -667,7 +682,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2648456" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -677,7 +692,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3395462" sideWeight="0.74703085" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25296912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25296912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -745,11 +760,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="14" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0" />
@@ -757,7 +767,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/SentencesLevelProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="44" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.55207026" />
+        <state line="67" column="44" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.55207026">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessing.java">
@@ -782,7 +794,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/css/journal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
+        <state line="82" column="18" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -796,39 +808,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppContainer.java">
+    <entry file="file://$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="19" selection-start="5169" selection-end="5169" vertical-scroll-proportion="0.33451957">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="32" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
+        <state line="17" column="20" selection-start="600" selection-end="600" vertical-scroll-proportion="0.49656358">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -837,17 +819,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+        <state line="20" column="18" selection-start="493" selection-end="493" vertical-scroll-proportion="0.4450172">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java">
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="325" selection-end="325" vertical-scroll-proportion="0.17525773">
+        <state line="89" column="21" selection-start="3476" selection-end="3476" vertical-scroll-proportion="1.1973466">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="33" selection-start="631" selection-end="631" vertical-scroll-proportion="0.42288557">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="430" selection-end="430" vertical-scroll-proportion="0.31694916">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="21" selection-start="4424" selection-end="4424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="44" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="26" selection-start="831" selection-end="831" vertical-scroll-proportion="0.7048093">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -905,7 +930,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>spiders</last-edited>
+          <last-edited>idx_coursors</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
