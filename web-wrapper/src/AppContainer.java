@@ -1,4 +1,3 @@
-import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,14 +10,10 @@ import java.io.IOException;
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import coursors.ImmutableBaseCoursor;
 import com.google.gson.Gson;
 import coursors.ReaderStaticData;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.handler.AbstractHandler;
-import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
@@ -31,7 +26,6 @@ import org.eclipse.jetty.servlet.ServletHandler;
 
 //import com.google.gson.Gson;
 import java.util.*;
-import java.util.Random;
 
 
 public class AppContainer {
