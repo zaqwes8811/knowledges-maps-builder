@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" afterPath="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +48,7 @@
     <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368430390297" ignored="false" />
     <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368379635938" ignored="false" />
     <file path="/journal.css" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378423026" ignored="false" />
-    <file path="/ReaderStaticData.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368456053595" ignored="false" />
+    <file path="/ReaderStaticData.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368459964080" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,29 +119,18 @@
       <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="75" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+            <state line="17" column="60" selection-start="726" selection-end="747" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReaderStaticData.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ReaderStaticData.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="44" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0">
+            <state line="127" column="14" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.9009709">
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="23" selection-start="3509" selection-end="3509" vertical-scroll-proportion="0.70780855">
-              <folding>
-                <element signature="e#2987#3004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,10 +175,10 @@
         <option value="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" />
         <option value="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
-        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
       </list>
     </option>
   </component>
@@ -380,7 +368,7 @@
       <recent name="com.github.zaqwes8811.text_processor" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunnerWordLevelProcessingTest">
+  <component name="RunManager" selected="Application.ReaderStaticData">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -728,8 +716,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31742424" sideWeight="0.721843" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.278157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.9232082" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07679181" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -900,27 +888,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="28" selection-start="3131" selection-end="3131" vertical-scroll-proportion="0.18639798">
+          <folding>
+            <element signature="e#2987#3004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="75" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+        <state line="17" column="60" selection-start="726" selection-end="747" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="44" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0">
+        <state line="127" column="14" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.9009709">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="23" selection-start="3509" selection-end="3509" vertical-scroll-proportion="0.70780855">
-          <folding>
-            <element signature="e#2987#3004#0" expanded="true" />
           </folding>
         </state>
       </provider>

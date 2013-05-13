@@ -45,6 +45,30 @@ public class ReaderStaticData {
     return null;
   }
 
+  static public List<String> get_sorted_idx(String node) {
+    String sorted_idx_json = file2string(
+      Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          node,
+          AppConstants.SORTED_IDX_FILENAME));
+    return (new Gson().fromJson(sorted_idx_json,
+      new TypeToken<ArrayList<String>>() {}.getType()));
+  }
+
+  static public HashMap<String, Integer> get_freq_idx(String node) {
+    String sorted_freq_idx_json = file2string(
+      Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          node,
+          AppConstants.FREQ_IDX_FILENAME));
+    return (new Gson().fromJson(sorted_freq_idx_json,
+      new TypeToken<HashMap<String, Integer>>() {}.getType()));
+  }
+
   //static private Map<>
   static public void main(String [] args) {
     // Получаем адреса соответствующие узлам и оцененный язык
@@ -88,10 +112,23 @@ public class ReaderStaticData {
       Type typeStaticNotes = new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType();
       HashMap<String, HashMap<String, String>> metadataStaticNotes =
           gson.fromJson(staticNotesJson, typeStaticNotes);
-      ImmutableAppUtils.print(metadataStaticNotes.get(node));
-
 
       // Данные для каждого из индексов по 80/20
+      List<String> sorted_fall_idx = get_sorted_idx(node);
+
+      // сам частотынй индекс индекс
+      HashMap<String, Integer> sorted_freq_idx = get_freq_idx(node);
+
+      for (String word: sorted_fall_idx) {
+        ImmutableAppUtils.print(word+" "+sorted_freq_idx.get(word));
+      }
+
+      // Оценка - 20% слов
+      Integer count_unique_words = sorted_fall_idx.size();
+      Integer
+
+      // Оценка - 80% интегральной частоты
+
       break;
     }
   }
