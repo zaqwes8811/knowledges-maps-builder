@@ -62,6 +62,12 @@ public class RunnerWordLevelProcessingTest {
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.SORTED_IDX_FILENAME);
+      String path_for_save_freq_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          result.get(ImmutableMappers.IDX_NODE_NAME),
+          AppConstants.FREQ_IDX_FILENAME);
 
       //
 
@@ -79,12 +85,15 @@ public class RunnerWordLevelProcessingTest {
           }
 
           // Сохраняем в JSON
-          BufferedWriter outSorted = closer.register(new BufferedWriter(new FileWriter(path_for_save_sorted_idx)));
-          String json_sorted_index = new Gson().toJson(sorted_index);
-          outSorted.write(json_sorted_index);
+          BufferedWriter outSorted = closer.register(
+              new BufferedWriter(new FileWriter(path_for_save_sorted_idx)));
+          outSorted.write(new Gson().toJson(sorted_index));
+          BufferedWriter outFrequences = closer.register(
+              new BufferedWriter(new FileWriter(path_for_save_freq_idx)));
+          outFrequences.write(new Gson().toJson(index_for_save));
 
 
-          //ImmutableAppUtils.print(index_for_save);
+          ImmutableAppUtils.print(new Gson().toJson(index_for_save));
         } catch (Throwable e) {
           closer.rethrow(e);
         } finally {

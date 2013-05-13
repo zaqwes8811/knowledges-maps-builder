@@ -22,6 +22,7 @@ final public class AppConstants {
   public final static java.lang.String CONTENT_META_FILENAME = "meta.txt";
   public final static java.lang.String STATIC_NOTES_FILENAME = "static_notes.txt";
   public final static java.lang.String SORTED_IDX_FILENAME = "sorted.txt";
+  public final static java.lang.String FREQ_IDX_FILENAME = "frequences.txt";
 
   //
   public final static java.lang.String PURGED_TXT_FILE_EXT = ".ptxt";
