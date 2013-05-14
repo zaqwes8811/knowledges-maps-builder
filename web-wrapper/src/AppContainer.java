@@ -9,7 +9,8 @@ import java.io.IOException;
 //import business.originator_frequency_index.IndexCursorFactory;
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import common.ImmutableAppUtils;
 import coursors.ImmutableBaseCoursor;
 import com.google.gson.Gson;
 import coursors.ReaderStaticData;

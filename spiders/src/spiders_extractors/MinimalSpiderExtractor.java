@@ -1,11 +1,13 @@
 package spiders_extractors;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
-import jobs_processors.ImmutableProcessorTargets;
+
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;
+
+import common.ImmutableAppUtils;
+import crosscuttings.AppConstants;
+import crosscuttings.CrosscuttingsException;
+import jobs_processors.ImmutableProcessorTargets;
 
 import java.util.List;
 

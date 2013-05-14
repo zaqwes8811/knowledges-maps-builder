@@ -1,10 +1,12 @@
 package spiders_processors;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import common.ImmutableAppUtils;
+import coursors.ImmutableBaseCoursor;
+import crosscuttings.AppConstants;
 import jobs_processors.ImmutableProcessorTargets;
 
-import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
+
 import nlp.BaseTokenizer;
 import spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;

@@ -1,6 +1,7 @@
-package com.github.zaqwes8811.text_processor.mapreduce;
+package mapreduce;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import common.ImmutableAppUtils;
 import jobs_processors.ImmutableJobsFormer;
 import nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;

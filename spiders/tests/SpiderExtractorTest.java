@@ -1,13 +1,13 @@
 //package com.github.zaqwes8811.text_processor.sandbox;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import common.ImmutableAppUtils;
+import crosscuttings.AppConstants;
+import crosscuttings.CrosscuttingsException;
 import jobs_processors.ImmutableProcessorTargets;
 import spiders_extractors.ExtractorException;
 import spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
-
-import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
 
 import java.util.List;
 

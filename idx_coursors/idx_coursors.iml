@@ -14,7 +14,8 @@
     <orderEntry type="library" name="servlet-api-2.5" level="project" />
     <orderEntry type="library" name="commons-lang3-3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
-    <orderEntry type="module" module-name="processor-word-frequency-index" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="crosscuttings" />
   </component>
 </module>
 

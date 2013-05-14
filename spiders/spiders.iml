@@ -8,7 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="processor-word-frequency-index" />
     <orderEntry type="library" name="gson-2.2.3" level="project" />
     <orderEntry type="library" name="guava-14.0.1" level="project" />
     <orderEntry type="library" name="snakeyaml-1.12" level="project" />
@@ -17,6 +16,7 @@
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
     <orderEntry type="module" module-name="crosscuttings" />
     <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="idx_coursors" />
   </component>
 </module>
 

@@ -1,6 +1,6 @@
-package map_reduce;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import mapreduce.SentencesLevelProcessor;
 import org.junit.Test;
 
 /**

@@ -1,7 +1,8 @@
 package jobs_processors;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
+import coursors.ImmutableBaseCoursor;
+import crosscuttings.AppConstants;
+
 import com.google.common.base.Joiner;
 
 import java.util.ArrayList;

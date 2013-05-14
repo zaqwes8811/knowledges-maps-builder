@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.mapreduce;
+package mapreduce;
 
 import jobs_processors.ImmutableJobsFormer;
 import nlp.BaseSyllableCounter;

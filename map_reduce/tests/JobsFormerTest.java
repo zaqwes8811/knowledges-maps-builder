@@ -1,4 +1,5 @@
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+
+import common.ImmutableAppUtils;
 import jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
 

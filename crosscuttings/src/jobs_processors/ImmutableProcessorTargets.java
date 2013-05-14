@@ -1,14 +1,14 @@
 package jobs_processors;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.text_processor.crosscuttings.ImmutableAppConfigurator;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import crosscuttings.AppConstants;
+import crosscuttings.CrosscuttingsException;
+import crosscuttings.ImmutableAppConfigurator;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -9,6 +9,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="guava-14.0.1" level="project" />
     <orderEntry type="library" name="snakeyaml-1.12" level="project" />
+    <orderEntry type="module" module-name="idx_coursors" />
+    <orderEntry type="library" name="gson-2.2.3" level="project" />
   </component>
 </module>
 

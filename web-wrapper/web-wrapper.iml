@@ -13,7 +13,8 @@
     <orderEntry type="library" name="jetty-all-7.0.2.v20100331" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
     <orderEntry type="module" module-name="idx_coursors" />
-    <orderEntry type="module" module-name="processor-word-frequency-index" />
+    <orderEntry type="module" module-name="crosscuttings" />
+    <orderEntry type="module" module-name="common" />
   </component>
 </module>
 
