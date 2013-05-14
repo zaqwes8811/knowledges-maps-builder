@@ -1,6 +1,5 @@
 package crosscuttings;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
 import com.google.common.io.Closer;
 import org.yaml.snakeyaml.Yaml;
 
