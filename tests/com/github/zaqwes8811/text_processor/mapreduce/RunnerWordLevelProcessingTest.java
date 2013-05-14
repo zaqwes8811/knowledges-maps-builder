@@ -5,7 +5,6 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
-import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

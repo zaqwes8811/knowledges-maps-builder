@@ -2,10 +2,8 @@ package com.github.zaqwes8811.text_processor.mapreduce;
 
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
-import com.github.zaqwes8811.text_processor.nlp.BaseSyllableCounter;
-import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
+import nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;
-import com.google.common.base.Joiner;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import org.apache.commons.lang3.StringUtils;

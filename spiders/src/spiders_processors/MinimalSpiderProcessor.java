@@ -5,7 +5,7 @@ import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
 
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
-import com.github.zaqwes8811.text_processor.nlp.BaseTokenizer;
+import nlp.BaseTokenizer;
 import spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;

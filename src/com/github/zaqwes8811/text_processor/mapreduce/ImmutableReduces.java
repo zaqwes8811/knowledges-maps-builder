@@ -1,8 +1,6 @@
 package com.github.zaqwes8811.text_processor.mapreduce;
 
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.math.ImmutableSummators;
-import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 
 import java.util.*;

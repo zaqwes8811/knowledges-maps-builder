@@ -1,11 +1,7 @@
 package com.github.zaqwes8811.text_processor.mapreduce;
 
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
