@@ -1,6 +1,5 @@
-package com.github.zaqwes8811.text_processor;
 
-import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
+import coursors.ImmutableBaseCoursor;
 import spiders_processors.MinimalSpiderProcessor;
 import org.junit.Test;
 
