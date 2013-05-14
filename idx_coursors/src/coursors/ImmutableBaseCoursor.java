@@ -9,7 +9,7 @@
 package coursors;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 
 import java.io.File;

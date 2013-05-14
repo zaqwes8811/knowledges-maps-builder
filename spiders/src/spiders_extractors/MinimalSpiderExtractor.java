@@ -3,7 +3,7 @@ package spiders_extractors;
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.github.zaqwes8811.text_processor.crosscuttings.CrosscuttingsException;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ImmutableProcessorTargets;
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;
 

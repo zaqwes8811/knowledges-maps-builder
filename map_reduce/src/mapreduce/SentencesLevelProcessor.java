@@ -2,8 +2,8 @@ package com.github.zaqwes8811.text_processor.mapreduce;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ImmutableJobsFormer;
+import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

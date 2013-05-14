@@ -7,22 +7,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" afterPath="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\map_reduce\tests\com\github\zaqwes8811\text_processor\sandbox\SentencesLevelProcessorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\ImmutableMapperSentencesLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\ImmutableMappers.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\ImmutableReduceSentencesLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\ImmutableReduces.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\ImmutableSavers.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\RunnerWordLevelProcessing.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\mapreduce\SentencesLevelProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\JobsFormerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\crosscuttings\AppConfigurerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\crosscuttings\ProcessorTargetsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\mapreduce\github\zaqwes8811\text_processor\sandbox\RunnerWordLevelProcessingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\sandbox\TestLuceneStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\com\github\zaqwes8811\text_processor\sandbox\TestSentSplitter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\nlp\BaseTokenizerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\processor-word-frequency-index\tests\nlp\CompressorsTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processor-word-frequency-index.iml" afterPath="$PROJECT_DIR$/processor-word-frequency-index.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/spiders.iml" afterPath="$PROJECT_DIR$/spiders/spiders.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\jobs_processors\ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableJobsFormer.java" />
+      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\src\com\github\zaqwes8811\text_processor\jobs_processors\ImmutableProcessorTargets.java" afterPath="$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableProcessorTargets.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368544041465" ignored="false" />
+    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368550770285" ignored="false" />
     <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368458315732" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
-    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368544274738" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368551054158" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
     <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368297570859" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088397500" ignored="false" />
-    <file path="/ImmutableTikaWrapper.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368097936823" ignored="false" />
+    <file path="/ImmutableTikaWrapper.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368549763767" ignored="false" />
     <file path="/ImmutableProcessorTargets.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368175928025" ignored="false" />
     <file path="/run-jar.bat" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368089907867" ignored="false" />
     <file path="/ImmutableBaseCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368175373017" ignored="false" />
@@ -43,7 +67,7 @@
     <file path="/CompressorsTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368271344289" ignored="false" />
     <file path="/ImmutableSavers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368281486980" ignored="false" />
     <file path="/SentencesLevelProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368354321271" ignored="false" />
-    <file path="/SentencesLevelProcessorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368288895256" ignored="false" />
+    <file path="/SentencesLevelProcessorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368550892103" ignored="false" />
     <file path="/ImmutableMapperSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368290918233" ignored="false" />
     <file path="/ImmutableReduceSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368461979921" ignored="false" />
     <file path="$PROJECT_DIR$/web_view/src/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368334564455" ignored="false" />
@@ -67,6 +91,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -101,7 +126,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -111,19 +135,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CrosscuttingsException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/CrosscuttingsException.java">
+      <file leaf-file-name="ExtractorException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ExtractorException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
+      <file leaf-file-name="ImmutableTikaWrapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="20" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+            <state line="44" column="23" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableJobsFormer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableJobsFormer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="45" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,10 +164,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java">
+      <file leaf-file-name="SentencesLevelProcessorTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/map_reduce/tests/SentencesLevelProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.12702367">
+            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,13 +191,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
-        <option value="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" />
-        <option value="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java" />
         <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/AppConstants.java" />
         <option value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java" />
-        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/AppContainer.java" />
         <option value="$PROJECT_DIR$/apps/web_view/index.html" />
@@ -174,6 +203,10 @@
         <option value="$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java" />
         <option value="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" />
         <option value="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" />
+        <option value="$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java" />
+        <option value="$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java" />
+        <option value="$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableJobsFormer.java" />
+        <option value="$PROJECT_DIR$/map_reduce/tests/SentencesLevelProcessorTest.java" />
       </list>
     </option>
   </component>
@@ -209,7 +242,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -233,104 +265,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders_extractors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/sandbox" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/map_reduce/tests" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
@@ -346,18 +289,14 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.github.zaqwes8811.text_processor.nlp" />
       <recent name="com.github.zaqwes8811.text_processor.mapreduce" />
       <recent name="com.github.zaqwes8811.processor_word_frequency_index.mapreduce" />
       <recent name="com.github.zaqwes8811.processor_word_frequency_index" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.github.zaqwes8811.text_processor.sandbox" />
-      <recent name="com.github.zaqwes8811.text_processor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\github\processor-word-frequency-index\sandbox\src" />
@@ -365,6 +304,11 @@
       <recent name="D:\github\processor-word-frequency-index\crosscuttings\src\crosscuttings" />
       <recent name="D:\github\processor-word-frequency-index\crosscuttings" />
       <recent name="D:\github\processor-word-frequency-index\common\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.github.zaqwes8811.text_processor.sandbox" />
+      <recent name="com.github.zaqwes8811.text_processor" />
     </key>
   </component>
   <component name="RunManager" selected="Application.AppContainer">
@@ -380,19 +324,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -420,6 +351,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -466,7 +410,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -482,7 +426,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -498,7 +442,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -514,7 +458,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -536,14 +480,14 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="JobsFormerTest" type="JUnit" factoryName="JUnit">
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor" />
@@ -565,7 +509,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerSentencesLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -587,7 +531,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BaseTokenizerTest" type="JUnit" factoryName="JUnit">
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -609,7 +553,7 @@
       <method />
     </configuration>
     <configuration default="false" name="RunnerWordLevelProcessingTest" type="JUnit" factoryName="JUnit">
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.mapreduce" />
@@ -631,7 +575,7 @@
       <method />
     </configuration>
     <configuration default="false" name="CompressorsTest" type="JUnit" factoryName="JUnit">
-      <module name="sandbox" />
+      <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.github.zaqwes8811.text_processor.nlp" />
@@ -705,21 +649,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2648456" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3574822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35251215" sideWeight="0.6425178" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37682334" sideWeight="0.6425178" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21733966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3574822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -784,27 +728,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableJobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="18" selection-start="975" selection-end="975" vertical-scroll-proportion="0.2881356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="54" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0">
+        <state line="11" column="45" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/SentencesLevelProcessor.java">
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="39" selection-start="1614" selection-end="1614" vertical-scroll-proportion="-0.040816326">
-          <folding />
-        </state>
+        <state line="73" column="54" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java">
@@ -816,9 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="53" selection-start="3146" selection-end="3148" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="69" column="53" selection-start="3146" selection-end="3148" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-wrapper/src/AppContainer.java">
@@ -832,39 +765,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/css/journal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="18" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.020782396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ExtractorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.28280962">
-          <folding />
-        </state>
+        <state line="82" column="18" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.020782396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/src/MainT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.18299446">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduceSentencesLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="2124" selection-end="2124" vertical-scroll-proportion="1.0092422">
-          <folding />
-        </state>
+        <state line="6" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.18299446" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/web_view/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.03219697">
-          <folding />
-        </state>
+        <state line="143" column="0" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.03219697" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java">
@@ -876,9 +787,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
+    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.4291262">
+        <state line="30" column="20" selection-start="983" selection-end="983" vertical-scroll-proportion="0.00498132">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16936488">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -887,23 +807,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/CrosscuttingsException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.1875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ExtractorException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="23" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/jobs_processors/ImmutableJobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="45" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java">
+    <entry file="file://$PROJECT_DIR$/map_reduce/tests/SentencesLevelProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.12702367">
+        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -962,7 +896,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>common</last-edited>
+          <last-edited>processor-word-frequency-index</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,7 +1,5 @@
-package com.github.zaqwes8811.text_processor;
-
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
+import jobs_processors.ImmutableJobsFormer;
 import org.junit.Test;
 
 /**

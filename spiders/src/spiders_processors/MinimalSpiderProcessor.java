@@ -2,7 +2,7 @@ package spiders_processors;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ImmutableProcessorTargets;
 
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;
 import nlp.BaseTokenizer;

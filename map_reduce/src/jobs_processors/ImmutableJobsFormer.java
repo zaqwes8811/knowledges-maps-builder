@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.jobs_processors;
+package jobs_processors;
 
 import com.github.zaqwes8811.text_processor.AppConstants;
 import com.github.zaqwes8811.text_processor.index_coursors.ImmutableBaseCoursor;

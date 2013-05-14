@@ -1,7 +1,7 @@
 package com.github.zaqwes8811.text_processor.mapreduce;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.math.ImmutableSummators;
+import common.ImmutableAppUtils;
+import math.ImmutableSummators;
 
 import java.util.*;
 

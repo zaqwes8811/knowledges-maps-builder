@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.github.zaqwes8811.text_processor.AppConstants;
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.AppConstants;
+import common.ImmutableAppUtils;
+import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

@@ -1,6 +1,6 @@
 package com.github.zaqwes8811.text_processor.mapreduce;
 
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableJobsFormer;
+import jobs_processors.ImmutableJobsFormer;
 import nlp.BaseSyllableCounter;
 import nlp.BaseTokenizer;
 import com.google.common.io.Closer;

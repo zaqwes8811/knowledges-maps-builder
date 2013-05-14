@@ -1,6 +1,6 @@
 package com.github.zaqwes8811.text_processor.crosscuttings;
 
-import com.github.zaqwes8811.text_processor.jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ImmutableProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;

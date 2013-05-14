@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.mapreduce;
+package map_reduce;
 
 import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import org.junit.Test;
