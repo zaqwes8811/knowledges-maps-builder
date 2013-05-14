@@ -3,7 +3,7 @@ package nlp;
 
 //import com.sun.xml.internal.ws.util.StringUtils;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import common.ImmutableAppUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**

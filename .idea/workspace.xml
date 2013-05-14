@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java" afterPath="$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crosscuttings/crosscuttings.iml" afterPath="$PROJECT_DIR$/crosscuttings/crosscuttings.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/spiders.iml" afterPath="$PROJECT_DIR$/spiders/spiders.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" afterPath="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
@@ -111,32 +111,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableTikaWrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableAppConfigurator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="181" selection-end="181" vertical-scroll-proportion="0.33009708">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CrosscuttingsException.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/CrosscuttingsException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="20" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.12702367">
               <folding />
             </state>
           </provider>
@@ -160,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/apps/web_view/css/journal.css" />
-        <option value="$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java" />
         <option value="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
         <option value="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" />
         <option value="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" />
@@ -176,6 +172,8 @@
         <option value="$PROJECT_DIR$/web-wrapper/src/AppContainer.java" />
         <option value="$PROJECT_DIR$/sandbox_/guava/src/Main.java" />
         <option value="$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java" />
+        <option value="$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java" />
+        <option value="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" />
       </list>
     </option>
   </component>
@@ -702,7 +700,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -713,12 +711,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3574822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3574822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35251215" sideWeight="0.6425178" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35251215" sideWeight="0.6425178" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21733966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -786,22 +784,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.33406115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/github/zaqwes8811/text_processor/mapreduce/RunnerWordLevelProcessingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="8" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.5976331">
-          <folding>
-            <element signature="e#2942#2959#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/zaqwes8811/text_processor/mapreduce/ImmutableReduces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="18" selection-start="975" selection-end="975" vertical-scroll-proportion="0.2881356">
@@ -885,9 +867,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="334" selection-end="334" vertical-scroll-proportion="-0.033009708">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/ImmutableTikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0">
+        <state line="40" column="34" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.4291262">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -901,12 +892,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java">
+    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="181" selection-end="181" vertical-scroll-proportion="0.33009708">
+        <state line="8" column="20" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.12702367">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +962,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>crosscuttings</last-edited>
+          <last-edited>common</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
