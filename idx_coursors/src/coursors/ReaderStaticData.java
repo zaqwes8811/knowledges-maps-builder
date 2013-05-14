@@ -2,21 +2,17 @@ package coursors;
 
 
 import common.ImmutableAppUtils;
+import common.utils;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
-import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import mapreduce.ImmutableReduceSentencesLevel;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,28 +22,14 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class ReaderStaticData {
-  static public String file2string(String filename) {
-    try {
-      Closer closer = Closer.create();
-      try {
-        BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
-        String s;
-        StringBuffer buffer = new StringBuffer();
-        while ((s = in.readLine()) != null) buffer.append(s);
-        return buffer.toString();
-      } catch (Throwable e) {
-        closer.rethrow(e);
-      } finally {
-        closer.close();
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return null;
-  }
+  static public final String NOTE_N80_CAPACITY = "f80_p";  // Core
+  static public final String NOTE_N20_CAPACITY = "f20";
+  static public final String NOTE_N20_COUNT = "w20_p";  // Core
+  static public final String NOTE_N80_COUNT = "w80";
+
 
   static public List<String> get_sorted_idx(String node) {
-    String sorted_idx_json = file2string(
+    String sorted_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ImmutableProcessorTargets.getPathToIndex(),
@@ -59,17 +41,17 @@ public class ReaderStaticData {
   }
 
   static public HashMap<String, HashMap<String, String>>  get_static_notes() {
-    String metadata_static_notes_json = file2string(
-        Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(
-            ImmutableProcessorTargets.getPathToIndex(),
-            AppConstants.STATIC_NOTES_FILENAME));
+    String metadata_static_notes_json = utils.file2string(
+      Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.STATIC_NOTES_FILENAME));
     return (new Gson().fromJson(metadata_static_notes_json,
         new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));
   }
 
   static public HashMap<String, Integer> get_freq_idx(String node) {
-    String sorted_freq_idx_json = file2string(
+    String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ImmutableProcessorTargets.getPathToIndex(),
@@ -90,7 +72,7 @@ public class ReaderStaticData {
         AppConstants.CONTENT_META_FILENAME);
 
     // Преобразуем в json
-    String settingsInJson = file2string(pathToMetaFile);
+    String settingsInJson = utils.file2string(pathToMetaFile);
     Type type = new TypeToken<List<List<String>>>() {}.getType();
     List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
 
@@ -141,10 +123,10 @@ public class ReaderStaticData {
     Double N20_Amount = new Double(count_unique_words)-N80_Amount;
 
     // Итого
-    node_static_notes_info.put("f80_p", N80_Amount.toString());
-    node_static_notes_info.put("f20", N20_Amount.toString());
-    node_static_notes_info.put("w20_p", N20.toString());
-    node_static_notes_info.put("w80", N80.toString());
+    node_static_notes_info.put(NOTE_N80_CAPACITY, N80_Amount.toString());
+    node_static_notes_info.put(NOTE_N20_CAPACITY, N20_Amount.toString());
+    node_static_notes_info.put(NOTE_N20_COUNT, N20.toString());
+    node_static_notes_info.put(NOTE_N80_COUNT, N80.toString());
     return node_static_notes_info;
   }
 
@@ -153,9 +135,46 @@ public class ReaderStaticData {
 
     // Получаем адреса соответствующие узлам и оцененный язык
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    List<String> rpt = new ArrayList<String>(
+      Arrays.asList(Joiner.on(";")
+        .join(
+          "Имя документа",
+          "Флеш",
+          "Время прочтения",
+          "Ср. дл. предл.",
+          "20% частых",
+          "80% редких",
+          "частые сост. 80% слов. состава",
+          "редкие - 20% состава")));
     for (String node : nodes) {
       Map<String, String> node_static_notes_info = get_notes_for_node(node);
-      break;  // DEVELOP
+      rpt.add(get_one_record(node, node_static_notes_info));
+      //break;  // DEVELOP
     }
+
+    // пишем результат
+    try {
+      utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(
+            "rpts",
+            "real_notes.csv"));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  static public String get_one_record(String node, Map<String, String> info) {
+    utils.print(node+" "+info);
+    String record = Joiner.on(";")
+        .join(
+          node,
+          info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
+          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
+          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
+          info.get(ReaderStaticData.NOTE_N20_COUNT).replace('.', ','),
+          info.get(ReaderStaticData.NOTE_N80_COUNT).replace('.', ','),
+          info.get(ReaderStaticData.NOTE_N80_CAPACITY).replace('.', ','),
+          info.get(ReaderStaticData.NOTE_N20_CAPACITY).replace('.', ','));
+    return record;
   }
 }

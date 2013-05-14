@@ -1,6 +1,3 @@
-package mapreduce;
-
-
 import common.ImmutableAppUtils;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableJobsFormer;
@@ -9,6 +6,8 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
+import mapreduce.ImmutableMappers;
+import mapreduce.ImmutableReduces;
 import org.junit.Test;
 
 import java.io.BufferedWriter;
@@ -74,6 +73,7 @@ public class RunnerWordLevelProcessingTest {
       try {
         Closer closer = Closer.create();
         try {
+          // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
           // Сохраняем сортированные индекс
           List<String> sorted_index = (ArrayList<String>)result.get(ImmutableReduces.IDX_SORTED_IDX);
 
@@ -93,7 +93,7 @@ public class RunnerWordLevelProcessingTest {
           outFrequences.write(new Gson().toJson(index_for_save));
 
 
-          ImmutableAppUtils.print(new Gson().toJson(index_for_save));
+          //ImmutableAppUtils.print(new Gson().toJson(index_for_save));
         } catch (Throwable e) {
           closer.rethrow(e);
         } finally {

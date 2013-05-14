@@ -16,6 +16,7 @@
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
     <orderEntry type="module" module-name="common" />
     <orderEntry type="module" module-name="crosscuttings" />
+    <orderEntry type="module" module-name="map_reduce" />
   </component>
 </module>
 
