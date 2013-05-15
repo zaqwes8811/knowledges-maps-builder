@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" />
-      <change type="MOVED" beforePath="D:\github\processor-word-frequency-index\idx_coursors\src\coursors\ReaderStaticData.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,7 +61,7 @@
     <file path="$PROJECT_DIR$/common/src/org/tartarus/snowball/ext/englishStemmer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
     <file path="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
     <file path="/utils.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368556164048" ignored="false" />
-    <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368632329643" ignored="false" />
+    <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368632738271" ignored="false" />
     <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368631879919" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,8 +147,12 @@
       <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="24" selection-start="434" selection-end="434" vertical-scroll-proportion="0.41564792">
-              <folding />
+            <state line="28" column="49" selection-start="736" selection-end="736" vertical-scroll-proportion="0.5427873">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#598#606#0" expanded="true" />
+                <element signature="e#725#733#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -881,8 +883,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="434" selection-end="434" vertical-scroll-proportion="0.41564792">
-          <folding />
+        <state line="28" column="49" selection-start="736" selection-end="736" vertical-scroll-proportion="0.5427873">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#598#606#0" expanded="true" />
+            <element signature="e#725#733#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
