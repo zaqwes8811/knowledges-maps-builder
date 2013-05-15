@@ -6,7 +6,9 @@ import crosscuttings.AppConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,15 +37,21 @@ public class KeyWordsCoursor {
 
       // Получаем сортировынный список слов
       List<String> sortedWords = ImmutableIdxGetters.get_sorted_idx(node);
-      List<String> recordPerWord =
+      Map<String, Integer> frequencyIdx = ImmutableIdxGetters.get_freq_idx(node);
+      List<String> recordPerWord = new ArrayList<String>();
+      HashMap<String, String> restIdx = ImmutableIdxGetters.get_rest_idx(node);
       for (String word: sortedWords) {
-
+        recordPerWord.add(Joiner.on(" ")
+          .join(
+            word,
+            frequencyIdx.get(word).toString(),
+            restIdx.get(word)));
         // Если слова в глобально списке ингорирования - одни цвеь
 
         // Если в локальном - другой
 
       }
-      page.add(Joiner.on(WEB_NEW_LINE).join(sortedWords));
+      page.add(Joiner.on(WEB_NEW_LINE).join(recordPerWord));
 
       // Получаем оценки
 

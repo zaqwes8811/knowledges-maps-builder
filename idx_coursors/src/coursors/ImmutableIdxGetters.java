@@ -44,6 +44,19 @@ final public class ImmutableIdxGetters {
     return info;
   }
 
+  static public HashMap<String, String> get_rest_idx(String node) {
+    String sorted_freq_idx_json = utils.file2string(
+      Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          node,
+          AppConstants.FILENAME_REST_IDX));
+    return (new Gson().fromJson(sorted_freq_idx_json,
+      new TypeToken<HashMap<String, String>>() {}.getType()));
+
+  }
+
   static public HashMap<String, Integer> get_freq_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
