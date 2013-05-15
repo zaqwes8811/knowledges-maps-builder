@@ -24,6 +24,7 @@ final public class AppConstants {
   public final static java.lang.String SORTED_IDX_FILENAME = "sorted.txt";
   public final static java.lang.String FREQ_IDX_FILENAME = "frequences.txt";
   public final static java.lang.String FILENAME_REST_IDX = "rest.txt";
+  public final static java.lang.String FILENAME_SENTENCES_IDX = "sentences.txt";
 
   //
   public final static java.lang.String PURGED_TXT_FILE_EXT = ".ptxt";

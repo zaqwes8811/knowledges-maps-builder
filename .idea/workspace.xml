@@ -15,7 +15,7 @@
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368635429506" ignored="false" />
-    <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368635035219" ignored="false" />
+    <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368637267805" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
     <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368635437975" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
@@ -39,7 +39,7 @@
     <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368281622839" ignored="false" />
     <file path="/Summators.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368200291657" ignored="false" />
     <file path="/BaseTokenizerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368203813118" ignored="false" />
-    <file path="/RunnerWordLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368636388941" ignored="false" />
+    <file path="/RunnerWordLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368638097324" ignored="false" />
     <file path="/CompressorsTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368271344289" ignored="false" />
     <file path="/ImmutableSavers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368281486980" ignored="false" />
     <file path="/SentencesLevelProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368354321271" ignored="false" />
@@ -63,8 +63,8 @@
     <file path="$PROJECT_DIR$/common/src/org/tartarus/snowball/ext/englishStemmer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
     <file path="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
     <file path="/utils.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368556164048" ignored="false" />
-    <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368635980434" ignored="false" />
-    <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368636485085" ignored="false" />
+    <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368638489608" ignored="false" />
+    <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368638143283" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,7 @@
       <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="42" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0">
+            <state line="58" column="64" selection-start="1872" selection-end="1889" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1183#1191#0" expanded="true" />
@@ -150,12 +150,27 @@
       <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="45" selection-start="1574" selection-end="1574" vertical-scroll-proportion="0.7713249">
+            <state line="44" column="18" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.545283">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#699#707#0" expanded="true" />
                 <element signature="e#905#913#0" expanded="true" />
-                <element signature="e#1322#1330#0" expanded="true" />
+                <element signature="e#1352#1360#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="0" selection-start="4432" selection-end="4432" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#956#962#0" expanded="true" />
+                <element signature="e#1383#1389#0" expanded="true" />
+                <element signature="e#4006#4022#0" expanded="true" />
+                <element signature="e#4099#4122#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,7 +179,7 @@
       <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="64" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
+            <state line="26" column="50" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +188,7 @@
       <file leaf-file-name="ImmutableMappers.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="40" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0">
+            <state line="110" column="4" selection-start="3781" selection-end="3806" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -682,7 +697,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -914,44 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="64" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMappers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="40" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.42746615">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#956#962#0" expanded="true" />
-            <element signature="e#1385#1391#0" expanded="true" />
-            <element signature="e#3497#3513#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="42" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1183#1191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="11" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.0">
@@ -962,14 +945,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="50" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="4" selection-start="3781" selection-end="3806" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4432" selection-end="4432" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#956#962#0" expanded="true" />
+            <element signature="e#1383#1389#0" expanded="true" />
+            <element signature="e#4006#4022#0" expanded="true" />
+            <element signature="e#4099#4122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="64" selection-start="1872" selection-end="1889" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1183#1191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="1574" selection-end="1574" vertical-scroll-proportion="0.7713249">
+        <state line="44" column="18" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.545283">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#699#707#0" expanded="true" />
             <element signature="e#905#913#0" expanded="true" />
-            <element signature="e#1322#1330#0" expanded="true" />
+            <element signature="e#1352#1360#0" expanded="true" />
           </folding>
         </state>
       </provider>

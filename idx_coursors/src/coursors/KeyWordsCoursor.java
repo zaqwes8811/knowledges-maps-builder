@@ -34,18 +34,20 @@ public class KeyWordsCoursor {
       // Получаем исходные адреса
       rpt.addAll(ImmutableIdxGetters.get_urls_and_langs_node(node));
       page.add(Joiner.on(WEB_NEW_LINE).join(rpt));
+      page.add(WEB_NEW_LINE);
 
       // Получаем сортировынный список слов
       List<String> sortedWords = ImmutableIdxGetters.get_sorted_idx(node);
       Map<String, Integer> frequencyIdx = ImmutableIdxGetters.get_freq_idx(node);
       List<String> recordPerWord = new ArrayList<String>();
       HashMap<String, String> restIdx = ImmutableIdxGetters.get_rest_idx(node);
+      HashMap<String, List<Integer>> sentences_idx = ImmutableIdxGetters.get_sentences_idx(node);
       for (String word: sortedWords) {
-        recordPerWord.add(Joiner.on(" ")
+        recordPerWord.add(Joiner.on("<br>&nbsp&nbsp&nbsp")
           .join(
-            word,
+            word+" ["+restIdx.get(word)+"]",
             frequencyIdx.get(word).toString(),
-            restIdx.get(word)));
+            sentences_idx.get(word).size()));
         // Если слова в глобально списке ингорирования - одни цвеь
 
         // Если в локальном - другой

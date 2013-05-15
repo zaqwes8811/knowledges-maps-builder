@@ -54,7 +54,18 @@ final public class ImmutableIdxGetters {
           AppConstants.FILENAME_REST_IDX));
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, String>>() {}.getType()));
+  }
 
+  static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
+    String sorted_freq_idx_json = utils.file2string(
+      Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          node,
+          AppConstants.FILENAME_SENTENCES_IDX));
+    return (new Gson().fromJson(sorted_freq_idx_json,
+      new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
   }
 
   static public HashMap<String, Integer> get_freq_idx(String node) {
@@ -89,5 +100,9 @@ final public class ImmutableIdxGetters {
           AppConstants.STATIC_NOTES_FILENAME));
     return (new Gson().fromJson(metadata_static_notes_json,
       new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));
+  }
+
+  static public void main(String[] args) {
+
   }
 }
