@@ -1,12 +1,7 @@
 # ! Поиск пока только по расширениям
-index name: test_index  # Одно на задание, два быть не может
-
-extention list: odt, doc, asfd, srt, pdf
-
-#root: d:/Dropbox 
-#root: d:/github_ 
-root: d:/doc_pdf_odt
-#root: d:/doc_pdf_odt_t
+index name: real_index  # Одно на задание, два быть не может
+extention list: odt, doc, asfd, pdf
+root: d:/analiz
 
 # Не рассматриваемые директории
 ignored dir: c:/
