@@ -21,7 +21,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 final public class ImmutableIdxGetters {
-  public void get_urls_and_langs_node(String node){
+  public static List<String> get_urls_and_langs_node(String node){
     // Путь к мета-файлу
     String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
@@ -36,10 +36,12 @@ final public class ImmutableIdxGetters {
     List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
 
     // Можно вытряхивать
+    List<String> info = new ArrayList<String>();
     for (List<String> item: metadata) {
-      ImmutableAppUtils.print(node);
-      ImmutableAppUtils.print("\t"+item.get(0)+", "+item.get(1));
+      String record = "Source url: "+item.get(0)+" Language: "+item.get(1);
+      info.add(record);
     }
+    return info;
   }
 
   static public HashMap<String, Integer> get_freq_idx(String node) {
