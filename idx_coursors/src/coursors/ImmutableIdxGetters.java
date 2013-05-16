@@ -56,6 +56,16 @@ final public class ImmutableIdxGetters {
       new TypeToken<HashMap<String, String>>() {}.getType()));
   }
 
+  static public List<String> get_list_sentences(String node) {
+    return utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
+      .join(
+        ImmutableProcessorTargets.getPathToIndex(),
+        AppConstants.CONTENT_FOLDER,
+        node,
+        AppConstants.CONTENT_FILENAME
+      ));
+  }
+
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
