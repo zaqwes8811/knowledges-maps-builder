@@ -21,74 +21,19 @@ import java.util.*;
  * Time: 16:18
  * To change this template use File | Settings | File Templates.
  */
-public class ReaderStaticData {
+public class NotesProcessor {
   static public final String NOTE_N80_CAPACITY = "f80_p";  // Core
   static public final String NOTE_N20_CAPACITY = "f20";
   static public final String NOTE_N20_COUNT = "w20_p";  // Core
   static public final String NOTE_N80_COUNT = "w80";
-
-
-  static public List<String> get_sorted_idx(String node) {
-    String sorted_idx_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
-          node,
-          AppConstants.SORTED_IDX_FILENAME));
-    return (new Gson().fromJson(sorted_idx_json,
-      new TypeToken<ArrayList<String>>() {}.getType()));
-  }
-
-  static public HashMap<String, HashMap<String, String>>  get_static_notes() {
-    String metadata_static_notes_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.STATIC_NOTES_FILENAME));
-    return (new Gson().fromJson(metadata_static_notes_json,
-        new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));
-  }
-
-  static public HashMap<String, Integer> get_freq_idx(String node) {
-    String sorted_freq_idx_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
-          node,
-          AppConstants.FREQ_IDX_FILENAME));
-    return (new Gson().fromJson(sorted_freq_idx_json,
-      new TypeToken<HashMap<String, Integer>>() {}.getType()));
-  }
-
-  public void get_urls_and_langs_node(String node){
-    // Путь к мета-файлу
-    String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
-      .join(
-        ImmutableProcessorTargets.getPathToIndex(),
-        AppConstants.CONTENT_FOLDER,
-        node,
-        AppConstants.CONTENT_META_FILENAME);
-
-    // Преобразуем в json
-    String settingsInJson = utils.file2string(pathToMetaFile);
-    Type type = new TypeToken<List<List<String>>>() {}.getType();
-    List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
-
-    // Можно вытряхивать
-    for (List<String> item: metadata) {
-      ImmutableAppUtils.print(node);
-      ImmutableAppUtils.print("\t"+item.get(0)+", "+item.get(1));
-    }
-  }
 
   static public String json_get_notes_for_node(String node) {
     return new Gson().toJson(get_notes_for_node(node));
   }
 
   static public Map<String, String> get_notes_for_node(String node) {
-    HashMap<String, HashMap<String, String>> metadata_static_notes = get_static_notes();  // TODO(): bad!
+    HashMap<String, HashMap<String, String>> metadata_static_notes =
+        ImmutableIdxGetters.get_static_notes();  // TODO(): bad!
 
     // Получаем статические данные по сложности
     // Статические оценки
@@ -96,10 +41,10 @@ public class ReaderStaticData {
     //ImmutableAppUtils.print(node_static_notes_info.get(ImmutableReduceSentencesLevel.NOTE_RE));
 
     // Данные для каждого из индексов по 80/20
-    List<String> sorted_fall_idx = get_sorted_idx(node);
+    List<String> sorted_fall_idx = ImmutableIdxGetters.get_sorted_idx(node);
 
     // сам частотынй индекс индекс
-    HashMap<String, Integer> sorted_freq_idx = get_freq_idx(node);
+    HashMap<String, Integer> sorted_freq_idx = ImmutableIdxGetters.get_freq_idx(node);
 
     Integer total_amount = 0;
     for (String word: sorted_fall_idx) total_amount += sorted_freq_idx.get(word);
@@ -171,10 +116,10 @@ public class ReaderStaticData {
           info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
           info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
           info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
-          info.get(ReaderStaticData.NOTE_N20_COUNT).replace('.', ','),
-          info.get(ReaderStaticData.NOTE_N80_COUNT).replace('.', ','),
-          info.get(ReaderStaticData.NOTE_N80_CAPACITY).replace('.', ','),
-          info.get(ReaderStaticData.NOTE_N20_CAPACITY).replace('.', ','));
+          info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
+          info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
+          info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
+          info.get(NotesProcessor.NOTE_N20_CAPACITY).replace('.', ','));
     return record;
   }
 }

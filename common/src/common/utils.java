@@ -49,8 +49,28 @@ final public class utils {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return null;
+    return null;   // TODO(zaqwes): BAD!!
   }
+  static public List<String> file2list(String filename) {
+    List<String> result = new ArrayList<String>();
+    try {
+      Closer closer = Closer.create();
+      try {
+        BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
+        String s;
+        while ((s = in.readLine()) != null) result.add(s);
+        return result;
+      } catch (Throwable e) {
+        closer.rethrow(e);
+      } finally {
+        closer.close();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return result;
+  }
+
   static public void print(Object msg) {
     if (System.console() == null) {
       System.out.println(msg);

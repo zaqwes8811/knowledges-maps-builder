@@ -1,4 +1,6 @@
+import com.google.common.collect.Multimap;
 import common.ImmutableAppUtils;
+import common.utils;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableJobsFormer;
 import jobs_processors.ImmutableProcessorTargets;
@@ -67,30 +69,58 @@ public class RunnerWordLevelProcessingTest {
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.FREQ_IDX_FILENAME);
-
-      //
+      String path_for_save_rest_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          result.get(ImmutableMappers.IDX_NODE_NAME),
+          AppConstants.FILENAME_REST_IDX);
+      String path_for_save_sentences_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          ImmutableProcessorTargets.getPathToIndex(),
+          AppConstants.COMPRESSED_IDX_FOLDER,
+          result.get(ImmutableMappers.IDX_NODE_NAME),
+          AppConstants.FILENAME_SENTENCES_IDX);
 
       try {
         Closer closer = Closer.create();
         try {
           // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
           // Сохраняем сортированные индекс
-          List<String> sorted_index = (ArrayList<String>)result.get(ImmutableReduces.IDX_SORTED_IDX);
+          List<String> sorted_index =
+              (ArrayList<String>)result.get(ImmutableReduces.IDX_SORTED_IDX);
 
           // частоты
-          Multiset<String> frequency_index = (Multiset<String>)result.get(ImmutableMappers.IDX_FREQ_INDEX);
+          Multiset<String> frequency_index =
+              (Multiset<String>)result.get(ImmutableMappers.IDX_FREQ_INDEX);
+
+          // Обрезки слов
+          Multimap<String, String> rest_words =
+              (Multimap<String, String>)result.get(ImmutableMappers.IDX_RESTS_MAP);
+
+          // Sent. index
+          Map<String, Collection<Integer>> sentences_inv_idx =
+            ((Multimap<String, Integer>)result.get(ImmutableMappers.IDX_SENT_MAP)).asMap();
+
+
           Map<String, Integer> index_for_save = new HashMap<String, Integer>();
+          Map<String, String> rest_idx_for_save = new HashMap<String, String>();
+          Map<String, List<Integer>> sentences_idx_for_save = new HashMap<String, List<Integer>>();
           for (String word: sorted_index) {
             index_for_save.put(word, frequency_index.count(word));
+            rest_idx_for_save.put(word, Joiner.on(" ").join(rest_words.get(word)));
+            sentences_idx_for_save.put(word, new ArrayList<Integer>(sentences_inv_idx.get(word)));
           }
 
           // Сохраняем в JSON
-          BufferedWriter outSorted = closer.register(
-              new BufferedWriter(new FileWriter(path_for_save_sorted_idx)));
-          outSorted.write(new Gson().toJson(sorted_index));
-          BufferedWriter outFrequences = closer.register(
-              new BufferedWriter(new FileWriter(path_for_save_freq_idx)));
-          outFrequences.write(new Gson().toJson(index_for_save));
+          closer.register(new BufferedWriter(new FileWriter(path_for_save_sorted_idx)))
+              .write(new Gson().toJson(sorted_index));
+          closer.register(new BufferedWriter(new FileWriter(path_for_save_freq_idx)))
+              .write(new Gson().toJson(index_for_save));
+          closer.register(new BufferedWriter(new FileWriter(path_for_save_rest_idx)))
+              .write(new Gson().toJson(rest_idx_for_save));
+          closer.register(new BufferedWriter(new FileWriter(path_for_save_sentences_idx)))
+            .write(new Gson().toJson(sentences_idx_for_save));
 
 
           //ImmutableAppUtils.print(new Gson().toJson(index_for_save));
