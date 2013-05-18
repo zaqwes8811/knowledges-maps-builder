@@ -35,7 +35,7 @@ public class RunnerWordLevelProcessingTest {
     for (List<String> job : jobs) {
       List one = ImmutableMappers.mapper_word_level_with_compression(job);
       result_map_stage.add(one);
-      break;  // DEVELOP
+      //break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл

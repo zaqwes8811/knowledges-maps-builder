@@ -26,6 +26,7 @@ public class KeyWordsCoursor {
 
     // Real processing
     for (String node: nodes) {
+      utils.print(node);
       List<String> page = new ArrayList<String>();
       page.add("<!DOCTYPE html><html><head>" +
         "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">" +
@@ -33,6 +34,7 @@ public class KeyWordsCoursor {
       List<String> rpt = new ArrayList<String>();
 
       // Получаем исходные адреса
+      rpt.add("Content item name: "+node+WEB_NEW_LINE);
       rpt.addAll(ImmutableIdxGetters.get_urls_and_langs_node(node));
       page.add(Joiner.on(WEB_NEW_LINE).join(rpt));
       page.add(WEB_NEW_LINE+WEB_NEW_LINE);
@@ -57,7 +59,7 @@ public class KeyWordsCoursor {
         for (String rest_word: rest_words) {
           sentence = sentence.replace(rest_word,
               "<span style=\"background-color:Crimson;color:azure;\">"+rest_word+"</span>");
-          utils.print(rest_word);
+          //utils.print(rest_word);
           //break;  // DEVELOP
         }
 
@@ -66,10 +68,10 @@ public class KeyWordsCoursor {
         recordPerWord.add(Joiner.on("<br>&nbsp&nbsp&nbsp")
           .join(
             "Key word: <span style=\"background-color:Crimson;color:azure;\">"+word+"</span>",
-            "Actuality: "+"<span style=\"background-color:red\">"+"new"+"</span>",
-            "Rest words: "+"<span style=\"background-color:red\">"+rest_words.toString()+"</span>",
-            "Frequency: "+"<span style=\"background-color:red\">"+frequencyIdx.get(word).toString()+"</span>",
-            "Count sentences: "+"<span style=\"background-color:red\">"+sentences_idx.get(word).size()+"</span>",
+            "Actuality: "+"<span style=\"background-color:OrangeRed;color:azure;\">"+"new"+"</span>",
+            "Rest words: "+"<span style=\"background-color:DarkCyan;color:azure;\">"+rest_words.toString()+"</span>",
+            "Frequency: <span style=\"background-color:Crimson;color:azure;\">"+frequencyIdx.get(word).toString()+"</span>",
+            "Count sentences: <span style=\"background-color:Crimson;color:azure;\">"+sentences_idx.get(word).size()+"</span>",
             "<span style=\"background-color:Darkorange;color:azure;\">"+"Content item:"+"</span> "+sentence));
         recordPerWord.add("<hr>");
         // Если слова в глобально списке ингорирования - одни цвеь
@@ -93,7 +95,7 @@ public class KeyWordsCoursor {
       } catch (IOException e) {
         e.printStackTrace();
       }
-      break;  // DEVELOP
+      ///break;  // DEVELOP
     }
 
     // rpt
