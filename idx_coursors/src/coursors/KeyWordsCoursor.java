@@ -30,7 +30,6 @@ public class KeyWordsCoursor {
     // Need read nodes
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
-
     // Получаем индекс-пересечеие
     HashMap<String, HashMap<String, String>>  notes = ImmutableIdxGetters.get_static_notes();
 
@@ -78,7 +77,6 @@ public class KeyWordsCoursor {
           //utils.print(rest_word);
           //break;  // DEVELOP
         }
-
 
         // Добавляем в запись
         recordPerWord.add(Joiner.on("<br>&nbsp&nbsp&nbsp")

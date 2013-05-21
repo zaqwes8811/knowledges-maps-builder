@@ -47,6 +47,31 @@ final public class ImmutableIdxGetters {
     return info;
   }
 
+  static Map<String, Multiset<String>> get_coupled_idx_for_node(
+      String node,
+      List<String> rest_nodes)
+    {
+    // первый тоже нужно нормализовать
+    for (String rest_node: rest_nodes) {
+      // читаем индекс
+      Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(rest_node);
+      Integer count_words = 0;
+      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
+        count_words += pair.getValue();
+      }
+
+      // нормализуем
+      Map<String, Double> norm_freq_idx = new HashMap<String, Double>();
+      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
+        norm_freq_idx.put(pair.getKey(), pair.getValue()*1.0/count_words);
+      }
+
+      utils.print(norm_freq_idx);
+      break;  // DEVELOP
+    }
+    return null;
+  }
+
   static Multiset<String> get_confluence_idx() {
     Multiset<String> confluence_idx = HashMultiset.create();
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
@@ -152,6 +177,8 @@ final public class ImmutableIdxGetters {
   }
 
   static public void main(String[] args) {
-
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    String node = nodes.get(0);  // пока один
+    ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
   }
 }

@@ -9,14 +9,13 @@
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369061224485" ignored="false" />
+    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369152151423" ignored="false" />
     <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368637267805" ignored="false" />
     <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
-    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368635437975" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369153013529" ignored="false" />
     <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
     <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368297570859" ignored="false" />
@@ -63,7 +62,7 @@
     <file path="$PROJECT_DIR$/common/src/nlp/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
     <file path="/utils.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368719322450" ignored="false" />
     <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369070852302" ignored="false" />
-    <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369066763000" ignored="false" />
+    <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369153107250" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -113,6 +111,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -122,19 +121,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="28" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="66" column="10" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.9871383">
+              <folding>
+                <element signature="e#2003#2019#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="20" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.8530259">
+            <state line="30" column="4" selection-start="803" selection-end="860" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,16 +182,16 @@
         <option value="$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java" />
         <option value="$PROJECT_DIR$/common/src/common/utils.java" />
         <option value="$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java" />
-        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1288" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -218,7 +219,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -336,6 +336,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +380,7 @@
       <recent name="com.github.zaqwes8811.text_processor" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KeyWordsCoursor">
+  <component name="RunManager" selected="Application.ImmutableIdxGetters">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -392,6 +393,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -419,19 +433,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -570,6 +571,22 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ImmutableIdxGetters" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.ImmutableIdxGetters" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="JobsFormerTest" type="JUnit" factoryName="JUnit">
       <module name="map_reduce" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -664,17 +681,18 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="10">
+    <list size="11">
       <item index="0" class="java.lang.String" itemvalue="Application.MinimalSpiderExtractor" />
       <item index="1" class="java.lang.String" itemvalue="Application.MinimalSpiderProcessor" />
       <item index="2" class="java.lang.String" itemvalue="Application.SentencesLevelProcessor" />
       <item index="3" class="java.lang.String" itemvalue="Application.AppContainer" />
       <item index="4" class="java.lang.String" itemvalue="Application.ReaderStaticData" />
       <item index="5" class="java.lang.String" itemvalue="Application.KeyWordsCoursor" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.JobsFormerTest" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.BaseTokenizerTest" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.RunnerWordLevelProcessingTest" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.CompressorsTest" />
+      <item index="6" class="java.lang.String" itemvalue="Application.ImmutableIdxGetters" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.JobsFormerTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.BaseTokenizerTest" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.RunnerWordLevelProcessingTest" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.CompressorsTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -711,7 +729,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -727,8 +745,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28038898" sideWeight="0.45843232" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5415677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28030303" sideWeight="0.57508534" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4249147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -846,9 +864,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableReduces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="53" selection-start="356" selection-end="356" vertical-scroll-proportion="0.29608127">
-          <folding />
-        </state>
+        <state line="18" column="53" selection-start="356" selection-end="356" vertical-scroll-proportion="0.29608127" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/common/utils.java">
@@ -883,9 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMappers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="4" selection-start="3781" selection-end="3806" vertical-scroll-proportion="0.031894933">
-          <folding />
-        </state>
+        <state line="110" column="4" selection-start="3781" selection-end="3806" vertical-scroll-proportion="0.031894933" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java">
@@ -895,17 +909,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="28" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0">
+        <state line="30" column="4" selection-start="803" selection-end="860" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="20" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.8530259">
-          <folding />
+        <state line="66" column="10" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.9871383">
+          <folding>
+            <element signature="e#2003#2019#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
