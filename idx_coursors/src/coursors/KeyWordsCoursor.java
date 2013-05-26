@@ -2,8 +2,10 @@ package coursors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
+import com.google.common.collect.Multiset;
 import common.utils;
 import crosscuttings.AppConstants;
+import mapreduce.ImmutableReduceSentencesLevel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,14 +22,27 @@ import java.util.Map;
  */
 public class KeyWordsCoursor {
   private static final String WEB_NEW_LINE = "<br>";
+  static Double cut_to(Double value) {
+    Double time_to_read = Math.floor(100*value)*1.0/100;
+    return time_to_read;
+  }
   public static void main(String [] args) {
     // Need read nodes
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
+    // Получаем индекс-пересечеие
+    HashMap<String, HashMap<String, String>>  notes = ImmutableIdxGetters.get_static_notes();
+
     // Real processing
     for (String node: nodes) {
-      utils.print(node);
-      List<String> page = new ArrayList<String>();
+      Double time_to_read = cut_to(Double.parseDouble(
+          notes.get(node).get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ)));
+      utils.print(Joiner.on(", ")
+        .join(
+          (long)Math.floor(time_to_read),
+          (long)Math.floor((time_to_read-Math.floor(time_to_read))*60),
+          node));
+      /*List<String> page = new ArrayList<String>();
       page.add("<!DOCTYPE html><html><head>" +
         "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">" +
         "</head><body>");
@@ -63,7 +78,6 @@ public class KeyWordsCoursor {
           //break;  // DEVELOP
         }
 
-
         // Добавляем в запись
         recordPerWord.add(Joiner.on("<br>&nbsp&nbsp&nbsp")
           .join(
@@ -95,10 +109,11 @@ public class KeyWordsCoursor {
       } catch (IOException e) {
         e.printStackTrace();
       }
-      ///break;  // DEVELOP
+      */
+      //break;  // DEVELOP
+
     }
-
+    Multiset<String> confluence_idx = ImmutableIdxGetters.get_confluence_idx();
     // rpt
-
   }
 }

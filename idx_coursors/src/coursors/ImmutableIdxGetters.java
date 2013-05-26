@@ -1,6 +1,8 @@
 package coursors;
 
 import com.google.common.base.Joiner;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.ImmutableAppUtils;
@@ -12,6 +14,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,6 +45,67 @@ final public class ImmutableIdxGetters {
       info.add(record);
     }
     return info;
+  }
+
+  static Map<String, Multiset<String>> get_coupled_idx_for_node(
+      String node,
+      List<String> rest_nodes)
+    {
+    // первый тоже нужно нормализовать
+    for (String rest_node: rest_nodes) {
+      // читаем индекс
+      Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(rest_node);
+      Integer count_words = 0;
+      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
+        count_words += pair.getValue();
+      }
+
+      // нормализуем
+      Map<String, Double> norm_freq_idx = new HashMap<String, Double>();
+      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
+        norm_freq_idx.put(pair.getKey(), pair.getValue()*1.0/count_words);
+      }
+
+      utils.print(norm_freq_idx);
+      break;  // DEVELOP
+    }
+    return null;
+  }
+
+  static Multiset<String> get_confluence_idx() {
+    Multiset<String> confluence_idx = HashMultiset.create();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+
+    Map<String, Integer> one_freq_idx =  get_freq_idx(nodes.get(0));  // можно любой
+    for (Map.Entry<String, Integer> pair:
+        one_freq_idx.entrySet()) {
+
+      String word = pair.getKey();
+      // Ищем слово в индексах
+      Boolean occure = new Boolean(true);
+      Integer summary_frequency = 0;
+      for (String node: nodes) {
+        // Учитываются все узлы, а первый только для получения списка ключей
+        Map<String, Integer> tmp_freq_idx =  get_freq_idx(node);
+        if (!tmp_freq_idx.containsKey(word)) {
+          occure = false;
+          break;
+        }
+        // Суммируем частоты
+        summary_frequency += pair.getValue();
+      }
+
+      // Если нашелся ключ
+      if (occure) {
+        utils.print(word+", "+summary_frequency);
+        confluence_idx.add(word, summary_frequency);
+      }
+
+      //
+      //break;
+    }
+
+    return null;
   }
 
   static public HashMap<String, String> get_rest_idx(String node) {
@@ -113,6 +177,8 @@ final public class ImmutableIdxGetters {
   }
 
   static public void main(String[] args) {
-
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    String node = nodes.get(0);  // пока один
+    ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
   }
 }
