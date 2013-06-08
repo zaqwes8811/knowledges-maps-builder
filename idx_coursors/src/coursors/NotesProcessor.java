@@ -1,6 +1,7 @@
 package coursors;
 
 
+import com.google.common.collect.Multiset;
 import common.ImmutableAppUtils;
 import common.utils;
 import crosscuttings.AppConstants;
@@ -121,5 +122,70 @@ public class NotesProcessor {
           info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
           info.get(NotesProcessor.NOTE_N20_CAPACITY).replace('.', ','));
     return record;
+  }
+
+  public static List<String> get_urls_and_langs_node(String node){
+    // Путь к мета-файлу
+    String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
+      .join(
+        ImmutableProcessorTargets.getPathToIndex(),
+        AppConstants.CONTENT_FOLDER,
+        node,
+        AppConstants.CONTENT_META_FILENAME);
+
+    // Преобразуем в json
+    String settingsInJson = utils.file2string(pathToMetaFile);
+    Type type = new TypeToken<List<List<String>>>() {}.getType();
+    List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
+
+    // Можно вытряхивать
+    List<String> info = new ArrayList<String>();
+    for (List<String> item: metadata) {
+      String record = "Source url: "+item.get(0)+" Language: "+item.get(1);
+      info.add(record);
+    }
+    return info;
+  }
+
+  static List<String> get_ww80_list(String node) {
+    Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
+    List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
+    int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
+    List<String> WW80List = sorted_base_idx.subList(0, WW80);
+    List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
+    return WW80List;
+  }
+
+  static List<String> get_ww20_list(String node) {
+    Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
+    List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
+    int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
+    List<String> WW80List = sorted_base_idx.subList(0, WW80);
+    List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
+    return WW20List;
+  }
+
+
+  ///
+  static Multiset<String> get_follow_data(String base_node, List<String> rest_nodes) {
+    // получаем оценки для базового индекса
+    List<String> WW20ListBase = get_ww20_list(base_node);
+    utils.print("Document name: "+base_node);
+
+    // обрабатываем по узлу
+    for (String node: rest_nodes) {
+      Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(node);
+      // Получаем оценки для одного узла
+      List<String> WW80List = get_ww80_list(node);
+      utils.print("\n"+node+"; WW80="+WW80List.size()+"; Число уникальных слов="+freq_idx.keySet().size());
+      List<String> cross_words = new ArrayList<String>();
+      for (String word: WW20ListBase) {
+        if (WW80List.contains(word)) {
+          cross_words.add(word+"/"+freq_idx.get(word));
+        }
+      }
+      utils.print(cross_words.size()+" "+cross_words);
+    }
+    return null;
   }
 }

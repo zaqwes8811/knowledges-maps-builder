@@ -1,5 +1,5 @@
 # ! Поиск пока только по расширениям
-index name: extract_ont_index  # Одно на задание, два быть не может
+index name: real_index  # Одно на задание, два быть не может
 extention list: odt, doc, asfd, pdf
 root: d:/analiz
 
