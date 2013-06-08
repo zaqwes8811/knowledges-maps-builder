@@ -18,22 +18,16 @@ import java.util.Map;
 
 import coursors.NotesProcessor;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 15.05.13
- * Time: 19:31
- * To change this template use File | Settings | File Templates.
- */
 final public class ImmutableIdxGetters {
-  static Multiset<String> get_confluence_idx() {
+
+  // Получаем пересечение индексов
+  static void get_confluence_idx() {
     Multiset<String> confluence_idx = HashMultiset.create();
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     Map<String, Integer> one_freq_idx =  get_freq_idx(nodes.get(0));  // можно любой
     for (Map.Entry<String, Integer> pair:
         one_freq_idx.entrySet()) {
-
       String word = pair.getKey();
       // Ищем слово в индексах
       Boolean occure = new Boolean(true);
@@ -45,19 +39,17 @@ final public class ImmutableIdxGetters {
           occure = false;
           break;
         }
-        // Суммируем частоты
         summary_frequency += pair.getValue();
       }
-
       // Если нашелся ключ
       if (occure) {
         utils.print(word+", "+summary_frequency);
         confluence_idx.add(word, summary_frequency);
       }
     }
-    return null;
   }
 
+  // Получить индекс со словами оставшимися после сжатия
   static public HashMap<String, String> get_rest_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
@@ -70,6 +62,7 @@ final public class ImmutableIdxGetters {
       new TypeToken<HashMap<String, String>>() {}.getType()));
   }
 
+  // Получить список единиц контанта узла
   static public List<String> get_list_sentences(String node) {
     return utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
@@ -80,6 +73,7 @@ final public class ImmutableIdxGetters {
       ));
   }
 
+  // Получить список указателей на предложеия в которых встречалось слово.
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)

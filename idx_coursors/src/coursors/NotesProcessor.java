@@ -77,37 +77,7 @@ public class NotesProcessor {
   }
 
   //static private Map<>
-  static public void main(String [] args) {
 
-    // Получаем адреса соответствующие узлам и оцененный язык
-    List<String> nodes = ImmutableBaseCoursor.getListNodes();
-    List<String> rpt = new ArrayList<String>(
-      Arrays.asList(Joiner.on(";")
-        .join(
-          "Имя документа",
-          "Флеш",
-          "Время прочтения",
-          "Ср. дл. предл.",
-          "20% частых",
-          "80% редких",
-          "частые сост. 80% слов. состава",
-          "редкие - 20% состава")));
-    for (String node : nodes) {
-      Map<String, String> node_static_notes_info = get_notes_for_node(node);
-      rpt.add(get_one_record(node, node_static_notes_info));
-      //break;  // DEVELOP
-    }
-
-    // пишем результат
-    try {
-      utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(
-            "rpts",
-            "real_notes.csv"));
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
 
   static public String get_one_record(String node, Map<String, String> info) {
     utils.print(node+" "+info);
@@ -147,45 +117,38 @@ public class NotesProcessor {
     return info;
   }
 
-  static List<String> get_ww80_list(String node) {
-    Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
-    List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
-    int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
-    List<String> WW80List = sorted_base_idx.subList(0, WW80);
-    List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
-    return WW80List;
-  }
 
-  static List<String> get_ww20_list(String node) {
-    Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
-    List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
-    int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
-    List<String> WW80List = sorted_base_idx.subList(0, WW80);
-    List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
-    return WW20List;
-  }
+  // Launcher
+  static public void main(String [] args) {
 
+    // Получаем адреса соответствующие узлам и оцененный язык
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    List<String> rpt = new ArrayList<String>(
+      Arrays.asList(Joiner.on(";")
+        .join(
+          "Имя документа",
+          "Флеш",
+          "Время прочтения",
+          "Ср. дл. предл.",
+          "20% частых",
+          "80% редких",
+          "частые сост. 80% слов. состава",
+          "редкие - 20% состава")));
 
-  ///
-  static Multiset<String> get_follow_data(String base_node, List<String> rest_nodes) {
-    // получаем оценки для базового индекса
-    List<String> WW20ListBase = get_ww20_list(base_node);
-    utils.print("Document name: "+base_node);
+    for (String node : nodes) {
 
-    // обрабатываем по узлу
-    for (String node: rest_nodes) {
-      Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(node);
-      // Получаем оценки для одного узла
-      List<String> WW80List = get_ww80_list(node);
-      utils.print("\n"+node+"; WW80="+WW80List.size()+"; Число уникальных слов="+freq_idx.keySet().size());
-      List<String> cross_words = new ArrayList<String>();
-      for (String word: WW20ListBase) {
-        if (WW80List.contains(word)) {
-          cross_words.add(word+"/"+freq_idx.get(word));
-        }
-      }
-      utils.print(cross_words.size()+" "+cross_words);
+      //Map<String, String> node_static_notes_info = get_notes_for_node(node);
+      //rpt.add(get_one_record(node, node_static_notes_info));
     }
-    return null;
+
+    // пишем результат
+    /*try {
+      utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(
+          "rpts",
+          "real_notes.csv"));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }*/
   }
 }
