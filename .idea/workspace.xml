@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" afterPath="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" />
     </list>
     <ignored path="processor-word-frequency-index.iws" />
@@ -65,7 +63,7 @@
     <file path="/ImmutableOntoAssistant.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370169662793" ignored="false" />
     <file path="/BaseFilter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370690542912" ignored="false" />
     <file path="/ImmutableDataExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370699687801" ignored="false" />
-    <file path="/NotesProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370699742401" ignored="false" />
+    <file path="/NotesProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370759367816" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,19 +144,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotesProcessor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NotesProcessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="2" selection-start="4234" selection-end="4234" vertical-scroll-proportion="0.0">
+            <state line="45" column="43" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.26806834">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="33" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.30749014">
+            <state line="32" column="41" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1819#1827#0" expanded="true" />
@@ -199,8 +197,8 @@
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/BaseFilter.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseFilter.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
-        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" />
       </list>
     </option>
   </component>
@@ -755,7 +753,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29902756" sideWeight="0.9346793" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06532066" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06532066" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -921,20 +919,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="2" selection-start="4234" selection-end="4234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="33" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.30749014">
+        <state line="32" column="41" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1819#1827#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="43" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.26806834">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -15,13 +15,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 13.05.13
- * Time: 16:18
- * To change this template use File | Settings | File Templates.
- */
 public class NotesProcessor {
   static public final String NOTE_N80_CAPACITY = "f80_p";  // Core
   static public final String NOTE_N20_CAPACITY = "f20";
@@ -39,27 +32,26 @@ public class NotesProcessor {
     // Получаем статические данные по сложности
     // Статические оценки
     Map<String, String> node_static_notes_info = metadata_static_notes.get(node);
-    //ImmutableAppUtils.print(node_static_notes_info.get(ImmutableReduceSentencesLevel.NOTE_RE));
 
     // Данные для каждого из индексов по 80/20
-    List<String> sorted_fall_idx = ImmutableIdxGetters.get_sorted_idx(node);
+    List<String> sorted_full_idx = ImmutableIdxGetters.get_sorted_idx(node);
 
     // сам частотынй индекс индекс
     HashMap<String, Integer> sorted_freq_idx = ImmutableIdxGetters.get_freq_idx(node);
 
     Integer total_amount = 0;
-    for (String word: sorted_fall_idx) total_amount += sorted_freq_idx.get(word);
+    for (String word: sorted_full_idx) total_amount += sorted_freq_idx.get(word);
     Double threshold = total_amount*0.8;
 
     // Оценка - 20% слов
-    Integer count_unique_words = sorted_fall_idx.size();
+    Integer count_unique_words = sorted_full_idx.size();
     Double N20 = count_unique_words*0.2;
     Double N80 = count_unique_words - N20;
 
     // Оценка - 80% интегральной частоты
     Double sum = new Double(0);
     Integer N80_Amount = 0;
-    for (String word: sorted_fall_idx) {
+    for (String word: sorted_full_idx) {
       if (sum > threshold) {
         break;
       }
@@ -75,9 +67,6 @@ public class NotesProcessor {
     node_static_notes_info.put(NOTE_N80_COUNT, N80.toString());
     return node_static_notes_info;
   }
-
-  //static private Map<>
-
 
   static public String get_one_record(String node, Map<String, String> info) {
     utils.print(node+" "+info);
