@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="spiders:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="" />
-    <ignored path="content-translate-assistant.iws" />
+    <list default="true" id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="" />
+    <ignored path="processor-word-frequency-index.iws" />
     <ignored path=".idea/workspace.xml" />
-<<<<<<< HEAD
-    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366703344367" ignored="false" />
-    <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364661541109" ignored="false" />
-    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364728346902" ignored="false" />
-=======
-    <file path="/Dummy.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366787205602" ignored="false" />
-    <file path="/fragment.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366653567722" ignored="false" />
-    <file path="/test.js" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366788105767" ignored="false" />
->>>>>>> iss55
-    <file path="/index.html" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364715086667" ignored="false" />
-    <file path="/AppContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364711758484" ignored="false" />
-    <file path="/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364628126711" ignored="false" />
-    <file path="/Building.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364637461199" ignored="false" />
-    <file path="/IIndexCursor.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364645648945" ignored="false" />
-    <file path="/Runner.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364661107935" ignored="false" />
-    <file path="/IndexCursorFactory.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652383333" ignored="false" />
-    <file path="/IndexCursor.py" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364652746323" ignored="false" />
-    <file path="$PROJECT_DIR$/src/business/IndexContainer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1364711165357" ignored="false" />
-    <file path="/TestLuceneStemmer.java" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366703028169" ignored="false" />
-    <file path="/tmp.txt" changelist="fa8afb3f-6f37-43b1-9336-ae88c004d95d" time="1366695223929" ignored="false" />
+    <file path="/Dummy.txt" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1372232991035" ignored="false" />
+    <file path="/AppConstants.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368637267805" ignored="false" />
+    <file path="/MinimalSpiderExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368174561666" ignored="false" />
+    <file path="/fragment.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370689156984" ignored="false" />
+    <file path="/AppConfigurer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088559082" ignored="false" />
+    <file path="/ImmutableAppConfigurator.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368087534266" ignored="false" />
+    <file path="/MinimalSpiderProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370168167447" ignored="false" />
+    <file path="/ProcessorTargets.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368088397500" ignored="false" />
+    <file path="/ImmutableTikaWrapper.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368549763767" ignored="false" />
+    <file path="/ImmutableProcessorTargets.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368175928025" ignored="false" />
+    <file path="/run-jar.bat" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368089907867" ignored="false" />
+    <file path="/ImmutableBaseCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368175373017" ignored="false" />
+    <file path="/ImmutableAppUtils.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368175633447" ignored="false" />
+    <file path="/SpiderExtractorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368094195501" ignored="false" />
+    <file path="/JobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368186970145" ignored="false" />
+    <file path="/JobsFormerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185478097" ignored="false" />
+    <file path="/BaseTokenizer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368204585931" ignored="false" />
+    <file path="/RunnerSentencesLevelProcessing.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368185589096" ignored="false" />
+    <file path="/RunnerSentencesLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368207687769" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368277377162" ignored="false" />
+    <file path="/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368551175453" ignored="false" />
+    <file path="/BaseSyllableCounter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368262442234" ignored="false" />
+    <file path="/ImmutableReduces.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368281622839" ignored="false" />
+    <file path="/Summators.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368200291657" ignored="false" />
+    <file path="/BaseTokenizerTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368203813118" ignored="false" />
+    <file path="/RunnerWordLevelProcessingTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368638097324" ignored="false" />
+    <file path="/CompressorsTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368271344289" ignored="false" />
+    <file path="/ImmutableSavers.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368281486980" ignored="false" />
+    <file path="/SentencesLevelProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368354321271" ignored="false" />
+    <file path="/SentencesLevelProcessorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368550892103" ignored="false" />
+    <file path="/ImmutableMapperSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368290918233" ignored="false" />
+    <file path="/ImmutableReduceSentencesLevel.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368461979921" ignored="false" />
+    <file path="$PROJECT_DIR$/web_view/src/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368334564455" ignored="false" />
+    <file path="/AppContainer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368463430999" ignored="false" />
+    <file path="/index.html" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368464207703" ignored="false" />
+    <file path="/test.js" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368465030936" ignored="false" />
+    <file path="/journal.css" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368378423026" ignored="false" />
+    <file path="/ReaderStaticData.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368632254528" ignored="false" />
+    <file path="/Main.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368544558079" ignored="false" />
+    <file path="$PROJECT_DIR$/crosscuttings/src/jobs_processors/ImmutableProcessorTargets.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/crosscuttings/src/jobs_processors/ImmutableJobsFormer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/common/src/math/ImmutableSummators.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/spiders/tests/MinimalSpiderProcessorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/spiders/tests/SpiderExtractorTest.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/common/src/org/tartarus/snowball/ext/russianStemmer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="$PROJECT_DIR$/common/src/org/tartarus/snowball/ext/englishStemmer.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368552275819" ignored="false" />
+    <file path="/utils.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1368719322450" ignored="false" />
+    <file path="/KeyWordsCoursor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1369070852302" ignored="false" />
+    <file path="/ImmutableIdxGetters.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370699179949" ignored="false" />
+    <file path="/ImmutableOntoAssistant.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370169662793" ignored="false" />
+    <file path="/BaseFilter.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370690542912" ignored="false" />
+    <file path="/ImmutableDataExtractor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370699687801" ignored="false" />
+    <file path="/NotesProcessor.java" changelist="488ace11-1003-4423-a719-568b315eaf4f" time="1370759367816" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +76,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-<<<<<<< HEAD
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-=======
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
->>>>>>> iss55
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -77,44 +111,52 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-<<<<<<< HEAD
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-=======
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
->>>>>>> iss55
     <breakpoint_rules />
     <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="content-translate-assistant" />
     <favorites_list name="processor-word-frequency-index" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf />
-=======
     <leaf>
-      <file leaf-file-name="TestLuceneStemmer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
+      <file leaf-file-name="ImmutableBaseFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="14" selection-start="4635" selection-end="4635" vertical-scroll-proportion="0.0">
+            <state line="11" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
+      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="8" selection-start="108100" selection-end="108100" vertical-scroll-proportion="0.74689823">
+            <state line="40" column="34" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotesProcessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="43" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.03024911">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="41" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
->>>>>>> iss55
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -132,30 +174,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/org/jython/book/interfaces/BuildingType.java" />
-        <option value="$PROJECT_DIR$/src/org/jython/book/util/RunnerFactory.java" />
-        <option value="$PROJECT_DIR$/src/org/jython/book/interfaces/Building.py" />
-        <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IIndexCursor.java" />
-        <option value="$PROJECT_DIR$/src/org/jython/book/util/BuildingFactory.java" />
-        <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursor.py" />
-        <option value="$PROJECT_DIR$/src/business/originator_frequency_index/IndexCursorFactory.java" />
-        <option value="$PROJECT_DIR$/src/business/originator_frequency_index/Runner.java" />
-        <option value="$PROJECT_DIR$/src/AppContainer.java" />
-        <option value="$PROJECT_DIR$/subs/sys-settings-new.htm" />
-        <option value="$PROJECT_DIR$/css/app.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/test.js" />
-        <option value="$PROJECT_DIR$/src/tmp.txt" />
-        <option value="$PROJECT_DIR$/src/TestLuceneStemmer.java" />
-        <option value="$PROJECT_DIR$/WebView/js/test.js" />
+        <option value="$PROJECT_DIR$/map_reduce/tests/SentencesLevelProcessorTest.java" />
+        <option value="$PROJECT_DIR$/map_reduce/tests/JobsFormerTest.java" />
+        <option value="$PROJECT_DIR$/web-wrapper/src/AppContainer.java" />
+        <option value="$PROJECT_DIR$/map_reduce/src/mapreduce/RunnerWordLevelProcessing.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ReaderStaticData.java" />
+        <option value="$PROJECT_DIR$/crosscuttings/src/crosscuttings/AppConstants.java" />
+        <option value="$PROJECT_DIR$/common/src/common/utils.java" />
+        <option value="$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java" />
+        <option value="$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableOntoAssistant.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/BaseFilter.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseFilter.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java" />
+        <option value="$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -164,7 +206,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -188,15 +230,7 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="processor-word-frequency-index" />
-<<<<<<< HEAD
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-=======
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -205,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemId" value="spiders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -215,46 +249,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebView" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebView" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemId" value="spiders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
->>>>>>> iss55
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders_processors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map_reduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map_reduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map_reduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coursors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crosscuttings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor-word-frequency-index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -263,59 +368,110 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/map_reduce/tests" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../content-translate-assistant" />
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> iss55
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flow-of-documents/uno" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.zaqwes8811.text_processor.nlp" />
+      <recent name="com.github.zaqwes8811.text_processor.mapreduce" />
+      <recent name="com.github.zaqwes8811.processor_word_frequency_index.mapreduce" />
+      <recent name="com.github.zaqwes8811.processor_word_frequency_index" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\home\lugansky-igor\github\processor-word-frequency-index" />
+      <recent name="D:\github\processor-word-frequency-index\sandbox\src" />
+      <recent name="D:\github\processor-word-frequency-index\sandbox" />
+      <recent name="D:\github\processor-word-frequency-index\crosscuttings\src\crosscuttings" />
+      <recent name="D:\github\processor-word-frequency-index\crosscuttings" />
+      <recent name="D:\github\processor-word-frequency-index\common\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.github.zaqwes8811.text_processor.sandbox" />
+      <recent name="com.github.zaqwes8811.text_processor" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestLuceneStemmer">
-    <configuration default="false" name="TestLuceneStemmer" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TestLuceneStemmer" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+  <component name="RunManager" selected="Application.ImmutableIdxGetters">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="content-translate-assistant" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -333,9 +489,9 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -345,21 +501,208 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
+    <configuration default="false" name="MinimalSpiderExtractor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="spiders_extractors.MinimalSpiderExtractor" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="spiders" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MinimalSpiderProcessor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="spiders_processors.MinimalSpiderProcessor" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="spiders" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SentencesLevelProcessor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="mapreduce.SentencesLevelProcessor" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="map_reduce" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="KeyWordsCoursor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.KeyWordsCoursor" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImmutableIdxGetters" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.ImmutableIdxGetters" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImmutableOntoAssistant" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.ImmutableOntoAssistant" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImmutableBaseFilter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coursors.ImmutableBaseFilter" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="idx_coursors" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RunnerWordLevelProcessingTest" type="JUnit" factoryName="JUnit">
+      <module name="map_reduce" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RunnerWordLevelProcessingTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SentencesLevelProcessorTest" type="JUnit" factoryName="JUnit">
+      <module name="map_reduce" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SentencesLevelProcessorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="9">
+      <item index="0" class="java.lang.String" itemvalue="Application.MinimalSpiderExtractor" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MinimalSpiderProcessor" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SentencesLevelProcessor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.KeyWordsCoursor" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ImmutableIdxGetters" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ImmutableOntoAssistant" />
+      <item index="6" class="java.lang.String" itemvalue="Application.ImmutableBaseFilter" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.RunnerWordLevelProcessingTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.SentencesLevelProcessorTest" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestLuceneStemmer" />
-      </list>
-    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa8afb3f-6f37-43b1-9336-ae88c004d95d" name="Default" comment="" />
-      <created>1363625318643</created>
-      <updated>1363625318643</updated>
+      <changelist id="488ace11-1003-4423-a719-568b315eaf4f" name="Default" comment="" />
+      <created>1368022744006</created>
+      <updated>1368022744006</updated>
     </task>
     <servers />
   </component>
@@ -384,31 +727,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2648456" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1815235" sideWeight="0.7022539" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29774615" sideWeight="0.9889841" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29848486" sideWeight="0.9346793" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06532066" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31791222" sideWeight="0.9977503" order="7" side_tool="false" content_ui="tabs" />
->>>>>>> iss55
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206651" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -472,62 +811,125 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
+    <entry file="file://$PROJECT_DIR$/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="14" selection-start="4635" selection-end="4635" vertical-scroll-proportion="0.0">
+        <state line="12" column="39" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0867347" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/nlp/BaseSyllableCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.8173077" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/KeyWordsCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="4476" selection-end="4476" vertical-scroll-proportion="0.66302365">
+          <folding>
+            <element signature="e#1408#1416#0" expanded="true" />
+            <element signature="e#1614#1622#0" expanded="true" />
+            <element signature="e#2130#2138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_extractors/MinimalSpiderExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="15" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableReduceSentencesLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
+    <entry file="file://$PROJECT_DIR$/map_reduce/tests/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="34" selection-start="106778" selection-end="106778" vertical-scroll-proportion="0.0">
+        <state line="75" column="8" selection-start="2671" selection-end="2671" vertical-scroll-proportion="0.38">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableReduces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
+        <state line="43" column="23" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.7975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="17" selection-start="4877" selection-end="4877" vertical-scroll-proportion="4.9198966" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_reduce/src/mapreduce/ImmutableMapperSentencesLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="31" selection-start="2479" selection-end="2479" vertical-scroll-proportion="1.2304038" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/src/spiders_processors/MinimalSpiderProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="77" selection-start="4362" selection-end="4362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
+    <entry file="file://$PROJECT_DIR$/common/src/common/utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
+        <state line="19" column="19" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableOntoAssistant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="14" selection-start="4635" selection-end="4635" vertical-scroll-proportion="0.0">
+        <state line="32" column="18" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableBaseFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebView/js/test.js">
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableIdxGetters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="8" selection-start="108100" selection-end="108100" vertical-scroll-proportion="0.74689823">
+        <state line="40" column="34" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/ImmutableDataExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="41" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idx_coursors/src/coursors/NotesProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="43" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.03024911">
           <folding />
         </state>
       </provider>
     </entry>
   </component>
->>>>>>> iss55
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>processor-word-frequency-index:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -547,7 +949,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>gson-2.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -571,12 +972,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>content-translate-assistant</last-edited>
+          <last-edited>web-wrapper</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -584,7 +984,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>gson-2.2.2</last-edited>
+          <last-edited>snakeyaml-1.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
