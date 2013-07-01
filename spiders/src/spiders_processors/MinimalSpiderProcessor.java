@@ -2,6 +2,7 @@ package spiders_processors;
 
 
 import common.ImmutableAppUtils;
+import common.utils;
 import coursors.ImmutableBaseCoursor;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableProcessorTargets;
@@ -110,6 +111,7 @@ public class MinimalSpiderProcessor {
     for (List<String> target: targets) {
       try {  // внутри, чтобы не прервалась обработка из-за одного файла
         Closer readCloser = Closer.create();
+        utils.print(target);
         try {
           String lang = target.get(MinimalSpiderProcessor.IDX_LANG);
           String srcUrl = target.get(MinimalSpiderProcessor.IDX_SRC_URL);
@@ -123,7 +125,7 @@ public class MinimalSpiderProcessor {
           StringBuilder buffer = new StringBuilder();
           String s;
           while ((s = reader.readLine())!= null) buffer.append(s+'\n');
-          summaryContent = BaseTokenizer.splitToSentences(buffer, lang);
+          summaryContent.append(BaseTokenizer.splitToSentences(buffer, lang));
         } catch (Throwable e) { // must catch Throwable
           throw readCloser.rethrow(e);
         } finally {
@@ -179,6 +181,7 @@ public class MinimalSpiderProcessor {
     for (String node : nodes) {
       ImmutableAppUtils.print("Process node: "+node);
       spiderProcessor.processOneNode(node);
+      //utils.print(node);
       //break;  // DEVELOP
     }
     ImmutableAppUtils.print("Done. Spider processor.\n");

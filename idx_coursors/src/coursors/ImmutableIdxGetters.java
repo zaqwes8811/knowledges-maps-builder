@@ -18,72 +18,16 @@ import java.util.Map;
 
 import coursors.NotesProcessor;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 15.05.13
- * Time: 19:31
- * To change this template use File | Settings | File Templates.
- */
 final public class ImmutableIdxGetters {
-  public static List<String> get_urls_and_langs_node(String node){
-    // Путь к мета-файлу
-    String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
-      .join(
-        ImmutableProcessorTargets.getPathToIndex(),
-        AppConstants.CONTENT_FOLDER,
-        node,
-        AppConstants.CONTENT_META_FILENAME);
 
-    // Преобразуем в json
-    String settingsInJson = utils.file2string(pathToMetaFile);
-    Type type = new TypeToken<List<List<String>>>() {}.getType();
-    List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
-
-    // Можно вытряхивать
-    List<String> info = new ArrayList<String>();
-    for (List<String> item: metadata) {
-      String record = "Source url: "+item.get(0)+" Language: "+item.get(1);
-      info.add(record);
-    }
-    return info;
-  }
-
-  static Map<String, Multiset<String>> get_coupled_idx_for_node(
-      String node,
-      List<String> rest_nodes)
-    {
-    // первый тоже нужно нормализовать
-    for (String rest_node: rest_nodes) {
-      // читаем индекс
-      Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(rest_node);
-      Integer count_words = 0;
-      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
-        count_words += pair.getValue();
-      }
-
-      // нормализуем
-      Map<String, Double> norm_freq_idx = new HashMap<String, Double>();
-      for (Map.Entry<String, Integer> pair: freq_idx.entrySet()) {
-        norm_freq_idx.put(pair.getKey(), pair.getValue()*1.0/count_words);
-      }
-
-      utils.print(norm_freq_idx);
-      break;  // DEVELOP
-    }
-    return null;
-  }
-
-
-
-  static Multiset<String> get_confluence_idx() {
+  // Получаем пересечение индексов
+  static void get_confluence_idx() {
     Multiset<String> confluence_idx = HashMultiset.create();
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     Map<String, Integer> one_freq_idx =  get_freq_idx(nodes.get(0));  // можно любой
     for (Map.Entry<String, Integer> pair:
         one_freq_idx.entrySet()) {
-
       String word = pair.getKey();
       // Ищем слово в индексах
       Boolean occure = new Boolean(true);
@@ -95,23 +39,17 @@ final public class ImmutableIdxGetters {
           occure = false;
           break;
         }
-        // Суммируем частоты
         summary_frequency += pair.getValue();
       }
-
       // Если нашелся ключ
       if (occure) {
         utils.print(word+", "+summary_frequency);
         confluence_idx.add(word, summary_frequency);
       }
-
-      //
-      //break;
     }
-
-    return null;
   }
 
+  // Получить индекс со словами оставшимися после сжатия
   static public HashMap<String, String> get_rest_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
@@ -124,6 +62,7 @@ final public class ImmutableIdxGetters {
       new TypeToken<HashMap<String, String>>() {}.getType()));
   }
 
+  // Получить список единиц контанта узла
   static public List<String> get_list_sentences(String node) {
     return utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
@@ -134,6 +73,7 @@ final public class ImmutableIdxGetters {
       ));
   }
 
+  // Получить список указателей на предложеия в которых встречалось слово.
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
@@ -159,6 +99,7 @@ final public class ImmutableIdxGetters {
   }
 
   static public List<String> get_sorted_idx(String node) {
+    utils.print(node);
     String sorted_idx_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
@@ -180,52 +121,31 @@ final public class ImmutableIdxGetters {
       new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));
   }
 
-  static List<String> get_ww80_list(String node) {
-      Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
-      List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
-      int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
-      List<String> WW80List = sorted_base_idx.subList(0, WW80);
-      List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
-      return WW80List;
-  }
+  static List<String> get_base_filtered_sorted_idx(String node) {
+    List<String> sorted_idx = get_sorted_idx(node);
 
-  static List<String> get_ww20_list(String node) {
-      Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
-      List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
-      int WW80 =  Integer.valueOf(base_node_notes.get(NotesProcessor.NOTE_N80_CAPACITY), 10);
-      List<String> WW80List = sorted_base_idx.subList(0, WW80);
-      List<String> WW20List = sorted_base_idx.subList(WW80, sorted_base_idx.size());
-      return WW20List;
-  }
-
-    static Multiset<String> get_follow_data(String base_node, List<String> rest_nodes) {
-        // получаем оценки для базового индекса
-        List<String> WW20ListBase = ImmutableIdxGetters.get_ww20_list(base_node);
-        utils.print("Document name: "+base_node);
-
-        // обрабатываем по узлу
-        for (String node: rest_nodes) {
-            Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(node);
-            // Получаем оценки для одного узла
-            List<String> WW80List = ImmutableIdxGetters.get_ww80_list(node);
-            utils.print("\n"+node+"; WW80="+WW80List.size()+"; Число уникальных слов="+freq_idx.keySet().size());
-            List<String> cross_words = new ArrayList<String>();
-            for (String word: WW20ListBase) {
-                if (WW80List.contains(word)) {
-                    cross_words.add(word+"/"+freq_idx.get(word));
-                }
-            }
-
-            utils.print(cross_words.size()+" "+cross_words);
-
-            //break;  // DEVELOP
-        }
-        return null;
+    List<String> filtered = new ArrayList<String>();
+    for (String stem : sorted_idx) {
+      if (ImmutableBaseFilter.isContentStem(stem)) {
+        filtered.add(stem);
+      }
     }
+    return filtered;
+  }
+
   static public void main(String[] args) {
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
-    String node = nodes.get(2);  // пока один
+    String node = nodes.get(0);  // пока один
+
+    List<String> filtered_sorted_idx = get_base_filtered_sorted_idx(node);
+    Map<String, Integer> freq_idx = get_freq_idx(node);
+    for (String stem: filtered_sorted_idx) {
+      utils.print(Joiner.on(",").join(stem, freq_idx.get(stem)));
+    }
+
+    utils.print(get_sorted_idx(node).size());
+    utils.print(filtered_sorted_idx.size());
     //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
-    ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
+    //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
   }
 }

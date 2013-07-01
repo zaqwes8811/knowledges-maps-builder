@@ -42,7 +42,7 @@ public class KeyWordsCoursor {
           (long)Math.floor(time_to_read),
           (long)Math.floor((time_to_read-Math.floor(time_to_read))*60),
           node));
-      /*List<String> page = new ArrayList<String>();
+      List<String> page = new ArrayList<String>();
       page.add("<!DOCTYPE html><html><head>" +
         "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">" +
         "</head><body>");
@@ -109,7 +109,6 @@ public class KeyWordsCoursor {
       } catch (IOException e) {
         e.printStackTrace();
       }
-      */
       //break;  // DEVELOP
 
     }
