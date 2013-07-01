@@ -1,2 +1,4 @@
-content-translate-assistant
+Text and code mining
 ===========================
+- Analyse codebases
+- Analyse textbases
