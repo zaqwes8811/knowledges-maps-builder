@@ -2,45 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\common\ImmutableAppUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\common\utils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\Among.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\SnowballProgram.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\SnowballStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\TestApp.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\danishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\dutchStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\englishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\finnishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\frenchStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\germanStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\hungarianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\italianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\norwegianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\porterStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\portugueseStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\romanianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\russianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\spanishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\swedishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\org\tartarus\snowball\ext\turkishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\AppConfigurerTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" afterPath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/coursors/KeyWordsCoursor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursors/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/coursors/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,12 +13,12 @@
     <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
-    <file path="/ImmutableBaseCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794092905" ignored="false" />
-    <file path="/ImmutableIdxGetters.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791115925" ignored="false" />
+    <file path="/ImmutableBaseCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794246501" ignored="false" />
+    <file path="/ImmutableIdxGetters.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372796746707" ignored="false" />
     <file path="/BaseSyllableCounter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791194806" ignored="false" />
     <file path="/CompressorsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791298360" ignored="false" />
     <file path="/BaseTokenizerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791387300" ignored="false" />
-    <file path="/Main.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794055252" ignored="false" />
+    <file path="/Main.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372795896650" ignored="false" />
     <file path="/ImmutableProcessorTargets.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792883280" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,16 +81,16 @@
       <file leaf-file-name="ImmutableProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="27" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
+            <state line="41" column="2" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="40" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+            <state line="18" column="35" selection-start="649" selection-end="649" vertical-scroll-proportion="0.4903846">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,24 +98,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
+      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.62152135">
+            <state line="100" column="10" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1004#1012#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableAppConfigurator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="68" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,15 +133,15 @@
         <option value="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
         <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" />
         <option value="$PROJECT_DIR$/src/coursors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" />
+        <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java" />
+        <option value="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" />
       </list>
     </option>
   </component>
@@ -427,8 +381,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.7719715" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2280285" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -567,28 +521,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="32" selection-start="4700" selection-end="4700" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="23" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,27 +539,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="27" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
+        <state line="41" column="2" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+        <state line="15" column="48" selection-start="329" selection-end="329" vertical-scroll-proportion="-0.103896104">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1020#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="68" selection-start="571" selection-end="571" vertical-scroll-proportion="0.5361781">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="10" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.62152135">
+        <state line="18" column="35" selection-start="649" selection-end="649" vertical-scroll-proportion="0.4903846">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1004#1012#0" expanded="true" />
           </folding>
         </state>
       </provider>

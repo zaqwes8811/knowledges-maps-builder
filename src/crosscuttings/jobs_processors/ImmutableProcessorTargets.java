@@ -40,10 +40,12 @@ final public class ImmutableProcessorTargets {
   public static int RESULT_PATH = 1;
   public static int RESULT_FILENAME = 2;
 
-  public static Optional<String> getPathToIndex() throws CrosscuttingsException {
+  public static String getPathToIndex() throws CrosscuttingsException {
       String pathToIndex = Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(ImmutableAppConfigurator.getPathToAppFolder(), getIndexName());
-      return Optional.of(pathToIndex);
+          .join(
+              ImmutableAppConfigurator.getPathToAppFolder(),
+              getIndexName());
+      return pathToIndex;
   }
 
   // @precond: разделители пути как в linux - '/'

@@ -26,15 +26,18 @@ final public class ImmutableBaseCoursor {
   public static Optional<List<String>> getListNodes() {
     try {
       String pathToTmpFolder =
-        Joiner.on(AppConstants.PATH_SPLITTER).join(
-          ImmutableProcessorTargets.getPathToIndex().get(),
-          AppConstants.TMP_FOLDER);
+        Joiner.on(AppConstants.PATH_SPLITTER)
+            .join(
+                ImmutableProcessorTargets.getPathToIndex(),
+                AppConstants.TMP_FOLDER);
 
       // Получаем список узлов по папкам, а на по заданиям
-      File rootTmp = new File(pathToTmpFolder);
-      List<String> listNodes = new ArrayList<String>(Arrays.asList(rootTmp.list()));
+      File root = new File(pathToTmpFolder);
+      List<String> listNodes = new ArrayList<String>(Arrays.asList(root.list()));
       return Optional.of(listNodes);
     } catch (CrosscuttingsException e)  {
+       // Обработка ошибки сжимается до проверки результата на ноль.
+       // Потом в логах можно посмотреть что конкретно случилось.
        return Optional.absent();
     }
   }
