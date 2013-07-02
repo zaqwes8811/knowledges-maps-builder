@@ -1029,17 +1029,16 @@ Dear Sir (adj)
 Oh dear! (int)
 debit (n & v)
 debt (n)
-large debts
-in debt
+• large debts
+• in debt
 decide (v)
 decimal (adj & n)
 decision (n)
 decision-making (n)
 declare (v)
 decline (n & v)
-There’s been a sharp decline in
-sales of the MK2 model. (n)
-Profits declined sharply. (v)
+• There’s been a sharp decline in sales of the MK2 model. (n)
+• Profits declined sharply. (v)
 decrease (n & v)
 deduct (v)
 deep (adj & adv)
@@ -1744,41 +1743,32 @@ ladder?
 Did you manage to get all the
 notes down?
 get in (phr v)
-Can visitors get in through the staff
-entrance?
+• Can visitors get in through the staff entrance?
 get into/out of (phr v)
-She got into/out of the taxi.
+• She got into/out of the taxi.
 get off (phr v)
-We get off at the next stop.
+• We get off at the next stop.
 get on (phr v)
-How is the business getting on?
-Get your coat on and then we can
-leave.
+• How is the business getting on?
+• Get your coat on and then we can leave.
 get on with (phr v)
-How are you getting on with the
-report?
-Do you get on well with your
-colleagues?
+• How are you getting on with thereport?
+• Do you get on well with your colleagues?
 get rid of (phr v)
-• Could you get rid of these old
-files?
+• Could you get rid of these old files?
 get up (phr v)
-What time did you get up this
-morning?
+• What time did you get up this morning?
 gift (n)
 gift voucher (n)
 girl (n)
 give (v)
 give in (phr v)
-Have you given in last month’s
-sales figures yet?
-He gave in to their demands.
+• Have you given in last month’s sales figures yet?
+• He gave in to their demands.
 give out (phr v)
-Will you give out these papers for
-me, please?
+• Will you give out these papers for me, please?
 give up (phr v)
-David is planning to give up his job
-and go freelance.
+• David is planning to give up his job and go freelance.
 glad (adj)
 glance (n & v)
 I’ve glanced at the figures. (v)
@@ -2486,19 +2476,16 @@ long-term/long term (adj & n)
 • a long-term strategy (adj)
 look (n & v)
 look after (phr v)
-Who’s looking after the packaging?
+• Who’s looking after the packaging?
 look ahead (phr v)
 look forward to (phr v)
-I look forward to seeing you.
+• I look forward to seeing you.
 look like (phr v)
-The new model looks just like the
-old one.
+• The new model looks just like the old one.
 look out (phr v)
-Look out or you’ll have an
-accident.
+• Look out or you’ll have an accident.
 look up (phr v)
-Look up the meaning of the word
-in the dictionary.
+• Look up the meaning of the word in the dictionary.
 loose (adj)
 lorry (n)
 lose (v)
@@ -2588,19 +2575,16 @@ margin (n)
 profit margin
 mark (n & v)
 market (n & v)
-There’s a good market for fax
-machines here. (n)
-She bought some flowers from the
-market. (n)
-They marketed their goods
-overseas. (v)
+• There’s a good market for fax machines here. (n)
+• She bought some flowers from the market. (n)
+• They marketed their goods overseas. (v)
 market leader (n)
 market research (n)
 market share (n)
 market value (n)
 marketplace (n)
 marketing (n)
-I’ve applied for a job in marketing.
+• I’ve applied for a job in marketing.
 married (adj)
 mass (adj)
 mass market (n)
@@ -2609,18 +2593,15 @@ mass-produce (v)
 mass production (n)
 master (v)
 match (n & v)
-The agency matches staff to
-vacancies. (v)
-It’s important to find a job which
-matches your skills. (v)
-The two companies in the merger
-are a good match. (n)
+• The agency matches staff to vacancies. (v)
+• It’s important to find a job which matches your skills. (v)
+• The two companies in the merger are a good match. (n)
 mate (n)
-a workmate
+• a workmate
 material (n)
-training material(s)
-construction materials
-raw materials
+• training material(s)
+• construction materials
+• raw materials
 mathematics (n)
 maths (abbrev) mathematics
 matter (n & v)
@@ -2635,43 +2616,18 @@ max (abbrev) maximum
 maximum (adj & n)
 may (v)
 maybe (adv)
-MBA (abbrev) Masters in Business
- Administration
+MBA (abbrev) Masters in Business Administration
 MD (abbrev) Managing Director (n)
 me (pron)
 meal (n)
 mean (v)
-What do you mean?
-What does it mean?
+• What do you mean?
+• What does it mean?
 meaning (n)
 means (n)
-BEC Preliminary Wordlist 25
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-Use whatever means you like but
-sell the product.
+• Use whatever means you like but sell the product.
 measure (v)
-measure the length of something
+• measure the length of something
 mechanic (n)
 media (n)
 medicine (n)
@@ -2736,12 +2692,11 @@ misunderstand (v)
 mix (n & v)
 mixture (n)
 mobile (adj & n)
-I need a new mobile (phone).
-He isn’t mobile at the moment.
+• I need a new mobile (phone).
+• He isn’t mobile at the moment.
 model (adj & n)
-It’s cheap because it’s last year’s
-model. (n)
-She’s a model employee. (adj)
+• It’s cheap because it’s last year’s model. (n)
+• She’s a model employee. (adj)
 modern (adj)
 moment (n)
 money (n)
@@ -2757,10 +2712,9 @@ motorbike (n)
 motorcycle (n)
 motorway (n)
 mountain (n)
-a mountain of paperwork
+• a mountain of paperwork
 mouse (n)
-The mouse on my computer isn’t
-working.
+• The mouse on my computer isn’t working.
 move (n & v)
 movie (Am Eng) (n)
 mph (abbrev) miles per hour
@@ -2777,9 +2731,6 @@ musician (n)
 must (v)
 my (pron & adj)
 myself (pron)
-BEC Preliminary Wordlist 26
-© UCLES 2006
-
 N (abbrev) north
 name (n & v)
 narrow (adj)
@@ -2894,8 +2845,6 @@ on time (prep phr)
 once (adv or adj)
 one (n & pron)
 one-way (adj)
-BEC Preliminary Wordlist 27
-© UCLES 2006
 oneself (pron)
 online/on-line (adv & adj)
 only (adj & adv)
@@ -2903,15 +2852,8 @@ onto (prep)
 open (adj & v)
 opening hours (n)
 operate (v)
-•
-•
-•
-•
-•
-They operate from an old
-warehouse.
-Shall I show you how to operate
-the machine?
+• They operate from an old warehouse.
+• Shall I show you how to operate the machine?
 operation (n)
 opinion (n)
 opportunity (n)
@@ -3024,12 +2966,9 @@ perform (v)
 performance (n)
 • a strong performance on the stock market perhaps (adv)
 period (n)
-I will be away for the whole period
-of her visit.
-The period before the break has
-been cancelled.
-the beginning/middle/whole/end of
-the period
+• I will be away for the whole period of her visit.
+• The period before the break has been cancelled.
+• the beginning/middle/whole/end of the period
 permanent (adj)
 permission (n)
 permit (v & n)
@@ -3060,36 +2999,31 @@ piece (n)
 pile (n & v)
 pilot (n)
 pin (n & v)
-drawing pins (n)
-pin something to the notice-board.
-(v)
+• drawing pins (n)
+• pin something to the notice-board.(v)
 pipe (n)
-a water pipe
+• a water pipe
 pity (n)
-What a pity!
+• What a pity!
 place (n & v)
 plain (adj)
-It’s plain to me.
-plain blue
+• It’s plain to me.
+• plain blue
 plan (n & v)
 plane (n)
 planning (n)
 plant (n & v)
-The firm has made huge
-investment in new plant. (n)
-A strike at the new manufacturing
-plant held up production. (n)
-Farmers need to plant crops this
-month. (v)
+• The firm has made huge investment in new plant. (n)
+• A strike at the new manufacturing plant held up production. (n)
+• Farmers need to plant crops this month. (v)
 plastic (adj & n)
 platform (n)
 play (n & v)
 plc (abbrev) public limited company
 pleasant (adj)
 please (int & v)
-Come in, please. (int)
-He tried hard to please his boss.
-(v)
+• Come in, please. (int)
+• He tried hard to please his boss. • (v)
 pleasure (n)
 plenty (adj & pron)
 plug (n)
@@ -3206,7 +3140,7 @@ proper (adj)
 property (n)
 proportion (n)
 proposal (n)
-We all listened to her proposal.
+• We all listened to her proposal.
 propose (v)
 propose an idea
 protect (v)
@@ -3231,41 +3165,15 @@ punish (v)
 pupil (n)
 purchase (n & v)
 pure (adj)
-BEC Preliminary Wordlist 30
-© UCLES 2006
 purpose (n & adj)
 push (n & v)
 put (v)
 put away (phr v)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-Put the file away before you leave.
+• Put the file away before you leave.
 put back (phr v)
-The meeting was put back until
-Wednesday.
+• The meeting was put back until Wednesday.
 put down (phr v)
-She put her name down for the
-conference.
+• She put her name down for the conference.
 put off (phr v)
 • Let’s put the meeting off until next week.
 put on (phr v)
