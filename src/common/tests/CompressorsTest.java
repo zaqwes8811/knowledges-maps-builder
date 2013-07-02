@@ -1,6 +1,6 @@
-package nlp;
+package common.tests;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import common.ImmutableAppUtils;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import org.junit.Test;

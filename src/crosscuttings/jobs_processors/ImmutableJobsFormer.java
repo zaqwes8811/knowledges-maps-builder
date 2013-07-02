@@ -23,8 +23,9 @@ import java.util.List;
 final public class ImmutableJobsFormer {
   public static final int IDX_NODE_NAME = 0;
   public static final int IDX_FILENAME = 1;
-
+  /*
   public static List<List<String>> getJobs() {
+
     List<List<String>> jobs = new ArrayList<List<String>>();
     //
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
@@ -38,5 +39,5 @@ final public class ImmutableJobsFormer {
       jobs.add(Arrays.asList(node, contentFilename));
     }
     return jobs;
-  }
+  }  */
 }

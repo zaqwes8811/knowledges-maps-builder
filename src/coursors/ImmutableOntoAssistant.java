@@ -15,7 +15,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class ImmutableOntoAssistant {
-
+  /*
 
   static public void main(String [] args) {
     StringBuilder result = new StringBuilder();
@@ -47,4 +47,5 @@ public class ImmutableOntoAssistant {
       // Частота, стем, остатки
 
   }
+  */
 }

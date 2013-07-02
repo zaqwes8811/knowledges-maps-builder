@@ -1,6 +1,7 @@
 package crosscuttings.jobs_processors;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
@@ -20,43 +21,17 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 29.04.13
- * Time: 21:10
- * To change this template use File | Settings | File Templates.
- *
  * Обработка задания для индекса. Индексов может быть несколько, и заданий может быть несколько.
  * Задание - результат работы краулера
  */
+
+
 
 // TODO(zaqwes): Как убрать боковые пробелы из строки без сплиттера и джоинера?
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
 final public class ImmutableProcessorTargets {
-  public static String getPathToIndex() {
-    String pathToIndex = "";
-    try {
-      // Получаем путь к папке приложения
-      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
-
-      // Получаем имя индекса
-      String idxName = getIndexName();
-      pathToIndex = pathToAppFolder+'/'+idxName;
-    } catch (CrosscuttingsException e) {
-      System.out.println(e.getMessage());
-    }
-    return pathToIndex;
-  }
-  /**
-   * @param msg - начало периода
-   //* @throws IllegalArgument – если начало периода указано после конца
-   * @throws NullPointerException – если начало или конец периода нулевые
-   */
-  public static void print(Object msg) {
-    System.out.println(msg);
-  }
   public final static int NODE_NAME = 0;
   public static int INDEX_URL = 1;
 
@@ -64,6 +39,12 @@ final public class ImmutableProcessorTargets {
   public static int RESULT_NODE_NAME = 0;
   public static int RESULT_PATH = 1;
   public static int RESULT_FILENAME = 2;
+
+  public static Optional<String> getPathToIndex() throws CrosscuttingsException {
+      String pathToIndex = Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(ImmutableAppConfigurator.getPathToAppFolder(), getIndexName());
+      return Optional.of(pathToIndex);
+  }
 
   // @precond: разделители пути как в linux - '/'
   //

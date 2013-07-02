@@ -9,6 +9,7 @@ import java.util.Map;
 
 // Делает комплексные выборки данных
 public final class ImmutableDataExtractor {
+  /*
   static List<String> get_ww80_list(String node) {
     Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
     List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
@@ -49,6 +50,6 @@ public final class ImmutableDataExtractor {
     }
     return null;
   }
-
+    */
 
 }

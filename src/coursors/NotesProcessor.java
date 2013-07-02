@@ -5,11 +5,12 @@ import com.google.common.collect.Multiset;
 import common.ImmutableAppUtils;
 import common.utils;
 import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.CrosscuttingsException;
+import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import mapreduce.ImmutableReduceSentencesLevel;
+//import mapreduce.ImmutableReduceSentencesLevel;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -21,6 +22,7 @@ public class NotesProcessor {
   static public final String NOTE_N20_COUNT = "w20_p";  // Core
   static public final String NOTE_N80_COUNT = "w80";
 
+  /*
   static public String json_get_notes_for_node(String node) {
     return new Gson().toJson(get_notes_for_node(node));
   }
@@ -73,9 +75,9 @@ public class NotesProcessor {
     String record = Joiner.on(";")
         .join(
           node,
-          info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
-          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
-          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
+          //info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
+          //info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
+          //info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
@@ -84,7 +86,9 @@ public class NotesProcessor {
   }
 
   public static List<String> get_urls_and_langs_node(String node){
-    // Путь к мета-файлу
+    try {
+
+   // Путь к мета-файлу
     String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
         ImmutableProcessorTargets.getPathToIndex(),
@@ -102,8 +106,12 @@ public class NotesProcessor {
     for (List<String> item: metadata) {
       String record = "Source url: "+item.get(0)+" Language: "+item.get(1);
       info.add(record);
+
     }
-    return info;
+      return info;
+    }  catch (CrosscuttingsException e) {
+      return null;  // bad!!
+    }
   }
 
 
@@ -131,13 +139,13 @@ public class NotesProcessor {
     }
 
     // пишем результат
-    /*try {
+    / *try {
       utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           "rpts",
           "real_notes.csv"));
     } catch (IOException e) {
       e.printStackTrace();
-    }*/
-  }
+    }* /
+  } */
 }

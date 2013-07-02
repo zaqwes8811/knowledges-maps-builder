@@ -36,10 +36,8 @@ final public class ImmutableAppConfigurator {
         closer.close();
       }
     } catch (FileNotFoundException e) {
-      e.printStackTrace();
       throw new CrosscuttingsException("File with cfg, no found. File name - "+fullCfgFilename);
     } catch (IOException e) {
-      e.printStackTrace();
       throw new CrosscuttingsException("Error on read file - "+fullCfgFilename);
     }
   }

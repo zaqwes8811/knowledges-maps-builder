@@ -8,7 +8,7 @@ import com.google.gson.reflect.TypeToken;
 import common.ImmutableAppUtils;
 import common.utils;
 import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import java.util.Map;
 import coursors.NotesProcessor;
 
 final public class ImmutableIdxGetters {
-
+ /*
   // Получаем пересечение индексов
   static void get_confluence_idx() {
     Multiset<String> confluence_idx = HashMultiset.create();
@@ -147,5 +147,5 @@ final public class ImmutableIdxGetters {
     utils.print(filtered_sorted_idx.size());
     //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
     //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
-  }
+  } */
 }

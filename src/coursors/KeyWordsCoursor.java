@@ -5,7 +5,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Multiset;
 import common.utils;
 import crosscuttings.AppConstants;
-import mapreduce.ImmutableReduceSentencesLevel;
+//import mapreduce.ImmutableReduceSentencesLevel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class KeyWordsCoursor {
   }
   public static void main(String [] args) {
     // Need read nodes
-    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    /*List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     // Получаем индекс-пересечеие
     HashMap<String, HashMap<String, String>>  notes = ImmutableIdxGetters.get_static_notes();
@@ -114,5 +114,6 @@ public class KeyWordsCoursor {
     }
     //Multiset<String> confluence_idx = ImmutableIdxGetters.get_confluence_idx();
     // rpt
+    */
   }
 }

@@ -1,6 +1,6 @@
-package com.github.zaqwes8811.text_processor.crosscuttings;
+package crosscuttings;
 
-import jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;
@@ -18,8 +18,8 @@ public class ProcessorTargetsTest {
     String spiderTargetFname = "apps/targets/spider_extractor_target";
     try {
       List<List<String>> listTargets = ImmutableProcessorTargets.runParser(spiderTargetFname);
-      for (List<String> target : listTargets)
-        ImmutableProcessorTargets.print(target);
+      //for (List<String> target : listTargets)
+      //  ImmutableProcessorTargets.print(target);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }

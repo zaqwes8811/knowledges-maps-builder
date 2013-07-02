@@ -1,6 +1,6 @@
-package nlp;
+package common.tests;
 
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
+import common.ImmutableAppUtils;
 import com.google.common.base.Splitter;
 import org.junit.Test;
 

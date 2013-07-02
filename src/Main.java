@@ -1,6 +1,18 @@
+import com.google.common.base.Optional;
+import common.utils;
+import coursors.ImmutableBaseCoursor;
+
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+      // Получаем список узлов индекса
+      Optional<List<String>> nodes = ImmutableBaseCoursor.getListNodes();
+      if (nodes.isPresent()) {
+        utils.print(nodes.isPresent());
+      } else {
+        utils.print("Bad is happened.");
+      }
     }
 }
