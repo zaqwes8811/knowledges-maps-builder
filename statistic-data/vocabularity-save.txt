@@ -1051,7 +1051,7 @@ defence (n)
 defend (v)
 definite (adj)
 degree (n)
-90 degrees
+• 90 degrees
 (have) a degree in
 delay (n & v)
 delegate (n & v)
@@ -1063,16 +1063,15 @@ delivery (n)
 demand (n & v)
 demonstrate (v)
 demonstration (n)
-demonstration in support of
-someone/something
-a demonstration of a new product
+• demonstration in support of someone/something
+• a demonstration of a new product
 deny (v)
 dep (abbrev) depart(s)
 depart (v)
 department store (n)
 departure (n)
 depend (v)
-It depends on what you want to do.
+• It depends on what you want to do.
 deposit (n & v)
 pay a deposit (n)
 deposit money in an account (v)
@@ -3283,18 +3282,15 @@ put down (phr v)
 She put her name down for the
 conference.
 put off (phr v)
-Let’s put the meeting off until next
-week.
+• Let’s put the meeting off until next week.
 put on (phr v)
-Could you put on the light?
+• Could you put on the light?
 put out (phr v)
-He put out the light.
+• He put out the light.
 put through (phr v)
-• Could you put me through to the
-Finance Director?
+• Could you put me through to the Finance Director?
 put up (phr v)
-Petrol companies are putting up
-their prices next week.
+• Petrol companies are putting up their prices next week.
 
 qualification (n)
 qualify (v)
@@ -3316,13 +3312,10 @@ quiet (adj)
 quite (adv)
 quiz (n)
 quotation (n)
-• The quotation is higher than
-expected. (n)
+• The quotation is higher than expected. (n)
 quote (n & v)
-Could you quote me a price for
-printing 1,000 brochures? (v)
-The quote hasn’t come in yet. (n)
-
+• Could you quote me a price for printing 1,000 brochures? (v)
+• The quote hasn’t come in yet. (n)
 race (n & v)
 radio (n)
 rail (n)
