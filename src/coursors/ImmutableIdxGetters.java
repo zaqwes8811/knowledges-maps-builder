@@ -1,6 +1,7 @@
 package coursors;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
@@ -8,6 +9,7 @@ import com.google.gson.reflect.TypeToken;
 import common.ImmutableAppUtils;
 import common.utils;
 import crosscuttings.AppConstants;
+import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 
 import java.lang.reflect.Type;
@@ -85,32 +87,43 @@ final public class ImmutableIdxGetters {
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
   }
-
-  static public HashMap<String, Integer> get_freq_idx(String node) {
-    String sorted_freq_idx_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
-          node,
-          AppConstants.FREQ_IDX_FILENAME));
-    return (new Gson().fromJson(sorted_freq_idx_json,
-      new TypeToken<HashMap<String, Integer>>() {}.getType()));
+   */
+  static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
+    try {
+      String sorted_freq_idx_json = utils.file2string(
+        Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(
+            ImmutableProcessorTargets.getPathToIndex(),
+            AppConstants.COMPRESSED_IDX_FOLDER,
+            node,
+            AppConstants.FREQ_IDX_FILENAME));
+      HashMap<String, Integer> freqIdx = (new Gson().fromJson(sorted_freq_idx_json,
+          new TypeToken<HashMap<String, Integer>>() {}.getType()));
+      return Optional.of(freqIdx);
+    } catch (CrosscuttingsException e) {
+      return Optional.absent();
+    }
   }
 
-  static public List<String> get_sorted_idx(String node) {
-    utils.print(node);
-    String sorted_idx_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
-          node,
-          AppConstants.SORTED_IDX_FILENAME));
-    return (new Gson().fromJson(sorted_idx_json,
-      new TypeToken<ArrayList<String>>() {}.getType()));
+  static public Optional<List<String>> getSortedIdx(String node) {
+    try {
+      String sorted_idx_json = utils.file2string(
+        Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(
+            ImmutableProcessorTargets.getPathToIndex(),
+            AppConstants.COMPRESSED_IDX_FOLDER,
+            node,
+            AppConstants.SORTED_IDX_FILENAME));
+
+      List<String> sorted_idx_cash = (new Gson().fromJson(sorted_idx_json,
+        new TypeToken<ArrayList<String>>() {}.getType()));
+      return Optional.of(sorted_idx_cash);
+    } catch (CrosscuttingsException e) {
+      return Optional.absent();
+    }
   }
 
+  /*
   static public HashMap<String, HashMap<String, String>>  get_static_notes() {
     String metadata_static_notes_json = utils.file2string(
       Joiner.on(AppConstants.PATH_SPLITTER)
