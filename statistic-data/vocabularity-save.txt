@@ -478,7 +478,6 @@ by post (prep phr)
 by sea (prep phr)
 by sight (prep phr)
 by train (prep phr)
-
 °C (abbrev) Centigrade, Celsius
 c (abbrev) cents
 c (abbrev) circa
@@ -768,8 +767,6 @@ congratulations (n & int)
 connect (v)
 connecting (flight) (adj)
 connection (n)
-BEC Preliminary Wordlist 11
-© UCLES 2006
 conservative (adj)
 consider (v)
 consignment (n)
@@ -970,35 +967,12 @@ departure (n)
 depend (v)
 • It depends on what you want to do.
 deposit (n & v)
-pay a deposit (n)
-deposit money in an account (v)
-BEC Preliminary Wordlist 13
-© UCLES 2006
+• pay a deposit (n)
+• deposit money in an account (v)
 depressed (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a depressed area/industry
+• a depressed area/industry
 depression (n)
-economic depression
+• economic depression
 Dept (abbrev) department
 depth (n)
 describe (v)
@@ -1038,29 +1012,29 @@ direct debit (n)
 direct mail (n)
 direct marketing (n)
 direction (n)
-walk in the wrong direction
-read the directions on the box
+• walk in the wrong direction
+• read the directions on the box
 directory (n)
-a telephone directory
+• a telephone directory
 disabled (adj & n)
-lifts for disabled people (adj)
-the disabled (n)
+• lifts for disabled people (adj)
+• the disabled (n)
 disappoint (v)
 discount (n & v)
 discover (v)
 discuss (v)
 discussion (n)
 disc/disk (n)
-compact disc
-hard disk
-floppy disk
+• compact disc
+• hard disk
+• floppy disk
 disk drive (n)
 dislike (n & v)
 dismiss (v)
 dispatch (n & v)
 display (n & v)
-It was a good display. (n)
-She displayed her work. (v)
+• It was a good display. (n)
+• She displayed her work. (v)
 distance (n)
 distant (adj)
 distribute (v)
@@ -1149,7 +1123,7 @@ eat (v)
 e-commerce (n)
 economic (adj)
 economic growth
-the economic situation
+• the economic situation
 economical (adj)
 economics (n)
 economy (n)
@@ -1285,7 +1259,7 @@ express (adj & v)
 • express an interest in (v)
 extend (v)
 extension (n)
-What is your extension number?
+• What is your extension number?
 external (adj)
 extra (adj & adv)
 extraordinary (adj)
@@ -1580,13 +1554,13 @@ goodbye (int)
 goods (n pl)
 govern (v)
 grade (n & v)
-We need high grade oil. (n)
-What grade is the job? (n)
-Staff were re-graded. (v)
+• We need high grade oil. (n)
+• What grade is the job? (n)
+• Staff were re-graded. (v)
 gradual (adj)
 graduate (n & v)
-He’s a maths graduate. (n)
-She graduated in 2001. (v)
+• He’s a maths graduate. (n)
+• She graduated in 2001. (v)
 graduation (n)
 gram(me) (n)
 grammar (n)
@@ -1748,7 +1722,6 @@ human (n & adj)
 hundred (n)
 hurry (n & v)
 hr (abbrev) hour
-
 I (pron)
 ice (n)
 idea (n)
@@ -1849,7 +1822,7 @@ inspection (n)
 install (v)
 installation (n)
 instalment (n)
-by instalments
+• by instalments
 instalment plan
 instance (n)
 instead (adv)
@@ -1898,47 +1871,15 @@ item (n)
 • The first item will be a discussion of the recent sales figures.
 its (pron)
 itself (pron)
-
 jealous (adj)
 jet (plane) (n)
-BEC Preliminary Wordlist 22
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-go by jet
+• go by jet
 job (n)
 job description (n)
 job satisfaction (n)
 job security (n)
 join (v)
-I joined the company last year.
+• I joined the company last year.
 joint (adj)
 joint venture
 joke (n)
@@ -1951,12 +1892,11 @@ jump (n & v)
 • Share prices have jumped by 200%. (v)
 junction (n)
 just (adv)
-
 keen (adj)
-I’m not keen on the new product.
-He’s keen to increase sales.
+• I’m not keen on the new product.
+• He’s keen to increase sales.
 keep (v)
-Costs keep rising.
+• Costs keep rising.
 keep on (phr v)
 • They kept on advertising even though profits were falling.
 keep up (phr v)
@@ -1969,16 +1909,15 @@ key to success (n)
 key in (phr v)
 • She keyed in the data very quickly.
 keyboard (n)
-computer keyboard
+• computer keyboard
 kg (abbrev) kilogram
 kilo/kilogram/kilogramme (n)
 km (abbrev) kilometer/kilometre
 kilometre (n)
 kph (abbrev) kilometres per hour
 kind (adj & n)
-My boss is a very kind person.
-(adj)
-What kind of work do you do? (n)
+• My boss is a very kind person. (adj)
+• What kind of work do you do? (n)
 kiosk (n)
 kitchen (n)
 knock (n & v)
@@ -1986,7 +1925,6 @@ knock down (phr v)
 • They knocked down the building to make way for the new road.
 know (v)
 knowledge (n)
-
 label (n & v)
 lab (abbrev) laboratory
 laboratory (n)
@@ -1995,7 +1933,7 @@ labour (n)
 • the labour market
 lack (n & v)
 ladder (n)
-career ladder
+• career ladder
 lady (n)
 • Ladies and Gentlemen…
 lamp (n)
@@ -2096,10 +2034,10 @@ litre (n)
 little (adj & pron)
 live (v & adj)
 living (adj)
-cost of living
+• cost of living
 load (n & v)
-The load was heavy. (n)
-Load the goods onto the lorry. (v)
+• The load was heavy. (n)
+• Load the goods onto the lorry. (v)
 loan (n)
 local (adj)
 locate (v)
@@ -2132,41 +2070,11 @@ lost property (n)
 lot (n)
 loud (adj)
 lounge (n)
-BEC Preliminary Wordlist 24
-© UCLES 2006
 love (n & v)
 low (adj, n & adv)
 lower (v)
 loyal (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-loyal staff
+• loyal staff
 loyalty (n)
 • customer loyalty
 luck (n)
@@ -2174,7 +2082,6 @@ luggage (n)
 lunch (n)
 lunchtime (n)
 luxury (n & adj)
-
 m (abbrev) metre
 MA (abbrev) Masters degree
 machine (n)
@@ -2200,8 +2107,8 @@ make up (n & v)
 male (adj & n)
 man (n)
 manage (v)
-manage a business
-manage to do something
+• manage a business
+• manage to do something
 managerial (adj)
 managing director (MD) (n)
 manner (n)
@@ -2210,7 +2117,7 @@ manufacture (n & v)
 many (adj & pron)
 map (n)
 margin (n)
-profit margin
+• profit margin
 mark (n & v)
 market (n & v)
 • There’s a good market for fax machines here. (n)
@@ -2243,13 +2150,13 @@ material (n)
 mathematics (n)
 maths (abbrev) mathematics
 matter (n & v)
-Is anything the matter? (n)
-It doesn’t matter. (v)
+• Is anything the matter? (n)
+• It doesn’t matter. (v)
 mature (adj)
-mature attitude
-mature student
-mature investment
-mature sector of the market
+• mature attitude
+• mature student
+• mature investment
+• mature sector of the market
 max (abbrev) maximum
 maximum (adj & n)
 may (v)
@@ -2381,15 +2288,7 @@ neat (adj)
 necessary (adj)
 need (n & v)
 negative (adj)
-•
 neighbourhood (n)
-•
-•
-•
-•
-•
-•
-•
 negative attitude
 negotiable (adj)
 negotiate (v)
@@ -2398,11 +2297,10 @@ neighbour (n)
 neither (adj & pron)
 nervous (adj)
 net (n & adj)
-have a net income of £20,000 a
-year (adj)
+• have a net income of £20,000 a year (adj)
 network (v & n)
-to network computers (v)
-a computer network (n)
+• to network computers (v)
+• a computer network (n)
 network of agents (n)
 networking (n)
 never (adv)
@@ -2423,8 +2321,8 @@ nobody (n & pron)
 noise (n)
 none (n, adj & pron)
 nor (conj)
-neither management nor workers
-Nor do I.
+• neither management nor workers
+• Nor do I.
 normal (adj)
 north (adj, adv, & n)
 north east (adj & n )
@@ -2445,7 +2343,6 @@ nr (abbrev) near
 nuclear (adj)
 number (n)
 nylon (adj & n)
-
 o’clock (adj & adv)
 object (n & v)
 objective (n)
@@ -2534,7 +2431,6 @@ overtime (n)
 owe (v)
 own (adj & v)
 own brand (n)
-
 p (abbrev) pence
 PA (abbrev) Personal Assistant
 pa (abbrev) per annum
@@ -2566,7 +2462,7 @@ participant (n)
 participate (v)
 participation (n)
 particular (adj)
-a particular problem
+• a particular problem
 partner (n)
 party (n)
 pass (n & v)
@@ -2586,8 +2482,6 @@ peak (n & v)
 pen (n)
 pence (n)
 pencil (n)
-BEC Preliminary Wordlist 28
-© UCLES 2006
 pension (n)
 people (n pl)
 per (prep)
@@ -2661,7 +2555,7 @@ please (int & v)
 pleasure (n)
 plenty (adj & pron)
 plug (n)
-electric plug
+• electric plug
 plug in (phr v)
 • The photocopier isn’t plugged in.
 plus (conj)
@@ -2730,10 +2624,10 @@ previous (adj)
 price (n & v)
 price list (n)
 primary (adj)
-of primary importance
+• of primary importance
 prime minister (n)
 principal (n & adj)
-college principal (n)
+• college principal (n)
 principal activity (adj)
 print (n & v)
 printout (n)
@@ -2818,7 +2712,6 @@ put through (phr v)
 • Could you put me through to the Finance Director?
 put up (phr v)
 • Petrol companies are putting up their prices next week.
-
 qualification (n)
 qualify (v)
 qualify as an accountant
@@ -2870,7 +2763,7 @@ reason (n)
 receipt (n)
 receive (v)
 receiver (n)
-telephone receiver
+• telephone receiver
 recent (adj)
 reception (n)
 • reception desk in a hotel or an office
@@ -2892,29 +2785,17 @@ recovery (n)
 recruit (n & v)
 rectangular
 red (adj & n)
-in the red
-BEC Preliminary Wordlist 31
-© UCLES 2006
+• in the red
 reduce (v)
 reduction (n)
 redundant (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-make someone redundant
+• make someone redundant
 ref (abbrev) with reference to
 refer (v)
 refer to something
 reference (n)
-a reference to something
-references from a previous
-employer
+• a reference to something
+• references from a previous employer
 refreshment(s) (n)
 refrigerator (n)
 refund (v & n)
@@ -2933,14 +2814,14 @@ regulations (n pl)
 reject (v)
 rejection (n)
 relation (n)
-industrial relations
-public relations
+• industrial relations
+• public relations
 relax (v)
 relevant (adj)
 reliable (adj)
 reliability (n)
 relief (n)
-What a relief!
+• What a relief!
 relocate (v)
 relocation (n)
 rely (v)
@@ -3015,7 +2896,6 @@ routine (n)
 row (n)
 • the figure is in the end row of the column.
 RSVP (abbrev) please reply
-
 rubber (adj & n)
 rubbish (n)
 ruin (n & v)
@@ -3023,7 +2903,6 @@ rule (n & v)
 run (v)
 run out of (phr v)
 • We’ve run out of paper for the printer.
-
 S (abbrev) south
 sad (adj)
 SAE (abbrev) stamped addressed
@@ -3041,9 +2920,9 @@ satisfied (adj)
 save (v)
 say (v)
 scale (n)
-salary scale
-large-scale
-small-scale
+• salary scale
+• large-scale
+• small-scale
 schedule (n & v)
 scheme (n)
 • training scheme
@@ -3093,7 +2972,7 @@ selling price (n)
 seminar (n)
 send (v)
 send for (v)
-send for something
+• send for something
 senior (adj)
 sensible (adj)
 sentence (n)
@@ -3104,7 +2983,7 @@ separate (adj & v)
 series (n)
 serious (adj)
 servant (n)
-civil servant
+• civil servant
 serve (v )
 • The bank serves the interests of its customers.
 • The rail network serves every region of the country.
@@ -3118,40 +2997,16 @@ services (n pl)
 customer services
 set off (phr v)
 set off for work
-
 set out (phr v)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-set out on a journey
+• set out on a journey
 set up (phr v)
-set up a business
+• set up a business
 settle (v)
-feel settled in a job
-settle an account
+• feel settled in a job
+• settle an account
 several (adj)
 sex (n)
-the male/female sex
+• the male/female sex
 shake (n & v)
 shall (v)
 shallow (adj)
@@ -3165,13 +3020,13 @@ shareholder (n)
 shares (n & pl)
 shares in the company
 sharp (adj)
-sharp image
-a sharp rise/drop
+• sharp image
+• a sharp rise/drop
 she (pron)
 sheet (n)
 shelf (n)
 shift (n)
-night shift
+• night shift
 shift work(er)
 shine (v)
 ship (n & v)
@@ -3191,8 +3046,8 @@ shy (adj)
 sick (adj)
 side (n)
 sight (n)
-in sight, out of sight
-tourist sights
+• in sight, out of sight
+• tourist sights
 sightseeing (n)
 sign (n & v)
 • a traffic sign, a sign on a wall (n)
@@ -3201,7 +3056,7 @@ sign (n & v)
 signal (n & v)
 signature (n)
 significant (adj)
-a significant rise
+• a significant rise
 signpost (n)
 silence (n)
 silent (adj)
@@ -3210,7 +3065,7 @@ silver (n & adj)
 similar (adj)
 simple (adj)
 simple food
-a simple exercise
+• a simple exercise
 since (conj & prep)
 sincerely (adv)
 single (n & adj)
@@ -3250,8 +3105,6 @@ solid (adj)
 • a solid cylinder
 solution (n)
 solve (v)
-BEC Preliminary Wordlist 34
-© UCLES 2006
 some (adj & adv)
 somebody (n & pron)
 someone (n & pron)
@@ -3327,7 +3180,7 @@ station (n)
 stationery (n)
 statistics (n)
 stay (n & v)
-stay behind (phr v)
+• stay behind (phr v)
 • He stayed behind to finish the report.
 steady (adj)
 steal (v)
@@ -3340,7 +3193,7 @@ step (n & v)
 • step up the career ladder (v)
 still (adv)
 stock (n & v)
-Stock Exchange (n)
+• Stock Exchange (n)
 stocks (n)
 • stocks and shares
 stone (n)
@@ -3430,12 +3283,10 @@ swing (n & v)
 • The door swung shut. (v)
 switch (n & v)
 system (n)
-
 table (n)
 take (v)
 take away (phr v)
 • Take 15 away from 78.
-
 take off (phr v)
 • She took off her jacket.
 • The plane took off on time.
@@ -3547,8 +3398,6 @@ time (n)
 timetable (n & v)
 tin (n)
 tin-opener (n)
-BEC Preliminary Wordlist 37
-© UCLES 2006
 tiny (adj)
 tip (n)
 tired (adj)
@@ -3634,7 +3483,6 @@ type (n & v)
 typewriter (n)
 typical (adj)
 typist (n)
-
 ugly (adj)
 under (prep)
 underground (adj & n)
@@ -3651,8 +3499,6 @@ universe (n)
 university (n)
 unleaded (adj)
 unless (conj)
-BEC Preliminary Wordlist 38
-© UCLES 2006
 until (prep)
 up (adv & prep)
 up-to-date/up to date (adj & adv)
@@ -3667,7 +3513,6 @@ us (pron)
 use (n & v)
 used to (v)
 usual (adj)
-
 vacancy (n)
 vacation (n)
 valid (adj)
@@ -3686,7 +3531,7 @@ venue (n)
 very (adj & adv)
 victory (n)
 video (n & v)
-video recorder (n)
+• video recorder (n)
 videotape (n)
 view (n)
 village (n)
@@ -3699,7 +3544,6 @@ voice (n)
 volume (n)
 vote (n & v)
 voyage (n)
-
 W (abbrev) west
 wage(s) (n)
 wait (n & v)
@@ -3760,8 +3604,6 @@ whereas (conj)
 whether (conj)
 which (pron)
 while (conj)
-BEC Preliminary Wordlist 39
-© UCLES 2006
 whiteboard (n)
 who, whom (pron)
 whole (adj)
@@ -3775,7 +3617,7 @@ will (v)
 willing (adj)
 win (n & v)
 window (n)
-window display (n)
+• window display (n)
 wing (n)
 • the wing of an aeroplane
 wire (n)
@@ -3816,8 +3658,6 @@ write down (phr v)
 write out (phr v)
 • I’ll write it out again.
 wrong (adj)
-
-
 yard (n)
 yd (abbrev) yard
 year (n)
@@ -3831,6 +3671,5 @@ yours (pron)
 yourself (pron)
 youth (n)
 yr (abbrev) year
-
 zero (n)
 zone (n)
