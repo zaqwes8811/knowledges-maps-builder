@@ -91,8 +91,6 @@ agency (n)
 • Let’s use an advertising agency.
 agenda (n)
 agent (n)
-BEC Preliminary Wordlist 4
-© UCLES 2006
 • I’ve been to the travel agent to book a flight to Hong Kong.
 • He’s our agent in Japan.
 ago (adv)
@@ -250,7 +248,6 @@ aware (adj)
 away (adv)
 • The MD’s away on business until Thursday.
 • He threw away the documents by mistake.
-
 back (adv & n)
 • When are you going back to work? (adv)
 • I gave back the laptop I had borrowed. (adv)
@@ -312,8 +309,7 @@ beg (v)
 • I begged her not to resign.
 begin (v)
 behave (v)
-• He always behaves in a
-professional manner.
+• He always behaves in a professional manner.
 behaviour (n)
 behind (prep & adv)
 believe (v)
@@ -337,25 +333,21 @@ biography (n)
 birth (n)
 • What’s her date of birth? (n)
 black (adj)
-• The company ended the year in
-the black. (n)
-• The true size of the black economy
-cannot be known. (adj)
+• The company ended the year in the black. (n)
+• The true size of the black economy cannot be known. (adj)
 blame (n & v)
 blank (adj & n)
 • I need a blank piece of paper. (adj)
-• Write the correct word in each
-blank. (n)
+• Write the correct word in each blank. (n)
 blank cheque (n)
 blind (n)
 • The blind needs repairing.
 block (n)
 • It’s opposite the office block on the corner.
 blow up (phr v)
-The gas heater blew up.
+• The gas heater blew up.
 blue (adj)
-• There’s been a decline in the
-number of blue-collar workers.
+• There’s been a decline in the number of blue-collar workers.
 board (n & v)
 • a noticeboard, a wooden board (n)
 • on board a ship/aircraft (n)
@@ -371,8 +363,7 @@ bold (adj)
 bonus (n)
 • an annual bonus
 book (n & v)
-• I’m reading a book on marketing at
-the moment. (n)
+• I’m reading a book on marketing at the moment. (n)
 • We’d better book a flight. (v)
 bookcase (n)
 bookkeeping (n)
@@ -384,8 +375,6 @@ boost (n & v)
 boot (n)
 • My cases are in the boot of the car.
 border (n & v)
-BEC Preliminary Wordlist 7
-© UCLES 2006
 bored (adj)
 boring (adj)
 born (adj)
@@ -396,8 +385,7 @@ bottom (n & adj)
 • at the bottom of the page (n)
 • the bottom left-hand corner (adj)
 box (n)
-• I ordered three boxes of floppy
-disks.
+• I ordered three boxes of floppy disks.
 • Tick the box.
 brain (n)
 branch (n)
@@ -412,8 +400,7 @@ break (n & v)
 • What time shall we break for lunch? (v)
 break down (n & phr v)
 • Could you let me have a breakdown of last month’s sales figures? (n)
-• The packing machine has broken
-down. (phr v)
+• The packing machine has broken down. (phr v)
 break in (n & phr v)
 • Someone broke in to the factory
 and stole some equipment. (phr v)
@@ -446,8 +433,7 @@ bug (n)
 build (v)
 building (n)
 bulk (n)
-• Bulk purchasing has allowed us to
-cut costs.
+• Bulk purchasing has allowed us to cut costs.
 bullet (n & v)
 • a bullet point (n)
 • Bullet point this list for the meeting.
@@ -1476,56 +1462,34 @@ first (adj, adv, n & pron)
 to the mistake. (pron)
 • Could you do the filing first? (adv)
 fit (adj & v)
-• He fitted into the team very well.
-(v)
-• Her main business was a keep-fit
-centre. (adj)
+• He fitted into the team very well. (v)
+• Her main business was a keep-fit centre. (adj)
 fitness (n & adj)
 • fitness centre (n)
 • health and fitness sector (n)
 fix (v)
 • Could you fix the shelf to the wall?
-• She managed to fix the broken
-photocopier.
-BEC Preliminary Wordlist 17
-© UCLES 2006
-• My PA has fixed a date for the
-meeting.
+• She managed to fix the broken photocopier.
+• My PA has fixed a date for the meeting.
 fixed cost (n)
 fixed-term contract (n)
 flag (n)
 flat (adj & n)
 fleet (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a fleet of trucks/cars/ships
+• a fleet of trucks/cars/ships
 flexible (adj)
 flexibility (n)
 flight (n)
-direct flight
-non-stop flight
+• direct flight
+• non-stop flight
 flip chart (n)
 float (v)
-float a new company/shares
+• float a new company/shares
 flood (n & v)
 floor (n)
 floppy disk (n)
 flotation (n)
-flotation on the Stock Exchange
+• flotation on the Stock Exchange
 flowchart (n)
 fluctuate (v)
 fluctuation (n)
@@ -1534,27 +1498,23 @@ focus (n & v)
 fold (n & v)
 follow (v)
 following (adj & prep)
-• The following people are needed
-at the presentation. (adj)
-• Following the meeting, he made
-changes to the report. (prep)
+• The following people are needed at the presentation. (adj)
+• Following the meeting, he made changes to the report. (prep)
 fond (adj)
 food (n)
-Food is becoming more expensive.
-The fast-food sector is growing.
+• Food is becoming more expensive.
+• The fast-food sector is growing.
 foot/feet (n)
-six foot/feet tall
-at the foot of the page
+• six foot/feet tall
+• at the foot of the page
 for (prep)
 forbid (v)
 force (n & v)
 • market forces (n)
 • I was forced to resign. (v)
 forecast (n & v)
-• We forecast a growth in this
-sector. (v)
-• The sales forecast is very positive.
-(n)
+• We forecast a growth in this sector. (v)
+• The sales forecast is very positive. (n)
 foreign (adj)
 foreign currency (n)
 foreign exchange (n)
@@ -1564,9 +1524,9 @@ forget (v)
 forgetful (adj)
 forgive (v)
 form (n & v)
-fill in a form (n)
-order form (n)
-to form a company (v)
+• fill in a form (n)
+• order form (n)
+• to form a company (v)
 formal (adj)
 former (adj)
 fortnight (n)
@@ -1581,8 +1541,8 @@ free sample (n)
 free trade (n)
 freelance (adj & v)
 freeze (n & v)
-a price freeze (n)
-to freeze prices (v)
+• a price freeze (n)
+• to freeze prices (v)
 freight (n & v)
 frequent (adj)
 fresh (adj)
@@ -1603,7 +1563,6 @@ funny (adj)
 furnish (v)
 furniture (n)
 future (adj & n)
-
 gain (n & v)
 gallery (n)
 an art gallery
@@ -1612,50 +1571,8 @@ game (n)
 gap (n)
 garage (n)
 gas (n)
-She works as an engineer in the oil
-and gas industry.
-BEC Preliminary Wordlist 18
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-Could you put some gas in the
-car? (Am Eng)
+• She works as an engineer in the oil and gas industry.
+• Could you put some gas in the car? (Am Eng)
 gate (n)
 general (adj)
 generous (adj)
@@ -1666,17 +1583,14 @@ genuine (adj)
 geography (n)
 get (v)
 get along with (phr v)
-I get along quite well with my boss.
+• I get along quite well with my boss.
 get around (phr v)
-We’ve got around that problem.
+• We’ve got around that problem.
 get back (phr v)
-When did you get back from New
-York?
+• When did you get back from New York?
 get down (phr v)
-Can you get down from the
-ladder?
-Did you manage to get all the
-notes down?
+• Can you get down from the ladder?
+• Did you manage to get all the notes down?
 get in (phr v)
 • Can visitors get in through the staff entrance?
 get into/out of (phr v)
@@ -1942,10 +1856,10 @@ hill (n)
 him (pron)
 himself (pron)
 hire (n & v)
-hire a car (v)
-for hire (n)
-a ‘hire and fire’ approach (n)
-hire more staff (v)
+• hire a car (v)
+• for hire (n)
+• a ‘hire and fire’ approach (n)
+• hire more staff (v)
 his (adj & pron)
 history (n)
 hit (n & v)
@@ -1954,10 +1868,8 @@ hit (n & v)
 hobby (n)
 hold (v)
 hold up (n & phr v)
-• He was held up in heavy traffic for
-over two hours. (phr v)
-• There was a hold-up at customs.
-(n)
+• He was held up in heavy traffic for over two hours. (phr v)
+• There was a hold-up at customs. (n)
 hole (n)
 holiday (n)
 home (adv & n)
@@ -2029,8 +1941,6 @@ in order to (prep phr)
 in pencil (prep phr)
 in pieces (prep phr)
 in place (prep phr)
-BEC Preliminary Wordlist 21
-© UCLES 2006
 in private (prep phr)
 in public (prep phr)
 in secret (prep phr)
@@ -2052,21 +1962,7 @@ increase (n & v)
 indeed (adv)
 independent (adj)
 index (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-index of a book
+• index of a book
 indicate (v)
 indication (n)
 individual (adj & n)
@@ -2074,13 +1970,11 @@ indoor (adj)
 indoors (adv)
 industrial (adj)
 industry (n)
-the steel industry
+• the steel industry
 inflation (n)
 influence (n & v)
-She was a bad influence on the
-other staff. (n)
-Her first boss greatly influenced
-her. (v)
+• She was a bad influence on the other staff. (n)
+• Her first boss greatly influenced her. (v)
 inform (v)
 information (n)
 informal (adj)
@@ -2136,19 +2030,17 @@ invite (v)
 invoice (n & v)
 involve (v)
 iron (n)
-made of iron
+• made of iron
 island (n)
 issue (n & v)
-issue of a magazine (n)
-issues about pay (n)
-to issue a statement (v)
+• issue of a magazine (n)
+• issues about pay (n)
+• to issue a statement (v)
 IT (abbrev) Information Technology
 it (pron)
 item (n)
-Several items were damaged
-during transportation.
-The first item will be a discussion
-of the recent sales figures.
+• Several items were damaged during transportation.
+• The first item will be a discussion of the recent sales figures.
 its (pron)
 itself (pron)
 
@@ -2200,10 +2092,8 @@ journalist (n)
 journey (n)
 judge (n & v)
 jump (n & v)
-There’s been a big jump in
-prices. (n)
-Share prices have jumped by
-200%. (v)
+• There’s been a big jump in prices. (n)
+• Share prices have jumped by 200%. (v)
 junction (n)
 just (adv)
 
@@ -2213,16 +2103,14 @@ He’s keen to increase sales.
 keep (v)
 Costs keep rising.
 keep on (phr v)
-They kept on advertising even
-though profits were falling.
+• They kept on advertising even though profits were falling.
 keep up (phr v)
-Keep up the good work!
-He has to keep up with new
-technological developments.
+• Keep up the good work!
+• He has to keep up with new technological developments.
 key (n & adj)
 key to a lock (n)
 key to success (n)
-This is a key post. (adj)
+• This is a key post. (adj)
 key in (phr v)
 • She keyed in the data very quickly.
 keyboard (n)
@@ -2240,8 +2128,7 @@ kiosk (n)
 kitchen (n)
 knock (n & v)
 knock down (phr v)
-They knocked down the building to
-make way for the new road.
+• They knocked down the building to make way for the new road.
 know (v)
 knowledge (n)
 
@@ -2249,13 +2136,13 @@ label (n & v)
 lab (abbrev) laboratory
 laboratory (n)
 labour (n)
-manual labour
-the labour market
+• manual labour
+• the labour market
 lack (n & v)
 ladder (n)
 career ladder
 lady (n)
-Ladies and Gentlemen…
+• Ladies and Gentlemen…
 lamp (n)
 land (n & v)
 landlady (n)
@@ -2271,12 +2158,10 @@ late (adj)
 later (adv)
 laugh (n & v)
 launch (v & n)
-The company is holding a product
-launch for the XPL2. (n)
-We are launching a new service.
-(v)
+• The company is holding a product launch for the XPL2. (n)
+• We are launching a new service.(v)
 laundry (n)
-The hotel has a laundry service.
+• The hotel has a laundry service.
 lavatory (n)
 law (n)
 lawyer (n)
@@ -2342,14 +2227,13 @@ likely (adj)
 limit (n & v)
 limited company (Ltd.) (n)
 line (n)
-the production line
-lines on a page
-railway line
-line manager (n)
+• the production line
+• lines on a page
+• railway line
+• line manager (n)
 link (n & v)
 • internet link (n)
-• The computers are linked to a
-server. (v)
+• The computers are linked to a server. (v)
 liquid (n & adj)
 list (n & v)
 listen (v)
