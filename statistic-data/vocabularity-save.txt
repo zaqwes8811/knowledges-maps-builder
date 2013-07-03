@@ -2282,58 +2282,26 @@ law (n)
 lawyer (n)
 lay (v)
 layout (n)
-office layout
-page layout
+• office layout
+• page layout
 lazy (adj)
 lb (abbrev) pound weight
 lead (v)
-Where does this road lead?
-We lead the market in computer
-games.
+• Where does this road lead?
+• We lead the market in computer games.
 leader (n)
-BEC Preliminary Wordlist 23
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-J & K Electrics are the market
-leaders.
+• J & K Electrics are the market leaders.
 leadership (n)
 leading (adj)
-a leading brand
+• a leading brand
 leaflet (n)
 learn (v)
 least (adj & adv)
-the least amount (adj)
-at least (adv)
+• the least amount (adj)
+• at least (adv)
 leave (n & v)
 leave out (phr v)
-He left out several important facts
-from his report.
+• He left out several important facts from his report.
 lecture (n & v)
 left (n, adj & adv)
 legal (adj)
@@ -2344,34 +2312,30 @@ length (n)
 less (adj, adv & pron)
 lesson (n)
 let (v)
-Her boss wouldn’t let her attend
-the conference.
-I’m going to let my house for six
-months.
+• Her boss wouldn’t let her attend the conference.
+• I’m going to let my house for six months.
 let’s (v)
-Let’s finish the meeting early.
+• Let’s finish the meeting early.
 letter (n)
 letter-box (n)
 level (adj & n)
 level off (phr v)
-Growth in the economy has
-levelled off.
+• Growth in the economy has levelled off.
 level out (phr v)
-Sales have started to level out.
+• Sales have started to level out.
 liberal (adj)
-a liberal style of management
+• a liberal style of management
 library (n)
 licence (n)
-an export licence
+• an export licence
 lie (n & v)
 life (n)
-shelf life
+• shelf life
 lifestyle (n)
 lift (n & v)
-Can you give me a lift, please? (n)
-The lift is going up. (n)
-Please help me lift this package.
-(v)
+• Can you give me a lift, please? (n)
+• The lift is going up. (n)
+• Please help me lift this package.(v)
 light (adj, n & v)
 like (prep & v)
 likely (adj)
@@ -2568,27 +2532,25 @@ media (n)
 medicine (n)
 medium (adj)
 meet (v)
-Could we meet on Thursday
-morning?
-Pleased to meet you!
-Are we meeting the needs of
-consumers?
+• Could we meet on Thursday morning?
+• Pleased to meet you!
+• Are we meeting the needs of consumers?
 member (n)
 membership (n)
 memo (abbrev) memorandum
 memorandum (n)
 memory (n)
-have a good/poor memory
-computer memory
+• have a good/poor memory
+• computer memory
 mend (v)
-mend a faulty machine
+• mend a faulty machine
 mention (n & v)
 menu (n)
 merge (v)
 message (n)
 metal (n)
 method (n)
-production methods
+• production methods
 metre (n)
 microphone (n)
 midday (n)
@@ -2601,12 +2563,10 @@ mild (adj)
 mile (n)
 millimetre (n)
 mind (n & v)
-His mind was on other things. (n)
-Would you mind if I postponed the
-meeting? (v)
-Who’s minding the machine for
-you? (v)
-Mind your head! (v)
+• His mind was on other things. (n)
+• Would you mind if I postponed the meeting? (v)
+• Who’s minding the machine for you? (v)
+• Mind your head! (v)
 mine (pron)
 mineral (adj)
 mineral water (n)
@@ -2617,7 +2577,7 @@ minus (conj)
 min (abbrev) minute
 minute (n)
 minutes (n & pl)
-the minutes of the meeting
+• the minutes of the meeting
 misc (abbrev) miscellaneous
 miscellaneous (adj)
 miserable (adj)
@@ -3174,23 +3134,21 @@ receiver (n)
 telephone receiver
 recent (adj)
 reception (n)
-reception desk in a hotel or an
-office
-a business reception for delegates
+• reception desk in a hotel or an office
+• a business reception for delegates
 receptionist (n)
 reclaim (v)
 recognise (v)
 recommend (v)
 recommendation (n)
 record (n, adj & v)
-a record of the meeting (n)
-record profits (adj)
-record your comments (v)
+• a record of the meeting (n)
+• record profits (adj)
+• record your comments (v)
 recorder (n)
-a cassette recorder
+• a cassette recorder
 recover (v)
-Have you recovered from the long
-flight?
+• Have you recovered from the long flight?
 recovery (n)
 recruit (n & v)
 rectangular
@@ -3400,13 +3358,10 @@ send for something
 senior (adj)
 sensible (adj)
 sentence (n)
-Can you translate this sentence
-into German?
+• Can you translate this sentence into German?
 separate (adj & v)
-Can you separate these for me?
-(v)
-They work in separate offices.
-(adj)
+• Can you separate these for me?(v)
+• They work in separate offices.(adj)
 series (n)
 serious (adj)
 servant (n)
