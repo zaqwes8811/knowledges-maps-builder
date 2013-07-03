@@ -2,8 +2,8 @@ a.m. (before noon)
 abbreviation 
 ability 
 able  @ able to go
-about (adj & prep) @ The company has about 500 employees.  @ The report is about share prices. 
-above (adj & prep)
+about  @ The company has about 500 employees.  @ The report is about share prices. 
+above 
 abroad 
 absence 
 absent 
@@ -84,8 +84,8 @@ airmail
 airplane 
 airport 
 alarm  @ The bank installed a new security alarm.
-alike (adv & adj) @ They think alike.  @ The two products are very alike. 
-all (adj, adv, det & pron)
+alike  @ They think alike.  @ The two products are very alike. 
+all 
 allow 
 allowance  @ holiday allowance
 almost 
@@ -94,7 +94,7 @@ along
 aloud 
 alphabet 
 already 
-alright (adv/adj)
+alright 
 also 
 alternative 
 although 
@@ -157,7 +157,7 @@ arrival
 arrive 
 art  @ The company buys and sells work of art.
 article  @ The newspaper article criticised the company.
-as (adv & conj)
+as 
 ASAP  as soon as possible
 ashamed 
 ask 
@@ -513,7 +513,7 @@ combine
 come 
 come down  @ Computers have come down in price recently.
 comfort 
-command (n & n ) @ command a high price  @ issue a command 
+command  @ command a high price  @ issue a command 
 comment 
 commerce 
 commercial  @ a television commercial  @ a commercial organisation 
@@ -555,7 +555,7 @@ confidential
 confirm  @ confirm an order
 confirmation  @ waiting for a confirmation of an
 order
-congratulations (n & int)
+congratulations 
 connect 
 connecting (flight) 
 connection 
@@ -763,7 +763,7 @@ door-to-door
 dotted line  @ Sign on the dotted line, please.
 double  @ Please book a double room.  @ Inflation doubled last year. 
 doubt 
-down (adj, adv & prep) @ Our computer system’s down.  @ Sales of all our products are down.  @ Prices have gone down.  @ His office is down the corridor on the left. 
+down  @ Our computer system’s down.  @ Sales of all our products are down.  @ Prices have gone down.  @ His office is down the corridor on the left. 
 downstairs 
 downturn 
 downward 
@@ -782,7 +782,7 @@ drug(s)  @ a multinational drugs company
 dry 
 dry cleaning 
 DTP  desktop publishing
-due (adv & adj) @ The next payment is due in five days.  @ due to rising costs  @ due date  @ The plane is due at…  @ The train is due to arrive. 
+due  @ The next payment is due in five days.  @ due to rising costs  @ due date  @ The plane is due at…  @ The train is due to arrive. 
 due to (prep phrase) @ The fall in sales was due to the difficult economic climate.
 dull 
 duplicate 
@@ -1009,7 +1009,7 @@ fly
 focus 
 fold 
 follow 
-following (adj & prep) @ The following people are needed at the presentation.  @ Following the meeting, he made changes to the report. 
+following  @ The following people are needed at the presentation.  @ Following the meeting, he made changes to the report. 
 fond 
 food  @ Food is becoming more expensive. @ The fast-food sector is growing.
 foot/feet  @ six foot/feet tall @ at the foot of the page
@@ -1653,13 +1653,12 @@ Mrs
 Ms 
 much 
 multinational 
-multiply 
-multiply 14 by 2
+multiply @ multiply 14 by 2
 music 
 musical 
 musician 
 must 
-my (pron & adj)
+my 
 myself 
 N  north
 name 
@@ -1703,13 +1702,13 @@ nil
 no 
 no.  number 
 no one 
-nobody (n & pron)
+nobody 
 noise 
-none (n, adj & pron)
+none 
 nor  @ neither management nor workers @ Nor do I.
 normal 
-north (adj, adv, & n)
-north east (adj & n )
+north 
+north east 
 north west 
 not/n’t 
 not at all 
@@ -1717,7 +1716,7 @@ note
 notebook 
 notepad 
 notepaper 
-nothing (n & pron)
+nothing 
 notice 
 notice-board 
 now 
@@ -1745,7 +1744,7 @@ often
 OHP  overhead projector
 OHT  overhead transparency
 oil 
-OK/O.K./okay (int, adj & adv)
+OK/O.K./okay 
 old 
 omit 
 on 
@@ -1757,11 +1756,11 @@ on foot
 on holiday 
 on sale 
 on time 
-once (adv or adj)
-one (n & pron)
+once 
+one 
 one-way 
 oneself 
-online/on-line (adv & adj)
+online/on-line 
 only 
 onto 
 open 
@@ -1771,10 +1770,10 @@ operation
 opinion 
 opportunity 
 oppose 
-opposite (adj, n & prep)
+opposite 
 option 
 or 
-order (conj, n & v)
+order 
 order form 
 ordinary 
 organisation 
@@ -1798,7 +1797,7 @@ outdoor
 outdoors 
 outlet 
 output 
-outside (adv, n & prep)
+outside 
 oval 
 over 
 overall 
@@ -1849,7 +1848,7 @@ party
 pass  @ security pass 
 passenger 
 passport 
-past (adj, n & prep)
+past 
 path 
 patient 
 pattern 
@@ -1913,7 +1912,7 @@ platform
 play 
 plc  public limited company
 pleasant 
-please (int & v) @ Come in, please.  @ He tried hard to please his boss. @ 
+please  @ Come in, please.  @ He tried hard to please his boss. @ 
 pleasure 
 plenty 
 plug  @ electric plug
@@ -2108,7 +2107,7 @@ reclaim
 recognise 
 recommend 
 recommendation 
-record (n, adj & v) @ a record of the meeting  @ record profits  @ record your comments 
+record  @ a record of the meeting  @ record profits  @ record your comments 
 recorder  @ a cassette recorder
 recover  @ Have you recovered from the long flight?
 recovery 
@@ -2159,7 +2158,7 @@ reorganisation
 rep  representative
 repair 
 repay 
-repeat (n, v & adj)
+repeat 
 replace 
 reply 
 report 
@@ -2212,7 +2211,7 @@ role
 roof 
 room 
 rough 
-round (adj, adv & prep)
+round 
 roundabout 
 route 
 routine 
@@ -2229,9 +2228,9 @@ sad
 SAE  stamped addressed
 envelope
 safe 
-safety (n )
+safety 
 salary 
-sale (n )
+sale 
 sales 
 same 
 sample 
@@ -2347,7 +2346,7 @@ silver
 similar 
 simple 
 simple food @ a simple exercise
-since (conj & prep)
+since 
 sincerely 
 single 
 Sir 
@@ -2371,7 +2370,7 @@ smile
 smoke 
 smooth 
 snack 
-so (adv & conj)
+so 
 so that 
 so-so 
 social 
@@ -2383,9 +2382,9 @@ solid  @ solid fuel @ a solid cylinder
 solution 
 solve 
 some 
-somebody (n & pron)
-someone (n & pron)
-something (n & pron)
+somebody 
+someone 
+something 
 sometimes 
 somewhere 
 soon 
@@ -2498,7 +2497,7 @@ surcharge
 sure 
 surname 
 surplus 
-surprise (n, v & adj)
+surprise 
 survey 
 sweep 
 swing  @ There has been a swing in public opinion.  @ The door swung shut. 
@@ -2556,7 +2555,7 @@ than
 thank 
 thank you 
 thanks 
-that (adj, conj & pron)
+that 
 the (det)
 theatre  @ Let’s take the visitors to the theatre.
 their 
@@ -2565,7 +2564,7 @@ them
 themselves 
 then 
 theory 
-there (adv & pron) @ Put it over there, please.  @ There are two photocopiers in our office. 
+there  @ Put it over there, please.  @ There are two photocopiers in our office. 
 therefore 
 thermometer 
 these 
@@ -2590,7 +2589,7 @@ tidy
 tie  @ a shirt and tie  @ tied with string 
 tiger  @ tiger economy
 tight 
-till (conj & prep)
+till 
 time 
 timetable 
 tin 
@@ -2734,7 +2733,7 @@ warehouse
 warm 
 warn 
 wash 
-waste ( adj, v & n)
+waste 
 wastepaper (basket/bin) 
 watch 
 water 
@@ -2765,9 +2764,9 @@ wet
 what 
 whatever 
 wheel 
-when (adv & conj)
+when 
 whenever 
-where (adv & conj)
+where 
 whereas 
 whether 
 which 
@@ -2778,7 +2777,7 @@ whole
 wholesale 
 wholesaler 
 whose 
-why (adv & conj)
+why 
 wide 
 width 
 will 
