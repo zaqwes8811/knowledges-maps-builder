@@ -1101,66 +1101,43 @@ documentary (adj & n)
 documentation (n)
 dollar (n)
 domestic (adj)
-Domestic sales are down.
-Domestic appliances are the
-company’s most profitable line.
+• Domestic sales are down.
+• Domestic appliances are the company’s most profitable line.
 door (n)
 door-to-door (adj)
 dotted line (n)
-Sign on the dotted line, please.
+• Sign on the dotted line, please.
 double (adj & v)
-Please book a double room. (adj)
-Inflation doubled last year. (v)
+• Please book a double room. (adj)
+• Inflation doubled last year. (v)
 doubt (n & v)
 down (adj, adv & prep)
-• Our computer system’s down.
-(adv)
-• Sales of all our products are down.
-(adj)
+• Our computer system’s down. (adv)
+• Sales of all our products are down. (adj)
 • Prices have gone down. (adv)
-• His office is down the corridor on
-the left. (prep)
+• His office is down the corridor on the left. (prep)
 downstairs (adv)
 downturn (n)
 downward (adj)
 dozen (n)
 drama (n)
 dramatic (adj)
-a dramatic increase
-a dramatic rise
+• a dramatic increase
+• a dramatic rise
 dramatically (adv)
-Sales increased dramatically.
-BEC Preliminary Wordlist 14
-© UCLES 2006
+• Sales increased dramatically.
 draw (v)
 drawer (n)
 dream (n & v)
 dress (n & v)
 drink (n & v)
 drive (n & v)
-driving licence (n)
+• driving licence (n)
 drop (n & v)
-There’s been a big drop in the
-number of workers. (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-You’ve dropped your papers. (v)
+• There’s been a big drop in the number of workers. (n)
+• You’ve dropped your papers. (v)
 drug(s) (n)
-a multinational drugs company
+• a multinational drugs company
 dry (adj & v)
 dry cleaning (n)
 DTP (abbrev) desktop publishing
@@ -1171,20 +1148,19 @@ due (adv & adj)
 • The plane is due at… (adv)
 • The train is due to arrive. (adj)
 due to (prep phrase)
-• The fall in sales was due to the
-difficult economic climate.
+• The fall in sales was due to the difficult economic climate.
 dull (adj)
 duplicate (n & v)
 during (prep)
 duty (n)
-pay duty on imported goods
-duty-free goods
-office duties
+• pay duty on imported goods
+• duty-free goods
+• office duties
 DVD (n)
-
 E (abbrev) east
-each (adj & pron) • I have a business engagement on
-that day. (n) eager (adj)
+each (adj & pron) 
+• I have a business engagement on that day. (n) 
+eager (adj)
 early (adj & adv)
 go to work early (adv)
 in the early 1990s (adj)
@@ -1324,10 +1300,8 @@ expensive (adj)
 experience (n)
 experienced (adj)
 experiment (n & v)
-• The experiment was interesting.
-(n)
-• They experimented with new
-materials. (v)
+• The experiment was interesting. (n)
+• They experimented with new materials. (v)
 explain (v)
 explode (v)
 export (n & v)
@@ -1389,8 +1363,7 @@ fashion (n)
 fast (adj & adv)
 fasten (v)
 fault (n)
-• It’s John’s fault that the report is
-late.
+• It’s John’s fault that the report is late.
 • There’s a technical fault.
 favourite (adj & n)
 fax (n & v)
@@ -1437,19 +1410,14 @@ financial advisor (n)
 financial year (n)
 find (v)
 find out (phr v)
-• I must find out when Mr Tanaka is
-arriving.
+• I must find out when Mr Tanaka is arriving.
 fine (adj, n & v)
 finish (n & v)
 fire (n & v)
-• Fire completely destroyed an old
-warehouse. (n)
-• There was a small fire at the
-factory. (n)
-• The company has a ‘hire and fire’
-approach. (n)
-• He was fired for not meeting sales
-targets. (v)
+• Fire completely destroyed an old warehouse. (n)
+• There was a small fire at the factory. (n)
+• The company has a ‘hire and fire’ approach. (n)
+• He was fired for not meeting sales targets. (v)
 fire alarm (n)
 firm (adj & n)
 • a firm offer (adj)
@@ -1458,8 +1426,7 @@ first (adj, adv, n & pron)
 • Fill in your first name. (adj)
 • first aid (n)
 • first of all (adv)
-• He was the first to draw attention
-to the mistake. (pron)
+• He was the first to draw attention to the mistake. (pron)
 • Could you do the filing first? (adv)
 fit (adj & v)
 • He fitted into the team very well. (v)
@@ -1620,37 +1587,34 @@ give up (phr v)
 • David is planning to give up his job and go freelance.
 glad (adj)
 glance (n & v)
-I’ve glanced at the figures. (v)
+• I’ve glanced at the figures. (v)
 glass (n & adj)
 glasses (n pl)
 global (adj)
-global market
+• global market
 go (v)
 go down (phr v)
-Sales went down last year.
+• Sales went down last year.
 go for (phr v)
-He went for the job.
+• He went for the job.
 go off (phr v)
-He went off to work in Australia.
-Suddenly the lights went off.
-The alarm went off.
+• He went off to work in Australia.
+• Suddenly the lights went off.
+• The alarm went off.
 go on (phr v)
-The meeting went on until six
-o’clock.
-What’s going on?
-The lights suddenly went on.
+• The meeting went on until six o’clock.
+• What’s going on?
+• The lights suddenly went on.
 go out (phr v)
-The fire has gone out.
-We’re going out with a new client
-this evening.
+• The fire has gone out.
+• We’re going out with a new client this evening.
 go with (phr v)
-• The new colours don’t go with our
-company image.
+• The new colours don’t go with our company image.
 goal (n)
 • career goals
 gold (adj & n)
-gold watch (adj)
-made of gold (n)
+• gold watch (adj)
+• made of gold (n)
 good (adj)
 goodbye (int)
 goods (n pl)
@@ -1667,75 +1631,29 @@ graduation (n)
 gram(me) (n)
 grammar (n)
 grant (n & v)
-He was given a grant to study new
-management methods. (n)
-The MD granted his request to
-attend the conference. (v)
-BEC Preliminary Wordlist 19
-© UCLES 2006
+• He was given a grant to study new management methods. (n)
+• The MD granted his request to attend the conference. (v)
 graph (n)
 graphics (n)
 grateful (adj)
 great (adj)
 green (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a green policy
+• a green policy
 greet (v)
 grey (adj)
-a grey area
-the grey economy
+• a grey area
+• the grey economy
 gross (adj)
-a gross profit
-gross weight
+• a gross profit
+• gross weight
 ground (adj & n)
 group (n & v)
-The group was large. (n)
-Trainees are grouped together for
-discussion activities. (v)
+• The group was large. (n)
+• Trainees are grouped together for discussion activities. (v)
 grow (v)
-Profits grew very quickly last year.
-It’s a fast-growing company.
-They wanted to grow their
-company/business/profits/sales.
+• Profits grew very quickly last year.
+• It’s a fast-growing company.
+• They wanted to grow their company/business/profits/sales.
 growth (n)
 guarantee (n & v)
 guard (n & v)
@@ -1743,70 +1661,59 @@ guess (n & v)
 guest (n)
 guest-house (n)
 guide (n & v)
-He has experience as a tour
-guide. (n)
-I’ll guide you around the factory.
-(v)
+• He has experience as a tour guide. (n)
+• I’ll guide you around the factory. (v)
 guilty (adj)
 gymnasium (n)
-
 habit (n)
 hair (n)
 half (adj, adv & n)
 hall (n)
 hallo/hello (exclam)
 hand (n & v)
-shake hands (n)
-He handed the book to her. (v)
-second-hand
-on hand
-in hand
-by hand
-to hand
+• shake hands (n)
+• He handed the book to her. (v)
+• second-hand
+• on hand
+• in hand
+• by hand
+• to hand
 hand in (phr v)
-Could you hand in your report
-tomorrow.
+• Could you hand in your report tomorrow.
 hand out (phr v)
-Can you hand out the minutes of
-the last meeting?
+• Can you hand out the minutes of the last meeting?
 handbag (n)
 handbook (n)
 handle (n & v)
-The door handle is broken. (n)
-The goods were damaged
-because they were handled
-roughly. (v)
-She handles telephone enquiries.
-(v)
-He handled the situation badly. (v)
+• The door handle is broken. (n)
+• The goods were damaged because they were handled roughly. (v)
+• She handles telephone enquiries.(v)
+• He handled the situation badly. (v)
 handwriting (n)
 hang (v)
-He decided to hang the calendar
-on the wall.
+• He decided to hang the calendar on the wall.
 hang up (phr v)
-She hung up at the end of the
-phone call.
+• She hung up at the end of the phone call.
 happen (v)
 happy (adj)
 harbour (n)
-The harbour is being extended due
-to an increase in shipping.
+• The harbour is being extended due to an increase in shipping.
 hard (adj & adv)
 hardly (adv)
-There was hardly any time.
-He could hardly wait.
+• There was hardly any time.
+• He could hardly wait.
 hardware (n)
 hardware store
-computer hardware
+• computer hardware
 hate (v)
 have (v)
 have got (v)
 have to (v)
 he (pron)
 head (n & v)
-at the head of the company (n)
-the head of marketing (n)
-head a team/group (v)
+• at the head of the company (n)
+• the head of marketing (n)
+• head a team/group (v)
 headgear (n)
 head office (n)
 headline (n)
@@ -1815,16 +1722,13 @@ health (n)
 health and safety (n)
 hear (v)
 heart (n)
-in the heart of the city
-the heart of the problem
+• in the heart of the city
+• the heart of the problem
 heat (n & v)
-Water retains heat longer than air.
-(n)
-The market is overheated. (v)
+• Water retains heat longer than air.(n)
+• The market is overheated. (v)
 heating (n)
 heavy (adj)
-BEC Preliminary Wordlist 20
-© UCLES 2006
 height (n)
 helicopter (n)
 hello/hallo (exclam)
@@ -1838,17 +1742,8 @@ herself (pron)
 hi-fi (n)
 hi(gh)-tec(h) (adj)
 hidden (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-hidden agenda
-hidden profits
+• hidden agenda
+• hidden profits
 hide (v)
 high (adj, adv & n)
 highway (n) (Am Eng)
