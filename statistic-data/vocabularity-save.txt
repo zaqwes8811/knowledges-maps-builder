@@ -402,10 +402,8 @@ break down (n & phr v)
 • Could you let me have a breakdown of last month’s sales figures? (n)
 • The packing machine has broken down. (phr v)
 break in (n & phr v)
-• Someone broke in to the factory
-and stole some equipment. (phr v)
-• There was a break-in at the
-company’s head office. (n)
+• Someone broke in to the factory and stole some equipment. (phr v)
+• There was a break-in at the company’s head office. (n)
 break up (phr v)
 • The Lexford Group was broken up into smaller companies.
 • The glass bottles are broken up before entering the recycling machine.
@@ -436,11 +434,9 @@ bulk (n)
 • Bulk purchasing has allowed us to cut costs.
 bullet (n & v)
 • a bullet point (n)
-• Bullet point this list for the meeting.
-(v)
+• Bullet point this list for the meeting. (v)
 bureau (n)
-• I’ll get some dollars from the
-foreign exchange bureau.
+• I’ll get some dollars from the foreign exchange bureau.
 burglar (n)
 burglary (n)
 bus (n)
@@ -462,8 +458,7 @@ business school (n)
 busy (adj)
 but (conj)
 button (n)
-• The on/off button isn’t working
-properly.
+• The on/off button isn’t working properly.
 buy (n & v)
 • We bought 300 files. (v)
 • It was a good buy. (n)
@@ -473,8 +468,6 @@ by accident (prep phr)
 by air (prep phr)
 by all means (prep phr)
 by car (prep phr)
-BEC Preliminary Wordlist 8
-© UCLES 2006
 by day (prep phr)
 by hand (prep phr)
 by land (prep phr)
@@ -500,30 +493,24 @@ calculate (v)
 calculator (n)
 calendar (n)
 call (n & v)
-• There was a phone call for you.
-• (n)
+• There was a phone call for you.(n)
 • What’s this product called? (v)
-• Mr Khan called you this morning.
-(v)
+• Mr Khan called you this morning. (v)
 call for (phr v)
 • I’ll call for you at 3 p.m.
 call in (phr v)
-• I’ll call in and see you next time I’m
-in town.
+• I’ll call in and see you next time I’m in town.
 callbox (n)
 call centre (n)
 calm (adj)
 camera (n)
 campaign (n & v)
-• The advertising campaign was
-very successful. (n)
-• The staff campaigned for better
-working conditions. (v)
+• The advertising campaign was very successful. (n)
+• The staff campaigned for better working conditions. (v)
 can (n & v)
 • a can of coca-cola (n)
 • Can I go now? (v)
-• He can speak Japanese very well.
-(v)
+• He can speak Japanese very well. (v)
 canal (n)
 cancel (v)
 cancellation (n)
@@ -543,8 +530,7 @@ card (n)
 cardboard (adj & n)
 care (n & v)
 • We take care of our customers. (n)
-• Some customers care more about
-good quality than price. (v)
+• Some customers care more about good quality than price. (v)
 career (n)
 cargo (n)
 carpet (n)
@@ -554,10 +540,8 @@ carry (v)
 carry on (phr v)
 • I’ll carry on working until I’m 65.
 carry out (a task) (phr v)
-• We’ve just carried out a survey into
-customer satisfaction.
-• Carrying out instructions is part of
-the job.
+• We’ve just carried out a survey into customer satisfaction.
+• Carrying out instructions is part of the job.
 case (n)
 • a difficult case
 • a case for my laptop
@@ -583,8 +567,6 @@ CD (n)
 CD-ROM (n)
 CEO (abbrev) Chief Executive Officer
 ceiling (n)
-BEC Preliminary Wordlist 9
-© UCLES 2006
 celebrate (v)
 celebration (n)
 cellar (n)
@@ -654,8 +636,7 @@ child (n)
 choice (n)
 choose (v)
 circle (n)
-• The chairs were arranged in a
-circle for the meeting.
+• The chairs were arranged in a circle for the meeting.
 circular (adj)
 • a circular letter
 • a circular table
@@ -767,8 +748,7 @@ computer programmer (n)
 concentrate (v)
 concentration (n)
 concern (n & v)
-• The budget overspend is a matter
-of concern. (n)
+• The budget overspend is a matter of concern. (n)
 • It doesn’t concern you. (v)
 concert (n)
 conclusion (n)
@@ -912,11 +892,8 @@ cut (n & v)
 • to cut some paper (v)
 • to cut costs (v)
 cut back (n & phr v)
-• Further financial cutbacks are
-expected next year. (n)
-• Now the project is finished, we
-have to cut back on the number of
-staff. (phr v)
+• Further financial cutbacks are expected next year. (n)
+• Now the project is finished, we have to cut back on the number of staff. (phr v)
 cut down (on) (phr v)
 • We need to cut down on spending.
 cut up (phr v)
@@ -1052,10 +1029,8 @@ digital (adj)
 dining room (n)
 dinner (n)
 dip (n & v)
-There was a dip in profits last
-year. (n)
-• Productivity usually dips before
-lunch. (v)
+• There was a dip in profits last year. (n)
+• Productivity usually dips before lunch. (v)
 diploma (n)
 direct (adj & v)
 direct cost (n)
@@ -1162,10 +1137,9 @@ each (adj & pron)
 • I have a business engagement on that day. (n) 
 eager (adj)
 early (adj & adv)
-go to work early (adv)
-in the early 1990s (adj)
-the early stages of negotiation
-(adj)
+• go to work early (adv)
+• in the early 1990s (adj)
+• the early stages of negotiation (adj)
 earn (v)
 earnings (n pl)
 east (adj, adv & n)
@@ -1230,8 +1204,6 @@ enter (v)
 entertain (v)
 enthusiasm (n)
 enthusiastic (adj)
-BEC Preliminary Wordlist 15
-© UCLES 2006
 entire (adj)
 entrance (n)
 entry (v)
@@ -1246,13 +1218,13 @@ especially (adv)
 essential (adj)
 establish (v)
 estimate (n & v)
-• The estimate for repairs was low.
-(n)
+• The estimate for repairs was low. (n)
 • We estimated the costs. (v) expert (n)
 EU (abbrev) European Union
 exchange (v) explanation (n)
 Euro (n)
-even (adv) • Demand for our new product has
+even (adv) 
+• Demand for our new product has
 • He couldn’t even do that. exploded.
 event (n) explore (v)
 ever (adv)
@@ -1319,7 +1291,6 @@ extra (adj & adv)
 extraordinary (adj)
 extremely (adv)
 eye (n)
-
 ºF (abbrev) Farenheit
 facilities (n pl)
 • Leisure facilities
@@ -1334,21 +1305,14 @@ failure (n)
 faint (adj)
 • a faint line
 fair (adj & n)
-BEC Preliminary Wordlist 16
-© UCLES 2006
-• The way of calculating bonus
-payments is not fair. (adj)
-• The sales figures were only fair.
-(adj)
-• The trade fair usually takes place
-in May. (n)
+• The way of calculating bonus payments is not fair. (adj)
+• The sales figures were only fair. (adj)
+• The trade fair usually takes place in May. (n)
 faithfully (adv)
 • Yours faithfully
 fall (n & v)
-• There was a sharp fall in profits.
-(n)
-• Share prices were falling very
-quickly. (v)
+• There was a sharp fall in profits. (n)
+• Share prices were falling very quickly. (v)
 false (adj)
 • a false statement
 family (n)
@@ -1379,8 +1343,7 @@ festival (v)
 fetch (v)
 few (adj)
 fiction (n)
-• Sales of non-fiction have
-increased.
+• Sales of non-fiction have increased.
 field (n)
 • in the field of engineering
 fight (n & v)
@@ -1388,18 +1351,15 @@ figure (n)
 • the figure 6
 • sales figures
 file (n & v)
-• Could you get me the file on
-Unicorn Holdings? (n)
-• Could you file the papers from this
-morning’s meeting? (v)
+• Could you get me the file on Unicorn Holdings? (n)
+• Could you file the papers from this morning’s meeting? (v)
 filing cabinet (n)
 fill (v)
 • fill something to the top
 fill in (phr v)
 • I must fill in this form.
 fill up (phr v)
-• We’ll fill up the car with petrol
-before we leave.
+• We’ll fill up the car with petrol before we leave.
 film (n & v)
 final (adj)
 final demand (n)
