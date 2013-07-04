@@ -19,18 +19,39 @@ import java.util.List;
 // Option - что-то вроде альтернативы обработки ошибок, но она не гибкая, не дает никакой информации.
 //   зато дает ответ - Да(результат)/Нет(ничего)
 public final class ImmutableBECParser {
-  public static final Optional<ImmutableBECParser> getInstance () {
+  public static final Optional<ImmutableBECParser> getDefaultInstance () {
     return INSTANCE;
+  }
+
+  // Возвращает экземпляр парсера BEC
+  //
+  // Излишняя потокозащита. Она нужна только для доступа к файлу. Хотя это общая защита при создании
+  //   и возможно защиты только непосредственного доступа к файлу недостаточно.
+  public static synchronized final Optional<ImmutableBECParser> getInstance(String fullFilename) {
+    // No lazily initializing!
+    Optional<ImmutableBECParser> tmp;
+    try {
+      tmp = Optional.of(new ImmutableBECParser(fullFilename));
+    } catch (IOException e) {
+      // Не сконструирован. Использовать нельзя. Ноль, не ноль не важно.
+      //   Не совсем ясно что с полями.
+      Utils.print(e.getMessage());
+      tmp = Optional.absent();
+    }
+    return tmp;
   }
 
   // Похоже конструкторы параметры не передать. Поэтому путь жесткая константа.
   private static final Optional<ImmutableBECParser> INSTANCE;
 
   static {
+    final String PATH = "statistic-data";
+    final String FILENAME = "vocabularity-folded.txt";
+    final String FULL_FILENAME = Joiner.on(AppConstants.PATH_SPLITTER).join(PATH, FILENAME);
     // No lazily initializing!
     Optional<ImmutableBECParser> tmp;
     try {
-      tmp = Optional.of(new ImmutableBECParser());
+      tmp = Optional.of(new ImmutableBECParser(FULL_FILENAME));
     } catch (IOException e) {
       // Не сконструирован. Использовать нельзя. Ноль, не ноль не важно.
       //   Не совсем ясно что с полями.
@@ -40,8 +61,9 @@ public final class ImmutableBECParser {
     INSTANCE = tmp;
   }
 
-  private ImmutableBECParser() throws IOException {
-    ImmutableList<String> content = Utils.file2list(FULL_FILENAME);
+  private ImmutableBECParser(String fullFilename) throws IOException {
+    ImmutableList<String> content = Utils.file2list(fullFilename);
+
     CONTENT = ImmutableList.copyOf(content);
 
     List<String> cashWords = new ArrayList<String>();
@@ -67,9 +89,6 @@ public final class ImmutableBECParser {
   private final Integer KEY_POS = 0;
   private final String SPLITTER = "@";
   private final String FAKE_TRANSLATE = "No";
-  private final String PATH = "statistic-data";
-  private final String FILENAME = "vocabularity-folded.txt";
-  private final String FULL_FILENAME = Joiner.on(AppConstants.PATH_SPLITTER).join(PATH, FILENAME);
 
   // Допустим испльзуем не исключение при чтении файла, возвращаем пустой список.
   // Если коллекция пустая, то возможно было пустой файл, а так сразу ясно, что что-то не так
@@ -99,7 +118,8 @@ public final class ImmutableBECParser {
 
   public static void main(String[] args) {
     try {
-      Utils.print(ImmutableBECParser.getInstance().get().getWordByIdx(1110));
+      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
+      Utils.print(ImmutableBECParser.getInstance(fullFilename).get().getWordByIdx(1110));
     } catch (VParserException e) {
       Utils.print(e.getMessage());
     } catch (IllegalStateException e) {
