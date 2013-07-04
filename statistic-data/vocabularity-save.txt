@@ -91,8 +91,6 @@ agency (n)
 • Let’s use an advertising agency.
 agenda (n)
 agent (n)
-BEC Preliminary Wordlist 4
-© UCLES 2006
 • I’ve been to the travel agent to book a flight to Hong Kong.
 • He’s our agent in Japan.
 ago (adv)
@@ -250,7 +248,6 @@ aware (adj)
 away (adv)
 • The MD’s away on business until Thursday.
 • He threw away the documents by mistake.
-
 back (adv & n)
 • When are you going back to work? (adv)
 • I gave back the laptop I had borrowed. (adv)
@@ -312,8 +309,7 @@ beg (v)
 • I begged her not to resign.
 begin (v)
 behave (v)
-• He always behaves in a
-professional manner.
+• He always behaves in a professional manner.
 behaviour (n)
 behind (prep & adv)
 believe (v)
@@ -337,25 +333,21 @@ biography (n)
 birth (n)
 • What’s her date of birth? (n)
 black (adj)
-• The company ended the year in
-the black. (n)
-• The true size of the black economy
-cannot be known. (adj)
+• The company ended the year in the black. (n)
+• The true size of the black economy cannot be known. (adj)
 blame (n & v)
 blank (adj & n)
 • I need a blank piece of paper. (adj)
-• Write the correct word in each
-blank. (n)
+• Write the correct word in each blank. (n)
 blank cheque (n)
 blind (n)
 • The blind needs repairing.
 block (n)
 • It’s opposite the office block on the corner.
 blow up (phr v)
-The gas heater blew up.
+• The gas heater blew up.
 blue (adj)
-• There’s been a decline in the
-number of blue-collar workers.
+• There’s been a decline in the number of blue-collar workers.
 board (n & v)
 • a noticeboard, a wooden board (n)
 • on board a ship/aircraft (n)
@@ -371,8 +363,7 @@ bold (adj)
 bonus (n)
 • an annual bonus
 book (n & v)
-• I’m reading a book on marketing at
-the moment. (n)
+• I’m reading a book on marketing at the moment. (n)
 • We’d better book a flight. (v)
 bookcase (n)
 bookkeeping (n)
@@ -384,8 +375,6 @@ boost (n & v)
 boot (n)
 • My cases are in the boot of the car.
 border (n & v)
-BEC Preliminary Wordlist 7
-© UCLES 2006
 bored (adj)
 boring (adj)
 born (adj)
@@ -396,8 +385,7 @@ bottom (n & adj)
 • at the bottom of the page (n)
 • the bottom left-hand corner (adj)
 box (n)
-• I ordered three boxes of floppy
-disks.
+• I ordered three boxes of floppy disks.
 • Tick the box.
 brain (n)
 branch (n)
@@ -412,13 +400,10 @@ break (n & v)
 • What time shall we break for lunch? (v)
 break down (n & phr v)
 • Could you let me have a breakdown of last month’s sales figures? (n)
-• The packing machine has broken
-down. (phr v)
+• The packing machine has broken down. (phr v)
 break in (n & phr v)
-• Someone broke in to the factory
-and stole some equipment. (phr v)
-• There was a break-in at the
-company’s head office. (n)
+• Someone broke in to the factory and stole some equipment. (phr v)
+• There was a break-in at the company’s head office. (n)
 break up (phr v)
 • The Lexford Group was broken up into smaller companies.
 • The glass bottles are broken up before entering the recycling machine.
@@ -446,15 +431,12 @@ bug (n)
 build (v)
 building (n)
 bulk (n)
-• Bulk purchasing has allowed us to
-cut costs.
+• Bulk purchasing has allowed us to cut costs.
 bullet (n & v)
 • a bullet point (n)
-• Bullet point this list for the meeting.
-(v)
+• Bullet point this list for the meeting. (v)
 bureau (n)
-• I’ll get some dollars from the
-foreign exchange bureau.
+• I’ll get some dollars from the foreign exchange bureau.
 burglar (n)
 burglary (n)
 bus (n)
@@ -476,8 +458,7 @@ business school (n)
 busy (adj)
 but (conj)
 button (n)
-• The on/off button isn’t working
-properly.
+• The on/off button isn’t working properly.
 buy (n & v)
 • We bought 300 files. (v)
 • It was a good buy. (n)
@@ -487,8 +468,6 @@ by accident (prep phr)
 by air (prep phr)
 by all means (prep phr)
 by car (prep phr)
-BEC Preliminary Wordlist 8
-© UCLES 2006
 by day (prep phr)
 by hand (prep phr)
 by land (prep phr)
@@ -499,7 +478,6 @@ by post (prep phr)
 by sea (prep phr)
 by sight (prep phr)
 by train (prep phr)
-
 °C (abbrev) Centigrade, Celsius
 c (abbrev) cents
 c (abbrev) circa
@@ -514,30 +492,24 @@ calculate (v)
 calculator (n)
 calendar (n)
 call (n & v)
-• There was a phone call for you.
-• (n)
+• There was a phone call for you.(n)
 • What’s this product called? (v)
-• Mr Khan called you this morning.
-(v)
+• Mr Khan called you this morning. (v)
 call for (phr v)
 • I’ll call for you at 3 p.m.
 call in (phr v)
-• I’ll call in and see you next time I’m
-in town.
+• I’ll call in and see you next time I’m in town.
 callbox (n)
 call centre (n)
 calm (adj)
 camera (n)
 campaign (n & v)
-• The advertising campaign was
-very successful. (n)
-• The staff campaigned for better
-working conditions. (v)
+• The advertising campaign was very successful. (n)
+• The staff campaigned for better working conditions. (v)
 can (n & v)
 • a can of coca-cola (n)
 • Can I go now? (v)
-• He can speak Japanese very well.
-(v)
+• He can speak Japanese very well. (v)
 canal (n)
 cancel (v)
 cancellation (n)
@@ -557,8 +529,7 @@ card (n)
 cardboard (adj & n)
 care (n & v)
 • We take care of our customers. (n)
-• Some customers care more about
-good quality than price. (v)
+• Some customers care more about good quality than price. (v)
 career (n)
 cargo (n)
 carpet (n)
@@ -568,10 +539,8 @@ carry (v)
 carry on (phr v)
 • I’ll carry on working until I’m 65.
 carry out (a task) (phr v)
-• We’ve just carried out a survey into
-customer satisfaction.
-• Carrying out instructions is part of
-the job.
+• We’ve just carried out a survey into customer satisfaction.
+• Carrying out instructions is part of the job.
 case (n)
 • a difficult case
 • a case for my laptop
@@ -597,8 +566,6 @@ CD (n)
 CD-ROM (n)
 CEO (abbrev) Chief Executive Officer
 ceiling (n)
-BEC Preliminary Wordlist 9
-© UCLES 2006
 celebrate (v)
 celebration (n)
 cellar (n)
@@ -668,8 +635,7 @@ child (n)
 choice (n)
 choose (v)
 circle (n)
-• The chairs were arranged in a
-circle for the meeting.
+• The chairs were arranged in a circle for the meeting.
 circular (adj)
 • a circular letter
 • a circular table
@@ -781,8 +747,7 @@ computer programmer (n)
 concentrate (v)
 concentration (n)
 concern (n & v)
-• The budget overspend is a matter
-of concern. (n)
+• The budget overspend is a matter of concern. (n)
 • It doesn’t concern you. (v)
 concert (n)
 conclusion (n)
@@ -802,8 +767,6 @@ congratulations (n & int)
 connect (v)
 connecting (flight) (adj)
 connection (n)
-BEC Preliminary Wordlist 11
-© UCLES 2006
 conservative (adj)
 consider (v)
 consignment (n)
@@ -926,11 +889,8 @@ cut (n & v)
 • to cut some paper (v)
 • to cut costs (v)
 cut back (n & phr v)
-• Further financial cutbacks are
-expected next year. (n)
-• Now the project is finished, we
-have to cut back on the number of
-staff. (phr v)
+• Further financial cutbacks are expected next year. (n)
+• Now the project is finished, we have to cut back on the number of staff. (phr v)
 cut down (on) (phr v)
 • We need to cut down on spending.
 cut up (phr v)
@@ -1007,35 +967,12 @@ departure (n)
 depend (v)
 • It depends on what you want to do.
 deposit (n & v)
-pay a deposit (n)
-deposit money in an account (v)
-BEC Preliminary Wordlist 13
-© UCLES 2006
+• pay a deposit (n)
+• deposit money in an account (v)
 depressed (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a depressed area/industry
+• a depressed area/industry
 depression (n)
-economic depression
+• economic depression
 Dept (abbrev) department
 depth (n)
 describe (v)
@@ -1066,10 +1003,8 @@ digital (adj)
 dining room (n)
 dinner (n)
 dip (n & v)
-There was a dip in profits last
-year. (n)
-• Productivity usually dips before
-lunch. (v)
+• There was a dip in profits last year. (n)
+• Productivity usually dips before lunch. (v)
 diploma (n)
 direct (adj & v)
 direct cost (n)
@@ -1077,29 +1012,29 @@ direct debit (n)
 direct mail (n)
 direct marketing (n)
 direction (n)
-walk in the wrong direction
-read the directions on the box
+• walk in the wrong direction
+• read the directions on the box
 directory (n)
-a telephone directory
+• a telephone directory
 disabled (adj & n)
-lifts for disabled people (adj)
-the disabled (n)
+• lifts for disabled people (adj)
+• the disabled (n)
 disappoint (v)
 discount (n & v)
 discover (v)
 discuss (v)
 discussion (n)
 disc/disk (n)
-compact disc
-hard disk
-floppy disk
+• compact disc
+• hard disk
+• floppy disk
 disk drive (n)
 dislike (n & v)
 dismiss (v)
 dispatch (n & v)
 display (n & v)
-It was a good display. (n)
-She displayed her work. (v)
+• It was a good display. (n)
+• She displayed her work. (v)
 distance (n)
 distant (adj)
 distribute (v)
@@ -1115,66 +1050,43 @@ documentary (adj & n)
 documentation (n)
 dollar (n)
 domestic (adj)
-Domestic sales are down.
-Domestic appliances are the
-company’s most profitable line.
+• Domestic sales are down.
+• Domestic appliances are the company’s most profitable line.
 door (n)
 door-to-door (adj)
 dotted line (n)
-Sign on the dotted line, please.
+• Sign on the dotted line, please.
 double (adj & v)
-Please book a double room. (adj)
-Inflation doubled last year. (v)
+• Please book a double room. (adj)
+• Inflation doubled last year. (v)
 doubt (n & v)
 down (adj, adv & prep)
-• Our computer system’s down.
-(adv)
-• Sales of all our products are down.
-(adj)
+• Our computer system’s down. (adv)
+• Sales of all our products are down. (adj)
 • Prices have gone down. (adv)
-• His office is down the corridor on
-the left. (prep)
+• His office is down the corridor on the left. (prep)
 downstairs (adv)
 downturn (n)
 downward (adj)
 dozen (n)
 drama (n)
 dramatic (adj)
-a dramatic increase
-a dramatic rise
+• a dramatic increase
+• a dramatic rise
 dramatically (adv)
-Sales increased dramatically.
-BEC Preliminary Wordlist 14
-© UCLES 2006
+• Sales increased dramatically.
 draw (v)
 drawer (n)
 dream (n & v)
 dress (n & v)
 drink (n & v)
 drive (n & v)
-driving licence (n)
+• driving licence (n)
 drop (n & v)
-There’s been a big drop in the
-number of workers. (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-You’ve dropped your papers. (v)
+• There’s been a big drop in the number of workers. (n)
+• You’ve dropped your papers. (v)
 drug(s) (n)
-a multinational drugs company
+• a multinational drugs company
 dry (adj & v)
 dry cleaning (n)
 DTP (abbrev) desktop publishing
@@ -1185,25 +1097,23 @@ due (adv & adj)
 • The plane is due at… (adv)
 • The train is due to arrive. (adj)
 due to (prep phrase)
-• The fall in sales was due to the
-difficult economic climate.
+• The fall in sales was due to the difficult economic climate.
 dull (adj)
 duplicate (n & v)
 during (prep)
 duty (n)
-pay duty on imported goods
-duty-free goods
-office duties
+• pay duty on imported goods
+• duty-free goods
+• office duties
 DVD (n)
-
 E (abbrev) east
-each (adj & pron) • I have a business engagement on
-that day. (n) eager (adj)
+each (adj & pron) 
+• I have a business engagement on that day. (n) 
+eager (adj)
 early (adj & adv)
-go to work early (adv)
-in the early 1990s (adj)
-the early stages of negotiation
-(adj)
+• go to work early (adv)
+• in the early 1990s (adj)
+• the early stages of negotiation (adj)
 earn (v)
 earnings (n pl)
 east (adj, adv & n)
@@ -1213,7 +1123,7 @@ eat (v)
 e-commerce (n)
 economic (adj)
 economic growth
-the economic situation
+• the economic situation
 economical (adj)
 economics (n)
 economy (n)
@@ -1268,8 +1178,6 @@ enter (v)
 entertain (v)
 enthusiasm (n)
 enthusiastic (adj)
-BEC Preliminary Wordlist 15
-© UCLES 2006
 entire (adj)
 entrance (n)
 entry (v)
@@ -1284,13 +1192,13 @@ especially (adv)
 essential (adj)
 establish (v)
 estimate (n & v)
-• The estimate for repairs was low.
-(n)
+• The estimate for repairs was low. (n)
 • We estimated the costs. (v) expert (n)
 EU (abbrev) European Union
 exchange (v) explanation (n)
 Euro (n)
-even (adv) • Demand for our new product has
+even (adv) 
+• Demand for our new product has
 • He couldn’t even do that. exploded.
 event (n) explore (v)
 ever (adv)
@@ -1338,10 +1246,8 @@ expensive (adj)
 experience (n)
 experienced (adj)
 experiment (n & v)
-• The experiment was interesting.
-(n)
-• They experimented with new
-materials. (v)
+• The experiment was interesting. (n)
+• They experimented with new materials. (v)
 explain (v)
 explode (v)
 export (n & v)
@@ -1353,13 +1259,12 @@ express (adj & v)
 • express an interest in (v)
 extend (v)
 extension (n)
-What is your extension number?
+• What is your extension number?
 external (adj)
 extra (adj & adv)
 extraordinary (adj)
 extremely (adv)
 eye (n)
-
 ºF (abbrev) Farenheit
 facilities (n pl)
 • Leisure facilities
@@ -1374,21 +1279,14 @@ failure (n)
 faint (adj)
 • a faint line
 fair (adj & n)
-BEC Preliminary Wordlist 16
-© UCLES 2006
-• The way of calculating bonus
-payments is not fair. (adj)
-• The sales figures were only fair.
-(adj)
-• The trade fair usually takes place
-in May. (n)
+• The way of calculating bonus payments is not fair. (adj)
+• The sales figures were only fair. (adj)
+• The trade fair usually takes place in May. (n)
 faithfully (adv)
 • Yours faithfully
 fall (n & v)
-• There was a sharp fall in profits.
-(n)
-• Share prices were falling very
-quickly. (v)
+• There was a sharp fall in profits. (n)
+• Share prices were falling very quickly. (v)
 false (adj)
 • a false statement
 family (n)
@@ -1403,8 +1301,7 @@ fashion (n)
 fast (adj & adv)
 fasten (v)
 fault (n)
-• It’s John’s fault that the report is
-late.
+• It’s John’s fault that the report is late.
 • There’s a technical fault.
 favourite (adj & n)
 fax (n & v)
@@ -1420,8 +1317,7 @@ festival (v)
 fetch (v)
 few (adj)
 fiction (n)
-• Sales of non-fiction have
-increased.
+• Sales of non-fiction have increased.
 field (n)
 • in the field of engineering
 fight (n & v)
@@ -1429,18 +1325,15 @@ figure (n)
 • the figure 6
 • sales figures
 file (n & v)
-• Could you get me the file on
-Unicorn Holdings? (n)
-• Could you file the papers from this
-morning’s meeting? (v)
+• Could you get me the file on Unicorn Holdings? (n)
+• Could you file the papers from this morning’s meeting? (v)
 filing cabinet (n)
 fill (v)
 • fill something to the top
 fill in (phr v)
 • I must fill in this form.
 fill up (phr v)
-• We’ll fill up the car with petrol
-before we leave.
+• We’ll fill up the car with petrol before we leave.
 film (n & v)
 final (adj)
 final demand (n)
@@ -1451,19 +1344,14 @@ financial advisor (n)
 financial year (n)
 find (v)
 find out (phr v)
-• I must find out when Mr Tanaka is
-arriving.
+• I must find out when Mr Tanaka is arriving.
 fine (adj, n & v)
 finish (n & v)
 fire (n & v)
-• Fire completely destroyed an old
-warehouse. (n)
-• There was a small fire at the
-factory. (n)
-• The company has a ‘hire and fire’
-approach. (n)
-• He was fired for not meeting sales
-targets. (v)
+• Fire completely destroyed an old warehouse. (n)
+• There was a small fire at the factory. (n)
+• The company has a ‘hire and fire’ approach. (n)
+• He was fired for not meeting sales targets. (v)
 fire alarm (n)
 firm (adj & n)
 • a firm offer (adj)
@@ -1472,60 +1360,37 @@ first (adj, adv, n & pron)
 • Fill in your first name. (adj)
 • first aid (n)
 • first of all (adv)
-• He was the first to draw attention
-to the mistake. (pron)
+• He was the first to draw attention to the mistake. (pron)
 • Could you do the filing first? (adv)
 fit (adj & v)
-• He fitted into the team very well.
-(v)
-• Her main business was a keep-fit
-centre. (adj)
+• He fitted into the team very well. (v)
+• Her main business was a keep-fit centre. (adj)
 fitness (n & adj)
 • fitness centre (n)
 • health and fitness sector (n)
 fix (v)
 • Could you fix the shelf to the wall?
-• She managed to fix the broken
-photocopier.
-BEC Preliminary Wordlist 17
-© UCLES 2006
-• My PA has fixed a date for the
-meeting.
+• She managed to fix the broken photocopier.
+• My PA has fixed a date for the meeting.
 fixed cost (n)
 fixed-term contract (n)
 flag (n)
 flat (adj & n)
 fleet (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a fleet of trucks/cars/ships
+• a fleet of trucks/cars/ships
 flexible (adj)
 flexibility (n)
 flight (n)
-direct flight
-non-stop flight
+• direct flight
+• non-stop flight
 flip chart (n)
 float (v)
-float a new company/shares
+• float a new company/shares
 flood (n & v)
 floor (n)
 floppy disk (n)
 flotation (n)
-flotation on the Stock Exchange
+• flotation on the Stock Exchange
 flowchart (n)
 fluctuate (v)
 fluctuation (n)
@@ -1534,27 +1399,23 @@ focus (n & v)
 fold (n & v)
 follow (v)
 following (adj & prep)
-• The following people are needed
-at the presentation. (adj)
-• Following the meeting, he made
-changes to the report. (prep)
+• The following people are needed at the presentation. (adj)
+• Following the meeting, he made changes to the report. (prep)
 fond (adj)
 food (n)
-Food is becoming more expensive.
-The fast-food sector is growing.
+• Food is becoming more expensive.
+• The fast-food sector is growing.
 foot/feet (n)
-six foot/feet tall
-at the foot of the page
+• six foot/feet tall
+• at the foot of the page
 for (prep)
 forbid (v)
 force (n & v)
 • market forces (n)
 • I was forced to resign. (v)
 forecast (n & v)
-• We forecast a growth in this
-sector. (v)
-• The sales forecast is very positive.
-(n)
+• We forecast a growth in this sector. (v)
+• The sales forecast is very positive. (n)
 foreign (adj)
 foreign currency (n)
 foreign exchange (n)
@@ -1564,9 +1425,9 @@ forget (v)
 forgetful (adj)
 forgive (v)
 form (n & v)
-fill in a form (n)
-order form (n)
-to form a company (v)
+• fill in a form (n)
+• order form (n)
+• to form a company (v)
 formal (adj)
 former (adj)
 fortnight (n)
@@ -1581,8 +1442,8 @@ free sample (n)
 free trade (n)
 freelance (adj & v)
 freeze (n & v)
-a price freeze (n)
-to freeze prices (v)
+• a price freeze (n)
+• to freeze prices (v)
 freight (n & v)
 frequent (adj)
 fresh (adj)
@@ -1603,7 +1464,6 @@ funny (adj)
 furnish (v)
 furniture (n)
 future (adj & n)
-
 gain (n & v)
 gallery (n)
 an art gallery
@@ -1612,50 +1472,8 @@ game (n)
 gap (n)
 garage (n)
 gas (n)
-She works as an engineer in the oil
-and gas industry.
-BEC Preliminary Wordlist 18
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-Could you put some gas in the
-car? (Am Eng)
+• She works as an engineer in the oil and gas industry.
+• Could you put some gas in the car? (Am Eng)
 gate (n)
 general (adj)
 generous (adj)
@@ -1666,17 +1484,14 @@ genuine (adj)
 geography (n)
 get (v)
 get along with (phr v)
-I get along quite well with my boss.
+• I get along quite well with my boss.
 get around (phr v)
-We’ve got around that problem.
+• We’ve got around that problem.
 get back (phr v)
-When did you get back from New
-York?
+• When did you get back from New York?
 get down (phr v)
-Can you get down from the
-ladder?
-Did you manage to get all the
-notes down?
+• Can you get down from the ladder?
+• Did you manage to get all the notes down?
 get in (phr v)
 • Can visitors get in through the staff entrance?
 get into/out of (phr v)
@@ -1706,122 +1521,73 @@ give up (phr v)
 • David is planning to give up his job and go freelance.
 glad (adj)
 glance (n & v)
-I’ve glanced at the figures. (v)
+• I’ve glanced at the figures. (v)
 glass (n & adj)
 glasses (n pl)
 global (adj)
-global market
+• global market
 go (v)
 go down (phr v)
-Sales went down last year.
+• Sales went down last year.
 go for (phr v)
-He went for the job.
+• He went for the job.
 go off (phr v)
-He went off to work in Australia.
-Suddenly the lights went off.
-The alarm went off.
+• He went off to work in Australia.
+• Suddenly the lights went off.
+• The alarm went off.
 go on (phr v)
-The meeting went on until six
-o’clock.
-What’s going on?
-The lights suddenly went on.
+• The meeting went on until six o’clock.
+• What’s going on?
+• The lights suddenly went on.
 go out (phr v)
-The fire has gone out.
-We’re going out with a new client
-this evening.
+• The fire has gone out.
+• We’re going out with a new client this evening.
 go with (phr v)
-• The new colours don’t go with our
-company image.
+• The new colours don’t go with our company image.
 goal (n)
 • career goals
 gold (adj & n)
-gold watch (adj)
-made of gold (n)
+• gold watch (adj)
+• made of gold (n)
 good (adj)
 goodbye (int)
 goods (n pl)
 govern (v)
 grade (n & v)
-We need high grade oil. (n)
-What grade is the job? (n)
-Staff were re-graded. (v)
+• We need high grade oil. (n)
+• What grade is the job? (n)
+• Staff were re-graded. (v)
 gradual (adj)
 graduate (n & v)
-He’s a maths graduate. (n)
-She graduated in 2001. (v)
+• He’s a maths graduate. (n)
+• She graduated in 2001. (v)
 graduation (n)
 gram(me) (n)
 grammar (n)
 grant (n & v)
-He was given a grant to study new
-management methods. (n)
-The MD granted his request to
-attend the conference. (v)
-BEC Preliminary Wordlist 19
-© UCLES 2006
+• He was given a grant to study new management methods. (n)
+• The MD granted his request to attend the conference. (v)
 graph (n)
 graphics (n)
 grateful (adj)
 great (adj)
 green (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-a green policy
+• a green policy
 greet (v)
 grey (adj)
-a grey area
-the grey economy
+• a grey area
+• the grey economy
 gross (adj)
-a gross profit
-gross weight
+• a gross profit
+• gross weight
 ground (adj & n)
 group (n & v)
-The group was large. (n)
-Trainees are grouped together for
-discussion activities. (v)
+• The group was large. (n)
+• Trainees are grouped together for discussion activities. (v)
 grow (v)
-Profits grew very quickly last year.
-It’s a fast-growing company.
-They wanted to grow their
-company/business/profits/sales.
+• Profits grew very quickly last year.
+• It’s a fast-growing company.
+• They wanted to grow their company/business/profits/sales.
 growth (n)
 guarantee (n & v)
 guard (n & v)
@@ -1829,70 +1595,59 @@ guess (n & v)
 guest (n)
 guest-house (n)
 guide (n & v)
-He has experience as a tour
-guide. (n)
-I’ll guide you around the factory.
-(v)
+• He has experience as a tour guide. (n)
+• I’ll guide you around the factory. (v)
 guilty (adj)
 gymnasium (n)
-
 habit (n)
 hair (n)
 half (adj, adv & n)
 hall (n)
 hallo/hello (exclam)
 hand (n & v)
-shake hands (n)
-He handed the book to her. (v)
-second-hand
-on hand
-in hand
-by hand
-to hand
+• shake hands (n)
+• He handed the book to her. (v)
+• second-hand
+• on hand
+• in hand
+• by hand
+• to hand
 hand in (phr v)
-Could you hand in your report
-tomorrow.
+• Could you hand in your report tomorrow.
 hand out (phr v)
-Can you hand out the minutes of
-the last meeting?
+• Can you hand out the minutes of the last meeting?
 handbag (n)
 handbook (n)
 handle (n & v)
-The door handle is broken. (n)
-The goods were damaged
-because they were handled
-roughly. (v)
-She handles telephone enquiries.
-(v)
-He handled the situation badly. (v)
+• The door handle is broken. (n)
+• The goods were damaged because they were handled roughly. (v)
+• She handles telephone enquiries.(v)
+• He handled the situation badly. (v)
 handwriting (n)
 hang (v)
-He decided to hang the calendar
-on the wall.
+• He decided to hang the calendar on the wall.
 hang up (phr v)
-She hung up at the end of the
-phone call.
+• She hung up at the end of the phone call.
 happen (v)
 happy (adj)
 harbour (n)
-The harbour is being extended due
-to an increase in shipping.
+• The harbour is being extended due to an increase in shipping.
 hard (adj & adv)
 hardly (adv)
-There was hardly any time.
-He could hardly wait.
+• There was hardly any time.
+• He could hardly wait.
 hardware (n)
 hardware store
-computer hardware
+• computer hardware
 hate (v)
 have (v)
 have got (v)
 have to (v)
 he (pron)
 head (n & v)
-at the head of the company (n)
-the head of marketing (n)
-head a team/group (v)
+• at the head of the company (n)
+• the head of marketing (n)
+• head a team/group (v)
 headgear (n)
 head office (n)
 headline (n)
@@ -1901,16 +1656,13 @@ health (n)
 health and safety (n)
 hear (v)
 heart (n)
-in the heart of the city
-the heart of the problem
+• in the heart of the city
+• the heart of the problem
 heat (n & v)
-Water retains heat longer than air.
-(n)
-The market is overheated. (v)
+• Water retains heat longer than air.(n)
+• The market is overheated. (v)
 heating (n)
 heavy (adj)
-BEC Preliminary Wordlist 20
-© UCLES 2006
 height (n)
 helicopter (n)
 hello/hallo (exclam)
@@ -1924,17 +1676,8 @@ herself (pron)
 hi-fi (n)
 hi(gh)-tec(h) (adj)
 hidden (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-hidden agenda
-hidden profits
+• hidden agenda
+• hidden profits
 hide (v)
 high (adj, adv & n)
 highway (n) (Am Eng)
@@ -1942,10 +1685,10 @@ hill (n)
 him (pron)
 himself (pron)
 hire (n & v)
-hire a car (v)
-for hire (n)
-a ‘hire and fire’ approach (n)
-hire more staff (v)
+• hire a car (v)
+• for hire (n)
+• a ‘hire and fire’ approach (n)
+• hire more staff (v)
 his (adj & pron)
 history (n)
 hit (n & v)
@@ -1954,10 +1697,8 @@ hit (n & v)
 hobby (n)
 hold (v)
 hold up (n & phr v)
-• He was held up in heavy traffic for
-over two hours. (phr v)
-• There was a hold-up at customs.
-(n)
+• He was held up in heavy traffic for over two hours. (phr v)
+• There was a hold-up at customs. (n)
 hole (n)
 holiday (n)
 home (adv & n)
@@ -1981,7 +1722,6 @@ human (n & adj)
 hundred (n)
 hurry (n & v)
 hr (abbrev) hour
-
 I (pron)
 ice (n)
 idea (n)
@@ -2029,8 +1769,6 @@ in order to (prep phr)
 in pencil (prep phr)
 in pieces (prep phr)
 in place (prep phr)
-BEC Preliminary Wordlist 21
-© UCLES 2006
 in private (prep phr)
 in public (prep phr)
 in secret (prep phr)
@@ -2052,21 +1790,7 @@ increase (n & v)
 indeed (adv)
 independent (adj)
 index (n)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-index of a book
+• index of a book
 indicate (v)
 indication (n)
 individual (adj & n)
@@ -2074,13 +1798,11 @@ indoor (adj)
 indoors (adv)
 industrial (adj)
 industry (n)
-the steel industry
+• the steel industry
 inflation (n)
 influence (n & v)
-She was a bad influence on the
-other staff. (n)
-Her first boss greatly influenced
-her. (v)
+• She was a bad influence on the other staff. (n)
+• Her first boss greatly influenced her. (v)
 inform (v)
 information (n)
 informal (adj)
@@ -2100,7 +1822,7 @@ inspection (n)
 install (v)
 installation (n)
 instalment (n)
-by instalments
+• by instalments
 instalment plan
 instance (n)
 instead (adv)
@@ -2136,62 +1858,28 @@ invite (v)
 invoice (n & v)
 involve (v)
 iron (n)
-made of iron
+• made of iron
 island (n)
 issue (n & v)
-issue of a magazine (n)
-issues about pay (n)
-to issue a statement (v)
+• issue of a magazine (n)
+• issues about pay (n)
+• to issue a statement (v)
 IT (abbrev) Information Technology
 it (pron)
 item (n)
-Several items were damaged
-during transportation.
-The first item will be a discussion
-of the recent sales figures.
+• Several items were damaged during transportation.
+• The first item will be a discussion of the recent sales figures.
 its (pron)
 itself (pron)
-
 jealous (adj)
 jet (plane) (n)
-BEC Preliminary Wordlist 22
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-go by jet
+• go by jet
 job (n)
 job description (n)
 job satisfaction (n)
 job security (n)
 join (v)
-I joined the company last year.
+• I joined the company last year.
 joint (adj)
 joint venture
 joke (n)
@@ -2200,62 +1888,54 @@ journalist (n)
 journey (n)
 judge (n & v)
 jump (n & v)
-There’s been a big jump in
-prices. (n)
-Share prices have jumped by
-200%. (v)
+• There’s been a big jump in prices. (n)
+• Share prices have jumped by 200%. (v)
 junction (n)
 just (adv)
-
 keen (adj)
-I’m not keen on the new product.
-He’s keen to increase sales.
+• I’m not keen on the new product.
+• He’s keen to increase sales.
 keep (v)
-Costs keep rising.
+• Costs keep rising.
 keep on (phr v)
-They kept on advertising even
-though profits were falling.
+• They kept on advertising even though profits were falling.
 keep up (phr v)
-Keep up the good work!
-He has to keep up with new
-technological developments.
+• Keep up the good work!
+• He has to keep up with new technological developments.
 key (n & adj)
 key to a lock (n)
 key to success (n)
-This is a key post. (adj)
+• This is a key post. (adj)
 key in (phr v)
 • She keyed in the data very quickly.
 keyboard (n)
-computer keyboard
+• computer keyboard
 kg (abbrev) kilogram
 kilo/kilogram/kilogramme (n)
 km (abbrev) kilometer/kilometre
 kilometre (n)
 kph (abbrev) kilometres per hour
 kind (adj & n)
-My boss is a very kind person.
-(adj)
-What kind of work do you do? (n)
+• My boss is a very kind person. (adj)
+• What kind of work do you do? (n)
 kiosk (n)
 kitchen (n)
 knock (n & v)
 knock down (phr v)
-They knocked down the building to
-make way for the new road.
+• They knocked down the building to make way for the new road.
 know (v)
 knowledge (n)
-
 label (n & v)
 lab (abbrev) laboratory
 laboratory (n)
 labour (n)
-manual labour
-the labour market
+• manual labour
+• the labour market
 lack (n & v)
 ladder (n)
-career ladder
+• career ladder
 lady (n)
-Ladies and Gentlemen…
+• Ladies and Gentlemen…
 lamp (n)
 land (n & v)
 landlady (n)
@@ -2271,69 +1951,35 @@ late (adj)
 later (adv)
 laugh (n & v)
 launch (v & n)
-The company is holding a product
-launch for the XPL2. (n)
-We are launching a new service.
-(v)
+• The company is holding a product launch for the XPL2. (n)
+• We are launching a new service.(v)
 laundry (n)
-The hotel has a laundry service.
+• The hotel has a laundry service.
 lavatory (n)
 law (n)
 lawyer (n)
 lay (v)
 layout (n)
-office layout
-page layout
+• office layout
+• page layout
 lazy (adj)
 lb (abbrev) pound weight
 lead (v)
-Where does this road lead?
-We lead the market in computer
-games.
+• Where does this road lead?
+• We lead the market in computer games.
 leader (n)
-BEC Preliminary Wordlist 23
-© UCLES 2006
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-J & K Electrics are the market
-leaders.
+• J & K Electrics are the market leaders.
 leadership (n)
 leading (adj)
-a leading brand
+• a leading brand
 leaflet (n)
 learn (v)
 least (adj & adv)
-the least amount (adj)
-at least (adv)
+• the least amount (adj)
+• at least (adv)
 leave (n & v)
 leave out (phr v)
-He left out several important facts
-from his report.
+• He left out several important facts from his report.
 lecture (n & v)
 left (n, adj & adv)
 legal (adj)
@@ -2344,48 +1990,43 @@ length (n)
 less (adj, adv & pron)
 lesson (n)
 let (v)
-Her boss wouldn’t let her attend
-the conference.
-I’m going to let my house for six
-months.
+• Her boss wouldn’t let her attend the conference.
+• I’m going to let my house for six months.
 let’s (v)
-Let’s finish the meeting early.
+• Let’s finish the meeting early.
 letter (n)
 letter-box (n)
 level (adj & n)
 level off (phr v)
-Growth in the economy has
-levelled off.
+• Growth in the economy has levelled off.
 level out (phr v)
-Sales have started to level out.
+• Sales have started to level out.
 liberal (adj)
-a liberal style of management
+• a liberal style of management
 library (n)
 licence (n)
-an export licence
+• an export licence
 lie (n & v)
 life (n)
-shelf life
+• shelf life
 lifestyle (n)
 lift (n & v)
-Can you give me a lift, please? (n)
-The lift is going up. (n)
-Please help me lift this package.
-(v)
+• Can you give me a lift, please? (n)
+• The lift is going up. (n)
+• Please help me lift this package.(v)
 light (adj, n & v)
 like (prep & v)
 likely (adj)
 limit (n & v)
 limited company (Ltd.) (n)
 line (n)
-the production line
-lines on a page
-railway line
-line manager (n)
+• the production line
+• lines on a page
+• railway line
+• line manager (n)
 link (n & v)
 • internet link (n)
-• The computers are linked to a
-server. (v)
+• The computers are linked to a server. (v)
 liquid (n & adj)
 list (n & v)
 listen (v)
@@ -2393,10 +2034,10 @@ litre (n)
 little (adj & pron)
 live (v & adj)
 living (adj)
-cost of living
+• cost of living
 load (n & v)
-The load was heavy. (n)
-Load the goods onto the lorry. (v)
+• The load was heavy. (n)
+• Load the goods onto the lorry. (v)
 loan (n)
 local (adj)
 locate (v)
@@ -2429,41 +2070,11 @@ lost property (n)
 lot (n)
 loud (adj)
 lounge (n)
-BEC Preliminary Wordlist 24
-© UCLES 2006
 love (n & v)
 low (adj, n & adv)
 lower (v)
 loyal (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-loyal staff
+• loyal staff
 loyalty (n)
 • customer loyalty
 luck (n)
@@ -2471,7 +2082,6 @@ luggage (n)
 lunch (n)
 lunchtime (n)
 luxury (n & adj)
-
 m (abbrev) metre
 MA (abbrev) Masters degree
 machine (n)
@@ -2497,8 +2107,8 @@ make up (n & v)
 male (adj & n)
 man (n)
 manage (v)
-manage a business
-manage to do something
+• manage a business
+• manage to do something
 managerial (adj)
 managing director (MD) (n)
 manner (n)
@@ -2507,7 +2117,7 @@ manufacture (n & v)
 many (adj & pron)
 map (n)
 margin (n)
-profit margin
+• profit margin
 mark (n & v)
 market (n & v)
 • There’s a good market for fax machines here. (n)
@@ -2540,13 +2150,13 @@ material (n)
 mathematics (n)
 maths (abbrev) mathematics
 matter (n & v)
-Is anything the matter? (n)
-It doesn’t matter. (v)
+• Is anything the matter? (n)
+• It doesn’t matter. (v)
 mature (adj)
-mature attitude
-mature student
-mature investment
-mature sector of the market
+• mature attitude
+• mature student
+• mature investment
+• mature sector of the market
 max (abbrev) maximum
 maximum (adj & n)
 may (v)
@@ -2568,27 +2178,25 @@ media (n)
 medicine (n)
 medium (adj)
 meet (v)
-Could we meet on Thursday
-morning?
-Pleased to meet you!
-Are we meeting the needs of
-consumers?
+• Could we meet on Thursday morning?
+• Pleased to meet you!
+• Are we meeting the needs of consumers?
 member (n)
 membership (n)
 memo (abbrev) memorandum
 memorandum (n)
 memory (n)
-have a good/poor memory
-computer memory
+• have a good/poor memory
+• computer memory
 mend (v)
-mend a faulty machine
+• mend a faulty machine
 mention (n & v)
 menu (n)
 merge (v)
 message (n)
 metal (n)
 method (n)
-production methods
+• production methods
 metre (n)
 microphone (n)
 midday (n)
@@ -2601,12 +2209,10 @@ mild (adj)
 mile (n)
 millimetre (n)
 mind (n & v)
-His mind was on other things. (n)
-Would you mind if I postponed the
-meeting? (v)
-Who’s minding the machine for
-you? (v)
-Mind your head! (v)
+• His mind was on other things. (n)
+• Would you mind if I postponed the meeting? (v)
+• Who’s minding the machine for you? (v)
+• Mind your head! (v)
 mine (pron)
 mineral (adj)
 mineral water (n)
@@ -2617,7 +2223,7 @@ minus (conj)
 min (abbrev) minute
 minute (n)
 minutes (n & pl)
-the minutes of the meeting
+• the minutes of the meeting
 misc (abbrev) miscellaneous
 miscellaneous (adj)
 miserable (adj)
@@ -2682,15 +2288,7 @@ neat (adj)
 necessary (adj)
 need (n & v)
 negative (adj)
-•
 neighbourhood (n)
-•
-•
-•
-•
-•
-•
-•
 negative attitude
 negotiable (adj)
 negotiate (v)
@@ -2699,11 +2297,10 @@ neighbour (n)
 neither (adj & pron)
 nervous (adj)
 net (n & adj)
-have a net income of £20,000 a
-year (adj)
+• have a net income of £20,000 a year (adj)
 network (v & n)
-to network computers (v)
-a computer network (n)
+• to network computers (v)
+• a computer network (n)
 network of agents (n)
 networking (n)
 never (adv)
@@ -2724,8 +2321,8 @@ nobody (n & pron)
 noise (n)
 none (n, adj & pron)
 nor (conj)
-neither management nor workers
-Nor do I.
+• neither management nor workers
+• Nor do I.
 normal (adj)
 north (adj, adv, & n)
 north east (adj & n )
@@ -2746,7 +2343,6 @@ nr (abbrev) near
 nuclear (adj)
 number (n)
 nylon (adj & n)
-
 o’clock (adj & adv)
 object (n & v)
 objective (n)
@@ -2835,7 +2431,6 @@ overtime (n)
 owe (v)
 own (adj & v)
 own brand (n)
-
 p (abbrev) pence
 PA (abbrev) Personal Assistant
 pa (abbrev) per annum
@@ -2867,7 +2462,7 @@ participant (n)
 participate (v)
 participation (n)
 particular (adj)
-a particular problem
+• a particular problem
 partner (n)
 party (n)
 pass (n & v)
@@ -2887,8 +2482,6 @@ peak (n & v)
 pen (n)
 pence (n)
 pencil (n)
-BEC Preliminary Wordlist 28
-© UCLES 2006
 pension (n)
 people (n pl)
 per (prep)
@@ -2962,7 +2555,7 @@ please (int & v)
 pleasure (n)
 plenty (adj & pron)
 plug (n)
-electric plug
+• electric plug
 plug in (phr v)
 • The photocopier isn’t plugged in.
 plus (conj)
@@ -3031,10 +2624,10 @@ previous (adj)
 price (n & v)
 price list (n)
 primary (adj)
-of primary importance
+• of primary importance
 prime minister (n)
 principal (n & adj)
-college principal (n)
+• college principal (n)
 principal activity (adj)
 print (n & v)
 printout (n)
@@ -3119,7 +2712,6 @@ put through (phr v)
 • Could you put me through to the Finance Director?
 put up (phr v)
 • Petrol companies are putting up their prices next week.
-
 qualification (n)
 qualify (v)
 qualify as an accountant
@@ -3171,53 +2763,39 @@ reason (n)
 receipt (n)
 receive (v)
 receiver (n)
-telephone receiver
+• telephone receiver
 recent (adj)
 reception (n)
-reception desk in a hotel or an
-office
-a business reception for delegates
+• reception desk in a hotel or an office
+• a business reception for delegates
 receptionist (n)
 reclaim (v)
 recognise (v)
 recommend (v)
 recommendation (n)
 record (n, adj & v)
-a record of the meeting (n)
-record profits (adj)
-record your comments (v)
+• a record of the meeting (n)
+• record profits (adj)
+• record your comments (v)
 recorder (n)
-a cassette recorder
+• a cassette recorder
 recover (v)
-Have you recovered from the long
-flight?
+• Have you recovered from the long flight?
 recovery (n)
 recruit (n & v)
 rectangular
 red (adj & n)
-in the red
-BEC Preliminary Wordlist 31
-© UCLES 2006
+• in the red
 reduce (v)
 reduction (n)
 redundant (adj)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-make someone redundant
+• make someone redundant
 ref (abbrev) with reference to
 refer (v)
 refer to something
 reference (n)
-a reference to something
-references from a previous
-employer
+• a reference to something
+• references from a previous employer
 refreshment(s) (n)
 refrigerator (n)
 refund (v & n)
@@ -3236,14 +2814,14 @@ regulations (n pl)
 reject (v)
 rejection (n)
 relation (n)
-industrial relations
-public relations
+• industrial relations
+• public relations
 relax (v)
 relevant (adj)
 reliable (adj)
 reliability (n)
 relief (n)
-What a relief!
+• What a relief!
 relocate (v)
 relocation (n)
 rely (v)
@@ -3318,7 +2896,6 @@ routine (n)
 row (n)
 • the figure is in the end row of the column.
 RSVP (abbrev) please reply
-
 rubber (adj & n)
 rubbish (n)
 ruin (n & v)
@@ -3326,7 +2903,6 @@ rule (n & v)
 run (v)
 run out of (phr v)
 • We’ve run out of paper for the printer.
-
 S (abbrev) south
 sad (adj)
 SAE (abbrev) stamped addressed
@@ -3344,9 +2920,9 @@ satisfied (adj)
 save (v)
 say (v)
 scale (n)
-salary scale
-large-scale
-small-scale
+• salary scale
+• large-scale
+• small-scale
 schedule (n & v)
 scheme (n)
 • training scheme
@@ -3396,21 +2972,18 @@ selling price (n)
 seminar (n)
 send (v)
 send for (v)
-send for something
+• send for something
 senior (adj)
 sensible (adj)
 sentence (n)
-Can you translate this sentence
-into German?
+• Can you translate this sentence into German?
 separate (adj & v)
-Can you separate these for me?
-(v)
-They work in separate offices.
-(adj)
+• Can you separate these for me?(v)
+• They work in separate offices.(adj)
 series (n)
 serious (adj)
 servant (n)
-civil servant
+• civil servant
 serve (v )
 • The bank serves the interests of its customers.
 • The rail network serves every region of the country.
@@ -3424,40 +2997,16 @@ services (n pl)
 customer services
 set off (phr v)
 set off for work
-
 set out (phr v)
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-set out on a journey
+• set out on a journey
 set up (phr v)
-set up a business
+• set up a business
 settle (v)
-feel settled in a job
-settle an account
+• feel settled in a job
+• settle an account
 several (adj)
 sex (n)
-the male/female sex
+• the male/female sex
 shake (n & v)
 shall (v)
 shallow (adj)
@@ -3471,13 +3020,13 @@ shareholder (n)
 shares (n & pl)
 shares in the company
 sharp (adj)
-sharp image
-a sharp rise/drop
+• sharp image
+• a sharp rise/drop
 she (pron)
 sheet (n)
 shelf (n)
 shift (n)
-night shift
+• night shift
 shift work(er)
 shine (v)
 ship (n & v)
@@ -3497,8 +3046,8 @@ shy (adj)
 sick (adj)
 side (n)
 sight (n)
-in sight, out of sight
-tourist sights
+• in sight, out of sight
+• tourist sights
 sightseeing (n)
 sign (n & v)
 • a traffic sign, a sign on a wall (n)
@@ -3507,7 +3056,7 @@ sign (n & v)
 signal (n & v)
 signature (n)
 significant (adj)
-a significant rise
+• a significant rise
 signpost (n)
 silence (n)
 silent (adj)
@@ -3516,7 +3065,7 @@ silver (n & adj)
 similar (adj)
 simple (adj)
 simple food
-a simple exercise
+• a simple exercise
 since (conj & prep)
 sincerely (adv)
 single (n & adj)
@@ -3556,8 +3105,6 @@ solid (adj)
 • a solid cylinder
 solution (n)
 solve (v)
-BEC Preliminary Wordlist 34
-© UCLES 2006
 some (adj & adv)
 somebody (n & pron)
 someone (n & pron)
@@ -3633,7 +3180,7 @@ station (n)
 stationery (n)
 statistics (n)
 stay (n & v)
-stay behind (phr v)
+• stay behind (phr v)
 • He stayed behind to finish the report.
 steady (adj)
 steal (v)
@@ -3646,7 +3193,7 @@ step (n & v)
 • step up the career ladder (v)
 still (adv)
 stock (n & v)
-Stock Exchange (n)
+• Stock Exchange (n)
 stocks (n)
 • stocks and shares
 stone (n)
@@ -3736,12 +3283,10 @@ swing (n & v)
 • The door swung shut. (v)
 switch (n & v)
 system (n)
-
 table (n)
 take (v)
 take away (phr v)
 • Take 15 away from 78.
-
 take off (phr v)
 • She took off her jacket.
 • The plane took off on time.
@@ -3853,8 +3398,6 @@ time (n)
 timetable (n & v)
 tin (n)
 tin-opener (n)
-BEC Preliminary Wordlist 37
-© UCLES 2006
 tiny (adj)
 tip (n)
 tired (adj)
@@ -3940,7 +3483,6 @@ type (n & v)
 typewriter (n)
 typical (adj)
 typist (n)
-
 ugly (adj)
 under (prep)
 underground (adj & n)
@@ -3957,8 +3499,6 @@ universe (n)
 university (n)
 unleaded (adj)
 unless (conj)
-BEC Preliminary Wordlist 38
-© UCLES 2006
 until (prep)
 up (adv & prep)
 up-to-date/up to date (adj & adv)
@@ -3973,7 +3513,6 @@ us (pron)
 use (n & v)
 used to (v)
 usual (adj)
-
 vacancy (n)
 vacation (n)
 valid (adj)
@@ -3992,7 +3531,7 @@ venue (n)
 very (adj & adv)
 victory (n)
 video (n & v)
-video recorder (n)
+• video recorder (n)
 videotape (n)
 view (n)
 village (n)
@@ -4005,7 +3544,6 @@ voice (n)
 volume (n)
 vote (n & v)
 voyage (n)
-
 W (abbrev) west
 wage(s) (n)
 wait (n & v)
@@ -4066,8 +3604,6 @@ whereas (conj)
 whether (conj)
 which (pron)
 while (conj)
-BEC Preliminary Wordlist 39
-© UCLES 2006
 whiteboard (n)
 who, whom (pron)
 whole (adj)
@@ -4081,7 +3617,7 @@ will (v)
 willing (adj)
 win (n & v)
 window (n)
-window display (n)
+• window display (n)
 wing (n)
 • the wing of an aeroplane
 wire (n)
@@ -4122,8 +3658,6 @@ write down (phr v)
 write out (phr v)
 • I’ll write it out again.
 wrong (adj)
-
-
 yard (n)
 yd (abbrev) yard
 year (n)
@@ -4137,6 +3671,5 @@ yours (pron)
 yourself (pron)
 youth (n)
 yr (abbrev) year
-
 zero (n)
 zone (n)
