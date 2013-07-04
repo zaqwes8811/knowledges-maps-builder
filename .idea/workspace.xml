@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/VParserException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\utils.java" afterPath="$PROJECT_DIR$/src/common/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" afterPath="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +22,9 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943183498" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372944103754" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
+    <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372944598070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +83,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="4" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.75981164">
+            <state line="20" column="13" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1488#1496#0" expanded="true" />
+                <element signature="e#1512#1520#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableUniformGetter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.16012558">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,17 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="29" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2413#2421#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,11 +144,11 @@
         <option value="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseFilter.java" />
         <option value="$PROJECT_DIR$/src/parsers/BECParser.java" />
-        <option value="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
         <option value="$PROJECT_DIR$/src/common/utils.java" />
         <option value="$PROJECT_DIR$/src/common/Utils.java" />
         <option value="$PROJECT_DIR$/src/parsers/VParserException.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+        <option value="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
       </list>
     </option>
   </component>
@@ -214,6 +213,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="words_getters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,7 +422,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24230146" sideWeight="0.7874109" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21258907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21258907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -551,26 +568,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+        <state line="12" column="4" selection-start="358" selection-end="369" vertical-scroll-proportion="0.29142857">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
+        <state line="21" column="29" selection-start="604" selection-end="604" vertical-scroll-proportion="0.29356357">
           <folding>
             <element signature="e#2413#2421#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="358" selection-end="369" vertical-scroll-proportion="0.29142857">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,10 +593,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="4" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.75981164">
+        <state line="20" column="13" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1512#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.16012558">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

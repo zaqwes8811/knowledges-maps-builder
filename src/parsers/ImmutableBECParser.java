@@ -18,7 +18,7 @@ import java.util.List;
 //
 // Option - что-то вроде альтернативы обработки ошибок, но она не гибкая, не дает никакой информации.
 //   зато дает ответ - Да(результат)/Нет(ничего)
-public class ImmutableBECParser {
+public final class ImmutableBECParser {
   public static final Optional<ImmutableBECParser> getInstance () {
     return INSTANCE;
   }
@@ -32,7 +32,8 @@ public class ImmutableBECParser {
     try {
       tmp = Optional.of(new ImmutableBECParser());
     } catch (IOException e) {
-      // Недосоздан. Использовать нельзя. Ноль, не ноль не важно. Не совсем ясно что с полями.
+      // Не сконструирован. Использовать нельзя. Ноль, не ноль не важно.
+      //   Не совсем ясно что с полями.
       Utils.print(e.getMessage());
       tmp = Optional.absent();
     }
@@ -86,17 +87,23 @@ public class ImmutableBECParser {
   // 0 - CountWords
   //
   // Если использовать Optional, то нужно где-то все равно переходить к исключениям.
-  public Optional<String> getWordByIdx(Integer idx) throws VParserException {
+  public String getWordByIdx(Integer idx) throws VParserException {
     // Проверяем границы.
     // Вычитать 1 нужно, так как нумерация с нуля.
-    if ((idx < 0 || idx > COUNT_WORDS-1)) {
-       return Optional.of(SORTED_WORDS_ALPH.get(idx));
+    if (!(idx < 0 || idx > COUNT_WORDS-1)) {
+       return SORTED_WORDS_ALPH.get(idx);
     } else {
       throw new VParserException("Out of range.");
     }
   }
 
   public static void main(String[] args) {
-    ImmutableBECParser.getInstance().get();
+    try {
+      Utils.print(ImmutableBECParser.getInstance().get().getWordByIdx(1110));
+    } catch (VParserException e) {
+      Utils.print(e.getMessage());
+    } catch (IllegalStateException e) {
+      Utils.print(e.getMessage());
+    }
   }
 }
