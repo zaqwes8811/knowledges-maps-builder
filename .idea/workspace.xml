@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="" />
+    <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\BECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+    </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372874442063" ignored="false" />
@@ -15,10 +18,10 @@
     <file path="/BaseTokenizerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791387300" ignored="false" />
     <file path="/Main.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372795896650" ignored="false" />
     <file path="/ImmutableProcessorTargets.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792883280" ignored="false" />
-    <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372880352581" ignored="false" />
+    <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924289439" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879436376" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879668802" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +80,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BECParser.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/parsers/BECParser.java">
+      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.8287154">
+            <state line="13" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.37394246">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" />
         <option value="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
         <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
@@ -122,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/common/utils.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseFilter.java" />
         <option value="$PROJECT_DIR$/src/parsers/BECParser.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
       </list>
     </option>
   </component>
@@ -246,7 +249,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.BECParser">
+  <component name="RunManager" selected="Application.ImmutableBECParser">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -305,9 +308,9 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BECParser" type="Application" factoryName="Application">
+    <configuration default="false" name="ImmutableBECParser" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="parsers.BECParser" />
+      <option name="MAIN_CLASS_NAME" value="parsers.ImmutableBECParser" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -323,7 +326,7 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.BECParser" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ImmutableBECParser" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
@@ -343,7 +346,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -358,8 +361,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.5023753" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4976247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7327791" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2672209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -531,9 +534,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/BECParser.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.8287154">
+        <state line="13" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.37394246">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
