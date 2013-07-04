@@ -12,7 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-final public class utils {
+final public class Utils {
+  private Utils() {}
   static public void list2file(List<String> list, String filename) throws IOException {
     Closer closer = Closer.create();
     try {
@@ -48,7 +49,8 @@ final public class utils {
   }
 
   // Файл по сути read-only т.е. это getter и поэтому результат будет константным.
-  static public Optional<ImmutableList<String>> file2list(String filename) {
+  // Плохо то, что не ясно что именно произошло. Хотя толку от сообщения тоже.
+  /*static public Optional<ImmutableList<String>> file2list(String filename) {
     List<String> result = new ArrayList<String>();
     try {
       Closer closer = Closer.create();
@@ -64,13 +66,13 @@ final public class utils {
         closer.close();
       }
     } catch (IOException e) {
-      utils.print("Error on read file - "+filename+".");
+      utils.print(e.getMessage());
       return Optional.absent();
     }
     return Optional.absent();
-  }
+  }  */
 
-  static public ImmutableList<String> file2list_dev(String filename) throws IOException {
+  static public ImmutableList<String> file2list(String filename) throws IOException {
     Closer closer = Closer.create();
     List<String> result = new ArrayList<String>();
     try {

@@ -4,7 +4,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
-import common.utils;
+import common.Utils;
 import crosscuttings.AppConstants;
 
 import java.io.IOError;
@@ -15,74 +15,88 @@ import java.util.List;
 
 // Наверное случайный выборщик будет оборачивать это класс, а не будет встроенным в него.
 // Если его использовать статическим, то его нельзя будет передать!
+//
+// Option - что-то вроде альтернативы обработки ошибок, но она не гибкая, не дает никакой информации.
+//   зато дает ответ - Да(результат)/Нет(ничего)
 public class ImmutableBECParser {
-  public static final ImmutableBECParser getInstance () {
+  public static final Optional<ImmutableBECParser> getInstance () {
     return INSTANCE;
   }
 
   // Похоже конструкторы параметры не передать. Поэтому путь жесткая константа.
-  private static final ImmutableBECParser INSTANCE;
+  private static final Optional<ImmutableBECParser> INSTANCE;
 
   static {
-    INSTANCE = new ImmutableBECParser();
+    // No lazily initializing!
+    Optional<ImmutableBECParser> tmp;
+    try {
+      tmp = Optional.of(new ImmutableBECParser());
+    } catch (IOException e) {
+      // Недосоздан. Использовать нельзя. Ноль, не ноль не важно. Не совсем ясно что с полями.
+      Utils.print(e.getMessage());
+      tmp = Optional.absent();
+    }
+    INSTANCE = tmp;
   }
 
-  private ImmutableBECParser() {
+  private ImmutableBECParser() throws IOException {
+    ImmutableList<String> content = Utils.file2list(FULL_FILENAME);
+    CONTENT = ImmutableList.copyOf(content);
 
-    // Доступ может быть конкурентым, если создается несколько объектов.
-    Optional<ImmutableList<String>> content = utils.file2list(FULL_FILENAME);
+    List<String> cashWords = new ArrayList<String>();
+    Multimap<String, String> cashTranslate = HashMultimap.create();
+    Multimap<String, String> cashContent = HashMultimap.create();
 
-    if (content.isPresent()) {
-      CONTENT = Optional.of(ImmutableList.copyOf(content.get()));
-
-      List<String> cashWords = new ArrayList<String>();
-      Multimap<String, String> cashTranslate = HashMultimap.create();
-      Multimap<String, String> cashContent = HashMultimap.create();
-
-      for (String record: CONTENT.get()) {
-        List<String> parsedLine = Lists.newArrayList(Splitter.on(SPLITTER).split(record));
-        if (!parsedLine.isEmpty()) {
-          String word = parsedLine.get(KEY_POS);
-          cashWords.add(word);
-          cashTranslate.put(word, FAKE_TRANSLATE);
-          cashContent.putAll(word, parsedLine.subList(KEY_POS, parsedLine.size()));
-        }
+    for (final String record: CONTENT) {
+      List<String> parsedLine = Lists.newArrayList(Splitter.on(SPLITTER).split(record));
+      if (!parsedLine.isEmpty()) {
+        String word = parsedLine.get(KEY_POS);
+        cashWords.add(word);
+        cashTranslate.put(word, FAKE_TRANSLATE);
+        cashContent.putAll(word, parsedLine.subList(KEY_POS, parsedLine.size()));
       }
-
-      WORDS_TRANSLATES = Optional.of(ImmutableMultimap.copyOf(cashTranslate));
-      SORTED_WORDS_ALPH = Optional.of(ImmutableList.copyOf(cashWords));
-      WORDS_CONTENT = Optional.of(ImmutableMultimap.copyOf(cashContent));
-      COUNT_WORDS = SORTED_WORDS_ALPH.get().size();
-    } else {
-      // Если здесь catch, то пишет что нельзя иниц. дважды, если убрать пишет что не иниц.
-      CONTENT = Optional.absent();
-      SORTED_WORDS_ALPH = Optional.absent();
-      WORDS_TRANSLATES = Optional.absent();
-      WORDS_CONTENT = Optional.absent();
-      COUNT_WORDS = 0;
     }
+
+    WORDS_TRANSLATES = ImmutableMultimap.copyOf(cashTranslate);
+    SORTED_WORDS_ALPH = ImmutableList.copyOf(cashWords);
+    WORDS_CONTENT = ImmutableMultimap.copyOf(cashContent);
+    COUNT_WORDS = SORTED_WORDS_ALPH.size();
   }
 
   private final Integer KEY_POS = 0;
   private final String SPLITTER = "@";
   private final String FAKE_TRANSLATE = "No";
   private final String PATH = "statistic-data";
-  private final String FILENAME = "vocabularit_y-folded.txt";
+  private final String FILENAME = "vocabularity-folded.txt";
   private final String FULL_FILENAME = Joiner.on(AppConstants.PATH_SPLITTER).join(PATH, FILENAME);
 
-  // Допустим испльзуем
+  // Допустим испльзуем не исключение при чтении файла, возвращаем пустой список.
   // Если коллекция пустая, то возможно было пустой файл, а так сразу ясно, что что-то не так
   //   но появляние ошибки растянуто в времени.
-  private final Optional<ImmutableList<String>> CONTENT;
+  private final ImmutableList<String> CONTENT;
   private final Integer COUNT_WORDS;  // Нужно будет для генератора случайных числел
       //   но хранится будет здесь.
   // Индексты тоже сделать такими же
-  private final Optional<ImmutableList<String>> SORTED_WORDS_ALPH;
-  private final Optional<ImmutableMultimap<String, String>> WORDS_TRANSLATES;
-  private final Optional<ImmutableMultimap<String, String>> WORDS_CONTENT;
+  private final ImmutableList<String> SORTED_WORDS_ALPH;
+  private final ImmutableMultimap<String, String> WORDS_TRANSLATES;
+  private final ImmutableMultimap<String, String> WORDS_CONTENT;
+
+
+  // Получить слово по индексу. Нужно для генератора случайных чисел.
+  // 0 - CountWords
+  //
+  // Если использовать Optional, то нужно где-то все равно переходить к исключениям.
+  public Optional<String> getWordByIdx(Integer idx) throws VParserException {
+    // Проверяем границы.
+    // Вычитать 1 нужно, так как нумерация с нуля.
+    if ((idx < 0 || idx > COUNT_WORDS-1)) {
+       return Optional.of(SORTED_WORDS_ALPH.get(idx));
+    } else {
+      throw new VParserException("Out of range.");
+    }
+  }
 
   public static void main(String[] args) {
-    //Optional<ImmutableBECParser> parser = ImmutableBECParser.getInstance();
-
+    ImmutableBECParser.getInstance().get();
   }
 }
