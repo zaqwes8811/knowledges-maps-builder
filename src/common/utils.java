@@ -2,6 +2,7 @@ package common;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
 
@@ -46,7 +47,8 @@ final public class utils {
     return null;   // TODO(zaqwes): BAD!!
   }
 
-  static public Optional<List<String>> file2list(String filename) {
+  // Файл по сути read-only т.е. это getter и поэтому результат будет константным.
+  static public Optional<ImmutableList<String>> file2list(String filename) {
     List<String> result = new ArrayList<String>();
     try {
       Closer closer = Closer.create();
@@ -55,7 +57,7 @@ final public class utils {
         BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
         String s;
         while ((s = in.readLine()) != null) result.add(s);
-        return Optional.of(result);
+        return Optional.of(ImmutableList.copyOf(result));
       } catch (Throwable e) {
         closer.rethrow(e);
       } finally {
