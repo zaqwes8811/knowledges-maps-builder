@@ -19,7 +19,7 @@ public final class ImmutableBaseFilter {
 
   static {
     String pathToFilterFile = "C:/Users/кей/Dropbox/rpts/onto/key-words-base-filter.txt";
-    BASE_FILTER = new HashSet<String>(utils.file2list(pathToFilterFile));
+    BASE_FILTER = new HashSet<String>(utils.file2list(pathToFilterFile).get());
   }
 
   static boolean isContentStem(String stem) {
