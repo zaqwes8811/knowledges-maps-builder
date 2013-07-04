@@ -64,9 +64,26 @@ final public class utils {
         closer.close();
       }
     } catch (IOException e) {
+      utils.print("Error on read file - "+filename+".");
       return Optional.absent();
     }
     return Optional.absent();
+  }
+
+  static public ImmutableList<String> file2list_dev(String filename) throws IOException {
+    Closer closer = Closer.create();
+    List<String> result = new ArrayList<String>();
+    try {
+      // TODO(zaqwes): Может лучше считать разом, а потом разбить на части?
+      BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
+      String s;
+      while ((s = in.readLine()) != null) result.add(s);
+    } catch (Throwable e) {
+      closer.rethrow(e);
+    } finally {
+      closer.close();
+    }
+    return ImmutableList.copyOf(result);
   }
 
   static public void print(Object msg) {
