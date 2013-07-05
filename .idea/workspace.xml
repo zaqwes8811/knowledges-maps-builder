@@ -21,7 +21,7 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373029141828" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373046674196" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373047173681" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
@@ -97,10 +97,10 @@
       <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="87" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4779951">
+            <state line="29" column="66" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.6026895">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1430#1438#0" expanded="true" />
+                <element signature="e#1969#1977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -595,10 +595,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="87" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4779951">
+        <state line="29" column="66" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.6026895">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1430#1438#0" expanded="true" />
+            <element signature="e#1969#1977#0" expanded="true" />
           </folding>
         </state>
       </provider>
