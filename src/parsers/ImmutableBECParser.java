@@ -1,13 +1,11 @@
 package parsers;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
-import common.Utils;
+import common.Util;
 import crosscuttings.AppConstants;
 
-import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +16,9 @@ import java.util.List;
 //
 // Option - что-то вроде альтернативы обработки ошибок, но она не гибкая, не дает никакой информации.
 //   зато дает ответ - Да(результат)/Нет(ничего)
+//
+// Возможно на начальных стадиях финальными классы лучше не делать.
+//   http://www.ibm.com/developerworks/ru/library/j-jtp1029/
 public final class ImmutableBECParser {
   // TODO(zaqwes) TOTH: Кажется синхронизация не нужна.
   public static ImmutableBECParser create(ImmutableList<String> fileContent) {
@@ -82,15 +83,15 @@ public final class ImmutableBECParser {
   public static void main(String[] args) {
     try {
       String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
-      ImmutableList<String> content = Utils.file2list(fullFilename);
+      ImmutableList<String> content = Util.file2list(fullFilename);
       ImmutableBECParser cash = ImmutableBECParser.create(content);
 
     } catch (IOException e) {
-      Utils.print(e.getMessage());
+      Util.print(e.getMessage());
     //} catch (VParserException e) {
     //  Utils.print(e.getMessage());
     } catch (IllegalStateException e) {
-      Utils.print(e.getMessage());
+      Util.print(e.getMessage());
     }
   }
 }

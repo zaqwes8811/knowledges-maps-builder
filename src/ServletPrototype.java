@@ -1,6 +1,6 @@
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
-import common.Utils;
+import common.Util;
 import crosscuttings.AppConstants;
 import parsers.ImmutableBECParser;
 
@@ -16,7 +16,7 @@ public class ServletPrototype {
       String fullBECFilename =
           Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
       try {
-        ImmutableList<String> content = Utils.file2list(fullBECFilename);
+        ImmutableList<String> content = Util.file2list(fullBECFilename);
         // Парсим
         ImmutableBECParser parser = ImmutableBECParser.create(content);
         // Инициализируем генератор случайных чисел.
@@ -25,7 +25,7 @@ public class ServletPrototype {
 
       } catch (IOException e) {
         // Нужно как-то оповестить пользователя.
-        Utils.print(e.getMessage());
+        Util.print(e.getMessage());
       }
     }
 }

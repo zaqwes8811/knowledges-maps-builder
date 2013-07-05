@@ -1,19 +1,15 @@
 package common;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.regex.Pattern;
 
-final public class Utils {
-  private Utils() {}
+final public class Util {
+  private Util() {}
   static public void list2file(List<String> list, String filename) throws IOException {
     Closer closer = Closer.create();
     try {
@@ -94,5 +90,25 @@ final public class Utils {
     } else {
       System.console().writer().println(msg);
     }
+  }
+
+  private final static  class DirFilter implements FilenameFilter {
+    private Pattern pattern;
+    public DirFilter(String regex) {
+      pattern = Pattern.compile(regex);
+    }
+    public boolean accept(File dir, String name) {
+      return  pattern.matcher(name).matches();
+    }
+  }
+  public static List<String> getListNamesMetaFiles(String pathToNode, String regex) {
+    File nodeContainer = new File(pathToNode);
+    List<String> result = Arrays.asList(nodeContainer.list(new DirFilter(regex)));
+    return result;
+  }
+
+  public static List<String> getListFilenamesByExtention(String path, String regex) {
+    List<String> result = Arrays.asList(new File(path).list(new DirFilter(regex)));
+    return result;
   }
 }
