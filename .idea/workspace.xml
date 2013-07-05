@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -21,9 +22,10 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028379226" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028420287" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372944598070" ignored="false" />
+    <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +87,10 @@
       <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="85" selection-start="3732" selection-end="3732" vertical-scroll-proportion="0.48037678">
+            <state line="65" column="0" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.10675039">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3952#3960#0" expanded="true" />
+                <element signature="e#1180#1188#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/coursors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java" />
@@ -147,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/common/Utils.java" />
         <option value="$PROJECT_DIR$/src/parsers/VParserException.java" />
         <option value="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
       </list>
     </option>
@@ -495,13 +497,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="23" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.0">
@@ -584,15 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractMapBasedMultimap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="17" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.35067874">
@@ -607,12 +593,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
+    <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="85" selection-start="3732" selection-end="3732" vertical-scroll-proportion="0.48037678">
+        <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3952#3960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="22" selection-start="6672" selection-end="6672" vertical-scroll-proportion="0.58712715">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3943#3951#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.10675039">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1180#1188#0" expanded="true" />
           </folding>
         </state>
       </provider>
