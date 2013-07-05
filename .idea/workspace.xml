@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\ImmutableAppUtils.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" afterPath="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServletPrototype.java" afterPath="$PROJECT_DIR$/src/ServletPrototype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\utils.java" afterPath="$PROJECT_DIR$/src/common/Util.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +21,7 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373029141828" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373046512051" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373046674196" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
@@ -103,10 +97,10 @@
       <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.41564792">
+            <state line="23" column="87" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4779951">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1247#1255#0" expanded="true" />
+                <element signature="e#1430#1438#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -601,10 +595,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.41564792">
+        <state line="23" column="87" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4779951">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1247#1255#0" expanded="true" />
+            <element signature="e#1430#1438#0" expanded="true" />
           </folding>
         </state>
       </provider>

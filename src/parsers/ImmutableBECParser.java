@@ -19,6 +19,9 @@ import java.util.List;
 //
 // Возможно на начальных стадиях финальными классы лучше не делать.
 //   http://www.ibm.com/developerworks/ru/library/j-jtp1029/
+//
+// Наверное лучше сделать интерфейс к этому тип. Ну нужно понять, что за API реально нужны.
+// Или сделать private classes и генерировать статическим методом. С одним интерфейсом.
 public final class ImmutableBECParser {
   // TODO(zaqwes) TOTH: Кажется синхронизация не нужна.
   public static ImmutableBECParser create(ImmutableList<String> fileContent) {
