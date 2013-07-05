@@ -4,6 +4,7 @@ import com.google.common.base.Optional;
 import parsers.ImmutableBECParser;
 
 /**
+ * Объединяет в себе
  */
 public class ImmutableUniformGetter {
 
