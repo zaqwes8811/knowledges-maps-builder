@@ -6,6 +6,8 @@ import parsers.ImmutableBECParser;
 /**
  */
 public class ImmutableUniformGetter {
+
+  // Да, лучше передать, тогда будет Стратегией?
   public ImmutableUniformGetter(Optional<ImmutableBECParser> parser) {
     BEC_PARSER = parser;
   }
