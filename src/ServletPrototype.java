@@ -10,6 +10,8 @@ import java.util.List;
 public class ServletPrototype {
     public static void main(String[] args) {
 
+      // TODO(zaqwes): Сделать класс экстактор данных. Или аксцессор к базе знаний.
+      //   Тогде класс будет не парсером, а как бы кэшем. Так и правильнее для дальнейшего расширения.
       // Читаем файл с сформатированными данными.
       // word@content item1@content item2
       // перевода пока нет
