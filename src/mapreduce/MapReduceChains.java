@@ -25,7 +25,9 @@ import java.util.*;
 public class MapReduceChains {
   private MapReduceChains() {}
 
-  public static void main(String [] args) {}
+  public static void main(String [] args) {
+    MapReduceChains.runBECChain();
+  }
 
   public static void runSentencesLevelProcess () {
     /*
@@ -189,14 +191,20 @@ public class MapReduceChains {
   public static void runBECChain() {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
-      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
-      ImmutableList<String> content = Util.file2list(fullFilename);
+      ImmutableList<String> content =
+          Util.file2list(
+              Joiner.on(AppConstants.PATH_SPLITTER)
+                  .join("raw-dicts", "vocabularity-folded.txt"));
       ImmutableBECParser cash = ImmutableBECParser.create(content);
+
+      // Извлекаем данные и обрабатываем их
+      List<String> dictWords = cash.getDict();
+      Multimap<String, String> dictContent = cash.getContent();
+      Multimap<String, String> dictTranslate = cash.getWordTranslates();
+
 
     } catch (IOException e) {
       Util.print(e.getMessage());
-      //} catch (VParserException e) {
-      //  Utils.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
     }

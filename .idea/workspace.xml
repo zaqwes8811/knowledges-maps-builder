@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" afterPath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\TopProcessor.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +22,7 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303859376" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303327909" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303710804" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373304319089" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
@@ -42,10 +34,11 @@
     <file path="/SentencesLevelProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290648477" ignored="false" />
     <file path="/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290161617" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290854391" ignored="false" />
-    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373302102151" ignored="false" />
+    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373304591629" ignored="false" />
     <file path="/KeyWordsCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303817004" ignored="false" />
     <file path="/ImmutableOntoAssistant.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303827391" ignored="false" />
     <file path="/ImmutableDataExtractor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303834860" ignored="false" />
+    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373304585013" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,7 @@
       <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="4" selection-start="5017" selection-end="5489" vertical-scroll-proportion="0.0">
+            <state line="73" column="18" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,14 +109,14 @@
       <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="5" selection-start="7506" selection-end="7506" vertical-scroll-proportion="0.9466248">
+            <state line="203" column="6" selection-start="7553" selection-end="7553" vertical-scroll-proportion="0.54631084">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2923#2929#0" expanded="true" />
-                <element signature="e#3343#3349#0" expanded="true" />
-                <element signature="e#4211#4228#0" expanded="true" />
-                <element signature="e#4289#4305#0" expanded="true" />
-                <element signature="e#4378#4401#0" expanded="true" />
+                <element signature="e#2961#2967#0" expanded="true" />
+                <element signature="e#3381#3387#0" expanded="true" />
+                <element signature="e#4249#4266#0" expanded="true" />
+                <element signature="e#4327#4343#0" expanded="true" />
+                <element signature="e#4416#4439#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -632,21 +625,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="4" selection-start="5017" selection-end="5489" vertical-scroll-proportion="0.0">
+        <state line="73" column="18" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="5" selection-start="7506" selection-end="7506" vertical-scroll-proportion="0.9466248">
+        <state line="203" column="6" selection-start="7553" selection-end="7553" vertical-scroll-proportion="0.54631084">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2923#2929#0" expanded="true" />
-            <element signature="e#3343#3349#0" expanded="true" />
-            <element signature="e#4211#4228#0" expanded="true" />
-            <element signature="e#4289#4305#0" expanded="true" />
-            <element signature="e#4378#4401#0" expanded="true" />
+            <element signature="e#2961#2967#0" expanded="true" />
+            <element signature="e#3381#3387#0" expanded="true" />
+            <element signature="e#4249#4266#0" expanded="true" />
+            <element signature="e#4327#4343#0" expanded="true" />
+            <element signature="e#4416#4439#0" expanded="true" />
           </folding>
         </state>
       </provider>
