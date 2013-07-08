@@ -6,14 +6,8 @@ import mapreduce.Mappers;
 
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 18:57
- * To change this template use File | Settings | File Templates.
- */
-final public class Reduces {
+/**  */
+public class Reduces {
 
   public static final int IDX_SORTED_IDX = 5;
 

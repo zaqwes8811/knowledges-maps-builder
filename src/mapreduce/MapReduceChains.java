@@ -2,6 +2,7 @@ package mapreduce;
 
 
 import com.google.common.base.Optional;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
@@ -13,10 +14,10 @@ import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
+import java.io.CharArrayReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -99,17 +100,17 @@ public class MapReduceChains {
     // Map Stage
     List<List> resultMapStage = new ArrayList<List>();
     for (List<String> job : jobs.get()) {
-      List one = Mappers.mapper_word_level_with_compression(job);
+      List one = Mappers.mapperWordLevel(job);
       resultMapStage.add(one);
       //break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
-    List<List> result_shuffle_stage  = resultMapStage;
+    List<List> resultShuffleStage  = resultMapStage;
 
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> resultReduceStage = new ArrayList<List>();
-    for (List task: result_shuffle_stage) {
+    for (List task: resultShuffleStage) {
       List one = Reduces.reduce_word_level_base(task);
       resultReduceStage.add(one);
     }
@@ -118,24 +119,36 @@ public class MapReduceChains {
     for (final List reduceItem: resultReduceStage) {
       // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
       // Сохраняем сортированные индекс
-      List<String> sortedIdx =
+      List<String> sortedByFreqIdxForSave =
         (ArrayList<String>)reduceItem.get(Reduces.IDX_SORTED_IDX);
+
+      // Может быть они тоже нормально сереализуются?
+      // Вообще наверное лучше хранить в базе данных, а не в файлах.
       Multiset<String> frequencyIdx =
         (Multiset<String>)reduceItem.get(Mappers.IDX_FREQ_INDEX);
       Multimap<String, String> restWords =
         (Multimap<String, String>)reduceItem.get(Mappers.IDX_RESTS_MAP);
+
+      // Это массив чисел!
       Map<String, Collection<Integer>> sentencesInvIdx =
         ((Multimap<String, Integer>)reduceItem.get(Mappers.IDX_SENT_MAP)).asMap();
 
-      Map<String, Integer> index_for_save = new HashMap<String, Integer>();
-      Map<String, String> rest_idx_for_save = new HashMap<String, String>();
-      Map<String, List<Integer>> sentences_idx_for_save = new HashMap<String, List<Integer>>();
-      for (final String word: sortedIdx) {
-        index_for_save.put(word, frequencyIdx.count(word));
-        rest_idx_for_save.put(word, Joiner.on(" ").join(restWords.get(word)));
-        sentences_idx_for_save.put(word, new ArrayList<Integer>(sentencesInvIdx.get(word)));
+      // Это другие представления индексов?
+      Map<String, Integer> idxForSave = new HashMap<String, Integer>();
+      Map<String, String> restIdxForSave = new HashMap<String, String>();
+      Map<String, List<Integer>> sentencesIdxForSave = new HashMap<String, List<Integer>>();
+
+      // Получение сохраняемых структур.
+      for (final String word: sortedByFreqIdxForSave) {
+        idxForSave.put(
+            word, frequencyIdx.count(word));
+        restIdxForSave.put(
+            word, Joiner.on(" ").join(restWords.get(word)));
+        sentencesIdxForSave.put(
+            word, new ArrayList<Integer>(sentencesInvIdx.get(word)));
       }
 
+      // Само сохранение
       try {
         Closer closer = Closer.create();
         try {
@@ -166,13 +179,13 @@ public class MapReduceChains {
 
           // Сохраняем в JSON
           closer.register(new BufferedWriter(new FileWriter(path_for_save_sorted_idx)))
-            .write(new Gson().toJson(sortedIdx));
+            .write(new Gson().toJson(sortedByFreqIdxForSave));
           closer.register(new BufferedWriter(new FileWriter(path_for_save_freq_idx)))
-            .write(new Gson().toJson(index_for_save));
+            .write(new Gson().toJson(idxForSave));
           closer.register(new BufferedWriter(new FileWriter(path_for_save_rest_idx)))
-            .write(new Gson().toJson(rest_idx_for_save));
+            .write(new Gson().toJson(restIdxForSave));
           closer.register(new BufferedWriter(new FileWriter(path_for_save_sentences_idx)))
-            .write(new Gson().toJson(sentences_idx_for_save));
+            .write(new Gson().toJson(sentencesIdxForSave));
 
         } catch (CrosscuttingsException e) {
             Util.print(e.getMessage());
@@ -201,6 +214,16 @@ public class MapReduceChains {
       List<String> dictWords = cash.getDict();
       Multimap<String, String> dictContent = cash.getContent();
       Multimap<String, String> dictTranslate = cash.getWordTranslates();
+      Multimap<String, Integer> sentencesPtrs = HashMultimap.create();
+      List<String> sentences = new ArrayList<String>();
+
+      // Нуменация предложения с нуля!
+      for (final String key: dictContent.keySet()) {
+        if (!dictContent.get(key).isEmpty()) {
+          // Контент таки был
+          Util.print(dictContent.get(key));
+        }
+      }
 
 
     } catch (IOException e) {
