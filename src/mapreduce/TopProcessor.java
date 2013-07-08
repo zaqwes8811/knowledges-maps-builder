@@ -1,6 +1,7 @@
 package mapreduce;
 
 
+import com.google.common.base.Optional;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import common.Util;
@@ -23,6 +24,7 @@ public class TopProcessor {
   private TopProcessor() {}
 
   public static void main(String [] args) {
+    /*
     // Получаем работы
     List<List<String>> jobs = ImmutableJobsFormer.getJobs();
 
@@ -74,16 +76,23 @@ public class TopProcessor {
       e.printStackTrace();
     }
     Util.print("Done. Sentences level processing.");
+    */
   }
 
 
   public void testDevelop () {
-    // Получаем работы
-    List<List<String>> jobs = ImmutableJobsFormer.getJobs();
+    Optional<List<List<String>>> jobs = Optional.absent();
+    try {
+      // Получаем работы
+      jobs = Optional.of(ImmutableJobsFormer.getJobs());
 
+    } catch (CrosscuttingsException e) {
+      Util.print(e.getMessage());
+
+    }
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
-    for (List<String> job : jobs) {
+    for (List<String> job : jobs.get()) {
       List one = Mappers.mapper_word_level_with_compression(job);
       result_map_stage.add(one);
       //break;  // DEVELOP
@@ -105,17 +114,11 @@ public class TopProcessor {
       // Сохраняем сортированные индекс
       List<String> sortedIdx =
         (ArrayList<String>)reduceItem.get(Reduces.IDX_SORTED_IDX);
-
-      // частоты
       Multiset<String> frequencyIdx =
         (Multiset<String>)reduceItem.get(Mappers.IDX_FREQ_INDEX);
-
-      // Обрезки слов
-      Multimap<String, String> rest_words =
+      Multimap<String, String> restWords =
         (Multimap<String, String>)reduceItem.get(Mappers.IDX_RESTS_MAP);
-
-      // Sent. index
-      Map<String, Collection<Integer>> sentences_inv_idx =
+      Map<String, Collection<Integer>> sentencesInvIdx =
         ((Multimap<String, Integer>)reduceItem.get(Mappers.IDX_SENT_MAP)).asMap();
 
       Map<String, Integer> index_for_save = new HashMap<String, Integer>();
@@ -123,21 +126,13 @@ public class TopProcessor {
       Map<String, List<Integer>> sentences_idx_for_save = new HashMap<String, List<Integer>>();
       for (final String word: sortedIdx) {
         index_for_save.put(word, frequencyIdx.count(word));
-        rest_idx_for_save.put(word, Joiner.on(" ").join(rest_words.get(word)));
-        sentences_idx_for_save.put(word, new ArrayList<Integer>(sentences_inv_idx.get(word)));
+        rest_idx_for_save.put(word, Joiner.on(" ").join(restWords.get(word)));
+        sentences_idx_for_save.put(word, new ArrayList<Integer>(sentencesInvIdx.get(word)));
       }
 
       try {
         Closer closer = Closer.create();
         try {
-          // Куда сохраняем результаты
-          // Куда сохраняем результаты
-          String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
-            .join(
-              ImmutableProcessorTargets.getPathToIndex(),
-              AppConstants.COMPRESSED_IDX_FOLDER,
-              reduceItem.get(Mappers.IDX_NODE_NAME));
-
           String path_for_save_sorted_idx = Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
               ImmutableProcessorTargets.getPathToIndex(),
