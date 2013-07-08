@@ -1,5 +1,14 @@
 package crosscuttings.jobs_processors;
 
+import com.google.common.base.Joiner;
+import crosscuttings.AppConstants;
+import crosscuttings.CrosscuttingsException;
+import idx_coursors.hided.ImmutableBaseCoursor;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: кей
@@ -14,12 +23,12 @@ package crosscuttings.jobs_processors;
 final public class ImmutableJobsFormer {
   public static final int IDX_NODE_NAME = 0;
   public static final int IDX_FILENAME = 1;
-  /*
-  public static List<List<String>> getJobs() {
+
+  public static List<List<String>> getJobs() throws CrosscuttingsException {
 
     List<List<String>> jobs = new ArrayList<List<String>>();
     //
-    List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes().get();
     for (String node: nodes) {
       String contentFilename = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
@@ -30,5 +39,5 @@ final public class ImmutableJobsFormer {
       jobs.add(Arrays.asList(node, contentFilename));
     }
     return jobs;
-  }  */
+  }
 }

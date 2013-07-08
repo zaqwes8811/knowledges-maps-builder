@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\MapperSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\ReduceSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\WordLevelProcessorTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Reduces.java" afterPath="$PROJECT_DIR$/src/mapreduce/Reduces.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\ImmutableAppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxGetters.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\Savers.java" afterPath="$PROJECT_DIR$/src/idx_coursors/Savers.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" afterPath="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373200973698" ignored="false" />
-    <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
+    <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373291683848" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
     <file path="/ImmutableBaseCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794246501" ignored="false" />
@@ -31,7 +21,7 @@
     <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372927666327" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373029141828" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373291622377" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373221165156" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
@@ -44,7 +34,7 @@
     <file path="/SentencesLevelProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290648477" ignored="false" />
     <file path="/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290161617" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290854391" ignored="false" />
-    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373291356280" ignored="false" />
+    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373292213678" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +107,26 @@
       <file leaf-file-name="TopProcessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/TopProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="35" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.4596577">
+            <state line="117" column="16" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.4596577">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2775#2781#0" expanded="true" />
+                <element signature="e#3199#3205#0" expanded="true" />
+                <element signature="e#4067#4084#0" expanded="true" />
+                <element signature="e#4145#4161#0" expanded="true" />
+                <element signature="e#4234#4257#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableJobsFormer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="75" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#813#827#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableSavers.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/ImmutableReduceSentencesLevel.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/Savers.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java" />
@@ -179,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
+        <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" />
       </list>
     </option>
@@ -317,6 +324,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="crosscuttings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crosscuttings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jobs_processors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -587,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/Reduces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="6" selection-start="3479" selection-end="3479" vertical-scroll-proportion="0.0">
@@ -627,11 +649,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/TopProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="35" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.4596577">
+        <state line="26" column="75" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#813#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/TopProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="16" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.4596577">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2775#2781#0" expanded="true" />
+            <element signature="e#3199#3205#0" expanded="true" />
+            <element signature="e#4067#4084#0" expanded="true" />
+            <element signature="e#4145#4161#0" expanded="true" />
+            <element signature="e#4234#4257#0" expanded="true" />
           </folding>
         </state>
       </provider>
