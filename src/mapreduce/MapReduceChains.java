@@ -2,6 +2,7 @@ package mapreduce;
 
 
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import common.Util;
@@ -13,6 +14,7 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -20,10 +22,12 @@ import java.io.IOException;
 import java.util.*;
 
 /** */
-public class TopProcessor {
-  private TopProcessor() {}
+public class MapReduceChains {
+  private MapReduceChains() {}
 
-  public static void main(String [] args) {
+  public static void main(String [] args) {}
+
+  public static void runSentencesLevelProcess () {
     /*
     // Получаем работы
     List<List<String>> jobs = ImmutableJobsFormer.getJobs();
@@ -80,7 +84,7 @@ public class TopProcessor {
   }
 
 
-  public void testDevelop () {
+  public void runWordLevelProcess () {
     Optional<List<List<String>>> jobs = Optional.absent();
     try {
       // Получаем работы
@@ -91,15 +95,15 @@ public class TopProcessor {
 
     }
     // Map Stage
-    List<List> result_map_stage = new ArrayList<List>();
+    List<List> resultMapStage = new ArrayList<List>();
     for (List<String> job : jobs.get()) {
       List one = Mappers.mapper_word_level_with_compression(job);
-      result_map_stage.add(one);
+      resultMapStage.add(one);
       //break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
-    List<List> result_shuffle_stage  = result_map_stage;
+    List<List> result_shuffle_stage  = resultMapStage;
 
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> resultReduceStage = new ArrayList<List>();
@@ -179,6 +183,26 @@ public class TopProcessor {
         e.printStackTrace();
       }
     }  // for..
+  }
+
+  // Chain for BEC dictionary.
+  public static void runBECChain() {
+    // Как-то нужно правильно сопоставить слово и контент.
+    try {
+      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
+      ImmutableList<String> content = Util.file2list(fullFilename);
+      ImmutableBECParser cash = ImmutableBECParser.create(content);
+
+    } catch (IOException e) {
+      Util.print(e.getMessage());
+      //} catch (VParserException e) {
+      //  Utils.print(e.getMessage());
+    } catch (IllegalStateException e) {
+      Util.print(e.getMessage());
+    }
+
+    // Saver
+
 
   }
 }

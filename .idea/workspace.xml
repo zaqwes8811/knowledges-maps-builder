@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" afterPath="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" afterPath="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\mapreduce\TopProcessor.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,9 +28,9 @@
     <file path="/ImmutableProcessorTargets.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792883280" ignored="false" />
     <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372927666327" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
-    <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373291622377" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373221165156" ignored="false" />
+    <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303859376" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303327909" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303710804" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
@@ -34,7 +42,10 @@
     <file path="/SentencesLevelProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290648477" ignored="false" />
     <file path="/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290161617" ignored="false" />
     <file path="/ImmutableAppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290854391" ignored="false" />
-    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373292213678" ignored="false" />
+    <file path="/TopProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373302102151" ignored="false" />
+    <file path="/KeyWordsCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303817004" ignored="false" />
+    <file path="/ImmutableOntoAssistant.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303827391" ignored="false" />
+    <file path="/ImmutableDataExtractor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303834860" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,61 +104,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Reduces.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mapreduce/Reduces.java">
+      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="6" selection-start="3479" selection-end="3479" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopProcessor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mapreduce/TopProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="16" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.4596577">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2775#2781#0" expanded="true" />
-                <element signature="e#3199#3205#0" expanded="true" />
-                <element signature="e#4067#4084#0" expanded="true" />
-                <element signature="e#4145#4161#0" expanded="true" />
-                <element signature="e#4234#4257#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableJobsFormer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="75" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#813#827#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppConfigurator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+            <state line="118" column="4" selection-start="5017" selection-end="5489" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mappers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
+      <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="53" selection-start="11132" selection-end="11132" vertical-scroll-proportion="0.0">
+            <state line="201" column="5" selection-start="7506" selection-end="7506" vertical-scroll-proportion="0.9466248">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#11249#11258#0" expanded="true" />
+                <element signature="e#2923#2929#0" expanded="true" />
+                <element signature="e#3343#3349#0" expanded="true" />
+                <element signature="e#4211#4228#0" expanded="true" />
+                <element signature="e#4289#4305#0" expanded="true" />
+                <element signature="e#4378#4401#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,15 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableReduceSentencesLevel.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/Savers.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxGetters.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/MapperSentencesLevel.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/ReduceSentencesLevel.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/Reduces.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessor.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/Processor.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/WordLevelProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" />
@@ -187,6 +154,15 @@
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/TopProcessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" />
+        <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
       </list>
     </option>
   </component>
@@ -327,28 +303,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobs_processors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -369,7 +323,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.ServletPrototype">
+  <component name="RunManager" selected="Application.ImmutableBECParser">
     <configuration default="false" name="ServletPrototype" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ServletPrototype" />
@@ -482,16 +436,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.6698337" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21258907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.7874109" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21258907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33016628" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -556,57 +510,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="17" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="218" selection-end="218" vertical-scroll-proportion="-0.08782936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="308" selection-end="308" vertical-scroll-proportion="0.23462985">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="318" selection-end="318" vertical-scroll-proportion="0.12547052">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="542" selection-end="542" vertical-scroll-proportion="0.23852041">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/Savers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxGetters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="29" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
@@ -625,6 +528,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6858191">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.29095355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="75" selection-start="767" selection-end="767" vertical-scroll-proportion="0.5220049">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#813#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="219" column="53" selection-start="11132" selection-end="11132" vertical-scroll-proportion="0.0">
@@ -635,40 +562,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6858191">
+        <state line="8" column="39" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+        <state line="5" column="18" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="75" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+        <state line="11" column="22" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#813#827#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/TopProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="16" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.4596577">
+        <state line="12" column="28" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2775#2781#0" expanded="true" />
-            <element signature="e#3199#3205#0" expanded="true" />
-            <element signature="e#4067#4084#0" expanded="true" />
-            <element signature="e#4145#4161#0" expanded="true" />
-            <element signature="e#4234#4257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="8" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="6" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/tests/CompressorsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="472" column="47" selection-start="19788" selection-end="19788" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="4" selection-start="5017" selection-end="5489" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="5" selection-start="7506" selection-end="7506" vertical-scroll-proportion="0.9466248">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2923#2929#0" expanded="true" />
+            <element signature="e#3343#3349#0" expanded="true" />
+            <element signature="e#4211#4228#0" expanded="true" />
+            <element signature="e#4289#4305#0" expanded="true" />
+            <element signature="e#4378#4401#0" expanded="true" />
           </folding>
         </state>
       </provider>
