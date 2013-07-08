@@ -1,4 +1,4 @@
-package mapreduce;
+package idx_coursors;
 
 /**
  * Created with IntelliJ IDEA.

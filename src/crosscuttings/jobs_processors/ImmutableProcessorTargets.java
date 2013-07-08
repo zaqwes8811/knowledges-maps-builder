@@ -1,15 +1,14 @@
 package crosscuttings.jobs_processors;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.ImmutableAppConfigurator;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -43,7 +42,7 @@ final public class ImmutableProcessorTargets {
   public static String getPathToIndex() throws CrosscuttingsException {
       String pathToIndex = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-              ImmutableAppConfigurator.getPathToAppFolder(),
+              AppConfigurator.getPathToAppFolder(),
               getIndexName());
       return pathToIndex;
   }
