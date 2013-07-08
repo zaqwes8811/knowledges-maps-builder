@@ -1,7 +1,7 @@
 package idx_coursors.hided;
 
 import com.google.common.collect.Multiset;
-import common.utils;
+import common.Util;
 
 import java.util.ArrayList;
 import java.util.List;

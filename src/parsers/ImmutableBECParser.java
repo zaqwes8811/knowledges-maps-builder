@@ -1,6 +1,7 @@
 package parsers;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
@@ -31,6 +32,8 @@ import java.util.List;
 //
 // Immutable не обязательно должен быть final, у него может быть закрыт конструктор.
 //   Просто не всегда хорошо делать сам класс финальным.
+//
+// Скорее всего это будет кэшем словаря.
 public final class ImmutableBECParser {
   // TODO(zaqwes) TOTH: Кажется синхронизация не нужна.
   public static ImmutableBECParser create(ImmutableList<String> fileContent) {
@@ -61,6 +64,23 @@ public final class ImmutableBECParser {
     SORTED_WORDS_ALPH = ImmutableList.copyOf(cashWords);
     WORDS_CONTENT = ImmutableMultimap.copyOf(cashContent);
     COUNT_WORDS = SORTED_WORDS_ALPH.size();
+  }
+
+  public Optional<ImmutableList<String>> parseBECBase (
+      Multimap<String, String> cashTranslate,
+      Multimap<String, String> cashContent)
+    {
+    List<String> cashWords = new ArrayList<String>();
+    for (final String record: CONTENT) {
+      List<String> parsedLine = Lists.newArrayList(Splitter.on(SPLITTER).split(record));
+      if (!parsedLine.isEmpty()) {
+        String word = parsedLine.get(KEY_POS);
+        cashWords.add(word);
+        cashTranslate.put(word, FAKE_TRANSLATE);
+        cashContent.putAll(word, parsedLine.subList(KEY_POS, parsedLine.size()));
+      }
+    }
+    return Optional.of(ImmutableList.copyOf(cashWords));
   }
 
   // Получить слово по индексу. Нужно для генератора случайных чисел.
@@ -97,7 +117,7 @@ public final class ImmutableBECParser {
 
   public static void main(String[] args) {
     try {
-      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
+      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
       ImmutableList<String> content = Util.file2list(fullFilename);
       ImmutableBECParser cash = ImmutableBECParser.create(content);
 

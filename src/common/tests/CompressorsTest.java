@@ -1,6 +1,6 @@
 package common.tests;
 
-import common.ImmutableAppUtils;
+import common.Util;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import org.junit.Test;
@@ -485,7 +485,7 @@ public class CompressorsTest {
           key,
           test.get(key)));
     } */
-    ImmutableAppUtils.print(compressed);
+    Util.print(compressed);
 
   }
 }

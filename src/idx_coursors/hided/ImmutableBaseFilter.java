@@ -1,6 +1,6 @@
 package idx_coursors.hided;
 
-import common.utils;
+import common.Util;
 
 import javax.swing.*;
 import java.util.HashSet;
@@ -15,11 +15,11 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public final class ImmutableBaseFilter {
-  private static final Set<String> BASE_FILTER;
+  /*private static final Set<String> BASE_FILTER;
 
   static {
     String pathToFilterFile = "C:/Users/кей/Dropbox/rpts/onto/key-words-base-filter.txt";
-    BASE_FILTER = new HashSet<String>(utils.file2list(pathToFilterFile).get());
+    BASE_FILTER = new HashSet<String>(Util.file2list(pathToFilterFile).get());
   }
 
   static boolean isContentStem(String stem) {
@@ -28,5 +28,5 @@ public final class ImmutableBaseFilter {
 
   static public void main(String[] args) {
 
-  }
+  }   */
 }
