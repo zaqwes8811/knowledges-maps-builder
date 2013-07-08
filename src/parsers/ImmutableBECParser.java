@@ -56,7 +56,9 @@ public final class ImmutableBECParser {
         String word = parsedLine.get(KEY_POS);
         cashWords.add(word);
         cashTranslate.put(word, FAKE_TRANSLATE);
-        cashContent.putAll(word, parsedLine.subList(KEY_POS, parsedLine.size()));
+
+        // Предложения идущие в комплекте.
+        cashContent.putAll(word, parsedLine.subList(KEY_POS+1, parsedLine.size()));
       }
     }
 
