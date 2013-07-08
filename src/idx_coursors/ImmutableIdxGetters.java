@@ -1,26 +1,22 @@
-package coursors;
+package idx_coursors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import common.ImmutableAppUtils;
-import common.utils;
+import common.Util;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableProcessorTargets;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import coursors.NotesProcessor;
-
-final public class ImmutableIdxGetters {
+// Вообще это геттер-сеттер к базе данных. Это синглетон.
+//
+// И он должен быть многопоточным. И еще желательно межпроцессозащищенным.
+public class ImmutableIdxGetters {
  /*
   // Получаем пересечение индексов
   static void get_confluence_idx() {
@@ -90,7 +86,7 @@ final public class ImmutableIdxGetters {
    */
   static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
     try {
-      String sorted_freq_idx_json = utils.file2string(
+      String sorted_freq_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
             ImmutableProcessorTargets.getPathToIndex(),
@@ -107,7 +103,7 @@ final public class ImmutableIdxGetters {
 
   static public Optional<List<String>> getSortedIdx(String node) {
     try {
-      String sorted_idx_json = utils.file2string(
+      String sorted_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
             ImmutableProcessorTargets.getPathToIndex(),

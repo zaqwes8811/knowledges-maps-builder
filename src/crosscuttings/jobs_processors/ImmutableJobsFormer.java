@@ -1,14 +1,5 @@
 package crosscuttings.jobs_processors;
 
-import coursors.ImmutableBaseCoursor;
-import crosscuttings.AppConstants;
-
-import com.google.common.base.Joiner;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: кей

@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parsers/ImmutableTextExtractors.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServletPrototype.java" afterPath="$PROJECT_DIR$/src/ServletPrototype.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\coursors\NotesProcessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/NotesProcessor.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +20,7 @@
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
     <file path="/ImmutableBaseCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794246501" ignored="false" />
-    <file path="/ImmutableIdxGetters.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372796746707" ignored="false" />
+    <file path="/ImmutableIdxGetters.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373289926012" ignored="false" />
     <file path="/BaseSyllableCounter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791194806" ignored="false" />
     <file path="/CompressorsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791298360" ignored="false" />
     <file path="/BaseTokenizerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791387300" ignored="false" />
@@ -23,13 +30,16 @@
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372941970095" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373029141828" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373051316978" ignored="false" />
+    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373221165156" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373028474467" ignored="false" />
     <file path="/ServletPrototype.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373201121226" ignored="false" />
     <file path="/Util.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045055315" ignored="false" />
     <file path="/ImmutableTextExtractors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373203896151" ignored="false" />
+    <file path="/ImmutableMappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373289257108" ignored="false" />
+    <file path="/ImmutableMapperSentencesLevel.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373289301018" ignored="false" />
+    <file path="/SentencesLevelProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373289326243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,28 +98,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableUniformGetter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
+      <file leaf-file-name="MapperSentencesLevel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/MapperSentencesLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="56" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServletPrototype.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="39" column="22" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,11 +109,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableTextExtractors.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableTextExtractors.java">
+      <file leaf-file-name="SentencesLevelProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="77" selection-start="144" selection-end="144" vertical-scroll-proportion="0.083129585">
+            <state line="40" column="22" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordLevelProcessorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/WordLevelProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="25" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="74" selection-start="550" selection-end="550" vertical-scroll-proportion="0.36260977">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Savers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/Savers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReduceSentencesLevel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/ReduceSentencesLevel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="22" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mappers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="45" selection-start="3489" selection-end="3489" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reduces.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/Reduces.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="19" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,22 +200,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" />
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java" />
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseFilter.java" />
-        <option value="$PROJECT_DIR$/src/parsers/BECParser.java" />
-        <option value="$PROJECT_DIR$/src/common/utils.java" />
-        <option value="$PROJECT_DIR$/src/parsers/VParserException.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/common/ImmutableAppUtils.java" />
-        <option value="$PROJECT_DIR$/src/common/Utils.java" />
-        <option value="$PROJECT_DIR$/src/Utils.java" />
-        <option value="$PROJECT_DIR$/src/common/Util.java" />
-        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
-        <option value="$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java" />
-        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/src/ServletPrototype.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableTextExtractors.java" />
+        <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableBaseCoursor.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableMappers.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableMapperSentencesLevel.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableSavers.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/ImmutableReduceSentencesLevel.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/MapperSentencesLevel.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/ReduceSentencesLevel.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/Reduces.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessor.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/Savers.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/WordLevelProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java" />
       </list>
     </option>
   </component>
@@ -227,28 +283,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServletPrototype.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="words_getters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -279,6 +313,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,88 +563,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_43/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3342" column="0" selection-start="135949" selection-end="135949" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="2" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="329" selection-end="329" vertical-scroll-proportion="-0.103896104" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="571" selection-end="571" vertical-scroll-proportion="0.5361781" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableIdxGetters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="10" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="77" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="358" selection-end="369" vertical-scroll-proportion="0.29142857" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/VParserException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractMapBasedMultimap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.35067874" />
-      </provider>
-    </entry>
-    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.71040726" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="8" selection-start="3413" selection-end="3413" vertical-scroll-proportion="1.2701712">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/words_getters/ImmutableUniformGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="56" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="625" selection-end="625" vertical-scroll-proportion="0.020782396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="32" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
@@ -600,8 +574,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableTextExtractors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="77" selection-start="144" selection-end="144" vertical-scroll-proportion="0.083129585">
+        <state line="16" column="26" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="17" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="218" selection-end="218" vertical-scroll-proportion="-0.08782936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="19" selection-start="308" selection-end="308" vertical-scroll-proportion="0.23462985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableOntoAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="318" selection-end="318" vertical-scroll-proportion="0.12547052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="542" selection-end="542" vertical-scroll-proportion="0.23852041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="45" selection-start="3489" selection-end="3489" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapperSentencesLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="22" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/Reduces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/ReduceSentencesLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="22" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/Savers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="22" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/WordLevelProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="25" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableIdxGetters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="74" selection-start="550" selection-end="550" vertical-scroll-proportion="0.36260977">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

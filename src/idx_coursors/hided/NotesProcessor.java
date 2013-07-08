@@ -1,4 +1,4 @@
-package coursors;
+package idx_coursors.hided;
 
 
 import com.google.common.collect.Multiset;
