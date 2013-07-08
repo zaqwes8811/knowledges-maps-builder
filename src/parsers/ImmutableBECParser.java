@@ -66,22 +66,16 @@ public final class ImmutableBECParser {
     COUNT_WORDS = SORTED_WORDS_ALPH.size();
   }
 
-  public Optional<ImmutableList<String>> parseBECBase (
-      Multimap<String, String> cashTranslate,
-      Multimap<String, String> cashContent)
-    {
-    List<String> cashWords = new ArrayList<String>();
-    for (final String record: CONTENT) {
-      List<String> parsedLine = Lists.newArrayList(Splitter.on(SPLITTER).split(record));
-      if (!parsedLine.isEmpty()) {
-        String word = parsedLine.get(KEY_POS);
-        cashWords.add(word);
-        cashTranslate.put(word, FAKE_TRANSLATE);
-        cashContent.putAll(word, parsedLine.subList(KEY_POS, parsedLine.size()));
-      }
-    }
-    return Optional.of(ImmutableList.copyOf(cashWords));
+  public ImmutableList<String> getDict() {
+    return SORTED_WORDS_ALPH;
   }
+  public ImmutableMultimap<String, String> getWordTranslates() {
+    return WORDS_TRANSLATES;
+  }
+  public ImmutableMultimap<String, String> getContent() {
+    return WORDS_CONTENT;
+  }
+
 
   // Получить слово по индексу. Нужно для генератора случайных чисел.
   // 0 - CountWords
