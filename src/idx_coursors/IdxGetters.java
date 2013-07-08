@@ -16,7 +16,7 @@ import java.util.List;
 // Вообще это геттер-сеттер к базе данных. Это синглетон.
 //
 // И он должен быть многопоточным. И еще желательно межпроцессозащищенным.
-public class ImmutableIdxGetters {
+public class IdxGetters {
  /*
   // Получаем пересечение индексов
   static void get_confluence_idx() {

@@ -15,7 +15,8 @@ import java.util.Map;
  *
  * Кофигуратор приложения
  */
-final public class ImmutableAppConfigurator {
+// @Immutable
+public class AppConfigurator {
   private static final String ROOT_NAME = "App";
   public static String getPathToAppFolder() throws CrosscuttingsException {
     String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
