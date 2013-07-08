@@ -1,4 +1,4 @@
-package coursors;
+package idx_coursors.hided;
 
 import common.utils;
 

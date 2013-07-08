@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package coursors;
+package idx_coursors.hided;
 
 
 
@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // Список получаем по размеченным папкам в временной директории индекса
+//@Stateless
 final public class ImmutableBaseCoursor {
   public static Optional<List<String>> getListNodes() {
     try {
