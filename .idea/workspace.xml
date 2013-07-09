@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/caches/BECCache.java" afterPath="$PROJECT_DIR$/src/caches/BECCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServletPrototype.java" afterPath="$PROJECT_DIR$/src/ServletPrototype.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\VParserException.java" afterPath="$PROJECT_DIR$/src/caches/VParserException.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\hided\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\hided\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +43,7 @@
     <file path="/Savers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373369280944" ignored="false" />
     <file path="/IdxAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379311004" ignored="false" />
     <file path="/InternalCoursorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379549715" ignored="false" />
-    <file path="/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373380891404" ignored="false" />
+    <file path="/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373384934976" ignored="false" />
     <file path="/UniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383101709" ignored="false" />
     <file path="/UniformBECGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373381453717" ignored="false" />
     <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383102257" ignored="false" />
@@ -109,10 +105,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IdxAccessor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IdxAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="0" selection-start="4954" selection-end="4954" vertical-scroll-proportion="0.0">
+            <state line="154" column="29" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.18472469">
               <folding />
             </state>
           </provider>
@@ -131,19 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Randomizers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/math/Randomizers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BECCache.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/caches/BECCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="23" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.8490231">
+            <state line="56" column="16" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/ExternalCoursorException.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ExternalCursorException.java" />
         <option value="$PROJECT_DIR$/src/caches/ImmutableUniformGetter.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
         <option value="$PROJECT_DIR$/src/common/Util.java" />
         <option value="$PROJECT_DIR$/src/caches/UniformGetter.java" />
         <option value="$PROJECT_DIR$/src/parsers/hided/ImmutableBECParser.java" />
@@ -185,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/common/math/Randomizers.java" />
         <option value="$PROJECT_DIR$/src/ServletPrototype.java" />
         <option value="$PROJECT_DIR$/src/caches/BECCache.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
       </list>
     </option>
   </component>
@@ -418,7 +405,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -434,7 +421,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.69952494" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.69952494" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30047506" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -576,9 +563,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="0" selection-start="4954" selection-end="4954" vertical-scroll-proportion="0.0">
+        <state line="11" column="1" selection-start="233" selection-end="233" vertical-scroll-proportion="0.3321492">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="2" selection-start="3426" selection-end="3909" vertical-scroll-proportion="0.30550623">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/caches/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="16" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.84547067">
           <folding />
         </state>
       </provider>
@@ -594,33 +604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizer.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="233" selection-end="233" vertical-scroll-proportion="0.3321492">
+        <state line="154" column="29" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.18472469">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="2" selection-start="3426" selection-end="3909" vertical-scroll-proportion="0.30550623">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/caches/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="23" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.8490231">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

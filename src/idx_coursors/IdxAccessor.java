@@ -3,6 +3,7 @@ package idx_coursors;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -80,20 +81,24 @@ public class IdxAccessor {
         AppConstants.CONTENT_FILENAME
       ));
   }
+  */
 
+  /*
   // Получить список указателей на предложеия в которых встречалось слово.
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
-    String sorted_freq_idx_json = utils.file2string(
+    String sorted_freq_idx_json = Util.fileToString(
       Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
           node,
           AppConstants.FILENAME_SENTENCES_IDX));
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
-  }
-   */
+  } */
+
+
+
 
   /*
   static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
@@ -131,7 +136,7 @@ public class IdxAccessor {
     }
   }
     */
-  static public Optional<ImmutableList<String>> getSortedIdx(String filename) {
+  static public synchronized Optional<ImmutableList<String>> getSortedIdx(String filename) {
     try {
 
       // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
@@ -142,6 +147,21 @@ public class IdxAccessor {
       List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
         new TypeToken<ArrayList<String>>() {}.getType()));
       return Optional.of(ImmutableList.copyOf(sortedIdxCash));
+    } catch (IOException e) {
+      return Optional.absent();
+    }
+  }
+
+  static public synchronized Optional<ImmutableMap<String, List<Integer>>> getSentencesKeys(String filename) {
+    try {
+      // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
+      //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
+      String sortedIdxJson = Util.fileToString(filename).get();
+      // !Критическая секция
+
+      Map<String, List<Integer>> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
+        new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
+      return Optional.of(ImmutableMap.copyOf(sortedIdxCash));
     } catch (IOException e) {
       return Optional.absent();
     }
