@@ -218,14 +218,16 @@ public class MapReduceChains {
       List<String> sentences = new ArrayList<String>();
 
       // Нуменация предложения с нуля!
-      for (final String key: dictContent.keySet()) {
-        if (!dictContent.get(key).isEmpty()) {
-          // Контент таки был
-          Util.print(dictContent.get(key));
+      int idxSentence = 1;
+      Set<String> keys = dictContent.keySet();
+      for (final String key: keys) {
+        Collection<String> value = dictContent.asMap().get(key);
+        for (final String item: value) {
+          sentences.add(item);
+          sentencesPtrs.put(key, idxSentence);
+          ++idxSentence;
         }
       }
-
-
     } catch (IOException e) {
       Util.print(e.getMessage());
     } catch (IllegalStateException e) {
