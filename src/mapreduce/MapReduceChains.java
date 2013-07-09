@@ -115,64 +115,48 @@ public class MapReduceChains {
     // Save results
     for (final List reduceItem: resultReduceStage) {
       // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
-      // Сохраняем сортированные индекс
-      List<String> sortedByFreqIdxForSave =
-        (ArrayList<String>)reduceItem.get(Reduces.IDX_SORTED_IDX);
-
       // Может быть они тоже нормально сереализуются?
       // Вообще наверное лучше хранить в базе данных, а не в файлах.
+      Multimap<String, Integer> sentencesInvIdx =
+          (Multimap<String, Integer>)reduceItem.get(Mappers.IDX_SENT_MAP);
       Multiset<String> frequencyIdx =
-        (Multiset<String>)reduceItem.get(Mappers.IDX_FREQ_INDEX);
+          (Multiset<String>)reduceItem.get(Mappers.IDX_FREQ_INDEX);
       Multimap<String, String> restWords =
-        (Multimap<String, String>)reduceItem.get(Mappers.IDX_RESTS_MAP);
-
-      // Это массив чисел!
-      Map<String, Collection<Integer>> sentencesInvIdx =
-        ((Multimap<String, Integer>)reduceItem.get(Mappers.IDX_SENT_MAP)).asMap();
+          (Multimap<String, String>)reduceItem.get(Mappers.IDX_RESTS_MAP);
 
       // Это другие представления индексов?
+      List<String> sortedByFreqIdxForSave = (ArrayList<String>)reduceItem.get(Reduces.IDX_SORTED_IDX);
       Map<String, Integer> idxForSave = new HashMap<String, Integer>();
       Map<String, String> restIdxForSave = new HashMap<String, String>();
       Map<String, List<Integer>> sentencesIdxForSave = new HashMap<String, List<Integer>>();
-
-      // Получение сохраняемых структур.
+      Map<String, Collection<Integer>> sentencesInvIdxSave = sentencesInvIdx.asMap();
       for (final String word: sortedByFreqIdxForSave) {
         idxForSave.put(
             word, frequencyIdx.count(word));
         restIdxForSave.put(
             word, Joiner.on(" ").join(restWords.get(word)));
         sentencesIdxForSave.put(
-            word, new ArrayList<Integer>(sentencesInvIdx.get(word)));
+            word, new ArrayList<Integer>(sentencesInvIdxSave.get(word)));
       }
 
       // Само сохранение
       try {
         Closer closer = Closer.create();
         try {
+          final String path = Joiner.on(AppConstants.PATH_SPLITTER)
+              .join(
+                  ProcessorTargets.getPathToIndex(),
+                  AppConstants.COMPRESSED_IDX_FOLDER,
+                  reduceItem.get(Mappers.IDX_NODE_NAME));
+
           String pathForSaveSortedIdx = Joiner.on(AppConstants.PATH_SPLITTER)
-            .join(
-              ProcessorTargets.getPathToIndex(),
-              AppConstants.COMPRESSED_IDX_FOLDER,
-              reduceItem.get(Mappers.IDX_NODE_NAME),
-              AppConstants.SORTED_IDX_FILENAME);
+            .join(path, AppConstants.SORTED_IDX_FILENAME);
           String pathForSaveFreqIdx = Joiner.on(AppConstants.PATH_SPLITTER)
-            .join(
-              ProcessorTargets.getPathToIndex(),
-              AppConstants.COMPRESSED_IDX_FOLDER,
-              reduceItem.get(Mappers.IDX_NODE_NAME),
-              AppConstants.FREQ_IDX_FILENAME);
+            .join(path, AppConstants.FREQ_IDX_FILENAME);
           String pathForSaveRestIdx = Joiner.on(AppConstants.PATH_SPLITTER)
-            .join(
-              ProcessorTargets.getPathToIndex(),
-              AppConstants.COMPRESSED_IDX_FOLDER,
-              reduceItem.get(Mappers.IDX_NODE_NAME),
-              AppConstants.FILENAME_REST_IDX);
+            .join(path, AppConstants.FILENAME_REST_IDX);
           String pathForSaveSentencesIdx = Joiner.on(AppConstants.PATH_SPLITTER)
-            .join(
-              ProcessorTargets.getPathToIndex(),
-              AppConstants.COMPRESSED_IDX_FOLDER,
-              reduceItem.get(Mappers.IDX_NODE_NAME),
-              AppConstants.FILENAME_SENTENCES_IDX);
+            .join(path, AppConstants.FILENAME_SENTENCES_IDX);
 
           // Сохраняем в JSON
           closer.register(new BufferedWriter(new FileWriter(pathForSaveSortedIdx)))
