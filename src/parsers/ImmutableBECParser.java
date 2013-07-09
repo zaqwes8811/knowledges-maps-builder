@@ -52,16 +52,17 @@ public final class ImmutableBECParser {
 
     for (final String record: CONTENT) {
       List<String> parsedLine = Lists.newArrayList(Splitter.on(SPLITTER).split(record));
+      String word = parsedLine.get(KEY_POS);
       if (!parsedLine.isEmpty()) {
-        String word = parsedLine.get(KEY_POS);
         cashWords.add(word);
         cashTranslate.put(word, FAKE_TRANSLATE);
 
         // Предложения идущие в комплекте.
-        cashContent.putAll(word, parsedLine.subList(KEY_POS+1, parsedLine.size()));
+        List<String> slice = parsedLine.subList(KEY_POS+1, parsedLine.size());
+        // При добавлении пустные списки отбрасываются.
+        cashContent.putAll(word, slice);
       }
     }
-
     WORDS_TRANSLATES = ImmutableMultimap.copyOf(cashTranslate);
     SORTED_WORDS_ALPH = ImmutableList.copyOf(cashWords);
     WORDS_CONTENT = ImmutableMultimap.copyOf(cashContent);
