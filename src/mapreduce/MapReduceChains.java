@@ -113,61 +113,67 @@ public class MapReduceChains {
     }
 
     // Save results
-    for (final List reduceItem: resultReduceStage) {
+    for (final List nodeResult: resultReduceStage) {
       String pathToNode;
       try {
         pathToNode = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
             ProcessorTargets.getPathToIndex(),
             AppConstants.COMPRESSED_IDX_FOLDER,
-            reduceItem.get(Mappers.IDX_NODE_NAME));
+            nodeResult.get(Mappers.IDX_NODE_NAME));
+      } catch (CrosscuttingsException e) {
+        Util.print(e.getMessage());
+        pathToNode = "";
+      }
 
-        // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
-        // Может быть они тоже нормально сереализуются?
-        // Вообще наверное лучше хранить в базе данных, а не в файлах.
-        Multimap<String, Integer> sentencesIdx =
-            (Multimap<String, Integer>)reduceItem.get(Mappers.IDX_SENT_MAP);
-        Multiset<String> frequencyIdx =
-            (Multiset<String>)reduceItem.get(Mappers.IDX_FREQ_INDEX);
-        Multimap<String, String> restWords =
-            (Multimap<String, String>)reduceItem.get(Mappers.IDX_RESTS_MAP);
+      // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
+      // Может быть они тоже нормально сереализуются?
+      // Вообще наверное лучше хранить в базе данных, а не в файлах.
+      Multimap<String, Integer> idxSentences =
+          (Multimap<String, Integer>)nodeResult.get(Mappers.IDX_SENT_MAP);
+      Multiset<String> idxFrequencies =
+          (Multiset<String>)nodeResult.get(Mappers.IDX_FREQ_INDEX);
+      Multimap<String, String> idxRestWords =
+          (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
+      List<String> idxSortedByFrequency =
+        (ArrayList<String>)nodeResult.get(Reduces.IDX_SORTED_IDX);
 
-        // Структуры для сереализации
-        List<String> sortedByFreqIdxForSave = (ArrayList<String>)reduceItem.get(Reduces.IDX_SORTED_IDX);
-        Map<String, Collection<Integer>> sentencesInvIdxSave = sentencesIdx.asMap();
+      // Структуры для сереализации
+      List<String> idxSortedByFrequencyForSave = idxSortedByFrequency;
+      Map<String, Integer> idxFrequenciesForSave = new HashMap<String, Integer>();
+      Map<String, String> idxRestWordsForSave = new HashMap<String, String>();
+      Map<String, List<Integer>> idxSentencesForSave = new HashMap<String, List<Integer>>();
 
-        Map<String, Integer> frequencyIdxForSave = new HashMap<String, Integer>();
-        Map<String, String> restIdxForSave = new HashMap<String, String>();
-        Map<String, List<Integer>> sentencesIdxForSave = new HashMap<String, List<Integer>>();
+      // Перекомпановка. Возможно есть средства в Guava, но пусть будет
+      //   дополнительная фильтрация по сортированному индексу.
+      for (final String word: idxSortedByFrequencyForSave) {
+        idxFrequenciesForSave.put(word, idxFrequencies.count(word));
+      }
+      for (final String word: idxSortedByFrequencyForSave) {
+        idxRestWordsForSave.put(word, Joiner.on(" ").join(idxRestWords.get(word)));
+      }
+      Map<String, Collection<Integer>> idxSentencesTmp = idxSentences.asMap();
+      for (final String word: idxSortedByFrequencyForSave) {
+        idxSentencesForSave.put(word, new ArrayList<Integer>(idxSentencesTmp.get(word)));
+      }
 
-
-        // Перекомпановка
-        for (final String word: sortedByFreqIdxForSave) {
-          frequencyIdxForSave.put(word, frequencyIdx.count(word));
-        }
-        for (final String word: sortedByFreqIdxForSave) {
-          restIdxForSave.put(word, Joiner.on(" ").join(restWords.get(word)));
-        }
-        for (final String word: sortedByFreqIdxForSave) {
-          sentencesIdxForSave.put(word, new ArrayList<Integer>(sentencesInvIdxSave.get(word)));
-        }
-
+      try {
         // Само сохранение. Вряд ли удасться выделить в метод. И свернуть в цикл.
         Closer closer = Closer.create();
         try {
           // Сохраняем в JSON
           closer.register(new BufferedWriter(new FileWriter(
             Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.SORTED_IDX_FILENAME))))
-            .write(new Gson().toJson(sortedByFreqIdxForSave));
+            .write(new Gson().toJson(idxSortedByFrequencyForSave));
           closer.register(new BufferedWriter(new FileWriter(
               Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FREQ_IDX_FILENAME))))
-            .write(new Gson().toJson(frequencyIdxForSave));
+            .write(new Gson().toJson(idxFrequenciesForSave));
           closer.register(new BufferedWriter(new FileWriter(
               Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_REST_IDX))))
-            .write(new Gson().toJson(restIdxForSave));
+            .write(new Gson().toJson(idxRestWordsForSave));
           closer.register(new BufferedWriter(new FileWriter(
               Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX))))
-            .write(new Gson().toJson(sentencesIdxForSave));
+            .write(new Gson().toJson(idxSentencesForSave));
         } catch (Throwable e) {
           closer.rethrow(e);
         } finally {
@@ -175,8 +181,6 @@ public class MapReduceChains {
         }
       } catch (IOException e) {
         e.printStackTrace();
-      } catch (CrosscuttingsException e) {
-        Util.print(e.getMessage());
       }
     }  // for..
   }
@@ -223,7 +227,7 @@ public class MapReduceChains {
       //List tmp = new ArrayList();
       //tmp.add(frequencyIdx);
       //tmp.add(dictTranslate);   // NO WAY!
-      //Util.print(new Gson().toJson(tmp.get(1)));
+      //Util.print(new Gson().toJson(dictContent));
 
 
 
