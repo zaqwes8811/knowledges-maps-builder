@@ -71,16 +71,7 @@ public class IdxAccessor {
       new TypeToken<HashMap<String, String>>() {}.getType()));
   }
 
-  // Получить список единиц контанта узла
-  static public List<String> get_list_sentences(String node) {
-    return utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
-      .join(
-        ImmutableProcessorTargets.getPathToIndex(),
-        AppConstants.CONTENT_FOLDER,
-        node,
-        AppConstants.CONTENT_FILENAME
-      ));
-  }
+
   */
 
   /*
@@ -166,6 +157,17 @@ public class IdxAccessor {
       return Optional.absent();
     }
   }
+
+  // Получить список единиц контанта узла
+  /*static public List<String> get_list_sentences(String node) {
+    return Util.fileToList(Joiner.on(AppConstants.PATH_SPLITTER)
+      .join(
+        ProcessorTargets.getPathToIndex(),
+        AppConstants.CONTENT_FOLDER,
+        node,
+        AppConstants.CONTENT_FILENAME
+      ));
+  } */
 
   /*
   static public HashMap<String, HashMap<String, String>>  get_static_notes() {
