@@ -2,15 +2,12 @@ package mapreduce;
 
 
 import com.google.common.base.Optional;
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multiset;
+import com.google.common.collect.*;
 import common.Util;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableJobsFormer;
-import crosscuttings.jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -152,39 +149,39 @@ public class MapReduceChains {
       try {
         Closer closer = Closer.create();
         try {
-          String path_for_save_sorted_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+          String pathForSaveSortedIdx = Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-              ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
               AppConstants.COMPRESSED_IDX_FOLDER,
               reduceItem.get(Mappers.IDX_NODE_NAME),
               AppConstants.SORTED_IDX_FILENAME);
-          String path_for_save_freq_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+          String pathForSaveFreqIdx = Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-              ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
               AppConstants.COMPRESSED_IDX_FOLDER,
               reduceItem.get(Mappers.IDX_NODE_NAME),
               AppConstants.FREQ_IDX_FILENAME);
-          String path_for_save_rest_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+          String pathForSaveRestIdx = Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-              ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
               AppConstants.COMPRESSED_IDX_FOLDER,
               reduceItem.get(Mappers.IDX_NODE_NAME),
               AppConstants.FILENAME_REST_IDX);
-          String path_for_save_sentences_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+          String pathForSaveSentencesIdx = Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-              ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
               AppConstants.COMPRESSED_IDX_FOLDER,
               reduceItem.get(Mappers.IDX_NODE_NAME),
               AppConstants.FILENAME_SENTENCES_IDX);
 
           // Сохраняем в JSON
-          closer.register(new BufferedWriter(new FileWriter(path_for_save_sorted_idx)))
+          closer.register(new BufferedWriter(new FileWriter(pathForSaveSortedIdx)))
             .write(new Gson().toJson(sortedByFreqIdxForSave));
-          closer.register(new BufferedWriter(new FileWriter(path_for_save_freq_idx)))
+          closer.register(new BufferedWriter(new FileWriter(pathForSaveFreqIdx)))
             .write(new Gson().toJson(idxForSave));
-          closer.register(new BufferedWriter(new FileWriter(path_for_save_rest_idx)))
+          closer.register(new BufferedWriter(new FileWriter(pathForSaveRestIdx)))
             .write(new Gson().toJson(restIdxForSave));
-          closer.register(new BufferedWriter(new FileWriter(path_for_save_sentences_idx)))
+          closer.register(new BufferedWriter(new FileWriter(pathForSaveSentencesIdx)))
             .write(new Gson().toJson(sentencesIdxForSave));
 
         } catch (CrosscuttingsException e) {
@@ -205,13 +202,14 @@ public class MapReduceChains {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
       ImmutableList<String> content =
-          Util.file2list(
-              Joiner.on(AppConstants.PATH_SPLITTER)
-                  .join("raw-dicts", "vocabularity-folded.txt"));
+          Util.fileToList(
+            Joiner.on(AppConstants.PATH_SPLITTER)
+              .join("raw-dicts", "vocabularity-folded.txt"));
       ImmutableBECParser cash = ImmutableBECParser.create(content);
 
       // Извлекаем данные и обрабатываем их
-      List<String> dictWords = cash.getDict();
+      List<String> sortedByFreqIdxForSave = cash.getDict();
+      Multiset<String> frequencyIdx = HashMultiset.create();
       Multimap<String, String> dictContent = cash.getContent();
       Multimap<String, String> dictTranslate = cash.getWordTranslates();
 
@@ -222,7 +220,6 @@ public class MapReduceChains {
       int idxSentence = 1;
       Set<String> keys = dictContent.keySet();
       for (final String key: keys) {
-        // Значения не могут быть пустыми.
         Collection<String> value = dictContent.asMap().get(key);
         for (final String item: value) {
           sentences.add(item);
@@ -231,11 +228,14 @@ public class MapReduceChains {
         }
       }
 
-      // Saver
-      for (final String word: dictWords) {
-        Util.print(sentencesPtrs.get(word));
+      // Make frequency index. Пока плохо - словарь грязный.
+      for (final String word: sortedByFreqIdxForSave) {
+        frequencyIdx.add(word);
       }
-      //String pathToDefaultNode = Joiner.on()
+
+      // Saver
+      Util.print(frequencyIdx);
+      String pathToDefaultNode = "apps/default-node";
 
 
 

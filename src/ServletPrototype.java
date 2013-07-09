@@ -18,7 +18,7 @@ public class ServletPrototype {
       String fullBECFilename =
           Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
       try {
-        ImmutableList<String> content = Util.file2list(fullBECFilename);
+        ImmutableList<String> content = Util.fileToList(fullBECFilename);
         // Парсим
         ImmutableBECParser parser = ImmutableBECParser.create(content);
         // Инициализируем генератор случайных чисел.

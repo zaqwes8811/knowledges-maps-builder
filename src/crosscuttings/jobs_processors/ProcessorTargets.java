@@ -30,7 +30,10 @@ import java.util.List;
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
-final public class ImmutableProcessorTargets {
+//
+// @Immutable
+public class ProcessorTargets {
+  private ProcessorTargets() {}
   public final static int NODE_NAME = 0;
   public static int INDEX_URL = 1;
 

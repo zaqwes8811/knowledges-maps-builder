@@ -19,7 +19,7 @@ import java.util.Map;
 public class AppConfigurator {
   private static final String ROOT_NAME = "App";
   public static String getPathToAppFolder() throws CrosscuttingsException {
-    String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
+    String fullCfgFilename = AppConstants.APP_CFG_FULL_FILENAME;
     Yaml yaml = new Yaml();
     try {
       Closer closer = Closer.create();

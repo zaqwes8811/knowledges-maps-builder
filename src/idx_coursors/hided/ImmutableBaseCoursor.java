@@ -14,7 +14,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ final public class ImmutableBaseCoursor {
       String pathToTmpFolder =
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
                 AppConstants.TMP_FOLDER);
 
       // Получаем список узлов по папкам, а на по заданиям
