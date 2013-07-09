@@ -37,7 +37,7 @@
     <file path="/KeyWordsCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303817004" ignored="false" />
     <file path="/ImmutableOntoAssistant.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303827391" ignored="false" />
     <file path="/ImmutableDataExtractor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303834860" ignored="false" />
-    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373362323324" ignored="false" />
+    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373364353132" ignored="false" />
     <file path="/Mappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373305652833" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,15 +100,14 @@
       <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="24" selection-start="5691" selection-end="5691" vertical-scroll-proportion="1.1623377">
+            <state line="139" column="57" selection-start="4679" selection-end="4679" vertical-scroll-proportion="0.53084415">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2850#2856#0" expanded="true" />
                 <element signature="e#3249#3255#0" expanded="true" />
-                <element signature="e#4232#4249#0" expanded="true" />
-                <element signature="e#4307#4323#0" expanded="true" />
-                <element signature="e#4393#4416#0" expanded="true" />
-                <element signature="e#7418#7426#0" expanded="true" />
+                <element signature="e#4601#4618#0" expanded="true" />
+                <element signature="e#4766#4789#0" expanded="true" />
+                <element signature="e#7424#7432#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -686,15 +685,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="24" selection-start="5691" selection-end="5691" vertical-scroll-proportion="1.1623377">
+        <state line="139" column="57" selection-start="4679" selection-end="4679" vertical-scroll-proportion="0.53084415">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2850#2856#0" expanded="true" />
             <element signature="e#3249#3255#0" expanded="true" />
-            <element signature="e#4232#4249#0" expanded="true" />
-            <element signature="e#4307#4323#0" expanded="true" />
-            <element signature="e#4393#4416#0" expanded="true" />
-            <element signature="e#7418#7426#0" expanded="true" />
+            <element signature="e#4601#4618#0" expanded="true" />
+            <element signature="e#4766#4789#0" expanded="true" />
+            <element signature="e#7424#7432#0" expanded="true" />
           </folding>
         </state>
       </provider>
