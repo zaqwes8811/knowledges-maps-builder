@@ -3,7 +3,7 @@ import com.google.common.base.Optional;
 import common.Util;
 import common.math.Randomizer;
 import common.math.Randomizers;
-import parsers.VParserException;
+import caches.VParserException;
 
 import java.util.*;
 
