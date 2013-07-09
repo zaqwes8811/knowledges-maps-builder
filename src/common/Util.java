@@ -1,6 +1,7 @@
 package common;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
 
@@ -24,24 +25,20 @@ final public class Util {
     }
   }
 
-  static public String file2string(String filename) {
+  static public Optional<String> fileToString(String filename) throws IOException {
+    Closer closer = Closer.create();
     try {
-      Closer closer = Closer.create();
-      try {
-        BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
-        String s;
-        StringBuffer buffer = new StringBuffer();
-        while ((s = in.readLine()) != null) buffer.append(s);
-        return buffer.toString();
-      } catch (Throwable e) {
-        closer.rethrow(e);
-      } finally {
-        closer.close();
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
+      BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
+      String s;
+      StringBuffer buffer = new StringBuffer();
+      while ((s = in.readLine()) != null) buffer.append(s);
+      return Optional.of(buffer.toString());
+    } catch (Throwable e) {
+      closer.rethrow(e);
+    } finally {
+      closer.close();
     }
-    return null;   // TODO(zaqwes): BAD!!
+    return Optional.absent();
   }
 
   // Файл по сути read-only т.е. это getter и поэтому результат будет константным.
@@ -90,6 +87,10 @@ final public class Util {
     } else {
       System.console().writer().println(msg);
     }
+  }
+
+  static public void log(Object msg) {
+    print(msg);
   }
 
   private final static  class DirFilter implements FilenameFilter {

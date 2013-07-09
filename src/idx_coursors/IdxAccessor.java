@@ -2,21 +2,31 @@ package idx_coursors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
+import com.google.common.io.Closer;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ProcessorTargets;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 // Вообще это геттер-сеттер к базе данных. Это синглетон.
 //
 // И он должен быть многопоточным. И еще желательно межпроцессозащищенным.
-public class IdxGetters {
+//
+// @NoThreadSafe
+//   Доступ к файлу. Хотя возможно просто будет занят при открытии.
+public class IdxAccessor {
  /*
   // Получаем пересечение индексов
   static void get_confluence_idx() {
@@ -84,6 +94,8 @@ public class IdxGetters {
       new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
   }
    */
+
+  /*
   static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
     try {
       String sorted_freq_idx_json = Util.file2string(
@@ -101,9 +113,9 @@ public class IdxGetters {
     }
   }
 
-  static public Optional<List<String>> getSortedIdx(String node) {
+  static public Optional<ImmutableList<String>> getSortedIdx(String node) {
     try {
-      String sorted_idx_json = Util.file2string(
+      String sortedIdxJson = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
             ProcessorTargets.getPathToIndex(),
@@ -111,10 +123,26 @@ public class IdxGetters {
             node,
             AppConstants.SORTED_IDX_FILENAME));
 
-      List<String> sorted_idx_cash = (new Gson().fromJson(sorted_idx_json,
+      List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
         new TypeToken<ArrayList<String>>() {}.getType()));
-      return Optional.of(sorted_idx_cash);
+      return Optional.of(ImmutableList.copyOf(sortedIdxCash));
     } catch (CrosscuttingsException e) {
+      return Optional.absent();
+    }
+  }
+    */
+  static public Optional<ImmutableList<String>> getSortedIdx(String filename) {
+    try {
+
+      // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
+      //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
+      String sortedIdxJson = Util.fileToString(filename).get();
+      // !Критическая секция
+
+      List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
+        new TypeToken<ArrayList<String>>() {}.getType()));
+      return Optional.of(ImmutableList.copyOf(sortedIdxCash));
+    } catch (IOException e) {
       return Optional.absent();
     }
   }
@@ -157,4 +185,21 @@ public class IdxGetters {
     //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
     //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
   } */
+
+  // K - path to file
+  // V - Объект годны для сереализации через Gson - базовая структура - Map, List.
+  public static void saveListObjects(Map<String, Object> data) throws IOException {
+    // Само сохранение. Вряд ли удасться выделить в метод. И свернуть в цикл.
+    Closer closer = Closer.create();
+    try {
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+      for (final String key: data.keySet()) {
+        closer.register(new BufferedWriter(new FileWriter(key))).write(gson.toJson(data.get(key)));
+      }
+    } catch (Throwable e) {
+      closer.rethrow(e);
+    } finally {
+      closer.close();
+    }
+  }
 }
