@@ -4,6 +4,7 @@ package mapreduce;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;
 import common.Util;
+import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableJobsFormer;
@@ -11,10 +12,10 @@ import crosscuttings.jobs_processors.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
+import idx_coursors.Savers;
 import parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
-import java.io.CharArrayReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -133,16 +134,15 @@ public class MapReduceChains {
       Multiset<String> idxFrequencies = (Multiset<String>)nodeResult.get(Mappers.IDX_FREQ_INDEX);
 
       Multimap<String, Integer> idxSentencesPtrs = (Multimap<String, Integer>)nodeResult.get(Mappers.IDX_SENT_MAP);
-      Multimap<String, String> idxRestWords = (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
+      //Multimap<String, String> idxRestWords = (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
 
       // Структуры для сереализации
       // Перекомпановка. Возможно есть средства в Guava, но пусть будет
       //   дополнительная фильтрация по сортированному индексу.
-      Map<String, Integer> idxFrequenciesForSave = recode(idxFrequencies, idxSortedByFrequencyForSave);
+      Map<String, Integer> idxFrequenciesForSave = recodeMultiset(idxFrequencies, idxSortedByFrequencyForSave);
 
-      Map<String, String> idxRestWordsForSave = recodeSS(idxRestWords, idxSortedByFrequencyForSave);
-      Map<String, List<Integer>> idxSentencesForSave = recodeSI(idxSentencesPtrs, idxSortedByFrequencyForSave);
-
+      //Map<String, String> idxRestWordsForSave = recodeSS(idxRestWords, idxSortedByFrequencyForSave);
+      Map<String, Collection<Integer>> idxSentencesForSave = idxSentencesPtrs.asMap();
       try {
         // Само сохранение. Вряд ли удасться выделить в метод. И свернуть в цикл.
         Closer closer = Closer.create();
@@ -154,9 +154,9 @@ public class MapReduceChains {
           closer.register(new BufferedWriter(new FileWriter(
               Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FREQ_IDX_FILENAME))))
             .write(new Gson().toJson(idxFrequenciesForSave));
-          closer.register(new BufferedWriter(new FileWriter(
-              Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_REST_IDX))))
-            .write(new Gson().toJson(idxRestWordsForSave));
+          //closer.register(new BufferedWriter(new FileWriter(
+          //    Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_REST_IDX))))
+          //  .write(new Gson().toJson(idxRestWordsForSave));
           closer.register(new BufferedWriter(new FileWriter(
               Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX))))
             .write(new Gson().toJson(idxSentencesForSave));
@@ -171,15 +171,7 @@ public class MapReduceChains {
     }  // for..
   }
 
-  private static Map<String, String> recodeSS(Multimap<String, String> in,  List<String> filter) {
-      Map<String, String> idxRestWordsForSave = new HashMap<String, String>();
-      for (final String word: filter) {
-        idxRestWordsForSave.put(word, Joiner.on(" ").join(in.get(word)));
-      }
-      return idxRestWordsForSave;
-  }
-
-  private static  Map<String, Integer> recode(Multiset<String> in, List<String> filter) {
+  private static  Map<String, Integer> recodeMultiset(Multiset<String> in, List<String> filter) {
     Map<String, Integer> idxFrequenciesForSave = new HashMap<String, Integer>();
     for (final String word: filter) {
       idxFrequenciesForSave.put(word, in.count(word));
@@ -187,18 +179,12 @@ public class MapReduceChains {
     return idxFrequenciesForSave;
   }
 
-  private static Map<String, List<Integer>> recodeSI(Multimap<String, Integer> in, List<String> filter) {
-    Map<String, List<Integer>> idxSentencesForSave = new HashMap<String, List<Integer>>();
-    for (final String word: filter) {
-      idxSentencesForSave.put(word, new ArrayList<Integer>(in.get(word)));
-    }
-    return idxSentencesForSave;
-  }
 
   // Chain for BEC dictionary.
   public static void runBECChain() {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
+      final String pathToAppFolder = AppConfigurator.getPathToAppFolder();
       // Begin "MapReduce" stage
       ImmutableList<String> content =
           Util.fileToList(
@@ -218,16 +204,19 @@ public class MapReduceChains {
       // Нуменация предложения с нуля!
       int idxSentence = 1;
       Set<String> keys = dictContent.keySet();
+      String lang = "en";
       for (final String key: keys) {
         Collection<String> value = dictContent.asMap().get(key);
         for (final String item: value) {
-          sentences.add(item);
+          sentences.add(lang+" "+item);
           idxSentencesPtrs.put(key, idxSentence);
           ++idxSentence;
         }
       }
 
       // Сохраняем список единиц контента
+      Util.listToFile(sentences, Joiner.on(AppConstants.PATH_SPLITTER)
+        .join(pathToAppFolder, "bec-node", "content.txt"));
 
       // Make frequency index. Пока плохо - словарь грязный.
       for (final String word: idxSortedByFrequencyForSave) {
@@ -235,18 +224,29 @@ public class MapReduceChains {
       }
       // End "MapReduce" stage
 
-      // Saver
-      String pathToDefaultNode = "apps/default-node";
-      Map<String, Integer> idxFrequenciesForSave = recode(frequencyIdx, idxSortedByFrequencyForSave);
-      Map<String, List<Integer>> idxSentencesForSave = recodeSI(idxSentencesPtrs, idxSortedByFrequencyForSave);
+      // Save
+      String pathToNode = pathToAppFolder+AppConstants.PATH_SPLITTER+"bec-node";
+      Map<String, Object> tmp = new HashMap<String, Object>();
+      Map<String, Integer> idxFrequenciesForSave = recodeMultiset(frequencyIdx, idxSortedByFrequencyForSave);
+      Map<String, Collection<Integer>> idxSentencesForSave = idxSentencesPtrs.asMap();
 
-      Util.print(new Gson().toJson(idxSentencesForSave));
+      tmp.put(Joiner.on(
+          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.SORTED_IDX_FILENAME),
+          idxSortedByFrequencyForSave);
+      tmp.put(Joiner.on(
+          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FREQ_IDX_FILENAME),
+          idxFrequenciesForSave);
+      tmp.put(Joiner.on(
+          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX),
+          idxSentencesForSave);
 
-
+      Savers.saveListObjects(tmp);
 
     } catch (IOException e) {
       Util.print(e.getMessage());
     } catch (IllegalStateException e) {
+      Util.print(e.getMessage());
+    } catch (CrosscuttingsException e) {
       Util.print(e.getMessage());
     }
   }

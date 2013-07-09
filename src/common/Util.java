@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 final public class Util {
   private Util() {}
-  static public void list2file(List<String> list, String filename) throws IOException {
+  static public void listToFile(List<String> list, String filename) throws IOException {
     Closer closer = Closer.create();
     try {
       closer.register(
