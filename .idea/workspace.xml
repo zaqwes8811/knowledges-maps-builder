@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +42,7 @@
     <file path="/Savers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373369280944" ignored="false" />
     <file path="/IdxAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379311004" ignored="false" />
     <file path="/InternalCoursorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379549715" ignored="false" />
-    <file path="/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373384934976" ignored="false" />
+    <file path="/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373385082405" ignored="false" />
     <file path="/UniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383101709" ignored="false" />
     <file path="/UniformBECGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373381453717" ignored="false" />
     <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383102257" ignored="false" />
@@ -108,7 +107,25 @@
       <file leaf-file-name="IdxAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="29" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.18472469">
+            <state line="169" column="5" selection-start="5959" selection-end="5959" vertical-scroll-proportion="0.7584369">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="19" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="13" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -237,6 +254,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,21 +524,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#813#827#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -604,9 +624,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableDataExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/KeyWordsCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="29" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.18472469">
+        <state line="169" column="5" selection-start="5959" selection-end="5959" vertical-scroll-proportion="0.7584369">
           <folding />
         </state>
       </provider>
