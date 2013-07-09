@@ -214,6 +214,7 @@ public class MapReduceChains {
       List<String> dictWords = cash.getDict();
       Multimap<String, String> dictContent = cash.getContent();
       Multimap<String, String> dictTranslate = cash.getWordTranslates();
+
       Multimap<String, Integer> sentencesPtrs = HashMultimap.create();
       List<String> sentences = new ArrayList<String>();
 
@@ -221,6 +222,7 @@ public class MapReduceChains {
       int idxSentence = 1;
       Set<String> keys = dictContent.keySet();
       for (final String key: keys) {
+        // Значения не могут быть пустыми.
         Collection<String> value = dictContent.asMap().get(key);
         for (final String item: value) {
           sentences.add(item);
@@ -228,14 +230,19 @@ public class MapReduceChains {
           ++idxSentence;
         }
       }
+
+      // Saver
+      for (final String word: dictWords) {
+        Util.print(sentencesPtrs.get(word));
+      }
+      //String pathToDefaultNode = Joiner.on()
+
+
+
     } catch (IOException e) {
       Util.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
     }
-
-    // Saver
-
-
   }
 }
