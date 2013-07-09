@@ -1,53 +1,36 @@
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
+import caches.BECCache;
+import com.google.common.base.Optional;
 import common.Util;
-import crosscuttings.AppConstants;
-import parsers.ImmutableBECParser;
+import common.math.Randomizer;
+import common.math.Randomizers;
 
-import java.io.IOException;
-import java.util.List;
+import java.util.Random;
 
 public class ServletPrototype {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-      // TODO(zaqwes): Сделать класс экстактор данных. Или аксцессор к базе знаний.
-      //   Тогде класс будет не парсером, а как бы кэшем. Так и правильнее для дальнейшего расширения.
-      // Читаем файл с сформатированными данными.
-      // word@content item1@content item2
-      // перевода пока нет
-      String fullBECFilename =
-          Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
-      try {
-        ImmutableList<String> content = Util.fileToList(fullBECFilename);
-        // Парсим
-        ImmutableBECParser parser = ImmutableBECParser.create(content);
-        // Инициализируем генератор случайных чисел.
+  }
+}
 
-        // Передаем извлекателю
+// Пакет - N уникальных слов с контекстом и переводом.
+class FormerPackagesForWeb {
+  private FormerPackagesForWeb(Randomizer randomizer, BECCache cash) {
+    RANDOMIZER = randomizer;
+    CASH = cash;
+  }
 
-      } catch (IOException e) {
-        // Нужно как-то оповестить пользователя.
-        Util.print(e.getMessage());
-      }
+  private final Randomizer RANDOMIZER;
+  private final BECCache CASH;
+
+  public static Optional<FormerPackagesForWeb> create() {
+    Optional<BECCache> cash = BECCache.create();
+    Optional<FormerPackagesForWeb> instance = Optional.absent();
+    if (cash.isPresent()) {
+      Randomizer randomizer = Randomizers.create(cash.get().getSizeIndexes());
+      instance = Optional.of(new FormerPackagesForWeb(randomizer, cash.get()));
+    } else {
+      Util.log("Cache is absent.");
     }
-}
-
-interface Randomizer {
-   Integer getSample();
-}
-
-class Randomizers {
-  private Randomizers() {}
-
-  public static Randomizer create(List<Integer> ox) {
-    return new UniformRandomizer();
+    return instance;
   }
-
-  private static class UniformRandomizer implements Randomizer {
-     @Override
-     public Integer getSample() {
-        return 0;
-     }
-  }
-
 }

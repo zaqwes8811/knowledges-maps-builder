@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/ExternalCursorException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/InternalCursorException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/caches/UniformBECGetter.java" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\Savers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\words_getters\ImmutableUniformGetter.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/caches/BECCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/math/Randomizer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/math/Randomizers.java" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\caches\UniformBECGetter.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Util.java" afterPath="$PROJECT_DIR$/src/common/Util.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServletPrototype.java" afterPath="$PROJECT_DIR$/src/ServletPrototype.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\IdxGetters.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/hided/ImmutableBECParser.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/parsers/hided/ImmutableBECSave.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +34,7 @@
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372943093769" ignored="false" />
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379756911" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373361785201" ignored="false" />
-    <file path="/ServletPrototype.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373201121226" ignored="false" />
+    <file path="/ServletPrototype.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383375989" ignored="false" />
     <file path="/Util.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373381403442" ignored="false" />
     <file path="/ImmutableTextExtractors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373203896151" ignored="false" />
     <file path="/ImmutableMappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290603080" ignored="false" />
@@ -52,8 +52,9 @@
     <file path="/IdxAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379311004" ignored="false" />
     <file path="/InternalCoursorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373379549715" ignored="false" />
     <file path="/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373380891404" ignored="false" />
-    <file path="/UniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373381488176" ignored="false" />
+    <file path="/UniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383101709" ignored="false" />
     <file path="/UniformBECGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373381453717" ignored="false" />
+    <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373383102257" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,25 +116,56 @@
       <file leaf-file-name="IdxAccessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="81" selection-start="4860" selection-end="4860" vertical-scroll-proportion="0.0">
+            <state line="140" column="0" selection-start="4954" selection-end="4954" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UniformBECGetter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/caches/UniformBECGetter.java">
+      <file leaf-file-name="ServletPrototype.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="54" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.78507996">
+            <state line="13" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.15097691">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Randomizers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/math/Randomizers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/Util.java">
+      <file leaf-file-name="Randomizer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/math/Randomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="13" selection-start="2890" selection-end="2890" vertical-scroll-proportion="0.0">
+            <state line="11" column="1" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/caches/BECCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="23" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parsers/hided/ImmutableBECParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="2" selection-start="3426" selection-end="3909" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,11 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
-        <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
-        <option value="$PROJECT_DIR$/src/totext/ImmutableTextExtractors.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/Savers.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxAccessors.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/InternalCoursorException.java" />
@@ -172,7 +199,12 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
         <option value="$PROJECT_DIR$/src/common/Util.java" />
         <option value="$PROJECT_DIR$/src/caches/UniformGetter.java" />
+        <option value="$PROJECT_DIR$/src/parsers/hided/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/src/caches/UniformBECGetter.java" />
+        <option value="$PROJECT_DIR$/src/caches/BECCache.java" />
+        <option value="$PROJECT_DIR$/src/common/math/Randomizer.java" />
+        <option value="$PROJECT_DIR$/src/common/math/Randomizers.java" />
+        <option value="$PROJECT_DIR$/src/ServletPrototype.java" />
       </list>
     </option>
   </component>
@@ -240,10 +272,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServletPrototype.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -256,6 +284,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parsers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,6 +306,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="parsers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hided" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,6 +381,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="caches" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -369,7 +427,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.UniformBECGetter">
+  <component name="RunManager" selected="Application.BECCache">
     <configuration default="false" name="ServletPrototype" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ServletPrototype" />
@@ -430,7 +488,7 @@
     </configuration>
     <configuration default="false" name="ImmutableBECParser" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="parsers.ImmutableBECParser" />
+      <option name="MAIN_CLASS_NAME" value="parsers.hided.ImmutableBECParser" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -474,9 +532,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="UniformBECGetter" type="Application" factoryName="Application">
+    <configuration default="false" name="BECCache" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="caches.UniformBECGetter" />
+      <option name="MAIN_CLASS_NAME" value="caches.BECCache" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -494,7 +552,7 @@
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.ImmutableBECParser" />
       <item index="1" class="java.lang.String" itemvalue="Application.MapReduceChains" />
-      <item index="2" class="java.lang.String" itemvalue="Application.UniformBECGetter" />
+      <item index="2" class="java.lang.String" itemvalue="Application.BECCache" />
       <item index="3" class="java.lang.String" itemvalue="Application.ServletPrototype" />
     </list>
     <recent_temporary>
@@ -598,18 +656,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ProcessorTargets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="53" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="35" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
@@ -623,13 +669,6 @@
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="30" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="53" selection-start="4998" selection-end="4998" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
@@ -668,31 +707,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="27" selection-start="846" selection-end="846" vertical-scroll-proportion="0.42273533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="6" selection-start="6770" selection-end="6838" vertical-scroll-proportion="0.39253998">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2883#2889#0" expanded="true" />
-            <element signature="e#3282#3288#0" expanded="true" />
-            <element signature="e#6467#6484#0" expanded="true" />
-            <element signature="e#7544#7552#0" expanded="true" />
-            <element signature="e#8479#8495#0" expanded="true" />
+            <element signature="e#2889#2895#0" expanded="true" />
+            <element signature="e#3288#3294#0" expanded="true" />
+            <element signature="e#6473#6490#0" expanded="true" />
+            <element signature="e#7550#7558#0" expanded="true" />
+            <element signature="e#8485#8501#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="81" selection-start="4860" selection-end="4860" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,10 +728,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/caches/UniformBECGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="54" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.78507996">
+        <state line="140" column="0" selection-start="4954" selection-end="4954" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/hided/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="2" selection-start="3426" selection-end="3909" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/caches/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="23" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/math/Randomizers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.15097691">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import idx_coursors.IdxAccessor;
-import parsers.ImmutableBECParser;
+import parsers.hided.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
