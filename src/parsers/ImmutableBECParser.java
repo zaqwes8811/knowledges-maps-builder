@@ -60,6 +60,7 @@ public final class ImmutableBECParser {
         // Предложения идущие в комплекте.
         List<String> slice = parsedLine.subList(KEY_POS+1, parsedLine.size());
         // При добавлении пустные списки отбрасываются.
+        //   Нет похоже при вызове toString() они не выводятся.
         cashContent.putAll(word, slice);
       }
     }
