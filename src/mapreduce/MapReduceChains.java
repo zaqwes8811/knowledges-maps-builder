@@ -129,33 +129,19 @@ public class MapReduceChains {
       // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
       // Может быть они тоже нормально сереализуются?
       // Вообще наверное лучше хранить в базе данных, а не в файлах.
-      Multimap<String, Integer> idxSentences =
-          (Multimap<String, Integer>)nodeResult.get(Mappers.IDX_SENT_MAP);
-      Multiset<String> idxFrequencies =
-          (Multiset<String>)nodeResult.get(Mappers.IDX_FREQ_INDEX);
-      Multimap<String, String> idxRestWords =
-          (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
-      List<String> idxSortedByFrequency =
-        (ArrayList<String>)nodeResult.get(Reduces.IDX_SORTED_IDX);
+      List<String> idxSortedByFrequencyForSave = (ArrayList<String>)nodeResult.get(Reduces.IDX_SORTED_IDX);
+      Multiset<String> idxFrequencies = (Multiset<String>)nodeResult.get(Mappers.IDX_FREQ_INDEX);
+
+      Multimap<String, Integer> idxSentencesPtrs = (Multimap<String, Integer>)nodeResult.get(Mappers.IDX_SENT_MAP);
+      Multimap<String, String> idxRestWords = (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
 
       // Структуры для сереализации
-      List<String> idxSortedByFrequencyForSave = idxSortedByFrequency;
-      Map<String, Integer> idxFrequenciesForSave = new HashMap<String, Integer>();
-      Map<String, String> idxRestWordsForSave = new HashMap<String, String>();
-      Map<String, List<Integer>> idxSentencesForSave = new HashMap<String, List<Integer>>();
-
       // Перекомпановка. Возможно есть средства в Guava, но пусть будет
       //   дополнительная фильтрация по сортированному индексу.
-      for (final String word: idxSortedByFrequencyForSave) {
-        idxFrequenciesForSave.put(word, idxFrequencies.count(word));
-      }
-      for (final String word: idxSortedByFrequencyForSave) {
-        idxRestWordsForSave.put(word, Joiner.on(" ").join(idxRestWords.get(word)));
-      }
-      Map<String, Collection<Integer>> idxSentencesTmp = idxSentences.asMap();
-      for (final String word: idxSortedByFrequencyForSave) {
-        idxSentencesForSave.put(word, new ArrayList<Integer>(idxSentencesTmp.get(word)));
-      }
+      Map<String, Integer> idxFrequenciesForSave = recode(idxFrequencies, idxSortedByFrequencyForSave);
+
+      Map<String, String> idxRestWordsForSave = recodeSS(idxRestWords, idxSortedByFrequencyForSave);
+      Map<String, List<Integer>> idxSentencesForSave = recodeSI(idxSentencesPtrs, idxSortedByFrequencyForSave);
 
       try {
         // Само сохранение. Вряд ли удасться выделить в метод. И свернуть в цикл.
@@ -185,10 +171,35 @@ public class MapReduceChains {
     }  // for..
   }
 
+  private static Map<String, String> recodeSS(Multimap<String, String> in,  List<String> filter) {
+      Map<String, String> idxRestWordsForSave = new HashMap<String, String>();
+      for (final String word: filter) {
+        idxRestWordsForSave.put(word, Joiner.on(" ").join(in.get(word)));
+      }
+      return idxRestWordsForSave;
+  }
+
+  private static  Map<String, Integer> recode(Multiset<String> in, List<String> filter) {
+    Map<String, Integer> idxFrequenciesForSave = new HashMap<String, Integer>();
+    for (final String word: filter) {
+      idxFrequenciesForSave.put(word, in.count(word));
+    }
+    return idxFrequenciesForSave;
+  }
+
+  private static Map<String, List<Integer>> recodeSI(Multimap<String, Integer> in, List<String> filter) {
+    Map<String, List<Integer>> idxSentencesForSave = new HashMap<String, List<Integer>>();
+    for (final String word: filter) {
+      idxSentencesForSave.put(word, new ArrayList<Integer>(in.get(word)));
+    }
+    return idxSentencesForSave;
+  }
+
   // Chain for BEC dictionary.
   public static void runBECChain() {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
+      // Begin "MapReduce" stage
       ImmutableList<String> content =
           Util.fileToList(
             Joiner.on(AppConstants.PATH_SPLITTER)
@@ -196,12 +207,12 @@ public class MapReduceChains {
       ImmutableBECParser cash = ImmutableBECParser.create(content);
 
       // Извлекаем данные и обрабатываем их
-      List<String> sortedByFreqIdxForSave = cash.getDict();
+      List<String> idxSortedByFrequencyForSave = cash.getDict();
       Multiset<String> frequencyIdx = HashMultiset.create();
       Multimap<String, String> dictContent = cash.getContent();
       Multimap<String, String> dictTranslate = cash.getWordTranslates();
 
-      Multimap<String, Integer> sentencesPtrs = HashMultimap.create();
+      Multimap<String, Integer> idxSentencesPtrs = HashMultimap.create();
       List<String> sentences = new ArrayList<String>();
 
       // Нуменация предложения с нуля!
@@ -211,23 +222,25 @@ public class MapReduceChains {
         Collection<String> value = dictContent.asMap().get(key);
         for (final String item: value) {
           sentences.add(item);
-          sentencesPtrs.put(key, idxSentence);
+          idxSentencesPtrs.put(key, idxSentence);
           ++idxSentence;
         }
       }
 
+      // Сохраняем список единиц контента
+
       // Make frequency index. Пока плохо - словарь грязный.
-      for (final String word: sortedByFreqIdxForSave) {
+      for (final String word: idxSortedByFrequencyForSave) {
         frequencyIdx.add(word);
       }
+      // End "MapReduce" stage
 
       // Saver
-     //Util.print(frequencyIdx);
       String pathToDefaultNode = "apps/default-node";
-      //List tmp = new ArrayList();
-      //tmp.add(frequencyIdx);
-      //tmp.add(dictTranslate);   // NO WAY!
-      //Util.print(new Gson().toJson(dictContent));
+      Map<String, Integer> idxFrequenciesForSave = recode(frequencyIdx, idxSortedByFrequencyForSave);
+      Map<String, List<Integer>> idxSentencesForSave = recodeSI(idxSentencesPtrs, idxSortedByFrequencyForSave);
+
+      Util.print(new Gson().toJson(idxSentencesForSave));
 
 
 
