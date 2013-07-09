@@ -12,7 +12,7 @@ import crosscuttings.jobs_processors.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import idx_coursors.Savers;
+import idx_coursors.IdxAccessor;
 import parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
@@ -20,7 +20,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-/** */
+
 public class MapReduceChains {
   private MapReduceChains() {}
 
@@ -240,7 +240,7 @@ public class MapReduceChains {
           AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX),
           idxSentencesForSave);
 
-      Savers.saveListObjects(tmp);
+      IdxAccessor.saveListObjects(tmp);
 
     } catch (IOException e) {
       Util.print(e.getMessage());
