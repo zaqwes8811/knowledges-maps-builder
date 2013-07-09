@@ -8,7 +8,6 @@ import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import idx_coursors.IdxAccessor;
-import parsers.VParserException;
 
 // @Immutable
 //

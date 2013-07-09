@@ -1,11 +1,11 @@
-package parsers.hided;
+package totext;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
 import crosscuttings.AppConstants;
-import parsers.VParserException;
+import caches.VParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
