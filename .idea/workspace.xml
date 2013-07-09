@@ -37,7 +37,7 @@
     <file path="/KeyWordsCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303817004" ignored="false" />
     <file path="/ImmutableOntoAssistant.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303827391" ignored="false" />
     <file path="/ImmutableDataExtractor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303834860" ignored="false" />
-    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373365293840" ignored="false" />
+    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373367184324" ignored="false" />
     <file path="/Mappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373305652833" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,16 +100,34 @@
       <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="45" selection-start="4832" selection-end="4832" vertical-scroll-proportion="-0.19318181">
+            <state line="236" column="31" selection-start="8757" selection-end="8757" vertical-scroll-proportion="0.52435064">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2850#2856#0" expanded="true" />
                 <element signature="e#3249#3255#0" expanded="true" />
-                <element signature="e#4687#4704#0" expanded="true" />
-                <element signature="e#4767#4783#0" expanded="true" />
-                <element signature="e#4853#4876#0" expanded="true" />
-                <element signature="e#7649#7657#0" expanded="true" />
+                <element signature="e#6442#6458#0" expanded="true" />
+                <element signature="e#6773#6790#0" expanded="true" />
+                <element signature="e#7102#7125#0" expanded="true" />
+                <element signature="e#8127#8135#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractSetMultimap.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-14.64">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMultimap.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -559,24 +577,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/common/tests/CompressorsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="472" column="47" selection-start="19788" selection-end="19788" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/Reduces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="27" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
@@ -684,17 +684,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-14.64">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="45" selection-start="4832" selection-end="4832" vertical-scroll-proportion="-0.19318181">
+        <state line="236" column="31" selection-start="8757" selection-end="8757" vertical-scroll-proportion="0.52435064">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2850#2856#0" expanded="true" />
             <element signature="e#3249#3255#0" expanded="true" />
-            <element signature="e#4687#4704#0" expanded="true" />
-            <element signature="e#4767#4783#0" expanded="true" />
-            <element signature="e#4853#4876#0" expanded="true" />
-            <element signature="e#7649#7657#0" expanded="true" />
+            <element signature="e#6442#6458#0" expanded="true" />
+            <element signature="e#6773#6790#0" expanded="true" />
+            <element signature="e#7102#7125#0" expanded="true" />
+            <element signature="e#8127#8135#0" expanded="true" />
           </folding>
         </state>
       </provider>
