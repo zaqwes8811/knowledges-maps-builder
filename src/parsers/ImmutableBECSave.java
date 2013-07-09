@@ -160,7 +160,7 @@ public final class ImmutableBECSave {
       //   Кажется обращение через cash не верное
       //Utils.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(1110));
       //Utils.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(110));
-      ImmutableList<String> content = Util.file2list(fullFilename);
+      ImmutableList<String> content = Util.fileToList(fullFilename);
 
       ImmutableBECSave cash = ImmutableBECSave.create(content);
 

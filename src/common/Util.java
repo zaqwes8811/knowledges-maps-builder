@@ -68,7 +68,7 @@ final public class Util {
     return Optional.absent();
   }  */
 
-  static public ImmutableList<String> file2list(String filename) throws IOException {
+  static public ImmutableList<String> fileToList(String filename) throws IOException {
     Closer closer = Closer.create();
     List<String> result = new ArrayList<String>();
     try {

@@ -32,7 +32,7 @@ final public class ImmutableJobsFormer {
     for (String node: nodes) {
       String contentFilename = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.CONTENT_FOLDER,
           node,
           AppConstants.CONTENT_FILENAME);

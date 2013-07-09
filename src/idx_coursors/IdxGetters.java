@@ -7,7 +7,7 @@ import com.google.gson.reflect.TypeToken;
 import common.Util;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ProcessorTargets;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,7 +89,7 @@ public class IdxGetters {
       String sorted_freq_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.COMPRESSED_IDX_FOLDER,
             node,
             AppConstants.FREQ_IDX_FILENAME));
@@ -106,7 +106,7 @@ public class IdxGetters {
       String sorted_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.COMPRESSED_IDX_FOLDER,
             node,
             AppConstants.SORTED_IDX_FILENAME));
