@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/Savers.java" afterPath="$PROJECT_DIR$/src/idx_coursors/Savers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Util.java" afterPath="$PROJECT_DIR$/src/common/Util.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\parsers\ImmutableTextExtractors.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableTextExtractors.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +30,7 @@
     <file path="/ImmutableUniformGetter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373045190504" ignored="false" />
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373361785201" ignored="false" />
     <file path="/ServletPrototype.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373201121226" ignored="false" />
-    <file path="/Util.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373361745525" ignored="false" />
+    <file path="/Util.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373376234954" ignored="false" />
     <file path="/ImmutableTextExtractors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373203896151" ignored="false" />
     <file path="/ImmutableMappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373290603080" ignored="false" />
     <file path="/ImmutableMapperSentencesLevel.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373289301018" ignored="false" />
@@ -37,8 +41,9 @@
     <file path="/KeyWordsCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303817004" ignored="false" />
     <file path="/ImmutableOntoAssistant.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303827391" ignored="false" />
     <file path="/ImmutableDataExtractor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373303834860" ignored="false" />
-    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373367184324" ignored="false" />
+    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373376305273" ignored="false" />
     <file path="/Mappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373305652833" ignored="false" />
+    <file path="/Savers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373369280944" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,34 +105,35 @@
       <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="236" column="31" selection-start="8757" selection-end="8757" vertical-scroll-proportion="0.52435064">
+            <state line="219" column="21" selection-start="8147" selection-end="8147" vertical-scroll-proportion="0.37714285">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2850#2856#0" expanded="true" />
-                <element signature="e#3249#3255#0" expanded="true" />
-                <element signature="e#6442#6458#0" expanded="true" />
-                <element signature="e#6773#6790#0" expanded="true" />
-                <element signature="e#7102#7125#0" expanded="true" />
-                <element signature="e#8127#8135#0" expanded="true" />
+                <element signature="e#2884#2890#0" expanded="true" />
+                <element signature="e#3283#3289#0" expanded="true" />
+                <element signature="e#6468#6485#0" expanded="true" />
+                <element signature="e#7545#7553#0" expanded="true" />
+                <element signature="e#8480#8496#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSetMultimap.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
+      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-14.64">
+            <state line="17" column="42" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMultimap.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
+      <file leaf-file-name="Savers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/Savers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+            <state line="29" column="87" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,12 +156,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
-        <option value="$PROJECT_DIR$/src/common/tests/CompressorsTest.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/Reduces.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
-        <option value="$PROJECT_DIR$/src/common/Util.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/src/ServletPrototype.java" />
@@ -165,6 +168,9 @@
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/Savers.java" />
+        <option value="$PROJECT_DIR$/src/totext/ImmutableTextExtractors.java" />
+        <option value="$PROJECT_DIR$/src/common/Util.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
       </list>
     </option>
@@ -267,64 +273,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mapreduce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idx_coursors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobs_processors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,8 +457,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.7624703" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2375297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27309564" sideWeight="0.8622328" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13776723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -577,35 +525,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="27" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1591#1599#0" expanded="true" />
-            <element signature="e#5655#5663#0" expanded="true" />
-            <element signature="e#10804#10813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="53" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="81" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="9" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -684,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-14.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/HashMultimap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -698,17 +613,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
+    <entry file="jar://D:/home/work-libs/java/guava-14.0.1.jar!/com/google/common/collect/AbstractSetMultimap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="31" selection-start="8757" selection-end="8757" vertical-scroll-proportion="0.52435064">
+        <state line="26" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.7352941">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/Savers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="87" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2850#2856#0" expanded="true" />
-            <element signature="e#3249#3255#0" expanded="true" />
-            <element signature="e#6442#6458#0" expanded="true" />
-            <element signature="e#6773#6790#0" expanded="true" />
-            <element signature="e#7102#7125#0" expanded="true" />
-            <element signature="e#8127#8135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableTextExtractors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="236" selection-end="236" vertical-scroll-proportion="0.21888413">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="42" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="21" selection-start="8147" selection-end="8147" vertical-scroll-proportion="0.37714285">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2884#2890#0" expanded="true" />
+            <element signature="e#3283#3289#0" expanded="true" />
+            <element signature="e#6468#6485#0" expanded="true" />
+            <element signature="e#7545#7553#0" expanded="true" />
+            <element signature="e#8480#8496#0" expanded="true" />
           </folding>
         </state>
       </provider>
