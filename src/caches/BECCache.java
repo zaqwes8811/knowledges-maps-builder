@@ -3,11 +3,14 @@ package caches;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import common.Util;
 import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import idx_coursors.IdxAccessor;
+
+import java.util.List;
 
 // @Immutable
 //
@@ -26,20 +29,24 @@ public class BECCache {
   // Да, лучше передать, тогда будет Стратегией?
   private BECCache() throws CrosscuttingsException {
     String nodeName = "bec-node";
+    final String splitter = AppConstants.PATH_SPLITTER;
     final String pathToAppFolder = AppConfigurator.getPathToAppFolder();
 
-    String filename = Joiner.on(AppConstants.PATH_SPLITTER)
+    final String pathToNode = Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
-          pathToAppFolder,
-          nodeName,
-          AppConstants.SORTED_IDX_FILENAME);
+        pathToAppFolder,
+        nodeName);
 
-    IDX_SORTED = IdxAccessor.getSortedIdx(filename);
+    SENTENCES_PTRS = IdxAccessor.getSentencesKeys(
+        Joiner.on(splitter).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX));
+    IDX_SORTED = IdxAccessor.getSortedIdx(
+        Joiner.on(splitter).join(pathToNode, AppConstants.SORTED_IDX_FILENAME));
     COUNT_WORDS = IDX_SORTED.get().size();
   }
 
   // Похоже тут violate не нужно.
   private final Optional<ImmutableList<String>> IDX_SORTED;
+  private final Optional<ImmutableMap<String, List<Integer>>> SENTENCES_PTRS;
   private final Integer COUNT_WORDS;
 
   // Получить слово по индексу. Нужно для генератора случайных чисел.
@@ -55,6 +62,11 @@ public class BECCache {
       throw new VParserException("Out of range.");
     }
   }
+
+  //private List<Integer>
+  //public List<String> getAssociatedContent(String key) {
+
+  //}
 
   public Integer getSizeIndexes() {
     return COUNT_WORDS;
