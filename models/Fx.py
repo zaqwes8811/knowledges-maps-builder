@@ -4,11 +4,13 @@
 from numpy import arange
 from pylab import plot
 from pylab import show
+import random
 
 
 
-COUNT_POINTS = 23;
-fx = arange(COUNT_POINTS)
+COUNT_POINTS = 10;
+fx = arange(COUNT_POINTS)*1.0
+fx /= sum(fx)
 
 Fxi = 0
 Fx = []
@@ -16,9 +18,11 @@ for i in fx:
     Fx.append(Fxi)
     Fxi += i
     
-for j in range(4):
-    Fx.append(Fxi)
-    
 plot(Fx, "-v")
+plot(fx, "-v")
+    
+# Обратная
+#print random.random()
+    
 show()
 
