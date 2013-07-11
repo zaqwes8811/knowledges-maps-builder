@@ -7,26 +7,58 @@ from pylab import show
 import random
 import math
 
+import cProfile
+
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import exp
 from numpy import log
 from numpy import abs
 
-def find(ranges, value):
-    if len(ranges) == 1:
-        return ranges[0].contains(value)
+class Range(object):
+    def contains(self, c):
+        pass
+    
+class ClosedOpen(Range):
+    _a = None
+    _b = None
+    _id = None
+    def __init__(self, a, b, id):
+        self._a = a
+        self._b = b
+        self._id = id
+    def get_id(self):
+        return self._id
+    
+    def get_a(self):
+        return self._a
+    
+    def get_b(self):
+        return self._b
+        
+    def contains(self, c):
+        return self._a < c and c <= self._b
+    
+    def __str__(self):
+        return "("+str(self._a)+", "+str(self._b)+"]"
+    def __repr__(self):
+        return self.__str__()
+
+def find(ranges, n, value):
+    if n != 1:
+        return ranges[0].get_a() < value and value <= ranges[n-1].get_b()  
     else:
-        return ranges[0]._a < value and value <= ranges[-1]._b
+        return ranges[0].contains(value)
         
 def splitter(ranges, n, value):
     # Останавливаем ветку
-    if not find(ranges, value):
+    finded = find(ranges, n, value)
+    if not finded:
         return False, None 
     
     # Выход из рекурсии когда остался один объект и он искомый 
     if n == 1:
-        return find(ranges, value), ranges[0] 
+        return finded, ranges[0] 
     else:
         one_size = n/2  # Округляется в меньшую
         two_size = n - one_size
@@ -35,76 +67,21 @@ def splitter(ranges, n, value):
             tree_result = splitter(ranges[one_size:], two_size, value)
         return tree_result
             
-def get_near_uniform(code_book):
-    """ O(n) - сделать бы получше. Через бинарный поиск 
-    возможно можно дотянуть до O(log(n))."""
-    class Range(object):
-        def contains(self, c):
-            pass
-    
-    class ClosedOpen(Range):
-        _a = None
-        _b = None
-        _id = None
-        def __init__(self, a, b, id):
-            self._a = a
-            self._b = b
-            self._id = id
-        def get_id(self):
-            return self._id
-            
-        def contains(self, c):
-            return self._a < c and c <= self._b
-        
-        def __str__(self):
-            return "("+str(self._a)+", "+str(self._b)+"]"
-        def __repr__(self):
-            return self.__str__()
-     
-    ranges = []
-    ranges.append(ClosedOpen(0, code_book[0], 0))
-    for i in range(len(code_book)-1):
-        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
-    
-    value = random.random()*max(code_book)
-    result = splitter(ranges, len(ranges), value) 
+def get_near_uniform(code_book, size_code_book, max_value, ranges=None):
+    value = random.random()*max_value
+    result = splitter(ranges, size_code_book, value) 
     return result[1]. get_id()
 
             
-def get_near_uniform_old(code_book):
-    """ O(n) - сделать бы получше. Через бинарный поиск 
-    возможно можно дотянуть до O(log(n))."""
-    class Range(object):
-        def contains(self, c):
-            pass
-    
-    class ClosedOpen(Range):
-        _a = None
-        _b = None
-        _id = None
-        def __init__(self, a, b, id):
-            self._a = a
-            self._b = b
-            self._id = id
-        def get_id(self):
-            return self._id
-            
-        def contains(self, c):
-            return self._a < c and c <= self._b
-        
-        def __str__(self):
-            return "("+str(self._a)+", "+str(self._b)+"]"
-        def __repr__(self):
-            return self.__str__()
-     
-    ranges = []
-    ranges.append(ClosedOpen(0, code_book[0], 0))
-    for i in range(len(code_book)-1):
-        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
-    
-    value = random.random()*max(code_book)
-    result = splitter(ranges, len(ranges), value) 
-    return result[1]. get_id()
+def get_near_uniform_old(code_book, max_value, ranges=None):
+    value = random.random()*max_value
+    vector = 0
+    for code in code_book:
+        if value <= code:
+            break
+        vector += 1
+    #print "Cluster", vector, "Sample", value 
+    return vector
 
 def develop():
     COUNT_POINTS = 100;
@@ -128,11 +105,18 @@ def develop():
        
     #"""
     # Обратная. Как нагенерить ключей?
-    size_experiment = 10000
+    size_experiment = 100000
     experiment = arange(size_experiment)*1.0
+    max_value = max(code_book)
+    ranges = []
+    ranges.append(ClosedOpen(0, code_book[0], 0))
+    axis = range(COUNT_POINTS-1)
+    for i in axis:
+        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
+    ranges = tuple(ranges)    
     for i in range(size_experiment):
-        experiment[i] = get_near_uniform(code_book)
-    
+        experiment[i] = get_near_uniform(code_book, COUNT_POINTS, max_value, ranges)
+    #"""
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
@@ -174,6 +158,7 @@ if __name__=="__main__":
     #for i in range(10000):
     #    get_near_uniform(code_book)
     develop()
+    #cProfile.run("develop()")
     print "Done"
 
 
