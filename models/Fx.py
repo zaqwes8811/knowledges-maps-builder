@@ -49,6 +49,12 @@ def find(ranges, n, value):
         return ranges[0].get_a() < value and value <= ranges[n-1].get_b()  
     else:
         return ranges[0].contains(value)
+    
+def find_tuple(ranges, n, value):
+    if n != 1:
+        return ranges[0][0] < value and value <= ranges[n-1][1]  
+    else:
+        return ranges[0][0] < value and value <= ranges[0][1]
         
 def splitter(ranges, n, value):
     # Останавливаем ветку
@@ -82,25 +88,22 @@ def get_near_uniform_recursive(code_book, size_code_book, max_value, ranges=None
     return result[1]. get_id()
 
 def get_near_uniform_iterative(code_book, size_code_book, max_value, ranges=None):
+    """ Precond: Массив отсортирован и элементы уникальны по id. """
     value = random.random()*max_value
-    print "Value", value
     n = size_code_book
-    
     while n != 1: 
         one_size = n/2  # Округляется в меньшую
         two_size = n-one_size
         A = ranges[:one_size]
         B = ranges[one_size:]
-        if find(A, one_size, value):
-           ranges = A
-           n = one_size
+        if find_tuple(A, one_size, value):
+            ranges = A
+            n = one_size
         else: 
-           ranges = B
-           n = two_size
-           
-        print ranges, n
-        
-    return None #result[1]. get_id()
+            ranges = B
+            n = two_size
+       
+    return ranges[0][2]
 
             
 def get_near_uniform_linear(code_book, max_value, ranges=None, tmp=None):
@@ -135,18 +138,23 @@ def develop():
        
     #"""
     # Обратная. Как нагенерить ключей?
-    size_experiment = 1#00000
+    size_experiment = 100000
     experiment = arange(size_experiment)*1.0
     max_value = max(code_book)
     ranges = []
-    ranges.append(ClosedOpen(0, code_book[0], 0))
+    #item = ClosedOpen(0, code_book[0], 0)
+    item = (0, code_book[0], 0)
+    ranges.append(item)
     axis = range(COUNT_POINTS-1)
     for i in axis:
-        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
+        #item = ClosedOpen(code_book[i], code_book[i+1], i+1)
+        item = (code_book[i], code_book[i+1], i+1)
+        ranges.append(item)
+        
     ranges = tuple(ranges)    
     for i in range(size_experiment):
         experiment[i] = get_near_uniform_iterative(code_book, COUNT_POINTS, max_value, ranges)
-    """
+    #"""
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
@@ -183,18 +191,20 @@ if __name__=="__main__":
     # O(n) - ?
     #
     # (...N1] (N1...N2] ...
-    code_book = [1, 3, 4, 7, 9]
-    COUNT_POINTS = len(code_book)
-    ranges = []
-    ranges.append(ClosedOpen(0, code_book[0], 0))
-    axis = range(COUNT_POINTS-1)
-    for i in axis:
-        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
-    ranges = tuple(ranges) 
-    for i in range(100000):
-        get_near_uniform_iterative(code_book, len(code_book), max(code_book), ranges)
+    
+    def test():
+        code_book = [1, 3, 4, 7, 9]
+        COUNT_POINTS = len(code_book)
+        ranges = []
+        ranges.append(ClosedOpen(0, code_book[0], 0))
+        axis = range(COUNT_POINTS-1)
+        for i in axis:
+            ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
+        ranges = tuple(ranges) 
+        for i in range(100000):
+            get_near_uniform_iterative(code_book, len(code_book), max(code_book), ranges)
     #develop()
-    #cProfile.run("develop()")
+    cProfile.run("develop()")
     print "Done"
 
 
