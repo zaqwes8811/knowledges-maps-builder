@@ -96,14 +96,16 @@ def get_near_uniform_iterative(code_book, size_code_book, max_value, ranges=None
         two_size = n-one_size
         A = ranges[:one_size]
         B = ranges[one_size:]
-        if find_tuple(A, one_size, value):
+        #if find_tuple(A, one_size, value):
+        if find(A, one_size, value):
             ranges = A
             n = one_size
         else: 
             ranges = B
             n = two_size
        
-    return ranges[0][2]
+    #return ranges[0][2]
+    return ranges[0].get_id()
 
             
 def get_near_uniform_linear(code_book, max_value, ranges=None, tmp=None):
@@ -142,19 +144,19 @@ def develop():
     experiment = arange(size_experiment)*1.0
     max_value = max(code_book)
     ranges = []
-    #item = ClosedOpen(0, code_book[0], 0)
-    item = (0, code_book[0], 0)
+    item = ClosedOpen(0, code_book[0], 0)
+    #item = (0, code_book[0], 0)
     ranges.append(item)
     axis = range(COUNT_POINTS-1)
     for i in axis:
-        #item = ClosedOpen(code_book[i], code_book[i+1], i+1)
-        item = (code_book[i], code_book[i+1], i+1)
+        item = ClosedOpen(code_book[i], code_book[i+1], i+1)
+        #item = (code_book[i], code_book[i+1], i+1)
         ranges.append(item)
         
     ranges = tuple(ranges)    
     for i in range(size_experiment):
         experiment[i] = get_near_uniform_iterative(code_book, COUNT_POINTS, max_value, ranges)
-    #"""
+    """
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
