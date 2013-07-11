@@ -52,6 +52,15 @@ def find(ranges, n, value):
         
 def splitter(ranges, n, value):
     # Останавливаем ветку
+    """
+    #@SLOW - вызывается всегда!
+    finded = False
+    if n != 1:
+        finded = ranges[0].get_a() < value and value <= ranges[n-1].get_b()  
+    else:
+        finded = ranges[0].contains(value)
+    #@SLOW
+    """
     finded = find(ranges, n, value)
     if not finded:
         return False, None 
@@ -67,13 +76,13 @@ def splitter(ranges, n, value):
             tree_result = splitter(ranges[one_size:], two_size, value)
         return tree_result
             
-def get_near_uniform(code_book, size_code_book, max_value, ranges=None):
+def get_near_uniform_recursive(code_book, size_code_book, max_value, ranges=None):
     value = random.random()*max_value
     result = splitter(ranges, size_code_book, value) 
     return result[1]. get_id()
 
             
-def get_near_uniform_old(code_book, max_value, ranges=None):
+def get_near_uniform_linear(code_book, max_value, ranges=None, tmp=None):
     value = random.random()*max_value
     vector = 0
     for code in code_book:
@@ -115,8 +124,8 @@ def develop():
         ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
     ranges = tuple(ranges)    
     for i in range(size_experiment):
-        experiment[i] = get_near_uniform(code_book, COUNT_POINTS, max_value, ranges)
-    #"""
+        experiment[i] = get_near_uniform_linear(code_book, COUNT_POINTS, max_value, ranges)
+    """
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
@@ -157,8 +166,8 @@ if __name__=="__main__":
     #code_book = [1, 3, 4, 7, 9]
     #for i in range(10000):
     #    get_near_uniform(code_book)
-    develop()
-    #cProfile.run("develop()")
+    #develop()
+    cProfile.run("develop()")
     print "Done"
 
 
