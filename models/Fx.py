@@ -13,49 +13,133 @@ from numpy import exp
 from numpy import log
 from numpy import abs
 
+def find(ranges, value):
+    if len(ranges) == 1:
+        return ranges[0].contains(value)
+    else:
+        return ranges[0]._a < value and value <= ranges[-1]._b
+        
+def splitter(ranges, n, value):
+    # Останавливаем ветку
+    if not find(ranges, value):
+        return False, None 
+    
+    # Выход из рекурсии когда остался один объект и он искомый 
+    if n == 1:
+        return find(ranges, value), ranges[0] 
+    else:
+        one_size = n/2  # Округляется в меньшую
+        two_size = n - one_size
+        tree_result = splitter(ranges[:one_size], one_size, value)
+        if not tree_result[0]:
+            tree_result = splitter(ranges[one_size:], two_size, value)
+        return tree_result
+            
 def get_near_uniform(code_book):
+    """ O(n) - сделать бы получше. Через бинарный поиск 
+    возможно можно дотянуть до O(log(n))."""
+    class Range(object):
+        def contains(self, c):
+            pass
+    
+    class ClosedOpen(Range):
+        _a = None
+        _b = None
+        _id = None
+        def __init__(self, a, b, id):
+            self._a = a
+            self._b = b
+            self._id = id
+        def get_id(self):
+            return self._id
+            
+        def contains(self, c):
+            return self._a < c and c <= self._b
+        
+        def __str__(self):
+            return "("+str(self._a)+", "+str(self._b)+"]"
+        def __repr__(self):
+            return self.__str__()
+     
+    ranges = []
+    ranges.append(ClosedOpen(0, code_book[0], 0))
+    for i in range(len(code_book)-1):
+        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
+    
     value = random.random()*max(code_book)
-    vector = 0
-    for code in code_book:
-        if value <= code:
-            break
-        vector += 1
-    #print "Cluster", vector, "Sample", value 
-    return vector
+    result = splitter(ranges, len(ranges), value) 
+    return result[1]. get_id()
+
+            
+def get_near_uniform_old(code_book):
+    """ O(n) - сделать бы получше. Через бинарный поиск 
+    возможно можно дотянуть до O(log(n))."""
+    class Range(object):
+        def contains(self, c):
+            pass
+    
+    class ClosedOpen(Range):
+        _a = None
+        _b = None
+        _id = None
+        def __init__(self, a, b, id):
+            self._a = a
+            self._b = b
+            self._id = id
+        def get_id(self):
+            return self._id
+            
+        def contains(self, c):
+            return self._a < c and c <= self._b
+        
+        def __str__(self):
+            return "("+str(self._a)+", "+str(self._b)+"]"
+        def __repr__(self):
+            return self.__str__()
+     
+    ranges = []
+    ranges.append(ClosedOpen(0, code_book[0], 0))
+    for i in range(len(code_book)-1):
+        ranges.append(ClosedOpen(code_book[i], code_book[i+1], i+1))
+    
+    value = random.random()*max(code_book)
+    result = splitter(ranges, len(ranges), value) 
+    return result[1]. get_id()
 
 def develop():
-    lam = 2.0
     COUNT_POINTS = 100;
-    x = arange(COUNT_POINTS)*1.0
-    x = x/max(x)*2
-    dx = x[1]-x[0]
-    fx = lam*exp(-lam*x)
+    fx = arange(COUNT_POINTS)
+    fx = fx[::-1]
+    
    
     Fxi = 0
     code_book = []
     for i in (fx):
-        Fxi += i*dx
-        tmp = Fxi-dx
+        Fxi += i
+        tmp = Fxi
         code_book.append(tmp)
 
-    #plot(x, fx)   
-    #plot(x, code_book, "-v")
-    #show()
+    #print fx
+    #code_book = code_book/sum(code_book)
+    """
+    plot(fx, "-o")   
+    plot(code_book, "-v")
+    show()"""
        
-    
+    #"""
     # Обратная. Как нагенерить ключей?
-    experiment = arange(10000)*1.0
-    for i in range(10000):
+    size_experiment = 10000
+    experiment = arange(size_experiment)*1.0
+    for i in range(size_experiment):
         experiment[i] = get_near_uniform(code_book)
     
-    print experiment
     x = experiment
-    hist, bins = np.histogram(x,bins = 150)
+    hist, bins = np.histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
     center = (bins[:-1]+bins[1:])/2
     plt.bar(center, hist, align = 'center', width = width)
     plt.show()
-
+    #"""
     
 if __name__=="__main__":
     # Кодовой книгой кажется будет сама инверсная функция.
@@ -85,13 +169,11 @@ if __name__=="__main__":
     # O(n) - ?
     #
     # (...N1] (N1...N2] ...
-    code_book = [1, 2, 4]
-    
-    
-    #get_near_uniform(code_book)
-    develop()
-    #for i in range(100):
+  
+    #code_book = [1, 3, 4, 7, 9]
+    #for i in range(10000):
     #    get_near_uniform(code_book)
+    develop()
     print "Done"
 
 
