@@ -13,6 +13,16 @@ from numpy import exp
 from numpy import log
 from numpy import abs
 
+def get_near_uniform(code_book):
+    value = random.random()*max(code_book)
+    vector = 0
+    for code in code_book:
+        if value <= code:
+            break
+        vector += 1
+    #print "Cluster", vector, "Sample", value 
+    return vector
+
 def develop():
     lam = 2.0
     COUNT_POINTS = 100;
@@ -28,23 +38,24 @@ def develop():
         tmp = Fxi-dx
         code_book.append(tmp)
 
-    plot(x, fx)   
-    plot(x, code_book, "-v")
-    show()
+    #plot(x, fx)   
+    #plot(x, code_book, "-v")
+    #show()
        
-    """
-    # Обратная. Как нагенерить ключей?
-    experiment = []
-    for i in range(10000):
-        experiment.append(-log(random.random()))
     
+    # Обратная. Как нагенерить ключей?
+    experiment = arange(10000)*1.0
+    for i in range(10000):
+        experiment[i] = get_near_uniform(code_book)
+    
+    print experiment
     x = experiment
-    hist, bins = np.histogram(x,bins = 50)
+    hist, bins = np.histogram(x,bins = 150)
     width = 0.7*(bins[1]-bins[0])
     center = (bins[:-1]+bins[1:])/2
     plt.bar(center, hist, align = 'center', width = width)
     plt.show()
-    """
+
     
 if __name__=="__main__":
     # Кодовой книгой кажется будет сама инверсная функция.
@@ -75,20 +86,12 @@ if __name__=="__main__":
     #
     # (...N1] (N1...N2] ...
     code_book = [1, 2, 4]
-    def get_near_uniform(code_book):
-        value = random.random()*max(code_book)
-        print "Sample", value
-        deltas = []
-        min_word= 0
-        min_delta= 0
-        for code in code_book:
-            if code <= min_word:
-                min_word = code
-            deltas.append(abs(code-value))
-        print min(deltas)
+    
     
     #get_near_uniform(code_book)
     develop()
+    #for i in range(100):
+    #    get_near_uniform(code_book)
     print "Done"
 
 
