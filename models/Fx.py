@@ -155,7 +155,7 @@ def develop():
         
     ranges = tuple(ranges)    
     for i in range(size_experiment):
-        experiment[i] = get_near_uniform_iterative(code_book, COUNT_POINTS, max_value, ranges)
+        experiment[i] = get_near_uniform_linear(code_book, COUNT_POINTS, max_value, ranges)
     """
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
