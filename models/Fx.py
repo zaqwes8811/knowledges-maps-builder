@@ -96,30 +96,29 @@ def get_near_uniform_iterative(code_book, size_code_book, max_value, ranges=None
         two_size = n-one_size
         A = ranges[:one_size]
         B = ranges[one_size:]
-        #if find_tuple(A, one_size, value):
-        if find(A, one_size, value):
+        if find_tuple(A, one_size, value):
+        #if find(A, one_size, value):
             ranges = A
             n = one_size
         else: 
             ranges = B
             n = two_size
        
-    #return ranges[0][2]
-    return ranges[0].get_id()
+    return ranges[0][2]
+    #return ranges[0].get_id()
 
             
-def get_near_uniform_linear(code_book, max_value, ranges=None, tmp=None):
+def get_near_uniform_linear(code_book, count_points, max_value, ranges=None, tmp=None):
     value = random.random()*max_value
     vector = 0
     for code in code_book:
         if value <= code:
             break
         vector += 1
-    #print "Cluster", vector, "Sample", value 
     return vector
 
 def develop():
-    COUNT_POINTS = 100;
+    COUNT_POINTS = 10000;
     fx = arange(COUNT_POINTS)
     fx = fx[::-1]
     
@@ -140,7 +139,7 @@ def develop():
        
     #"""
     # Обратная. Как нагенерить ключей?
-    size_experiment = 100000
+    size_experiment = 40000
     experiment = arange(size_experiment)*1.0
     max_value = max(code_book)
     ranges = []
@@ -155,7 +154,9 @@ def develop():
         
     ranges = tuple(ranges)    
     for i in range(size_experiment):
-        experiment[i] = get_near_uniform_linear(code_book, COUNT_POINTS, max_value, ranges)
+        
+        experiment[i] = get_near_uniform_recursive(code_book, COUNT_POINTS, max_value, ranges)
+        #experiment[i] = get_near_uniform_iterative(code_book, COUNT_POINTS, max_value, ranges)
     """
     x = experiment
     hist, bins = np.histogram(x, bins = COUNT_POINTS)
