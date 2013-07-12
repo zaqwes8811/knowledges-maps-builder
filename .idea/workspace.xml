@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\jQuery для начинающих. Часть 2. Слайд-меню. Пример 2_files\jquery.min.js" afterPath="" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\out.js" afterPath="$PROJECT_DIR$/hided/js/out.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/css/card.css" afterPath="$PROJECT_DIR$/hided/css/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/index.html" afterPath="$PROJECT_DIR$/hided/index.html" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +23,8 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373627446152" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373628724273" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373639802847" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373640958377" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,34 +87,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hided/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="34" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-22.615385">
+            <state line="12" column="17" selection-start="651" selection-end="651" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hided/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="39" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slide-example.htm" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hided/slide-example.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="17" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.5673941">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hided/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="31" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
+            <state line="19" column="26" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5094637">
               <folding />
             </state>
           </provider>
@@ -152,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/parsers/BECParser.java" />
         <option value="$PROJECT_DIR$/src/common/utils.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+        <option value="$PROJECT_DIR$/hided/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" />
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/css/card.css" />
-        <option value="$PROJECT_DIR$/hided/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" />
       </list>
     </option>
   </component>
@@ -372,12 +353,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21800947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7327791" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7819905" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26643598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -510,28 +491,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hided/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="34" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-22.615385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+        <state line="15" column="31" selection-start="384" selection-end="384" vertical-scroll-proportion="-0.5611247">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hided/slide-example.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="17" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.5673941">
+        <state line="37" column="4" selection-start="1198" selection-end="1209" vertical-scroll-proportion="0.54557127">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="651" selection-end="651" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/css/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="26" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5094637">
           <folding />
         </state>
       </provider>

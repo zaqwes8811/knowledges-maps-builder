@@ -5,22 +5,40 @@
   и поклацав можно разобраться.
 */
 .one-card-container {
-height: 100px;
-width: 200px;
-background-color: #D8D8D8;
-
-margin-left: 200px;
-margin-top: 200px;
-
+  height: 100px;
+  width: 250px;
+  background-color: #D8D8D8;
+  margin-left: 200px;
+  margin-top: 200px;
+  position: relative;
 }
 
 .one-card-active-item {
   height: 100%;
-  width: 80%;
+  width: 90%;
   background-color: red;
-
+  border-radius: 10px 0px 0px 10px;
 }
 
 .tuner-base {
+  height: 50%;
+  width: 10%;
+  right: 0;
+  position: absolute;
+}
 
+.tuner-base-up {
+  background-color: gray;
+  top: 0;
+  border-radius: 0px 10px 0px 0px;
+}
+
+.tuner-base-down {
+  background-color: lightgreen;
+  bottom: 0;
+  border-radius: 0px 0px 10px 0px;
+}
+
+.one-card-container {
+  border-radius: 10px 10px 10px 10px;
 }
