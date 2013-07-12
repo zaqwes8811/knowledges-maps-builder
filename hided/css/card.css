@@ -9,3 +9,14 @@ margin-left: 200px;
 margin-top: 200px;
 
 }
+
+.one-card-active-item {
+  height: 100%;
+  width: 80%;
+  background-color: red;
+
+}
+
+.tuner-base {
+
+}
