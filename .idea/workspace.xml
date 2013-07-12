@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hided/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/index.html" afterPath="$PROJECT_DIR$/hided/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,6 +24,8 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373627183848" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373627307898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,34 +84,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="60" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1132#1140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hided/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="16" selection-start="2583" selection-end="2583" vertical-scroll-proportion="0.5277778">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="34" column="38" selection-start="1490" selection-end="1490" vertical-scroll-proportion="-21.961538">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/utils.java">
+      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hided/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="82" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
+            <state line="8" column="14" selection-start="115" selection-end="115" vertical-scroll-proportion="0.16625917">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hided/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
         <option value="$PROJECT_DIR$/src/coursors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
@@ -147,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/common/utils.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/hided/index.html" />
+        <option value="$PROJECT_DIR$/hided/css/card.css" />
       </list>
     </option>
   </component>
@@ -212,6 +210,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hided" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hided" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,13 +476,6 @@
         <state line="3342" column="0" selection-start="135949" selection-end="135949" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="82" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="60" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
@@ -477,13 +486,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="82" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.25183374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hided/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="2583" selection-end="2583" vertical-scroll-proportion="0.5277778">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="34" column="38" selection-start="1490" selection-end="1490" vertical-scroll-proportion="-21.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/css/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="115" selection-end="115" vertical-scroll-proportion="0.16625917">
+          <folding />
         </state>
       </provider>
     </entry>
