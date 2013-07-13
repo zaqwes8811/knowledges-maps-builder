@@ -2,15 +2,124 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hided/js/develop/cards.js" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\index_flot.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/css/card.css" afterPath="$PROJECT_DIR$/hided/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/index.html" afterPath="$PROJECT_DIR$/hided/index.html" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\card.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\error.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\del.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\ed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\go.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\rel.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\data\out.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\cards.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\share.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\slide-example.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\subs\sys-settings-new.htm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373620882723" ignored="false" />
+    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373714851192" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
@@ -26,10 +135,10 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373706876192" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373640958377" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723783918" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723895649" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373707171397" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723839489" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +153,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,6 +187,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -88,37 +197,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hided/index.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="634" selection-end="634" vertical-scroll-proportion="-7.1923075">
+            <state line="20" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.42929292">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hided/css/card.css">
+        <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hided/js/develop/cards.js">
+      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hided/js/develop/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="8" selection-start="111958" selection-end="112955" vertical-scroll-proportion="0.0">
+            <state line="16" column="31" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,9 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableOntoAssistant.java" />
-        <option value="$PROJECT_DIR$/src/coursors/ImmutableDataExtractor.java" />
-        <option value="$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java" />
         <option value="$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableProcessorTargets.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -158,6 +255,9 @@
         <option value="$PROJECT_DIR$/hided/css/card.css" />
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/js/develop/cards.js" />
+        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
+        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/web-pages/index.html" />
       </list>
     </option>
   </component>
@@ -194,6 +294,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,7 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
+              <option name="myItemId" value="web-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -236,7 +337,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
+              <option name="myItemId" value="web-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -254,51 +355,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="develop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
+              <option name="myItemId" value="web-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,7 +365,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,7 +485,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-1288" y="-8" width="1296" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,12 +495,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21800947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21800947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7819905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1904376" sideWeight="0.7819905" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26643598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -514,107 +570,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hided/css/error.txt">
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="16" column="31" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/analytics.js">
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.0917873">
+        <state line="16" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/calendar.js">
+    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/develop/new_journal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/data/out.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/settings-checkers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/js_hided_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/modernizr.custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/share.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/slide-example.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="519" selection-end="584" vertical-scroll-proportion="0.17142858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/develop/no_w2p.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="524" selection-end="524" vertical-scroll-proportion="0.48264983">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/develop/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="8" selection-start="111958" selection-end="112955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="634" selection-end="634" vertical-scroll-proportion="-7.1923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hided/js/develop/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.42929292">
           <folding />
         </state>
       </provider>
