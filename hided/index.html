@@ -5,8 +5,17 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
         <link rel="stylesheet" href="css/card.css">
+
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/develop/cards.js"></script>
     </head>
-    <body onload="">
+    <body onload="init()">
+        <div class="one-card-container" onclick="click_slot()">
+            <div class="tuner-base tuner-base-up"></div>
+            <div class="tuner-base tuner-base-down"></div>
+            <div class="one-card-active-item"></div>
+        </div>
+
         <div class="one-card-container">
             <div class="tuner-base tuner-base-up"></div>
             <div class="tuner-base tuner-base-down"></div>
