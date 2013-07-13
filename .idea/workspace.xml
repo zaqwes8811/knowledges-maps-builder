@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/css/card.css" afterPath="$PROJECT_DIR$/hided/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hided/index.html" afterPath="$PROJECT_DIR$/hided/index.html" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\left-nspace.js" afterPath="$PROJECT_DIR$/hided/js/develop/left-nspace.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\new_journal.js" afterPath="$PROJECT_DIR$/hided/js/develop/new_journal.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\no_w2p.js" afterPath="$PROJECT_DIR$/hided/js/develop/no_w2p.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\out.js" afterPath="$PROJECT_DIR$/hided/js/data/out.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\statistic-to-call.js" afterPath="$PROJECT_DIR$/hided/js/develop/statistic-to-call.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\statistic-to-names.txt" afterPath="$PROJECT_DIR$/hided/js/develop/statistic-to-names.txt" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\statistic.js" afterPath="$PROJECT_DIR$/hided/js/develop/statistic.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\statistic.txt" afterPath="$PROJECT_DIR$/hided/js/develop/statistic.txt" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\summator-info.js" afterPath="$PROJECT_DIR$/hided/js/develop/summator-info.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\sys-settings-engine.js" afterPath="$PROJECT_DIR$/hided/js/develop/sys-settings-engine.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\test.js" afterPath="$PROJECT_DIR$/hided/js/develop/test.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\thinks.txt" afterPath="$PROJECT_DIR$/hided/js/develop/thinks.txt" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\tvct-lib-1.0.0.js" afterPath="$PROJECT_DIR$/hided/js/develop/tvct-lib-1.0.0.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\used-regex.txt" afterPath="$PROJECT_DIR$/hided/js/develop/used-regex.txt" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,10 +106,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hided/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="26" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5094637">
+            <state line="7" column="34" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="no_w2p.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hided/js/develop/no_w2p.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="40" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hided/js/develop/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="34" selection-start="107253" selection-end="107253" vertical-scroll-proportion="-4.845411">
               <folding />
             </state>
           </provider>
@@ -218,6 +249,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hided" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hided" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hided" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -244,6 +337,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\spinning-vocabulary-cards\hided\js\develop" />
+      <recent name="D:\github\spinning-vocabulary-cards\hided\js\data" />
       <recent name="D:\github\spinning-vocabulary-cards\hided\js" />
     </key>
   </component>
@@ -344,7 +439,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -353,7 +448,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21800947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21800947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -428,60 +523,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="60" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1132#1140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="82" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="594" selection-end="594" vertical-scroll-proportion="0.18959108" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="7" selection-start="1170" selection-end="1170" vertical-scroll-proportion="1.0743494" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_43/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3342" column="0" selection-start="135949" selection-end="135949" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="60" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1132#1140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="82" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.25183374">
@@ -510,9 +551,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hided/css/error.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/analytics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.0917873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/develop/new_journal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/data/out.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/settings-checkers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="21" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/js_hided_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/modernizr.custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/share.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hided/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5094637">
+        <state line="7" column="34" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/develop/no_w2p.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hided/js/develop/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="34" selection-start="107253" selection-end="107253" vertical-scroll-proportion="-4.845411">
           <folding />
         </state>
       </provider>
