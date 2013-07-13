@@ -2,120 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\card.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\error.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\css\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\data\out.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\cards.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\develop\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\js\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\slide-example.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\hided\subs\sys-settings-new.htm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -135,10 +24,10 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723783918" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723895649" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373724448972" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373724886684" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373723839489" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373726716915" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,10 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.42929292">
+            <state line="18" column="61" selection-start="1023" selection-end="1032" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
@@ -209,16 +98,16 @@
       <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+            <state line="27" column="31" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+            <state line="3" column="23" selection-start="79" selection-end="79" vertical-scroll-proportion="0.06234719">
               <folding />
             </state>
           </provider>
@@ -255,9 +144,9 @@
         <option value="$PROJECT_DIR$/hided/css/card.css" />
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/js/develop/cards.js" />
-        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
+        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
       </list>
     </option>
   </component>
@@ -570,23 +459,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
+    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+        <state line="18" column="61" selection-start="1023" selection-end="1032" vertical-scroll-proportion="-11.769231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+        <state line="27" column="31" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.42929292">
+        <state line="3" column="23" selection-start="79" selection-end="79" vertical-scroll-proportion="0.06234719">
           <folding />
         </state>
       </provider>

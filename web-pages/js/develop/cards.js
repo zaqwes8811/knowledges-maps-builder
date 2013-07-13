@@ -1,19 +1,24 @@
 // Подключает карточки
 function init() {
     var i = 0;
-    (function(x) {
-        var UP_BUTTON = '.one-card-container > div.tuner-base.tuner-base-up';
-        $(UP_BUTTON).bind(
+    data_one_card = {};
+    (function() {
+        var seed = 0;
+        var UP_TUNER = '.one-card-container > div.tuner-base.tuner-base-up';
+        $(UP_TUNER).bind(
             { click:
-                (function(x) {
+                (function(seed) {
                     return function() {
                         // Slot
-                        $(this).parent().find(".pack-card-container > div.active-card.active-card-content").css("background-color", 'gray');
-                        $(this).parent().find(".pack-card-container > div.active-card.active-card-content").css("z-index", 1);
+                        var items = ['word', 'content', 'translate'];
+                        var TOTAL_CARDS = items.length;
+                        var part_name = ".pack-card-container > div.active-card.active-card-";
+                        for (var i = 0; i < TOTAL_CARDS; ++i)
+                            $(this).parent().find(part_name+items[i]).css("z-index", (seed+i)%TOTAL_CARDS);
+                        seed = (seed+1)%TOTAL_CARDS;
                     }
-                })()
-            });
-    })(i);
+                })(seed)});
+    })();  // Вызов как бы конструктора.
 }
 
 // Обновляет массив карт. Перезаписывает поля
