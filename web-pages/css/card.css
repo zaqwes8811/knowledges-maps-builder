@@ -8,21 +8,43 @@
   http://habrahabr.ru/post/126207/
 */
 .one-card-container {
+  position: relative;
   height: 100px;
   width: 250px;
   background-color: #D8D8D8;
   margin-left: 10px;
   margin-top: 10px;
-  position: relative;
+  border-radius: 10px 10px 10px 10px;
 }
 
-.one-card-active-item {
+/* Сами видимые карточки. */
+.pack-card-container {
+  top: 0;
+  position: absolute;
   height: 100%;
   width: 90%;
-  background-color: red;
   border-radius: 10px 0px 0px 10px;
 }
 
+.active-card {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.active-card-word {
+  background-color: red;
+  z-index:0;
+}
+
+.active-card-content {
+  background-color: yellow;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* Перелистователь*/
 .tuner-base {
   height: 50%;
   width: 10%;
@@ -40,8 +62,4 @@
   background-color: lightgreen;
   bottom: 0;
   border-radius: 0px 0px 10px 0px;
-}
-
-.one-card-container {
-  border-radius: 10px 10px 10px 10px;
 }
