@@ -35,13 +35,20 @@
 }
 
 .active-card-word {
-  background-color: red;
-  z-index:0;
-}
+   background-color: gray;
+   z-index:0;
+ }
 
 .active-card-content {
-  background-color: yellow;
+  background-color: red;
   border-radius: 10px 0px 0px 10px;
+  z-index:-1;
+}
+
+.active-card-translate {
+  background-color: gold;
+  border-radius: 10px 0px 0px 10px;
+  z-index:-2;
 }
 
 /* Перелистователь*/
