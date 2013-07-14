@@ -53,10 +53,10 @@
    font-family:"Times New Roman";
  }
 
-.content-item {
-padding-top: 5px;
-padding-bottom: 5px;
-  height: 80%;
+.content-stack {
+/*padding-top: 5px;
+padding-bottom: 5px;*/
+  height: 100%;
   width: 95%;
   right: 0;
   background-color: lightgray;
