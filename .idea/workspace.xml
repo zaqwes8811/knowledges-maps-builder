@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\app_carcass.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/app_carcass.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\app_liq.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/app_liq.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\bottom.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/bottom.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\calendar.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/calendar.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\docs.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/docs.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\error.txt" afterPath="$PROJECT_DIR$/web-pages/css/hided/error.txt" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\examples.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/examples.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\print.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/print.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\style.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/style.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\summary.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/summary.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py_bootstrap.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py_bootstrap.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py_bootstrap_nojs.css" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\website.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/website.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +25,7 @@
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373797174750" ignored="false" />
     <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373799007438" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373815559787" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +105,7 @@
       <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.4180929">
+            <state line="56" column="19" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.5427873">
               <folding />
             </state>
           </provider>
@@ -487,7 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.4180929">
+        <state line="56" column="19" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.5427873">
           <folding />
         </state>
       </provider>
