@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\app_carcass.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/app_carcass.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\app_liq.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/app_liq.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\bottom.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/bottom.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\calendar.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/calendar.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\docs.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/docs.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\error.txt" afterPath="$PROJECT_DIR$/web-pages/css/hided/error.txt" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\examples.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/examples.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\print.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/print.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\style.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/style.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\summary.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/summary.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py_bootstrap.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py_bootstrap.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/web2py_bootstrap_nojs.css" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\website.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/website.css" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +118,7 @@
       <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="25" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.27261615">
+            <state line="37" column="25" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.4180929">
               <folding />
             </state>
           </provider>
@@ -248,28 +260,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hided" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.27261615">
+        <state line="37" column="25" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.4180929">
           <folding />
         </state>
       </provider>
