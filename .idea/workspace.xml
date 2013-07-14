@@ -4,9 +4,6 @@
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\web-pages\css\app.css" afterPath="$PROJECT_DIR$/web-pages/css/hided/app.css" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,9 +24,9 @@
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373797174750" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798662523" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373797291576" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373799007438" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,19 +94,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.40234375">
+            <state line="61" column="8" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="26" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.27261615">
               <folding />
             </state>
           </provider>
@@ -146,9 +143,9 @@
         <option value="$PROJECT_DIR$/hided/css/card.css" />
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/js/develop/cards.js" />
-        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
       </list>
     </option>
   </component>
@@ -484,13 +481,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="55" selection-start="1017" selection-end="1017" vertical-scroll-proportion="-12.423077">
@@ -500,7 +490,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.40234375">
+        <state line="61" column="8" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="25" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.27261615">
           <folding />
         </state>
       </provider>

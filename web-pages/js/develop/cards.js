@@ -28,11 +28,12 @@ function init() {
         // Удаляем старый если есть
 
         // Добавляем новый
+        // TODO(zaqwes): Кажется нужна таки обертка для отделения от тюнеров
         var count_content_items = content_items.length;
         var full_path_to_content_card = part_name+'.content';
         for (var i= 0; i < count_content_items; ++i) {
             // Текст нужно обернуть получше
-            var tmp = $("<div/>").addClass("pack-card-container").appendTo(full_path_to_content_card);
+            var tmp = $("<div/>").addClass("pack-card-container-inner").appendTo(full_path_to_content_card);
             tmp = $("<div/>").addClass("content-stack").appendTo(tmp);
             $("<span/>").addClass("text-contents").appendTo(tmp).append(content_items[i])
          }
@@ -44,7 +45,7 @@ function init() {
                 { click: (function(seed) { return function() {
                     // Slot
                     var ptr = 0;
-                    $(this).parent().find('.pack-card-container').each(function () {
+                    $(this).parent().find('.pack-card-container-inner').each(function () {
                         // Порадок важен
                         ++ptr; $(this).css("z-index", (seed-ptr+count_content_items)%count_content_items);});
                     seed = (seed+1)%count_content_items;
