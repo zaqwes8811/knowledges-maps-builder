@@ -27,6 +27,15 @@
   border-radius: 0px 4px 4px 0px;
 }
 
+.pack-card-container-inner {
+  top: 0;
+  position: absolute;
+  left:0;
+  height: 100%;
+  width: 94%;
+  border-radius: 0px 4px 4px 0px;
+}
+
 .active-card {
   top: 0;
   position: absolute;
@@ -50,7 +59,7 @@
 .content-stack {
   height: 100%;
   width: 95%;
-  left: 0;
+  left: 5px;
   background-color: lightgray;
   position: absolute;
   border-radius: 4px 0px 0px 4px;
