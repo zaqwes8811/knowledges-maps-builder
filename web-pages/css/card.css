@@ -9,21 +9,22 @@
 */
 .one-card-container {
   position: relative;
-  height: 80px;
-  width: 280px;
+  height: 50px;
+  width: 320px;
   background-color: #D8D8D8;
-  margin-left: 10px;
-  margin-top: 10px;
-  border-radius: 10px 10px 10px 10px;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 
 /* Сами видимые карточки. */
 .pack-card-container {
   top: 0;
   position: absolute;
+  right:0;
   height: 100%;
-  width: 90%;
-  border-radius: 10px 0px 0px 10px;
+  width: 94%;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .active-card {
@@ -31,72 +32,67 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.active-card-word {
-   background-color: lightgray;
-   z-index:0;
- }
-
-.active-card-content {
+  border-radius: 0px 4px 4px 0px;
   background-color: lightgray;
-  border-radius: 10px 0px 0px 10px;
-  z-index:-1;
-
 }
- .text-contents {
- /*padding-top: 15px; */
-  /*text-align: center;*/
-    /*color: white;*/
-   /* padding-left: 20px; */
-   font-family:"Times New Roman";
- }
+
+.translate {}
+.content {}
+.word {}
+
+.text-contents {
+  position:absolute;
+  /*top: 4px;*/
+  vertical-align:middle;
+  font-family:"Times New Roman";
+}
 
 .content-stack {
-/*padding-top: 5px;
-padding-bottom: 5px;*/
   height: 100%;
   width: 95%;
-  right: 0;
+  left: 0;
   background-color: lightgray;
   position: absolute;
+  border-radius: 4px 0px 0px 4px;
 }
 
-.active-card-translate {
-  background-color: lightgray;
-  border-radius: 10px 0px 0px 10px;
-  z-index:-2;
-}
+
 
 /* Перелистователь*/
 .tuner-base {
   height: 50%;
-  width: 10%;
-  right: 0;
+  width: 6%;
   position: absolute;
 }
 
+/* Внешние тюнеры */
 .tuner-base-up {
+  left: 0;
   background-color: gray;
   top: 0;
-  border-radius: 0px 10px 0px 0px;
+  border-radius: 4px 0px 0px 0px;
 }
 
 .tuner-base-down {
+  left: 0;
   background-color: lightgreen;
   bottom: 0;
-  border-radius: 0px 0px 10px 0px;
+  border-radius: 0px 0px 0px 4px;
 }
 
+/* Тюнеры внутри карточки */
 .tuner-base-up-inner {
-  background-color: gray;
+  right: 0;
+  background-color: lightgreen;
   top: 0;
+  border-radius: 0px 4px 0px 0px;
 }
 
 .tuner-base-down-inner {
-  background-color: lightgreen;
+  right: 0;
+  background-color: gray;
   bottom: 0;
+  border-radius: 0px 0px 4px 0px;
 }
 
 .tuner-base-down-inner:hover {

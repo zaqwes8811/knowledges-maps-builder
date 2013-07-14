@@ -2,22 +2,25 @@
 // <span class="text-contents">Display the matched elements with a sliding motion.</span>
 function init() {
     var i = 0;
-    data_one_card = {};
-    (function() {
-    var content_items = ["Display the matched elements with a sliding motion.", "Display the matched elements with a sliding motion."];
+    var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
+    var data_one_card = {};
+
+    // Обработка одной карты
+    (function(content_items) {
         var seed = 0;
         var UP_TUNER = '.one-card-container > div.tuner-base.tuner-base-up';
         var items = ['word', 'content', 'translate'];
         var TOTAL_CARDS = items.length;
-        var part_name = ".pack-card-container > div.active-card.active-card-";
+        var part_name = ".pack-card-container > div.active-card";
         $(UP_TUNER).bind(
             { click:
                 (function(seed) {
                     return function() {
                         // Slot
-                        var container = $(this).parent();
-                        for (var i = 0; i < TOTAL_CARDS; ++i)
-                            $(container).find(part_name+items[i]).css("z-index", (seed+i)%TOTAL_CARDS);
+                        var ptr = 0;
+                        var tmp = $(this).parent().find(part_name).each(function () {
+                            // Порадок важен
+                            ++ptr; $(this).css("z-index", (seed-ptr+TOTAL_CARDS)%TOTAL_CARDS);});
                         seed = (seed+1)%TOTAL_CARDS;
                     }
                 })(seed)});
@@ -25,21 +28,33 @@ function init() {
         // Удаляем старый если есть
 
         // Добавляем новый
-        //$("<div/>").addClass("content-stack").appendTo(part_name+'content').css('background-color', 'green');
-        //$("<div/>").addClass("content-stack").appendTo(part_name+'content').css('background-color', 'red');
         var count_content_items = content_items.length;
+        var full_path_to_content_card = part_name+'.content';
+        for (var i= 0; i < count_content_items; ++i) {
+            // Текст нужно обернуть получше
+            var tmp = $("<div/>").addClass("pack-card-container").appendTo(full_path_to_content_card);
+            tmp = $("<div/>").addClass("content-stack").appendTo(tmp);
+            $("<span/>").addClass("text-contents").appendTo(tmp).append(content_items[i])
+         }
+
         if (count_content_items > 1) {
             var seed = 0;
-            $("<div/>").addClass("tuner-base tuner-base-up-inner").appendTo(part_name+'content').bind(
-                { click: (function() { return function() {
-                    alert('Hello');
+            // Тюнер вверх
+            $("<div/>").addClass("tuner-base tuner-base-up-inner").appendTo(full_path_to_content_card).bind(
+                { click: (function(seed) { return function() {
+                    // Slot
+                    var ptr = 0;
+                    $(this).parent().find('.pack-card-container').each(function () {
+                        // Порадок важен
+                        ++ptr; $(this).css("z-index", (seed-ptr+count_content_items)%count_content_items);});
+                    seed = (seed+1)%count_content_items;
+                }})(seed)});
 
-                }})()});
-            $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(part_name+'content');
-            // Коннектим обработчики
+            // Тюнер вниз
+            $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(full_path_to_content_card);
         }
 
-    })();  // Вызов как бы конструктора.
+    })(content_items);  // Вызов как бы конструктора.
 }
 
 // Обновляет массив карт. Перезаписывает поля
