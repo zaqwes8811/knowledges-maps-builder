@@ -15,9 +15,9 @@ function init() {
                 (function(seed) {
                     return function() {
                         // Slot
-
+                        var container = $(this).parent();
                         for (var i = 0; i < TOTAL_CARDS; ++i)
-                            $(this).parent().find(part_name+items[i]).css("z-index", (seed+i)%TOTAL_CARDS);
+                            $(container).find(part_name+items[i]).css("z-index", (seed+i)%TOTAL_CARDS);
                         seed = (seed+1)%TOTAL_CARDS;
                     }
                 })(seed)});
@@ -27,8 +27,17 @@ function init() {
         // Добавляем новый
         //$("<div/>").addClass("content-stack").appendTo(part_name+'content').css('background-color', 'green');
         //$("<div/>").addClass("content-stack").appendTo(part_name+'content').css('background-color', 'red');
-        $("<div/>").addClass("tuner-base tuner-base-up").appendTo(part_name+'content');
-        $("<div/>").addClass("tuner-base tuner-base-down").appendTo(part_name+'content');
+        var count_content_items = content_items.length;
+        if (count_content_items > 1) {
+            var seed = 0;
+            $("<div/>").addClass("tuner-base tuner-base-up-inner").appendTo(part_name+'content').bind(
+                { click: (function() { return function() {
+                    alert('Hello');
+
+                }})()});
+            $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(part_name+'content');
+            // Коннектим обработчики
+        }
 
     })();  // Вызов как бы конструктора.
 }
