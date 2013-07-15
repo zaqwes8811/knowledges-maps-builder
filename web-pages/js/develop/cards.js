@@ -5,31 +5,30 @@ function init() {
   var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
   var data_one_card = {};
 
-  // Обработка одной карты
-  (function(content_items) {
-    var part_name = ".pack-card-container > div.active-card";
+  // Получаем все доступные карты
+  $('.one-card-container').each(
+      // Обработка одной карты
+      function(item) {
+        var part_name = ".pack-card-container > div.active-card";
+        (function (item) {
+            var seed = 0;
+            var items = ['word', 'content', 'translate'];
+            var total_cards = items.length;
+            $('.one-card-container > div.tuner-base.tuner-base-up')
+                .click((function(seed) {
+                    return function() {
+                        var ptr = 0;
+                        $(this).parent().find(part_name).each(function () {
+                            // Порадок важен
+                            ++ptr; $(this).css("z-index", (seed-ptr+total_cards)%total_cards);});
+                            seed = (seed+1)%total_cards;
+                        }
+                    })(seed));
+             // Nope;
+        })(this)
+      });
 
-    (function () {
-    var seed = 0;
-    var items = ['word', 'content', 'translate'];
-    var TOTAL_CARDS = items.length;
-
-    var binder = { click:
-     (function(seed) {
-       return function() {
-         // Slot
-         var ptr = 0;
-         var tmp = $(this).parent().find(part_name).each(function () {
-           // Порадок важен
-           ++ptr; $(this).css("z-index", (seed-ptr+TOTAL_CARDS)%TOTAL_CARDS);});
-         seed = (seed+1)%TOTAL_CARDS;
-       }
-     })(seed)};
-
-    // Когда создается элемент можно сделать удобно бинд через .on().
-    $('.one-card-container > div.tuner-base.tuner-base-up').bind(binder);
-    }) ();
-
+/*
     (function() {
     // Заполняем контент
     // Удаляем старый если есть
@@ -41,10 +40,8 @@ function init() {
     for (var i= 0; i < count_content_items; ++i) {
       // Текст нужно обернуть получше
       $("<span/>").addClass("text-contents").append(content_items[i]).appendTo(
-      $("<div/>").addClass("content-stack").appendTo(
-      $("<div/>", {
-          class: 'pack-card-container-inner'
-      }).appendTo(full_path_to_content_card)));
+        $("<div/>").addClass("content-stack").appendTo(
+          $("<div/>").addClass('pack-card-container-inner').appendTo(full_path_to_content_card)));
      }
 
 
@@ -52,18 +49,17 @@ function init() {
     if (count_content_items > 1) {
       var seed = 0;
       // Тюнер вверх
-      var needed_class = '.pack-card-container-inner';
-      var bind_obj = { click:
-        (function(seed, items) {
-         return (function() {
-           // Slot
-           var ptr = 0;
-           $(this).parent().find(needed_class).each(
-           function() { ++ptr; $(this).css("z-index", (seed-ptr+items)%items); });
-           seed = (seed+1)%items;
-         })
-        })(seed, count_content_items)};
-      $("<div/>").addClass("tuner-base tuner-base-up-inner").appendTo(full_path_to_content_card).bind(bind_obj);
+      $("<div/>").addClass("tuner-base tuner-base-up-inner")
+          .click((function(seed, items) {
+            return (function() {
+                // Slot
+                var ptr = 0;
+                $(this).parent().find('.pack-card-container-inner').each(
+                function() { ++ptr; $(this).css("z-index", (seed-ptr+items)%items); });
+                seed = (seed+1)%items;
+            })
+            })(seed, count_content_items))
+           .appendTo(full_path_to_content_card);
 
       // Тюнер вниз
       $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(full_path_to_content_card);
@@ -71,7 +67,9 @@ function init() {
 
     })();
 
+
   })(content_items);  // Вызов как бы конструктора.
+  */
 }
 
 // Обновляет массив карт. Перезаписывает поля
