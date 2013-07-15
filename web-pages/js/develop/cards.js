@@ -3,30 +3,37 @@
 function init() {
   var i = 0;
   var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
+  //var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
   var data_one_card = {};
+  var items = ['word', 'content', 'translate'];
+  var total_front_card = items.length;
+  var up_tuner_sel = 'div.tuner-base.tuner-base-up';
+  var sub_cards_sel = ".pack-card-container > div.active-card";
 
-  // Получаем все доступные карты
-  $('.one-card-container').each(
-      // Обработка одной карты
-      function(item) {
-        var part_name = ".pack-card-container > div.active-card";
-        (function (item) {
-            var seed = 0;
-            var items = ['word', 'content', 'translate'];
-            var total_cards = items.length;
-            $('.one-card-container > div.tuner-base.tuner-base-up')
-                .click((function(seed) {
-                    return function() {
-                        var ptr = 0;
-                        $(this).parent().find(part_name).each(function () {
-                            // Порадок важен
-                            ++ptr; $(this).css("z-index", (seed-ptr+total_cards)%total_cards);});
-                            seed = (seed+1)%total_cards;
-                        }
-                    })(seed));
-             // Nope;
-        })(this)
-      });
+  // Обрабатываем все доступные карты
+  $('.one-card-container').each(function() {
+    // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
+    // Обработка одной карты
+    // Подключаем тюнер вверх
+    var seed = 0;
+    $(this).find(up_tuner_sel)
+      .click((function(seed) {
+        return function() {
+          var ptr = 0;
+
+          // По подкартам, но по клику. Вызывается ли при загрузке?
+          $(this).parent().find(sub_cards_sel).each(function () {
+            // Порадок важен, и связан с расположением подкарт - может лучше тогда подкарты сгенерировать тут
+            //   и обрабатывать будет проще.
+            ++ptr;
+            $(this).css("z-index", (seed-ptr+total_front_card)%total_front_card);
+          });
+          seed = (seed+1)%total_front_card;
+        }
+      })(seed));
+      // Other operations
+
+    });
 
 /*
     (function() {
