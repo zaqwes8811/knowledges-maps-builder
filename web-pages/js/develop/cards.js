@@ -11,12 +11,32 @@ function init() {
   // Selectors
   var up_tuner_sel = 'div.tuner-base.tuner-base-up';
   var sub_cards_sel = ".pack-card-container > div.active-card";
+  var pack_cards_sel = '.pack-card-container';
 
   // Обрабатываем все доступные карты
   $('.one-card-container').each(function(key, value) {
     // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-    // Обработка одной карты
-    // Подключаем тюнер вверх
+    //(function() {  // Похоже влияет на this - не дает вызвать
+        // Удаляем старый если есть
+        var sub_cards_pkg = $(this).find(pack_cards_sel);
+        sub_cards_pkg.empty();
+
+        $.each(items, function (key, value_in) {
+          $("<div/>").addClass('active-card').appendTo(sub_cards_pkg).text(value_in);
+        });
+
+        // Добавляем новый
+        // TODO(zaqwes): Кажется нужна таки обертка для отделения от тюнеров
+        //var count_content_items = content_items.length;
+        //var full_path_to_content_card = part_name+'.content';
+        //for (var i= 0; i < count_content_items; ++i) {
+          // Текст нужно обернуть получше
+        //  $("<span/>").addClass("text-contents").append(content_items[i]).appendTo(
+        //    $("<div/>").addClass("content-stack").appendTo(
+        //      $("<div/>").addClass('pack-card-container-inner').appendTo(full_path_to_content_card)));
+    //})();
+
+    // Подключаем тюнер-вверх для подкарт
     var seed_state = 0;
     $(this).find(up_tuner_sel)
       .click((function(x) {
@@ -28,9 +48,9 @@ function init() {
           x = (x+1)%total_front_card;
         }
       })(seed_state));
-      // Other operations
-
     });
+
+    // TODO(zaqwes): Подключаем тюнер-вниз. Кстати, а не будут ли они друг другу мешать?
 
 /*
     (function() {

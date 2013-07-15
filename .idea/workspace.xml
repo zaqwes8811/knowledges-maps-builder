@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -22,10 +23,10 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372924240338" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373886116384" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373889564577" ignored="false" />
     <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373889014404" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373890082740" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +85,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="54" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.4722222">
+            <state line="16" column="55" selection-start="857" selection-end="857" vertical-scroll-proportion="-10.461538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+            <state line="18" column="63" selection-start="894" selection-end="894" vertical-scroll-proportion="0.24938875">
               <folding />
             </state>
           </provider>
@@ -143,8 +144,8 @@
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/js/develop/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
-        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
+        <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
       </list>
     </option>
   </component>
@@ -465,16 +466,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
+    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+        <state line="16" column="55" selection-start="857" selection-end="857" vertical-scroll-proportion="-10.461538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="54" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.4722222">
+        <state line="18" column="63" selection-start="894" selection-end="894" vertical-scroll-proportion="0.24938875">
           <folding />
         </state>
       </provider>
