@@ -7,30 +7,27 @@ function init() {
   var data_one_card = {};
   var items = ['word', 'content', 'translate'];
   var total_front_card = items.length;
+
+  // Selectors
   var up_tuner_sel = 'div.tuner-base.tuner-base-up';
   var sub_cards_sel = ".pack-card-container > div.active-card";
 
   // Обрабатываем все доступные карты
-  $('.one-card-container').each(function() {
+  $('.one-card-container').each(function(key, value) {
     // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
     // Обработка одной карты
     // Подключаем тюнер вверх
-    var seed = 0;
+    var seed_state = 0;
     $(this).find(up_tuner_sel)
-      .click((function(seed) {
+      .click((function(x) {
         return function() {
-          var ptr = 0;
-
           // По подкартам, но по клику. Вызывается ли при загрузке?
-          $(this).parent().find(sub_cards_sel).each(function () {
-            // Порадок важен, и связан с расположением подкарт - может лучше тогда подкарты сгенерировать тут
-            //   и обрабатывать будет проще.
-            ++ptr;
-            $(this).css("z-index", (seed-ptr+total_front_card)%total_front_card);
+          $(this).parent().find(sub_cards_sel).each(function (key, value) {
+            $(this).css("z-index", (x-key+total_front_card)%total_front_card);
           });
-          seed = (seed+1)%total_front_card;
+          x = (x+1)%total_front_card;
         }
-      })(seed));
+      })(seed_state));
       // Other operations
 
     });
