@@ -2,39 +2,56 @@
 // <span class="text-contents">Display the matched elements with a sliding motion.</span>
 function init() {
   var i = 0;
-  var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
-  //var content_items = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
+  var contentItems = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
+  //var contentItems = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
   var data_one_card = {};
-  var items = ['word', 'content', 'translate'];
-  var total_front_card = items.length;
+  var ITEMS = ['word', 'content', 'translate'];  // Какие есть подкарты
+  var CONTENT = 1;
+  var total_front_card = ITEMS.length;
 
   // Selectors
   var up_tuner_sel = 'div.tuner-base.tuner-base-up';
   var sub_cards_sel = ".pack-card-container > div.active-card";
-  var pack_cards_sel = '.pack-card-container';
+  var PACK_CARDS_SEL = '.pack-card-container';
 
   // Обрабатываем все доступные карты
   $('.one-card-container').each(function(key, value) {
     // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-    //(function() {  // Похоже влияет на this - не дает вызвать
-        // Удаляем старый если есть
-        var sub_cards_pkg = $(this).find(pack_cards_sel);
-        sub_cards_pkg.empty();
+    var subCardsPkg = $(this).find(PACK_CARDS_SEL);
+    subCardsPkg.empty();
+    var cardsHandles = {};
+    
+    $.each(ITEMS, function (key, value) {
+      cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg);
+    });
+    
+    // Добавляем контент
+    var countItems = contentItems.length;
+    for (var i= 0; i < countItems; ++i) {
+      // Текст нужно обернуть получше
+      $("<span/>").addClass("text-contents").append(contentItems[i]).appendTo(
+        $("<div/>").addClass("content-stack").appendTo(
+          $("<div/>").addClass('pack-card-container-inner').appendTo(cardsHandles[ITEMS[CONTENT]])));
+     }
 
-        $.each(items, function (key, value_in) {
-          $("<div/>").addClass('active-card').appendTo(sub_cards_pkg).text(value_in);
-        });
+     // Только если более одного элемента.
+    if (countItems > 1) {
+        var seed = 0;
+        // Тюнер вверх
+        $("<div/>").addClass("tuner-base tuner-base-up-inner")
+           .click((function(seed, items) {
+             return (function() {
+                 $(this).parent().find('.pack-card-container-inner').each(function(key, value) {
+                    $(this).css("z-index", (seed-key+items)%items);
+                 });
+                 seed = (seed+1)%items;
+             })
+             })(seed, countItems))
+            .appendTo(cardsHandles[ITEMS[CONTENT]]);
 
-        // Добавляем новый
-        // TODO(zaqwes): Кажется нужна таки обертка для отделения от тюнеров
-        //var count_content_items = content_items.length;
-        //var full_path_to_content_card = part_name+'.content';
-        //for (var i= 0; i < count_content_items; ++i) {
-          // Текст нужно обернуть получше
-        //  $("<span/>").addClass("text-contents").append(content_items[i]).appendTo(
-        //    $("<div/>").addClass("content-stack").appendTo(
-        //      $("<div/>").addClass('pack-card-container-inner').appendTo(full_path_to_content_card)));
-    //})();
+        // Тюнер вниз
+        $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(cardsHandles[ITEMS[CONTENT]]);
+    }
 
     // Подключаем тюнер-вверх для подкарт
     var seed_state = 0;
@@ -59,18 +76,18 @@ function init() {
 
     // Добавляем новый
     // TODO(zaqwes): Кажется нужна таки обертка для отделения от тюнеров
-    var count_content_items = content_items.length;
+    var countItems = contentItems.length;
     var full_path_to_content_card = part_name+'.content';
-    for (var i= 0; i < count_content_items; ++i) {
+    for (var i= 0; i < countItems; ++i) {
       // Текст нужно обернуть получше
-      $("<span/>").addClass("text-contents").append(content_items[i]).appendTo(
+      $("<span/>").addClass("text-contents").append(contentItems[i]).appendTo(
         $("<div/>").addClass("content-stack").appendTo(
           $("<div/>").addClass('pack-card-container-inner').appendTo(full_path_to_content_card)));
      }
 
 
     // Только если более одного элемента.
-    if (count_content_items > 1) {
+    if (countItems > 1) {
       var seed = 0;
       // Тюнер вверх
       $("<div/>").addClass("tuner-base tuner-base-up-inner")
@@ -82,7 +99,7 @@ function init() {
                 function() { ++ptr; $(this).css("z-index", (seed-ptr+items)%items); });
                 seed = (seed+1)%items;
             })
-            })(seed, count_content_items))
+            })(seed, countItems))
            .appendTo(full_path_to_content_card);
 
       // Тюнер вниз
@@ -92,7 +109,7 @@ function init() {
     })();
 
 
-  })(content_items);  // Вызов как бы конструктора.
+  })(contentItems);  // Вызов как бы конструктора.
   */
 }
 
