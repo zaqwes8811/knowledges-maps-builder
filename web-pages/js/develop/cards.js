@@ -2,16 +2,24 @@
 // <span class="text-contents">Display the matched elements with a sliding motion.</span>
 function init() {
   var i = 0;
-  var contentItems = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
-  //var contentItems = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
-  var data_one_card = {};
+  var contentItemsOne = ["Hello Display the matched.", "Display the matched elements with a sliding motion."];
+  var contentItemsTwo = ["Hello", "Display."];
+
   var ITEMS = ['word', 'content', 'translate'];  // Какие есть подкарты
   var CONTENT = 1;
-  var total_front_card = ITEMS.length;
+  var TOTAL_FRONT_CARDS = ITEMS.length;
+
+  var pkg = []
+  var dataOneCard = {};
+  dataOneCard[ITEMS[CONTENT]] = contentItemsOne;
+  pkg.push(dataOneCard);
+  var dataTwoCard = {};
+  dataTwoCard[ITEMS[CONTENT]] = contentItemsTwo;
+  pkg.push(dataTwoCard);
 
   // Selectors
-  var up_tuner_sel = 'div.tuner-base.tuner-base-up';
-  var sub_cards_sel = ".pack-card-container > div.active-card";
+  var UP_TUNER_SEL = 'div.tuner-base.tuner-base-up';
+  var SUB_CARDS_SEL = ".pack-card-container > div.active-card";
   var PACK_CARDS_SEL = '.pack-card-container';
 
   // Обрабатываем все доступные карты
@@ -26,16 +34,18 @@ function init() {
     });
     
     // Добавляем контент
-    var countItems = contentItems.length;
+    var content = pkg[key][ITEMS[CONTENT]];
+    var countItems = content.length;
     for (var i= 0; i < countItems; ++i) {
       // Текст нужно обернуть получше
-      $("<span/>").addClass("text-contents").append(contentItems[i]).appendTo(
+      $("<span/>").addClass("text-contents").append(content[i]).appendTo(
         $("<div/>").addClass("content-stack").appendTo(
           $("<div/>").addClass('pack-card-container-inner').appendTo(cardsHandles[ITEMS[CONTENT]])));
      }
 
-     // Только если более одного элемента.
+     // Добавляем тюнеры только если более одного элемента.
     if (countItems > 1) {
+        // TODO(zaqwes): Тюнер вверх сбивается - один холостой ход.
         var seed = 0;
         // Тюнер вверх
         $("<div/>").addClass("tuner-base tuner-base-up-inner")
@@ -54,17 +64,17 @@ function init() {
     }
 
     // Подключаем тюнер-вверх для подкарт
-    var seed_state = 0;
-    $(this).find(up_tuner_sel)
+    var seedState = 0;
+    $(this).find(UP_TUNER_SEL)
       .click((function(x) {
         return function() {
           // По подкартам, но по клику. Вызывается ли при загрузке?
-          $(this).parent().find(sub_cards_sel).each(function (key, value) {
-            $(this).css("z-index", (x-key+total_front_card)%total_front_card);
+          $(this).parent().find(SUB_CARDS_SEL).each(function (key, value) {
+            $(this).css("z-index", (x-key+TOTAL_FRONT_CARDS)%TOTAL_FRONT_CARDS);
           });
-          x = (x+1)%total_front_card;
+          x = (x+1)%TOTAL_FRONT_CARDS;
         }
-      })(seed_state));
+      })(seedState));
     });
 
     // TODO(zaqwes): Подключаем тюнер-вниз. Кстати, а не будут ли они друг другу мешать?

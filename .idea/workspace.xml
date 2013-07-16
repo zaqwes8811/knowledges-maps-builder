@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +25,7 @@
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373889564577" ignored="false" />
     <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373964696731" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373965321377" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="18" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.33251834">
+            <state line="48" column="24" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.5611247">
               <folding />
             </state>
           </provider>
@@ -475,7 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="18" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.33251834">
+        <state line="48" column="24" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.5611247">
           <folding />
         </state>
       </provider>
