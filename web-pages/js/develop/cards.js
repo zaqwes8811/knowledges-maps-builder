@@ -9,6 +9,8 @@ function init() {
   var CONTENT = 1;
   var TOTAL_FRONT_CARDS = ITEMS.length;
 
+
+  // Данные которые будут приходить с веб-сервера
   var pkg = []
   var dataOneCard = {};
   dataOneCard[ITEMS[CONTENT]] = contentItemsOne;
@@ -19,6 +21,7 @@ function init() {
 
   // Selectors
   var UP_TUNER_SEL = 'div.tuner-base.tuner-base-up';
+  var DOWN_TUNER_SEL = 'div.tuner-base.tuner-base-down';
   var SUB_CARDS_SEL = ".pack-card-container > div.active-card";
   var PACK_CARDS_SEL = '.pack-card-container';
 
@@ -29,12 +32,13 @@ function init() {
     subCardsPkg.empty();
     var cardsHandles = {};
     
-    $.each(ITEMS, function (key, value) {
-      cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg);
+    $.each(clone(ITEMS).reverse(), function (key, value) {
+      cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg).text(value);
+      $(cardsHandles[value]).css("z-index", key)
     });
     
     // Добавляем контент
-    var content = pkg[key][ITEMS[CONTENT]];
+    /*var content = pkg[key][ITEMS[CONTENT]];
     var countItems = content.length;
     for (var i= 0; i < countItems; ++i) {
       // Текст нужно обернуть получше
@@ -61,21 +65,33 @@ function init() {
 
         // Тюнер вниз
         $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(cardsHandles[ITEMS[CONTENT]]);
-    }
+    }  */
 
     // Подключаем тюнер-вверх для подкарт
+    // TODO(zaqwes) Тюнеры конфликтуют и глючат
     var seedState = 0;
     $(this).find(UP_TUNER_SEL)
       .click((function(x) {
         return function() {
-          // По подкартам, но по клику. Вызывается ли при загрузке?
           $(this).parent().find(SUB_CARDS_SEL).each(function (key, value) {
-            $(this).css("z-index", (x-key+TOTAL_FRONT_CARDS)%TOTAL_FRONT_CARDS);
-          });
+            $(this).css("z-index", (x-key+TOTAL_FRONT_CARDS)%TOTAL_FRONT_CARDS);});
           x = (x+1)%TOTAL_FRONT_CARDS;
         }
       })(seedState));
+
+    // Тюнер вниз
+    $(this).find(DOWN_TUNER_SEL)
+      .click((function(x) {
+        return function() {
+          $(this).parent().find(SUB_CARDS_SEL).each(function (key, value) {
+            $(this).css("z-index", (x+key+TOTAL_FRONT_CARDS)%TOTAL_FRONT_CARDS);});
+          x = (x-1+TOTAL_FRONT_CARDS)%TOTAL_FRONT_CARDS;
+        }
+      })(seedState));
     });
+
+
+
 
     // TODO(zaqwes): Подключаем тюнер-вниз. Кстати, а не будут ли они друг другу мешать?
 
@@ -144,3 +160,35 @@ $(d).addClass(classname)
         $(this).remove();
     });
 */
+
+function clone(obj) {
+    // Handle the 3 simple types, and null or undefined
+    if (null == obj || "object" != typeof obj) return obj;
+
+    // Handle Date
+    if (obj instanceof Date) {
+        var copy = new Date();
+        copy.setTime(obj.getTime());
+        return copy;
+    }
+
+    // Handle Array
+    if (obj instanceof Array) {
+        var copy = [];
+        for (var i = 0, len = obj.length; i < len; i++) {
+            copy[i] = clone(obj[i]);
+        }
+        return copy;
+    }
+
+    // Handle Object
+    if (obj instanceof Object) {
+        var copy = {};
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+        }
+        return copy;
+    }
+
+    throw new Error("Unable to copy obj! Its type isn't supported.");
+}
