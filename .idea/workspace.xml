@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/develop/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -25,7 +26,7 @@
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373889564577" ignored="false" />
     <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373965321377" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374053412039" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,16 @@
       <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="24" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.5611247">
+            <state line="70" column="47" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.3948655">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-pages/js/develop/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="105682" selection-end="106465" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +115,7 @@
       <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="22" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+            <state line="23" column="16" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,8 +152,8 @@
         <option value="$PROJECT_DIR$/hided/css/card.css" />
         <option value="$PROJECT_DIR$/hided/index.html" />
         <option value="$PROJECT_DIR$/hided/js/develop/cards.js" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
+        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
         <option value="$PROJECT_DIR$/web-pages/js/develop/cards.js" />
       </list>
     </option>
@@ -229,6 +239,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="develop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,7 +492,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="22" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+        <state line="23" column="16" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -472,9 +504,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="105682" selection-end="106465" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/js/develop/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="24" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.5611247">
+        <state line="70" column="47" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.3948655">
           <folding />
         </state>
       </provider>
