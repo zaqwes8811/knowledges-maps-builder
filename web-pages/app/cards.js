@@ -49,18 +49,18 @@ function processResponse(response) {
     var cardsHandles = {};
     
     $.each((goog.array.clone(AConstants.ITEMS)).reverse(), function (key, value) {
-      cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg).text(value);
+      cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg);//.text(value);
       $(cardsHandles[value]).css("z-index", key)
     });
     
     // Добавляем контент
-    /*var content = response[key][ITEMS[CONTENT]];
+    var content = response[key][AConstants.CONTENT];
     var countItems = content.length;
     for (var i= 0; i < countItems; ++i) {
       // Текст нужно обернуть получше
       $("<span/>").addClass("text-contents").append(content[i]).appendTo(
         $("<div/>").addClass("content-stack").appendTo(
-          $("<div/>").addClass('pack-card-container-inner').appendTo(cardsHandles[ITEMS[CONTENT]])));
+          $("<div/>").addClass('pack-card-container-inner').appendTo(cardsHandles[AConstants.CONTENT])));
      }
 
      // Добавляем тюнеры только если более одного элемента.
@@ -69,48 +69,53 @@ function processResponse(response) {
         var seed = 0;
         // Тюнер вверх
         $("<div/>").addClass("tuner-base tuner-base-up-inner")
-           .click((function(seed, items) {
-             return (function() {
+           .click(function() {
+                 seed = (seed+1)%countItems;
                  $(this).parent().find('.pack-card-container-inner').each(function(key, value) {
-                    $(this).css("z-index", (seed-key+items)%items);
+                    $(this).css("z-index", (seed+key)%countItems);
                  });
-                 seed = (seed+1)%items;
              })
-             })(seed, countItems))
-            .appendTo(cardsHandles[ITEMS[CONTENT]]);
+            .appendTo(cardsHandles[AConstants.CONTENT]);
 
         // Тюнер вниз
-        $("<div/>").addClass("tuner-base tuner-base-down-inner").appendTo(cardsHandles[ITEMS[CONTENT]]);
-    }  */
+        $("<div/>").addClass("tuner-base tuner-base-down-inner")
+          .click(function() {
+                  seed = (seed-1+countItems)%countItems;
+                  $(this).parent().find('.pack-card-container-inner').each(function(key, value) {
+                     $(this).css("z-index", (seed+key)%countItems);
+                  });
+              })
+          .appendTo(cardsHandles[AConstants.CONTENT]);
+    }
 
     // Подключаем тюнер-вверх для подкарт
     // TODO(zaqwes): Тюнеры конфликтуют и глючат
     // TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
     // TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
     //(function() {   // Похоже ломает this
+
+    var tick = function (seed, sel, count, obj) {
+      $(obj).parent().find(sel).each(function (key, value) {
+                  var newPos = (seed+key)%count;
+                  $(this).css("z-index", newPos);
+                });
+    }
+
     var seedState = 0;
     $(this).find(AConstants.UP_TUNER_SEL)
-      .click((function() {
-        return function() {
+      .click(function() {
           var COUNT = AConstants.TOTAL_FRONT_CARDS;
           seedState = (seedState+1)%COUNT;
-          $(this).parent().find(AConstants.SUB_CARDS_SEL).each(function (key, value) {
-            var newPos = (seedState+key)%COUNT;
-            $(this).css("z-index", newPos);});
-        }
-      })());
+          tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
+        });
 
     // Тюнер вниз
     $(this).find(AConstants.DOWN_TUNER_SEL)
-      .click((function() {
-        return function() {
+      .click(function() {
           var COUNT = AConstants.TOTAL_FRONT_CARDS;
           seedState = (seedState-1+COUNT)%COUNT;
-          $(this).parent().find(AConstants.SUB_CARDS_SEL).each(function (key, value) {
-            var newPos = (seedState+key)%COUNT;
-            $(this).css("z-index", newPos);});
-         }
-      })());
+          tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
+         });
 
       //})();  // Fail
     });  // .each()
