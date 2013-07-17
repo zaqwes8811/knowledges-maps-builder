@@ -25,7 +25,7 @@
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374063092820" ignored="false" />
     <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373798950740" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374072321517" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374073031367" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,7 @@
       <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="64" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.5220049">
+            <state line="114" column="41" selection-start="4456" selection-end="4456" vertical-scroll-proportion="0.75061125">
               <folding />
             </state>
           </provider>
@@ -488,7 +488,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="64" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.5220049">
+        <state line="114" column="41" selection-start="4456" selection-end="4456" vertical-scroll-proportion="0.75061125">
           <folding />
         </state>
       </provider>
