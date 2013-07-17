@@ -1,0 +1,104 @@
+/*
+Промотка думаю должна отобраюаться всегда, иначе будет неясно. Хотя. Место занимает
+  и поклацав можно разобраться.
+
+  http://habrahabr.ru/post/126207/
+*/
+.one-card-container {
+  position: relative;
+  height: 80px;
+  width: 320px;
+  background-color: #D8D8D8;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* Сами видимые карточки. */
+.pack-card-container {
+  top: 0;
+  position: absolute;
+  right:0;
+  height: 100%;
+  width: 94%;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.pack-card-container-inner {
+  top: 0;
+  position: absolute;
+  left:0;
+  height: 100%;
+  width: 94%;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.active-card {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 4px 4px 0px;
+  background-color: lightgray;
+}
+
+.translate {}
+.content {}
+.word {}
+
+.text-contents {
+  position:absolute;
+  /*top: 4px;*/
+  vertical-align:middle;
+  font-family:"Times New Roman";
+}
+
+.content-stack {
+  height: 100%;
+  width: 95%;
+  left: 5px;
+  background-color: lightgray;
+  position: absolute;
+  border-radius: 4px 0px 0px 4px;
+}
+
+/* Перелистователь */
+.tuner-base {
+  height: 50%;
+  width: 6%;
+  position: absolute;
+}
+
+/* Внешние тюнеры */
+.tuner-base-up {
+  left: 0;
+  background-color: gray;
+  top: 0;
+  border-radius: 4px 0px 0px 0px;
+}
+
+.tuner-base-down {
+  left: 0;
+  background-color: lightgreen;
+  bottom: 0;
+  border-radius: 0px 0px 0px 4px;
+}
+
+/* Тюнеры внутри карточки */
+.tuner-base-up-inner {
+  right: 0;
+  background-color: lightgreen;
+  top: 0;
+  border-radius: 0px 4px 0px 0px;
+}
+
+.tuner-base-down-inner {
+  right: 0;
+  background-color: gray;
+  bottom: 0;
+  border-radius: 0px 0px 4px 0px;
+}
+
+.tuner-base-down-inner:hover {
+  background-color:seagreen;
+}
