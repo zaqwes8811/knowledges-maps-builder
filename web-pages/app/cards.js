@@ -25,6 +25,14 @@ var AConstants = (function () {
   }
 })();
 
+function tick(seed, sel, count, obj) {
+      $(obj).parent().find(sel).each(function (key, value) {
+                  var newPos = (seed+key)%count;
+                  $(this).css("z-index", newPos);
+                });
+       //obj = null;
+    }
+
 //var Cards = (function)
 function init() {
   // Данные которые будут приходить с веб-сервера
@@ -39,10 +47,39 @@ function init() {
   processResponse(response);
 }
 
+function pureInit () {
+  $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
+     // Подключаем тюнер-вверх для подкарт - нужно вынести отсюда. Это чистая инициализация.
+     // TODO(zaqwes): Тюнеры конфликтуют и глючат
+     // TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
+     // TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
+     // TODO(zaqwes): DANGER: Быстро утекает память! Или медленно идет сборка мусора?
+     //(function() {   // Похоже ломает this
+     var seedState = 0;
+     $(this).find(AConstants.UP_TUNER_SEL)
+       .click(function() {
+           var COUNT = AConstants.TOTAL_FRONT_CARDS;
+           seedState = (seedState+1)%COUNT;
+           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);});
+
+     // Тюнер вниз
+     $(this).find(AConstants.DOWN_TUNER_SEL)
+       .click(function() {
+           var COUNT = AConstants.TOTAL_FRONT_CARDS;
+           seedState = (seedState-1+COUNT)%COUNT;
+           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);});
+
+  });
+
+}
+
 
 function processResponse(response) {
+  // TODO(zaqwes): TOTH: Что будет менятся от запроса к запросу?
+
   // Обрабатываем все доступные карты
   $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
+
     // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
     var subCardsPkg = $(this).find(AConstants.PACK_CARDS_SEL);
     subCardsPkg.empty();
@@ -81,42 +118,13 @@ function processResponse(response) {
         $("<div/>").addClass("tuner-base tuner-base-down-inner")
           .click(function() {
                   seed = (seed-1+countItems)%countItems;
+
                   $(this).parent().find('.pack-card-container-inner').each(function(key, value) {
                      $(this).css("z-index", (seed+key)%countItems);
                   });
+
               })
           .appendTo(cardsHandles[AConstants.CONTENT]);
     }
-
-    // Подключаем тюнер-вверх для подкарт
-    // TODO(zaqwes): Тюнеры конфликтуют и глючат
-    // TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
-    // TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
-    //(function() {   // Похоже ломает this
-
-    var tick = function (seed, sel, count, obj) {
-      $(obj).parent().find(sel).each(function (key, value) {
-                  var newPos = (seed+key)%count;
-                  $(this).css("z-index", newPos);
-                });
-    }
-
-    var seedState = 0;
-    $(this).find(AConstants.UP_TUNER_SEL)
-      .click(function() {
-          var COUNT = AConstants.TOTAL_FRONT_CARDS;
-          seedState = (seedState+1)%COUNT;
-          tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
-        });
-
-    // Тюнер вниз
-    $(this).find(AConstants.DOWN_TUNER_SEL)
-      .click(function() {
-          var COUNT = AConstants.TOTAL_FRONT_CARDS;
-          seedState = (seedState-1+COUNT)%COUNT;
-          tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
-         });
-
-      //})();  // Fail
     });  // .each()
 }
