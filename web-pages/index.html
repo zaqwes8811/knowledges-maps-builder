@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <!--link rel="stylesheet" href="css/bootstrap-responsive.css"-->
         <link rel="stylesheet" href="css/card.css">
 
         <script src="closure-library/closure/goog/base.js"></script>
@@ -11,18 +11,76 @@
         <script src="js/jquery.min.js"></script>
     </head>
     <body onload="init()">
-    <div>
-        <div class="one-card-container">
-            <div class="tuner-base tuner-base-up"></div>
-            <div class="tuner-base tuner-base-down"></div>
-            <div class="pack-card-container">default0</div>
-        </div>
-        <div class="one-card-container">
-            <div class="tuner-base tuner-base-up"></div>
-            <div class="tuner-base tuner-base-down"></div>
-            <div class="pack-card-container">default1</div>
-        </div>
+        <div class="row compressed">
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
 
-    </div>
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+        </div>
+        <div class="row compressed">
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+        </div>
+        <div class="row compressed">
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+            <div class="span4 one-card-container">
+                <div class="tuner-base tuner-base-up"></div>
+                <div class="tuner-base tuner-base-down"></div>
+                <div class="pack-card-container"></div>
+
+            </div>
+        </div>
+        <div class="row compressed">
+            <div class="span4 one-card-container update"></div>
+            <div class="span4 one-card-container update">
+                <div class="btn-group alighted">
+                    <button class="btn">Nothing Now</button>
+                    <button class="btn btn-warning" onclick="getCardsContent()">Update</button>
+                    <button class="btn">Nothing Now</button>
+                </div>
+            </div>
+            <div class="span4 one-card-container update"></div>
+        </div>
     </body>
 </html>

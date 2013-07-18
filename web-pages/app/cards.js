@@ -52,13 +52,18 @@ function getFakeResponse() {
        'translate' : ["Перевод", "Переводasdf"],
        'word': ['hello']
     });
+
+    response.push({
+           'content' : ["Hello"],
+           'translate' : ["Перевод", "Переводasdf"],
+           'word': ['hello']
+        });
+
     return response;
 }
 //var Cards = (function)
 function init() {
-    var response = getFakeResponse();
-    processResponse(response);
-    pureInit()
+    pureInit();
 }
 
 function pureInit() {
@@ -140,4 +145,17 @@ function fillNoWordCard(content, handler) {
             .appendTo(handler);
     }
     handler = null;  // TODO(zaqwes): TOTH: Нужно ль?
+}
+
+
+function getCardsContent() {
+  $.ajax({
+    type: 'GET',
+    url: '/pkg'})
+    .done(function(response) {
+
+        processResponse($.parseJSON(response));
+
+     })
+    .fail(function() { alert("error"); })
 }
