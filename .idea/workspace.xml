@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -23,10 +24,10 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374142773469" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374163818035" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374163762859" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374164278343" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374164863985" ignored="false" />
     <file path="/jQuery для начинающих. Часть 2. Слайд-меню. Пример 2.htm" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1373632095840" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374144874578" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374164331295" ignored="false" />
     <file path="/WebContainer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374155480597" ignored="false" />
     <file path="/AppContainer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374145641513" ignored="false" />
     <file path="/Getter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374145985035" ignored="false" />
@@ -88,23 +89,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="51" selection-start="3356" selection-end="3356" vertical-scroll-proportion="0.7549342">
-              <folding>
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="58" column="57" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-3.8157895">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="19" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+            <state line="115" column="30" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.8312303">
               <folding />
             </state>
           </provider>
@@ -113,8 +110,34 @@
       <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="8" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
+            <state line="60" column="32" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="42" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Getters.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/Getters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="32" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#369#396#0" expanded="true" />
+                <element signature="e#521#529#0" expanded="true" />
+                <element signature="e#603#611#0" expanded="true" />
+                <element signature="e#703#711#0" expanded="true" />
+                <element signature="e#827#849#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/web_wrapper/Getters.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
+        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
       </list>
     </option>
   </component>
@@ -399,7 +422,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1904376" sideWeight="0.783848" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21615201" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21615201" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -484,11 +507,7 @@
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="44" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -537,9 +556,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="42" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Getters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1079" selection-end="1079" vertical-scroll-proportion="1.2815964">
+        <state line="21" column="32" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#369#396#0" expanded="true" />
             <element signature="e#521#529#0" expanded="true" />
@@ -550,44 +585,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="8" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+        <state line="60" column="32" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="51" selection-start="3356" selection-end="3356" vertical-scroll-proportion="0.7549342">
-          <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="58" column="57" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-3.8157895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="30" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.8312303">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -8,13 +8,13 @@
 
 .compressed {
   margin-top: 2%;
-  margin-left:5%;
+  margin-left:8%;
   margin-right:5%;
 }
 
 .one-card-container {
   position: relative;
-  height: 80px;
+  height: 100px;
   /*width: 270px; */
   background-color: #D8D8D8;
   margin-left: 2%;
@@ -30,7 +30,7 @@
 
 .alighted {
 position: absolute;
-  right:0;
+  right:18px;
 }
 
 /* Сами видимые карточки. */
@@ -106,14 +106,14 @@ position: absolute;
 /* Тюнеры внутри карточки */
 .tuner-base-up-inner {
   right: 0;
-  background-color: lightgreen;
+  background-color: gray;
   top: 0;
   border-radius: 0px 4px 0px 0px;
 }
 
 .tuner-base-down-inner {
   right: 0;
-  background-color: gray;
+  background-color: lightgreen;
   bottom: 0;
   border-radius: 0px 0px 4px 0px;
 }

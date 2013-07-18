@@ -63,9 +63,7 @@ function getFakeResponse() {
 }
 //var Cards = (function)
 function init() {
-    var response = getFakeResponse();
-    processResponse(response);
-    pureInit()
+    pureInit();
 }
 
 function pureInit() {
@@ -154,6 +152,10 @@ function getCardsContent() {
   $.ajax({
     type: 'GET',
     url: '/pkg'})
-    .done(function(response) { alert(response); })
+    .done(function(response) {
+
+        processResponse($.parseJSON(response));
+
+     })
     .fail(function() { alert("error"); })
 }
