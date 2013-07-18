@@ -141,3 +141,12 @@ function fillNoWordCard(content, handler) {
     }
     handler = null;  // TODO(zaqwes): TOTH: Нужно ль?
 }
+
+
+function getCardsContent() {
+  $.ajax({
+    type: 'GET',
+    url: '/pkg'})
+    .done(function(response) { alert(response); })
+    .fail(function() { alert("error"); })
+}
