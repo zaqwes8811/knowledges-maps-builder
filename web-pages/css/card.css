@@ -24,7 +24,13 @@
 }
 
 .update {
-  background-color: red;
+  background-color: white;
+  height:20px;
+}
+
+.alighted {
+position: absolute;
+  right:0;
 }
 
 /* Сами видимые карточки. */
