@@ -52,6 +52,13 @@ function getFakeResponse() {
        'translate' : ["Перевод", "Переводasdf"],
        'word': ['hello']
     });
+
+    response.push({
+           'content' : ["Hello"],
+           'translate' : ["Перевод", "Переводasdf"],
+           'word': ['hello']
+        });
+
     return response;
 }
 //var Cards = (function)
