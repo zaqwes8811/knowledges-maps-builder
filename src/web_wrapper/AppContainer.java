@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 
 import java.io.IOException;
 
+import com.google.gson.Gson;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
@@ -13,12 +14,8 @@ import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-import com.google.gson.Gson;
-
-
 
 public class AppContainer {
-
   public static void main(String[] args) throws Exception {
 
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
@@ -51,11 +48,11 @@ public class AppContainer {
     server.join();
   }
 
-  // Переменная здесь видна из сервлета?
-  // YES. private static String hellos;
+  // @State
+  //private
 
+  // @Servlets
   public static class Pkg extends HttpServlet {
-
     // Используем идею REST - параметры GET запросе не передаются
     protected void doGet(
         HttpServletRequest request,
@@ -64,8 +61,10 @@ public class AppContainer {
       response.setContentType("text/html");
       response.setStatus(HttpServletResponse.SC_OK);
 
+      String jsonResponse = new Gson().toJson(Getters.createFake().getPackage());
+
       response.setCharacterEncoding("UTF-8");
-      response.getWriter().println("{}");//json_response);
+      response.getWriter().println(jsonResponse);
     }
   }
 }
