@@ -52,6 +52,8 @@ public class GeneratorAnyRandom {
   }
 
   public Integer getCodeWord() {
+    // Используется рекурсивная реализация на базе бинарного поиска.
+    // На модели она показала наилучшую масштабирумость и скорость работы.
     Integer INTERVAL_POS = 1;
     Integer IDX_POS = 2;
     Float value = new Random().nextFloat()*MAX_VALUE;
