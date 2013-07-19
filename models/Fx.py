@@ -77,14 +77,14 @@ def make_Fx(fx):
         code_book.append(tmp)
     return code_book
 
-def make_ranges(code_book):
+def make_ranges(Fx):
     """ (low, high, idx) """
-    COUNT_POINTS = len(code_book)
+    COUNT_POINTS = len(Fx)
     ranges = []
     axis = range(COUNT_POINTS-1)
-    ranges.append((0, code_book[0], 0))
+    ranges.append((0, Fx[0], 0))
     for i in axis:
-        ranges.append((code_book[i], code_book[i+1], i+1))
+        ranges.append((Fx[i], Fx[i+1], i+1))
     ranges = tuple(ranges) 
     return ranges
 
