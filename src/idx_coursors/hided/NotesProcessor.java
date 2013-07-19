@@ -1,20 +1,7 @@
-package coursors;
+package idx_coursors.hided;
 
 
-import com.google.common.collect.Multiset;
-import common.ImmutableAppUtils;
-import common.utils;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableProcessorTargets;
-import com.google.common.base.Joiner;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 //import mapreduce.ImmutableReduceSentencesLevel;
-
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.*;
 
 public class NotesProcessor {
   static public final String NOTE_N80_CAPACITY = "f80_p";  // Core

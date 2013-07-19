@@ -1,7 +1,7 @@
 package common.tests;
 
-import common.ImmutableAppUtils;
 import com.google.common.base.Splitter;
+import common.Util;
 import org.junit.Test;
 
 /**
@@ -28,7 +28,7 @@ public class BaseTokenizerTest {
       .omitEmptyStrings()
       .split(sent);
     for (String item: result) {
-      ImmutableAppUtils.print(item);
+      Util.print(item);
     }
 
   }
