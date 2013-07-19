@@ -27,7 +27,6 @@
 #
 # (...N1] (N1...N2] ...
 import random
-import math
 import cProfile
 
 from numpy import arange
@@ -39,10 +38,7 @@ from pylab import bar
 import fake
  
 def find_tuple(ranges, n, value):
-    if n != 1:
-        return ranges[0][0] < value and value <= ranges[n-1][1]  
-    else:
-        return ranges[0][0] < value and value <= ranges[0][1]
+    return ranges[0][0] < value and value <= ranges[n-1][1]  
         
 def splitter(ranges, n, value):
     # Останавливаем ветку
@@ -89,7 +85,8 @@ def make_ranges(Fx):
     return ranges
 
 def main():
-    fx = fake.get_fake_fx()
+    COUNT_POINTS = 100*4;
+    fx = fake.get_fake_fx(COUNT_POINTS)
     
     # Функция распределения
     Fx = make_Fx(fx)
@@ -100,12 +97,12 @@ def main():
     COUNT_POINTS = len(code_book)
     
     # Сам эксперимент
-    size_experiment = 10000
+    size_experiment = 100000
     experiment = arange(size_experiment)*1.0    
     for i in range(size_experiment):
         experiment[i] = get_code_word(code_book, COUNT_POINTS, MAX_VALUE)
 
-    """
+    #"""
     x = experiment
     hist, bins = histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
@@ -124,8 +121,8 @@ def test():
             
 if __name__=="__main__":
     #test()
-    #main()
-    cProfile.run("main()")
+    main()
+    #cProfile.run("main()")
     print "Done"
 
 
