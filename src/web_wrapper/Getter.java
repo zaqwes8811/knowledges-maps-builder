@@ -1,6 +1,5 @@
 package web_wrapper;
 
-import java.lang.String;
 import java.util.List;
 import java.util.Map;
 

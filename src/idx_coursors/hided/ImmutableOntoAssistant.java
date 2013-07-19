@@ -1,11 +1,4 @@
-package coursors;
-
-import com.google.common.base.Joiner;
-import common.utils;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package idx_coursors.hided;
 
 /**
  * Created with IntelliJ IDEA.
