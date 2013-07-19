@@ -26,57 +26,16 @@
 # O(n) - ?
 #
 # (...N1] (N1...N2] ...
-
-
-from numpy import arange
-from pylab import plot
-from pylab import show
 import random
 import math
-
 import cProfile
 
-import matplotlib.pyplot as plt
-import numpy as np
-from numpy import exp
-from numpy import log
-from numpy import abs
-
-class Range(object):
-    def contains(self, c):
-        pass
-    
-class ClosedOpen(Range):
-    _a = None
-    _b = None
-    _id = None
-    def __init__(self, a, b, id):
-        self._a = a
-        self._b = b
-        self._id = id
-    def get_id(self):
-        return self._id
-    
-    def get_a(self):
-        return self._a
-    
-    def get_b(self):
-        return self._b
-        
-    def contains(self, c):
-        return self._a < c and c <= self._b
-    
-    def __str__(self):
-        return "("+str(self._a)+", "+str(self._b)+"]"
-    def __repr__(self):
-        return self.__str__()
-
-def find(ranges, n, value):
-    if n != 1:
-        return ranges[0].get_a() < value and value <= ranges[n-1].get_b()  
-    else:
-        return ranges[0].contains(value)
-    
+from numpy import arange
+from numpy import histogram
+from pylab import plot
+from pylab import show
+from pylab import bar
+ 
 def find_tuple(ranges, n, value):
     if n != 1:
         return ranges[0][0] < value and value <= ranges[n-1][1]  
@@ -85,7 +44,7 @@ def find_tuple(ranges, n, value):
         
 def splitter(ranges, n, value):
     # Останавливаем ветку
-    finded = find(ranges, n, value)
+    finded = find_tuple(ranges, n, value)
     if not finded:
         return False, None 
     
@@ -100,19 +59,20 @@ def splitter(ranges, n, value):
             tree_result = splitter(ranges[one_size:], two_size, value)
         return tree_result
             
-def get_near_uniform_recursive(code_book, size_code_book, max_value, ranges=None):
+def get_code_word(ranges, code_book, size_code_book=None, max_value=None):
     value = random.random()*max_value
-    result = splitter(ranges, size_code_book, value) 
-    return result[1]. get_id()
+    result = splitter(ranges, size_code_book, value)
+    #print 'Value', value, result, code_book 
+    return result[1][2]
 
 
 def get_fake_fx():
-    COUNT_POINTS = 10000;
+    COUNT_POINTS = 100;
     fx = arange(COUNT_POINTS)
     fx = fx[::-1]
-    return fx, COUNT_POINTS 
+    return fx 
 
-def make_code_book(fx):
+def make_Fx(fx):
     Fxi = 0
     code_book = []
     for i in (fx):
@@ -121,52 +81,54 @@ def make_code_book(fx):
         code_book.append(tmp)
     return code_book
 
-def main():
-    fx, COUNT_POINTS = get_fake_fx()
-    code_book = make_code_book(fx)
-       
-    # Эксперименты
-    size_experiment = 40000
-    experiment = arange(size_experiment)*1.0
-    max_value = max(code_book)
-    ranges = []
-    item = ClosedOpen(0, code_book[0], 0)
-    #item = (0, code_book[0], 0)
-    ranges.append(item)
-    axis = range(COUNT_POINTS-1)
-    for i in axis:
-        item = ClosedOpen(code_book[i], code_book[i+1], i+1)
-        #item = (code_book[i], code_book[i+1], i+1)
-        ranges.append(item)
-        
-    ranges = tuple(ranges)    
-    for i in range(size_experiment):
-        
-        experiment[i] = get_near_uniform_recursive(code_book, COUNT_POINTS, max_value, ranges)
-
-    """
-    x = experiment
-    hist, bins = np.histogram(x, bins = COUNT_POINTS)
-    width = 0.7*(bins[1]-bins[0])
-    center = (bins[:-1]+bins[1:])/2
-    plt.bar(center, hist, align = 'center', width = width)
-    plt.show()
-    #"""
-    
-def test():
-    code_book = [1, 3, 4, 7, 9]
+def make_ranges(code_book):
+    """ (low, high, idx) """
     COUNT_POINTS = len(code_book)
     ranges = []
-    ranges.append(ClosedOpen(0, code_book[0], 0))
     axis = range(COUNT_POINTS-1)
+    ranges.append((0, code_book[0], 0))
     for i in axis:
         ranges.append((code_book[i], code_book[i+1], i+1))
     ranges = tuple(ranges) 
-    for i in range(100000):
-        get_near_uniform_recursive(code_book, len(code_book), max(code_book), ranges) 
+    return ranges
+
+def main():
+    fx = get_fake_fx()
+    
+    # Функция распределения
+    Fx = make_Fx(fx)
+    MAX_VALUE = max(Fx)
+
+    # Интервалы кодовой книги
+    code_book = make_ranges(Fx)
+    COUNT_POINTS = len(code_book)
+    
+    # Сам эксперимент
+    size_experiment = 10000
+    experiment = arange(size_experiment)*1.0    
+    for i in range(size_experiment):
+        experiment[i] = get_code_word(code_book, Fx, COUNT_POINTS, MAX_VALUE)
+
+    #"""
+    x = experiment
+    hist, bins = histogram(x, bins = COUNT_POINTS)
+    width = 0.7*(bins[1]-bins[0])
+    center = (bins[:-1]+bins[1:])/2
+    bar(center, hist, align = 'center', width = width)
+    show()
+    #"""
+ 
+
+   
+def test():
+    code_book = [1, 3, 4, 7, 9]
+    ranges = make_ranges(code_book)
+    for i in range(10):
+        get_code_word(ranges, code_book, len(code_book), max(code_book)) 
             
 if __name__=="__main__":
-    test()
+    #test()
+    main()
     #cProfile.run("main()")
     print "Done"
 
