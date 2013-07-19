@@ -1,8 +1,8 @@
 package common.tests;
 
-import common.ImmutableAppUtils;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import common.Util;
 import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
 
@@ -485,7 +485,7 @@ public class CompressorsTest {
           key,
           test.get(key)));
     } */
-    ImmutableAppUtils.print(compressed);
+    Util.print(compressed);
 
   }
 }

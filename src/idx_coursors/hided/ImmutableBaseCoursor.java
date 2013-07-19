@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package coursors;
+package idx_coursors.hided;
 
 
 
@@ -14,7 +14,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableProcessorTargets;
+import crosscuttings.jobs_processors.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,13 +22,14 @@ import java.util.Arrays;
 import java.util.List;
 
 // Список получаем по размеченным папкам в временной директории индекса
+//@Stateless
 final public class ImmutableBaseCoursor {
   public static Optional<List<String>> getListNodes() {
     try {
       String pathToTmpFolder =
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+              ProcessorTargets.getPathToIndex(),
                 AppConstants.TMP_FOLDER);
 
       // Получаем список узлов по папкам, а на по заданиям
