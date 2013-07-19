@@ -1,10 +1,13 @@
 package common.math;
 
 import com.google.common.collect.*;
+import org.javatuples.Pair;
+import org.javatuples.Triplet;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,16 +18,19 @@ import java.util.List;
  */
 public class GeneratorAnyRandom {
   private final Integer COUNT_POINTS;
+  private final Integer MAX_VALUE;
   private final ImmutableList<ImmutableList<Integer>> CODE_BOOK;
 
-  private List<Integer> makeFx(List<Integer> distribution) {
+  private Triplet<List<Integer>, Integer, Integer> makeFx(List<Integer> distribution) {
     List<Integer> Fx = new ArrayList<Integer>();
     Integer Fxi = 0;
+    Integer count = 0;
     for (final Integer frequency: distribution) {
       Fxi += frequency;
       Fx.add(Fxi);
+      count++;
     }
-    return Fx;
+    return Triplet.with(Fx, count, Fxi);
   }
 
   private List<ImmutableList<Integer>> makeRanges(List<Integer> Fx) {
@@ -36,20 +42,43 @@ public class GeneratorAnyRandom {
     return ranges;
   }
 
-  private GeneratorAnyRandom(List<Integer> distribution, Integer size) {
-    // Кодовую книгу нужно задать жестко
-    COUNT_POINTS = size;
-    CODE_BOOK = ImmutableList.copyOf(makeRanges(makeFx(distribution)));
+  private GeneratorAnyRandom(List<Integer> distribution) {
+    Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
+    List<Integer> Fx = resultMakeFx.getValue0();
+    COUNT_POINTS = resultMakeFx.getValue1();
+    MAX_VALUE = resultMakeFx.getValue2();
+    CODE_BOOK = ImmutableList.copyOf(makeRanges(Fx));
+  }
+
+  public Integer getCodeWord() {
+    Integer INTERVAL_POS = 1;
+    Integer IDX_POS = 2;
+    Float value = new Random().nextFloat()*MAX_VALUE;
+    //ImmutableList<ImmutableList<Integer>> result =
+    split(CODE_BOOK, COUNT_POINTS, value);
+    return 0;//result[INTERVAL_POS][IDX_POS]
+  }
+
+  private Pair<Boolean, ImmutableList<Integer>> split(
+    ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
+    Boolean finded = isContain(ranges, n, value);
+    System.out.print("Value "+value+finded);
+    return Pair.with(false, ImmutableList.of(0));
+  }
+
+  private Boolean isContain(ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
+      return ranges.get(0).get(0) < value && value <= ranges.get(n-1).get(1);
   }
 
   //
-  public static GeneratorAnyRandom create(List<Integer> distribution, Integer size) {
-    return new GeneratorAnyRandom(distribution, size);
+  public static GeneratorAnyRandom create(List<Integer> distribution) {
+    return new GeneratorAnyRandom(distribution);
   }
 
   public static void main(String[] args) {
     List<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
 
-    GeneratorAnyRandom generator = GeneratorAnyRandom.create(distribution, distribution.size());
+    GeneratorAnyRandom generator = GeneratorAnyRandom.create(distribution);
+    generator.getCodeWord();
   }
 }
