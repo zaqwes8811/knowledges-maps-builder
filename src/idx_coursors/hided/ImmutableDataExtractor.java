@@ -1,12 +1,5 @@
 package idx_coursors.hided;
 
-import com.google.common.collect.Multiset;
-import common.Util;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 // Делает комплексные выборки данных
 public final class ImmutableDataExtractor {
   /*

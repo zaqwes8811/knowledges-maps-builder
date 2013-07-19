@@ -1,6 +1,4 @@
-
 import com.google.common.collect.ImmutableMap;
-import java.util.Map;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -10,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.web.WebView;
 import javafx.scene.web.WebViewBuilder;
 import javafx.stage.Stage;
+
+import java.util.Map;
 
 /**
  * Simple example of using JavaFX 2.0's WebView class.
