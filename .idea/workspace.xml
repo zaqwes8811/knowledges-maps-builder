@@ -23,6 +23,18 @@
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
     <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249462056" ignored="false" />
+    <file path="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/common/Util.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/mapreduce/Mappers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/idx_coursors/InternalCursorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/idx_coursors/ExternalCursorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/common/math/Randomizers.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/common/math/Randomizer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/org/tartarus/snowball/TestApp.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743255" ignored="false" />
+    <file path="$PROJECT_DIR$/src/org/tartarus/snowball/SnowballStemmer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743256" ignored="false" />
+    <file path="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374250743256" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +96,7 @@
       <file leaf-file-name="GeneratorAnyRandom.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="74" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-0.18459658">
+            <state line="86" column="5" selection-start="3046" selection-end="3046" vertical-scroll-proportion="0.4596577">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -339,7 +351,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -353,7 +365,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7078385" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.7078385" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29181084" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -525,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="74" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-0.18459658">
+        <state line="86" column="5" selection-start="3046" selection-end="3046" vertical-scroll-proportion="0.4596577">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
