@@ -1,12 +1,5 @@
 package idx_coursors.hided;
 
-import com.google.common.base.Joiner;
-import common.Util;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created with IntelliJ IDEA.
  * User: кей

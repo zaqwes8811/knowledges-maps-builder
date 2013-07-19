@@ -1,7 +1,7 @@
 package common.tests;
 
-import common.Util;
 import com.google.common.base.Splitter;
+import common.Util;
 import org.junit.Test;
 
 /**

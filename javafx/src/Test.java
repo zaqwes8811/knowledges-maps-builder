@@ -1,10 +1,11 @@
-import java.net.URL;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
+import java.net.URL;
 
 /**
  *
