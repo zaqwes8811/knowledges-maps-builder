@@ -10,13 +10,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 19.07.13
- * Time: 13:52
- * To change this template use File | Settings | File Templates.
- */
+// Класс способен генерировать последовательности любого дискретного распределения
+//
+// На вход подается...
+//
+// TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
+//
+// @Immutable
 public class GeneratorAnyRandom {
   private final Integer COUNT_POINTS;
   private final Integer MAX_VALUE;
@@ -55,9 +55,8 @@ public class GeneratorAnyRandom {
     Integer INTERVAL_POS = 1;
     Integer IDX_POS = 2;
     Float value = new Random().nextFloat()*MAX_VALUE;
-    //ImmutableList<ImmutableList<Integer>> result =
-    split(CODE_BOOK, COUNT_POINTS, value);
-    return 0;//result[INTERVAL_POS][IDX_POS]
+    ImmutableList<Integer> result =  split(CODE_BOOK, COUNT_POINTS, value).getValue1().get();
+    return result.get(2);
   }
 
   private Pair<Boolean, Optional<ImmutableList<Integer>>> split(
@@ -69,7 +68,14 @@ public class GeneratorAnyRandom {
     }
     if (n == 1) return Pair.with(contain, Optional.of(ranges.get(0)));
     else {
-      return Pair.with(false, Optional.of(ImmutableList.of(0)));
+      Integer oneSize = n/2;
+      Integer twoSize = n-oneSize;
+      Pair<Boolean, Optional<ImmutableList<Integer>>> resultSubTree =
+          split(ranges.subList(0, oneSize), oneSize, value);
+      if (!resultSubTree.getValue0()) {
+        resultSubTree = split(ranges.subList(oneSize, n), twoSize, value);
+      }
+      return resultSubTree;
     }
   }
 
@@ -77,15 +83,22 @@ public class GeneratorAnyRandom {
       return ranges.get(0).get(0) < value && value <= ranges.get(n-1).get(1);
   }
 
-  //
-  public static GeneratorAnyRandom create(List<Integer> distribution) {
+  // Любой список с числами
+  // TODO(zaqwes): Нулевые знаения в списке? - игнорируются при расчетах
+  public static GeneratorAnyRandom create(List<Integer> distribution) throws  RandomGeneratorException {
+    if (distribution.isEmpty()) throw new RandomGeneratorException("In list must be no empty.");
     return new GeneratorAnyRandom(distribution);
   }
 
-  public static void main(String[] args) {
-    List<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
+  public static void main(String[] args) throws  RandomGeneratorException {
+    List<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1,6,0,14,5,7));
 
     GeneratorAnyRandom generator = GeneratorAnyRandom.create(distribution);
-    generator.getCodeWord();
+    List<Integer> experiment = new ArrayList<Integer>();
+    for (int i = 0; i < 10000; ++i)
+      //experiment.add(distribution.get(generator.getCodeWord()));
+      experiment.add((generator.getCodeWord()));
+
+    System.out.println(experiment);
   }
 }
