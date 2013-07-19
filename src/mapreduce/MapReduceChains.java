@@ -1,17 +1,17 @@
 package mapreduce;
 
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;
+import com.google.common.io.Closer;
+import com.google.gson.Gson;
 import common.Util;
 import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableJobsFormer;
 import crosscuttings.jobs_processors.ProcessorTargets;
-import com.google.common.base.Joiner;
-import com.google.common.io.Closer;
-import com.google.gson.Gson;
 import idx_coursors.IdxAccessor;
 import totext.ImmutableBECParser;
 

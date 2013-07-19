@@ -1,8 +1,8 @@
 package common.tests;
 
-import common.Util;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import common.Util;
 import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
 

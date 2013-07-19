@@ -6,19 +6,10 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.*;
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 29.04.13
- * Time: 20:51
- * To change this template use File | Settings | File Templates.
- *
- * Кофигуратор приложения
- */
 // @Immutable
 public class AppConfigurator {
   private static final String ROOT_NAME = "App";
-  public static String getPathToAppFolder() throws CrosscuttingsException {
+  public static String getPathToAppFolder()  throws CrosscuttingsException {
     String fullCfgFilename = AppConstants.APP_CFG_FULL_FILENAME;
     Yaml yaml = new Yaml();
     try {
