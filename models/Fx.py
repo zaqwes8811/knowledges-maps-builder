@@ -35,6 +35,8 @@ from numpy import histogram
 from pylab import plot
 from pylab import show
 from pylab import bar
+
+import fake
  
 def find_tuple(ranges, n, value):
     if n != 1:
@@ -47,7 +49,6 @@ def splitter(ranges, n, value):
     finded = find_tuple(ranges, n, value)
     if not finded:
         return False, None 
-    
     # Выход из рекурсии когда остался один объект и он искомый 
     if n == 1:
         return finded, ranges[0] 
@@ -59,18 +60,13 @@ def splitter(ranges, n, value):
             tree_result = splitter(ranges[one_size:], two_size, value)
         return tree_result
             
-def get_code_word(ranges, code_book, size_code_book=None, max_value=None):
+def get_code_word(ranges, size_code_book=None, max_value=None):
+    INTERVAL_POS = 1
+    IDX_POS = 2
     value = random.random()*max_value
     result = splitter(ranges, size_code_book, value)
-    #print 'Value', value, result, code_book 
-    return result[1][2]
+    return result[INTERVAL_POS][IDX_POS]
 
-
-def get_fake_fx():
-    COUNT_POINTS = 100;
-    fx = arange(COUNT_POINTS)
-    fx = fx[::-1]
-    return fx 
 
 def make_Fx(fx):
     Fxi = 0
@@ -93,7 +89,7 @@ def make_ranges(code_book):
     return ranges
 
 def main():
-    fx = get_fake_fx()
+    fx = fake.get_fake_fx()
     
     # Функция распределения
     Fx = make_Fx(fx)
@@ -107,9 +103,9 @@ def main():
     size_experiment = 10000
     experiment = arange(size_experiment)*1.0    
     for i in range(size_experiment):
-        experiment[i] = get_code_word(code_book, Fx, COUNT_POINTS, MAX_VALUE)
+        experiment[i] = get_code_word(code_book, COUNT_POINTS, MAX_VALUE)
 
-    #"""
+    """
     x = experiment
     hist, bins = histogram(x, bins = COUNT_POINTS)
     width = 0.7*(bins[1]-bins[0])
@@ -128,8 +124,8 @@ def test():
             
 if __name__=="__main__":
     #test()
-    main()
-    #cProfile.run("main()")
+    #main()
+    cProfile.run("main()")
     print "Done"
 
 
