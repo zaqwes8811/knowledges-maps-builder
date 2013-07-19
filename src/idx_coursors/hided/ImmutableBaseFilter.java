@@ -1,12 +1,5 @@
 package idx_coursors.hided;
 
-import common.Util;
-
-import javax.swing.*;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 /**
  * Created with IntelliJ IDEA.
  * User: кей

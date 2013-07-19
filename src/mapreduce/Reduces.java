@@ -2,7 +2,6 @@ package mapreduce;
 
 
 import com.google.common.collect.Multiset;
-import mapreduce.Mappers;
 
 import java.util.*;
 

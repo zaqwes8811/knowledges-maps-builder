@@ -1,6 +1,5 @@
 package idx_coursors;
 
-import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -9,9 +8,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ProcessorTargets;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
