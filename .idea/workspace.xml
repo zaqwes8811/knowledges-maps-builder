@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/math/RandomGeneratorException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Fx.py" afterPath="$PROJECT_DIR$/models/Fx.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" afterPath="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -22,7 +24,8 @@
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
     <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374230999511" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
-    <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374246882865" ignored="false" />
+    <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248738689" ignored="false" />
+    <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +96,23 @@
       <file leaf-file-name="GeneratorAnyRandom.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="19" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.8746313">
+            <state line="16" column="92" selection-start="464" selection-end="464" vertical-scroll-proportion="-1.9375">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#707#716#0" expanded="true" />
-                <element signature="e#1049#1073#0" expanded="true" />
-                <element signature="e#2779#2788#0" expanded="true" />
+                <element signature="e#779#788#0" expanded="true" />
+                <element signature="e#1121#1145#0" expanded="true" />
+                <element signature="e#3370#3379#0" expanded="true" />
+                <element signature="e#3531#3540#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrosscuttingsException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="53" selection-start="218" selection-end="227" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/tests/BaseTokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java" />
         <option value="$PROJECT_DIR$/src/coursors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java" />
@@ -137,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/parsers/BECParser.java" />
         <option value="$PROJECT_DIR$/src/common/utils.java" />
         <option value="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+        <option value="$PROJECT_DIR$/src/common/math/RandomGeneratorException.java" />
         <option value="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" />
       </list>
     </option>
@@ -206,6 +219,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crosscuttings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,8 +437,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.8361045" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16389549" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.67695963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -475,16 +506,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ProcessorTargetsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="594" selection-end="594" vertical-scroll-proportion="0.18959108" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/jobs_processors/ImmutableJobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="7" selection-start="1170" selection-end="1170" vertical-scroll-proportion="1.0743494" />
@@ -556,14 +577,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="53" selection-start="218" selection-end="227" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/math/RandomGeneratorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="35" selection-end="59" vertical-scroll-proportion="0.0625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="19" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.8746313">
+        <state line="16" column="92" selection-start="464" selection-end="464" vertical-scroll-proportion="-1.9375">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#707#716#0" expanded="true" />
-            <element signature="e#1049#1073#0" expanded="true" />
-            <element signature="e#2779#2788#0" expanded="true" />
+            <element signature="e#779#788#0" expanded="true" />
+            <element signature="e#1121#1145#0" expanded="true" />
+            <element signature="e#3370#3379#0" expanded="true" />
+            <element signature="e#3531#3540#0" expanded="true" />
           </folding>
         </state>
       </provider>
