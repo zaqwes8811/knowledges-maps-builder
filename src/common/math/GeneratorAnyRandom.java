@@ -1,5 +1,6 @@
 package common.math;
 
+import com.google.common.base.Optional;
 import com.google.common.collect.*;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
@@ -59,11 +60,17 @@ public class GeneratorAnyRandom {
     return 0;//result[INTERVAL_POS][IDX_POS]
   }
 
-  private Pair<Boolean, ImmutableList<Integer>> split(
+  private Pair<Boolean, Optional<ImmutableList<Integer>>> split(
     ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
-    Boolean finded = isContain(ranges, n, value);
-    System.out.print("Value "+value+finded);
-    return Pair.with(false, ImmutableList.of(0));
+    Boolean contain = isContain(ranges, n, value);
+    if (!contain) {
+      Optional<ImmutableList<Integer>> none = Optional.absent();
+      return Pair.with(false, none);
+    }
+    if (n == 1) return Pair.with(contain, Optional.of(ranges.get(0)));
+    else {
+      return Pair.with(false, Optional.of(ImmutableList.of(0)));
+    }
   }
 
   private Boolean isContain(ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
