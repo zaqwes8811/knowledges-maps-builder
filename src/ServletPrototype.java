@@ -11,14 +11,15 @@ import java.util.Map;
 import java.util.Set;
 
 public class ServletPrototype {
-  public static void main(String[] args) throws VParserException {
+  /*public static void main(String[] args) throws VParserException {
     Optional<FormerPackagesForWeb> generator = FormerPackagesForWeb.create();
     Util.print(generator.get().getPackage());
-  }
+  } */
 }
 
 // Пакет - N уникальных слов с контекстом и переводом.
 class FormerPackagesForWeb {
+  /*
   private FormerPackagesForWeb(Randomizer randomizer, BECCache cash) {
     RANDOMIZER = randomizer;
     CASH = cash;
@@ -57,5 +58,5 @@ class FormerPackagesForWeb {
       result.put(key, key);
     }
     return result;
-  }
+  }*/
 }
