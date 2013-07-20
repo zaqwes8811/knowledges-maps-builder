@@ -13,18 +13,29 @@ import static org.junit.Assert.assertEquals;
  */
 public class FileLevelIdxNodeAccessorTest {
   @Test(expected=NodeNoFound.class)
-  public void testNoExistNode() throws NodeNoFound, NodeAlreadyExist {
+  public void testNoExistNode() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
      String pathToNode = "z:/NoExist";
      FileLevelIdxNodeAccessor accessor = FileLevelIdxNodeAccessor.create(pathToNode);
   }
 
   @Test
-  public void testThrowCtr() throws NodeAlreadyExist {
+  public void testThrowCtr() throws NodeAlreadyExist, CorruptNode {
     String pathToNode = "zd:/";
 
     // Если несколько блоков try-catch, то чтобы можно было видеть объекты ссыкли нужно создать
     //   вне блоков try. Тогда все-таки нужно использовать Optional. Если внутри блока, то тоже наверное
     //   Проблема в том, что пророй конструкторы могут генерировать исключения.
+    Optional<FileLevelIdxNodeAccessor> accessor = Optional.absent();
+    try {
+      accessor = Optional.of(FileLevelIdxNodeAccessor.create(pathToNode));
+    } catch (NodeNoFound e) {
+      assertEquals(accessor, Optional.absent());
+    }
+  }
+
+  @Test
+  public void testNodeRight() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
+    String pathToNode = "D:\\app_folder\\bec-node";
     Optional<FileLevelIdxNodeAccessor> accessor = Optional.absent();
     try {
       accessor = Optional.of(FileLevelIdxNodeAccessor.create(pathToNode));

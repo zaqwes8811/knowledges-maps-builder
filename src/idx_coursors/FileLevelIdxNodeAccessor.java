@@ -1,14 +1,17 @@
 package idx_coursors;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
 import common.annotations.Immutable;
+import crosscuttings.AppConstants;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -36,14 +39,17 @@ import java.util.Map;
 //   тогда наверное можно переопределять методы доступа, а остальное оставлять
 @Immutable
 public class FileLevelIdxNodeAccessor {
+  public final static String SORTED_IDX_FILENAME = "sorted.txt";
+
   private final String PATH_TO_NODE;
 
   // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
   //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
-  private final ImmutableList<String> CASH_SORTED_NODE_IDX;
+  private final ImmutableList<String> CASH_SORTED_NODE_IDX;  // Просто приравнять нельзя, нужно копировать!
+    //   Иначе будет хранится not-immutable ссылка!
 
   // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
-  private FileLevelIdxNodeAccessor(String pathToNode) throws NodeNoFound {
+  private FileLevelIdxNodeAccessor(String pathToNode) throws NodeNoFound, IOException {
     // Есть ли путь к узлу
     if (!new File(pathToNode).exists()) {
       throw new NodeNoFound(pathToNode);
@@ -56,12 +62,26 @@ public class FileLevelIdxNodeAccessor {
 
     // Проверяем все ли файлы.
 
-    CASH_SORTED_NODE_IDX = null;
+    // Загружаем кэши, возможно все кроме реального контента.
+    CASH_SORTED_NODE_IDX = ImmutableList.copyOf(
+        getSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
+          .join(PATH_TO_NODE, SORTED_IDX_FILENAME)));
   }
 
-  public static FileLevelIdxNodeAccessor create(String pathToNode) throws NodeNoFound, NodeAlreadyExist {
-    // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
-    return new FileLevelIdxNodeAccessor(pathToNode);
+  public static FileLevelIdxNodeAccessor create(String pathToNode)
+      throws NodeNoFound, NodeAlreadyExist, CorruptNode {
+    try {
+      // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
+      return new FileLevelIdxNodeAccessor(pathToNode);
+    } catch (IOException e) {
+       CorruptNode c = new CorruptNode();
+       c.initCause(e);
+       throw c;
+    } catch (JsonSyntaxException e) {
+      CorruptNode c = new CorruptNode();
+      c.initCause(e);
+      throw c;
+    }
   }
 
  /*
