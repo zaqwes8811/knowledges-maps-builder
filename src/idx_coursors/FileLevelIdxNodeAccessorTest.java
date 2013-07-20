@@ -2,6 +2,7 @@ package idx_coursors;
 
 import com.google.common.base.Optional;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,9 +18,9 @@ public class FileLevelIdxNodeAccessorTest {
      FileLevelIdxNodeAccessor accessor = FileLevelIdxNodeAccessor.create(pathToNode);
   }
 
-  @Test//(expected=NodeNoFound.class)
+  @Test
   public void testThrowCtr() throws NodeAlreadyExist {
-    String pathToNode = "c:/";
+    String pathToNode = "zd:/";
 
     // Если несколько блоков try-catch, то чтобы можно было видеть объекты ссыкли нужно создать
     //   вне блоков try. Тогда все-таки нужно использовать Optional. Если внутри блока, то тоже наверное
@@ -27,10 +28,8 @@ public class FileLevelIdxNodeAccessorTest {
     Optional<FileLevelIdxNodeAccessor> accessor = Optional.absent();
     try {
       accessor = Optional.of(FileLevelIdxNodeAccessor.create(pathToNode));
-
-
     } catch (NodeNoFound e) {
-        e.getMessage();
+      assertEquals(accessor, Optional.absent());
     }
   }
 }

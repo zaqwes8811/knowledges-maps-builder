@@ -8,12 +8,15 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
+import common.annotations.Immutable;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+//import javax.annotation.concurrent.Immutable
 
 // Вообще это геттер-сеттер к базе данных. Это синглетон - нет не синглетон.
 //
@@ -31,6 +34,7 @@ import java.util.Map;
 //
 // TODO(zaqwes): А если это будет доступ к базе данных, а не файлам, то нужно ли здесь кэширование
 //   тогда наверное можно переопределять методы доступа, а остальное оставлять
+@Immutable
 public class FileLevelIdxNodeAccessor {
   private final String PATH_TO_NODE;
 
@@ -49,6 +53,8 @@ public class FileLevelIdxNodeAccessor {
     //if (true) throw new NodeNoFound(pathToNode);  // Вот что будет с последующими константами
       //   по идее такой объект использовать нельзя, но при создании он, если была задана ссылка заране
       //   ссылка станет нулевой и при вызове unchecked.
+
+    // Проверяем все ли файлы.
 
     CASH_SORTED_NODE_IDX = null;
   }
