@@ -34,6 +34,10 @@ import java.util.Map;
 public class FileLevelIdxNodeAccessor {
   private final String PATH_TO_NODE;
 
+  // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
+  //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
+  private final ImmutableList<String> CASH_SORTED_NODE_IDX;
+
   // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
   private FileLevelIdxNodeAccessor(String pathToNode) throws NodeNoFound {
     // Есть ли путь к узлу
@@ -41,9 +45,15 @@ public class FileLevelIdxNodeAccessor {
       throw new NodeNoFound(pathToNode);
     }
     PATH_TO_NODE = pathToNode;
+
+    //if (true) throw new NodeNoFound(pathToNode);  // Вот что будет с последующими константами
+      //   по идее такой объект использовать нельзя, но при создании он, если была задана ссылка заране
+      //   ссылка станет нулевой и при вызове unchecked.
+
+    CASH_SORTED_NODE_IDX = null;
   }
 
-  public static FileLevelIdxNodeAccessor create(String pathToNode) throws NodeNoFound {
+  public static FileLevelIdxNodeAccessor create(String pathToNode) throws NodeNoFound, NodeAlreadyExist {
     // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
     return new FileLevelIdxNodeAccessor(pathToNode);
   }
@@ -144,9 +154,9 @@ public class FileLevelIdxNodeAccessor {
     }
   }
     */
-  static public synchronized Optional<ImmutableList<String>> getSortedIdx(String filename) {
-    try {
 
+  // TODO(zaqwes): Скорее всего оверхед, т.к. как понимаю замок один на класс
+  public synchronized ImmutableList<String> getSortedIdx(String filename) throws IOException {
       // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
       //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
       String sortedIdxJson = Util.fileToString(filename).get();
@@ -154,10 +164,7 @@ public class FileLevelIdxNodeAccessor {
 
       List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
         new TypeToken<ArrayList<String>>() {}.getType()));
-      return Optional.of(ImmutableList.copyOf(sortedIdxCash));
-    } catch (IOException e) {
-      return Optional.absent();
-    }
+      return ImmutableList.copyOf(sortedIdxCash);
   }
 
   static public synchronized Optional<ImmutableMap<String, List<Integer>>> getSentencesKeys(String filename) {
@@ -209,21 +216,7 @@ public class FileLevelIdxNodeAccessor {
     return filtered;
   }
 
-  static public void main(String[] args) {
-    List<String> nodes = ImmutableBaseCoursor.getListNodes();
-    String node = nodes.get(0);  // пока один
-
-    List<String> filtered_sorted_idx = get_base_filtered_sorted_idx(node);
-    Map<String, Integer> freq_idx = get_freq_idx(node);
-    for (String stem: filtered_sorted_idx) {
-      utils.print(Joiner.on(",").join(stem, freq_idx.get(stem)));
-    }
-
-    utils.print(get_sorted_idx(node).size());
-    utils.print(filtered_sorted_idx.size());
-    //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
-    //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
-  } */
+   */
 
   // K - path to file
   // V - Объект годны для сереализации через Gson - базовая структура - Map, List.
@@ -242,5 +235,20 @@ public class FileLevelIdxNodeAccessor {
     }
   }
 
-  public static void main(String[] args) {}
+  static public void main(String[] args) {
+
+    /*List<String> nodes = ImmutableBaseCoursor.getListNodes();
+    String node = nodes.get(0);  // пока один
+
+    List<String> filtered_sorted_idx = get_base_filtered_sorted_idx(node);
+    Map<String, Integer> freq_idx = get_freq_idx(node);
+    for (String stem: filtered_sorted_idx) {
+      utils.print(Joiner.on(",").join(stem, freq_idx.get(stem)));
+    }
+
+    utils.print(get_sorted_idx(node).size());
+    utils.print(filtered_sorted_idx.size());
+    //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
+    //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));*/
+  }
 }
