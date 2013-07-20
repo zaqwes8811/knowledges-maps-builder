@@ -8,7 +8,7 @@ import common.Util;
 import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import idx_coursors.IdxAccessor;
+//import idx_coursors.IdxAccessor;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ import java.util.List;
 //
 // TODO(zaqwes) TOTH: Вот словарь это индекс или фильтр?
 public class BECCache {
+  /*
   public static Optional<BECCache> create() {
     Optional<BECCache> instance = Optional.absent();
     try {
@@ -70,5 +71,5 @@ public class BECCache {
 
   public Integer getSizeIndexes() {
     return COUNT_WORDS;
-  }
+  }  */
 }

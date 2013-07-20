@@ -12,7 +12,7 @@ import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.jobs_processors.ImmutableJobsFormer;
 import crosscuttings.jobs_processors.ProcessorTargets;
-import idx_coursors.IdxAccessor;
+//import idx_coursors.IdxAccessor;
 import totext.ImmutableBECParser;
 
 import java.io.BufferedWriter;
@@ -240,7 +240,7 @@ public class MapReduceChains {
           AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX),
           idxSentencesForSave);
 
-      IdxAccessor.saveListObjects(tmp);
+      //IdxAccessor.saveListObjects(tmp);
 
     } catch (IOException e) {
       Util.print(e.getMessage());
