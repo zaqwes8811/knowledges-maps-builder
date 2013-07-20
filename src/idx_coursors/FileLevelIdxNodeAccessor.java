@@ -9,21 +9,45 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// Вообще это геттер-сеттер к базе данных. Это синглетон.
+// Вообще это геттер-сеттер к базе данных. Это синглетон - нет не синглетон.
 //
 // И он должен быть многопоточным. И еще желательно межпроцессозащищенным.
 //
 // @NoThreadSafe
 //   Доступ к файлу. Хотя возможно просто будет занят при открытии.
-public class IdxAccessor {
+//
+// Для ошибок будет использоваться не Optional а исклюения
+// TODO(zaqwes): ??
+// TODO(zaqwes): TOTH: Узлов может быть несколько, поэтому создавать объект нужно. Методы доступа должны
+//   не статические
+//
+// TODO(zaqwes): TOTH: Файл тоже ведь состояние объекта?
+//
+// TODO(zaqwes): А если это будет доступ к базе данных, а не файлам, то нужно ли здесь кэширование
+//   тогда наверное можно переопределять методы доступа, а остальное оставлять
+public class FileLevelIdxNodeAccessor {
+  private final String PATH_TO_NODE;
+
+  // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
+  private FileLevelIdxNodeAccessor(String pathToNode) throws NodeNoFound {
+    // Есть ли путь к узлу
+    if (!new File(pathToNode).exists()) {
+      throw new NodeNoFound(pathToNode);
+    }
+    PATH_TO_NODE = pathToNode;
+  }
+
+  public static FileLevelIdxNodeAccessor create(String pathToNode) throws NodeNoFound {
+    // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
+    return new FileLevelIdxNodeAccessor(pathToNode);
+  }
+
  /*
   // Получаем пересечение индексов
   static void get_confluence_idx() {
@@ -83,9 +107,6 @@ public class IdxAccessor {
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
   } */
-
-
-
 
   /*
   static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
@@ -220,4 +241,6 @@ public class IdxAccessor {
       closer.close();
     }
   }
+
+  public static void main(String[] args) {}
 }
