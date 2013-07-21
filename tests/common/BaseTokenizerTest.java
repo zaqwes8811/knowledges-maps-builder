@@ -1,4 +1,4 @@
-package common.tests;
+package common;
 
 import com.google.common.base.Splitter;
 import common.Util;

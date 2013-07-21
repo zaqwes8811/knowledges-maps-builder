@@ -1,4 +1,4 @@
-package common.tests;
+package common;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;

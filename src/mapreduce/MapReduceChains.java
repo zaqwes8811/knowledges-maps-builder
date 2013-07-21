@@ -10,8 +10,8 @@ import common.Util;
 import crosscuttings.AppConfigurator;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableJobsFormer;
-import crosscuttings.jobs_processors.ProcessorTargets;
+import crosscuttings.ImmutableJobsFormer;
+import crosscuttings.ProcessorTargets;
 //import idx_coursors.IdxAccessor;
 import totext.ImmutableBECParser;
 

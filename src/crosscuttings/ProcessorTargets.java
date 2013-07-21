@@ -1,4 +1,4 @@
-package crosscuttings.jobs_processors;
+package crosscuttings;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;

@@ -64,7 +64,7 @@ public class FileLevelIdxNodeAccessor {
 
     // Загружаем кэши, возможно все кроме реального контента.
     CASH_SORTED_NODE_IDX = ImmutableList.copyOf(
-        getSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
+        readSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
           .join(PATH_TO_NODE, SORTED_IDX_FILENAME)));
 
     // Проверяем чтобы размеры подидексов были равны размеру сортированного
@@ -89,7 +89,7 @@ public class FileLevelIdxNodeAccessor {
   }
 
   // TODO(zaqwes): Скорее всего оверхед, т.к. как понимаю замок один на класс
-  public synchronized ImmutableList<String> getSortedIdx(String filename) throws IOException {
+  private synchronized ImmutableList<String> readSortedIdx(String filename) throws IOException {
       // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
       //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
       String sortedIdxJson = Util.fileToString(filename).get();
@@ -100,7 +100,7 @@ public class FileLevelIdxNodeAccessor {
       return ImmutableList.copyOf(sortedIdxCash);
   }
 
-  public ImmutableMap<String, List<Integer>> getSentencesKeys(String filename) throws IOException {
+  private ImmutableMap<String, List<Integer>> readSentencesKeys(String filename) throws IOException {
       // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
       //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
       String sortedIdxJson = Util.fileToString(filename).get();
