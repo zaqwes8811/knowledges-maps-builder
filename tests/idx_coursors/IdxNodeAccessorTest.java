@@ -15,7 +15,7 @@ public class IdxNodeAccessorTest {
   /*@Test(expected=NodeNoFound.class)
   public void testNoExistNode() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
      String pathToNode = "z:/NoExist";
-     IdxNodeAccessor accessor = IdxNodeAccessor.createImmutable(pathToNode);
+     IdxNodeAccessor accessor = IdxNodeAccessor.of(pathToNode);
   }
 
   @Test
@@ -27,7 +27,7 @@ public class IdxNodeAccessorTest {
     //   Проблема в том, что пророй конструкторы могут генерировать исключения.
     Optional<IdxNodeAccessor> accessor = Optional.absent();
     try {
-      accessor = Optional.of(IdxNodeAccessor.create(pathToNode));
+      accessor = Optional.of(IdxNodeAccessor.of(pathToNode));
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
     }
@@ -36,11 +36,11 @@ public class IdxNodeAccessorTest {
   @Test
   public void testNodeRight() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
     String pathToNode = "D:\\app_folder\\bec-node";
-    /*Optional<IdxNodeAccessor> accessor = Optional.absent();
+    Optional<ImmutableNodeMeansOfAccess> accessor = Optional.absent();
     try {
-      accessor = Optional.of(IdxNodeAccessor.create(pathToNode));
+      accessor = Optional.of(IdxNodeAccessor.of(pathToNode));
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
-    }*/
+    }
   }
 }
