@@ -1,6 +1,6 @@
 package totext;
 
-import caches.VParserException;
+import idx_coursors.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
