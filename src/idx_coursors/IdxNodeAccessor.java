@@ -14,10 +14,7 @@ import common.annotations.Immutable;
 import crosscuttings.AppConstants;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 //import javax.annotation.concurrent.Immutable
 
@@ -43,9 +40,10 @@ import java.util.Map;
 //   создает и те и другие, но контроллирует их общее создание объектов
 public class IdxNodeAccessor {
   //private static Set<String> ids;  // Еще не подключено, но будет
-  public final static String FILENAME_SORTED_IDX = "sorted.txt";
-  public final static String FILENAME_SENTENCES_IDX = "sentences.txt";
+  public final static String FILENAME_SENTENCES_IDX = "ptrs-to-sentences.txt";
   public final static String FILENAME_DESCRIPTIONS_IDX = "descriptions.txt";
+  public final static String FILENAME_FREQ_IDX = "frequences.txt";
+  public final static String CONTENT_FILENAME = "content.txt";
 
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, CorruptNode {
@@ -74,13 +72,21 @@ public class IdxNodeAccessor {
     private final ImmutableList<String> CASH_SORTED_NODE_IDX;  // Просто приравнять нельзя, нужно копировать!
       //   Иначе будет хранится not-immutable ссылка!
 
-    private final ImmutableMap<String, List<Integer>> DESCRIPTIONS_NODE_IDX;
+    // А вообще словарь лучше использовать как фильтр? А все данные генерировать
+    //   из индекса? Кажется так правильнее.
+
+    private final ImmutableMap<String, List<Integer>> CASH_DESCRIPTIONS_IDX;
+    private final ImmutableMap<String, Integer> CASH_FREQUENCY_IDX;
 
     // ! Внутри просто List! можно оставить так, но доступа на запись быть не должно!
     // Доступ копирует список в ImmutableList и его возвращает.
-    private final ImmutableMap<String, List<Integer>> SENTENCES_KEYS_IDX;
+    private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
+
+    // Сам контент! Здесь жестко задан, но это неправильно. На этапе тестирование идеи сойдет.
+    private final ImmutableList<String> CASH_CONTENT;
 
     // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
+    // Кажется вышел довольно большой
     private ImmutableOnFiles(String pathToNode) throws NodeNoFound, IOException {
       // Есть ли путь к узлу
       if (!new File(pathToNode).exists()) {
@@ -96,28 +102,69 @@ public class IdxNodeAccessor {
 
       // Загружаем кэши - здесь загружаем все!
       String jsonTmp = Util.fileToString(
-          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_SORTED_IDX)).get();
-      List<String> sortedIdxCash = (new Gson().fromJson(jsonTmp,
-          new TypeToken<ArrayList<String>>() {}.getType()));
+          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_FREQ_IDX)).get();
+      Map<String, Integer> freqIdx = (new Gson().fromJson(jsonTmp,
+          new TypeToken<HashMap<String, Integer>>() {}.getType()));
+      CASH_FREQUENCY_IDX = ImmutableMap.copyOf(freqIdx);
+
+
+      // А вообще он должен хранится отсортированными? Может хранить просто список слов
+      //   и если нужно отсортировать потом?
+      // Создаем сортированный список
+      List<Map.Entry<String, Integer>> list = new LinkedList(CASH_FREQUENCY_IDX.entrySet());
+
+      // sort list based on comparator
+      Collections.sort(list, new Comparator() {
+        public int compare(Object o1, Object o2) {
+          return ((Comparable) ((Map.Entry) (o2)).getValue())
+            .compareTo(((Map.Entry) (o1)).getValue());
+        }
+      });
+
+      // Сортированный список
+      List<String> sortedIdxCash = new ArrayList<String>();
+      for (Map.Entry<String, Integer> entry : list) {
+        sortedIdxCash.add(entry.getKey());
+      }
+
       CASH_SORTED_NODE_IDX = ImmutableList.copyOf(sortedIdxCash);
 
+      //
       jsonTmp = Util.fileToString(
         Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_SENTENCES_IDX)).get();
       Map<String, List<Integer>> tmp = (new Gson().fromJson(jsonTmp,
         new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
-      SENTENCES_KEYS_IDX = ImmutableMap.copyOf(tmp);
+      CASH_SENTENCES_KEYS_IDX = ImmutableMap.copyOf(tmp);
 
       jsonTmp = Util.fileToString(
         Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_DESCRIPTIONS_IDX)).get();
       tmp = (new Gson().fromJson(jsonTmp,
         new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
-      DESCRIPTIONS_NODE_IDX = ImmutableMap.copyOf(tmp);
+      CASH_DESCRIPTIONS_IDX = ImmutableMap.copyOf(tmp);
+
+      // Получить список единиц контанта узла
+      CASH_CONTENT = ImmutableList.copyOf(Util.fileToList(
+          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, CONTENT_FILENAME)));
+
 
       // Проверяем чтобы размеры подидексов были равны размеру сортированного
       //   А нужно ли? Просто проверять вхождение перед вызовом, если нет, возвращать пустоту.
     }
+
+    // В принципе генерировать исключений не должно.
+    @Override
+    public ImmutableList<Integer> getDistribution() {
+      //List<Integer> tmp = new ArrayList<Integer>();
+      //for (final String: CASH_SORTED_NODE_IDX) {
+
+      //}
+      return null;
+    }
   }
 
+
+
+  /*
 
   // TODO(zaqwes): перенести в мутатор.
   // TODO(zaqwes): Добавить потокозащиту.
@@ -136,5 +183,5 @@ public class IdxNodeAccessor {
     } finally {
       closer.close();
     }
-  }
+  } */
 }

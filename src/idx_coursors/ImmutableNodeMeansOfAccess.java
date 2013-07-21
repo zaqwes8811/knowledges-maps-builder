@@ -1,5 +1,7 @@
 package idx_coursors;
 
+import com.google.common.collect.ImmutableList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: кей
@@ -8,4 +10,5 @@ package idx_coursors;
  * To change this template use File | Settings | File Templates.
  */
 public interface ImmutableNodeMeansOfAccess {
+  public ImmutableList<Integer> getDistribution();
 }
