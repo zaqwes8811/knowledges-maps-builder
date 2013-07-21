@@ -34,7 +34,7 @@ public class IdxNodeAccessorTest {
   }
   */
   @Test
-  public void testNodeRight() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
+  public void testNodeRight() throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
     String pathToNode = "D:\\app_folder\\bec-node";
     Optional<ImmutableNodeMeansOfAccess> accessor = Optional.absent();
     try {

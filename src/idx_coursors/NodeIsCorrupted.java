@@ -7,5 +7,5 @@ package idx_coursors;
  * Time: 15:46
  * To change this template use File | Settings | File Templates.
  */
-public class CorruptNode extends Exception {
+public class NodeIsCorrupted extends Exception {
 }
