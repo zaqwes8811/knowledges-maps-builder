@@ -10,45 +10,44 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
-import common.annotations.Immutable;
 import crosscuttings.AppConstants;
+import net.jcip.annotations.Immutable;
+import org.checkthread.annotations.NotThreadSafe;
 
 import java.io.*;
 import java.util.*;
 
-//import javax.annotation.concurrent.Immutable
-
-// Вообще это геттер-сеттер к базе данных. Это синглетон - нет не синглетон.
-//
 // И он должен быть многопоточным. И еще желательно межпроцессозащищенным.
 //
-// @NoThreadSafe
-//   Доступ к файлу. Хотя возможно просто будет занят при открытии.
-//
 // Для ошибок будет использоваться не Optional а исклюения
-// TODO(zaqwes): ??
+//
 // TODO(zaqwes): TOTH: Узлов может быть несколько, поэтому создавать объект нужно. Методы доступа должны
 //   не статические
 //
 // TODO(zaqwes): TOTH: Файл тоже ведь состояние объекта?
 //
-// TODO(zaqwes): А если это будет доступ к базе данных, а не файлам, то нужно ли здесь кэширование
-//   тогда наверное можно переопределять методы доступа, а остальное оставлять
-//
 // Ввиду того, что аксессоры должны быть уникальными в системе, вне зависимости
 //   от того, что они только для чтения или для чтения и записи, один класс
 //   создает и те и другие, но контроллирует их общее создание объектов
+
+@NotThreadSafe   //- Класс по сути... плохо, что он генерирует и mutable and immutable
 public class IdxNodeAccessor {
-  //private static Set<String> ids;  // Еще не подключено, но будет
+  //@NotThreadSafe
+  private static Set<String> ids;  // Еще не подключено, но будет
+
   public final static String FILENAME_SENTENCES_IDX = "ptrs-to-sentences.txt";
   public final static String FILENAME_DESCRIPTIONS_IDX = "descriptions.txt";
   public final static String FILENAME_FREQ_IDX = "frequences.txt";
   public final static String CONTENT_FILENAME = "content.txt";
+  public final static String PATH_SPLITTER = "/";  // *nix splitter
 
+  @NotThreadSafe
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
+      if (false) throw new NodeAlreadyExist();
+
       // Несмотря на то, что класс внутренний и его конструктор закрыт, мы можем здесь его вызывать.
       return new ImmutableOnFiles(pathToNode);
     } catch (IOException e) {
@@ -65,55 +64,54 @@ public class IdxNodeAccessor {
 
   // Доступ по индексу нужно проверять, но не по идее рандомизатор не должен
   //   выдать число выходящее за рамки индекса.
+  // А вообще он должен хранится отсортированными? Может хранить просто список слов
+  //   и если нужно отсортировать потом?
+  // А вообще словарь лучше использовать как фильтр? А все данные генерировать
+  //   из индекса? Кажется так правильнее.
+  // Просто приравнять объектному полю нельзя, нужно копировать! Иначе будет хранится not-immutable ссылка!
+  // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
+  //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
+  //
+  // ! Про конструктор
+  // Кажется вышел довольно большой
+  //if (true) throw new NodeNoFound(pathToNode);  // Вот что будет с последующими константами
+  //   по идее такой объект использовать нельзя, но при создании он, если была задана ссылка заране
+  //   ссылка станет нулевой и при вызове unchecked, в этом случае пользоваться Optional.
+  //
+  // ! Проверки
+  // Проверяем чтобы размеры подидексов были равны размеру сортированного
+  //   А нужно ли? Просто проверять вхождение перед вызовом, если нет, возвращать пустоту.
+  //
+  // ! Access
+  // Внутри просто List! можно оставить так, но доступа на запись быть не должно!
+  //   Доступ копирует список в ImmutableList и его возвращает.
+  // Сам контент! Здесь жестко задан, но это неправильно. На этапе тестирование идеи сойдет.
+  //
+  // TODO(zaqwes): TOTH: А если в путе не те слэши?
   @Immutable
   private static class ImmutableOnFiles implements ImmutableNodeMeansOfAccess {
     private final String PATH_TO_NODE;
 
-    // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
-    //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
-    private final ImmutableList<String> CASH_SORTED_IDX;  // Просто приравнять нельзя, нужно копировать!
-      //   Иначе будет хранится not-immutable ссылка!
+    private final ImmutableList<String> CASH_CONTENT;
+    private final ImmutableList<String> CASH_SORTED_IDX;
     private final Integer COUNT_ITEMS;
-
-    // А вообще словарь лучше использовать как фильтр? А все данные генерировать
-    //   из индекса? Кажется так правильнее.
-
     private final ImmutableMap<String, List<Integer>> CASH_DESCRIPTIONS_IDX;
+    private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
     private final ImmutableMap<String, Integer> CASH_FREQUENCY_IDX;
 
-    // ! Внутри просто List! можно оставить так, но доступа на запись быть не должно!
-    // Доступ копирует список в ImmutableList и его возвращает.
-    private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
-
-    // Сам контент! Здесь жестко задан, но это неправильно. На этапе тестирование идеи сойдет.
-    private final ImmutableList<String> CASH_CONTENT;
-
-    // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
-    // Кажется вышел довольно большой
     private ImmutableOnFiles(String pathToNode) throws NodeNoFound, IOException {
-      // Есть ли путь к узлу
       if (!new File(pathToNode).exists()) {
         throw new NodeNoFound(pathToNode);
       }
       PATH_TO_NODE = pathToNode;
 
-      //if (true) throw new NodeNoFound(pathToNode);  // Вот что будет с последующими константами
-      //   по идее такой объект использовать нельзя, но при создании он, если была задана ссылка заране
-      //   ссылка станет нулевой и при вызове unchecked, в этом случае пользоваться Optional.
-
-      // Проверяем все ли файлы.
-
-      // Загружаем кэши - здесь загружаем все!
       String jsonTmp = Util.fileToString(
-          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_FREQ_IDX)).get();
+          Joiner.on(PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_FREQ_IDX)).get();
       Map<String, Integer> freqIdx = (new Gson().fromJson(jsonTmp,
           new TypeToken<HashMap<String, Integer>>() {}.getType()));
       CASH_FREQUENCY_IDX = ImmutableMap.copyOf(freqIdx);
 
-
-      // А вообще он должен хранится отсортированными? Может хранить просто список слов
-      //   и если нужно отсортировать потом?
-      // Создаем сортированный список
+      // Make sorted list
       List<Map.Entry<String, Integer>> list = new LinkedList(CASH_FREQUENCY_IDX.entrySet());
 
       // sort list based on comparator
@@ -124,7 +122,6 @@ public class IdxNodeAccessor {
         }
       });
 
-      // Сортированный список
       List<String> sortedIdxCash = new ArrayList<String>();
       for (Map.Entry<String, Integer> entry : list) {
         sortedIdxCash.add(entry.getKey());
@@ -133,25 +130,23 @@ public class IdxNodeAccessor {
       CASH_SORTED_IDX = ImmutableList.copyOf(sortedIdxCash);
       COUNT_ITEMS = CASH_SORTED_IDX.size();
 
-      //
       jsonTmp = Util.fileToString(
-        Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_SENTENCES_IDX)).get();
+        Joiner.on(PATH_SPLITTER)
+          .join(PATH_TO_NODE, FILENAME_SENTENCES_IDX)).get();
       Map<String, List<Integer>> tmp = (new Gson().fromJson(jsonTmp,
         new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
       CASH_SENTENCES_KEYS_IDX = ImmutableMap.copyOf(tmp);
 
       jsonTmp = Util.fileToString(
-        Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_DESCRIPTIONS_IDX)).get();
+        Joiner.on(PATH_SPLITTER)
+          .join(PATH_TO_NODE, FILENAME_DESCRIPTIONS_IDX)).get();
       tmp = (new Gson().fromJson(jsonTmp,
         new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
       CASH_DESCRIPTIONS_IDX = ImmutableMap.copyOf(tmp);
 
-      // Получить список единиц контанта узла
       CASH_CONTENT = ImmutableList.copyOf(Util.fileToList(
-          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, CONTENT_FILENAME)));
-
-      // Проверяем чтобы размеры подидексов были равны размеру сортированного
-      //   А нужно ли? Просто проверять вхождение перед вызовом, если нет, возвращать пустоту.
+          Joiner.on(PATH_SPLITTER)
+            .join(PATH_TO_NODE, CONTENT_FILENAME)));
     }
 
     // В принципе генерировать исключений не должно.
@@ -164,8 +159,6 @@ public class IdxNodeAccessor {
       return ImmutableList.copyOf(tmp);
     }
   }
-
-
 
   /*
 

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\NodeDataAccessor.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/checkthread_annotations_1_0_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jcip_annotations.xml" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\common\annotations\Immutable.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\NodeNotFull.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided_code.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -39,8 +42,10 @@
     <file path="/NodeDataAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374391895781" ignored="false" />
     <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
     <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374397546399" ignored="false" />
-    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374405343986" ignored="false" />
+    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410305601" ignored="false" />
     <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374400702098" ignored="false" />
+    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374408265278" ignored="false" />
+    <file path="/NodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374409544272" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,37 +104,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="21" selection-start="2447" selection-end="2447" vertical-scroll-proportion="0.0">
+            <state line="89" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.21020092">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5236#5440#0" expanded="true" />
-                <element signature="e#5431#5432#0" expanded="true" />
-                <element signature="e#5522#5530#0" expanded="true" />
-                <element signature="e#6927#6936#0" expanded="true" />
+                <element signature="e#5146#5350#0" expanded="true" />
+                <element signature="e#5341#5342#0" expanded="true" />
+                <element signature="e#5402#5410#0" expanded="true" />
+                <element signature="e#6574#6583#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdxNodeAccessorTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="964" selection-end="964" vertical-scroll-proportion="0.3431221">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeIsCorrupted.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="34" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -137,17 +122,28 @@
       <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="2" selection-start="787" selection-end="857" vertical-scroll-proportion="0.0">
+            <state line="32" column="2" selection-start="1462" selection-end="1537" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hided_code.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
+      <file leaf-file-name="ImmutableNodeMeansOfAccess.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
+            <state line="11" column="43" selection-start="239" selection-end="265" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdxNodeAccessorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="33" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,8 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/CorruptNode.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
         <option value="$PROJECT_DIR$/src/common/annotations/Immutable.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeNotFull.java" />
@@ -184,8 +178,10 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
+        <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
       </list>
     </option>
   </component>
@@ -241,7 +237,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jcip-annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jcip-annotations.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jcip-annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jcip-annotations.jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,14 +278,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,24 +363,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -375,7 +375,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="D:/home/work-libs/java/hamcrest-core-1.3.jar!/" />
+    <property name="last_opened_file_path" value="D:/home/work-libs/java/checkthread-annotations-1.0.9.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -536,7 +536,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.79928744" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20071259" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20071259" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -624,46 +624,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/annotations/Immutable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.12703101">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeNotFull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="42" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/VParserException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.265625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="6" selection-start="8584" selection-end="8616" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="2" selection-start="270" selection-end="318" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -689,38 +652,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="2" selection-start="787" selection-end="857" vertical-scroll-proportion="0.0">
+        <state line="11" column="34" selection-start="224" selection-end="224" vertical-scroll-proportion="0.28902626">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
+    <entry file="jar://D:/home/work-libs/java/jcip-annotations.jar!/net/jcip/annotations/NotThreadSafe.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+        <state line="10" column="19" selection-start="366" selection-end="366" vertical-scroll-proportion="0.2545757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="33" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0543131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="43" selection-start="239" selection-end="265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="35" selection-start="7591" selection-end="7591" vertical-scroll-proportion="1.8408037">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/home/work-libs/java/jcip-annotations.jar!/net/jcip/annotations/GuardedBy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="358" selection-end="358" vertical-scroll-proportion="0.19131833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="2" selection-start="1462" selection-end="1537" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="21" selection-start="2447" selection-end="2447" vertical-scroll-proportion="0.0">
+        <state line="89" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.21020092">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5236#5440#0" expanded="true" />
-            <element signature="e#5431#5432#0" expanded="true" />
-            <element signature="e#5522#5530#0" expanded="true" />
-            <element signature="e#6927#6936#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="964" selection-end="964" vertical-scroll-proportion="0.3431221">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5146#5350#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5402#5410#0" expanded="true" />
+            <element signature="e#6574#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -789,7 +789,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>hamcrest-core-1.3</last-edited>
+          <last-edited>checkthread-annotations-1.0.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
