@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\tests\BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/tests/common/BaseTokenizerTest.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\tests\CompressorsTest.java" afterPath="$PROJECT_DIR$/tests/common/CompressorsTest.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ImmutableJobsFormer.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\FileLevelIdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\FileLevelIdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\tests\idx_coursors\FileLevelIdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392918316" ignored="false" />
+    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374397047844" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
@@ -31,13 +24,13 @@
     <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926953886" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926890105" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374393057335" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374397052202" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
     <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249462056" ignored="false" />
     <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
-    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392692303" ignored="false" />
+    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374396884151" ignored="false" />
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
     <file path="/NodeNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320830334" ignored="false" />
     <file path="/FileLevelIdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332562948" ignored="false" />
@@ -45,6 +38,8 @@
     <file path="/NodeNotFull.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332398118" ignored="false" />
     <file path="/NodeDataAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374391895781" ignored="false" />
     <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
+    <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374396985521" ignored="false" />
+    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374397129802" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +98,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileLevelIdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="41" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
+            <state line="94" column="54" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.73570323">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,29 +109,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+      <file leaf-file-name="IdxNodeAccessorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="38" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileLevelIdxNodeAccessorTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="574" selection-end="574" vertical-scroll-proportion="0.398827">
-              <folding />
+            <state line="43" column="7" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,11 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxAccessor.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxAccessor.java" />
-        <option value="$PROJECT_DIR$/src/caches/BECCache.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/ServletPrototype.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/CorruptNode.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java" />
@@ -175,6 +149,11 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeDataAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/MeansOfAccess.java" />
+        <option value="$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
+        <option value="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
       </list>
     </option>
   </component>
@@ -247,6 +226,24 @@
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -259,6 +256,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idx_coursors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,7 +348,7 @@
       <recent name="idx_coursors" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileLevelIdxNodeAccessorTest">
+  <component name="RunManager" selected="JUnit.IdxNodeAccessorTest">
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -391,12 +424,12 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FileLevelIdxNodeAccessorTest" type="JUnit" factoryName="JUnit">
+    <configuration default="false" name="IdxNodeAccessorTest" type="JUnit" factoryName="JUnit">
       <module name="spinning-vocabulary-cards" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="idx_coursors" />
-      <option name="MAIN_CLASS_NAME" value="idx_coursors.FileLevelIdxNodeAccessorTest" />
+      <option name="MAIN_CLASS_NAME" value="idx_coursors.IdxNodeAccessorTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
@@ -422,7 +455,7 @@
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.GeneratorAnyRandom" />
       <item index="1" class="java.lang.String" itemvalue="Application.FileLevelIdxNodeAccessor" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FileLevelIdxNodeAccessorTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IdxNodeAccessorTest" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -436,7 +469,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -451,8 +484,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.8408551" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1591449" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.79928744" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20071259" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -520,20 +553,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableTextExtractors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/CorruptNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="42" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="29" selection-start="186" selection-end="202" vertical-scroll-proportion="0.26288658">
@@ -544,15 +563,6 @@
     <entry file="file://$PROJECT_DIR$/src/mapreduce/Mappers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="24" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="8" selection-start="9159" selection-end="9159" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -617,24 +627,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="41" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
+        <state line="241" column="0" selection-start="9118" selection-end="9118" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="574" selection-end="574" vertical-scroll-proportion="0.398827">
+        <state line="11" column="13" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="43" selection-start="190" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="7" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="54" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.73570323">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
