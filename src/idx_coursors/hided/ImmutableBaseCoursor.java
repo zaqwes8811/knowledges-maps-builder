@@ -14,7 +14,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ProcessorTargets;
+import crosscuttings.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;

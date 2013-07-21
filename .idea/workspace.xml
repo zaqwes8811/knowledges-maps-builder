@@ -3,10 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\tests\BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/tests/common/BaseTokenizerTest.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\common\tests\CompressorsTest.java" afterPath="$PROJECT_DIR$/tests/common/CompressorsTest.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/ProcessorTargetsTest.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ImmutableJobsFormer.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ProcessorTargets.java" />
+      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\idx_coursors\FileLevelIdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320636265" ignored="false" />
+    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392918316" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
@@ -20,13 +31,13 @@
     <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926953886" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926890105" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320650824" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374393057335" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
     <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249462056" ignored="false" />
     <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
-    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392434556" ignored="false" />
+    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392692303" ignored="false" />
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
     <file path="/NodeNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320830334" ignored="false" />
     <file path="/FileLevelIdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332562948" ignored="false" />
@@ -48,6 +59,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -82,7 +94,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -92,10 +103,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileLevelIdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileLevelIdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="35" selection-start="3211" selection-end="3211" vertical-scroll-proportion="-0.030303031">
+            <state line="59" column="41" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,20 +127,16 @@
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileLevelIdxNodeAccessorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java">
+      <file leaf-file-name="FileLevelIdxNodeAccessorTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="17" selection-start="574" selection-end="574" vertical-scroll-proportion="0.398827">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,8 +210,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -223,15 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5.jar" />
+              <option name="myItemId" value="spinning-vocabulary-cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,129 +240,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5.jar" />
+              <option name="myItemId" value="spinning-vocabulary-cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guava-14.0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commons-lang3-3.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commons-lang3-3.1.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunpkcs11.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunmscapi.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunjce_provider.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,25 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="idx_coursors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spinning-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crosscuttings" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,6 +285,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/common" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -439,10 +303,15 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="idx_coursors" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="common" />
+      <recent name="crosscuttings" />
       <recent name="idx_coursors" />
     </key>
   </component>
@@ -567,7 +436,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -577,13 +446,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.50729334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32541567" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32464454" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.77553445" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22446556" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28525123" sideWeight="0.8408551" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1591449" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -725,15 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeDataAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="78" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
@@ -751,9 +611,7 @@
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,10 +624,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="35" selection-start="3211" selection-end="3211" vertical-scroll-proportion="-0.030303031">
+        <state line="59" column="41" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="17" selection-start="574" selection-end="574" vertical-scroll-proportion="0.398827">
+          <folding />
         </state>
       </provider>
     </entry>
