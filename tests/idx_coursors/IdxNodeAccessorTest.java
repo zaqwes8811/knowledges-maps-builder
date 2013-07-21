@@ -11,11 +11,11 @@ import static org.junit.Assert.assertEquals;
  * Time: 15:43
  * To change this template use File | Settings | File Templates.
  */
-public class FileLevelIdxNodeAccessorTest {
-  @Test(expected=NodeNoFound.class)
+public class IdxNodeAccessorTest {
+  /*@Test(expected=NodeNoFound.class)
   public void testNoExistNode() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
      String pathToNode = "z:/NoExist";
-     FileLevelIdxNodeAccessor accessor = FileLevelIdxNodeAccessor.create(pathToNode);
+     IdxNodeAccessor accessor = IdxNodeAccessor.createImmutable(pathToNode);
   }
 
   @Test
@@ -25,22 +25,22 @@ public class FileLevelIdxNodeAccessorTest {
     // Если несколько блоков try-catch, то чтобы можно было видеть объекты ссыкли нужно создать
     //   вне блоков try. Тогда все-таки нужно использовать Optional. Если внутри блока, то тоже наверное
     //   Проблема в том, что пророй конструкторы могут генерировать исключения.
-    Optional<FileLevelIdxNodeAccessor> accessor = Optional.absent();
+    Optional<IdxNodeAccessor> accessor = Optional.absent();
     try {
-      accessor = Optional.of(FileLevelIdxNodeAccessor.create(pathToNode));
+      accessor = Optional.of(IdxNodeAccessor.create(pathToNode));
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
     }
   }
-
+  */
   @Test
   public void testNodeRight() throws NodeNoFound, NodeAlreadyExist, CorruptNode {
     String pathToNode = "D:\\app_folder\\bec-node";
-    Optional<FileLevelIdxNodeAccessor> accessor = Optional.absent();
+    /*Optional<IdxNodeAccessor> accessor = Optional.absent();
     try {
-      accessor = Optional.of(FileLevelIdxNodeAccessor.create(pathToNode));
+      accessor = Optional.of(IdxNodeAccessor.create(pathToNode));
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
-    }
+    }*/
   }
 }
