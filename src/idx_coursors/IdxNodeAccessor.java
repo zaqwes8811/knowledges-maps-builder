@@ -46,31 +46,34 @@ public class IdxNodeAccessor {
   public final static String CONTENT_FILENAME = "content.txt";
 
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
-      throws NodeNoFound, NodeAlreadyExist, CorruptNode {
+      throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
       // Несмотря на то, что класс внутренний и его конструктор закрыт, мы можем здесь его вызывать.
       return new ImmutableOnFiles(pathToNode);
     } catch (IOException e) {
-      CorruptNode c = new CorruptNode();
+      NodeIsCorrupted c = new NodeIsCorrupted();
       c.initCause(e);
       throw c;
     } catch (JsonSyntaxException e) {
       // Ошибка разбора JSON данных
-      CorruptNode c = new CorruptNode();
+      NodeIsCorrupted c = new NodeIsCorrupted();
       c.initCause(e);
       throw c;
     }
   }
 
+  // Доступ по индексу нужно проверять, но не по идее рандомизатор не должен
+  //   выдать число выходящее за рамки индекса.
   @Immutable
   private static class ImmutableOnFiles implements ImmutableNodeMeansOfAccess {
     private final String PATH_TO_NODE;
 
     // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
     //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
-    private final ImmutableList<String> CASH_SORTED_NODE_IDX;  // Просто приравнять нельзя, нужно копировать!
+    private final ImmutableList<String> CASH_SORTED_IDX;  // Просто приравнять нельзя, нужно копировать!
       //   Иначе будет хранится not-immutable ссылка!
+    private final Integer COUNT_ITEMS;
 
     // А вообще словарь лучше использовать как фильтр? А все данные генерировать
     //   из индекса? Кажется так правильнее.
@@ -127,7 +130,8 @@ public class IdxNodeAccessor {
         sortedIdxCash.add(entry.getKey());
       }
 
-      CASH_SORTED_NODE_IDX = ImmutableList.copyOf(sortedIdxCash);
+      CASH_SORTED_IDX = ImmutableList.copyOf(sortedIdxCash);
+      COUNT_ITEMS = CASH_SORTED_IDX.size();
 
       //
       jsonTmp = Util.fileToString(
@@ -146,7 +150,6 @@ public class IdxNodeAccessor {
       CASH_CONTENT = ImmutableList.copyOf(Util.fileToList(
           Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, CONTENT_FILENAME)));
 
-
       // Проверяем чтобы размеры подидексов были равны размеру сортированного
       //   А нужно ли? Просто проверять вхождение перед вызовом, если нет, возвращать пустоту.
     }
@@ -154,11 +157,11 @@ public class IdxNodeAccessor {
     // В принципе генерировать исключений не должно.
     @Override
     public ImmutableList<Integer> getDistribution() {
-      //List<Integer> tmp = new ArrayList<Integer>();
-      //for (final String: CASH_SORTED_NODE_IDX) {
-
-      //}
-      return null;
+      List<Integer> tmp = new ArrayList<Integer>();
+      for (final String item: CASH_SORTED_IDX) {
+        tmp.add(CASH_FREQUENCY_IDX.get(item));
+      }
+      return ImmutableList.copyOf(tmp);
     }
   }
 
