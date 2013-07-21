@@ -38,6 +38,10 @@ public class IdxNodeAccessor {
   public final static String CONTENT_FILENAME = "content.txt";
   public final static String PATH_SPLITTER = "/";  // *nix splitter
 
+  // BAD! Исключения проверяемы и их много! Хорошо бы заменить одним с контекстом.
+  //   либо одним но при генерации, т.е. конструктор оствить с исключениями, но их преобразовать.
+  //   В сообщении не всегда много пользы, и порой нужна дифференциация.
+  //   В филосоии пишет, что важнее скорее тип, и по нему мы ловим.
   @NotThreadSafe
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
