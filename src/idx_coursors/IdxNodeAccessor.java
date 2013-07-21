@@ -1,16 +1,12 @@
 package idx_coursors;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import common.Util;
-import crosscuttings.AppConstants;
 import net.jcip.annotations.Immutable;
 import org.checkthread.annotations.NotThreadSafe;
 
@@ -35,6 +31,7 @@ public class IdxNodeAccessor {
   //@NotThreadSafe
   private static Set<String> ids;  // Еще не подключено, но будет
 
+  // Они нужны другим классам для создание индексов, поэтому они открытые
   public final static String FILENAME_SENTENCES_IDX = "ptrs-to-sentences.txt";
   public final static String FILENAME_DESCRIPTIONS_IDX = "descriptions.txt";
   public final static String FILENAME_FREQ_IDX = "frequences.txt";
@@ -49,7 +46,7 @@ public class IdxNodeAccessor {
       if (false) throw new NodeAlreadyExist();
 
       // Несмотря на то, что класс внутренний и его конструктор закрыт, мы можем здесь его вызывать.
-      return new ImmutableOnFiles(pathToNode);
+      return new OnFiles(pathToNode);
     } catch (IOException e) {
       NodeIsCorrupted c = new NodeIsCorrupted();
       c.initCause(e);
@@ -88,8 +85,11 @@ public class IdxNodeAccessor {
   // Сам контент! Здесь жестко задан, но это неправильно. На этапе тестирование идеи сойдет.
   //
   // TODO(zaqwes): TOTH: А если в путе не те слэши?
+  //
+  // @Immutable  // Если в имени класса Imm. and in annotation - bad. Но хорошо бы различать!
+  //   это важное свойство.
   @Immutable
-  private static class ImmutableOnFiles implements ImmutableNodeMeansOfAccess {
+  private static class OnFiles implements ImmutableNodeMeansOfAccess {
     private final String PATH_TO_NODE;
 
     private final ImmutableList<String> CASH_CONTENT;
@@ -99,7 +99,7 @@ public class IdxNodeAccessor {
     private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
     private final ImmutableMap<String, Integer> CASH_FREQUENCY_IDX;
 
-    private ImmutableOnFiles(String pathToNode) throws NodeNoFound, IOException {
+    private OnFiles(String pathToNode) throws NodeNoFound, IOException {
       if (!new File(pathToNode).exists()) {
         throw new NodeNoFound(pathToNode);
       }

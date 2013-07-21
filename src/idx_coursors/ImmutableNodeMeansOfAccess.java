@@ -10,5 +10,5 @@ import com.google.common.collect.ImmutableList;
  * To change this template use File | Settings | File Templates.
  */
 public interface ImmutableNodeMeansOfAccess {
-  public ImmutableList<Integer> getDistribution();
+  ImmutableList<Integer> getDistribution();
 }

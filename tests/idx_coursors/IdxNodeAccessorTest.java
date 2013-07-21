@@ -1,6 +1,7 @@
 package idx_coursors;
 
 import com.google.common.base.Optional;
+import common.Util;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -39,6 +40,8 @@ public class IdxNodeAccessorTest {
     Optional<ImmutableNodeMeansOfAccess> accessor = Optional.absent();
     try {
       accessor = Optional.of(IdxNodeAccessor.of(pathToNode));
+      Util.print(accessor.get().getDistribution());
+
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
     }
