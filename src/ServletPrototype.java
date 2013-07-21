@@ -1,15 +1,3 @@
-import caches.BECCache;
-import caches.VParserException;
-import com.google.common.base.Optional;
-import common.Util;
-import common.math.Randomizer;
-import common.math.Randomizers;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
 public class ServletPrototype {
   /*public static void main(String[] args) throws VParserException {
     Optional<FormerPackagesForWeb> generator = FormerPackagesForWeb.create();

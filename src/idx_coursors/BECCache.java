@@ -1,4 +1,4 @@
-package caches;
+package idx_coursors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;

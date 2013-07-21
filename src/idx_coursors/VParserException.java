@@ -1,4 +1,4 @@
-package caches;
+package idx_coursors;
 
 /**
  * Created with IntelliJ IDEA.
