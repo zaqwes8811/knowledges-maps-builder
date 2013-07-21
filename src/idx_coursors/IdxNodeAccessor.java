@@ -37,14 +37,19 @@ import java.util.Map;
 //
 // TODO(zaqwes): А если это будет доступ к базе данных, а не файлам, то нужно ли здесь кэширование
 //   тогда наверное можно переопределять методы доступа, а остальное оставлять
-@Immutable
+//
+// Ввиду того, что аксессоры должны быть уникальными в системе, вне зависимости
+//   от того, что они только для чтения или для чтения и записи, один класс
+//   создает и те и другие, но контроллирует их общее создание объектов
 public class IdxNodeAccessor {
+  //private static Set<String> ids;  // Еще не подключено, но будет
   public final static String SORTED_IDX_FILENAME = "sorted.txt";
 
-  public static ImmutableNodeMeansOfAccess createImmutable(String pathToNode)
+  public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, CorruptNode {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
+      // Несмотря на то, что класс внутренний и его конструктор закрыт, мы можем здесь его вызывать.
       return new ImmutableOnFiles(pathToNode);
     } catch (IOException e) {
       CorruptNode c = new CorruptNode();
@@ -58,7 +63,7 @@ public class IdxNodeAccessor {
     }
   }
 
-
+  @Immutable
   private static class ImmutableOnFiles implements ImmutableNodeMeansOfAccess {
     private final String PATH_TO_NODE;
 
@@ -78,11 +83,11 @@ public class IdxNodeAccessor {
 
       //if (true) throw new NodeNoFound(pathToNode);  // Вот что будет с последующими константами
       //   по идее такой объект использовать нельзя, но при создании он, если была задана ссылка заране
-      //   ссылка станет нулевой и при вызове unchecked.
+      //   ссылка станет нулевой и при вызове unchecked, в этом случае пользоваться Optional.
 
       // Проверяем все ли файлы.
 
-      // Загружаем кэши, возможно все кроме реального контента.
+      // Загружаем кэши - здесь загружаем все!
       CASH_SORTED_NODE_IDX = ImmutableList.copyOf(
         readSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
           .join(PATH_TO_NODE, SORTED_IDX_FILENAME)));
@@ -117,6 +122,9 @@ public class IdxNodeAccessor {
 
   }
 
+
+  // TODO(zaqwes): перенести в мутатор.
+  // TODO(zaqwes): Добавить потокозащиту.
   // K - path to file
   // V - Объект годны для сереализации через Gson - базовая структура - Map, List.
   public static void saveListObjects(Map<String, Object> data) throws IOException {
