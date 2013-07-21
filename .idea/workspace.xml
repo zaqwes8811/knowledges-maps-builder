@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/BECCache.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -38,10 +37,11 @@
     <file path="/NodeDataAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374391895781" ignored="false" />
     <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
     <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410751272" ignored="false" />
-    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410944016" ignored="false" />
+    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374426182782" ignored="false" />
     <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374400702098" ignored="false" />
     <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374408265278" ignored="false" />
     <file path="/NodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374409544272" ignored="false" />
+    <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374427416400" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,17 +100,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.535284">
+            <state line="45" column="18" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5173#5377#0" expanded="true" />
-                <element signature="e#5368#5369#0" expanded="true" />
-                <element signature="e#5429#5437#0" expanded="true" />
-                <element signature="e#6601#6610#0" expanded="true" />
+                <element signature="e#5495#5699#0" expanded="true" />
+                <element signature="e#5690#5691#0" expanded="true" />
+                <element signature="e#5751#5759#0" expanded="true" />
+                <element signature="e#6923#6932#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hided_code.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="28" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BECCache.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.661562">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
         <option value="$PROJECT_DIR$/src/common/annotations/Immutable.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeNotFull.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
@@ -169,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
       </list>
     </option>
   </component>
@@ -513,17 +531,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27909738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24744028" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.50729334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32422802" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.7209026" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12826604" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.8064133" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19358669" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -625,20 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.026275115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="34" selection-start="224" selection-end="224" vertical-scroll-proportion="0.28902626">
@@ -701,14 +705,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.535284">
+        <state line="45" column="18" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5173#5377#0" expanded="true" />
-            <element signature="e#5368#5369#0" expanded="true" />
-            <element signature="e#5429#5437#0" expanded="true" />
-            <element signature="e#6601#6610#0" expanded="true" />
+            <element signature="e#5495#5699#0" expanded="true" />
+            <element signature="e#5690#5691#0" expanded="true" />
+            <element signature="e#5751#5759#0" expanded="true" />
+            <element signature="e#6923#6932#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="28" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.661562">
+          <folding />
         </state>
       </provider>
     </entry>
