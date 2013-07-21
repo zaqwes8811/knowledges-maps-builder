@@ -43,7 +43,9 @@ import java.util.Map;
 //   создает и те и другие, но контроллирует их общее создание объектов
 public class IdxNodeAccessor {
   //private static Set<String> ids;  // Еще не подключено, но будет
-  public final static String SORTED_IDX_FILENAME = "sorted.txt";
+  public final static String FILENAME_SORTED_IDX = "sorted.txt";
+  public final static String FILENAME_SENTENCES_IDX = "sentences.txt";
+  public final static String FILENAME_DESCRIPTIONS_IDX = "descriptions.txt";
 
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, CorruptNode {
@@ -70,8 +72,13 @@ public class IdxNodeAccessor {
     // TODO(zaqwes): TOTH: Если поле финальное, то если его нет, то объекта тоже нет! Если использовать
     //   проверяемые исключения, то ну никак нельзя ссылку вынести за пределы try? Нет можно.
     private final ImmutableList<String> CASH_SORTED_NODE_IDX;  // Просто приравнять нельзя, нужно копировать!
-    //private final ImmutableList<String> DESCRIPTIONS_NODE_IDX;
-    //   Иначе будет хранится not-immutable ссылка!
+      //   Иначе будет хранится not-immutable ссылка!
+
+    private final ImmutableMap<String, List<Integer>> DESCRIPTIONS_NODE_IDX;
+
+    // ! Внутри просто List! можно оставить так, но доступа на запись быть не должно!
+    // Доступ копирует список в ImmutableList и его возвращает.
+    private final ImmutableMap<String, List<Integer>> SENTENCES_KEYS_IDX;
 
     // TODO(zaqwes): TOTH: Путь проверять на существование в конструкторе, или потом.
     private ImmutableOnFiles(String pathToNode) throws NodeNoFound, IOException {
@@ -88,38 +95,27 @@ public class IdxNodeAccessor {
       // Проверяем все ли файлы.
 
       // Загружаем кэши - здесь загружаем все!
-      CASH_SORTED_NODE_IDX = ImmutableList.copyOf(
-        readSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(PATH_TO_NODE, SORTED_IDX_FILENAME)));
+      String jsonTmp = Util.fileToString(
+          Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_SORTED_IDX)).get();
+      List<String> sortedIdxCash = (new Gson().fromJson(jsonTmp,
+          new TypeToken<ArrayList<String>>() {}.getType()));
+      CASH_SORTED_NODE_IDX = ImmutableList.copyOf(sortedIdxCash);
+
+      jsonTmp = Util.fileToString(
+        Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_SENTENCES_IDX)).get();
+      Map<String, List<Integer>> tmp = (new Gson().fromJson(jsonTmp,
+        new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
+      SENTENCES_KEYS_IDX = ImmutableMap.copyOf(tmp);
+
+      jsonTmp = Util.fileToString(
+        Joiner.on(AppConstants.PATH_SPLITTER).join(PATH_TO_NODE, FILENAME_DESCRIPTIONS_IDX)).get();
+      tmp = (new Gson().fromJson(jsonTmp,
+        new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
+      DESCRIPTIONS_NODE_IDX = ImmutableMap.copyOf(tmp);
 
       // Проверяем чтобы размеры подидексов были равны размеру сортированного
-
+      //   А нужно ли? Просто проверять вхождение перед вызовом, если нет, возвращать пустоту.
     }
-
-    // TODO(zaqwes): Скорее всего оверхед, т.к. как понимаю замок один на класс
-    // TODO(zaqwes): Перенести код явно в конструктор!
-    private synchronized ImmutableList<String> readSortedIdx(String filename) throws IOException {
-        // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
-        //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
-        String sortedIdxJson = Util.fileToString(filename).get();
-        // !Критическая секция
-
-        List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
-          new TypeToken<ArrayList<String>>() {}.getType()));
-        return ImmutableList.copyOf(sortedIdxCash);
-    }
-
-    private ImmutableMap<String, List<Integer>> readSentencesKeys(String filename) throws IOException {
-        // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
-        //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
-        String sortedIdxJson = Util.fileToString(filename).get();
-        // !Критическая секция
-
-        Map<String, List<Integer>> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
-          new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
-        return ImmutableMap.copyOf(sortedIdxCash);
-    }
-
   }
 
 
