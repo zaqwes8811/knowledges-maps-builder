@@ -66,6 +66,9 @@ public class FileLevelIdxNodeAccessor {
     CASH_SORTED_NODE_IDX = ImmutableList.copyOf(
         getSortedIdx(Joiner.on(AppConstants.PATH_SPLITTER)
           .join(PATH_TO_NODE, SORTED_IDX_FILENAME)));
+
+    // Проверяем чтобы размеры подидексов были равны размеру сортированного
+
   }
 
   public static FileLevelIdxNodeAccessor create(String pathToNode)
@@ -74,10 +77,11 @@ public class FileLevelIdxNodeAccessor {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
       return new FileLevelIdxNodeAccessor(pathToNode);
     } catch (IOException e) {
-       CorruptNode c = new CorruptNode();
-       c.initCause(e);
-       throw c;
+      CorruptNode c = new CorruptNode();
+      c.initCause(e);
+      throw c;
     } catch (JsonSyntaxException e) {
+      // Ошибка разбора JSON данных
       CorruptNode c = new CorruptNode();
       c.initCause(e);
       throw c;
@@ -96,8 +100,7 @@ public class FileLevelIdxNodeAccessor {
       return ImmutableList.copyOf(sortedIdxCash);
   }
 
-  static public synchronized Optional<ImmutableMap<String, List<Integer>>> getSentencesKeys(String filename) {
-    try {
+  public ImmutableMap<String, List<Integer>> getSentencesKeys(String filename) throws IOException {
       // !Критическая секция. Возможно, если кто-то другой его открыл, то он будет занят, но
       //   Возможно критическая секция упрощает доступ к файлу из разных потоков.
       String sortedIdxJson = Util.fileToString(filename).get();
@@ -105,10 +108,7 @@ public class FileLevelIdxNodeAccessor {
 
       Map<String, List<Integer>> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
         new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
-      return Optional.of(ImmutableMap.copyOf(sortedIdxCash));
-    } catch (IOException e) {
-      return Optional.absent();
-    }
+      return ImmutableMap.copyOf(sortedIdxCash);
   }
 
   // K - path to file

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeDataAccessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServletPrototype.java" afterPath="$PROJECT_DIR$/src/ServletPrototype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\caches\BECCache.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
-      <change type="MOVED" beforePath="D:\github\spinning-vocabulary-cards\src\caches\VParserException.java" afterPath="$PROJECT_DIR$/src/idx_coursors/VParserException.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +26,7 @@
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
     <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249462056" ignored="false" />
     <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
-    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332759342" ignored="false" />
+    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392434556" ignored="false" />
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
     <file path="/NodeNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320830334" ignored="false" />
     <file path="/FileLevelIdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332562948" ignored="false" />
@@ -103,7 +95,7 @@
       <file leaf-file-name="FileLevelIdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="28" selection-start="3660" selection-end="3660" vertical-scroll-proportion="-0.20627062">
+            <state line="83" column="35" selection-start="3211" selection-end="3211" vertical-scroll-proportion="-0.030303031">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,28 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hided_code.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="6" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeDataAccessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeDataAccessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="78" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="79" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+            <state line="14" column="38" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,7 +115,7 @@
       <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+            <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,8 +166,8 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeDataAccessors.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeDataAccessor.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java" />
       </list>
     </option>
   </component>
@@ -751,15 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="33" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
@@ -776,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="159" column="6" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.0">
@@ -790,9 +748,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="24" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="38" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="28" selection-start="3660" selection-end="3660" vertical-scroll-proportion="-0.20627062">
+        <state line="83" column="35" selection-start="3211" selection-end="3211" vertical-scroll-proportion="-0.030303031">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
