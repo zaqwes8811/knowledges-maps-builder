@@ -26,16 +26,7 @@ public class hided_code {
     //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));*/
   }
 
-  // Получить список единиц контанта узла
-  /*static public List<String> get_list_sentences(String node) {
-    return Util.fileToList(Joiner.on(AppConstants.PATH_SPLITTER)
-      .join(
-        ProcessorTargets.getPathToIndex(),
-        AppConstants.CONTENT_FOLDER,
-        node,
-        AppConstants.CONTENT_FILENAME
-      ));
-  } */
+
 
   /*
   static public HashMap<String, HashMap<String, String>>  get_static_notes() {
@@ -123,22 +114,7 @@ public class hided_code {
   } */
 
   /*
-  static public Optional<HashMap<String, Integer>> getFreqIdx(String node) {
-    try {
-      String sorted_freq_idx_json = Util.file2string(
-        Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(
-            ProcessorTargets.getPathToIndex(),
-            AppConstants.COMPRESSED_IDX_FOLDER,
-            node,
-            AppConstants.FREQ_IDX_FILENAME));
-      HashMap<String, Integer> freqIdx = (new Gson().fromJson(sorted_freq_idx_json,
-          new TypeToken<HashMap<String, Integer>>() {}.getType()));
-      return Optional.of(freqIdx);
-    } catch (CrosscuttingsException e) {
-      return Optional.absent();
-    }
-  }
+
 
   static public Optional<ImmutableList<String>> getSortedIdx(String node) {
     try {
