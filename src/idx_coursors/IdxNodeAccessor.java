@@ -43,6 +43,7 @@ public class IdxNodeAccessor {
   //   В сообщении не всегда много пользы, и порой нужна дифференциация.
   //   В филосоии пишет, что важнее скорее тип, и по нему мы ловим.
   @NotThreadSafe
+  @Deprecated  // exception chaining в таков виде устарел
   public static ImmutableNodeMeansOfAccess of(String pathToNode)
       throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
     try {
@@ -52,11 +53,15 @@ public class IdxNodeAccessor {
       // Несмотря на то, что класс внутренний и его конструктор закрыт, мы можем здесь его вызывать.
       return new OnFiles(pathToNode);
     } catch (IOException e) {
+
       NodeIsCorrupted c = new NodeIsCorrupted();
       c.initCause(e);
       throw c;
     } catch (JsonSyntaxException e) {
       // Ошибка разбора JSON данных
+      // Она unchecked. Нужно ли ее оборачивать в проверяемое? Это ошибка пограммы.
+      //   но если ее не обрабатывать, то что с ней делать? В лог записать недостаточно
+      //   Исправить как-то, и уведомить, или просто уведомить пользователя. Или разветвить информацию.
       NodeIsCorrupted c = new NodeIsCorrupted();
       c.initCause(e);
       throw c;
