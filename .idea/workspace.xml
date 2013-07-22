@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/BECCache.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -32,16 +34,17 @@
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
     <file path="/NodeNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320830334" ignored="false" />
     <file path="/FileLevelIdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332562948" ignored="false" />
-    <file path="/NodeAlreadyExist.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374326147641" ignored="false" />
+    <file path="/NodeAlreadyExist.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374428309317" ignored="false" />
     <file path="/NodeNotFull.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332398118" ignored="false" />
     <file path="/NodeDataAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374391895781" ignored="false" />
     <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
     <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410751272" ignored="false" />
-    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374426182782" ignored="false" />
+    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374433459950" ignored="false" />
     <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374400702098" ignored="false" />
     <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374408265278" ignored="false" />
     <file path="/NodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374409544272" ignored="false" />
     <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374427416400" ignored="false" />
+    <file path="/NodeIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374432709576" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,54 +103,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="18" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
+            <state line="43" column="10" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.05666156">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5495#5699#0" expanded="true" />
-                <element signature="e#5690#5691#0" expanded="true" />
-                <element signature="e#5751#5759#0" expanded="true" />
-                <element signature="e#6923#6932#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hided_code.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BECCache.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.661562">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableNodeMeansOfAccess.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="41" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdxNodeAccessorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="24" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5830#6034#0" expanded="true" />
+                <element signature="e#6025#6026#0" expanded="true" />
+                <element signature="e#6086#6094#0" expanded="true" />
+                <element signature="e#7258#7267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/annotations/Immutable.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeNotFull.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeDataAccessors.java" />
@@ -180,13 +144,14 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/MeansOfAccess.java" />
         <option value="$PROJECT_DIR$/tests/idx_coursors/FileLevelIdxNodeAccessorTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
         <option value="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/BECCache.java" />
       </list>
     </option>
   </component>
@@ -535,13 +500,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.50729334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32185274" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.8064133" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19358669" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19358669" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -608,23 +573,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="878" selection-end="878" vertical-scroll-proportion="0.6666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/totext/ImmutableBECSave.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="103" column="17" selection-start="3866" selection-end="3866" vertical-scroll-proportion="0.310219">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.2915952">
           <folding />
         </state>
       </provider>
@@ -643,23 +594,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="224" selection-end="224" vertical-scroll-proportion="0.28902626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/home/work-libs/java/jcip-annotations.jar!/net/jcip/annotations/NotThreadSafe.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="19" selection-start="366" selection-end="366" vertical-scroll-proportion="0.2545757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0543131">
           <folding />
         </state>
       </provider>
@@ -687,6 +624,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="28" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.6835443">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="36" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.5759494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="57" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="8" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="41" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
@@ -694,39 +675,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="4" column="22" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="18" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
+        <state line="43" column="10" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.05666156">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5495#5699#0" expanded="true" />
-            <element signature="e#5690#5691#0" expanded="true" />
-            <element signature="e#5751#5759#0" expanded="true" />
-            <element signature="e#6923#6932#0" expanded="true" />
+            <element signature="e#5830#6034#0" expanded="true" />
+            <element signature="e#6025#6026#0" expanded="true" />
+            <element signature="e#6086#6094#0" expanded="true" />
+            <element signature="e#7258#7267#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/hided_code.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="7" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.661562">
-          <folding />
         </state>
       </provider>
     </entry>

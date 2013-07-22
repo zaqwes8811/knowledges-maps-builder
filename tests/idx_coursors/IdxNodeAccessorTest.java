@@ -40,7 +40,7 @@ public class IdxNodeAccessorTest {
     Optional<ImmutableNodeMeansOfAccess> accessor = Optional.absent();
     try {
       accessor = Optional.of(IdxNodeAccessor.of(pathToNode));
-      Util.print(accessor.get().getDistribution());
+      //Util.print(accessor.get().getDistribution());
 
     } catch (NodeNoFound e) {
       assertEquals(accessor, Optional.absent());
