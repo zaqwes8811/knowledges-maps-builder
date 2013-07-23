@@ -7,10 +7,10 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import crosscuttings.hided.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.hided.ImmutableJobsFormer;
-import crosscuttings.hided.ProcessorTargets;
+import through_functional.hided.AppConstants;
+import through_functional.CrosscuttingsException;
+import through_functional.hided.ImmutableJobsFormer;
+import through_functional.hided.ProcessorTargets;
 //import idx_coursors.IdxAccessor;
 import totext.ImmutableBECParser;
 
