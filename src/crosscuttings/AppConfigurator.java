@@ -3,6 +3,7 @@ package crosscuttings;
 import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Closer;
 import net.jcip.annotations.Immutable;
 import net.jcip.annotations.NotThreadSafe;
@@ -23,7 +24,7 @@ public class AppConfigurator {
       throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
 
     String requestedPath = "App/Scriber/app_folder";
-    Iterable<String> pieces = Splitter.on("/").split(requestedPath);
+    ImmutableList<String> pieces = ImmutableList.copyOf(Splitter.on("/").split(requestedPath));
 
     Yaml yaml = new Yaml();
     try {
@@ -33,11 +34,11 @@ public class AppConfigurator {
 
         // Обрабатываем путь
         Map topCfg = (Map)(Map<String, Object>)yaml.load(input);
-        Map step = (Map)topCfg.get(ROOT_NAME);
-        Map conf = (Map)step.get("Scriber");
+        Map step = (Map)topCfg.get(pieces.get(0));
+        Map conf = (Map)step.get(pieces.get(1));
 
         // Конечную точки заворачиваем в Optional
-        String path = (String)conf.get("app_folder");
+        String path = (String)conf.get(pieces.get(2));
         return Optional.of(path);
       } catch (Throwable e) {
         throw closer.rethrow(e);
@@ -57,5 +58,10 @@ public class AppConfigurator {
     }
   }
 
-  // Получить список узлов
+  // Получить список узлов в виде потей к ним.
+  //
+  // Пути уникальные.
+  public static ImmutableSet<String> getRegisteredNodes() {
+
+  }
 }
