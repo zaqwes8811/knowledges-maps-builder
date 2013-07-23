@@ -5,7 +5,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import crosscuttings.AppConstants;
+import crosscuttings.hided.AppConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;

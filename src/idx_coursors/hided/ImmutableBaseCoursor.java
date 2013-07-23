@@ -12,7 +12,7 @@ package idx_coursors.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import crosscuttings.AppConstants;
+import crosscuttings.hided.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.hided.ProcessorTargets;
 
