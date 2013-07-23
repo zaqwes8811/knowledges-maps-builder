@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" afterPath="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java" afterPath="$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/RecordNoFound.java" afterPath="$PROJECT_DIR$/src/crosscuttings/RecordNoFound.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/app.yaml" afterPath="$PROJECT_DIR$/conf/app.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +27,7 @@
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
-    <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579130092" ignored="false" />
+    <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374580002185" ignored="false" />
     <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
     <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374396884151" ignored="false" />
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
@@ -49,9 +46,10 @@
     <file path="/NodeIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374432709576" ignored="false" />
     <file path="/NoFoundConfFile.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374578860308" ignored="false" />
     <file path="/AppConfiguratorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579608230" ignored="false" />
-    <file path="/ConfFileIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374577800614" ignored="false" />
+    <file path="/ConfFileIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579890035" ignored="false" />
     <file path="/RecordNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579403377" ignored="false" />
     <file path="/CrosscuttingsException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579536860" ignored="false" />
+    <file path="/app.yaml" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579792060" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,16 +111,7 @@
       <file leaf-file-name="AppConfigurator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.60058737">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoFoundConfFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="31" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+            <state line="62" column="21" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.84592146">
               <folding />
             </state>
           </provider>
@@ -131,7 +120,7 @@
       <file leaf-file-name="AppConfiguratorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="33" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+            <state line="15" column="31" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,7 +131,16 @@
       <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="4" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
+            <state line="32" column="4" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfFileIsCorrupted.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="54" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,13 +173,13 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargets.java" />
-        <option value="$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/RecordNoFound.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" />
-        <option value="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
-        <option value="$PROJECT_DIR$/conf/app.yaml" />
         <option value="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
+        <option value="$PROJECT_DIR$/conf/app.yaml" />
+        <option value="$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java" />
+        <option value="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
       </list>
     </option>
   </component>
@@ -539,8 +537,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.83966744" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16033255" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.81710213" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18289787" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -664,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="283" selection-end="283" vertical-scroll-proportion="0.37029704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/ProcessorTargets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="12" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.35950413">
@@ -696,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/RecordNoFound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="281" selection-end="281" vertical-scroll-proportion="0.45498782">
@@ -710,25 +694,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="281" selection-end="281" vertical-scroll-proportion="0.30722892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="54" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+        <state line="15" column="31" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java">
+    <entry file="file://$PROJECT_DIR$/conf/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+        <state line="32" column="4" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.60058737">
+        <state line="62" column="21" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.84592146">
           <folding />
         </state>
       </provider>
