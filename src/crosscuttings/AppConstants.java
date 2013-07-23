@@ -1,16 +1,14 @@
 package crosscuttings;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 09.05.13
- * Time: 12:00
- * To change this template use File | Settings | File Templates.
- */
+// Очень плохая инкапсуляция, часть перенести бы в конфигурационный файл,
+//   или создать файл метаданных - yaml формата например
 public class AppConstants {
   private AppConstants() {}
+
+  // TODO(zaqwes): Перенести к конфигурационный файл
   public final static java.lang.String SPIDER_TARGETS_FILENAME = "apps/targets/spider_extractor_target.txt";
   public final static java.lang.String SPIDER_TARGETS_FILENAME_GLOBAL = "apps/targets/spider_extractor_target.json";
+
   public final static java.lang.String APP_CFG_FULL_FILENAME = "apps/cfgs/app_cfg.yaml";
 
   // Index folders
@@ -18,7 +16,7 @@ public class AppConstants {
   public final static java.lang.String TMP_FOLDER = "tmp";
   public final static java.lang.String COMPRESSED_IDX_FOLDER = "compressed_freq_index";
 
-  //
+  // TODO(zaqwes): Сокрыть в классе доступа к индексу.
   public final static java.lang.String CONTENT_FILENAME = "content.txt";
   public final static java.lang.String CONTENT_META_FILENAME = "meta.txt";
   public final static java.lang.String STATIC_NOTES_FILENAME = "static_notes.txt";
