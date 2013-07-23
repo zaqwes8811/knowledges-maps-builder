@@ -1,5 +1,6 @@
 package crosscuttings;
 
+import com.google.common.collect.ImmutableSet;
 import common.Util;
 import org.junit.Test;
 
@@ -16,6 +17,18 @@ public class AppConfiguratorTest {
     try {
      String tmp = AppConfigurator.getPathToAppFolder().get();
     Util.print(tmp);
+    } catch (NoFoundConfFile e) {
+      Util.print(e.getFileName());
+    } catch (RecordNoFound e) {
+      Util.print(e.REQUESTED_PATH);
+    }
+  }
+
+  @Test//(expected = ConfFileIsCorrupted.class)
+  public void testGetNodes() throws Exception {
+    try {
+      ImmutableSet<String> tmp = AppConfigurator.getRegisteredNodes().get();
+      Util.print(tmp);
     } catch (NoFoundConfFile e) {
       Util.print(e.getFileName());
     } catch (RecordNoFound e) {
