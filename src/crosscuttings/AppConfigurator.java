@@ -1,6 +1,8 @@
 package crosscuttings;
 
 import com.google.common.base.Optional;
+import com.google.common.base.Splitter;
+import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
 import net.jcip.annotations.Immutable;
 import net.jcip.annotations.NotThreadSafe;
@@ -14,20 +16,25 @@ import java.util.Map;
 @NotThreadSafe
 public class AppConfigurator {
   private static final String ROOT_NAME = "App";
-  private static final String APP_CFG_FULL_FILENAME = "conf/a_pp.yaml";
+  private static final String APP_CFG_FULL_FILENAME = "conf/app.yaml";
 
   // Папка не обязательно в рабочей директории программы
   public static Optional<String> getPathToAppFolder()
-      throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound, CrosscuttingsException {
+      throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
+
+    String requestedPath = "App/Scriber/app_folder";
+    Iterable<String> pieces = Splitter.on("/").split(requestedPath);
 
     Yaml yaml = new Yaml();
     try {
       Closer closer = Closer.create();
       try {
         InputStream input = closer.register(new FileInputStream(new File(APP_CFG_FULL_FILENAME)));
-        Map<String, Object> object = (Map<String, Object>) yaml.load(input);
-        Map topCfg = (Map)object;
-        Map conf = (Map)((Map)topCfg.get(ROOT_NAME)).get("Scriber");
+
+        // Обрабатываем путь
+        Map topCfg = (Map)(Map<String, Object>)yaml.load(input);
+        Map step = (Map)topCfg.get(ROOT_NAME);
+        Map conf = (Map)step.get("Scriber");
 
         // Конечную точки заворачиваем в Optional
         String path = (String)conf.get("app_folder");
@@ -44,7 +51,7 @@ public class AppConfigurator {
     } catch (ScannerException e) {
       throw new ConfFileIsCorrupted(e);
     } catch (NullPointerException e) {
-      throw new RecordNoFound(e);
+      throw new RecordNoFound(e, requestedPath);
     } catch (IOException e) {
       throw new CrosscuttingsException(e);
     }
