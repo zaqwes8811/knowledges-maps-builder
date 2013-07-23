@@ -28,7 +28,7 @@
     Scriber : {
       #index_root: "d:/test_extr/indexes",
       #dir_with_extr_texts: "d:/test_extr/tmp",
-      #app_folder: "d:/app_folder"
+      app_folder: "d:/app_folder"
     },
     registered nodes: [
       "./app-folder/bec-node"
