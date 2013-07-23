@@ -1,4 +1,4 @@
-package crosscuttings;
+package crosscuttings.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
