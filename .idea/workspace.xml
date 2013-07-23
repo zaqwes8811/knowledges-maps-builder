@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/app.yaml" afterPath="$PROJECT_DIR$/conf/app.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -27,7 +25,7 @@
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
-    <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374589595824" ignored="false" />
+    <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374590633941" ignored="false" />
     <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
     <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374396884151" ignored="false" />
     <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
@@ -111,10 +109,10 @@
       <file leaf-file-name="AppConfigurator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="844" selection-end="844" vertical-scroll-proportion="-0.478125">
+            <state line="58" column="0" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.6375">
               <folding>
-                <element signature="e#1704#2617#0" expanded="true" />
-                <element signature="e#2608#2609#0" expanded="true" />
+                <element signature="e#2280#2591#0" expanded="true" />
+                <element signature="e#2582#2583#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -541,7 +539,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.79097384" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20902613" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20902613" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -729,10 +727,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="844" selection-end="844" vertical-scroll-proportion="-0.478125">
+        <state line="58" column="0" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.6375">
           <folding>
-            <element signature="e#1704#2617#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2280#2591#0" expanded="true" />
+            <element signature="e#2582#2583#0" expanded="true" />
           </folding>
         </state>
       </provider>
