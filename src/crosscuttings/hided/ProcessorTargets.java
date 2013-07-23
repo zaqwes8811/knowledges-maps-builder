@@ -6,8 +6,6 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import crosscuttings.AppConfigurator;
-import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 
 import java.io.BufferedReader;

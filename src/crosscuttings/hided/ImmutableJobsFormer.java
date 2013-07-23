@@ -1,7 +1,6 @@
 package crosscuttings.hided;
 
 import com.google.common.base.Joiner;
-import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import idx_coursors.hided.ImmutableBaseCoursor;
 
