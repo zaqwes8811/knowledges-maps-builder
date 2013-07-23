@@ -19,8 +19,6 @@ public class AppConfiguratorTest {
     Util.print(tmp);
     } catch (NoFoundConfFile e) {
       Util.print(e.getFileName());
-    } catch (RecordNoFound e) {
-      Util.print(e.REQUESTED_PATH);
     }
   }
 
@@ -31,8 +29,6 @@ public class AppConfiguratorTest {
       Util.print(tmp);
     } catch (NoFoundConfFile e) {
       Util.print(e.getFileName());
-    } catch (RecordNoFound e) {
-      Util.print(e.REQUESTED_PATH);
     }
   }
 }

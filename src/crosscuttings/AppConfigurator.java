@@ -21,12 +21,12 @@ public class AppConfigurator<V> {
   private static final String ROOT_NAME = "App";
   private static final String APP_CFG_FULL_FILENAME = "conf/app.yaml";
 
-  public static abstract class Reader<V> {
+  private static abstract class Reader<V> {
     // Конечную точки заворачиваем в Optional
     public abstract Optional<V> extract(ImmutableList<String> pieces, Map object);
   }
 
-  public static class ReaderDecorator<V> {
+  private static class ReaderDecorator<V> {
     public Optional<V> read(Reader<V> reader, String key)
         throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
       try {
@@ -59,32 +59,43 @@ public class AppConfigurator<V> {
 
   // Папка не обязательно в рабочей директории программы
   public static Optional<String> getPathToAppFolder()
-      throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
+      throws NoFoundConfFile, ConfFileIsCorrupted {
     String requestedPath = "App/Scriber/app_folder";
-    return new ReaderDecorator<String>().read(new Reader<String>() {
-        @Override
-        public Optional<String> extract(ImmutableList<String> pieces, Map object) {
-            Map step = (Map)object.get(pieces.get(0));
-            step = (Map)step.get(pieces.get(1));
-            return Optional.of((String)step.get(pieces.get(2)));
-        }
-      }, requestedPath);
+    try {
+    return new ReaderDecorator<String>().read(
+        new Reader<String>() {
+          @Override
+          public Optional<String> extract(ImmutableList<String> pieces, Map object) {
+              Map step = (Map)object.get(pieces.get(0));
+              step = (Map)step.get(pieces.get(1));
+              return Optional.of((String)step.get(pieces.get(2)));
+          }
+        }, requestedPath);
+    } catch (RecordNoFound e) {
+      // Путь задан жестко, и если его нет, то файл поврежден
+      throw new ConfFileIsCorrupted(e);
+    }
   }
 
   // Получить список узлов в виде потей к ним.
   //
   // Пути уникальные.
   public static Optional<ImmutableSet<String>> getRegisteredNodes()
-    throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
+    throws NoFoundConfFile, ConfFileIsCorrupted {
     String requestedPath = "App/registered nodes";
-
-    return new ReaderDecorator<ImmutableSet<String>>().read(new Reader<ImmutableSet<String>>() {
-      @Override
-      public Optional<ImmutableSet<String>> extract(ImmutableList<String> pieces, Map object) {
-        Map step = (Map)object.get(pieces.get(0));
-        List<String> nodes = (List)step.get(pieces.get(1));
-        return Optional.of(ImmutableSet.copyOf(nodes));
-      }
-    }, requestedPath);
+    try {
+      return new ReaderDecorator<ImmutableSet<String>>().read(
+          new Reader<ImmutableSet<String>>() {
+            @Override
+            public Optional<ImmutableSet<String>> extract(ImmutableList<String> pieces, Map object) {
+              Map step = (Map)object.get(pieces.get(0));
+              List<String> nodes = (List)step.get(pieces.get(1));
+              return Optional.of(ImmutableSet.copyOf(nodes));
+            }
+          }, requestedPath);
+    } catch (RecordNoFound e) {
+      // Путь задан жестко, и если его нет, то файл поврежден
+      throw new ConfFileIsCorrupted(e);
+    }
   }
 }
