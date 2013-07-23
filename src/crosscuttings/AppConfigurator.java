@@ -1,36 +1,54 @@
 package crosscuttings;
 
+import com.google.common.base.Optional;
 import com.google.common.io.Closer;
+import net.jcip.annotations.Immutable;
+import net.jcip.annotations.NotThreadSafe;
 import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.scanner.ScannerException;
 
 import java.io.*;
 import java.util.Map;
 
-// @Immutable
+@Immutable
+@NotThreadSafe
 public class AppConfigurator {
   private static final String ROOT_NAME = "App";
-  public static String getPathToAppFolder()  throws CrosscuttingsException {
-    String fullCfgFilename = AppConstants.APP_CFG_FULL_FILENAME;
+  private static final String APP_CFG_FULL_FILENAME = "conf/a_pp.yaml";
+
+  // Папка не обязательно в рабочей директории программы
+  public static Optional<String> getPathToAppFolder()
+      throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound, CrosscuttingsException {
+
     Yaml yaml = new Yaml();
     try {
       Closer closer = Closer.create();
       try {
-        InputStream input = closer.register(new FileInputStream(new File(fullCfgFilename)));
+        InputStream input = closer.register(new FileInputStream(new File(APP_CFG_FULL_FILENAME)));
         Map<String, Object> object = (Map<String, Object>) yaml.load(input);
         Map topCfg = (Map)object;
-        Map scriberConfiguration = (Map)((Map)topCfg.get(ROOT_NAME)).get("Scriber");
+        Map conf = (Map)((Map)topCfg.get(ROOT_NAME)).get("Scriber");
 
-        String appFolder =(String)scriberConfiguration.get("app_folder");
-        return appFolder;
-      } catch (Throwable e) { // must catch Throwable
+        // Конечную точки заворачиваем в Optional
+        String path = (String)conf.get("app_folder");
+        return Optional.of(path);
+      } catch (Throwable e) {
         throw closer.rethrow(e);
       } finally {
         closer.close();
       }
     } catch (FileNotFoundException e) {
-      throw new CrosscuttingsException("File with cfg, no found. File name - "+fullCfgFilename);
+      NoFoundConfFile c = new NoFoundConfFile(e);
+      c.setFileName(APP_CFG_FULL_FILENAME);
+      throw c;
+    } catch (ScannerException e) {
+      throw new ConfFileIsCorrupted(e);
+    } catch (NullPointerException e) {
+      throw new RecordNoFound(e);
     } catch (IOException e) {
-      throw new CrosscuttingsException("Error on read file - "+fullCfgFilename);
+      throw new CrosscuttingsException(e);
     }
   }
+
+  // Получить список узлов
 }

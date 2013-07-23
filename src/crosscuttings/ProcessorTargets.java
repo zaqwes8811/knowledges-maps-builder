@@ -43,10 +43,10 @@ public class ProcessorTargets {
   public static int RESULT_FILENAME = 2;
 
   public static String getPathToIndex() throws CrosscuttingsException {
-      String pathToIndex = Joiner.on(AppConstants.PATH_SPLITTER)
+      String pathToIndex = "";/*Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
               AppConfigurator.getPathToAppFolder(),
-              getIndexName());
+              getIndexName());*/
       return pathToIndex;
   }
 
@@ -57,9 +57,10 @@ public class ProcessorTargets {
   public static List<String> splitUrlToFilenameAndPath(String fullPathToFile)
       throws CrosscuttingsException {
     // Запрещаем windows-разделители
+    //"Path content disabled separators. "+
+    //"Need use *nix format - '/'. Path - "+fullPathToFile+"; Pos - "+fullPathToFile.indexOf('\\')
     if (fullPathToFile.indexOf('\\') != -1) {
-      throw new CrosscuttingsException("Path content disabled separators. "+
-        "Need use *nix format - '/'. Path - "+fullPathToFile+"; Pos - "+fullPathToFile.indexOf('\\'));
+      throw new CrosscuttingsException();
     }
 
     // Путь первую проверку прошел
@@ -103,7 +104,7 @@ public class ProcessorTargets {
         return resultTargets;
       } catch (FileNotFoundException e) {
         e.printStackTrace();
-        throw new CrosscuttingsException("File no found - "+pathToTarget);
+        throw new CrosscuttingsException();//"File no found - "+pathToTarget);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
@@ -111,7 +112,7 @@ public class ProcessorTargets {
       }
     } catch (IOException e) {
       e.printStackTrace();
-      throw new CrosscuttingsException("Error on read file - "+pathToTarget);
+      throw new CrosscuttingsException();//"Error on read file - "+pathToTarget);
     }
   }
 

@@ -184,7 +184,7 @@ public class MapReduceChains {
   public static void runBECChain() {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
-      final String pathToAppFolder = AppConfigurator.getPathToAppFolder();
+      final String pathToAppFolder = "";//AppConfigurator.getPathToAppFolder();
       // Begin "MapReduce" stage
       ImmutableList<String> content =
           Util.fileToList(
@@ -246,8 +246,8 @@ public class MapReduceChains {
       Util.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
-    } catch (CrosscuttingsException e) {
+    } /*catch (CrosscuttingsException e) {
       Util.print(e.getMessage());
-    }
+    } */
   }
 }
