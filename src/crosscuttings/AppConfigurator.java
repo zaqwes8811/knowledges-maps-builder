@@ -60,7 +60,7 @@ public class AppConfigurator<V> {
   // Папка не обязательно в рабочей директории программы
   public static Optional<String> getPathToAppFolder()
       throws NoFoundConfFile, ConfFileIsCorrupted {
-    String requestedPath = "App/Scriber/app_folder";
+    String requestedPath = "App/for scribe/app_folder";
     try {
     return new ReaderDecorator<String>().read(
         new Reader<String>() {
