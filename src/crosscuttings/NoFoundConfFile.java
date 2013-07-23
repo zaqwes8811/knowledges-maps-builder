@@ -14,6 +14,8 @@ public class NoFoundConfFile extends Exception {
   public NoFoundConfFile(Exception e) {
     super(e);
   }
+
+  // Если просто getM.. то открывает детали реализации!
   private String fileName;
   public void setFileName(String name) {
     fileName = name;
