@@ -3,12 +3,12 @@ package crosscuttings;
 /**
  * Created with IntelliJ IDEA.
  * User: кей
- * Date: 29.04.13
- * Time: 21:02
+ * Date: 23.07.13
+ * Time: 15:16
  * To change this template use File | Settings | File Templates.
  */
-public class CrosscuttingsException extends Exception {
-  public CrosscuttingsException(Exception e) {
+public class RecordNoFound extends Exception {
+  public RecordNoFound(Exception e) {
     super(e);
   }
 }
