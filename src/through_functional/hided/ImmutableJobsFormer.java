@@ -1,7 +1,7 @@
-package crosscuttings.hided;
+package through_functional.hided;
 
 import com.google.common.base.Joiner;
-import crosscuttings.CrosscuttingsException;
+import through_functional.CrosscuttingsException;
 import idx_coursors.hided.ImmutableBaseCoursor;
 
 import java.util.ArrayList;

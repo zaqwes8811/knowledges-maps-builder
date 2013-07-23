@@ -1,4 +1,4 @@
-package crosscuttings.hided;
+package through_functional.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
@@ -6,7 +6,7 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import crosscuttings.CrosscuttingsException;
+import through_functional.CrosscuttingsException;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

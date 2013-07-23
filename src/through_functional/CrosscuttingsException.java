@@ -1,4 +1,4 @@
-package crosscuttings;
+package through_functional;
 
 // Очень общее. Не ясно что произошло.
 public class CrosscuttingsException extends RuntimeException {

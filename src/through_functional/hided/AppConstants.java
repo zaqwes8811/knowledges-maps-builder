@@ -1,4 +1,4 @@
-package crosscuttings.hided;
+package through_functional.hided;
 
 // Очень плохая инкапсуляция, часть перенести бы в конфигурационный файл,
 //   или создать файл метаданных - yaml формата например
