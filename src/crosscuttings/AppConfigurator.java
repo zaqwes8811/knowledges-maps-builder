@@ -78,39 +78,13 @@ public class AppConfigurator<V> {
     throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
     String requestedPath = "App/registered nodes";
 
-    try {
-
-      //
-      Optional<ImmutableSet<String>> result = Optional.absent();
-      Closer closer = Closer.create();
-      try {
-        InputStream input = closer.register(new FileInputStream(new File(APP_CFG_FULL_FILENAME)));
-
-        // Обрабатываем путь
-        Yaml yaml = new Yaml();
-        Map topCfg = (Map)(Map<String, Object>)yaml.load(input);
-
-        ImmutableList<String> pieces = ImmutableList.copyOf(Splitter.on("/").split(requestedPath));
-        Map step = (Map)topCfg.get(pieces.get(0));
+    return new ReaderDecorator<ImmutableSet<String>>().read(new Reader<ImmutableSet<String>>() {
+      @Override
+      public Optional<ImmutableSet<String>> extract(ImmutableList<String> pieces, Map object) {
+        Map step = (Map)object.get(pieces.get(0));
         List<String> nodes = (List)step.get(pieces.get(1));
-        result = Optional.of(ImmutableSet.copyOf(nodes));
-      } catch (Throwable e) {
-        throw closer.rethrow(e);
-      } finally {
-        closer.close();
+        return Optional.of(ImmutableSet.copyOf(nodes));
       }
-      return result;
-
-    } catch (FileNotFoundException e) {
-      NoFoundConfFile c = new NoFoundConfFile(e);
-      c.setFileName(APP_CFG_FULL_FILENAME);
-      throw c;
-    } catch (ScannerException e) {
-      throw new ConfFileIsCorrupted(e);
-    } catch (NullPointerException e) {
-      throw new RecordNoFound(e, requestedPath);
-    } catch (IOException e) {
-      throw new CrosscuttingsException(e);
-    }
+    }, requestedPath);
   }
 }
