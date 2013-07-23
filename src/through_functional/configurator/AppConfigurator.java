@@ -1,15 +1,15 @@
-package crosscuttings;
+package through_functional.configurator;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Closer;
-import common.Util;
 import net.jcip.annotations.Immutable;
 import net.jcip.annotations.NotThreadSafe;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.scanner.ScannerException;
+import through_functional.CrosscuttingsException;
 
 import java.io.*;
 import java.util.List;

@@ -1,7 +1,8 @@
 package crosscuttings;
 
-import crosscuttings.hided.ProcessorTargets;
+import through_functional.hided.ProcessorTargets;
 import org.junit.Test;
+import through_functional.CrosscuttingsException;
 
 import java.util.List;
 

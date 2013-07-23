@@ -3,6 +3,8 @@ package crosscuttings;
 import com.google.common.collect.ImmutableSet;
 import common.Util;
 import org.junit.Test;
+import through_functional.configurator.AppConfigurator;
+import through_functional.configurator.NoFoundConfFile;
 
 //
 public class AppConfiguratorTest {

@@ -1,4 +1,4 @@
-package crosscuttings;
+package through_functional.configurator;
 
 /**
  * Created with IntelliJ IDEA.
