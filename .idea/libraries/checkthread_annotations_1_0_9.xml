@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="checkthread-annotations-1.0.9">
     <CLASSES>
-      <root url="jar://D:/home/work-libs/java/checkthread-annotations-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../work-libs/java/checkthread-annotations-1.0.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
