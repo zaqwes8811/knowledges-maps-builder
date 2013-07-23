@@ -7,7 +7,7 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import crosscuttings.AppConstants;
+import crosscuttings.hided.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import crosscuttings.hided.ImmutableJobsFormer;
 import crosscuttings.hided.ProcessorTargets;
