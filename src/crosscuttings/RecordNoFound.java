@@ -8,7 +8,11 @@ package crosscuttings;
  * To change this template use File | Settings | File Templates.
  */
 public class RecordNoFound extends Exception {
-  public RecordNoFound(Exception e) {
+  public RecordNoFound(Exception e, String requestedPath) {
     super(e);
+    REQUESTED_PATH = requestedPath;
   }
+
+  public final String REQUESTED_PATH;
+
 }
