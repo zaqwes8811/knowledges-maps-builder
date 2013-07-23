@@ -1,5 +1,6 @@
 package crosscuttings;
 
+import crosscuttings.hided.ProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;
