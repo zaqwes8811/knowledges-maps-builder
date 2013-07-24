@@ -15,6 +15,8 @@ import java.io.*;
 import java.util.List;
 import java.util.Map;
 
+
+// Для тестиования удобно передать путь к конфигурационному файлу.
 @Immutable
 @NotThreadSafe
 public class AppConfigurator {
@@ -77,7 +79,7 @@ public class AppConfigurator {
     }
   }
 
-  // Получить список узлов в виде потей к ним.
+  // Получить список узлов в виде путей к ним.
   //
   // Пути уникальные.
   public static Optional<ImmutableSet<String>> getRegisteredNodes()

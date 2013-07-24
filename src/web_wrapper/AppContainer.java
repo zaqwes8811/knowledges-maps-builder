@@ -1,10 +1,14 @@
 package web_wrapper;
 
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 import common.Util;
+import idx_coursors.IdxNodeAccessor;
+import idx_coursors.ImmutableNodeMeansOfAccess;
 import idx_coursors.NodeIsCorrupted;
+import idx_coursors.NodeNoFound;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -23,13 +27,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AppContainer {
   private AppContainer() {}
   //private static final Optional<ImmutableSet<String>> NODES;  // Программа должна отрубится если
     //   статическая часть не сработала
-  private static final ImmutableSet<String> NODES;
+  private static final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
 
   static public void closeApp() {
     // Выходим
@@ -46,9 +52,22 @@ public class AppContainer {
   }
 
   static {
-    Optional<ImmutableSet<String>> tmp = Optional.absent();
+    Optional<ImmutableList<ImmutableNodeMeansOfAccess>> nodes = Optional.absent();
     try {
-      tmp = AppConfigurator.getRegisteredNodes();
+      Optional<ImmutableSet<String>> namesNodes = AppConfigurator.getRegisteredNodes();
+
+      // Загружает данные узла
+      List<ImmutableNodeMeansOfAccess> tmpNodes = new ArrayList<ImmutableNodeMeansOfAccess>();
+      for (String node: namesNodes.get()) {
+        try {
+          tmpNodes.add(IdxNodeAccessor.createImmutableConnection(node));
+        } catch (NodeIsCorrupted e) {
+          UI.showMessage("Node is corrupted - "+node);
+        } catch (NodeNoFound e) {
+          UI.showMessage("Node no found - "+node);
+        }
+      }
+      nodes = Optional.of(ImmutableList.copyOf(tmpNodes));
 
     // Выходим, сервер не должен стартовать
     } catch (NoFoundConfFile e) {
@@ -60,7 +79,7 @@ public class AppContainer {
     }
 
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
-    NODES = tmp.get();  // Должна упасть если при ошибке дошла до сюда
+    NODES = nodes.get();  // Должна упасть если при ошибке дошла до сюда
   }
 
   private static Server createServer() {
@@ -93,7 +112,7 @@ public class AppContainer {
     // Похоже основная инициализация будет в static, т.к.
 
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
-    System.out.println("Root Directory = "+System.getProperty("user.dir"));
+    //System.out.println("Root Directory = "+System.getProperty("user.dir"));
 
     /*Server server = createServer();
 
