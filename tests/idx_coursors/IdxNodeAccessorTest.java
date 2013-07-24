@@ -39,7 +39,7 @@ public class IdxNodeAccessorTest {
     String pathToNode = "D:\\app_folder\\bec-node";
     Optional<ImmutableNodeMeansOfAccess> accessor = Optional.absent();
     try {
-      accessor = Optional.of(IdxNodeAccessor.of(pathToNode));
+      accessor = Optional.of(IdxNodeAccessor.createImmutableConnection(pathToNode));
       //Util.print(accessor.get().getDistribution());
 
     } catch (NodeNoFound e) {
