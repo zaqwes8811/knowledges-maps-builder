@@ -43,9 +43,9 @@ public class IdxNodeAccessor {
   //   В сообщении не всегда много пользы, и порой нужна дифференциация.
   //   В филосоии пишет, что важнее скорее тип, и по нему мы ловим.
   @NotThreadSafe
-  @Deprecated  // exception chaining в таков виде устарел
-  public static ImmutableNodeMeansOfAccess of(String pathToNode)
-      throws NodeNoFound, NodeAlreadyExist, NodeIsCorrupted {
+  //@Deprecated  // exception chaining в таков виде устарел
+  public static ImmutableNodeMeansOfAccess createImmutableConnection(String pathToNode)
+      throws NodeNoFound, NodeIsCorrupted {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
       if (false) throw new NodeAlreadyExist();
