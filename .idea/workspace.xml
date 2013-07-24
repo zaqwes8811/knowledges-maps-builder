@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/crosscuttings/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/ProcessorTargetsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/UI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/app.yaml" afterPath="$PROJECT_DIR$/conf/app.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\AppConfigurator.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\ConfFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\CrosscuttingsException.java" afterPath="$PROJECT_DIR$/src/through_functional/CrosscuttingsException.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\NoFoundConfFile.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundConfFile.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\RecordNoFound.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/RecordNoFound.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\hided\AppConstants.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/AppConstants.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\hided\ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ImmutableJobsFormer.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\hided\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374577075779" ignored="false" />
+    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374656368473" ignored="false" />
     <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
     <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
@@ -35,7 +25,7 @@
     <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926953886" ignored="false" />
     <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926890105" ignored="false" />
     <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374577081376" ignored="false" />
+    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374656378459" ignored="false" />
     <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926690507" ignored="false" />
     <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374249960943" ignored="false" />
     <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374248398374" ignored="false" />
@@ -58,11 +48,13 @@
     <file path="/NodeIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374432709576" ignored="false" />
     <file path="/NoFoundConfFile.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374578860308" ignored="false" />
     <file path="/AppConfiguratorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374581375156" ignored="false" />
-    <file path="/ConfFileIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579890035" ignored="false" />
+    <file path="/ConfFileIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374657260811" ignored="false" />
     <file path="/RecordNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579403377" ignored="false" />
     <file path="/CrosscuttingsException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579536860" ignored="false" />
     <file path="/app.yaml" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374593541878" ignored="false" />
     <file path="/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374593858998" ignored="false" />
+    <file path="/AppContainer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374658487576" ignored="false" />
+    <file path="/UI.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374657525742" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,27 +113,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppConfigurator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppConfigurator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="31" selection-start="2711" selection-end="2711" vertical-scroll-proportion="1.7495712">
+            <state line="31" column="21" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2337#2662#0" expanded="true" />
-                <element signature="e#2651#2652#0" expanded="true" />
-                <element signature="e#3151#3522#0" expanded="true" />
-                <element signature="e#3509#3510#0" expanded="true" />
+                <element signature="e#2330#2655#0" expanded="true" />
+                <element signature="e#2644#2645#0" expanded="true" />
+                <element signature="e#3140#3456#0" expanded="true" />
+                <element signature="e#3443#3444#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConfiguratorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="20" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="52" column="43" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.52487135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfFileIsCorrupted.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="33" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +148,7 @@
       <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="20" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,9 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
-        <option value="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/ProcessorTargets.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/NoFoundConfFile.java" />
@@ -184,11 +180,14 @@
         <option value="$PROJECT_DIR$/src/crosscuttings/ConfFileIsCorrupted.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
         <option value="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
-        <option value="$PROJECT_DIR$/conf/app.yaml" />
         <option value="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
         <option value="$PROJECT_DIR$/src/crosscuttings/hided/ImmutableJobsFormer.java" />
         <option value="$PROJECT_DIR$/src/through_functional/AppConfigurator.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java" />
+        <option value="$PROJECT_DIR$/src/ui/UI.java" />
         <option value="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
+        <option value="$PROJECT_DIR$/conf/app.yaml" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       </list>
     </option>
   </component>
@@ -291,6 +290,60 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServletPrototype.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web_wrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -348,7 +401,7 @@
       <recent name="idx_coursors" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppConfiguratorTest">
+  <component name="RunManager" selected="Application.AppContainer">
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -407,9 +460,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FileLevelIdxNodeAccessor" type="Application" factoryName="Application">
+    <configuration default="false" name="AppContainer" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="idx_coursors.FileLevelIdxNodeAccessor" />
+      <option name="MAIN_CLASS_NAME" value="web_wrapper.AppContainer" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -420,7 +473,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="spinning-vocabulary-cards" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -482,7 +541,7 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.GeneratorAnyRandom" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FileLevelIdxNodeAccessor" />
+      <item index="1" class="java.lang.String" itemvalue="Application.AppContainer" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.IdxNodeAccessorTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.AppConfiguratorTest" />
     </list>
@@ -498,12 +557,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32779098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24703088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.50729334" order="7" side_tool="true" content_ui="tabs" />
@@ -515,7 +574,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2884927" sideWeight="0.7232779" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2767221" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2767221" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -582,27 +641,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="250" column="8" selection-start="9390" selection-end="9390" vertical-scroll-proportion="0.98315465">
@@ -678,38 +716,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java">
+    <entry file="file://$PROJECT_DIR$/src/ServletPrototype.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="54" selection-start="78" selection-end="78" vertical-scroll-proportion="0.05831904">
+        <state line="19" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+        <state line="10" column="20" selection-start="285" selection-end="285" vertical-scroll-proportion="0.24199288">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="210" selection-end="210" vertical-scroll-proportion="0.34991422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="33" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conf/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="31" selection-start="2711" selection-end="2711" vertical-scroll-proportion="1.7495712">
+        <state line="31" column="21" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2337#2662#0" expanded="true" />
-            <element signature="e#2651#2652#0" expanded="true" />
-            <element signature="e#3151#3522#0" expanded="true" />
-            <element signature="e#3509#3510#0" expanded="true" />
+            <element signature="e#2330#2655#0" expanded="true" />
+            <element signature="e#2644#2645#0" expanded="true" />
+            <element signature="e#3140#3456#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="43" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.52487135">
+          <folding />
         </state>
       </provider>
     </entry>
