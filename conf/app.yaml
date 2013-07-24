@@ -1,8 +1,6 @@
-App:
-  registered nodes:
-    - ./app-folder/bec-node
+registered-nodes:
+  - ./app-folder/bec-node
 
-  for scribe:
-    app_folder: ./app-folder
+for-scribe:
+app-folder: ./app-folder
 
-Nothing now:

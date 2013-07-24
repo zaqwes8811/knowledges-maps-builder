@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Immutable
 @NotThreadSafe
-public class AppConfigurator<V> {
+public class AppConfigurator {
   private static final String ROOT_NAME = "App";
   private static final String APP_CFG_FULL_FILENAME = "conf/app.yaml";
 
@@ -60,7 +60,7 @@ public class AppConfigurator<V> {
   // Папка не обязательно в рабочей директории программы
   public static Optional<String> getPathToAppFolder()
       throws NoFoundConfFile, ConfFileIsCorrupted {
-    String requestedPath = "App/for scribe/app_folder";
+    String requestedPath = "for-scribe/app-folder";
     try {
     return new ReaderDecorator<String>().read(
         new Reader<String>() {
@@ -82,20 +82,19 @@ public class AppConfigurator<V> {
   // Пути уникальные.
   public static Optional<ImmutableSet<String>> getRegisteredNodes()
     throws NoFoundConfFile, ConfFileIsCorrupted {
-    String requestedPath = "App/registered nodes";
+    String requestedPath = "registered-nodes";
     try {
       return new ReaderDecorator<ImmutableSet<String>>().read(
           new Reader<ImmutableSet<String>>() {
             @Override
             public Optional<ImmutableSet<String>> extract(ImmutableList<String> pieces, Map object) {
-              Map step = (Map)object.get(pieces.get(0));
-              List<String> nodes = (List)step.get(pieces.get(1));
+              List<String> nodes = (List)object.get(pieces.get(0));
               return Optional.of(ImmutableSet.copyOf(nodes));
             }
           }, requestedPath);
     } catch (RecordNoFound e) {
       // Путь задан жестко, и если его нет, то файл поврежден
-      throw new ConfFileIsCorrupted(e);
+      throw new ConfFileIsCorrupted(e, "Path no found - "+requestedPath);
     }
   }
 }
