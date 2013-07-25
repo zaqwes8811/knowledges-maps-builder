@@ -29,6 +29,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class AppContainer {
   private static final GeneratorAnyRandom GENERATOR;
 
   // @Fake
-  static public Integer getPoint() {
+  static public Integer getKey() {
     return GENERATOR.getCodeWord();
   }
 
@@ -51,7 +52,9 @@ public class AppContainer {
   //
   // Повторяемосеть конечно не учитывается.
   static public Map<String, ImmutableList<String>> getPackage() {
-     return null;
+    Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
+    pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(getKey())));
+    return pkg;
   }
 
   static public void closeApp() {
