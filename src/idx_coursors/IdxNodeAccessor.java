@@ -167,6 +167,17 @@ public class IdxNodeAccessor {
       }
       return ImmutableList.copyOf(tmp);
     }
+
+    @Override
+    public String getWord(Integer key) {
+      // Проверяем границы.
+      // Вычитать 1 нужно, так как нумерация с нуля.
+      if (!(key < 0 || key > COUNT_ITEMS-1)) {
+        return CASH_SORTED_IDX.get(key);
+      } else {
+        throw new OutOfRangeOnAccess("Out of range.");
+      }
+    }
   }
 
   /*
