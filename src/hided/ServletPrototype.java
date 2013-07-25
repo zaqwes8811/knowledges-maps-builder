@@ -1,3 +1,5 @@
+package hided;
+
 public class ServletPrototype {
   /*public static void main(String[] args) throws VParserException {
     Optional<FormerPackagesForWeb> generator = FormerPackagesForWeb.create();

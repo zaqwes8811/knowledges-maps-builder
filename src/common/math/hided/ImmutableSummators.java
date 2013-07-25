@@ -1,4 +1,4 @@
-package math;
+package common.math.hided;
 
 import java.util.List;
 

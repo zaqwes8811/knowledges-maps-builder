@@ -36,6 +36,7 @@ public class AppContainer {
   //private static final Optional<ImmutableSet<String>> NODES;  // Программа должна отрубится если
     //   статическая часть не сработала
   private static final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
+  private static final ImmutableNodeMeansOfAccess ACTIVE_NODE_ACCESSOR;
 
   static public void closeApp() {
     // Выходим
@@ -80,6 +81,10 @@ public class AppContainer {
 
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
     NODES = nodes.get();  // Должна упасть если при ошибке дошла до сюда
+    ACTIVE_NODE_ACCESSOR = NODES.asList().get(0);
+
+    // Коннектим генератор случайных чисел и акссессор
+    List<Integer> distribution = ACTIVE_NODE_ACCESSOR.getDistribution();
   }
 
   private static Server createServer() {

@@ -1,4 +1,4 @@
-package common.math;
+package common.math.hided;
 
 import java.util.Random;
 
