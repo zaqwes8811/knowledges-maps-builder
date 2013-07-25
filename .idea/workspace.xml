@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,10 +112,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="31" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-0.40734825">
+            <state line="163" column="31" selection-start="5592" selection-end="5592" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1798#1834#0" expanded="true" />
@@ -150,10 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="34" selection-start="7786" selection-end="7786" vertical-scroll-proportion="0.0">
+            <state line="193" column="46" selection-start="8325" selection-end="8325" vertical-scroll-proportion="0.528754">
               <folding>
                 <element signature="e#7990#7998#0" expanded="true" />
               </folding>
@@ -204,8 +202,8 @@
         <option value="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
       </list>
     </option>
   </component>
@@ -753,15 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="34" selection-start="7786" selection-end="7786" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#7990#7998#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Getters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="31" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
@@ -771,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-0.40734825">
+        <state line="163" column="31" selection-start="5592" selection-end="5592" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1798#1834#0" expanded="true" />
@@ -781,6 +770,15 @@
             <element signature="e#2934#2962#0" expanded="true" />
             <element signature="method#createServer#0;class#AppContainer#0" expanded="false" />
             <element signature="e#5301#5310#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="46" selection-start="8325" selection-end="8325" vertical-scroll-proportion="0.528754">
+          <folding>
+            <element signature="e#7990#7998#0" expanded="true" />
           </folding>
         </state>
       </provider>
