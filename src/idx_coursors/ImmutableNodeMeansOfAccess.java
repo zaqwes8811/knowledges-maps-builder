@@ -11,6 +11,8 @@ import com.google.common.collect.ImmutableList;
  */
 public interface ImmutableNodeMeansOfAccess {
   ImmutableList<Integer> getDistribution();
+
+  // Для формирования пакета
   ImmutableList<String> getContent(Integer key);
   String getWord(Integer key);
 }
