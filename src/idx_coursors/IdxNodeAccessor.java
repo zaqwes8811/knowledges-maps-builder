@@ -191,7 +191,7 @@ public class IdxNodeAccessor {
         List<Integer> tmp = CASH_SENTENCES_KEYS_IDX.get(word);
         ImmutableList<Integer> pointers = ImmutableList.copyOf(tmp);
         for (final Integer ptr: pointers) {
-          sentences.add(CASH_CONTENT.get(ptr));
+          sentences.add(CASH_CONTENT.get(ptr-1));
         }
       } else {
         sentences.add("No records");
