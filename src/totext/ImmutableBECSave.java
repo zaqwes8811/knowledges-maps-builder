@@ -1,11 +1,11 @@
 package totext;
 
-import caches.VParserException;
+//import idx_coursors.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import crosscuttings.AppConstants;
+import through_functional.hided.AppConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -46,11 +46,12 @@ public final class ImmutableBECSave {
   } */
 
   // TODO(zaqwes) TOTH: Кажется синхронизация не нужна.
+  /*
   public static ImmutableBECSave create(ImmutableList<String> fileContent) {
     return new ImmutableBECSave(fileContent);
   }
 
-  /*
+
   // Возвращает экземпляр парсера по заданному имени файла BEC. Если одного не достаточно.
   //
   // Излишняя потокозащита. Она нужна только для доступа к файлу. Хотя это общая защита при создании
@@ -97,7 +98,7 @@ public final class ImmutableBECSave {
   }   */
 
   // Данные для парсера передаем извне. Чтение внутри конструктора сомнительно очень.
-  private ImmutableBECSave(ImmutableList<String> fileContent) {
+  /*private ImmutableBECSave(ImmutableList<String> fileContent) {
 
     // Какие исключения могут генерировать списки, мапы,...
     CONTENT = ImmutableList.copyOf(fileContent);
@@ -172,5 +173,5 @@ public final class ImmutableBECSave {
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
     }
-  }
+  }*/
 }

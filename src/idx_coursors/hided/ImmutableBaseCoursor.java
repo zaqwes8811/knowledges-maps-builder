@@ -12,9 +12,9 @@ package idx_coursors.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ProcessorTargets;
+import through_functional.hided.AppConstants;
+import through_functional.CrosscuttingsException;
+import through_functional.hided.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;

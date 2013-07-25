@@ -6,7 +6,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
-import crosscuttings.jobs_processors.ImmutableJobsFormer;
+import through_functional.hided.ImmutableJobsFormer;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
