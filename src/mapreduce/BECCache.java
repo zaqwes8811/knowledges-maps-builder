@@ -1,4 +1,4 @@
-package idx_coursors;
+package mapreduce;
 
 //import idx_coursors.IdxAccessor;
 

@@ -1,5 +1,5 @@
 {
-  "pharmacy": 1,
+  "pharmacy": 100,
   "brave": 1,
   "president": 1,
   "network of agents": 1,
