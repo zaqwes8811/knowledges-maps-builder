@@ -28,10 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class AppContainer {
@@ -51,10 +48,18 @@ public class AppContainer {
   // Context:
   //
   // Повторяемосеть конечно не учитывается.
-  static public Map<String, ImmutableList<String>> getPackage() {
-    Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
-    pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(getKey())));
-    return pkg;
+  static public ImmutableList<Map<String, ImmutableList<String>>> getPackage() {
+    List<Map<String, ImmutableList<String>>> fullPkg = new ArrayList<Map<String, ImmutableList<String>>>();
+
+    for (int i = 0; i < 12; ++i) {
+      Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
+      Integer currentKey = getKey();
+      pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
+      pkg.put("content", ACTIVE_NODE_ACCESSOR.getContent(currentKey));
+      pkg.put("translate", ImmutableList.of("No records"));
+      fullPkg.add(pkg);
+    }
+    return ImmutableList.copyOf(fullPkg);
   }
 
   static public void closeApp() {
@@ -139,11 +144,12 @@ public class AppContainer {
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
     //System.out.println("Root Directory = "+System.getProperty("user.dir"));
 
-    /*Server server = createServer();
+    ///*
+    Server server = createServer();
 
     // Регистрируем сервлет?
     server.start();
-    server.join(); */
+    server.join(); //*/
   }
 
   // @State
@@ -159,7 +165,8 @@ public class AppContainer {
       response.setContentType("text/html");
       response.setStatus(HttpServletResponse.SC_OK);
 
-      String jsonResponse = new Gson().toJson(Getters.createFake().getPackage());
+      //String jsonResponse = new Gson().toJson(Getters.createFake().getPackage());
+      String jsonResponse = new Gson().toJson(AppContainer.getPackage());
 
       response.setCharacterEncoding("UTF-8");
       response.getWriter().println(jsonResponse);
