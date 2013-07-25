@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="javatuples-1.2">
     <CLASSES>
-      <root url="jar://D:/home/work-libs/java/javatuples-1.2/dist/javatuples-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../work-libs/java/javatuples-1.2/dist/javatuples-1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
