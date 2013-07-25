@@ -1,4 +1,4 @@
-spinning-vocabulary-cards
-=========================
+## For help learing english language
 
-Develop name.
+## Release notes
+- Do full chain for BEC dictonary
