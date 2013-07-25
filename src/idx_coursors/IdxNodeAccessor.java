@@ -185,10 +185,17 @@ public class IdxNodeAccessor {
         throw new OutOfRangeOnAccess("Out of range.");
       }
       // Извлекаем набор ключей для доступа
-
-      // По каждому ключу извлекаем предложение
       List<String> sentences = new ArrayList<String>();
-
+      String word = CASH_SORTED_IDX.get(key);
+      if (CASH_SENTENCES_KEYS_IDX.containsKey(word)) {
+        List<Integer> tmp = CASH_SENTENCES_KEYS_IDX.get(word);
+        ImmutableList<Integer> pointers = ImmutableList.copyOf(tmp);
+        for (final Integer ptr: pointers) {
+          sentences.add(CASH_CONTENT.get(ptr));
+        }
+      } else {
+        sentences.add("No records");
+      }
       return ImmutableList.copyOf(sentences);
     }
 
