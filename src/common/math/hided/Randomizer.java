@@ -1,4 +1,4 @@
-package common.math;
+package common.math.hided;
 
 /**
  * Created with IntelliJ IDEA.
