@@ -1,11 +1,11 @@
 package totext;
 
-import caches.VParserException;
+//import idx_coursors.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import crosscuttings.AppConstants;
+import through_functional.hided.AppConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,6 +35,7 @@ import java.util.List;
 //
 // Скорее всего это будет кэшем словаря.
 public final class ImmutableBECParser {
+
   // TODO(zaqwes) TOTH: Кажется синхронизация не нужна.
   public static ImmutableBECParser create(ImmutableList<String> fileContent) {
      return new ImmutableBECParser(fileContent);
@@ -91,7 +92,7 @@ public final class ImmutableBECParser {
     if (!(idx < 0 || idx > COUNT_WORDS-1)) {
        return SORTED_WORDS_ALPH.get(idx);
     } else {
-      throw new VParserException("Out of range.");
+      throw new VParserException();
     }
   }
 

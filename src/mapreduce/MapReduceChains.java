@@ -7,12 +7,11 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import crosscuttings.AppConfigurator;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.jobs_processors.ImmutableJobsFormer;
-import crosscuttings.jobs_processors.ProcessorTargets;
-import idx_coursors.IdxAccessor;
+import through_functional.hided.AppConstants;
+import through_functional.CrosscuttingsException;
+import through_functional.hided.ImmutableJobsFormer;
+import through_functional.hided.ProcessorTargets;
+//import idx_coursors.IdxAccessor;
 import totext.ImmutableBECParser;
 
 import java.io.BufferedWriter;
@@ -184,7 +183,7 @@ public class MapReduceChains {
   public static void runBECChain() {
     // Как-то нужно правильно сопоставить слово и контент.
     try {
-      final String pathToAppFolder = AppConfigurator.getPathToAppFolder();
+      final String pathToAppFolder = "";//AppConfigurator.getPathToAppFolder();
       // Begin "MapReduce" stage
       ImmutableList<String> content =
           Util.fileToList(
@@ -240,14 +239,14 @@ public class MapReduceChains {
           AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX),
           idxSentencesForSave);
 
-      IdxAccessor.saveListObjects(tmp);
+      //IdxAccessor.saveListObjects(tmp);
 
     } catch (IOException e) {
       Util.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
-    } catch (CrosscuttingsException e) {
+    } /*catch (CrosscuttingsException e) {
       Util.print(e.getMessage());
-    }
+    } */
   }
 }
