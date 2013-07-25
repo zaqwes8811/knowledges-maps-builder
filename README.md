@@ -1,4 +1,5 @@
-## For help learing english language
+## Why? 
+For help learing english language
 
 ## Release notes
 - Do full chain for BEC dictonary
