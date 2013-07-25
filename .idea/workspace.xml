@@ -2,86 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/crosscuttings/AppConfiguratorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/ConfFileIsCorrupted.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/CrosscuttingsException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundConfFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeIsCorrupted.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeMeansOfAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/OutOfRangeOnAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/RecordNoFound.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/UI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/app.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/checkthread_annotations_1_0_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/bec-node/content.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/bec-node/descriptions.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/bec-node/frequences.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jcip_annotations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/default-node/sentences.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/bec-node/filters/sorted.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-folder/default-node/sorted.txt" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\cfgs\app_cfg.yaml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\AppConfigurator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\CrosscuttingsException.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Fx.py" afterPath="$PROJECT_DIR$/models/Fx.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" afterPath="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/mapreduce/Mappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/math/RandomGeneratorException.java" afterPath="$PROJECT_DIR$/src/common/math/RandomGeneratorException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_2_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/guava_14_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/guava_14_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/javatuples_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/javatuples_1_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jetty_all_7_0_2_v20100331.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jetty_all_7_0_2_v20100331.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/servlet_api_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api_2_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/snakeyaml_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/snakeyaml_1_12.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\default-node\frequences.txt" afterPath="$PROJECT_DIR$/app-folder/default-node/frequences.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\default-node\sentences.txt" afterPath="$PROJECT_DIR$/app-folder/bec-node/ptrs-to-sentences.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\default-node\sorted.txt" afterPath="$PROJECT_DIR$/app-folder/bec-node/filters/bec-dictionary.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\crawler_schedule.txt" afterPath="$PROJECT_DIR$/targets/crawler_schedule.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\crawler_schedule_per_docs.txt" afterPath="$PROJECT_DIR$/targets/crawler_schedule_per_docs.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\crawler_schedule_test.txt" afterPath="$PROJECT_DIR$/targets/crawler_schedule_test.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\spider_extractor_target.json" afterPath="$PROJECT_DIR$/targets/spider_extractor_target.json" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\spider_extractor_target.txt" afterPath="$PROJECT_DIR$/targets/spider_extractor_target.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\spider_extractor_target_onto.json" afterPath="$PROJECT_DIR$/targets/spider_extractor_target_onto.json" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\apps\targets\spider_extractor_target_onto.txt" afterPath="$PROJECT_DIR$/targets/spider_extractor_target_onto.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\bec-preliminary-wordlist.pdf" afterPath="$PROJECT_DIR$/raw-data/bec-preliminary-wordlist.pdf" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\leo.txt" afterPath="$PROJECT_DIR$/raw-data/leo.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\list-preposition.txt" afterPath="$PROJECT_DIR$/raw-data/list-preposition.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\used-regex.txt" afterPath="$PROJECT_DIR$/raw-data/used-regex.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\voc-top.txt" afterPath="$PROJECT_DIR$/raw-data/voc-top.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\vocabularity-context.txt" afterPath="$PROJECT_DIR$/raw-data/vocabularity-context.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\vocabularity-folded.txt" afterPath="$PROJECT_DIR$/raw-data/vocabularity-folded.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\vocabularity-save.txt" afterPath="$PROJECT_DIR$/raw-data/vocabularity-save.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\raw-dicts\vocabularity.txt" afterPath="$PROJECT_DIR$/raw-data/vocabularity.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\ServletPrototype.java" afterPath="$PROJECT_DIR$/src/hided/ServletPrototype.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\caches\BECCache.java" afterPath="$PROJECT_DIR$/src/mapreduce/BECCache.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\caches\VParserException.java" afterPath="$PROJECT_DIR$/src/totext/VParserException.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\common\math\ImmutableSummators.java" afterPath="$PROJECT_DIR$/src/common/math/hided/ImmutableSummators.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\common\math\Randomizer.java" afterPath="$PROJECT_DIR$/src/common/math/hided/Randomizer.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\common\math\Randomizers.java" afterPath="$PROJECT_DIR$/src/common/math/hided/Randomizers.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\common\tests\BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/tests/common/BaseTokenizerTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\common\tests\CompressorsTest.java" afterPath="$PROJECT_DIR$/tests/common/CompressorsTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\AppConstants.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/AppConstants.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/tests/crosscuttings/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ImmutableJobsFormer.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\crosscuttings\jobs_processors\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\idx_coursors\IdxAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/hided_code.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -221,7 +142,7 @@
       <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="208" column="14" selection-start="8634" selection-end="8634" vertical-scroll-proportion="0.5550239">
+            <state line="210" column="4" selection-start="8640" selection-end="8640" vertical-scroll-proportion="0.6092504">
               <folding>
                 <element signature="e#7990#7998#0" expanded="true" />
               </folding>
@@ -617,7 +538,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30875203" sideWeight="0.77553445" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22446556" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22446556" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24644549" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -795,7 +716,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="14" selection-start="8634" selection-end="8634" vertical-scroll-proportion="0.5550239">
+        <state line="210" column="4" selection-start="8640" selection-end="8640" vertical-scroll-proportion="0.6092504">
           <folding>
             <element signature="e#7990#7998#0" expanded="true" />
           </folding>
