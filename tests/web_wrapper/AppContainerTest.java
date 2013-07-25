@@ -17,18 +17,18 @@ import java.util.List;
 public class AppContainerTest {
   @Test
   public void testCloseApp() throws Exception {
-    List<Integer> result = new ArrayList<Integer>();
+    /*List<Integer> result = new ArrayList<Integer>();
     Integer SIZE_EXPERIMENT = 10000;
     for (int i = 0; i < SIZE_EXPERIMENT; ++i) {
       result.add(AppContainer.getKey());
     }
-    Util.print(result);
+    Util.print(result);*/
   }
 
   @Test
   public void testMain() throws Exception {
-    /*for (int i = 0; i < 19; ++i) {
+    for (int i = 0; i < 19; ++i) {
       Util.print(AppContainer.getPackage());
-    }*/
+    }
   }
 }

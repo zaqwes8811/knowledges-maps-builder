@@ -178,6 +178,27 @@ public class IdxNodeAccessor {
         throw new OutOfRangeOnAccess("Out of range.");
       }
     }
+
+    @Override
+    public ImmutableList<String> getContent(Integer key) {
+      if (!checkKey(key)) {
+        throw new OutOfRangeOnAccess("Out of range.");
+      }
+      // Извлекаем набор ключей для доступа
+
+      // По каждому ключу извлекаем предложение
+      List<String> sentences = new ArrayList<String>();
+
+      return ImmutableList.copyOf(sentences);
+    }
+
+    private Boolean checkKey(Integer key) {
+      if (!(key < 0 || key > COUNT_ITEMS-1)) {
+        return Boolean.TRUE;
+      } else {
+        return Boolean.FALSE;
+      }
+    }
   }
 
   /*
