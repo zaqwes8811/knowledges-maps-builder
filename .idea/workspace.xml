@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -38,7 +36,7 @@
     <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
     <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410751272" ignored="false" />
     <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374767557618" ignored="false" />
-    <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374765676282" ignored="false" />
+    <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374767622219" ignored="false" />
     <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374408265278" ignored="false" />
     <file path="/NodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374409544272" ignored="false" />
     <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374427416400" ignored="false" />
@@ -133,19 +131,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImmutableNodeMeansOfAccess.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImmutableNodeMeansOfAccess.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="314" selection-end="360" vertical-scroll-proportion="0.0">
+            <state line="14" column="28" selection-start="341" selection-end="341" vertical-scroll-proportion="0.41105354">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="0" selection-start="7902" selection-end="7902" vertical-scroll-proportion="0.6476684">
+            <state line="186" column="0" selection-start="7902" selection-end="7902" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#8039#8047#0" expanded="true" />
               </folding>
@@ -196,8 +194,8 @@
         <option value="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
       </list>
     </option>
   </component>
@@ -774,19 +772,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="314" selection-end="360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="0" selection-start="7902" selection-end="7902" vertical-scroll-proportion="0.6476684">
+        <state line="186" column="0" selection-start="7902" selection-end="7902" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#8039#8047#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="341" selection-end="341" vertical-scroll-proportion="0.41105354">
+          <folding />
         </state>
       </provider>
     </entry>
