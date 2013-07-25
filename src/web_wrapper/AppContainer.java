@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 import common.Util;
+import common.math.GeneratorAnyRandom;
 import idx_coursors.IdxNodeAccessor;
 import idx_coursors.ImmutableNodeMeansOfAccess;
 import idx_coursors.NodeIsCorrupted;
@@ -29,14 +30,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class AppContainer {
   private AppContainer() {}
-  //private static final Optional<ImmutableSet<String>> NODES;  // Программа должна отрубится если
-    //   статическая часть не сработала
   private static final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
   private static final ImmutableNodeMeansOfAccess ACTIVE_NODE_ACCESSOR;
+  private static final GeneratorAnyRandom GENERATOR;
+
+  // @Fake
+  static public Integer getPoint() {
+    return GENERATOR.getCodeWord();
+  }
+
+  // Index: нужно для маркеровки
+  // Word: само слово
+  // Translates:
+  // Context:
+  //
+  // Повторяемосеть конечно не учитывается.
+  static public Map<String, ImmutableList<String>> getPackage() {
+     return null;
+  }
 
   static public void closeApp() {
     // Выходим
@@ -85,6 +101,7 @@ public class AppContainer {
 
     // Коннектим генератор случайных чисел и акссессор
     List<Integer> distribution = ACTIVE_NODE_ACCESSOR.getDistribution();
+    GENERATOR = GeneratorAnyRandom.create(distribution);
   }
 
   private static Server createServer() {

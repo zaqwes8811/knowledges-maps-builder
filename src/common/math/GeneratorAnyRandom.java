@@ -86,8 +86,8 @@ public class GeneratorAnyRandom {
   }
 
   // Любой список с числами
-  // TODO(zaqwes): Нулевые знаения в списке? - игнорируются при расчетах
-  public static GeneratorAnyRandom create(List<Integer> distribution) throws  RandomGeneratorException {
+  // @throws: RandomGeneratorException
+  public static GeneratorAnyRandom create(List<Integer> distribution) {
     if (distribution.isEmpty()) throw new RandomGeneratorException("In list must be no empty.");
     return new GeneratorAnyRandom(distribution);
   }
