@@ -1,6 +1,5 @@
 package nlp;
 
-import common.ImmutableAppUtils;
 import com.google.common.base.Splitter;
 
 import java.text.BreakIterator;
