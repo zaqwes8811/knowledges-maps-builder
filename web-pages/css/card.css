@@ -20,7 +20,7 @@
   margin-left: 2%;
   margin-top: 4px;
   padding-left: 10px;
-  border-radius: 4px 4px 4px 4px;
+  /*border-radius: 4px 4px 4px 4px;*/
 }
 
 .update {
@@ -39,8 +39,8 @@ position: absolute;
   position: absolute;
   right:0;
   height: 100%;
-  width: 94%;
-  border-radius: 0px 4px 4px 0px;
+  width: 100%;
+  /*border-radius: 0px 4px 4px 0px;*/
 }
 
 .pack-card-container-inner {
@@ -49,7 +49,7 @@ position: absolute;
   left:0;
   height: 100%;
   width: 94%;
-  border-radius: 0px 4px 4px 0px;
+  /*border-radius: 0px 4px 4px 0px;*/
 }
 
 .active-card {
@@ -57,7 +57,7 @@ position: absolute;
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 0px 4px 4px 0px;
+  /*border-radius: 0px 4px 4px 0px;*/
   background-color: lightgray;
 }
 
@@ -78,14 +78,32 @@ position: absolute;
   left: 5px;
   background-color: lightgray;
   position: absolute;
-  border-radius: 4px 0px 0px 4px;
+  /*border-radius: 4px 0px 0px 4px;*/
 }
 
 /* Перелистователь */
 .tuner-base {
-  height: 50%;
-  width: 6%;
+  height: 100%;
+  width: 10%;
   position: absolute;
+}
+
+.circle {
+background-color: green;
+width: 30px;
+	height: 30px;
+
+
+margin-top: auto;
+margin-bottom: auto;
+position:relative;
+margin: 0 auto;
+background-color: red !important;
+
+	background: red;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
 }
 
 /* Внешние тюнеры */
@@ -93,14 +111,14 @@ position: absolute;
   left: 0;
   background-color: gray;
   top: 0;
-  border-radius: 4px 0px 0px 0px;
+  /*border-radius: 4px 0px 0px 0px;*/
 }
 
 .tuner-base-down {
-  left: 0;
+  right: 0;
   background-color: lightgreen;
   bottom: 0;
-  border-radius: 0px 0px 0px 4px;
+  /*border-radius: 0px 0px 0px 4px;*/
 }
 
 /* Тюнеры внутри карточки */
@@ -108,16 +126,56 @@ position: absolute;
   right: 0;
   background-color: gray;
   top: 0;
-  border-radius: 0px 4px 0px 0px;
+  /*border-radius: 0px 4px 0px 0px;*/
 }
 
 .tuner-base-down-inner {
   right: 0;
   background-color: lightgreen;
   bottom: 0;
-  border-radius: 0px 0px 4px 0px;
+  /*border-radius: 0px 0px 4px 0px;*/
 }
 
 .tuner-base-down-inner:hover {
   background-color:seagreen;
+}
+
+/*TEST*/
+div.cn {
+  /*background-color: red;*/
+  display: table-cell;
+  vertical-align: middle;
+  /*text-align: center;*/
+}
+
+div.inner {
+  /*background-color: green;*/
+  display: inline-block;
+}
+
+div.cnf {
+    position:relative !important;
+    background-color: red;
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div.innerf {
+  background-color: green;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  text-align: left;
+}
+.circle-dev {
+    background-color: green;
+    width: 30px;
+	height: 30px;
+	background: red;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
 }
