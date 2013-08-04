@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -57,8 +58,8 @@
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766193391" ignored="false" />
     <file path="/AppContainerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766533706" ignored="false" />
     <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375599383081" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623948736" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623975920" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375635633649" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375624639585" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,19 +118,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="11" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0">
+            <state line="71" column="12" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.65255475">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="43" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.7894737">
+            <state line="26" column="38" selection-start="1277" selection-end="1277" vertical-scroll-proportion="14.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="99" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,9 +176,9 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+        <option value="$PROJECT_DIR$/web-pages/index.html" />
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
-        <option value="$PROJECT_DIR$/web-pages/index.html" />
       </list>
     </option>
   </component>
@@ -273,11 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="develop" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -665,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="39" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/hided/subs/sys-settings-new.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="27" selection-start="516" selection-end="516" vertical-scroll-proportion="0.5">
@@ -686,16 +685,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="11" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0">
+        <state line="26" column="38" selection-start="1277" selection-end="1277" vertical-scroll-proportion="14.384615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="43" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.7894737">
+        <state line="44" column="99" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="12" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.65255475">
           <folding />
         </state>
       </provider>
