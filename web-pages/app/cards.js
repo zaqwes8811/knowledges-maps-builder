@@ -66,6 +66,7 @@ function init() {
     pureInit();
 }
 
+// Подключает тюнеры?
 function pureInit() {
   $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
      // TODO(zaqwes): У каждого тюнера есть состояние. Хорошо бы его инкапсулировать.
