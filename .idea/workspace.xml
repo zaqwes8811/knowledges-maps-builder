@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
@@ -57,7 +56,7 @@
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766193391" ignored="false" />
     <file path="/AppContainerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766533706" ignored="false" />
     <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375599383081" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623649430" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623859135" ignored="false" />
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623633191" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,7 @@
       <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="27" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.5284672">
+            <state line="98" column="11" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.50364965">
               <folding />
             </state>
           </provider>
@@ -695,7 +694,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="27" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.5284672">
+        <state line="98" column="11" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.50364965">
           <folding />
         </state>
       </provider>
