@@ -88,7 +88,7 @@ position: absolute;
   position: absolute;
 }
 
-.circle {
+.circle-parent {
     background-color: white;
     width: 30px;
     height: 30px;
@@ -96,7 +96,7 @@ position: absolute;
     -webkit-border-radius: 15px;
     border-radius: 15px;
     position: relative;
-    top: 38px;
+    top: 35px;
     left: 2px;
 }
 
@@ -112,7 +112,7 @@ position: absolute;
     left: 2px;
 }
 
-.circle2 {
+.triangle-inner {
     position: relative;
     top: 4px;
     left: 2px;
