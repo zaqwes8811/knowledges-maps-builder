@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -58,8 +57,8 @@
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766193391" ignored="false" />
     <file path="/AppContainerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766533706" ignored="false" />
     <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375599383081" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375616248321" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375616181075" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623649430" ignored="false" />
+    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375623633191" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,7 @@
       <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="4" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.6773723">
+            <state line="102" column="27" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.5284672">
               <folding />
             </state>
           </provider>
@@ -130,7 +129,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="28" selection-start="1805" selection-end="1805" vertical-scroll-proportion="-10.461538">
+            <state line="22" column="44" selection-start="1130" selection-end="1130" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
@@ -256,7 +255,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="develop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,13 +305,13 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="web_wrapper" />
       <recent name="crosscuttings" />
       <recent name="idx_coursors" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="common" />
@@ -581,16 +602,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="66" selection-start="601" selection-end="601" vertical-scroll-proportion="0.027868852" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="4" selection-start="1797" selection-end="2024" vertical-scroll-proportion="0.6514286" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/OutOfRangeOnAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="31" selection-start="110" selection-end="128" vertical-scroll-proportion="0.09714286" />
@@ -661,16 +672,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/hided/subs/sys-settings-new.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="516" selection-end="516" vertical-scroll-proportion="0.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/sys-settings-engine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="28" selection-start="1805" selection-end="1805" vertical-scroll-proportion="-10.461538">
+        <state line="22" column="44" selection-start="1130" selection-end="1130" vertical-scroll-proportion="-13.730769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="4" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.6773723">
+        <state line="102" column="27" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.5284672">
           <folding />
         </state>
       </provider>
