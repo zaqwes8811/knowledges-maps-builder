@@ -42,7 +42,7 @@ function getFakeResponse() {
     var CONTENT = AConstants.CONTENT;
     var TRANSLATE = AConstants.TRANSLATE;
     response.push({
-       "content" : ["Hello Display the matched.", "Display the matched elements with a sliding motion."],
+       "content" : ["Hello Display the matched. Display the matched elements with a sliding motion.", "Display the matched elements with a sliding motion."],
        "translate" : ["Перевод1"],
        'word': ['matched']
     });
@@ -59,11 +59,18 @@ function getFakeResponse() {
            'word': ['hello']
         });
 
+    response.push({
+               'content' : ["Hello"],
+               'translate' : ["Перевод", "Переводasdf"],
+               'word': ['hello']
+            });
+
     return response;
 }
 //var Cards = (function)
 function init() {
     pureInit();
+    processResponse(getFakeResponse());
 }
 
 // Подключает тюнеры?
@@ -89,7 +96,6 @@ function pureInit() {
            tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);});
   });
 }
-
 
 function processResponse(response) {
     // TODO(zaqwes): TOTH: Что будет менятся от запроса к запросу?
