@@ -87,7 +87,7 @@
     -webkit-border-radius: 15px;
     border-radius: 15px;
     position: relative;
-    top: 58px;
+    top: 60px;
     left: 2px;
 }
 
@@ -108,23 +108,25 @@
 /** Inner subcard */
 /* Тюнеры внутри карточки */
 .slice-tuner-up {
-  height: 5%;
+  height: 12%;
   width: 100%;
   right: 0;
   top: 0;
-  background-color: gold;
+  background-color: #333399;
 }
 
 .slice-tuner-down {
   width: 100%;
-  height: 5%;
+  height: 12%;
   bottom: 0;
-  background-color: gold;
+  background-color: #333399;
 }
 
-.slice-tuner-down:hover, .slice-tuner-up:hover {
-  background-color:seagreen;
+.slice-tuner-down:hover, .slice-tuner-up:hover, .triangle-up:hover {
+  background-color: #330099;
 }
+
+
 
 .leaf {
   top: 0;
@@ -144,11 +146,38 @@
 }
 
 .slice {
-  height: 90%;
-  width: 100%;
-  top: 5%;
+  height: 76%;
+  width: 96%;
+  top: 12%;
+  left: 2%;
   background-color: #333399;
   position: absolute;
   vertical-align: middle;
+}
+
+.slice-inner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+    vertical-align: middle;
+  background-color: #333399;
+}
+
+.inner-triangle {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  left: 47%;
+}
+
+.triangle-up {
+  border-bottom: 14px solid white;
+  top: 2px;
+}
+
+.triangle-down {
+  border-top: 14px solid white;
+  bottom: 2px;
 }
 

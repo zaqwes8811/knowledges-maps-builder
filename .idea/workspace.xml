@@ -56,8 +56,8 @@
     <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766028559" ignored="false" />
     <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766193391" ignored="false" />
     <file path="/AppContainerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766533706" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375599383081" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376129288493" ignored="false" />
+    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376151305207" ignored="false" />
+    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376150746460" ignored="false" />
     <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375624639585" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,10 +117,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="0" selection-start="2799" selection-end="2799" vertical-scroll-proportion="3.6582599">
+            <state line="154" column="19" selection-start="2545" selection-end="2545" vertical-scroll-proportion="-14.04">
               <folding />
             </state>
           </provider>
@@ -129,16 +129,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="38" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-0.65384614">
+            <state line="52" column="24" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-17.653847">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="44" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+            <state line="37" column="25" selection-start="999" selection-end="999" vertical-scroll-proportion="0.46459627">
               <folding />
             </state>
           </provider>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
-        <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
       </list>
     </option>
   </component>
@@ -672,23 +672,23 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.071429" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="44" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+        <state line="154" column="19" selection-start="2545" selection-end="2545" vertical-scroll-proportion="-14.04">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="38" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-0.65384614">
+        <state line="52" column="24" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-17.653847">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="0" selection-start="2799" selection-end="2799" vertical-scroll-proportion="3.6582599">
+        <state line="37" column="25" selection-start="999" selection-end="999" vertical-scroll-proportion="0.46459627">
           <folding />
         </state>
       </provider>

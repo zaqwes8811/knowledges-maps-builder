@@ -24,17 +24,15 @@ var AConstants = (function () {
     SUB_CARDS_SEL : ".leafs-container > div.leaf",
     PACK_CARDS_SEL : '.leafs-container',
     CARD_CONTAINER_SEL : '.card-container',
-    INNER_CARDS_CONTAINER: '.leafs-container-inner'
+    INNER_CARDS_CONTAINER: '.slice-inner'
   }
 })();
 
 function tick(seed, sel, count, obj) {
-      $(obj).parent().find(sel).each(function (key, value) {
-                  var newPos = (seed+key)%count;
-                  $(this).css("z-index", newPos);
-                });
-       //obj = null;
-    }
+  $(obj).parent().find(sel).each(function (key, value) {
+    $(this).css("z-index", (seed+key)%count);
+  });
+}
 
 function getFakeResponse() {
     // Данные которые будут приходить с веб-сервера
@@ -85,15 +83,24 @@ function pureInit() {
      // TODO(zaqwes): использовать find() наверное не очень хорошо.
      var seedState = 0;
      $(this).find(AConstants.UP_TUNER_SEL)
-       .click(function() {
+        .click(function() {
            var COUNT = AConstants.TOTAL_FRONT_CARDS;
            seedState = (seedState+1)%COUNT;
-           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);});
+           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
+        })
+        .hover(
+            function() {$(this).find('.circle-inner').css('background-color', '#330099');},
+            function() {$(this).find('.circle-inner').css('background-color', '#333399');}
+        );
      $(this).find(AConstants.DOWN_TUNER_SEL)
        .click(function() {
            var COUNT = AConstants.TOTAL_FRONT_CARDS;
            seedState = (seedState-1+COUNT)%COUNT;
-           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);});
+           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
+       })
+       .hover(
+                function() {$(this).find('.circle-inner').css('background-color', '#330099');},
+                function() {$(this).find('.circle-inner').css('background-color', '#333399');});
   });
 }
 
@@ -129,30 +136,40 @@ function fillNoWordCard(content, handler) {
 
     // TODO(zaqwes): Low perfomance! Можно в цикле развернуть.
     var contentReversed = (goog.array.clone(content)).reverse();
+    var  wrapper = $("<div/>").addClass('slice').appendTo(handler);
     for (var i = 0; i < countItems; ++i) {
         // Текст нужно обернуть получше
         $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
-         $("<div/>").addClass("slice").appendTo(handler));//);
-         // .appendTo(
-           //$("<div/>").addClass('leafs-container-inner')
+          $("<div/>").addClass("slice-inner").appendTo(wrapper));
     }
 
     // Добавляем тюнеры только если более одного элемента.
     // TODO(zaqwes): Сделать их по середине поля! И тонкими
     if (countItems > 1) {
         var seed = 0;
-        $("<div/>").addClass("tuner-base slice-tuner-up")
+        var main_tuner = $("<div/>").addClass("tuner-base slice-tuner-up")
             .click(function() {
-                seed = (seed+1)%countItems;
-                tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);})
-            .appendTo(handler);
-        $("<div/>").addClass("tuner-base slice-tuner-down")
+              seed = (seed+1)%countItems;
+              tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);
+            })
+            .hover(
+                function() {$(this).find('.triangle-up').css('background-color', '#330099');},
+                function() {$(this).find('.triangle-up').css('background-color', '#333399');})
+            .appendTo(handler)
+        $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up").appendTo(main_tuner);
+        
+        // Тюнер вниз
+        main_tuner = $("<div/>").addClass("tuner-base slice-tuner-down")
             .click(function() {
-                seed = (seed-1+countItems)%countItems;
-                tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);})
+              seed = (seed-1+countItems)%countItems;
+              tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);
+            })
+            .hover(
+                function() {$(this).find('.triangle-down').css('background-color', '#330099');},
+                function() {$(this).find('.triangle-down').css('background-color', '#333399');})
             .appendTo(handler);
+        $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down").appendTo(main_tuner);
     }
-    handler = null;  // TODO(zaqwes): TOTH: Нужно ль?
 }
 
 
