@@ -21,10 +21,10 @@ var AConstants = (function () {
     // Selectors
     UP_TUNER_SEL : 'div.tuner-base.tuner-base-up',
     DOWN_TUNER_SEL : 'div.tuner-base.tuner-base-down',
-    SUB_CARDS_SEL : ".pack-card-container > div.active-card",
-    PACK_CARDS_SEL : '.pack-card-container',
-    CARD_CONTAINER_SEL : '.one-card-container',
-    INNER_CARDS_CONTAINER: '.pack-card-container-inner'
+    SUB_CARDS_SEL : ".leafs-container > div.leaf",
+    PACK_CARDS_SEL : '.leafs-container',
+    CARD_CONTAINER_SEL : '.card-container',
+    INNER_CARDS_CONTAINER: '.leafs-container-inner'
   }
 })();
 
@@ -43,7 +43,7 @@ function getFakeResponse() {
     var TRANSLATE = AConstants.TRANSLATE;
     response.push({
        "content" : ["Hello Display the matched. Display the matched elements with a sliding motion.", "Display the matched elements with a sliding motion."],
-       "translate" : ["Перевод1"],
+       "translate" : ["Перевод1", "Перевод2"],
        'word': ['matched']
     });
 
@@ -54,13 +54,13 @@ function getFakeResponse() {
     });
 
     response.push({
-           'content' : ["Hello"],
+           'content' : ["Hello", "Hello"],
            'translate' : ["Перевод", "Переводasdf"],
            'word': ['hello']
         });
 
     response.push({
-               'content' : ["Hello"],
+               'content' : ["Hello", "Hello"],
                'translate' : ["Перевод", "Переводasdf"],
                'word': ['hello']
             });
@@ -108,7 +108,7 @@ function processResponse(response) {
         var cardsHandles = {};
 
         $.each((goog.array.clone(AConstants.ITEMS)).reverse(), function (key, value) {
-          cardsHandles[value] = $("<div/>").addClass('active-card').appendTo(subCardsPkg);
+          cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
           $(cardsHandles[value]).css("z-index", key);
         });
 
@@ -132,8 +132,9 @@ function fillNoWordCard(content, handler) {
     for (var i = 0; i < countItems; ++i) {
         // Текст нужно обернуть получше
         $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
-         $("<div/>").addClass("content-stack").appendTo(
-           $("<div/>").addClass('pack-card-container-inner').appendTo(handler)));
+         $("<div/>").addClass("slice").appendTo(handler));//);
+         // .appendTo(
+           //$("<div/>").addClass('leafs-container-inner')
     }
 
     // Добавляем тюнеры только если более одного элемента.
