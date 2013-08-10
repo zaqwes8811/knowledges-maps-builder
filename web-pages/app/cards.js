@@ -19,8 +19,8 @@ var AConstants = (function () {
     TOTAL_FRONT_CARDS : items.length,
 
     // Selectors
-    UP_TUNER_SEL : 'div.tuner-base.tuner-base-up',
-    DOWN_TUNER_SEL : 'div.tuner-base.tuner-base-down',
+    UP_TUNER_SEL : 'div.tuner-base.leafs-tuner-up',
+    DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
     SUB_CARDS_SEL : ".leafs-container > div.leaf",
     PACK_CARDS_SEL : '.leafs-container',
     CARD_CONTAINER_SEL : '.card-container',
@@ -141,12 +141,12 @@ function fillNoWordCard(content, handler) {
     // TODO(zaqwes): Сделать их по середине поля! И тонкими
     if (countItems > 1) {
         var seed = 0;
-        $("<div/>").addClass("tuner-base tuner-base-up-inner")
+        $("<div/>").addClass("tuner-base slice-tuner-up")
             .click(function() {
                 seed = (seed+1)%countItems;
                 tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);})
             .appendTo(handler);
-        $("<div/>").addClass("tuner-base tuner-base-down-inner")
+        $("<div/>").addClass("tuner-base slice-tuner-down")
             .click(function() {
                 seed = (seed-1+countItems)%countItems;
                 tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);})
