@@ -5,84 +5,76 @@
   http://habrahabr.ru/post/126207/
 */
 
+/** Global */
+.text-contents {
+    position:absolute;
+    vertical-align:middle;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.0em;
+    top: 5px;
+}
 
+
+
+/** Сами карточки */
 .compressed {
   margin-top: 2%;
   margin-left:8%;
   margin-right:5%;
 }
 
-.one-card-container {
+.card-container {
   position: relative;
-  height: 100px;
+  height: 120px;
   background-color: #333399;
   margin-left: 2%;
   margin-top: 4px;
   padding-left: 10px;
 }
 
-.update {
-  background-color: white;
-  height:20px;
-}
-
-.alighted {
-position: absolute;
-  right:18px;
-}
-
-/* Сами видимые карточки. */
-.pack-card-container {
-  top: 0;
-  position: absolute;
-  right:11%;
-  height: 100%;
-  width: 78%;
-
-}
-
-.pack-card-container-inner {
-  top: 0;
-  position: absolute;
-  left:0;
-  height: 100%;
-  width: 94%;
-}
-
-.active-card {
-  top: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #333399;
-
-}
-
-.translate {}
-.content {}
-.word {}
-
-.text-contents {
-    position:absolute;
-    vertical-align:middle;
-    color: white;
-    /*font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; */
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 1.0em;
-    top: 5px;
-}
-
-.content-stack {
-  height: 100%;
-  width: 95%;
-  left: 5px;
-  background-color: #333399;
-  position: absolute;
-  /*text-align: center;*/
-    vertical-align: middle;
-}
-
 /* Перелистователь */
+/* Внешние тюнеры */
+.tuner-base-up {
+  left: 0;
+  top: 0;
+  background-color: #333399;
+}
+
+.tuner-base-up:hover, .tuner-base-down:hover {
+  background-color: #330099;
+}
+
+.tuner-base-down {
+  right: 0;
+  background-color: #333399;
+  bottom: 0;
+}
+
+.triangle-inner {
+    position: relative;
+    top: 4px;
+    left: 2px;
+
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 18px solid white;
+}
+
+.triangle-inner-right {
+    position: relative;
+    top: 4px;
+    left: 6px;
+
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 18px solid white;
+}
+
 .tuner-base {
   height: 100%;
   width: 11%;
@@ -113,48 +105,9 @@ position: absolute;
     left: 2px;
 }
 
-.triangle-inner {
-    position: relative;
-    top: 4px;
-    left: 2px;
-
-    width: 0;
-    height: 0;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-right: 18px solid white;
-}
-
-.triangle-inner-right {
-    position: relative;
-    top: 4px;
-    left: 6px;
-
-    width: 0;
-    height: 0;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-left: 18px solid white;
-}
 
 
-/* Внешние тюнеры */
-.tuner-base-up {
-  left: 0;
-  top: 0;
-  background-color: #333399;
-}
-
-.tuner-base-up:hover, .tuner-base-down:hover {
-  background-color: #330099;
-}
-
-.tuner-base-down {
-  right: 0;
-  background-color: #333399;
-  bottom: 0;
-}
-
+/** Inner subcard */
 /* Тюнеры внутри карточки */
 .tuner-base-up-inner {
   right: 0;
@@ -173,3 +126,38 @@ position: absolute;
 .tuner-base-down-inner:hover {
   background-color:seagreen;
 }
+
+.leafs-container-inner {
+  top: 0;
+  position: absolute;	
+  left:0;
+  height: 100%;
+  width: 94%;
+}
+
+.leaf {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;/*#333399;*/
+}
+
+/* Контейнер для активных карточек. */
+.leafs-container {
+  top: 0;
+  position: absolute;
+  right:11%;
+  height: 100%;
+  width: 78%;
+}
+
+.slice {
+  height: 100%;
+  width: 95%;
+  left: 5px;
+  background-color: #333399;
+  position: absolute;
+  vertical-align: middle;
+}
+
