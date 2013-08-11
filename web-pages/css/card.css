@@ -25,10 +25,24 @@
 .card-container {
   position: relative;
   height: 150px;
+  width: 310px;
   background-color: #333399;
   margin-left: 2%;
   margin-top: 4px;
   padding-left: 10px;
+}
+
+/* Updaters */
+.updater {
+  right: 0;
+  background-color: #333399;
+  bottom: 0;
+}
+
+.updater:hover {
+  right: 0;
+  background-color: gold;
+  bottom: 0;
 }
 
 /* Перелистователь */
@@ -44,7 +58,7 @@
 }
 
 .leafs-tuner-down {
-  right: 0;
+  right: 10%;
   background-color: #333399;
   bottom: 0;
 }
@@ -140,9 +154,9 @@
 .leafs-container {
   top: 0;
   position: absolute;
-  right:11%;
+  left:11%;
   height: 100%;
-  width: 78%;
+  width: 68%;
 }
 
 .slice {
