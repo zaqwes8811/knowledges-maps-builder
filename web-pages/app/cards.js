@@ -76,7 +76,6 @@ function pureInit() {
   $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
      // TODO(zaqwes): У каждого тюнера есть состояние. Хорошо бы его инкапсулировать.
      // Подключаем тюнер-вверх для подкарт - нужно вынести отсюда. Это чистая инициализация.
-     // TODO(zaqwes): Тюнеры конфликтуют и глючат
      // TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
      // TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
      // TODO(zaqwes): DANGER: Быстро утекает память! Или медленно идет сборка мусора?
@@ -101,33 +100,46 @@ function pureInit() {
        .hover(
                 function() {$(this).find('.circle-inner').css('background-color', '#330099');},
                 function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+
+     // Получить новое слово
+     $(this).find('div.tuner-base.updater')
+        .click(function () {
+           alert();
+        });
   });
 }
 
 function processResponse(response) {
     // TODO(zaqwes): TOTH: Что будет менятся от запроса к запросу?
     // Обрабатываем все доступные карты
+    //
+    // Args:
+    //   response - [{}, {}]
     $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
-        // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-        var subCardsPkg = $(this).find(AConstants.PACK_CARDS_SEL);
-        subCardsPkg.empty();  // TODO(zaqwes): Не утекают ли обработчики тюнеров?
-        // http://stackoverflow.com/questions/11726864/jquery-empty-click-and-memory-management
-        var cardsHandles = {};
+        var processOneCard = function(obj, dataOneCard) {
+          // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
+          var subCardsPkg = $(obj).find(AConstants.PACK_CARDS_SEL);
+          
+          subCardsPkg.empty();  // TODO(zaqwes): Не утекают ли обработчики тюнеров?
+          // http://stackoverflow.com/questions/11726864/jquery-empty-click-and-memory-management
+          var cardsHandles = {};
 
-        $.each((goog.array.clone(AConstants.ITEMS)).reverse(), function (key, value) {
-          cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
-          $(cardsHandles[value]).css("z-index", key);
-        });
+          $.each((goog.array.clone(AConstants.ITEMS)).reverse(), function (key, value) {
+            cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
+            $(cardsHandles[value]).css("z-index", key);
+          });
 
-        // Добавляем контент
-        var tmp = [AConstants.CONTENT, AConstants.TRANSLATE, AConstants.WORD];
-        $.each(tmp, function(key_local, value) {
-            var handler = cardsHandles[value];
-            var content = response[key][value];
-            fillNoWordCard(content, handler);
-        });
-
-        $.each(function (key, value) { value = null; });
+          // Добавляем контент
+          var leafs_names = [AConstants.CONTENT, AConstants.TRANSLATE, AConstants.WORD];
+          $.each(leafs_names, function(key_local, value) {
+              var handler = cardsHandles[value];
+              var content = dataOneCard[value];
+              fillNoWordCard(content, handler);
+          });
+        };
+        
+        var dataOneCard = response[key];
+        processOneCard(this, dataOneCard);
     });  // .each()
 }
 
