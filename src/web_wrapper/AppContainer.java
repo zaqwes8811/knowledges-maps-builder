@@ -158,6 +158,7 @@ public class AppContainer {
   // @Servlets
   public static class Pkg extends HttpServlet {
     // Используем идею REST - параметры GET запросе не передаются
+    @Override
     protected void doGet(
         HttpServletRequest request,
         HttpServletResponse response) throws ServletException, IOException {
@@ -165,8 +166,9 @@ public class AppContainer {
       response.setContentType("text/html");
       response.setStatus(HttpServletResponse.SC_OK);
 
+      //TODO(zaqwes): Сделать адаптер для класса
       //String jsonResponse = new Gson().toJson(Getters.createFake().getPackage());
-      String jsonResponse = new Gson().toJson(AppContainer.getPackage());
+      String jsonResponse = new Gson().toJson(AppContainer.getPackage().get(0));
 
       response.setCharacterEncoding("UTF-8");
       response.getWriter().println(jsonResponse);
