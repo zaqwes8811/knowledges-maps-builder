@@ -36,10 +36,11 @@
 /* Updaters */
 .updater {
   right: 0;
-  top: 0;
-  height:  50% !important;
-  /*background-color: #333399; */
-   background-color: gold;
+  bottom: 0;
+  /*top: 0;
+  height:  50% !important;  */
+  background-color: #333399;
+   /*background-color: gold;*/
 }
 
 .updater:hover {

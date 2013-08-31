@@ -59,10 +59,19 @@ public class AppContainer {
     List<String> rawKeys = new ArrayList<String>();
     List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
     Integer currentKey = GENERATOR.getCodeWord();
-    rawKeys.add("content");
-    values.add(ACTIVE_NODE_ACCESSOR.getContent(currentKey));
-    //rawKeys.add("translate");
-    //values.add(ImmutableList.of("None"));
+
+    // Добавляем, только если что-то есть
+    ImmutableList<String> content = ACTIVE_NODE_ACCESSOR.getContent(currentKey);
+    if (!content.isEmpty()) {
+      rawKeys.add("content");
+      values.add(content);
+    }
+
+    ImmutableList<String> translate = ImmutableList.of();
+    if (!translate.isEmpty()) {
+      rawKeys.add("translate");
+      values.add(translate);
+    }
 
     // Обазятельно!
     rawKeys.add("word");
