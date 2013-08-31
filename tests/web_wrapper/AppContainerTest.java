@@ -24,31 +24,15 @@ import java.util.Map;
 public class AppContainerTest {
 
   //TODO(zaqwes): Венуть tuple - результат и отчет - если отчет пуст - все хорошо
-  private ImmutableList<ImmutableNodeAccessor> getNodes(
-      ImmutableSet<String> nameNodes, IFabricImmutableNodeAccessors fabric)
-      throws ConfFileIsCorrupted, NoFoundConfFile {
-    Map<String, String> report = new HashMap<String, String>();
-    List<ImmutableNodeAccessor> accessors = new ArrayList<ImmutableNodeAccessor>();
-    for (String node: nameNodes) {
-      try {
-        ImmutableNodeAccessor accessor = fabric.create(node);
-        accessors.add(accessor);
-      } catch (NodeIsCorrupted e) {
-        report.put(node, "Is corrupted");
-      } catch (NodeNoFound e) {
-        report.put(node, "No found");
-      }
-    }
-    return ImmutableList.copyOf(accessors);
-  }
+
 
   @Test
   public void testGeneratePackage() throws Exception {
     try {
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
-      ImmutableList<ImmutableNodeAccessor> accessors = getNodes(
+      ImmutableList<ImmutableNodeAccessor> accessors = AppContainer.getNodes(
         namesNodes, new FabricImmutableNodeAccessors());
-      new AppContainer(accessors).getPackage();
+      new AppContainer(accessors).getPackageActiveNode();
     } catch (NoFoundConfFile e) {
       UI.showMessage("Configuration file no found - "+e.getFileName());
     } catch (ConfFileIsCorrupted e) {
