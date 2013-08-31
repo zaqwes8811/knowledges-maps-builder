@@ -6,18 +6,10 @@ goog.require('goog.array');
 
 voc_app.cards.Note = function(obj) {
   this.hello = 'hello';
-
 };
 
 var CONSTANTS = (function () {
-  var items = ['word', 'content', 'translate'];
   return {
-  ITEMS : items,   // Какие есть подкарты
-  CONTENT : items[1],
-  TRANSLATE : items[2],
-  WORD : items[0],
-  TOTAL_FRONT_CARDS : items.length,
-
   // Selectors
   UP_TUNER_SEL : 'div.tuner-base.leafs-tuner-up',
   DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
@@ -36,43 +28,17 @@ function tick(seed, sel, count, obj) {
 
 function init() {
   pureInit();
-  //processResponse(voc_app.fakes.getFakeResponse());
 }
 
-// Подключает тюнеры?
-// TODO(zaqwes): У каждого тюнера есть состояние. Хорошо бы его инкапсулировать.
-// Подключаем тюнер-вверх для подкарт - нужно вынести отсюда. Это чистая инициализация.
-// TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
-// TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
-// TODO(zaqwes): DANGER: Быстро утекает память! Или медленно идет сборка мусора?
-// TODO(zaqwes): использовать find() наверное не очень хорошо.
 function pureInit() {
   $(CONSTANTS.CARD_CONTAINER_SEL).each(function(key, value) {
-    var seedState = 0;
-    $(this).find(CONSTANTS.UP_TUNER_SEL)
-      .click(function() {
-         var COUNT = CONSTANTS.TOTAL_FRONT_CARDS;
-         seedState = (seedState+1)%COUNT;
-         tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
-      .hover(
-        function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-        function() {$(this).find('.circle-inner').css('background-color', '#333399');});
-    
-    $(this).find(CONSTANTS.DOWN_TUNER_SEL)
-      .click(function() {
-        var COUNT = CONSTANTS.TOTAL_FRONT_CARDS;
-        seedState = (seedState-1+COUNT)%COUNT;
-        tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
-      .hover(
-        function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-        function() {$(this).find('.circle-inner').css('background-color', '#333399');});
-
-    // Получить новое слово
     var content = this;
+    // Получить новое слово
     var here = function (response) {
       processOneCard(content, response);
     };
-    
+
+    // Оставить только кнопку обновления
     $(this).find('div.tuner-base.updater')
       .click(function () {
         getOneCardContent(here);});
@@ -82,10 +48,29 @@ function pureInit() {
   });
 }
 
-
 function processOneCard(obj, dataOneCard) {
+  //TODO(zaqwes): Инкапсулировать в карточку
+  var seedState = 0;
+    var countRecords = dataOneCard[0][0].length;
+    $(obj).find(CONSTANTS.UP_TUNER_SEL)
+      .click(function() {
+         var COUNT = countRecords;
+         seedState = (seedState+1)%COUNT;
+         tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
+      .hover(
+        function() {$(this).find('.circle-inner').css('background-color', '#330099');},
+        function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+
+    $(obj).find(CONSTANTS.DOWN_TUNER_SEL)
+      .click(function() {
+        var COUNT = countRecords;
+        seedState = (seedState-1+COUNT)%COUNT;
+        tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
+      .hover(
+        function() {$(this).find('.circle-inner').css('background-color', '#330099');},
+        function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-  //var subCardsPkg = $(obj).find(CONSTANTS.PACK_CARDS_SEL);
   var subCardsPkg = $('>'+CONSTANTS.PACK_CARDS_SEL, obj);
   
   // TODO(zaqwes): Не утекают ли обработчики тюнеров?
@@ -95,31 +80,20 @@ function processOneCard(obj, dataOneCard) {
   var cardsHandles = {};	
 
   // Q: Не нравится клонирование, но как обойти массив в обратном порядке не изменяя его?
-  $.each((goog.array.clone(CONSTANTS.ITEMS)).reverse(), function (key, value) {
-      cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
-      $(cardsHandles[value]).css("z-index", key);
+  var items = dataOneCard[0][0];  // Нужна строгая сортировка!
+  $.each(items, function (key, value) {
+          cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
+          $(cardsHandles[value]).css("z-index", key);
       });
 
   // Добавляем контент
-  var leafs_names = [CONSTANTS.CONTENT, CONSTANTS.TRANSLATE, CONSTANTS.WORD];
-  $.each(leafs_names, function(key_local, value) {
+  $.each(items, function(key_local, value) {
     var handler = cardsHandles[value];
-    var content = dataOneCard[value];
+    var content = dataOneCard[1][key_local];
     fillNoWordCard(content, handler);
   });
 };
 
-
-// TODO(zaqwes): TOTH: Что будет менятся от запроса к запросу?
-// Обрабатываем все доступные карты
-//
-// Args:
-//   response - [{}, {}]
-function processResponse(response) {
-  // Для каждой карточки...
-  $(CONSTANTS.CARD_CONTAINER_SEL).each(function(key, value) {
-    processOneCard(this, response[key]); }); 
-}
 
 function fillNoWordCard(content, handler) {
   var countItems = content.length;
@@ -176,17 +150,4 @@ function getOneCardContent(callBackFun) {
         //catch () {}
         })
       .fail(function() { alert("error"); })
-}
-
-function getCardsContent() {
-  $.ajax({
-    type: 'GET',
-    url: '/pkg'})
-    .done(function(response) {
-      //try {
-      var response = $.parseJSON(response);
-      processResponse(response);
-      //catch () {}
-    })
-    .fail(function() { alert("error"); })
 }

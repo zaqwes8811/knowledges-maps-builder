@@ -36,14 +36,14 @@
 /* Updaters */
 .updater {
   right: 0;
-  background-color: #333399;
-  bottom: 0;
+  top: 0;
+  height:  50% !important;
+  /*background-color: #333399; */
+   background-color: gold;
 }
 
 .updater:hover {
-  right: 0;
   background-color: gold;
-  bottom: 0;
 }
 
 /* Перелистователь */

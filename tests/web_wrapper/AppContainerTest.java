@@ -32,7 +32,8 @@ public class AppContainerTest {
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = AppContainer.getNodes(
         namesNodes, new FabricImmutableNodeAccessors());
-      new AppContainer(accessors).getPackageActiveNode();
+      AppContainer container = new AppContainer(accessors);
+      container.getPackageActiveNode();
     } catch (NoFoundConfFile e) {
       UI.showMessage("Configuration file no found - "+e.getFileName());
     } catch (ConfFileIsCorrupted e) {
