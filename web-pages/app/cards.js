@@ -42,7 +42,7 @@ function pureInit() {
     $(this).find('div.tuner-base.updater')
       .click(function () {
         getOneCardContent(here);});
-        
+
     // Делаем инициирующий запрос - Шлется только один
     getOneCardContent(here);
   });
@@ -52,20 +52,25 @@ function processOneCard(obj, dataOneCard) {
   //TODO(zaqwes): Инкапсулировать в карточку
   var seedState = 0;
     var countRecords = dataOneCard[0][0].length;
+
+    // Если запись одна, то нужно закрыть тюнеры!
+
     $(obj).find(CONSTANTS.UP_TUNER_SEL)
       .click(function() {
-         var COUNT = countRecords;
-         seedState = (seedState+1)%COUNT;
-         tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
+         seedState = (seedState+1)%countRecords;
+         tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
       .hover(
-        function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-        function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+        function() {
+           $(this).find('.circle-inner').css('background-color', '#330099');
+        },
+        function() {
+           $(this).find('.circle-inner').css('background-color', '#333399');
+        });
 
     $(obj).find(CONSTANTS.DOWN_TUNER_SEL)
       .click(function() {
-        var COUNT = countRecords;
-        seedState = (seedState-1+COUNT)%COUNT;
-        tick(seedState, CONSTANTS.SUB_CARDS_SEL, COUNT, this);})
+        seedState = (seedState-1+countRecords)%countRecords;
+        tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
       .hover(
         function() {$(this).find('.circle-inner').css('background-color', '#330099');},
         function() {$(this).find('.circle-inner').css('background-color', '#333399');});
