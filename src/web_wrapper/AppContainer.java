@@ -50,24 +50,28 @@ public class AppContainer {
     return ImmutableList.copyOf(accessors);
   }
 
-  // @Fake
-  public Integer getKey() {
-    return GENERATOR.getCodeWord();
-  }
-
   // Index: нужно для маркеровки
   // Word: само слово
   // Translates:
   // Context:
-  //
-  // Повторяемосеть конечно не учитывается.
-  public Map<String, ImmutableList<String>> getPackageActiveNode() {
-    Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
-    Integer currentKey = getKey();
-    pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
-    pkg.put("content", ACTIVE_NODE_ACCESSOR.getContent(currentKey));
-    pkg.put("translate", ImmutableList.of("None"));
-    return pkg;
+  public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {
+
+    List<String> rawKeys = new ArrayList<String>();
+    List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
+    Integer currentKey = GENERATOR.getCodeWord();
+    rawKeys.add("content");
+    values.add(ACTIVE_NODE_ACCESSOR.getContent(currentKey));
+    //rawKeys.add("translate");
+    //values.add(ImmutableList.of("None"));
+
+    // Обазятельно!
+    rawKeys.add("word");
+    values.add(ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
+
+    List<ImmutableList<String>> keys = new ArrayList<ImmutableList<String>>();
+    keys.add(ImmutableList.copyOf(rawKeys));
+
+    return ImmutableList.of(ImmutableList.copyOf(keys), ImmutableList.copyOf(values));
   }
 
   public AppContainer(ImmutableList<ImmutableNodeAccessor> nodes) {
