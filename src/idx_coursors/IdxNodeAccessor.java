@@ -44,7 +44,7 @@ public class IdxNodeAccessor {
   //   В филосоии пишет, что важнее скорее тип, и по нему мы ловим.
   @NotThreadSafe
   //@Deprecated  // exception chaining в таков виде устарел
-  public static ImmutableNodeMeansOfAccess createImmutableConnection(String pathToNode)
+  public static ImmutableNodeAccessor createImmutableConnection(String pathToNode)
       throws NodeNoFound, NodeIsCorrupted {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
@@ -98,7 +98,7 @@ public class IdxNodeAccessor {
   // @Immutable  // Если в имени класса Imm. and in annotation - bad. Но хорошо бы различать!
   //   это важное свойство.
   @Immutable
-  private static class OnFiles implements ImmutableNodeMeansOfAccess {
+  private static class OnFiles implements ImmutableNodeAccessor {
     private final String PATH_TO_NODE;
 
     private final ImmutableList<String> CASH_CONTENT;
