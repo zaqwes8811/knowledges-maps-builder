@@ -1,30 +1,16 @@
 package web_wrapper;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import com.google.gson.Gson;
-import common.Util;
 import common.math.GeneratorAnyRandom;
-import idx_coursors.IdxNodeAccessor;
-import idx_coursors.ImmutableNodeMeansOfAccess;
-import idx_coursors.NodeIsCorrupted;
-import idx_coursors.NodeNoFound;
+import idx_coursors.ImmutableNodeAccessor;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletHandler;
-import through_functional.configurator.AppConfigurator;
-import through_functional.configurator.ConfFileIsCorrupted;
-import through_functional.configurator.NoFoundConfFile;
 import ui.UI;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,8 +19,8 @@ import java.util.*;
 
 public class AppContainer {
 
-  private final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
-  private final ImmutableNodeMeansOfAccess ACTIVE_NODE_ACCESSOR;
+  private final ImmutableList<ImmutableNodeAccessor> NODES;
+  private final ImmutableNodeAccessor ACTIVE_NODE_ACCESSOR;
   private final GeneratorAnyRandom GENERATOR;
 
   // @Fake
@@ -76,7 +62,7 @@ public class AppContainer {
     }
   }
 
-  public AppContainer(ImmutableList<ImmutableNodeMeansOfAccess> nodes) {
+  public AppContainer(ImmutableList<ImmutableNodeAccessor> nodes) {
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
     NODES = nodes;  // Должна упасть если при ошибке дошла до сюда
     ACTIVE_NODE_ACCESSOR = NODES.asList().get(0);

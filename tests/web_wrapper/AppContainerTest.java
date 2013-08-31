@@ -1,14 +1,8 @@
 package web_wrapper;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import common.Util;
-import idx_coursors.IdxNodeAccessor;
-import idx_coursors.ImmutableNodeMeansOfAccess;
-import idx_coursors.NodeIsCorrupted;
-import idx_coursors.NodeNoFound;
-import net.jcip.annotations.Immutable;
+import idx_coursors.*;
 import org.junit.Test;
 import through_functional.configurator.AppConfigurator;
 import through_functional.configurator.ConfFileIsCorrupted;
@@ -16,7 +10,9 @@ import through_functional.configurator.NoFoundConfFile;
 import ui.UI;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,35 +22,37 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class AppContainerTest {
-  private ImmutableList<ImmutableNodeMeansOfAccess> getNodes(ImmutableSet<String> nameNodes)
-      throws ConfFileIsCorrupted, NoFoundConfFile {
 
-    List<ImmutableNodeMeansOfAccess> tmpNodes = new ArrayList<ImmutableNodeMeansOfAccess>();
+  //TODO(zaqwes): Венуть tuple - результат и отчет - если отчет пуст - все хорошо
+  private ImmutableList<ImmutableNodeAccessor> getNodes(
+      ImmutableSet<String> nameNodes, IFabricImmutableNodeAccessors fabric)
+      throws ConfFileIsCorrupted, NoFoundConfFile {
+    Map<String, String> report = new HashMap<String, String>();
+    List<ImmutableNodeAccessor> accessors = new ArrayList<ImmutableNodeAccessor>();
     for (String node: nameNodes) {
-      // Загружает данные узла
       try {
-        tmpNodes.add(IdxNodeAccessor.createImmutableConnection(node));
+        ImmutableNodeAccessor accessor = fabric.create(node);
+        accessors.add(accessor);
       } catch (NodeIsCorrupted e) {
-        UI.showMessage("Node is corrupted - " + node);
+        report.put(node, "Is corrupted");
       } catch (NodeNoFound e) {
-        UI.showMessage("Node no found - "+node);
+        report.put(node, "No found");
       }
     }
-    ImmutableList<ImmutableNodeMeansOfAccess> nodes = ImmutableList.copyOf(tmpNodes);
-    return nodes;
+    return ImmutableList.copyOf(accessors);
   }
 
   @Test
   public void testGeneratePackage() throws Exception {
     try {
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
-      new AppContainer(getNodes(namesNodes)).getPackage();
+      ImmutableList<ImmutableNodeAccessor> accessors = getNodes(
+        namesNodes, new FabricImmutableNodeAccessors());
+      new AppContainer(accessors).getPackage();
     } catch (NoFoundConfFile e) {
       UI.showMessage("Configuration file no found - "+e.getFileName());
-      //closeApp();
     } catch (ConfFileIsCorrupted e) {
       UI.showMessage(e.WHAT_HAPPENED);
-      //closeApp();
     }
   }
 }

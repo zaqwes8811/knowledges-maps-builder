@@ -9,7 +9,7 @@ import com.google.common.collect.ImmutableList;
  * Time: 12:51
  * To change this template use File | Settings | File Templates.
  */
-public interface ImmutableNodeMeansOfAccess {
+public interface ImmutableNodeAccessor {
   ImmutableList<Integer> getDistribution();
 
   // Для формирования пакета
