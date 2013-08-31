@@ -1,16 +1,25 @@
 package web_wrapper;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import com.google.gson.Gson;
 import common.math.GeneratorAnyRandom;
-import idx_coursors.ImmutableNodeAccessor;
+import idx_coursors.*;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletHandler;
+import through_functional.configurator.AppConfigurator;
+import through_functional.configurator.ConfFileIsCorrupted;
+import through_functional.configurator.NoFoundConfFile;
 import ui.UI;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,6 +32,24 @@ public class AppContainer {
   private final ImmutableNodeAccessor ACTIVE_NODE_ACCESSOR;
   private final GeneratorAnyRandom GENERATOR;
 
+  static public ImmutableList<ImmutableNodeAccessor> getNodes(
+    ImmutableSet<String> nameNodes, IFabricImmutableNodeAccessors fabric)
+    throws ConfFileIsCorrupted, NoFoundConfFile {
+    Map<String, String> report = new HashMap<String, String>();
+    List<ImmutableNodeAccessor> accessors = new ArrayList<ImmutableNodeAccessor>();
+    for (String node: nameNodes) {
+      try {
+        ImmutableNodeAccessor accessor = fabric.create(node);
+        accessors.add(accessor);
+      } catch (NodeIsCorrupted e) {
+        report.put(node, "Is corrupted");
+      } catch (NodeNoFound e) {
+        report.put(node, "No found");
+      }
+    }
+    return ImmutableList.copyOf(accessors);
+  }
+
   // @Fake
   public Integer getKey() {
     return GENERATOR.getCodeWord();
@@ -34,32 +61,13 @@ public class AppContainer {
   // Context:
   //
   // Повторяемосеть конечно не учитывается.
-  public ImmutableList<Map<String, ImmutableList<String>>> getPackage() {
-    List<Map<String, ImmutableList<String>>> fullPkg = new ArrayList<Map<String, ImmutableList<String>>>();
-
-    for (int i = 0; i < 12; ++i) {
-      Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
-      Integer currentKey = getKey();
-      pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
-      pkg.put("content", ACTIVE_NODE_ACCESSOR.getContent(currentKey));
-      pkg.put("translate", ImmutableList.of("No records"));
-      fullPkg.add(pkg);
-    }
-    return ImmutableList.copyOf(fullPkg);
-  }
-
-  public void closeApp() {
-    // Выходим
-    try {
-      UI.showMessage("Press any key for out...");
-      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-      char c = (char)br.read();
-      System.exit(0);
-
-    } catch (IOException ioe) {
-      UI.showMessage("Console io error.");
-      System.exit(0);
-    }
+  public Map<String, ImmutableList<String>> getPackageActiveNode() {
+    Map<String, ImmutableList<String>> pkg = new HashMap<String, ImmutableList<String>>();
+    Integer currentKey = getKey();
+    pkg.put("word", ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
+    pkg.put("content", ACTIVE_NODE_ACCESSOR.getContent(currentKey));
+    pkg.put("translate", ImmutableList.of("None"));
+    return pkg;
   }
 
   public AppContainer(ImmutableList<ImmutableNodeAccessor> nodes) {
@@ -98,16 +106,27 @@ public class AppContainer {
     return server;
   }
 
+  static {
+    try {
+      ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
+      ImmutableList<ImmutableNodeAccessor> accessors = getNodes(
+        namesNodes, new FabricImmutableNodeAccessors());
+      container = new AppContainer(accessors);
+    } catch (NoFoundConfFile e) {
+      throw new RuntimeException();
+    } catch (ConfFileIsCorrupted e) {
+      throw new RuntimeException();
+    }
+  }
+
+  static private AppContainer container;
+
   public static void main(String[] args) throws Exception {
-    // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
-    //System.out.println("Root Directory = "+System.getProperty("user.dir"));
     Server server = createServer();
-    // Регистрируем сервлет?
     server.start();
     server.join();
   }
 
-  /*
   // @Servlets
   public static class Pkg extends HttpServlet {
     // Используем идею REST - параметры GET запросе не передаются
@@ -119,12 +138,11 @@ public class AppContainer {
       response.setContentType("text/html");
       response.setStatus(HttpServletResponse.SC_OK);
 
-      //TODO(zaqwes): Сделать адаптер для класса
-      //String jsonResponse = new Gson().toJson(Getters.createFake().getPackage());
-      String jsonResponse = new Gson().toJson(AppContainer.getPackage().get(0));
+      //TODO(zaqwes): Сделать декоратор для класса
+      String jsonResponse = new Gson().toJson(container.getPackageActiveNode());
 
       response.setCharacterEncoding("UTF-8");
       response.getWriter().println(jsonResponse);
     }
-  } */
+  }
 }
