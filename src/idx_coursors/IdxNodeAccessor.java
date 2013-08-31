@@ -194,7 +194,8 @@ public class IdxNodeAccessor {
           sentences.add(CASH_CONTENT.get(ptr-1));
         }
       } else {
-        sentences.add("No records");
+        // Пусть возвращает пустой список
+        //sentences.add("No records");
       }
       return ImmutableList.copyOf(sentences);
     }
