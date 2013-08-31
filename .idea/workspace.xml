@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/FabricImmutableNodeAccessors.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableNodeAccessors.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeAccessor.java" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\idx_coursors\NodeMeansOfAccess.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\idx_coursors\ImmutableNodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,9 +13,9 @@
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
     <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1376660778369" ignored="false" />
     <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960715177" ignored="false" />
-    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377959511608" ignored="false" />
+    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377961935308" ignored="false" />
     <file path="/card.css" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377958299900" ignored="false" />
-    <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960931972" ignored="false" />
+    <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377961604048" ignored="false" />
     <file path="/FabricIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960415003" ignored="false" />
     <file path="/FabricImmutableIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960735696" ignored="false" />
     <file path="/IFabricImmutableIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377961009913" ignored="false" />
@@ -85,23 +78,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="17" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.0">
+            <state line="69" column="53" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.41400304">
+              <folding>
+                <element signature="e#1408#1424#0" expanded="true" />
+                <element signature="e#1485#1508#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="28" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainerTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ServletPrototype.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hided/ServletPrototype.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="52" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppContainerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="21" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.8021309">
-              <folding>
-                <element signature="e#944#960#0" expanded="true" />
-                <element signature="e#1021#1044#0" expanded="true" />
-              </folding>
+            <state line="31" column="50" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,16 +137,17 @@
       <list>
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
-        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/src/ui/UI.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/FabricIdxAccessors.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/FabricImmutableIdxAccessors.java" />
-        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableIdxAccessors.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableNodeAccessors.java" />
+        <option value="$PROJECT_DIR$/src/hided/ServletPrototype.java" />
+        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
+        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       </list>
     </option>
   </component>
@@ -199,11 +211,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_wrapper" />
+              <option name="myItemId" value="web-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,7 +225,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="web-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,7 +293,7 @@
       <recent name="web_wrapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestWebWrapper">
+  <component name="RunManager" selected="Application.AppContainer">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -439,6 +451,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -453,7 +466,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1888361" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -518,20 +530,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="37" selection-start="2851" selection-end="2851" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="21" selection-start="5726" selection-end="5726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="28" selection-start="1278" selection-end="1296" vertical-scroll-proportion="0.0">
@@ -567,23 +565,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="452" selection-end="452" vertical-scroll-proportion="0.3240469">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="5" selection-start="611" selection-end="611" vertical-scroll-proportion="-1.5289634">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="17" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -623,12 +607,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/guava-14.0.1.jar!/com/google/common/collect/ImmutableList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="260" selection-end="260" vertical-scroll-proportion="0.16478191">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hided/ServletPrototype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="52" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="21" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.8021309">
+        <state line="31" column="50" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="28" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="53" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.41400304">
           <folding>
-            <element signature="e#944#960#0" expanded="true" />
-            <element signature="e#1021#1044#0" expanded="true" />
+            <element signature="e#1408#1424#0" expanded="true" />
+            <element signature="e#1485#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
