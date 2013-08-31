@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951493324" ignored="false" />
+    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377958857411" ignored="false" />
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
     <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1376660778369" ignored="false" />
-    <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377018954327" ignored="false" />
-    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377020841578" ignored="false" />
+    <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377958857411" ignored="false" />
+    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377959511608" ignored="false" />
     <file path="/card.css" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377958299900" ignored="false" />
+    <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377959734033" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,37 +73,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-pages/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="611" selection-end="611" vertical-scroll-proportion="38.576923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="452" selection-end="452" vertical-scroll-proportion="0.3240469">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="37" selection-start="2851" selection-end="2851" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="22" selection-start="5323" selection-end="5323" vertical-scroll-proportion="0.0">
+            <state line="80" column="17" selection-start="2748" selection-end="2748" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppContainerTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.3380682">
               <folding />
             </state>
           </provider>
@@ -126,9 +110,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
-        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
       </list>
     </option>
   </component>
@@ -192,11 +177,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web_wrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,8 +220,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/web_wrapper" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -231,7 +233,15 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Application.AppContainer">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="web_wrapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestWebWrapper">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -301,16 +311,16 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="" />
+      <module name="spinning-vocabulary-cards" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="web_wrapper" />
+      <option name="MAIN_CLASS_NAME" value="web_wrapper.AppContainerTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -342,8 +352,31 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="TestWebWrapper" type="JUnit" factoryName="JUnit">
+      <module name="spinning-vocabulary-cards" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="web_wrapper" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.AppContainer" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestWebWrapper" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -371,13 +404,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30470017" sideWeight="0.8408551" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1591449" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23257698" sideWeight="0.86698335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13301663" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -445,13 +478,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="31" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
@@ -536,23 +562,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="22" selection-start="5323" selection-end="5323" vertical-scroll-proportion="0.0">
+        <state line="22" column="17" selection-start="452" selection-end="452" vertical-scroll-proportion="0.3240469">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="611" selection-end="611" vertical-scroll-proportion="38.576923">
+        <state line="13" column="5" selection-start="611" selection-end="611" vertical-scroll-proportion="-1.5289634">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="452" selection-end="452" vertical-scroll-proportion="0.3240469">
+        <state line="80" column="17" selection-start="2748" selection-end="2748" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.3380682">
           <folding />
         </state>
       </provider>

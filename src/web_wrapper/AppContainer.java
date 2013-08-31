@@ -32,13 +32,13 @@ import java.util.*;
 
 
 public class AppContainer {
-  private AppContainer() {}
-  private static final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
-  private static final ImmutableNodeMeansOfAccess ACTIVE_NODE_ACCESSOR;
-  private static final GeneratorAnyRandom GENERATOR;
+
+  private final ImmutableList<ImmutableNodeMeansOfAccess> NODES;
+  private final ImmutableNodeMeansOfAccess ACTIVE_NODE_ACCESSOR;
+  private final GeneratorAnyRandom GENERATOR;
 
   // @Fake
-  static public Integer getKey() {
+  public Integer getKey() {
     return GENERATOR.getCodeWord();
   }
 
@@ -48,7 +48,7 @@ public class AppContainer {
   // Context:
   //
   // Повторяемосеть конечно не учитывается.
-  static public ImmutableList<Map<String, ImmutableList<String>>> getPackage() {
+  public ImmutableList<Map<String, ImmutableList<String>>> getPackage() {
     List<Map<String, ImmutableList<String>>> fullPkg = new ArrayList<Map<String, ImmutableList<String>>>();
 
     for (int i = 0; i < 12; ++i) {
@@ -62,7 +62,7 @@ public class AppContainer {
     return ImmutableList.copyOf(fullPkg);
   }
 
-  static public void closeApp() {
+  public void closeApp() {
     // Выходим
     try {
       UI.showMessage("Press any key for out...");
@@ -76,35 +76,9 @@ public class AppContainer {
     }
   }
 
-  static {
-    Optional<ImmutableList<ImmutableNodeMeansOfAccess>> nodes = Optional.absent();
-    try {
-      Optional<ImmutableSet<String>> namesNodes = AppConfigurator.getRegisteredNodes();
-
-      // Загружает данные узла
-      List<ImmutableNodeMeansOfAccess> tmpNodes = new ArrayList<ImmutableNodeMeansOfAccess>();
-      for (String node: namesNodes.get()) {
-        try {
-          tmpNodes.add(IdxNodeAccessor.createImmutableConnection(node));
-        } catch (NodeIsCorrupted e) {
-          UI.showMessage("Node is corrupted - "+node);
-        } catch (NodeNoFound e) {
-          UI.showMessage("Node no found - "+node);
-        }
-      }
-      nodes = Optional.of(ImmutableList.copyOf(tmpNodes));
-
-    // Выходим, сервер не должен стартовать
-    } catch (NoFoundConfFile e) {
-      UI.showMessage("Configuration file no found - "+e.getFileName());
-      closeApp();
-    } catch (ConfFileIsCorrupted e) {
-      UI.showMessage(e.WHAT_HAPPENED);
-      closeApp();
-    }
-
+  public AppContainer(ImmutableList<ImmutableNodeMeansOfAccess> nodes) {
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
-    NODES = nodes.get();  // Должна упасть если при ошибке дошла до сюда
+    NODES = nodes;  // Должна упасть если при ошибке дошла до сюда
     ACTIVE_NODE_ACCESSOR = NODES.asList().get(0);
 
     // Коннектим генератор случайных чисел и акссессор
@@ -139,22 +113,15 @@ public class AppContainer {
   }
 
   public static void main(String[] args) throws Exception {
-    // Похоже основная инициализация будет в static, т.к.
-
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
     //System.out.println("Root Directory = "+System.getProperty("user.dir"));
-
-    ///*
     Server server = createServer();
-
     // Регистрируем сервлет?
     server.start();
-    server.join(); //*/
+    server.join();
   }
 
-  // @State
-  //private
-
+  /*
   // @Servlets
   public static class Pkg extends HttpServlet {
     // Используем идею REST - параметры GET запросе не передаются
@@ -173,5 +140,5 @@ public class AppContainer {
       response.setCharacterEncoding("UTF-8");
       response.getWriter().println(jsonResponse);
     }
-  }
+  } */
 }
