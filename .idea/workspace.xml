@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019627265" ignored="false" />
+    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378048342724" ignored="false" />
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
     <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377966491778" ignored="false" />
     <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019679284" ignored="false" />
@@ -21,8 +22,8 @@
     <file path="/IdxNodeAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019833065" ignored="false" />
     <file path="/ImmutableNodeAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378021039805" ignored="false" />
     <file path="/ContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019539395" ignored="false" />
-    <file path="/BaseContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038625740" ignored="false" />
-    <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378046838894" ignored="false" />
+    <file path="/BaseContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378048955781" ignored="false" />
+    <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378048751870" ignored="false" />
     <file path="/ContentStorageAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038408540" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -72,7 +74,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -82,34 +83,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="6" selection-start="8035" selection-end="8470" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseContentHolder.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BaseContentHolder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="43" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="964" selection-end="964" vertical-scroll-proportion="0.64491653">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#650#658#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="38" selection-start="3617" selection-end="3617" vertical-scroll-proportion="0.63829786">
+            <state line="127" column="41" selection-start="4210" selection-end="4210" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1387#1588#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1717#1916#0" expanded="true" />
+                <element signature="e#1905#1906#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ContentStorageAccessor.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
         <option value="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
       </list>
     </option>
   </component>
@@ -184,8 +176,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,9 +251,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -290,6 +282,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -315,19 +320,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -490,8 +482,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26256078" sideWeight="0.8123515" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18764846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26256078" sideWeight="0.8135392" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18646081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -559,51 +551,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/guava-14.0.1.jar!/com/google/common/collect/ImmutableList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="260" selection-end="260" vertical-scroll-proportion="0.16478191" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hided/ServletPrototype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="52" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.456621" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="34" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="34" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="32" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="54" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="52" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
@@ -620,30 +567,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="358" selection-end="358" vertical-scroll-proportion="0.33637747">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="6" selection-start="8035" selection-end="8470" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="31" selection-start="358" selection-end="358" vertical-scroll-proportion="0.33637747" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="220" selection-end="264" vertical-scroll-proportion="0.3130755">
-          <folding />
-        </state>
+        <state line="10" column="2" selection-start="220" selection-end="264" vertical-scroll-proportion="0.3130755" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="54" selection-start="119" selection-end="135" vertical-scroll-proportion="0.09123435">
-          <folding />
-        </state>
+        <state line="3" column="54" selection-start="119" selection-end="135" vertical-scroll-proportion="0.09123435" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/ContentStorageAccessor.java">
@@ -653,22 +587,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_43/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="43" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="17" column="41" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/guava-14.0.1.jar!/com/google/common/cache/LocalCache.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="482" column="41" selection-start="22263" selection-end="22263" vertical-scroll-proportion="0.8376238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/internal/runners/statements/ExpectException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="527" selection-end="527" vertical-scroll-proportion="0.37029704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="6" selection-start="8035" selection-end="8470" vertical-scroll-proportion="0.025796661">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="38" selection-start="3617" selection-end="3617" vertical-scroll-proportion="0.63829786">
+        <state line="127" column="41" selection-start="4210" selection-end="4210" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1387#1588#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1717#1916#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="964" selection-end="964" vertical-scroll-proportion="0.64491653">
+          <folding>
+            <element signature="e#650#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
