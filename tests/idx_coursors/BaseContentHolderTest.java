@@ -37,7 +37,7 @@ class CashedContentAccessor implements ContentStorageAccessor {
       .build(
         new CacheLoader<Integer, String>() {
           @Override
-          public String load(Integer key) {
+          public String load(Integer key) /* Что-то нужно выкинуть */ {
             return getSentenceFromFile(key);
           }
         });
