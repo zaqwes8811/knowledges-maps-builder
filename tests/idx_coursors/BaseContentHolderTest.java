@@ -7,6 +7,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
+import static org.junit.Assert.*;
+
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
@@ -69,4 +73,29 @@ public class BaseContentHolderTest {
     ContentStorageAccessor accessor = new InMemorySentencesAccessor(sentences);
     ContentHolder contentHolder = new BaseContentHolder(keys, accessor);
   }
+
+  @Test
+  public void iterator_will_return_hello_world(){
+    //arrange
+    Iterator i = mock(Iterator.class);
+    when(i.next()).thenReturn("Hello").thenReturn("World");
+    //act
+    String result = i.next()+" "+i.next();
+    //assert
+    assertEquals("Hello World", result);
+  }
+
+  @Test
+  public void testFileAccess() {
+    TextFileReader reader = mock(TextFileReader.class);
+    when(reader.fileToSentences("some.txt")).thenReturn(ImmutableList.of("", ""));
+
+    //
+    assertEquals(2, reader.fileToSentences("some.txt").size());
+  }
+}
+
+interface TextFileReader {
+  // Получаем сразу все предложения
+  ImmutableList<String> fileToSentences(String fileName);
 }
