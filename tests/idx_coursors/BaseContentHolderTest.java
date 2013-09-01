@@ -6,11 +6,11 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import common.Util;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
 
 import java.util.*;
 import java.util.concurrent.ExecutionException;
@@ -29,10 +29,21 @@ class InMemorySentencesAccessor implements ContentStorageAccessor {
 
 class ExtractSentenceException extends RuntimeException {
   public ExtractSentenceException(Throwable e) {super(e);}
+  public ExtractSentenceException() {super();}
+}
+
+class ReadException extends Exception {
+  public ReadException(Throwable e) {super(e);}
+  public ReadException() {super();}
+}
+
+class FailReadSentence extends RuntimeException {
+  public FailReadSentence(Throwable e) {super(e);}
+  public FailReadSentence() {super();}
 }
 
 class CashedContentAccessor implements ContentStorageAccessor {
-  private Optional<String> getSentenceFromFile(Integer key) {
+  private Optional<String> getSentenceFromFile(Integer key) throws ReadException {
     ImmutableList<String> allSentences = READER.fileToSentences();
     if (key < allSentences.size()) {
       return Optional.of(allSentences.get(key));
@@ -41,33 +52,33 @@ class CashedContentAccessor implements ContentStorageAccessor {
   }
 
   public CashedContentAccessor (TextFileReader reader) {
-    GRAPHS = CacheBuilder.newBuilder()
-      .maximumSize(1000)
+    CASHE_SENTENCES = CacheBuilder.newBuilder()
+      .maximumSize(1)
       .build(
         new CacheLoader<Integer, String>() {
           @Override
-          public String load(Integer key) /* Что-то нужно выкинуть */ {
-            return getSentenceFromFile(key).get();
-          }
+          public String load(Integer key) throws ReadException {
+              return getSentenceFromFile(key).get();
+             }
         });
     READER = reader;
   }
   @Override
   public String getSentence(Integer key) {
     try {
-      return GRAPHS.get(key);
+      return CASHE_SENTENCES.get(key);
     } catch (ExecutionException e) {
-      throw new ExtractSentenceException(e.getCause());
+      throw new FailReadSentence(e.getCause());
     }
   }
 
-  private final LoadingCache<Integer, String> GRAPHS;
+  private final LoadingCache<Integer, String> CASHE_SENTENCES;
   private final TextFileReader READER;
 }
 
 interface TextFileReader {
   // Получаем сразу все предложения
-  ImmutableList<String> fileToSentences();
+  ImmutableList<String> fileToSentences() throws ReadException;
 }
 
 
@@ -88,7 +99,7 @@ public class BaseContentHolderTest {
   }
 
   @Test
-  public void testFileAccess() {
+  public void testFileAccess() throws Exception {
     TextFileReader reader = mock(TextFileReader.class);
     when(reader.fileToSentences())
         .thenReturn(ImmutableList.of("one", "two"));
@@ -102,13 +113,15 @@ public class BaseContentHolderTest {
     contentHolder.getContentItem("hello");
   }
 
-  @Test(expected = RuntimeException.class)
-  public void testExceptionOnReadFile() {
+  @Test(expected = FailReadSentence.class)
+  public void testExceptionOnReadFile() throws Exception {
     TextFileReader reader = mock(TextFileReader.class);
-    when(reader.fileToSentences()).thenThrow(new RuntimeException());
+    when(reader.fileToSentences())
+        .thenThrow(new ReadException());
+
     ImmutableMap<String, List<Integer>> keys = ImmutableMap.of(
-      "hello", Arrays.asList(1, 2),
-      "hay", Arrays.asList(1));
+        "hello", Arrays.asList(1, 2),
+        "hay", Arrays.asList(1));
 
     ContentStorageAccessor accessor = new CashedContentAccessor(reader);
     ContentHolder contentHolder = new BaseContentHolder(keys, accessor);
