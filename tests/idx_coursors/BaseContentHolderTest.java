@@ -74,6 +74,10 @@ interface TextFileReader {
   ImmutableList<String> fileToSentences() throws ReadException;
 }
 
+// Можно читать учитываю индекс, мы же все равно читаем
+//   строку за строкой. Тогда в худшем случае считаем весь файл, но хранить его не будем.
+// O(n) - по сложности и память в одну строку.
+
 
 public class BaseContentHolderTest {
   @Test
