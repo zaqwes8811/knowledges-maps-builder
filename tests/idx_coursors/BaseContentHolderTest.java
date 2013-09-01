@@ -18,7 +18,7 @@ class InMemorySentencesAccessor implements ContentStorageAccessor {
 
   @Override
   public String getSentence(Integer key) {
-    return "Sentence";
+    return CONTENT.get(key);
   }
 }
 
@@ -66,7 +66,7 @@ public class BaseContentHolderTest {
     ImmutableList<String> sentences = ImmutableList.of("hello hay", "hay");
 
     // Плохо передавать предложения, лучше передать кэш. Предложений может быть много
-
-    ContentHolder contentHolder = new BaseContentHolder(keys, sentences);
+    ContentStorageAccessor accessor = new InMemorySentencesAccessor(sentences);
+    ContentHolder contentHolder = new BaseContentHolder(keys, accessor);
   }
 }

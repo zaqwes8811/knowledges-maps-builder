@@ -8,9 +8,9 @@ import java.util.List;
 
 public class BaseContentHolder implements ContentHolder {
   public BaseContentHolder(
-      ImmutableMap<String, List<Integer>> keys, ImmutableList<String> sentences)
+      ImmutableMap<String, List<Integer>> keys, ContentStorageAccessor accessor)
     {
-    CASH_CONTENT = sentences;
+    ACCESSOR = accessor;
     CASH_SENTENCES_KEYS_IDX = keys;
   }
   @Override
@@ -23,13 +23,13 @@ public class BaseContentHolder implements ContentHolder {
       List<Integer> tmp = CASH_SENTENCES_KEYS_IDX.get(word);
       ImmutableList<Integer> pointers = ImmutableList.copyOf(tmp);
       for (final Integer ptr: pointers) {
-        sentences.add(CASH_CONTENT.get(ptr-1));
+        sentences.add(ACCESSOR.getSentence(ptr-1));
       }
     } else {
     }
     return ImmutableList.copyOf(sentences);
   }
 
-  private final ImmutableList<String> CASH_CONTENT;
+  private final ContentStorageAccessor ACCESSOR;
   private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
 }
