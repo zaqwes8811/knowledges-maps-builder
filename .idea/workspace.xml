@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +21,7 @@
     <file path="/ImmutableNodeAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378021039805" ignored="false" />
     <file path="/ContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019539395" ignored="false" />
     <file path="/BaseContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038625740" ignored="false" />
-    <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038717429" ignored="false" />
+    <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038791952" ignored="false" />
     <file path="/ContentStorageAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038408540" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,11 +104,11 @@
       <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="9" selection-start="646" selection-end="646" vertical-scroll-proportion="-0.42313546">
+            <state line="42" column="18" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.53424656">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1029#1196#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1029#1224#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -498,7 +496,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26256078" sideWeight="0.8111639" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1888361" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1888361" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -671,11 +669,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="646" selection-end="646" vertical-scroll-proportion="-0.42313546">
+        <state line="42" column="18" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.53424656">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1029#1196#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1029#1224#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
           </folding>
         </state>
       </provider>
