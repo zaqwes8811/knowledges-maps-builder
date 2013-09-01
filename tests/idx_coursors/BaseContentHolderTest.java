@@ -27,19 +27,12 @@ class InMemorySentencesAccessor implements ContentStorageAccessor {
   }
 }
 
-class ExtractSentenceException extends RuntimeException {
-  public ExtractSentenceException(Throwable e) {super(e);}
-  public ExtractSentenceException() {super();}
-}
-
 class ReadException extends Exception {
-  public ReadException(Throwable e) {super(e);}
   public ReadException() {super();}
 }
 
 class FailReadSentence extends RuntimeException {
   public FailReadSentence(Throwable e) {super(e);}
-  public FailReadSentence() {super();}
 }
 
 class CashedContentAccessor implements ContentStorageAccessor {
