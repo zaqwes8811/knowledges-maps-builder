@@ -26,7 +26,6 @@ public class BaseContentHolder implements ContentHolder {
       for (final Integer ptr: pointers) {
         sentences.add(ACCESSOR.getSentence(ptr-1));
       }
-    } else {
     }
     return ImmutableList.copyOf(sentences);
   }
