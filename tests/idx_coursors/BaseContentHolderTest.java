@@ -1,5 +1,6 @@
 package idx_coursors;
 
+import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -31,20 +32,25 @@ class ExtractSentenceException extends RuntimeException {
 }
 
 class CashedContentAccessor implements ContentStorageAccessor {
-  private String getSentenceFromFile(Integer key) {
-    return "Sent";
+  private Optional<String> getSentenceFromFile(Integer key) {
+    ImmutableList<String> allSentences = READER.fileToSentences();
+    if (key < allSentences.size()) {
+      return Optional.of(allSentences.get(key));
+    }
+    return Optional.absent();
   }
 
-  public CashedContentAccessor () {
+  public CashedContentAccessor (TextFileReader reader) {
     GRAPHS = CacheBuilder.newBuilder()
       .maximumSize(1000)
       .build(
         new CacheLoader<Integer, String>() {
           @Override
           public String load(Integer key) /* Что-то нужно выкинуть */ {
-            return getSentenceFromFile(key);
+            return getSentenceFromFile(key).get();
           }
         });
+    READER = reader;
   }
   @Override
   public String getSentence(Integer key) {
@@ -56,7 +62,14 @@ class CashedContentAccessor implements ContentStorageAccessor {
   }
 
   private final LoadingCache<Integer, String> GRAPHS;
+  private final TextFileReader READER;
 }
+
+interface TextFileReader {
+  // Получаем сразу все предложения
+  ImmutableList<String> fileToSentences();
+}
+
 
 public class BaseContentHolderTest {
   @Test
@@ -75,27 +88,31 @@ public class BaseContentHolderTest {
   }
 
   @Test
-  public void iterator_will_return_hello_world(){
-    //arrange
-    Iterator i = mock(Iterator.class);
-    when(i.next()).thenReturn("Hello").thenReturn("World");
-    //act
-    String result = i.next()+" "+i.next();
-    //assert
-    assertEquals("Hello World", result);
-  }
-
-  @Test
   public void testFileAccess() {
     TextFileReader reader = mock(TextFileReader.class);
-    when(reader.fileToSentences("some.txt")).thenReturn(ImmutableList.of("", ""));
+    when(reader.fileToSentences())
+        .thenReturn(ImmutableList.of("one", "two"));
 
-    //
-    assertEquals(2, reader.fileToSentences("some.txt").size());
+    ImmutableMap<String, List<Integer>> keys = ImmutableMap.of(
+        "hello", Arrays.asList(1, 2),
+        "hay", Arrays.asList(1));
+
+    ContentStorageAccessor accessor = new CashedContentAccessor(reader);
+    ContentHolder contentHolder = new BaseContentHolder(keys, accessor);
+    contentHolder.getContentItem("hello");
+  }
+
+  @Test(expected = RuntimeException.class)
+  public void testExceptionOnReadFile() {
+    TextFileReader reader = mock(TextFileReader.class);
+    when(reader.fileToSentences()).thenThrow(new RuntimeException());
+    ImmutableMap<String, List<Integer>> keys = ImmutableMap.of(
+      "hello", Arrays.asList(1, 2),
+      "hay", Arrays.asList(1));
+
+    ContentStorageAccessor accessor = new CashedContentAccessor(reader);
+    ContentHolder contentHolder = new BaseContentHolder(keys, accessor);
+    contentHolder.getContentItem("hello");
   }
 }
 
-interface TextFileReader {
-  // Получаем сразу все предложения
-  ImmutableList<String> fileToSentences(String fileName);
-}
