@@ -78,7 +78,6 @@ function processOneCard(obj, dataOneCard) {
   // http://stackoverflow.com/questions/11726864/jquery-empty-click-and-memory-management
   subCardsPkg.empty();
 
-
   // Только этот словарь знаяет, какой ключ соответсвует карте
   var cardsHandles = {};
 
@@ -95,16 +94,13 @@ function processOneCard(obj, dataOneCard) {
   $.each(items, function(key_local, value) {
     var handler = cardsHandles[value];
     var content = dataOneCard[1][key_local];
-    fillNoWordCard(content, handler);
+    var components = createAnyCard(content);
+    for (i = 0; i < components.length; ++i)
+      $(components[i]).appendTo(handler);
   });
-
-  // Доболнения
 };
 
-// Так должен заполнятся контент и перевод - само слово должно быть
-//   с панелью управления.
-function fillNoWordCard(content, handler) {
-  var components = [];
+function createTextDeck(content) {
   var countItems = content.length;
   var contentReversed = (goog.array.clone(content)).reverse();
   var  wrapper = $("<div/>").addClass('slice');
@@ -113,9 +109,20 @@ function fillNoWordCard(content, handler) {
     $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
       $("<div/>").addClass("slice-inner").appendTo(wrapper));
   }
-  components.push(wrapper);
+  return wrapper;
+}
+
+// Так должен заполнятся контент и перевод - само слово должно быть
+//   с панелью управления.
+function createAnyCard(content) {
+  // Набор компонентов, которые подключаются к одному узлу.
+  var components = [];
+  
+  // Текстовое заполнение
+  components.push(createTextDeck(content));
 
   // Добавляем тюнеры только если более одного элемента.
+  var countItems = content.length;
   if (countItems > 1) {
     // Общая переменная
     var seed = 0;
@@ -129,8 +136,8 @@ function fillNoWordCard(content, handler) {
         function() {$(this).find('.triangle-up').css('background-color', '#330099');},
         function() {$(this).find('.triangle-up').css('background-color', '#333399');})
         
-    var tuner_arroy_up = $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up");
-    $(tuner_arroy_up).appendTo(main_tuner_up);
+    var tuner_arrow_up = $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up");
+    $(tuner_arrow_up).appendTo(main_tuner_up);
 
     // Тюнер вниз
     var main_tuner_down = $("<div/>").addClass("tuner-base slice-tuner-down")
@@ -141,16 +148,14 @@ function fillNoWordCard(content, handler) {
         function() {$(this).find('.triangle-down').css('background-color', '#330099');},
         function() {$(this).find('.triangle-down').css('background-color', '#333399');})
       
-    var tuner_arroy_down = $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down");
-    $(tuner_arroy_down).appendTo(main_tuner_down);
+    var tuner_arrow_down = $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down");
+    $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
     components.push(main_tuner_up);
     components.push(main_tuner_down);
   }
-  
-  for (i = 0; i < components.length; ++i)
-    $(components[i]).appendTo(handler);
+  return components;  
 }
 
 function getOneCardContent(callBackFun) {
@@ -168,3 +173,14 @@ function getOneCardContent(callBackFun) {
         })
       .fail(function() { alert("error"); })
 }
+
+/*
+
+        <!--div class="tuner-base updater">
+            <div class="circle-parent">
+                <div class="circle-inner">
+                    <div class="triangle-inner-right"></div>
+                </div>
+            </div>
+        </div-->
+*/
