@@ -10,11 +10,12 @@ var CONSTANTS = (function () {
   UP_TUNER_SEL : 'div.tuner-base.leafs-tuner-up',
   DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
-  PACK_CARDS_SEL : '.leafs-container',
+  SEL_LEAFS_DECK : '.leafs-container',
   CARD_CONTAINER_SEL : '.card-container',
   INNER_CARDS_CONTAINER: '.slice-inner'
   }
 })();
+var foneName = 'ba ckground-color';
 
 function tick(seed, sel, count, obj) {
   $(obj).parent().find(sel).each(function (key, value) {
@@ -45,7 +46,6 @@ function pureInit() {
 }
 
 function processOneCard(obj, dataOneCard) {
-  //TODO(zaqwes): Инкапсулировать в карточку
   var seedState = 0;
   var countRecords = dataOneCard[0][0].length;
 
@@ -56,27 +56,22 @@ function processOneCard(obj, dataOneCard) {
        seedState = (seedState+1)%countRecords;
        tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {
-         $(this).find('.circle-inner').css('background-color', '#330099');
-      },
-      function() {
-         $(this).find('.circle-inner').css('background-color', '#333399');
-      });
+      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
+      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
 
   $(obj).find(CONSTANTS.DOWN_TUNER_SEL)
     .click(function() {
       seedState = (seedState-1+countRecords)%countRecords;
       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-      function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
+      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
 
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-  var subCardsPkg = $('>'+CONSTANTS.PACK_CARDS_SEL, obj);
+  var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
 
-  // TODO(zaqwes): Не утекают ли обработчики тюнеров?
-  // http://stackoverflow.com/questions/11726864/jquery-empty-click-and-memory-management
-  subCardsPkg.empty();
+  // Сбрасываем
+  leafsDeck.empty();
 
   // Только этот словарь знаяет, какой ключ соответсвует карте
   var cardsHandles = {};
@@ -87,7 +82,7 @@ function processOneCard(obj, dataOneCard) {
   $.each(items, function (key, value) {
     cardsHandles[value] = $("<div/>").addClass('leaf');
     $(cardsHandles[value]).css("z-index", key);
-    $(cardsHandles[value]).appendTo(subCardsPkg);
+    $(cardsHandles[value]).appendTo(leafsDeck);
   });
 
   // Заполняем
@@ -133,8 +128,8 @@ function createAnyCard(content) {
         seed = (seed+1)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
       .hover(
-        function() {$(this).find('.triangle-up').css('background-color', '#330099');},
-        function() {$(this).find('.triangle-up').css('background-color', '#333399');})
+        function() {$(this).find('.triangle-up').css(foneName, '#330099');},
+        function() {$(this).find('.triangle-up').css(foneName, '#333399');})
         
     var tuner_arrow_up = $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up");
     $(tuner_arrow_up).appendTo(main_tuner_up);
@@ -145,8 +140,8 @@ function createAnyCard(content) {
         seed = (seed-1+countItems)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
       .hover(
-        function() {$(this).find('.triangle-down').css('background-color', '#330099');},
-        function() {$(this).find('.triangle-down').css('background-color', '#333399');})
+        function() {$(this).find('.triangle-down').css(foneName, '#330099');},
+        function() {$(this).find('.triangle-down').css(foneName, '#333399');})
       
     var tuner_arrow_down = $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
