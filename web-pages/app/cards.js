@@ -74,20 +74,27 @@ function processOneCard(obj, dataOneCard) {
   leafsDeck.empty();
 
   // Только этот словарь знаяет, какой ключ соответсвует карте
-  var cardsHandles = {};
+  var createLeafs = function () {
+    var cardsHandles = {};
 
-  // Q: Не нравится клонирование, но как обойти массив в обратном порядке не изменяя его?
-  // Создаем leafs - контейнеры для хранения конечных данных
-  var items = dataOneCard[0][0];  // Нужна строгая сортировка!
-  $.each(items, function (key, value) {
-    cardsHandles[value] = $("<div/>").addClass('leaf');
-    $(cardsHandles[value]).css("z-index", key);
-    $(cardsHandles[value]).appendTo(leafsDeck);
-  });
+    // Создаем leafs - контейнеры для хранения конечных данных
+    var items = dataOneCard[0][0];  // Нужна строгая сортировка!
+    $.each(items, function (key, value) {
+      cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
+    });
+    return cardsHandles;
+  };
+  
+  var leafsHandlers = createLeafs();
+  for (i = 0; i < leafsHandlers.length; ++i)
+        $(leafsHandlers[i]).appendTo(leafsDeck);
+  //$(leafsDeck).add(leafsHandlers);
+  
 
   // Заполняем
-  $.each(items, function(key_local, value) {
-    var handler = cardsHandles[value];
+  var names = dataOneCard[0][0];  // Нужна строгая сортировка!
+  $.each(names, function(key_local, value) {
+    var handler = leafsHandlers[value];
     var content = dataOneCard[1][key_local];
     var components = createAnyCard(content);
     for (i = 0; i < components.length; ++i)
