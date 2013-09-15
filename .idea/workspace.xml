@@ -1,64 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="">
+    <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Concentrator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/ContentHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/ContentStorageAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/FabricImmutableNodeAccessors.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableNodeAccessors.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/idx_coursors/NodeAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/Notes.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/app/fakes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5.xml" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\idx_coursors\NodeMeansOfAccess.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\web_wrapper\AppContainer.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/tests/idx_coursors/IdxNodeAccessorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/spinning-vocabulary-cards.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\idx_coursors\ImmutableNodeMeansOfAccess.java" afterPath="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376128452782" ignored="false" />
-    <file path="/ImmutableJobsFormer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372785731856" ignored="false" />
-    <file path="/ProcessorTargetsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372789855002" ignored="false" />
-    <file path="/NotesProcessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792103843" ignored="false" />
-    <file path="/ImmutableBaseCoursor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372794246501" ignored="false" />
-    <file path="/ImmutableIdxGetters.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372796746707" ignored="false" />
-    <file path="/BaseSyllableCounter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791194806" ignored="false" />
-    <file path="/CompressorsTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791298360" ignored="false" />
-    <file path="/BaseTokenizerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372791387300" ignored="false" />
-    <file path="/Main.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372795896650" ignored="false" />
-    <file path="/ImmutableProcessorTargets.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372792883280" ignored="false" />
-    <file path="/BECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926953886" ignored="false" />
-    <file path="/utils.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372926890105" ignored="false" />
-    <file path="/ImmutableBaseFilter.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1372879638535" ignored="false" />
-    <file path="/fragment.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374764958153" ignored="false" />
-    <file path="/ImmutableBECParser.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766206321" ignored="false" />
-    <file path="/GeneratorAnyRandom.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374764692186" ignored="false" />
-    <file path="/RandomGeneratorException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374764675933" ignored="false" />
-    <file path="/AppConfigurator.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374662896273" ignored="false" />
-    <file path="/FileLevelIdxAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374317867338" ignored="false" />
-    <file path="/FileLevelIdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374396884151" ignored="false" />
-    <file path="/CorruptNode.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320767685" ignored="false" />
-    <file path="/NodeNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374320830334" ignored="false" />
-    <file path="/FileLevelIdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332562948" ignored="false" />
-    <file path="/NodeAlreadyExist.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374662453218" ignored="false" />
-    <file path="/NodeNotFull.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374332398118" ignored="false" />
-    <file path="/NodeDataAccessors.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374391895781" ignored="false" />
-    <file path="/NodeDataAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374392082331" ignored="false" />
-    <file path="/IdxNodeAccessorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374410751272" ignored="false" />
-    <file path="/IdxNodeAccessor.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374768269563" ignored="false" />
-    <file path="/ImmutableNodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374767622219" ignored="false" />
-    <file path="/MapReduceChains.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374408265278" ignored="false" />
-    <file path="/NodeMeansOfAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374409544272" ignored="false" />
-    <file path="/BECCache.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374427416400" ignored="false" />
-    <file path="/NodeIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374432709576" ignored="false" />
-    <file path="/NoFoundConfFile.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374578860308" ignored="false" />
-    <file path="/AppConfiguratorTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374581375156" ignored="false" />
-    <file path="/ConfFileIsCorrupted.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374657260811" ignored="false" />
-    <file path="/RecordNoFound.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579403377" ignored="false" />
-    <file path="/CrosscuttingsException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374579536860" ignored="false" />
-    <file path="/app.yaml" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374593541878" ignored="false" />
-    <file path="/AppConstants.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374593858998" ignored="false" />
-    <file path="/AppContainer.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374768920029" ignored="false" />
-    <file path="/UI.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374657525742" ignored="false" />
-    <file path="/OutOfRangeOnAccess.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374765986401" ignored="false" />
-    <file path="/ImmutableBECSave.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766028559" ignored="false" />
-    <file path="/VParserException.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766193391" ignored="false" />
-    <file path="/AppContainerTest.java" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1374766533706" ignored="false" />
-    <file path="/cards.js" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376151305207" ignored="false" />
-    <file path="/card.css" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1376150746460" ignored="false" />
-    <file path="/index.html" changelist="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" time="1375624639585" ignored="false" />
+    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379241144456" ignored="false" />
+    <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
+    <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379161316944" ignored="false" />
+    <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223681554" ignored="false" />
+    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223659752" ignored="false" />
+    <file path="/card.css" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377965661051" ignored="false" />
+    <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223411278" ignored="false" />
+    <file path="/FabricIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960415003" ignored="false" />
+    <file path="/FabricImmutableIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960735696" ignored="false" />
+    <file path="/IFabricImmutableIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377961009913" ignored="false" />
+    <file path="/ImmutableNodeMeansOfAccess.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960964944" ignored="false" />
+    <file path="/IdxNodeAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019833065" ignored="false" />
+    <file path="/ImmutableNodeAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378021039805" ignored="false" />
+    <file path="/ContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378019539395" ignored="false" />
+    <file path="/BaseContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378048955781" ignored="false" />
+    <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378054355878" ignored="false" />
+    <file path="/ContentStorageAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038408540" ignored="false" />
+    <file path="/FakeConcentrator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224366454" ignored="false" />
+    <file path="/Concentrator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224833599" ignored="false" />
+    <file path="/WebRelay.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224869070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +67,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -108,6 +101,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -117,28 +111,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="card.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
+      <file leaf-file-name="AppConcentrator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="19" selection-start="2545" selection-end="2545" vertical-scroll-proportion="-14.04">
+            <state line="19" column="28" selection-start="682" selection-end="697" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+      <file leaf-file-name="WebRelay.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="24" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-17.653847">
-              <folding />
+            <state line="12" column="28" selection-start="479" selection-end="479" vertical-scroll-proportion="0.2060606">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
+      <file leaf-file-name="FakeConcentrator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="999" selection-end="999" vertical-scroll-proportion="0.46459627">
+            <state line="26" column="50" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,22 +158,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java" />
-        <option value="$PROJECT_DIR$/conf/app.yaml" />
-        <option value="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
-        <option value="$PROJECT_DIR$/src/common/math/RandomGeneratorException.java" />
-        <option value="$PROJECT_DIR$/src/common/math/GeneratorAnyRandom.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/OutOfRangeOnAccess.java" />
-        <option value="$PROJECT_DIR$/src/totext/ImmutableBECSave.java" />
-        <option value="$PROJECT_DIR$/src/totext/VParserException.java" />
-        <option value="$PROJECT_DIR$/src/totext/ImmutableBECParser.java" />
-        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
-        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
-        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ContentHolder.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
-        <option value="$PROJECT_DIR$/web-pages/index.html" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/ContentStorageAccessor.java" />
+        <option value="$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java" />
+        <option value="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
+        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/Concentrator.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
+        <option value="$PROJECT_DIR$/web-pages/index.html" />
       </list>
     </option>
   </component>
@@ -214,6 +210,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,10 +218,6 @@
               <option name="myItemId" value="spinning-vocabulary-cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -260,11 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,28 +267,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-pages" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="web_wrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spinning-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/idx_coursors" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="recentsLimit" value="5" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work-libs/java/checkthread-annotations-1.0.9.jar!/" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work-libs/java/mockito-1.9.5/mockito-all-1.9.5.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -308,29 +313,84 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="web_wrapper" />
-      <recent name="crosscuttings" />
       <recent name="idx_coursors" />
+      <recent name="web_wrapper" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="common" />
-      <recent name="crosscuttings" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="web_wrapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="idx_coursors" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppContainer">
+  <component name="RunManager" selected="Application.WebRelay">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -341,122 +401,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GeneratorAnyRandom" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="common.math.GeneratorAnyRandom" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="spinning-vocabulary-cards" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AppContainer" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="web_wrapper.AppContainer" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="spinning-vocabulary-cards" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="IdxNodeAccessorTest" type="JUnit" factoryName="JUnit">
-      <module name="spinning-vocabulary-cards" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="idx_coursors" />
-      <option name="MAIN_CLASS_NAME" value="idx_coursors.IdxNodeAccessorTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AppConfiguratorTest" type="JUnit" factoryName="JUnit">
-      <module name="spinning-vocabulary-cards" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="crosscuttings" />
-      <option name="MAIN_CLASS_NAME" value="crosscuttings.AppConfiguratorTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AppContainerTest" type="JUnit" factoryName="JUnit">
       <module name="spinning-vocabulary-cards" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -464,9 +408,73 @@
       <option name="MAIN_CLASS_NAME" value="web_wrapper.AppContainerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="WebRelay" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="web_wrapper.WebRelay" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="spinning-vocabulary-cards" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestWebWrapper" type="JUnit" factoryName="JUnit">
+      <module name="spinning-vocabulary-cards" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="web_wrapper" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestCoursors" type="JUnit" factoryName="JUnit">
+      <module name="spinning-vocabulary-cards" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="idx_coursors" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -484,65 +492,65 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.GeneratorAnyRandom" />
-      <item index="1" class="java.lang.String" itemvalue="Application.AppContainer" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.IdxNodeAccessorTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AppConfiguratorTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AppContainerTest" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.WebRelay" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestWebWrapper" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCoursors" />
     </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d0e147d4-c6df-4d44-ae2c-2ac21fdb6a7c" name="Default" comment="" />
-      <created>1372785437983</created>
-      <updated>1372785437983</updated>
+      <changelist id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="" />
+      <created>1376657752548</created>
+      <updated>1376657752548</updated>
     </task>
     <servers />
-  </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24703088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.50729334" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32422802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30875203" sideWeight="0.29739335" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30331755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298217" sideWeight="0.7764505" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22354949" sideWeight="0.20988655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29983792" sideWeight="0.8147268" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24644549" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3197279" sideWeight="0.48703402" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -607,89 +615,103 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/OutOfRangeOnAccess.java">
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="110" selection-end="128" vertical-scroll-proportion="0.09714286" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableBECSave.java">
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="4" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/totext/VParserException.java">
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/internal/runners/statements/ExpectException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" />
+        <state line="12" column="14" selection-start="527" selection-end="527" vertical-scroll-proportion="0.37029704" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/totext/ImmutableBECParser.java">
+    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="66" selection-start="3682" selection-end="3682" vertical-scroll-proportion="-0.0609319" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/MapReduceChains.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="50" selection-start="7073" selection-end="7073" vertical-scroll-proportion="0.49908257" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.8" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="28" selection-start="8710" selection-end="8710" vertical-scroll-proportion="3.3368983" />
+        <state line="192" column="6" selection-start="8035" selection-end="8470" vertical-scroll-proportion="0.025796661" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java">
+    <entry file="file://$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.7132867" />
+        <state line="110" column="33" selection-start="3589" selection-end="3589" vertical-scroll-proportion="2.1779358" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Getters.java">
+    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BaseContentHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="688" selection-end="688" vertical-scroll-proportion="0.24708624" />
+        <state line="25" column="7" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="29" selection-start="5416" selection-end="5416" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/hided/subs/sys-settings-new.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="516" selection-end="516" vertical-scroll-proportion="0.5" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/js/develop/sys-settings-engine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.071429" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="19" selection-start="2545" selection-end="2545" vertical-scroll-proportion="-14.04">
+        <state line="11" column="28" selection-start="312" selection-end="312" vertical-scroll-proportion="0.15769945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="24" selection-start="2292" selection-end="2292" vertical-scroll-proportion="-17.653847">
+        <state line="33" column="31" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.8200371" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Wrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.3413729">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1713#1729#0" expanded="true" />
+            <element signature="e#1790#1813#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Concentrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="94" selection-start="511" selection-end="511" vertical-scroll-proportion="0.46363637">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="999" selection-end="999" vertical-scroll-proportion="0.46459627">
+        <state line="118" column="20" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.025757575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="50" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="682" selection-end="697" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="634" selection-end="634" vertical-scroll-proportion="0.44402984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="479" selection-end="479" vertical-scroll-proportion="0.2060606">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,7 +779,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>checkthread-annotations-1.0.9</last-edited>
+          <last-edited>mockito-all-1.9.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
