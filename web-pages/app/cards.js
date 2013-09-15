@@ -115,12 +115,25 @@ function getFillMap() {
 
 
 //
-function createWordLeaf() {
+function createWordLeaf(content) {
   // Набор компонентов, которые подключаются к одному узлу.
   var components = [];
   
   // Текстовое заполнение
   components.push(createTextDeck(content));
+  
+  
+  /*
+
+        <!--div class="tuner-base updater">
+            <div class="circle-parent">
+                <div class="circle-inner">
+                    <div class="triangle-inner-right"></div>
+                </div>
+            </div>
+        </div-->
+*/
+
   return components;
 }
 
@@ -177,8 +190,10 @@ function createTextDeck(content) {
   var  wrapper = $("<div/>").addClass('slice');
   for (var i = 0; i < countItems; ++i) {
     // Текст нужно обернуть получше
-    $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
-      $("<div/>").addClass("slice-inner").appendTo(wrapper));
+    var textContainer = $("<div/>").addClass("slice-inner");
+    var text = $("<span/>").addClass("text-contents").append(contentReversed[i]);
+    $(text).appendTo(textContainer);
+    $(textContainer).appendTo(wrapper)
   }
   return wrapper;
 }
@@ -202,13 +217,4 @@ function getOneCardContent(callBackFun) {
       })
 }
 
-/*
 
-        <!--div class="tuner-base updater">
-            <div class="circle-parent">
-                <div class="circle-inner">
-                    <div class="triangle-inner-right"></div>
-                </div>
-            </div>
-        </div-->
-*/
