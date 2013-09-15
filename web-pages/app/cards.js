@@ -96,11 +96,21 @@ function processOneCard(obj, dataOneCard) {
   $.each(names, function(key_local, value) {
     var handler = leafsHandlers[value];
     var content = dataOneCard[1][key_local];
-    var components = createAnyCard(content);
+    var fillMap = getFillMap();
+    var components = fillMap[value](content);
     for (i = 0; i < components.length; ++i)
       $(components[i]).appendTo(handler);
   });
 };
+
+
+function getFillMap() {
+  return {
+    "content": createAnyCard, 
+    "translate": createAnyCard, 
+    "word": createAnyCard, 
+  };
+}
 
 function createTextDeck(content) {
   var countItems = content.length;
