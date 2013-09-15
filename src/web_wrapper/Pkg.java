@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 class Pkg extends HttpServlet {
-  private final AppContainer CONTAINER;
-  public Pkg(AppContainer container) {
+  private final Concentrator CONTAINER;
+  public Pkg(Concentrator container) {
     CONTAINER = container;
   }
 

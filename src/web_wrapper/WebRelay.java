@@ -21,13 +21,13 @@ public class WebRelay {
   public static void main(String[] args) throws Exception {
     // Сервлеты
     try {
-      Wrapper wrapper = new Wrapper();
+      /*Wrapper wrapper = new Wrapper();
 
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
-        namesNodes, new FabricImmutableNodeAccessors());
+          namesNodes, new FabricImmutableNodeAccessors());*/
 
-      AppContainer container = new AppContainer(accessors);
+      Concentrator container = new FakeConcentrator();//(accessors);
 
       HandlerList handlers = Wrapper.buildHandlers(container);
 

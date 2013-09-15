@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 class Wrapper {
-  public static HandlerList buildHandlers(AppContainer container) {
+  public static HandlerList buildHandlers(Concentrator container) {
     // Подключаем ресурсы
     ResourceHandler resourceHandler = new ResourceHandler();
     resourceHandler.setDirectoriesListed(true);
