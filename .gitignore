@@ -3,6 +3,8 @@
 out
 *.py[cod]
 
+web-pages/closure-library
+
 # C extensions
 *.so
 
