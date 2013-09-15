@@ -11,7 +11,7 @@ var CONSTANTS = (function () {
   DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
-  CARD_CONTAINER_SEL : '.card-container',
+  SEL_CARD_CONTAINER : '.card-container',
   INNER_CARDS_CONTAINER: '.slice-inner'
   }
 })();
@@ -28,17 +28,12 @@ function init() {
 }
 
 function pureInit() {
-  $(CONSTANTS.CARD_CONTAINER_SEL).each(function(key, value) {
+  $(CONSTANTS.SEL_CARD_CONTAINER).each(function(key, value) {
     var content = this;
     // Получить новое слово
     var here = function (response) {
       processOneCard(content, response);
     };
-
-    // Оставить только кнопку обновления
-    $(this).find('div.tuner-base.updater')
-      .click(function () {
-        getOneCardContent(here);});
 
     // Делаем инициирующий запрос - Шлется только один
     getOneCardContent(here);
@@ -74,21 +69,10 @@ function processOneCard(obj, dataOneCard) {
   leafsDeck.empty();
 
   // Только этот словарь знаяет, какой ключ соответсвует карте
-  var createLeafs = function () {
-    var cardsHandles = {};
-
-    // Создаем leafs - контейнеры для хранения конечных данных
-    var items = dataOneCard[0][0];  // Нужна строгая сортировка!
-    $.each(items, function (key, value) {
-      cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
-    });
-    return cardsHandles;
-  }
-  
-  var leafsHandlers = createLeafs();
+  var names = dataOneCard[0][0];  // Нужна строгая сортировка!
+  var leafsHandlers = createLeafs(names);
 
   // Заполняем
-  var names = dataOneCard[0][0];  // Нужна строгая сортировка!
   $.each(names, function(key_local, value) {
     $(leafsHandlers[value]).appendTo(leafsDeck);
   });
@@ -103,6 +87,16 @@ function processOneCard(obj, dataOneCard) {
   });
 };
 
+function createLeafs(names) {
+  var cardsHandles = {};
+
+  // Создаем leafs - контейнеры для хранения конечных данных
+  $.each(names, function (key, value) {
+    cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
+  });
+  return cardsHandles;
+}
+
 
 // Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
 function getFillMap() {
@@ -113,8 +107,6 @@ function getFillMap() {
   };
 }
 
-
-//
 function createWordLeaf(content) {
   // Набор компонентов, которые подключаются к одному узлу.
   var components = [];
@@ -123,18 +115,25 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  var triangle = $("<div/>").addClass("triangle-inner-right");
-  var circleInner = $("<div/>").addClass("circle-inner");
-  var circleParent = $("<div/>").addClass("circle-parent");
-  var updater = $("<div/>").addClass("tuner-base updater");
-  $(triangle).appendTo(circleInner);
-  $(circleInner).appendTo(circleParent);
-  $(circleParent).appendTo(updater);
+  var triangle = $("<div/>").addClass("triangle-inner-right triangle-updater");
+  var updater = $("<div/>").addClass("tuner-updater updater");
+  $(triangle).appendTo(updater);
   components.push(updater);
+  
+  // Оставить только кнопку обновления
+  var content = $(CONSTANTS.SEL_CARD_CONTAINER);
+  // Получить новое слово
+  var here = function (response) {
+    processOneCard(content, response);
+  };
+
+  // Делаем инициирующий запрос - Шлется только один
+  $(updater)
+    .click(function () {
+      getOneCardContent(here);});
 
   return components;
 }
-
 
 // Так должен заполнятся контент и перевод - само слово должно быть
 //   с панелью управления.

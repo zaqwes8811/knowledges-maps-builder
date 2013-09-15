@@ -190,3 +190,22 @@
   bottom: 2px;
 }
 
+/* Updater*/
+.tuner-updater {
+  height: 50%;
+  width: 30px;
+  position: absolute;
+  top: 0;
+}
+
+.triangle-updater {
+  top: 27px;
+}
+
+
+
+
+
+
+
+
