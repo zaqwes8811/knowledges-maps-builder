@@ -122,17 +122,15 @@ function createWordLeaf(content) {
   // Текстовое заполнение
   components.push(createTextDeck(content));
   
-  
-  /*
-
-        <!--div class="tuner-base updater">
-            <div class="circle-parent">
-                <div class="circle-inner">
-                    <div class="triangle-inner-right"></div>
-                </div>
-            </div>
-        </div-->
-*/
+  // Тюнеров пока нет
+  var triangle = $("<div/>").addClass("triangle-inner-right");
+  var circleInner = $("<div/>").addClass("circle-inner");
+  var circleParent = $("<div/>").addClass("circle-parent");
+  var updater = $("<div/>").addClass("tuner-base updater");
+  $(triangle).appendTo(circleInner);
+  $(circleInner).appendTo(circleParent);
+  $(circleParent).appendTo(updater);
+  components.push(updater);
 
   return components;
 }
@@ -189,7 +187,7 @@ function createTextDeck(content) {
   var contentReversed = (goog.array.clone(content)).reverse();
   var  wrapper = $("<div/>").addClass('slice');
   for (var i = 0; i < countItems; ++i) {
-    // Текст нужно обернуть получше
+    //TODO(zaqwes): Текст нужно обернуть получше
     var textContainer = $("<div/>").addClass("slice-inner");
     var text = $("<span/>").addClass("text-contents").append(contentReversed[i]);
     $(text).appendTo(textContainer);
@@ -204,17 +202,12 @@ function getOneCardContent(callBackFun) {
   $.ajax({
     type: 'GET',
     url: urlAjax,
-    data: { noCache: (new Date().getTime()) + Math.random() }
-    })
+    data: { noCache: (new Date().getTime()) + Math.random() }})
       .done(function(response) {
-        //try {
         var response = $.parseJSON(response);
-        callBackFun(response);
-        //catch () {}
-        })
+        callBackFun(response);})
       .fail(function(data) { 
-        alert("error"); 
-      })
+        alert("error"); })
 }
 
 
