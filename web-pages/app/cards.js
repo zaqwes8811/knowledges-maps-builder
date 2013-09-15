@@ -37,6 +37,14 @@ function pureInit() {
 
     // Делаем инициирующий запрос - Шлется только один
     getOneCardContent(here);
+  
+  
+    // Создаем поле для счетчика активных карточек
+    var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
+    var totalItems = $("<div/>").addClass("red-sq");
+    var text = $("<span/>").addClass("text-contents").append("");
+    $(text).appendTo(totalItems);
+    $(totalItems).appendTo(tunerRight);
   });
 }
 
@@ -64,8 +72,9 @@ function processOneCard(obj, dataOneCard) {
       function() {$(this).find('.circle-inner').css(foneName, '#330099');},
       function() {$(this).find('.circle-inner').css(foneName, '#333399');});
       
-  var totalItems = $("<div/>").addClass("red-sq");
-  $(totalItems).appendTo(tunerRight);
+  // Если не созданы, то нужно удалить
+  // Добавляем число записей
+  $(obj).find("div.red-sq").find("span.text-contents").text(countRecords.toString());
 
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
@@ -120,9 +129,17 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  var triangle = $("<div/>").addClass("triangle-inner-right triangle-updater");
+  /*var triangle = $("<div/>").addClass("triangle-inner-right triangle-updater");
   var updater = $("<div/>").addClass("tuner-updater updater");
-  $(triangle).appendTo(updater);
+  $(triangle).appendTo(updater);*/
+  
+  var triangle = $("<div/>").addClass("triangle-inner-up");
+  var circleInner = $("<div/>").addClass("circle-inner");
+  var circleParent = $("<div/>").addClass("circle-parent circle-parent-updater");
+  var updater = $("<div/>").addClass("tuner-updater updater");
+  $(triangle).appendTo(circleInner);
+  $(circleInner).appendTo(circleParent);
+  $(circleParent).appendTo(updater);
   components.push(updater);
   
   // Оставить только кнопку обновления
