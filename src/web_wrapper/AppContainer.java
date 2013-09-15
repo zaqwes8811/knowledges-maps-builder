@@ -10,19 +10,18 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
+import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 import through_functional.configurator.AppConfigurator;
 import through_functional.configurator.ConfFileIsCorrupted;
 import through_functional.configurator.NoFoundConfFile;
-import ui.UI;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 
 
@@ -117,45 +116,55 @@ public class AppContainer {
     // Подключаем к серверу
     server.setHandler(handlers);
     return server;
+
+
   }
 
-  static {
+  private static Server build() {
+    Server server = new Server();
+
+    SelectChannelConnector connector = new SelectChannelConnector();
+    connector.setPort(8080);
+    server.addConnector(connector);
+
+    // Подключаем ресурсы
+    ResourceHandler resourceHandler = new ResourceHandler();
+    resourceHandler.setDirectoriesListed(true);
+    resourceHandler.setWelcomeFiles(new String[]{ "index.html" });
+    resourceHandler.setResourceBase("./web-pages");
+
+    // Регистрируем обработчики
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath("/");
+
+    // Сервлеты
     try {
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = getNodes(
-        namesNodes, new FabricImmutableNodeAccessors());
-      container = new AppContainer(accessors);
+          namesNodes, new FabricImmutableNodeAccessors());
+
+      //
+      AppContainer container = new AppContainer(accessors);
+      context.addServlet(new ServletHolder(new Pkg(container)),"/pkg");
+
+      // Коннектим все
+      HandlerList handlers = new HandlerList();
+      handlers.setHandlers(new Handler[] { resourceHandler, context });
+      server.setHandler(handlers);
+
     } catch (NoFoundConfFile e) {
       throw new RuntimeException();
     } catch (ConfFileIsCorrupted e) {
       throw new RuntimeException();
     }
+
+    return server;
   }
 
-  static private AppContainer container;
-
   public static void main(String[] args) throws Exception {
-    Server server = createServer();
+    Server server = build();
     server.start();
     server.join();
   }
-
-  // @Servlets
-  public static class Pkg extends HttpServlet {
-    // Используем идею REST - параметры GET запросе не передаются
-    @Override
-    protected void doGet(
-        HttpServletRequest request,
-        HttpServletResponse response) throws ServletException, IOException {
-
-      response.setContentType("text/html");
-      response.setStatus(HttpServletResponse.SC_OK);
-
-      //TODO(zaqwes): Сделать декоратор для класса
-      String jsonResponse = new Gson().toJson(container.getPackageActiveNode());
-
-      response.setCharacterEncoding("UTF-8");
-      response.getWriter().println(jsonResponse);
-    }
-  }
 }
+
