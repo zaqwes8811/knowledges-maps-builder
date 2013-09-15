@@ -7,8 +7,8 @@ goog.require('goog.array');
 var CONSTANTS = (function () {
   return {
   // Selectors
-  UP_TUNER_SEL : 'div.tuner-base.leafs-tuner-up',
-  DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
+  SEL_LEFT_TUNER : 'div.tuner-base.leafs-tuner-up',
+  SEL_RIGHT_TUNER : 'div.tuner-base.leafs-tuner-down',
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
   SEL_CARD_CONTAINER : '.card-container',
@@ -46,7 +46,7 @@ function processOneCard(obj, dataOneCard) {
 
   // Если запись одна, то нужно закрыть тюнеры!
 
-  $(obj).find(CONSTANTS.UP_TUNER_SEL)
+  $(obj).find(CONSTANTS.SEL_LEFT_TUNER)
     .click(function() {
        seedState = (seedState+1)%countRecords;
        tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
@@ -54,13 +54,18 @@ function processOneCard(obj, dataOneCard) {
       function() {$(this).find('.circle-inner').css(foneName, '#330099');},
       function() {$(this).find('.circle-inner').css(foneName, '#333399');});
 
-  $(obj).find(CONSTANTS.DOWN_TUNER_SEL)
+  // Пока должно быть ясно, но вообще это не производительно.
+  var tunerRight = $(obj).find(CONSTANTS.SEL_RIGHT_TUNER);
+  $(tunerRight)
     .click(function() {
       seedState = (seedState-1+countRecords)%countRecords;
       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
       function() {$(this).find('.circle-inner').css(foneName, '#330099');},
       function() {$(this).find('.circle-inner').css(foneName, '#333399');});
+      
+  var totalItems = $("<div/>").addClass("red-sq");
+  $(totalItems).appendTo(tunerRight);
 
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
