@@ -104,25 +104,26 @@ function processOneCard(obj, dataOneCard) {
 };
 
 
+// Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
 function getFillMap() {
   return {
     "content": createAnyCard, 
     "translate": createAnyCard, 
-    "word": createAnyCard, 
+    "word": createWordLeaf, 
   };
 }
 
-function createTextDeck(content) {
-  var countItems = content.length;
-  var contentReversed = (goog.array.clone(content)).reverse();
-  var  wrapper = $("<div/>").addClass('slice');
-  for (var i = 0; i < countItems; ++i) {
-    // Текст нужно обернуть получше
-    $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
-      $("<div/>").addClass("slice-inner").appendTo(wrapper));
-  }
-  return wrapper;
+
+//
+function createWordLeaf() {
+  // Набор компонентов, которые подключаются к одному узлу.
+  var components = [];
+  
+  // Текстовое заполнение
+  components.push(createTextDeck(content));
+  return components;
 }
+
 
 // Так должен заполнятся контент и перевод - само слово должно быть
 //   с панелью управления.
@@ -169,6 +170,19 @@ function createAnyCard(content) {
   }
   return components;  
 }
+
+function createTextDeck(content) {
+  var countItems = content.length;
+  var contentReversed = (goog.array.clone(content)).reverse();
+  var  wrapper = $("<div/>").addClass('slice');
+  for (var i = 0; i < countItems; ++i) {
+    // Текст нужно обернуть получше
+    $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
+      $("<div/>").addClass("slice-inner").appendTo(wrapper));
+  }
+  return wrapper;
+}
+
 
 function getOneCardContent(callBackFun) {
   var urlAjax = '/pkg';
