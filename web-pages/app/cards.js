@@ -83,16 +83,16 @@ function processOneCard(obj, dataOneCard) {
       cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
     });
     return cardsHandles;
-  };
+  }
   
   var leafsHandlers = createLeafs();
-  for (i = 0; i < leafsHandlers.length; ++i)
-        $(leafsHandlers[i]).appendTo(leafsDeck);
-  //$(leafsDeck).add(leafsHandlers);
-  
 
   // Заполняем
   var names = dataOneCard[0][0];  // Нужна строгая сортировка!
+  $.each(names, function(key_local, value) {
+    $(leafsHandlers[value]).appendTo(leafsDeck);
+  });
+  
   $.each(names, function(key_local, value) {
     var handler = leafsHandlers[value];
     var content = dataOneCard[1][key_local];
@@ -173,7 +173,9 @@ function getOneCardContent(callBackFun) {
         callBackFun(response);
         //catch () {}
         })
-      .fail(function() { alert("error"); })
+      .fail(function(data) { 
+        alert("error"); 
+      })
 }
 
 /*

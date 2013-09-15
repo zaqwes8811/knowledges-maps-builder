@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -11,7 +13,7 @@
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
     <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379161316944" ignored="false" />
     <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379158238988" ignored="false" />
-    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377966071678" ignored="false" />
+    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379220197049" ignored="false" />
     <file path="/card.css" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377965661051" ignored="false" />
     <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377962314656" ignored="false" />
     <file path="/FabricIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960415003" ignored="false" />
@@ -91,20 +93,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="23" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.50986344">
+            <state line="95" column="20" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppContainer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="27" selection-start="4271" selection-end="4271" vertical-scroll-proportion="0.0">
+            <state line="137" column="29" selection-start="4914" selection-end="4914" vertical-scroll-proportion="0.38088012">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pkg.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,14 +140,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/FabricImmutableIdxAccessors.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeMeansOfAccess.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableIdxAccessors.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableNodeAccessors.java" />
         <option value="$PROJECT_DIR$/src/hided/ServletPrototype.java" />
         <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
         <option value="$PROJECT_DIR$/web-pages/css/card.css" />
-        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ContentHolder.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
@@ -143,6 +154,8 @@
         <option value="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
       </list>
     </option>
   </component>
@@ -513,7 +526,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28038898" sideWeight="0.8135392" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18646081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18646081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -581,11 +594,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeNoFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="220" selection-end="264" vertical-scroll-proportion="0.3130755" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/idx_coursors/NodeAlreadyExist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="54" selection-start="119" selection-end="135" vertical-scroll-proportion="0.09123435" />
@@ -652,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="27" selection-start="4271" selection-end="4271" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="16" selection-start="1242" selection-end="1242" vertical-scroll-proportion="-22.23077">
@@ -668,7 +669,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="23" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.50986344">
+        <state line="95" column="20" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="29" selection-start="4914" selection-end="4914" vertical-scroll-proportion="0.38088012">
           <folding />
         </state>
       </provider>
