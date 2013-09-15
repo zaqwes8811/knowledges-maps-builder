@@ -44,7 +44,7 @@ public class IdxNodeAccessor {
   //   В филосоии пишет, что важнее скорее тип, и по нему мы ловим.
   @NotThreadSafe
   //@Deprecated  // exception chaining в таков виде устарел
-  public static ImmutableNodeMeansOfAccess createImmutableConnection(String pathToNode)
+  public static ImmutableNodeAccessor createImmutableConnection(String pathToNode)
       throws NodeNoFound, NodeIsCorrupted {
     try {
       // TODO(zaqwes): Запрещать создавать объекты с одинаковыми именами узлов!
@@ -98,16 +98,19 @@ public class IdxNodeAccessor {
   // @Immutable  // Если в имени класса Imm. and in annotation - bad. Но хорошо бы различать!
   //   это важное свойство.
   @Immutable
-  private static class OnFiles implements ImmutableNodeMeansOfAccess {
+  private static class OnFiles implements ImmutableNodeAccessor {
     private final String PATH_TO_NODE;
 
     private final ImmutableList<String> CASH_CONTENT;
+    private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
+
     private final ImmutableList<String> CASH_SORTED_IDX;
     private final Integer COUNT_ITEMS;
     private final ImmutableMap<String, List<Integer>> CASH_DESCRIPTIONS_IDX;
-    private final ImmutableMap<String, List<Integer>> CASH_SENTENCES_KEYS_IDX;
+
     private final ImmutableMap<String, Integer> CASH_FREQUENCY_IDX;
 
+    //TODO(zaqwes); BAD!!
     private OnFiles(String pathToNode) throws NodeNoFound, IOException {
       if (!new File(pathToNode).exists()) {
         throw new NodeNoFound(pathToNode);
@@ -160,7 +163,7 @@ public class IdxNodeAccessor {
 
     // В принципе генерировать исключений не должно.
     @Override
-    public ImmutableList<Integer> getDistribution() {
+    final public ImmutableList<Integer> getDistribution() {
       List<Integer> tmp = new ArrayList<Integer>();
       for (final String item: CASH_SORTED_IDX) {
         tmp.add(CASH_FREQUENCY_IDX.get(item));
@@ -169,7 +172,7 @@ public class IdxNodeAccessor {
     }
 
     @Override
-    public String getWord(Integer key) {
+    final public String getWord(Integer key) {
       // Проверяем границы.
       // Вычитать 1 нужно, так как нумерация с нуля.
       if (!(key < 0 || key > COUNT_ITEMS-1)) {
@@ -180,13 +183,15 @@ public class IdxNodeAccessor {
     }
 
     @Override
-    public ImmutableList<String> getContent(Integer key) {
+    final public ImmutableList<String> getContent(Integer key) {
       if (!checkKey(key)) {
         throw new OutOfRangeOnAccess("Out of range.");
       }
       // Извлекаем набор ключей для доступа
-      List<String> sentences = new ArrayList<String>();
       String word = CASH_SORTED_IDX.get(key);
+
+      // Доступ по слову!
+      List<String> sentences = new ArrayList<String>();
       if (CASH_SENTENCES_KEYS_IDX.containsKey(word)) {
         List<Integer> tmp = CASH_SENTENCES_KEYS_IDX.get(word);
         ImmutableList<Integer> pointers = ImmutableList.copyOf(tmp);
@@ -194,7 +199,6 @@ public class IdxNodeAccessor {
           sentences.add(CASH_CONTENT.get(ptr-1));
         }
       } else {
-        sentences.add("No records");
       }
       return ImmutableList.copyOf(sentences);
     }
