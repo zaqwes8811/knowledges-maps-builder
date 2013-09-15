@@ -1,32 +1,21 @@
 // Подключает карточки
-// <span class="text-contents">Display the matched elements with a sliding motion.</span>
-
 // TODO(zaqwes): Как скрыть пространство имен.
 
-// /app/cards.js
-
-goog.provide('cards');  // Export?
-
+goog.provide('voc_app.cards');  // Export?
 goog.require('goog.array');
 
-var AConstants = (function () {
-  var items = ['word', 'content', 'translate'];
+var CONSTANTS = (function () {
   return {
-    ITEMS : items,   // Какие есть подкарты
-    CONTENT : items[1],
-    TRANSLATE : items[2],
-    WORD : items[0],
-    TOTAL_FRONT_CARDS : items.length,
-
-    // Selectors
-    UP_TUNER_SEL : 'div.tuner-base.leafs-tuner-up',
-    DOWN_TUNER_SEL : 'div.tuner-base.leafs-tuner-down',
-    SUB_CARDS_SEL : ".leafs-container > div.leaf",
-    PACK_CARDS_SEL : '.leafs-container',
-    CARD_CONTAINER_SEL : '.card-container',
-    INNER_CARDS_CONTAINER: '.slice-inner'
+  // Selectors
+  SEL_LEFT_TUNER : 'div.tuner-base.leafs-tuner-up',
+  SEL_RIGHT_TUNER : 'div.tuner-base.leafs-tuner-down',
+  SUB_CARDS_SEL : ".leafs-container > div.leaf",
+  SEL_LEAFS_DECK : '.leafs-container',
+  SEL_CARD_CONTAINER : '.card-container',
+  INNER_CARDS_CONTAINER: '.slice-inner'
   }
 })();
+var foneName = 'ba ckground-color';
 
 function tick(seed, sel, count, obj) {
   $(obj).parent().find(sel).each(function (key, value) {
@@ -34,153 +23,212 @@ function tick(seed, sel, count, obj) {
   });
 }
 
-function getFakeResponse() {
-    // Данные которые будут приходить с веб-сервера
-    var response = []
-    var CONTENT = AConstants.CONTENT;
-    var TRANSLATE = AConstants.TRANSLATE;
-    response.push({
-       "content" : ["Hello Display the matched. Display the matched elements with a sliding motion.", "Display the matched elements with a sliding motion."],
-       "translate" : ["Перевод1", "Перевод2"],
-       'word': ['matched']
-    });
-
-    response.push({
-       'content' : ["Hello"],
-       'translate' : ["Перевод", "Переводasdf"],
-       'word': ['hello']
-    });
-
-    response.push({
-           'content' : ["Hello", "Hello"],
-           'translate' : ["Перевод", "Переводasdf"],
-           'word': ['hello']
-        });
-
-    response.push({
-               'content' : ["Hello", "Hello"],
-               'translate' : ["Перевод", "Переводasdf"],
-               'word': ['hello']
-            });
-
-    return response;
-}
-//var Cards = (function)
 function init() {
-    pureInit();
-    processResponse(getFakeResponse());
+  pureInit();
 }
 
-// Подключает тюнеры?
 function pureInit() {
-  $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
-     // TODO(zaqwes): У каждого тюнера есть состояние. Хорошо бы его инкапсулировать.
-     // Подключаем тюнер-вверх для подкарт - нужно вынести отсюда. Это чистая инициализация.
-     // TODO(zaqwes): Тюнеры конфликтуют и глючат
-     // TODO(zaqwes): Может тюрены ограничить, чтобы не сбивать с толку при замыкании
-     // TODO(zaqwes: TOTH: А вообще, понятно ли какая подкарты перед нами?
-     // TODO(zaqwes): DANGER: Быстро утекает память! Или медленно идет сборка мусора?
-     // TODO(zaqwes): использовать find() наверное не очень хорошо.
-     var seedState = 0;
-     $(this).find(AConstants.UP_TUNER_SEL)
-        .click(function() {
-           var COUNT = AConstants.TOTAL_FRONT_CARDS;
-           seedState = (seedState+1)%COUNT;
-           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
-        })
-        .hover(
-            function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-            function() {$(this).find('.circle-inner').css('background-color', '#333399');}
-        );
-     $(this).find(AConstants.DOWN_TUNER_SEL)
-       .click(function() {
-           var COUNT = AConstants.TOTAL_FRONT_CARDS;
-           seedState = (seedState-1+COUNT)%COUNT;
-           tick(seedState, AConstants.SUB_CARDS_SEL, COUNT, this);
-       })
-       .hover(
-                function() {$(this).find('.circle-inner').css('background-color', '#330099');},
-                function() {$(this).find('.circle-inner').css('background-color', '#333399');});
+  $(CONSTANTS.SEL_CARD_CONTAINER).each(function(key, value) {
+    var content = this;
+    // Получить новое слово
+    var here = function (response) {
+      processOneCard(content, response);
+    };
+
+    // Делаем инициирующий запрос - Шлется только один
+    getOneCardContent(here);
+  
+  
+    // Создаем поле для счетчика активных карточек
+    var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
+    var totalItems = $("<div/>").addClass("red-sq");
+    var text = $("<span/>").addClass("text-contents").append("");
+    $(text).appendTo(totalItems);
+    $(totalItems).appendTo(tunerRight);
   });
 }
 
-function processResponse(response) {
-    // TODO(zaqwes): TOTH: Что будет менятся от запроса к запросу?
-    // Обрабатываем все доступные карты
-    $(AConstants.CARD_CONTAINER_SEL).each(function(key, value) {
-        // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-        var subCardsPkg = $(this).find(AConstants.PACK_CARDS_SEL);
-        subCardsPkg.empty();  // TODO(zaqwes): Не утекают ли обработчики тюнеров?
-        // http://stackoverflow.com/questions/11726864/jquery-empty-click-and-memory-management
-        var cardsHandles = {};
+function processOneCard(obj, dataOneCard) {
+  var seedState = 0;
+  var countRecords = dataOneCard[0][0].length;
 
-        $.each((goog.array.clone(AConstants.ITEMS)).reverse(), function (key, value) {
-          cardsHandles[value] = $("<div/>").addClass('leaf').appendTo(subCardsPkg);
-          $(cardsHandles[value]).css("z-index", key);
-        });
+  // Если запись одна, то нужно закрыть тюнеры!
 
-        // Добавляем контент
-        var tmp = [AConstants.CONTENT, AConstants.TRANSLATE, AConstants.WORD];
-        $.each(tmp, function(key_local, value) {
-            var handler = cardsHandles[value];
-            var content = response[key][value];
-            fillNoWordCard(content, handler);
-        });
+  $(obj).find(CONSTANTS.SEL_LEFT_TUNER)
+    .click(function() {
+       seedState = (seedState+1)%countRecords;
+       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
+    .hover(
+      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
+      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
 
-        $.each(function (key, value) { value = null; });
-    });  // .each()
+  // Пока должно быть ясно, но вообще это не производительно.
+  var tunerRight = $(obj).find(CONSTANTS.SEL_RIGHT_TUNER);
+  $(tunerRight)
+    .click(function() {
+      seedState = (seedState-1+countRecords)%countRecords;
+      tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
+    .hover(
+      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
+      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
+      
+  // Если не созданы, то нужно удалить
+  // Добавляем число записей
+  $(obj).find("div.red-sq").find("span.text-contents").text(countRecords.toString());
+
+  // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
+  var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
+
+  // Сбрасываем
+  leafsDeck.empty();
+
+  // Только этот словарь знаяет, какой ключ соответсвует карте
+  var names = dataOneCard[0][0];  // Нужна строгая сортировка!
+  var leafsHandlers = createLeafs(names);
+
+  // Заполняем
+  $.each(names, function(key_local, value) {
+    $(leafsHandlers[value]).appendTo(leafsDeck);
+  });
+  
+  $.each(names, function(key_local, value) {
+    var handler = leafsHandlers[value];
+    var content = dataOneCard[1][key_local];
+    var fillMap = getFillMap();
+    var components = fillMap[value](content);
+    for (i = 0; i < components.length; ++i)
+      $(components[i]).appendTo(handler);
+  });
+};
+
+function createLeafs(names) {
+  var cardsHandles = {};
+
+  // Создаем leafs - контейнеры для хранения конечных данных
+  $.each(names, function (key, value) {
+    cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
+  });
+  return cardsHandles;
 }
 
-function fillNoWordCard(content, handler) {
-    var countItems = content.length;
 
-    // TODO(zaqwes): Low perfomance! Можно в цикле развернуть.
-    var contentReversed = (goog.array.clone(content)).reverse();
-    var  wrapper = $("<div/>").addClass('slice').appendTo(handler);
-    for (var i = 0; i < countItems; ++i) {
-        // Текст нужно обернуть получше
-        $("<span/>").addClass("text-contents").append(contentReversed[i]).appendTo(
-          $("<div/>").addClass("slice-inner").appendTo(wrapper));
-    }
+// Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
+function getFillMap() {
+  return {
+    "content": createAnyCard, 
+    "translate": createAnyCard, 
+    "word": createWordLeaf, 
+  };
+}
 
-    // Добавляем тюнеры только если более одного элемента.
-    // TODO(zaqwes): Сделать их по середине поля! И тонкими
-    if (countItems > 1) {
-        var seed = 0;
-        var main_tuner = $("<div/>").addClass("tuner-base slice-tuner-up")
-            .click(function() {
-              seed = (seed+1)%countItems;
-              tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);
-            })
-            .hover(
-                function() {$(this).find('.triangle-up').css('background-color', '#330099');},
-                function() {$(this).find('.triangle-up').css('background-color', '#333399');})
-            .appendTo(handler)
-        $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up").appendTo(main_tuner);
+function createWordLeaf(content) {
+  // Набор компонентов, которые подключаются к одному узлу.
+  var components = [];
+  
+  // Текстовое заполнение
+  components.push(createTextDeck(content));
+  
+  // Тюнеров пока нет
+  /*var triangle = $("<div/>").addClass("triangle-inner-right triangle-updater");
+  var updater = $("<div/>").addClass("tuner-updater updater");
+  $(triangle).appendTo(updater);*/
+  
+  var triangle = $("<div/>").addClass("triangle-inner-up");
+  var circleInner = $("<div/>").addClass("circle-inner");
+  var circleParent = $("<div/>").addClass("circle-parent circle-parent-updater");
+  var updater = $("<div/>").addClass("tuner-updater updater");
+  $(triangle).appendTo(circleInner);
+  $(circleInner).appendTo(circleParent);
+  $(circleParent).appendTo(updater);
+  components.push(updater);
+  
+  // Оставить только кнопку обновления
+  var content = $(CONSTANTS.SEL_CARD_CONTAINER);
+  // Получить новое слово
+  var here = function (response) {
+    processOneCard(content, response);
+  };
+
+  // Делаем инициирующий запрос - Шлется только один
+  $(updater)
+    .click(function () {
+      getOneCardContent(here);});
+
+  return components;
+}
+
+// Так должен заполнятся контент и перевод - само слово должно быть
+//   с панелью управления.
+function createAnyCard(content) {
+  // Набор компонентов, которые подключаются к одному узлу.
+  var components = [];
+  
+  // Текстовое заполнение
+  components.push(createTextDeck(content));
+
+  // Добавляем тюнеры только если более одного элемента.
+  var countItems = content.length;
+  if (countItems > 1) {
+    // Общая переменная
+    var seed = 0;
+    
+    // Тюнер вверх
+    var main_tuner_up = $("<div/>").addClass("tuner-base slice-tuner-up")
+      .click(function() {
+        seed = (seed+1)%countItems;
+        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
+      .hover(
+        function() {$(this).find('.triangle-up').css(foneName, '#330099');},
+        function() {$(this).find('.triangle-up').css(foneName, '#333399');})
         
-        // Тюнер вниз
-        main_tuner = $("<div/>").addClass("tuner-base slice-tuner-down")
-            .click(function() {
-              seed = (seed-1+countItems)%countItems;
-              tick(seed, AConstants.INNER_CARDS_CONTAINER, countItems, this);
-            })
-            .hover(
-                function() {$(this).find('.triangle-down').css('background-color', '#330099');},
-                function() {$(this).find('.triangle-down').css('background-color', '#333399');})
-            .appendTo(handler);
-        $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down").appendTo(main_tuner);
-    }
+    var tuner_arrow_up = $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up");
+    $(tuner_arrow_up).appendTo(main_tuner_up);
+
+    // Тюнер вниз
+    var main_tuner_down = $("<div/>").addClass("tuner-base slice-tuner-down")
+      .click(function() {
+        seed = (seed-1+countItems)%countItems;
+        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
+      .hover(
+        function() {$(this).find('.triangle-down').css(foneName, '#330099');},
+        function() {$(this).find('.triangle-down').css(foneName, '#333399');})
+      
+    var tuner_arrow_down = $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down");
+    $(tuner_arrow_down).appendTo(main_tuner_down);
+    
+    // Form object graph.
+    components.push(main_tuner_up);
+    components.push(main_tuner_down);
+  }
+  return components;  
+}
+
+function createTextDeck(content) {
+  var countItems = content.length;
+  var contentReversed = (goog.array.clone(content)).reverse();
+  var  wrapper = $("<div/>").addClass('slice');
+  for (var i = 0; i < countItems; ++i) {
+    //TODO(zaqwes): Текст нужно обернуть получше
+    var textContainer = $("<div/>").addClass("slice-inner");
+    var text = $("<span/>").addClass("text-contents").append(contentReversed[i]);
+    $(text).appendTo(textContainer);
+    $(textContainer).appendTo(wrapper)
+  }
+  return wrapper;
 }
 
 
-function getCardsContent() {
+function getOneCardContent(callBackFun) {
+  var urlAjax = '/pkg';
   $.ajax({
     type: 'GET',
-    url: '/pkg'})
-    .done(function(response) {
-
-        processResponse($.parseJSON(response));
-
-     })
-    .fail(function() { alert("error"); })
+    url: urlAjax,
+    data: { noCache: (new Date().getTime()) + Math.random() }})
+      .done(function(response) {
+        var response = $.parseJSON(response);
+        callBackFun(response);})
+      .fail(function(data) { 
+        alert("error"); })
 }
+
+
