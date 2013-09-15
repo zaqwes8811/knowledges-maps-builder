@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/app/cards.js" afterPath="$PROJECT_DIR$/web-pages/app/cards.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,11 +87,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppConcentrator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppConcentrator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="28" selection-start="1075" selection-end="1075" vertical-scroll-proportion="-0.1590909">
+            <state line="19" column="28" selection-start="682" selection-end="697" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebRelay.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="9" selection-start="785" selection-end="785" vertical-scroll-proportion="0.6439394">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +110,7 @@
       <file leaf-file-name="FakeConcentrator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="49" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+            <state line="26" column="50" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -652,24 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="49" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.4848485">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/app/cards.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="118" column="20" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.025757575">
@@ -684,10 +680,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="50" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="28" selection-start="1075" selection-end="1075" vertical-scroll-proportion="-0.1590909">
+        <state line="19" column="28" selection-start="682" selection-end="697" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="785" selection-end="785" vertical-scroll-proportion="0.6439394">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
