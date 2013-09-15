@@ -1,11 +1,13 @@
 package web_wrapper;
 
-import common.Util;
-import net.jcip.annotations.Immutable;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import idx_coursors.*;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
+import through_functional.configurator.AppConfigurator;
+import through_functional.configurator.ConfFileIsCorrupted;
+import through_functional.configurator.NoFoundConfFile;
+import ui.UI;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,20 +17,23 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class AppContainerTest {
-  @Test
-  public void testCloseApp() throws Exception {
-    /*List<Integer> result = new ArrayList<Integer>();
-    Integer SIZE_EXPERIMENT = 10000;
-    for (int i = 0; i < SIZE_EXPERIMENT; ++i) {
-      result.add(AppContainer.getKey());
-    }
-    Util.print(result);*/
-  }
+
+  //TODO(zaqwes): Венуть tuple - результат и отчет - если отчет пуст - все хорошо
+
 
   @Test
-  public void testMain() throws Exception {
-    for (int i = 0; i < 19; ++i) {
-      Util.print(AppContainer.getPackage());
+  public void testGeneratePackage() throws Exception {
+    try {
+      Wrapper wrapper = new Wrapper();
+      ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
+      ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
+        namesNodes, new FabricImmutableNodeAccessors());
+      AppConcentrator container = new AppConcentrator(accessors);
+      container.getPackageActiveNode();
+    } catch (NoFoundConfFile e) {
+      UI.showMessage("Configuration file no found - "+e.getFileName());
+    } catch (ConfFileIsCorrupted e) {
+      UI.showMessage(e.WHAT_HAPPENED);
     }
   }
 }
