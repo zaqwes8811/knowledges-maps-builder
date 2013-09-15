@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/Concentrator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" afterPath="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" afterPath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" afterPath="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\src\web_wrapper\AppContainer.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java" />
     </list>
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379222676620" ignored="false" />
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
     <file path="/cards.js" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379161316944" ignored="false" />
-    <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223381612" ignored="false" />
-    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223288185" ignored="false" />
+    <file path="/fragment.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223681554" ignored="false" />
+    <file path="/AppContainer.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223659752" ignored="false" />
     <file path="/card.css" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377965661051" ignored="false" />
     <file path="/AppContainerTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379223411278" ignored="false" />
     <file path="/FabricIdxAccessors.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377960415003" ignored="false" />
@@ -27,6 +30,9 @@
     <file path="/BaseContentHolder.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378048955781" ignored="false" />
     <file path="/BaseContentHolderTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378054355878" ignored="false" />
     <file path="/ContentStorageAccessor.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1378038408540" ignored="false" />
+    <file path="/FakeConcentrator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224366454" ignored="false" />
+    <file path="/Concentrator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224833599" ignored="false" />
+    <file path="/WebRelay.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379224869070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +94,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="1242" selection-end="1242" vertical-scroll-proportion="-0.65384614">
+            <state line="34" column="0" selection-start="1242" selection-end="1242" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -103,19 +109,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+      <file leaf-file-name="AppConcentrator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="21" selection-start="2200" selection-end="2200" vertical-scroll-proportion="0.0">
+            <state line="28" column="17" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebRelay.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WebRelay.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="48" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0">
+            <state line="19" column="48" selection-start="648" selection-end="648" vertical-scroll-proportion="0.4378788">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,20 +129,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainerTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
+      <file leaf-file-name="FakeConcentrator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="31" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.669697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pkg.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="14" column="29" selection-start="285" selection-end="301" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,9 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/idx_coursors/IFabricImmutableNodeAccessors.java" />
-        <option value="$PROJECT_DIR$/src/hided/ServletPrototype.java" />
-        <option value="$PROJECT_DIR$/web-pages/css/card.css" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ContentHolder.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessor.java" />
@@ -170,11 +166,14 @@
         <option value="$PROJECT_DIR$/tests/idx_coursors/BaseContentHolderTest.java" />
         <option value="$PROJECT_DIR$/web-pages/index.html" />
         <option value="$PROJECT_DIR$/web-pages/app/cards.js" />
+        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/Wrapper.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java" />
+        <option value="$PROJECT_DIR$/src/web_wrapper/Concentrator.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
-        <option value="$PROJECT_DIR$/src/web_wrapper/AppContainer.java" />
-        <option value="$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java" />
       </list>
     </option>
   </component>
@@ -318,12 +317,15 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="idx_coursors" />
       <recent name="web_wrapper" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="web_wrapper" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="idx_coursors" />
@@ -534,6 +536,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32422802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -548,7 +551,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -613,16 +615,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/guava-14.0.1.jar!/com/google/common/cache/LocalCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="482" column="41" selection-start="22263" selection-end="22263" vertical-scroll-proportion="0.8376238" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.8" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -666,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1242" selection-end="1242" vertical-scroll-proportion="-0.65384614">
+        <state line="34" column="0" selection-start="1242" selection-end="1242" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
@@ -680,14 +672,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="1" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+        <state line="11" column="28" selection-start="312" selection-end="312" vertical-scroll-proportion="0.15769945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.8200371">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Wrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.8757576">
+        <state line="23" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.3413729">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1713#1729#0" expanded="true" />
@@ -696,26 +695,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Concentrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="21" selection-start="2200" selection-end="2200" vertical-scroll-proportion="0.0">
+        <state line="18" column="94" selection-start="511" selection-end="511" vertical-scroll-proportion="0.46363637">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="48" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0">
+        <state line="28" column="17" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/FakeConcentrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="285" selection-end="301" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/web_wrapper/AppContainerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/web_wrapper/WebRelay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.669697">
-          <folding />
+        <state line="19" column="48" selection-start="648" selection-end="648" vertical-scroll-proportion="0.4378788">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

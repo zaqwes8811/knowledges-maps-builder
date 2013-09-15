@@ -17,7 +17,7 @@ import through_functional.configurator.NoFoundConfFile;
 import java.util.*;
 
 
-public class AppContainer {
+public class AppConcentrator implements Concentrator {
   private final ImmutableList<ImmutableNodeAccessor> NODES;
   private final ImmutableNodeAccessor ACTIVE_NODE_ACCESSOR;
   private final GeneratorAnyRandom GENERATOR;
@@ -26,6 +26,7 @@ public class AppContainer {
   // Word: само слово
   // Translates:
   // Context:
+  @Override
   public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {
 
     List<String> rawKeys = new ArrayList<String>();
@@ -55,7 +56,7 @@ public class AppContainer {
     return ImmutableList.of(ImmutableList.copyOf(keys), ImmutableList.copyOf(values));
   }
 
-  public AppContainer(ImmutableList<ImmutableNodeAccessor> nodes) {
+  public AppConcentrator(ImmutableList<ImmutableNodeAccessor> nodes) {
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
     NODES = nodes;  // Должна упасть если при ошибке дошла до сюда
     ACTIVE_NODE_ACCESSOR = NODES.asList().get(0);

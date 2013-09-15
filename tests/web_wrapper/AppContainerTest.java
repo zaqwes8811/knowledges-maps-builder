@@ -9,11 +9,6 @@ import through_functional.configurator.ConfFileIsCorrupted;
 import through_functional.configurator.NoFoundConfFile;
 import ui.UI;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created with IntelliJ IDEA.
  * User: кей
@@ -33,7 +28,7 @@ public class AppContainerTest {
       ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
         namesNodes, new FabricImmutableNodeAccessors());
-      AppContainer container = new AppContainer(accessors);
+      AppConcentrator container = new AppConcentrator(accessors);
       container.getPackageActiveNode();
     } catch (NoFoundConfFile e) {
       UI.showMessage("Configuration file no found - "+e.getFileName());
