@@ -1,8 +1,8 @@
 // Подключает карточки
 // TODO(zaqwes): Как скрыть пространство имен.
 
-goog.provide('voc_app.cards');  // Export?
-goog.require('goog.array');
+//goog.provide('voc_app.cards');  // Export?
+//goog.require('goog.array');
 
 var CONSTANTS = (function () {
   return {
@@ -34,17 +34,16 @@ function pureInit() {
     var here = function (response) {
       processOneCard(content, response);
     };
-
-    // Делаем инициирующий запрос - Шлется только один
-    getOneCardContent(here);
-  
-  
+    
     // Создаем поле для счетчика активных карточек
     var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
     var totalItems = $("<div/>").addClass("red-sq");
     var text = $("<span/>").addClass("text-contents").append("");
     $(text).appendTo(totalItems);
     $(totalItems).appendTo(tunerRight);
+
+    // Делаем инициирующий запрос - Шлется только один
+    getOneCardContent(here);
   });
 }
 
@@ -205,12 +204,11 @@ function createAnyCard(content) {
 
 function createTextDeck(content) {
   var countItems = content.length;
-  var contentReversed = (goog.array.clone(content)).reverse();
   var  wrapper = $("<div/>").addClass('slice');
-  for (var i = 0; i < countItems; ++i) {
+  for (var i = countItems-1; i >= 0; --i) {
     //TODO(zaqwes): Текст нужно обернуть получше
     var textContainer = $("<div/>").addClass("slice-inner");
-    var text = $("<span/>").addClass("text-contents").append(contentReversed[i]);
+    var text = $("<span/>").addClass("text-contents").append(content[i]);
     $(text).appendTo(textContainer);
     $(textContainer).appendTo(wrapper)
   }
@@ -219,6 +217,14 @@ function createTextDeck(content) {
 
 
 function getOneCardContent(callBackFun) {
+  var response = [];
+  var names = ["content", "translate", "word"];
+  response[0] = [names];
+  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello"]];
+  response[1] = data;
+  callBackFun(response)
+        
+/*
   var urlAjax = '/pkg';
   $.ajax({
     type: 'GET',
@@ -228,7 +234,7 @@ function getOneCardContent(callBackFun) {
         var response = $.parseJSON(response);
         callBackFun(response);})
       .fail(function(data) { 
-        alert("error"); })
+        alert("error"); })*/
 }
 
 
