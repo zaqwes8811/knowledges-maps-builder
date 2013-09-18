@@ -1,0 +1,17 @@
+.new-tuner-base {
+  height: 10%;
+  width: 80%;
+  position: absolute;
+}
+
+.new-leafs-tuner-up {
+  left: 11%;
+  top: 0;
+  background-color: red;
+}
+
+.new-leafs-tuner-down {
+  left: 11%;
+  bottom: 0;
+  background-color: red;
+}

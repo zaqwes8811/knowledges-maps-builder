@@ -43,7 +43,7 @@ function pureInit() {
     $(totalItems).appendTo(tunerRight);
 
     // Делаем инициирующий запрос - Шлется только один
-    getOneCardContent(here);
+    //getOneCardContent(here);
   });
 }
 
