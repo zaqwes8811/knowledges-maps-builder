@@ -5,28 +5,6 @@
   http://habrahabr.ru/post/126207/
 */
 
-/** Global */
-.text-contents {
-    position:absolute;
-    vertical-align:middle;
-    color: white;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 1.0em;
-    top: 5px;
-}
-
-html, body { margin: 0; padding: 0; }
-
-.card-container {
-  position: relative;
-  height: 150px;
-  width: 350px;
-  background-color: #333399;
-  margin-top: 5%;
-  
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 /* Перелистователь */
