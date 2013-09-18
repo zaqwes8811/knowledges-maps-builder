@@ -3,7 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <!--link rel="stylesheet" href="css/bootstrap.css"-->
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/extract.css">
 
         <!--script src="closure-library/closure/goog/base.js"></script-->
         
@@ -12,6 +14,23 @@
     </head>
     <body onload="init()">
     <div class="card-container">
+        <!-- Тюнеры по листам -->
+        <div class="new-tuner-base new-leafs-tuner-up">
+            <div class="circle-parent">
+                <div class="circle-inner">
+                    <div class="triangle-inner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="new-tuner-base new-leafs-tuner-down">
+            <div class="circle-parent">
+                <div class="circle-inner">
+                    <div class="triangle-inner-right"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Тюнеры по карточкам -->
         <div class="tuner-base leafs-tuner-up">
             <div class="circle-parent">
                 <div class="circle-inner">
@@ -26,7 +45,8 @@
                 </div>
             </div>
         </div>
-        <div class="leafs-container"></div>
+        
+        <!--div class="leafs-container"></div-->
     </div>
     </body>
 </html>
