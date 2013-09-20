@@ -1,33 +1,51 @@
 .leaf {
-  top: 0;
-  position: absolute;
   height: 100%;
   width: 100%;
+  
+  position: absolute;
+  top: 0;
+
   background-color: #333399;
 }
 
 .leafs-container {
-  top: 0;
-  position: absolute;
-  left:11%;
-  height: 100%;
-  background-color: #333399;
   width: 78%;
+  height: 100%;
+
+  top: 0;
+  left:11%;
+  position: absolute;
+  
+  background-color: #333399;
 }
 
-.leafs-triangle-position {
+.leafs-triangle-position-base {
   left: 120px;
 }
+
+.leafs-triangle-position-up {
+  top: 2px;
+}
+.leafs-triangle-position-over-up {
+  top: -6px;
+}
+
+.leafs-triangle-position-down {
+  bottom: -4px;
+}
+.leafs-triangle-position-over-down {
+  bottom: 4px;
+}
+
   
 .leafs-tuner-base {
-  position: relative;
+  position: absolute;
   width: 78%;
-  height: 12%;
-  background-color: red;/*#333399;*/
+  left: 11%;
+  background-color: #333399;
 }
 
 .leafs-tuner-up {
-  left: 11%;
   top: 0;
 }
 
@@ -36,16 +54,15 @@
 }
 
 .leafs-tuner-down {
-  right: 0;
-  background-color: #333399;
   bottom: 0;
 }
 
 /* Указатель на то, склько активных карт */
 .leafs-total-view  {
-  height: 30px;
+  height: 100%;
   width: 15px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #333399;
 }
