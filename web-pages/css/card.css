@@ -13,6 +13,9 @@
   width: 11%;
   position: absolute;
 }
+.card-tuner-base:hover {
+  background-color: #330099;
+}
 
 .card-tuner-left-position {
   top: 0px;
@@ -28,39 +31,3 @@
   top: 85px;
   left: 4px;
 }
-
-/* Updaters */
-.card-updaters-tuner {
-  height: 33%;
-  width: 34px;
-  position: absolute;
-  top: 0;
-}
-
-.card-updaters-triangle {
-  top: 37px;
-}
-
-.card-updaters-reuse-circle-parent {
-  top: 10px;
-  left: 2px;
-}
-
-.card-updaters {
-  right: 0;
-  bottom: 0;
-  background-color: #333399;
-}
-
-.card-updaters:hover {
-  background-color: #330099;
-}
-
-
-
-
-
-
-
-
-

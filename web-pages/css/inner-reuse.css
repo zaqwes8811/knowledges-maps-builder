@@ -33,14 +33,15 @@
 }
 
 .reuse-triangle-inner-right {
-    position: relative;
-    top: 4px;
-    left: 6px;
-    width: 0;
-    height: 0;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-left: 18px solid white;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 18px solid white;
+  
+  position: relative;
+  top: 4px;
+  left: 6px;
 }
 
 .reuse-triangle-inner-left {
@@ -54,10 +55,19 @@
   border-right: 18px solid white;
 }
 
+.reuse-small-triangle-base {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  
+  position: relative;
+}
 
 .reuse-small-triangle-up {
   border-bottom: 14px solid white;
   top: 2px;
+  left: 170px;
 }
 
 .reuse-small-triangle-down {
