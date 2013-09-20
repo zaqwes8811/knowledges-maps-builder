@@ -1,4 +1,3 @@
-/* Leafs */
 .leaf {
   top: 0;
   position: absolute;
@@ -14,4 +13,29 @@
   height: 100%;
   background-color: #333399;
   width: 78%;
+}
+
+.leafs-tuner-up {
+  left: 0;
+  top: 0;
+  background-color: #333399;
+}
+
+.leafs-tuner-up:hover, .leafs-tuner-down:hover {
+  background-color: #330099;
+}
+
+.leafs-tuner-down {
+  right: 0;
+  background-color: #333399;
+  bottom: 0;
+}
+
+/* Указатель на то, склько активных карт */
+.leafs-total-view  {
+  height: 30px;
+  width: 15px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }

@@ -37,7 +37,7 @@ function pureInit() {
     
     // Создаем поле для счетчика активных карточек
     var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
-    var totalItems = $("<div/>").addClass("total-leafs");
+    var totalItems = $("<div/>").addClass("leafs-total-view");
     var text = $("<span/>").addClass("text-contents").append("");
     $(text).appendTo(totalItems);
     $(totalItems).appendTo(tunerRight);
@@ -73,7 +73,7 @@ function processOneCard(obj, dataOneCard) {
       
   // Если не созданы, то нужно удалить
   // Добавляем число записей
-  $(obj).find("div.total-leafs").find("span.text-contents").text(countRecords.toString());
+  $(obj).find("div.leafs-total-view").find("span.text-contents").text(countRecords.toString());
 
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
@@ -128,18 +128,18 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("triangle-inner-right updater-triangle");
-  var updater = $("<div/>").addClass("updater-tuner updater");
-  $(triangle).appendTo(updater);*/
+  /*var triangle = $("<div/>").addClass("triangle-inner-right updaters-triangle");
+  var updaters = $("<div/>").addClass("updaters-tuner updaters");
+  $(triangle).appendTo(updaters);*/
   
   var triangle = $("<div/>").addClass("triangle-inner-up");
   var circleInner = $("<div/>").addClass("circle-inner");
-  var circleParent = $("<div/>").addClass("circle-parent updater-circle-parent");
-  var updater = $("<div/>").addClass("updater-tuner updater");
+  var circleParent = $("<div/>").addClass("circle-parent updaters-circle-parent");
+  var updaters = $("<div/>").addClass("updaters-tuner updaters");
   $(triangle).appendTo(circleInner);
   $(circleInner).appendTo(circleParent);
-  $(circleParent).appendTo(updater);
-  components.push(updater);
+  $(circleParent).appendTo(updaters);
+  components.push(updaters);
   
   // Оставить только кнопку обновления
   var content = $(CONSTANTS.SEL_CARD_CONTAINER);
@@ -149,7 +149,7 @@ function createWordLeaf(content) {
   };
 
   // Делаем инициирующий запрос - Шлется только один
-  $(updater)
+  $(updaters)
     .click(function () {
       getOneCardContent(here);});
 
