@@ -190,10 +190,10 @@ function createAnyCard(content) {
         seed = (seed-1+countItems)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
       .hover(
-        function() {$(this).find('.reuse-small-triangle-down').css(foneName, '#330099');},
-        function() {$(this).find('.reuse-small-triangle-down').css(foneName, '#333399');})
+        function() {$(this).find('.small-triangle-down').css(foneName, '#330099');},
+        function() {$(this).find('.small-triangle-down').css(foneName, '#333399');})
       
-    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down triangle-inner-left reuse-small-triangle-down");
+    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down triangle-inner-left small-triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
