@@ -1,0 +1,9 @@
+.circle-parent {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  position: relative;
+}
