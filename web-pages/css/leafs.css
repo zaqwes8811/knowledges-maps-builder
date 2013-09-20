@@ -16,13 +16,14 @@
 }
 
 .leafs-tuner-base {
-  width: 100%;
+  position: relative;
+  width: 78%;
   height: 12%;
   background-color: red;/*#333399;*/
 }
 
 .leafs-tuner-up {
-  left: 0;
+  left: 11%;
   top: 0;
 }
 
