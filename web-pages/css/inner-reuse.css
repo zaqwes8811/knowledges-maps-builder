@@ -1,4 +1,4 @@
-.reuse-circle-parent {
+.circle-parent {
   background-color: white;
   width: 30px;
   height: 30px;
@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.reuse-circle-child {
+.circle-child {
   background-color: #333399;
   width: 26px;
   height: 26px;
@@ -20,7 +20,7 @@
   left: 2px;
 }
 
-.reuse-triangle-inner-up {
+.triangle-inner-up {
   position: relative;
   top: 4px;
   left: 4px;
@@ -32,7 +32,7 @@
   border-bottom: 14px solid white;
 }
 
-.reuse-triangle-inner-right {
+.triangle-inner-right {
   width: 0;
   height: 0;
   border-top: 9px solid transparent;
@@ -44,7 +44,7 @@
   left: 6px;
 }
 
-.reuse-triangle-inner-left {
+.triangle-inner-left {
   position: relative;
   top: 4px;
   left: 2px;
@@ -55,7 +55,7 @@
   border-right: 18px solid white;
 }
 
-.reuse-small-triangle-base {
+.small-triangle-base {
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
@@ -64,7 +64,7 @@
   position: relative;
 }
 
-.reuse-small-triangle-up {
+.small-triangle-up {
   border-bottom: 14px solid white;
 }
 
