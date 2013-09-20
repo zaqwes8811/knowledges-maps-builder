@@ -14,58 +14,45 @@
   position: absolute;
 }
 
+.card-tuner-left-position {
+  top: 0px;
+  left: 0px;
+}
+
+.card-tuner-right-position {
+  top: 0px;
+  right: 0px;
+}
+
 .card-circle-parent-position {
-  top: 83px;
+  top: 85px;
   left: 4px;
 }
 
-.triangle-up:hover {
-  background-color: #330099;
-}
-
-/*
-.card-triangle-i nner {
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  left: 47%;
-}*/
-
-.triangle-up {
-  border-bottom: 14px solid white;
-  top: 2px;
-}
-
-.triangle-down {
-  border-top: 14px solid white;
-  bottom: 2px;
-}
-
 /* Updaters */
-.updaters-tuner {
+.card-updaters-tuner {
   height: 33%;
   width: 34px;
   position: absolute;
   top: 0;
 }
 
-.updaters-triangle {
+.card-updaters-triangle {
   top: 37px;
 }
 
-.updaters-reuse-circle-parent {
+.card-updaters-reuse-circle-parent {
   top: 10px;
   left: 2px;
 }
 
-.updaters {
+.card-updaters {
   right: 0;
   bottom: 0;
   background-color: #333399;
 }
 
-.updaters:hover {
+.card-updaters:hover {
   background-color: #330099;
 }
 

@@ -53,3 +53,14 @@
   border-bottom: 9px solid transparent;
   border-right: 18px solid white;
 }
+
+
+.reuse-small-triangle-up {
+  border-bottom: 14px solid white;
+  top: 2px;
+}
+
+.reuse-small-triangle-down {
+  border-top: 14px solid white;
+  bottom: 2px;
+}
