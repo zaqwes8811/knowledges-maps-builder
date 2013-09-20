@@ -58,8 +58,8 @@ function processOneCard(obj, dataOneCard) {
        seedState = (seedState+1)%countRecords;
        tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
-      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
+      function() {$(this).find('.reuse-circle-child').css(foneName, '#330099');},
+      function() {$(this).find('.reuse-circle-child').css(foneName, '#333399');});
 
   // Пока должно быть ясно, но вообще это не производительно.
   var tunerRight = $(obj).find(CONSTANTS.SEL_RIGHT_TUNER);
@@ -68,8 +68,8 @@ function processOneCard(obj, dataOneCard) {
       seedState = (seedState-1+countRecords)%countRecords;
       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {$(this).find('.circle-inner').css(foneName, '#330099');},
-      function() {$(this).find('.circle-inner').css(foneName, '#333399');});
+      function() {$(this).find('.reuse-circle-child').css(foneName, '#330099');},
+      function() {$(this).find('.reuse-circle-child').css(foneName, '#333399');});
       
   // Если не созданы, то нужно удалить
   // Добавляем число записей
@@ -133,8 +133,8 @@ function createWordLeaf(content) {
   $(triangle).appendTo(updaters);*/
   
   var triangle = $("<div/>").addClass("reuse-triangle-inner-up");
-  var circleInner = $("<div/>").addClass("circle-inner");
-  var circleParent = $("<div/>").addClass("circle-parent updaters-circle-parent");
+  var circleInner = $("<div/>").addClass("reuse-circle-child");
+  var circleParent = $("<div/>").addClass("reuse-circle-parent updaters-reuse-circle-parent");
   var updaters = $("<div/>").addClass("updaters-tuner updaters");
   $(triangle).appendTo(circleInner);
   $(circleInner).appendTo(circleParent);
