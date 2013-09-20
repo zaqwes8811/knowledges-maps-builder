@@ -58,8 +58,8 @@ function processOneCard(obj, dataOneCard) {
        seedState = (seedState+1)%countRecords;
        tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {$(this).find('.reuse-circle-child').css(foneName, '#330099');},
-      function() {$(this).find('.reuse-circle-child').css(foneName, '#333399');});
+      function() {$(this).find('.circle-child').css(foneName, '#330099');},
+      function() {$(this).find('.circle-child').css(foneName, '#333399');});
 
   // Пока должно быть ясно, но вообще это не производительно.
   var tunerRight = $(obj).find(CONSTANTS.SEL_RIGHT_TUNER);
@@ -68,8 +68,8 @@ function processOneCard(obj, dataOneCard) {
       seedState = (seedState-1+countRecords)%countRecords;
       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
     .hover(
-      function() {$(this).find('.reuse-circle-child').css(foneName, '#330099');},
-      function() {$(this).find('.reuse-circle-child').css(foneName, '#333399');});
+      function() {$(this).find('.circle-child').css(foneName, '#330099');},
+      function() {$(this).find('.circle-child').css(foneName, '#333399');});
       
   // Если не созданы, то нужно удалить
   // Добавляем число записей
@@ -128,14 +128,14 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("reuse-triangle-inner-right card-updaters-triangle");
+  /*var triangle = $("<div/>").addClass("triangle-inner-right card-updaters-triangle");
   var card-updaters = $("<div/>").addClass("card-updaters-tuner card-updaters");
   $(triangle).appendTo(card-updaters);*/
   
   /*
-  var triangle = $("<div/>").addClass("reuse-triangle-inner-up");
-  var circleInner = $("<div/>").addClass("reuse-circle-child");
-  var circleParent = $("<div/>").addClass("reuse-circle-parent card-updaters-reuse-circle-parent");
+  var triangle = $("<div/>").addClass("triangle-inner-up");
+  var circleInner = $("<div/>").addClass("circle-child");
+  var circleParent = $("<div/>").addClass("circle-parent card-updaters-circle-parent");
   var card-updaters = $("<div/>").addClass("card-updaters-tuner card-updaters");
   $(triangle).appendTo(circleInner);
   $(circleInner).appendTo(circleParent);
@@ -178,10 +178,10 @@ function createAnyCard(content) {
         seed = (seed+1)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
       .hover(
-        function() {$(this).find('.reuse-small-triangle-up').css(foneName, '#330099');},
-        function() {$(this).find('.reuse-small-triangle-up').css(foneName, '#333399');})
+        function() {$(this).find('.small-triangle-up').css(foneName, '#330099');},
+        function() {$(this).find('.small-triangle-up').css(foneName, '#333399');})
         
-    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up reuse-triangle-inner-left reuse-small-triangle-up");
+    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up triangle-inner-left small-triangle-up");
     $(tuner_arrow_up).appendTo(main_tuner_up);
 
     // Тюнер вниз
@@ -193,7 +193,7 @@ function createAnyCard(content) {
         function() {$(this).find('.reuse-small-triangle-down').css(foneName, '#330099');},
         function() {$(this).find('.reuse-small-triangle-down').css(foneName, '#333399');})
       
-    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down reuse-triangle-inner-left reuse-small-triangle-down");
+    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down triangle-inner-left reuse-small-triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
