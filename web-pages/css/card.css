@@ -93,9 +93,8 @@
 
 
 
-/** Inner subcard */
-/* Тюнеры внутри карточки */
-.slice-tuner-up {
+/** Layers tuners */
+.layer-tuner-up {
   height: 12%;
   width: 100%;
   right: 0;
@@ -103,14 +102,14 @@
   background-color: #333399;
 }
 
-.slice-tuner-down {
+.layer-tuner-down {
   width: 100%;
   height: 12%;
   bottom: 0;
   background-color: #333399;
 }
 
-.slice-tuner-down:hover, .slice-tuner-up:hover, .triangle-up:hover {
+.layer-tuner-down:hover, .layer-tuner-up:hover, .triangle-up:hover {
   background-color: #330099;
 }
 
@@ -134,7 +133,7 @@
   width: 78%;
 }
 
-.slice {
+.layer {
   height: 76%;
   width: 96%;
   top: 12%;
@@ -144,7 +143,7 @@
   vertical-align: middle;
 }
 
-.slice-inner {
+.layer-inner {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -170,19 +169,19 @@
   bottom: 2px;
 }
 
-/* Updater*/
-.tuner-updater {
+/* Updater */
+.updater-tuner {
   height: 33%;
   width: 34px;
   position: absolute;
   top: 0;
 }
 
-.triangle-updater {
+.updater-triangle {
   top: 37px;
 }
 
-.circle-parent-updater {
+.updater-circle-parent {
   top: 10px;
   left: 2px;
 }
@@ -197,10 +196,8 @@
   background-color: #330099;
 }
 
-
-
 /* Указатель на то, склько активных карт */
-.red-sq  {
+.total-leafs  {
   height: 30px;
   width: 15px;
     position: absolute;
