@@ -12,7 +12,7 @@ var CONSTANTS = (function () {
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
   SEL_CARD_CONTAINER : '.card-container',
-  INNER_CARDS_CONTAINER: '.slice-inner'
+  INNER_CARDS_CONTAINER: '.layer-inner'
   }
 })();
 var foneName = 'ba ckground-color';
@@ -37,7 +37,7 @@ function pureInit() {
     
     // Создаем поле для счетчика активных карточек
     var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
-    var totalItems = $("<div/>").addClass("red-sq");
+    var totalItems = $("<div/>").addClass("total-leafs");
     var text = $("<span/>").addClass("text-contents").append("");
     $(text).appendTo(totalItems);
     $(totalItems).appendTo(tunerRight);
@@ -73,7 +73,7 @@ function processOneCard(obj, dataOneCard) {
       
   // Если не созданы, то нужно удалить
   // Добавляем число записей
-  $(obj).find("div.red-sq").find("span.text-contents").text(countRecords.toString());
+  $(obj).find("div.total-leafs").find("span.text-contents").text(countRecords.toString());
 
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
@@ -128,14 +128,14 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("triangle-inner-right triangle-updater");
-  var updater = $("<div/>").addClass("tuner-updater updater");
+  /*var triangle = $("<div/>").addClass("triangle-inner-right updater-triangle");
+  var updater = $("<div/>").addClass("updater-tuner updater");
   $(triangle).appendTo(updater);*/
   
   var triangle = $("<div/>").addClass("triangle-inner-up");
   var circleInner = $("<div/>").addClass("circle-inner");
-  var circleParent = $("<div/>").addClass("circle-parent circle-parent-updater");
-  var updater = $("<div/>").addClass("tuner-updater updater");
+  var circleParent = $("<div/>").addClass("circle-parent updater-circle-parent");
+  var updater = $("<div/>").addClass("updater-tuner updater");
   $(triangle).appendTo(circleInner);
   $(circleInner).appendTo(circleParent);
   $(circleParent).appendTo(updater);
@@ -172,7 +172,7 @@ function createAnyCard(content) {
     var seed = 0;
     
     // Тюнер вверх
-    var main_tuner_up = $("<div/>").addClass("tuner-base slice-tuner-up")
+    var main_tuner_up = $("<div/>").addClass("tuner-base layer-tuner-up")
       .click(function() {
         seed = (seed+1)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
@@ -180,11 +180,11 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-up').css(foneName, '#330099');},
         function() {$(this).find('.triangle-up').css(foneName, '#333399');})
         
-    var tuner_arrow_up = $("<div/>").addClass("tuner-base slice-tuner-up inner-triangle triangle-up");
+    var tuner_arrow_up = $("<div/>").addClass("tuner-base layer-tuner-up inner-triangle triangle-up");
     $(tuner_arrow_up).appendTo(main_tuner_up);
 
     // Тюнер вниз
-    var main_tuner_down = $("<div/>").addClass("tuner-base slice-tuner-down")
+    var main_tuner_down = $("<div/>").addClass("tuner-base layer-tuner-down")
       .click(function() {
         seed = (seed-1+countItems)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
@@ -192,7 +192,7 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-down').css(foneName, '#330099');},
         function() {$(this).find('.triangle-down').css(foneName, '#333399');})
       
-    var tuner_arrow_down = $("<div/>").addClass("tuner-base slice-tuner-down inner-triangle triangle-down");
+    var tuner_arrow_down = $("<div/>").addClass("tuner-base layer-tuner-down inner-triangle triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
@@ -204,10 +204,10 @@ function createAnyCard(content) {
 
 function createTextDeck(content) {
   var countItems = content.length;
-  var  wrapper = $("<div/>").addClass('slice');
+  var  wrapper = $("<div/>").addClass('layer');
   for (var i = countItems-1; i >= 0; --i) {
     //TODO(zaqwes): Текст нужно обернуть получше
-    var textContainer = $("<div/>").addClass("slice-inner");
+    var textContainer = $("<div/>").addClass("layer-inner");
     var text = $("<span/>").addClass("text-contents").append(content[i]);
     $(text).appendTo(textContainer);
     $(textContainer).appendTo(wrapper)
