@@ -128,11 +128,11 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("card-triangle-inner-right updaters-triangle");
+  /*var triangle = $("<div/>").addClass("reuse-triangle-inner-right updaters-triangle");
   var updaters = $("<div/>").addClass("updaters-tuner updaters");
   $(triangle).appendTo(updaters);*/
   
-  var triangle = $("<div/>").addClass("card-triangle-inner-up");
+  var triangle = $("<div/>").addClass("reuse-triangle-inner-up");
   var circleInner = $("<div/>").addClass("circle-inner");
   var circleParent = $("<div/>").addClass("circle-parent updaters-circle-parent");
   var updaters = $("<div/>").addClass("updaters-tuner updaters");
@@ -180,7 +180,7 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-up').css(foneName, '#330099');},
         function() {$(this).find('.triangle-up').css(foneName, '#333399');})
         
-    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up inner-triangle triangle-up");
+    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up reuse-triangle-inner-left triangle-up");
     $(tuner_arrow_up).appendTo(main_tuner_up);
 
     // Тюнер вниз
@@ -192,7 +192,7 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-down').css(foneName, '#330099');},
         function() {$(this).find('.triangle-down').css(foneName, '#333399');})
       
-    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down inner-triangle triangle-down");
+    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down reuse-triangle-inner-left triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
