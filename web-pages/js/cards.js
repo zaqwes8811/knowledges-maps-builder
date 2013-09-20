@@ -7,8 +7,8 @@
 var CONSTANTS = (function () {
   return {
   // Selectors
-  SEL_LEFT_TUNER : 'div.tuner-base.leafs-tuner-up',
-  SEL_RIGHT_TUNER : 'div.tuner-base.leafs-tuner-down',
+  SEL_LEFT_TUNER : 'div.card-tuner-base.leafs-tuner-up',
+  SEL_RIGHT_TUNER : 'div.card-tuner-base.leafs-tuner-down',
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
   SEL_CARD_CONTAINER : '.card-container',
@@ -128,11 +128,11 @@ function createWordLeaf(content) {
   components.push(createTextDeck(content));
   
   // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("triangle-inner-right updaters-triangle");
+  /*var triangle = $("<div/>").addClass("card-triangle-inner-right updaters-triangle");
   var updaters = $("<div/>").addClass("updaters-tuner updaters");
   $(triangle).appendTo(updaters);*/
   
-  var triangle = $("<div/>").addClass("triangle-inner-up");
+  var triangle = $("<div/>").addClass("card-triangle-inner-up");
   var circleInner = $("<div/>").addClass("circle-inner");
   var circleParent = $("<div/>").addClass("circle-parent updaters-circle-parent");
   var updaters = $("<div/>").addClass("updaters-tuner updaters");
@@ -172,7 +172,7 @@ function createAnyCard(content) {
     var seed = 0;
     
     // Тюнер вверх
-    var main_tuner_up = $("<div/>").addClass("tuner-base layer-tuner-up")
+    var main_tuner_up = $("<div/>").addClass("card-tuner-base layer-tuner-up")
       .click(function() {
         seed = (seed+1)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
@@ -180,11 +180,11 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-up').css(foneName, '#330099');},
         function() {$(this).find('.triangle-up').css(foneName, '#333399');})
         
-    var tuner_arrow_up = $("<div/>").addClass("tuner-base layer-tuner-up inner-triangle triangle-up");
+    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up inner-triangle triangle-up");
     $(tuner_arrow_up).appendTo(main_tuner_up);
 
     // Тюнер вниз
-    var main_tuner_down = $("<div/>").addClass("tuner-base layer-tuner-down")
+    var main_tuner_down = $("<div/>").addClass("card-tuner-base layer-tuner-down")
       .click(function() {
         seed = (seed-1+countItems)%countItems;
         tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
@@ -192,7 +192,7 @@ function createAnyCard(content) {
         function() {$(this).find('.triangle-down').css(foneName, '#330099');},
         function() {$(this).find('.triangle-down').css(foneName, '#333399');})
       
-    var tuner_arrow_down = $("<div/>").addClass("tuner-base layer-tuner-down inner-triangle triangle-down");
+    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down inner-triangle triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
     
     // Form object graph.
