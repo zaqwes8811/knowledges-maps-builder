@@ -60,20 +60,6 @@
   border-right: 9px solid transparent;
     border-bottom: 14px solid white;
 }
-/*
-.inner-triangle {
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  left: 47%;
-}
-
-.triangle-up {
-  border-bottom: 14px solid white;
-  top: 2px;
-}
-*/
 
 .tuner-base {
   height: 100%;
@@ -89,7 +75,7 @@
     -webkit-border-radius: 15px;
     border-radius: 15px;
     position: relative;
-    top: 60px;
+    top: 83px;
     left: 4px;
 }
 
@@ -193,7 +179,7 @@
 }
 
 .triangle-updater {
-  top: 27px;
+  top: 37px;
 }
 
 .circle-parent-updater {
