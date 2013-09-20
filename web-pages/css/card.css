@@ -109,29 +109,13 @@
   background-color: #333399;
 }
 
-.layer-tuner-down:hover, .layer-tuner-up:hover, .triangle-up:hover {
+.layer-tuner-down:hover, 
+.layer-tuner-up:hover, 
+.triangle-up:hover {
   background-color: #330099;
 }
 
 
-
-.leaf {
-  top: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #333399;
-}
-
-/* Контейнер для активных карточек. */
-.leafs-container {
-  top: 0;
-  position: absolute;
-  left:11%;
-  height: 100%;
-  background-color: #333399;
-  width: 78%;
-}
 
 .layer {
   height: 76%;
