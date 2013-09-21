@@ -35,25 +35,9 @@ Note: duplicate definition of library class [org.hamcrest.core.IsSame]
 Note: duplicate definition of library class [org.hamcrest.internal.ArrayIterator]
 Note: duplicate definition of library class [org.hamcrest.internal.SelfDescribingValue]
 Note: duplicate definition of library class [org.hamcrest.internal.SelfDescribingValueIterator]
+Reading library jar [D:\home\lugansky-igor\github\spinning-vocabulary-cards\servlet-api-2.5.jar]
 Reading library jar [D:\home\lugansky-igor\github\spinning-vocabulary-cards\snakeyaml-1.12.jar]
 Note: there were 21 duplicate class definitions.
       (http://proguard.sourceforge.net/manual/troubleshooting.html#duplicateclass)
-Warning: web_wrapper.Pkg: can't find superclass or interface javax.servlet.http.HttpServlet
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServlet
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServlet
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.ServletException
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletRequest
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletRequest
-Warning: web_wrapper.Pkg: can't find referenced class javax.servlet.http.HttpServletResponse
-Warning: there were 13 unresolved references to classes or interfaces.
-         You may need to add missing library jars or update their versions.
-         If your code works fine without the missing classes, you can suppress
-         the warnings with '-dontwarn' options.
-         (http://proguard.sourceforge.net/manual/troubleshooting.html#unresolvedclass)
-Error: Please correct the above warnings first.
+Preparing output jar [D:\home\lugansky-igor\github\spinning-vocabulary-cards\vocabulary-cards-dist.jar]
+  Copying resources from program jar [D:\home\lugansky-igor\github\spinning-vocabulary-cards\vocabulary-cards.jar]
