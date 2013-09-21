@@ -46,7 +46,7 @@ OneCard.prototype.exchange = function () {
   var response = [];
   var names = ["content", "translate", "word"];
   response[0] = [names];
-  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello"]];
+  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello", "tryam"]];
   response[1] = data;
   this.processResponse(response);
         
@@ -63,8 +63,18 @@ OneCard.prototype.exchange = function () {
         alert("error"); })*/
 }
 
+// Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
+OneCard.prototype.getFillMap_ = function () {
+  return {
+    "content": createAnyCard, 
+    "translate": createAnyCard, 
+    "word": createAnyCard,//createWordLeaf, 
+  };
+}
+
 OneCard.prototype.processResponse = function (response) {
   var countLeafs = response[0][0].length;
+  var names = response[0][0];  // Важна строгая сортировка!
   /*var seedState = 0;
   
 
@@ -90,53 +100,44 @@ OneCard.prototype.processResponse = function (response) {
     
   // Если не созданы, то нужно удалить
   // Добавляем число записей
-  $(this.context_).find("div.leafs-total-view").find("span.text-contents").text(countLeafs.toString());
-
+  $(this.context_)
+    .find("div.leafs-total-view")
+    .find("span.text-contents")
+    .text(countLeafs.toString());
   
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, this.context_);
 
   // Сбрасываем
   leafsDeck.empty();
-
-  /*
+  
   // Только этот словарь знаяет, какой ключ соответсвует карте
-  var names = dataOneCard[0][0];  // Нужна строгая сортировка!
-  var leafsHandlers = createLeafs(names);
-
+  var leafsHandlers = viewCreateLeafs(names);
+  
   // Заполняем
   $.each(names, function(key_local, value) {
     $(leafsHandlers[value]).appendTo(leafsDeck);
   });
   
+  var here = this;
+  
   $.each(names, function(key_local, value) {
     var handler = leafsHandlers[value];
-    var content = dataOneCard[1][key_local];
-    var fillMap = getFillMap();
+    var content = response[1][key_local];
+    var fillMap = here.getFillMap_();
     var components = fillMap[value](content);
     for (i = 0; i < components.length; ++i)
       $(components[i]).appendTo(handler);
-  });*/
+  });
 };
 
-function createLeafs(names) {
+function viewCreateLeafs(names) {
   var cardsHandles = {};
 
   // Создаем leafs - контейнеры для хранения конечных данных
   $.each(names, function (key, value) {
-    cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);
-  });
+    cardsHandles[value] = $("<div/>").addClass('leaf').css("z-index", key);});
   return cardsHandles;
-}
-
-
-// Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
-function getFillMap() {
-  return {
-    "content": createAnyCard, 
-    "translate": createAnyCard, 
-    "word": createWordLeaf, 
-  };
 }
 
 function createWordLeaf(content) {
@@ -169,7 +170,7 @@ function createWordLeaf(content) {
   };
 
   // Делаем инициирующий запрос - Шлется только один
-  $(card-updaters)
+  $('card-updaters')
     .click(function () {
       exchange(here);});
 
@@ -192,17 +193,19 @@ function createAnyCard(content) {
     var seed = 0;
     
     // Тюнер вверх
-    var main_tuner_up = $("<div/>").addClass("card-tuner-base layer-tuner-up")
+    var main_tuner_up = $("<div/>").addClass("layer-tuner-base layer-tuner-up")
       .click(function() {
         seed = (seed+1)%countItems;
-        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
-      .hover(
+        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);});
+      /*.hover(
         function() {$(this).find('.small-triangle-up').css(foneName, '#330099');},
-        function() {$(this).find('.small-triangle-up').css(foneName, '#333399');})
+        function() {$(this).find('.small-triangle-up').css(foneName, '#333399');})*/
         
-    var tuner_arrow_up = $("<div/>").addClass("card-tuner-base layer-tuner-up triangle-inner-left small-triangle-up");
-    $(tuner_arrow_up).appendTo(main_tuner_up);
+    var tunerArrowUp = $("<div/>").addClass("small-triangle-base small-triangle-up "
+        +"layer-triangle-position-base layer-triangle-position-up");
+    $(tunerArrowUp).appendTo(main_tuner_up);
 
+    /*
     // Тюнер вниз
     var main_tuner_down = $("<div/>").addClass("card-tuner-base layer-tuner-down")
       .click(function() {
@@ -214,10 +217,10 @@ function createAnyCard(content) {
       
     var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down triangle-inner-left small-triangle-down");
     $(tuner_arrow_down).appendTo(main_tuner_down);
-    
+    */
     // Form object graph.
     components.push(main_tuner_up);
-    components.push(main_tuner_down);
+    //components.push(main_tuner_down);
   }
   return components;  
 }
