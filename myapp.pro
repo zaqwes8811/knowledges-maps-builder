@@ -10,7 +10,7 @@
 -libraryjars jcip-annotations.jar
 -libraryjars jetty-all-7.0.2.v20100331.jar
 -libraryjars junit-4.11.jar
--libraryjars mockito-all-1.9.5.jar
+
 -libraryjars snakeyaml-1.12.jar
 
 -outjars vocabulary-cards-dist.jar
