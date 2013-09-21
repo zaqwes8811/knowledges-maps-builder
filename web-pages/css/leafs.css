@@ -10,9 +10,9 @@
 
 .leafs-container {
   width: 78%;
-  height: 72%;
+  height: 76%;
 
-  top: 14%;
+  top: 12%;
   left:11%;
   position: absolute;
   
@@ -26,22 +26,23 @@
 .leafs-triangle-position-up {
   top: 2px;
 }
+
+.leafs-triangle-position-down {
+  bottom: -2px;
+}
+
 .leafs-triangle-position-over-up {
   top: -6px;
 }
-
-.leafs-triangle-position-down {
-  bottom: -4px;
-}
 .leafs-triangle-position-over-down {
-  bottom: 4px;
+  bottom: 6px;
 }
 
   
 .leafs-tuner-base {
   position: absolute;
   width: 78%;
-  height: 14%;
+  height: 12%;
   left: 11%;
   background-color: #333399;
 }
