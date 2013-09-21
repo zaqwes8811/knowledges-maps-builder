@@ -1,0 +1,15 @@
+/** Global */
+.text-contents {
+  position:absolute;
+  vertical-align:middle;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.0em;
+  top: 5px;
+}
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+}
+
