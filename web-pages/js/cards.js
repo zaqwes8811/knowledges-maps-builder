@@ -12,7 +12,7 @@ var CONSTANTS = (function () {
   SUB_CARDS_SEL : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
   SEL_CARD_CONTAINER : '.card-container',
-  INNER_CARDS_CONTAINER: '.layer-inner'
+  LAYERS_CONTAINER: '.layer-inner'
   }
 })();
 var foneName = 'background-color';
@@ -177,6 +177,10 @@ function createWordLeaf(content) {
   return components;
 }
 
+function Tuner() {
+  this.seed = 0;
+}
+
 // Так должен заполнятся контент и перевод - само слово должно быть
 //   с панелью управления.
 function createAnyCard(content) {
@@ -189,38 +193,36 @@ function createAnyCard(content) {
   // Добавляем тюнеры только если более одного элемента.
   var countItems = content.length;
   if (countItems > 1) {
-    // Общая переменная
-    var seed = 0;
-    
     // Тюнер вверх
-    var main_tuner_up = $("<div/>").addClass("layer-tuner-base layer-tuner-up")
-      .click(function() {
-        seed = (seed+1)%countItems;
-        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);});
-      /*.hover(
-        function() {$(this).find('.small-triangle-up').css(foneName, '#330099');},
-        function() {$(this).find('.small-triangle-up').css(foneName, '#333399');})*/
-        
+    var mainTunerUp = $("<div/>").addClass("layer-tuner-base layer-tuner-up");
     var tunerArrowUp = $("<div/>").addClass("small-triangle-base small-triangle-up "
         +"layer-triangle-position-base layer-triangle-position-up");
-    $(tunerArrowUp).appendTo(main_tuner_up);
+    $(tunerArrowUp).appendTo(mainTunerUp);
 
-    /*
     // Тюнер вниз
-    var main_tuner_down = $("<div/>").addClass("card-tuner-base layer-tuner-down")
-      .click(function() {
+    var mainTunerDown = $("<div/>").addClass("layer-tuner-base layer-tuner-down");
+    var tunerArrowDown = $("<div/>").addClass("small-triangle-base small-triangle-down "
+        +"layer-triangle-position-base layer-triangle-position-down");
+    $(tunerArrowDown).appendTo(mainTunerDown);
+    
+    // Подключаем действия
+    var seed = 0;
+    var clickUp = function() {
+        seed = (seed+1)%countItems;
+        tick(seed, CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerUp);}
+    
+    
+    var clickDown = function() {
         seed = (seed-1+countItems)%countItems;
-        tick(seed, CONSTANTS.INNER_CARDS_CONTAINER, countItems, this);})
-      .hover(
-        function() {$(this).find('.small-triangle-down').css(foneName, '#330099');},
-        function() {$(this).find('.small-triangle-down').css(foneName, '#333399');})
-      
-    var tuner_arrow_down = $("<div/>").addClass("card-tuner-base layer-tuner-down triangle-inner-left small-triangle-down");
-    $(tuner_arrow_down).appendTo(main_tuner_down);
-    */
+        tick(seed, CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerDown);}
+        
+    // Само подключение
+    $(mainTunerUp).click(clickUp);
+    $(mainTunerDown).click(clickDown);
+
     // Form object graph.
-    components.push(main_tuner_up);
-    //components.push(main_tuner_down);
+    components.push(mainTunerUp);
+    components.push(mainTunerDown);
   }
   return components;  
 }
