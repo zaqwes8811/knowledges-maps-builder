@@ -15,14 +15,14 @@ import static org.junit.Assert.*;
 public class AppConfiguratorTest {
   @Test(expected = NoFoundConfFile.class)
   public void testGetPathToAppFolder() throws Exception {
-    String path = "app.yaml";
+    String path = "app.yaml.noExist";
     String tmp = new AppConfigurator(path).getPathToAppFolder().get();
   }
 
   @Test
   public void testFileExist() throws Exception{
     try {
-      String path = "conf/app.yaml";
+      String path = "app.yaml";
       String tmp = new AppConfigurator(path).getPathToAppFolder().get();
     } catch (NoFoundConfFile e) {
       assertTrue(false);

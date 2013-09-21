@@ -35,7 +35,7 @@ public class WebRelay {
 
       HandlerList handlers = Wrapper.buildHandlers(container);
 
-      Server server = new Server(8080);
+      Server server = new Server(8081);
       server.setHandler(handlers);
       server.start();
       server.join();
