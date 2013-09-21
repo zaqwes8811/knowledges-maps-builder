@@ -25,7 +25,8 @@ public class WebRelay {
       ///*
       Wrapper wrapper = new Wrapper();
 
-      ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
+      String pathToCfgFile = "app.yaml";
+      ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
           namesNodes, new FabricImmutableNodeAccessors());//*/
 

@@ -3,6 +3,7 @@ package through_functional.configurator;
 import com.google.common.collect.ImmutableSet;
 import common.Util;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,23 +13,30 @@ import org.junit.Test;
  * To change this template use File | Settings | File Templates.
  */
 public class AppConfiguratorTest {
-  @Test//(expected = ConfFileIsCorrupted.class)
+  @Test(expected = NoFoundConfFile.class)
   public void testGetPathToAppFolder() throws Exception {
+    String path = "app.yaml";
+    String tmp = new AppConfigurator(path).getPathToAppFolder().get();
+  }
+
+  @Test
+  public void testFileExist() throws Exception{
     try {
-      String tmp = AppConfigurator.getPathToAppFolder().get();
-      Util.print(tmp);
+      String path = "conf/app.yaml";
+      String tmp = new AppConfigurator(path).getPathToAppFolder().get();
     } catch (NoFoundConfFile e) {
-      Util.print(e.getFileName());
+      assertTrue(false);
+      //throw e;
     }
   }
 
   @Test//(expected = ConfFileIsCorrupted.class)
   public void testGetNodes() throws Exception {
-    try {
+    /*try {
       ImmutableSet<String> tmp = AppConfigurator.getRegisteredNodes().get();
       Util.print(tmp);
     } catch (NoFoundConfFile e) {
       Util.print(e.getFileName());
-    }
+    } */
   }
 }

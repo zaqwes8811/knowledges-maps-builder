@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="spinning-vocabulary-cards:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/spinning_vocabulary_cards_jar</output-path>
+    <output-path>$PROJECT_DIR$/spinning_vocabulary_cards_jar</output-path>
     <root id="archive" name="spinning-vocabulary-cards.jar">
       <element id="module-output" name="spinning-vocabulary-cards" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar" path-in-jar="/" />
