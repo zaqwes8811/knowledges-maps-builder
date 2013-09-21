@@ -196,14 +196,14 @@ Tuner.prototype.tick = function (obj) {
   });
 }
 
-Tuner.prototype.clickUp = function() {
+Tuner.prototype.up = function() {
   // this is corrupted
   this.seed_ = (this.seed_+1)%this.totalItems_;
   console.log(this.seed_);
   this.tick(this.objUp_);
 }
         
-Tuner.prototype.clickDown = function() {
+Tuner.prototype.down = function() {
   // this is corrupted
   this.seed_ = (this.seed_-1+this.totalItems_)%this.totalItems_;
   this.tick(this.objDown_);
@@ -222,27 +222,25 @@ function createAnyCard(content) {
   var countItems = content.length;
   if (countItems > 1) {
     // Тюнер вверх
-    var mainTunerUp = $("<div/>").addClass("layer-tuner-base layer-tuner-up");
-    var tunerArrowUp = $("<div/>").addClass("small-triangle-base small-triangle-up "
-        +"layer-triangle-position-base layer-triangle-position-up");
-    $(tunerArrowUp).appendTo(mainTunerUp);
+    var layersTunerUp = $("<div/>").addClass("layer-tuner-base layer-tuner-up");
+    $("<div/>").addClass("small-triangle-base small-triangle-up "
+        +"layer-triangle-position-base layer-triangle-position-up").appendTo(layersTunerUp);
 
     // Тюнер вниз
-    var mainTunerDown = $("<div/>").addClass("layer-tuner-base layer-tuner-down");
-    var tunerArrowDown = $("<div/>").addClass("small-triangle-base small-triangle-down "
-        +"layer-triangle-position-base layer-triangle-position-down");
-    $(tunerArrowDown).appendTo(mainTunerDown);
+    var layersTunerDown = $("<div/>").addClass("layer-tuner-base layer-tuner-down");
+    $("<div/>").addClass("small-triangle-base small-triangle-down "
+        +"layer-triangle-position-base layer-triangle-position-down").appendTo(layersTunerDown);
     
     // Подключаем действия
-    var tuner = new Tuner(CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerUp, mainTunerDown);
+    var tuner = new Tuner(CONSTANTS.LAYERS_CONTAINER, countItems, layersTunerUp, layersTunerDown);
         
     // Само подключение
-    $(mainTunerUp).click(_.bind(tuner.clickUp, tuner));
-    $(mainTunerDown).click(_.bind(tuner.clickDown, tuner));
+    $(layersTunerUp).click(_.bind(tuner.up, tuner));
+    $(layersTunerDown).click(_.bind(tuner.down, tuner));
 
     // Form object graph.
-    components.push(mainTunerUp);
-    components.push(mainTunerDown);
+    components.push(layersTunerUp);
+    components.push(layersTunerDown);
   }
   return components;  
 }
