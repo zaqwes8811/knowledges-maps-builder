@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="spinning-vocabulary-cards:jar">
-    <output-path>$PROJECT_DIR$/spinning_vocabulary_cards_jar</output-path>
-    <root id="archive" name="spinning-vocabulary-cards.jar">
-      <element id="module-output" name="spinning-vocabulary-cards" />
+  <artifact type="jar" name="vocabulary-cards:jar">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="vocabulary-cards.jar">
+      <element id="module-output" name="vocabulary-cards" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../work-libs/java/junit-4.11.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../work-libs/java/javatuples-1.2/dist/javatuples-1.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../../work-libs/java/mockito-1.9.5/mockito-all-1.9.5.jar" path-in-jar="/" />
