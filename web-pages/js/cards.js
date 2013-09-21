@@ -177,8 +177,31 @@ function createWordLeaf(content) {
   return components;
 }
 
-function Tuner() {
-  this.seed = 0;
+function Tuner(selector, countItems, objUp, objDown) {
+  this.seed_ = 0;
+  this.selector_ = selector;
+  this.totalItems_ = countItems;
+  this.objUp_ = objUp;
+  this.objDown_ = objDown;
+}
+
+Tuner.prototype.tick = function (obj) {
+  $(obj).parent().find(this.selector_).each(function (key, value) {
+    // this is corrupted
+    $(this).css("z-index", (this_.seed_+key)%this_.totalItems_);
+  });
+}
+
+Tuner.prototype.clickUp = function() {
+  // this is corrupted
+  this.seed_ = (this.seed_+1)%this.totalItems_;
+  this.tick(this.objUp_);
+}
+        
+Tuner.prototype.clickDown = function() {
+  // this is corrupted
+  this.seed_ = (this.seed_-1+this.totalItems_)%this.totalItems_;
+  this.tick(this.objDown_);
 }
 
 // Так должен заполнятся контент и перевод - само слово должно быть
@@ -206,19 +229,11 @@ function createAnyCard(content) {
     $(tunerArrowDown).appendTo(mainTunerDown);
     
     // Подключаем действия
-    var seed = 0;
-    var clickUp = function() {
-        seed = (seed+1)%countItems;
-        tick(seed, CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerUp);}
-    
-    
-    var clickDown = function() {
-        seed = (seed-1+countItems)%countItems;
-        tick(seed, CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerDown);}
+    var tuner = new Tuner(CONSTANTS.LAYERS_CONTAINER, countItems, mainTunerUp, mainTunerDown);
         
     // Само подключение
-    $(mainTunerUp).click(clickUp);
-    $(mainTunerDown).click(clickDown);
+    $(mainTunerUp).click(tuner.clickUp);
+    $(mainTunerDown).click(tuner.clickDown);
 
     // Form object graph.
     components.push(mainTunerUp);
