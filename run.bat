@@ -1,0 +1,1 @@
+java -jar vocabulary-cards-dist.jar
