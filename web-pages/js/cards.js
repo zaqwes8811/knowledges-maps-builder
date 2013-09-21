@@ -15,7 +15,7 @@ var CONSTANTS = (function () {
   INNER_CARDS_CONTAINER: '.layer-inner'
   }
 })();
-var foneName = 'ba ckground-color';
+var foneName = 'background-color';
 
 function tick(seed, sel, count, obj) {
   $(obj).parent().find(sel).each(function (key, value) {
@@ -24,57 +24,75 @@ function tick(seed, sel, count, obj) {
 }
 
 function init() {
-  //pureInit();
+  pureInit();
 }
+
+var cardsContainer = []; // все равно хранить где-то нужно.
 
 function pureInit() {
   $(CONSTANTS.SEL_CARD_CONTAINER).each(function(key, value) {
-    var content = this;
-    // Получить новое слово
-    var here = function (response) {
-      processOneCard(content, response);
-    };
-    
-    // Создаем поле для счетчика активных карточек
-    var tunerRight = $(content).find(CONSTANTS.SEL_RIGHT_TUNER);
-    var totalItems = $("<div/>").addClass("leafs-total-view");
-    var text = $("<span/>").addClass("text-contents").append("");
-    $(text).appendTo(totalItems);
-    $(totalItems).appendTo(tunerRight);
-
-    // Делаем инициирующий запрос - Шлется только один
-    //getOneCardContent(here);
+    var oneCard = new OneCard(this);
+    cardsContainer.push(oneCard);
+    oneCard.exchange();
   });
 }
 
-function processOneCard(obj, dataOneCard) {
-  var seedState = 0;
-  var countRecords = dataOneCard[0][0].length;
+// Prototype
+function OneCard (context) {
+  this.context_ = context;
+}
+ 
+OneCard.prototype.exchange = function () {
+  var response = [];
+  var names = ["content", "translate", "word"];
+  response[0] = [names];
+  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello"]];
+  response[1] = data;
+  this.processResponse(response);
+        
+/*
+  var urlAjax = '/pkg';
+  $.ajax({
+    type: 'GET',
+    url: urlAjax,
+    data: { noCache: (new Date().getTime()) + Math.random() }})
+      .done(function(response) {
+        var response = $.parseJSON(response);
+        callBackFun(response);})
+      .fail(function(data) { 
+        alert("error"); })*/
+}
+
+OneCard.prototype.processResponse = function (response) {
+  var countLeafs = response[0][0].length;
+  /*var seedState = 0;
+  
 
   // Если запись одна, то нужно закрыть тюнеры!
-
-  $(obj).find(CONSTANTS.SEL_LEFT_TUNER)
+  $(this.context_).find(CONSTANTS.SEL_LEFT_TUNER)
     .click(function() {
-       seedState = (seedState+1)%countRecords;
-       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
+       seedState = (seedState+1)%countLeafs;
+       tick(seedState, CONSTANTS.SUB_CARDS_SEL, countLeafs, this);})
     .hover(
       function() {$(this).find('.circle-child').css(foneName, '#330099');},
       function() {$(this).find('.circle-child').css(foneName, '#333399');});
 
   // Пока должно быть ясно, но вообще это не производительно.
-  var tunerRight = $(obj).find(CONSTANTS.SEL_RIGHT_TUNER);
+  var tunerRight = $(this.context_).find(CONSTANTS.SEL_RIGHT_TUNER);
   $(tunerRight)
     .click(function() {
-      seedState = (seedState-1+countRecords)%countRecords;
-      tick(seedState, CONSTANTS.SUB_CARDS_SEL, countRecords, this);})
+      seedState = (seedState-1+countLeafs)%countLeafs;
+      tick(seedState, CONSTANTS.SUB_CARDS_SEL, countLeafs, this);})
     .hover(
       function() {$(this).find('.circle-child').css(foneName, '#330099');},
       function() {$(this).find('.circle-child').css(foneName, '#333399');});
-      
+  */
+    
   // Если не созданы, то нужно удалить
   // Добавляем число записей
-  $(obj).find("div.leafs-total-view").find("span.text-contents").text(countRecords.toString());
+  $(this.context_).find("div.leafs-total-view").find("span.text-contents").text(countLeafs.toString());
 
+  /*
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
   var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
 
@@ -97,7 +115,7 @@ function processOneCard(obj, dataOneCard) {
     var components = fillMap[value](content);
     for (i = 0; i < components.length; ++i)
       $(components[i]).appendTo(handler);
-  });
+  });*/
 };
 
 function createLeafs(names) {
@@ -152,7 +170,7 @@ function createWordLeaf(content) {
   // Делаем инициирующий запрос - Шлется только один
   $(card-updaters)
     .click(function () {
-      getOneCardContent(here);});
+      exchange(here);});
 
   return components;
 }
@@ -217,25 +235,6 @@ function createTextDeck(content) {
 }
 
 
-function getOneCardContent(callBackFun) {
-  var response = [];
-  var names = ["content", "translate", "word"];
-  response[0] = [names];
-  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello"]];
-  response[1] = data;
-  callBackFun(response)
-        
-/*
-  var urlAjax = '/pkg';
-  $.ajax({
-    type: 'GET',
-    url: urlAjax,
-    data: { noCache: (new Date().getTime()) + Math.random() }})
-      .done(function(response) {
-        var response = $.parseJSON(response);
-        callBackFun(response);})
-      .fail(function(data) { 
-        alert("error"); })*/
-}
+
 
 
