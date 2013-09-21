@@ -92,13 +92,14 @@ OneCard.prototype.processResponse = function (response) {
   // Добавляем число записей
   $(this.context_).find("div.leafs-total-view").find("span.text-contents").text(countLeafs.toString());
 
-  /*
+  
   // Создаем подкарты. Так проще будет их подключить, т.к. будут дескрипторы.
-  var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, obj);
+  var leafsDeck = $('>'+CONSTANTS.SEL_LEAFS_DECK, this.context_);
 
   // Сбрасываем
   leafsDeck.empty();
 
+  /*
   // Только этот словарь знаяет, какой ключ соответсвует карте
   var names = dataOneCard[0][0];  // Нужна строгая сортировка!
   var leafsHandlers = createLeafs(names);
