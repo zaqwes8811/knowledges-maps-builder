@@ -1,4 +1,4 @@
-package common;
+package common.nlp;
 
 import com.google.common.base.Splitter;
 import common.Util;

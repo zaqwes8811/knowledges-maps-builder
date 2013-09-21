@@ -1,4 +1,4 @@
-package crosscuttings;
+package through_functional.hided;
 
 import through_functional.hided.ProcessorTargets;
 import org.junit.Test;
