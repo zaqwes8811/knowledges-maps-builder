@@ -20,8 +20,13 @@ import java.util.Map;
 @Immutable
 @NotThreadSafe
 public class AppConfigurator {
-  private static final String ROOT_NAME = "App";
-  private static final String APP_CFG_FULL_FILENAME = "conf/app.yaml";
+
+  private final String ROOT_NAME = "App";
+  private final String APP_CFG_FULL_FILENAME;
+
+  public AppConfigurator(String configurationFileName) {
+    APP_CFG_FULL_FILENAME = configurationFileName;
+  }
 
   private static abstract class Reader<V> {
     // Конечную точки заворачиваем в Optional
@@ -60,7 +65,7 @@ public class AppConfigurator {
   }
 
   // Папка не обязательно в рабочей директории программы
-  public static Optional<String> getPathToAppFolder()
+  public Optional<String> getPathToAppFolder()
       throws NoFoundConfFile, ConfFileIsCorrupted {
     String requestedPath = "for-scribe/app-folder";
     try {
@@ -82,7 +87,7 @@ public class AppConfigurator {
   // Получить список узлов в виде путей к ним.
   //
   // Пути уникальные.
-  public static Optional<ImmutableSet<String>> getRegisteredNodes()
+  public Optional<ImmutableSet<String>> getRegisteredNodes()
     throws NoFoundConfFile, ConfFileIsCorrupted {
     String requestedPath = "registered-nodes";
     try {

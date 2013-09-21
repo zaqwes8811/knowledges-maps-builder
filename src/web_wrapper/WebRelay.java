@@ -2,6 +2,7 @@ package web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import common.Util;
 import idx_coursors.FabricImmutableNodeAccessors;
 import idx_coursors.ImmutableNodeAccessor;
 import org.eclipse.jetty.server.Server;
@@ -38,8 +39,10 @@ public class WebRelay {
       server.start();
       server.join();
     } catch (NoFoundConfFile e) {
+      Util.print(e);
       throw new RuntimeException();
     } catch (ConfFileIsCorrupted e) {
+      Util.print(e);
       throw new RuntimeException();
     }
   }
