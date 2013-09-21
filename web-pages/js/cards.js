@@ -41,24 +41,27 @@ function OneCard (context) {
 }
  
 OneCard.prototype.exchange = function () {
-  var response = [];
+  /*var response = [];
   var names = ["content", "translate", "word"];
   response[0] = [names];
   var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello", "tryam"]];
   response[1] = data;
-  this.processResponse(response);
+  this.processResponse(response);*/
         
-/*
+///*
   var urlAjax = '/pkg';
+  
+  var processData = function(response) {
+    var response = $.parseJSON(response);
+    this.processResponse(response);}
+        
   $.ajax({
     type: 'GET',
     url: urlAjax,
     data: { noCache: (new Date().getTime()) + Math.random() }})
-      .done(function(response) {
-        var response = $.parseJSON(response);
-        callBackFun(response);})
+      .done(_.bind(processData, this))
       .fail(function(data) { 
-        alert("error"); })*/
+        alert("error"); })//*/
 }
 
 // Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
