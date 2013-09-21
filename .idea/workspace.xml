@@ -9,31 +9,19 @@
     <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/inner-reuse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/layers.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/leafs.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/main.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/make.bat" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp.pro.user" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/prototype.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/reuse.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/underscore.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/vocabulary_cards_jar.xml" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\error.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\hided\css\website.css" afterPath="" />
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\ant.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\copyright\profiles_settings.xml" afterPath="" />
@@ -147,10 +135,30 @@
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\web2py_bootstrap.js" afterPath="" />
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\slide-example.htm" afterPath="" />
       <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\subs\sys-settings-new.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\error.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\website.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/cards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/leafs.css" afterPath="$PROJECT_DIR$/web-pages/css/leafs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\conf\app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
@@ -187,7 +195,7 @@
     <file path="/AppConfigurator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379776479741" ignored="false" />
     <file path="/AppConfiguratorTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379775603179" ignored="false" />
     <file path="/AppConcentratorTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379775150785" ignored="false" />
-    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379780601325" ignored="false" />
+    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379780873483" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +210,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -236,7 +245,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -285,7 +293,7 @@
       <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.13345195">
+            <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.20833333">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -363,7 +371,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -460,20 +467,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work-libs/java/mockito-1.9.5/mockito-all-1.9.5.jar!/" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="spinning-vocabulary-cards" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -489,8 +497,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -578,16 +586,16 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="spinning-vocabulary-cards" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="web_wrapper" />
-      <option name="MAIN_CLASS_NAME" value="web_wrapper.AppContainerTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -609,63 +617,7 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="vocabulary-cards" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestWebWrapper" type="JUnit" factoryName="JUnit">
-      <module name="spinning-vocabulary-cards" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="web_wrapper" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestCoursors" type="JUnit" factoryName="JUnit">
-      <module name="spinning-vocabulary-cards" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="idx_coursors" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -697,11 +649,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.WebRelay" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestWebWrapper" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCoursors" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AppConfiguratorTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AppConfiguratorTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -709,29 +659,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="" />
-      <created>1376657752548</created>
-      <updated>1376657752548</updated>
+      <created>1379243594333</created>
+      <updated>1379243594333</updated>
     </task>
     <servers />
   </component>
@@ -747,16 +679,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34129694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29090908" sideWeight="0.65986395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29090908" sideWeight="0.6587031" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34013605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -920,7 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.13345195">
+        <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.20833333">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
