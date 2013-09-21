@@ -16,7 +16,7 @@ import ui.UI;
  * Time: 19:08
  * To change this template use File | Settings | File Templates.
  */
-public class AppContainerTest {
+public class AppConcentratorTest {
 
   //TODO(zaqwes): Венуть tuple - результат и отчет - если отчет пуст - все хорошо
 
