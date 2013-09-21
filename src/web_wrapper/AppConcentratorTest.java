@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import idx_coursors.*;
 import org.junit.Test;
+import static org.junit.Assert.*;
 import through_functional.configurator.AppConfigurator;
 import through_functional.configurator.ConfFileIsCorrupted;
 import through_functional.configurator.NoFoundConfFile;
@@ -25,7 +26,8 @@ public class AppConcentratorTest {
   public void testGeneratePackage() throws Exception {
     try {
       Wrapper wrapper = new Wrapper();
-      ImmutableSet<String> namesNodes = AppConfigurator.getRegisteredNodes().get();
+      String pathToCfgFile = "app.yaml";
+      ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
         namesNodes, new FabricImmutableNodeAccessors());
       AppConcentrator container = new AppConcentrator(accessors);
