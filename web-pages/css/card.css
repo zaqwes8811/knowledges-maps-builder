@@ -15,37 +15,19 @@
     top: 5px;
 }
 
-/** Сами карточки */
-.compressed {
-  margin-top: 2%;
-  margin-left:17%;
-  margin-right:10%;
-  padding-right:0%;
-}
+html, body { margin: 0; padding: 0; }
 
 .card-container {
   position: relative;
   height: 150px;
   width: 350px;
   background-color: #333399;
-  margin-left: 2%;
-  margin-top: 4px;
-  padding-left: 10px;
+  margin-top: 5%;
+  
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Updaters */
-.updater {
-  right: 0;
-  bottom: 0;
-  /*top: 0;
-  height:  50% !important;  */
-  background-color: #333399;
-   /*background-color: gold;*/
-}
-
-.updater:hover {
-  background-color: gold;
-}
 
 /* Перелистователь */
 /* Внешние тюнеры */
@@ -60,21 +42,21 @@
 }
 
 .leafs-tuner-down {
-  right: 10%;
+  right: 0;
   background-color: #333399;
   bottom: 0;
 }
 
 .triangle-inner {
-    position: relative;
-    top: 4px;
-    left: 2px;
+  position: relative;
+  top: 4px;
+  left: 2px;
 
-    width: 0;
-    height: 0;
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
-    border-right: 18px solid white;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 18px solid white;
 }
 
 .triangle-inner-right {
@@ -88,6 +70,32 @@
     border-bottom: 9px solid transparent;
     border-left: 18px solid white;
 }
+
+.triangle-inner-up {
+    position: relative;
+    top: 4px;
+    left: 4px;
+
+    width: 0;
+    height: 0;
+        border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+    border-bottom: 14px solid white;
+}
+/*
+.inner-triangle {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  left: 47%;
+}
+
+.triangle-up {
+  border-bottom: 14px solid white;
+  top: 2px;
+}
+*/
 
 .tuner-base {
   height: 100%;
@@ -104,7 +112,7 @@
     border-radius: 15px;
     position: relative;
     top: 60px;
-    left: 2px;
+    left: 4px;
 }
 
 .circle-inner {
@@ -158,7 +166,8 @@
   position: absolute;
   left:11%;
   height: 100%;
-  width: 68%;
+  background-color: #333399;
+  width: 78%;
 }
 
 .slice {
@@ -196,4 +205,49 @@
   border-top: 14px solid white;
   bottom: 2px;
 }
+
+/* Updater*/
+.tuner-updater {
+  height: 33%;
+  width: 34px;
+  position: absolute;
+  top: 0;
+}
+
+.triangle-updater {
+  top: 27px;
+}
+
+.circle-parent-updater {
+  top: 10px;
+  left: 2px;
+}
+
+.updater {
+  right: 0;
+  bottom: 0;
+  background-color: #333399;
+}
+
+.updater:hover {
+  background-color: #330099;
+}
+
+
+
+/* Указатель на то, склько активных карт */
+.red-sq  {
+  height: 30px;
+  width: 15px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+
+
+
+
+
 
