@@ -41,14 +41,16 @@ function OneCard (context) {
 }
  
 OneCard.prototype.exchange = function () {
-  /*var response = [];
+  ///*
+  var response = [];
   var names = ["content", "translate", "word"];
   response[0] = [names];
   var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello", "tryam"]];
   response[1] = data;
-  this.processResponse(response);*/
+  this.processResponse(response);//*/
         
-///*
+//
+/*
   var urlAjax = '/pkg';
   
   var processData = function(response) {
