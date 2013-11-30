@@ -16,6 +16,9 @@ public class Voc_cardsServlet extends HttpServlet {
 		ServletContext context = request.getSession().getServletContext();
 		URL resourceUrl = context.getResource("/index.html");
 		InputStream resourceContent = context.getResourceAsStream("/index.html");
+		
+		
+		
 		resp.setContentType("text/plain");
 		resp.getWriter().println("Hello, world");
 	}
