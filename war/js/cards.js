@@ -41,26 +41,6 @@ function OneCard (context) {
 }
  
 OneCard.prototype.exchange = function () {
-<<<<<<< HEAD
-  /*var response = [];
-=======
-  ///*
-  var response = [];
->>>>>>> 92598b2434681afe0ac40bade35566cb5ef99a30
-  var names = ["content", "translate", "word"];
-  response[0] = [names];
-  var data = [["Hello man", "Hello!"], ["перевод", "еще один"], ["hello", "tryam"]];
-  response[1] = data;
-<<<<<<< HEAD
-  this.processResponse(response);*/
-        
-///*
-=======
-  this.processResponse(response);//*/
-        
-//
-/*
->>>>>>> 92598b2434681afe0ac40bade35566cb5ef99a30
   var urlAjax = '/pkg';
   
   var processData = function(response) {
@@ -73,7 +53,7 @@ OneCard.prototype.exchange = function () {
     data: { noCache: (new Date().getTime()) + Math.random() }})
       .done(_.bind(processData, this))
       .fail(function(data) { 
-        alert("error"); })//*/
+        alert("error"); })
 }
 
 // Листы должны быть по возможности независимы, т.к. нужно будет добалять операции
