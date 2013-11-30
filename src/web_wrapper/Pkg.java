@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import idx_coursors.FabricImmutableNodeAccessors;
 import idx_coursors.ImmutableNodeAccessor;
 
+import javax.annotation.concurrent.NotThreadSafe;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ import ui.UI;
 
 import java.io.IOException;
 
+@NotThreadSafe
 public class Pkg extends HttpServlet {
   private Concentrator CONTAINER;
   @Override
