@@ -6,171 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/inner-reuse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/layers.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/leafs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/make.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp.pro.user" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/reuse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-pages/js/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/vocabulary_cards_jar.xml" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\ant.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\description.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\libraries\guava_14_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\javafx_m.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\AccordionStyleButton.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\MyApp.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\Test.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\ToFront.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\WebViewExample.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\hello.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\hello1.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\test.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\javafx\src\webviewsample\BrowserToolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\crosscuttings\AppConfiguratorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\out.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\js\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\slide-example.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\trash\hided-front-end\subs\sys-settings-new.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\error.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\web-pages\css\hided\website.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/web_wrapper/WebRelay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/css/card.css" afterPath="$PROJECT_DIR$/web-pages/css/card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/js/cards.js" afterPath="$PROJECT_DIR$/web-pages/js/cards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-pages/index.html" afterPath="$PROJECT_DIR$/web-pages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\conf\app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\format-saved-data.txt" afterPath="$PROJECT_DIR$/raw-data/format-saved-data.txt" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\spinning-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/vocabulary-cards.iml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\common\BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/src/common/nlp/BaseTokenizerTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\common\CompressorsTest.java" afterPath="$PROJECT_DIR$/src/common/CompressorsTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\crosscuttings\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\idx_coursors\BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/src/idx_coursors/BaseContentHolderTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\idx_coursors\IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/src/idx_coursors/IdxNodeAccessorTest.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\github\spinning-vocabulary-cards\tests\web_wrapper\AppContainerTest.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppConcentratorTest.java" />
-    </list>
+    <list default="true" id="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" name="Default" comment="" />
     <ignored path="spinning-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1377951727580" ignored="false" />
@@ -195,7 +31,7 @@
     <file path="/AppConfigurator.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379776479741" ignored="false" />
     <file path="/AppConfiguratorTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379775603179" ignored="false" />
     <file path="/AppConcentratorTest.java" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379775150785" ignored="false" />
-    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1379780873483" ignored="false" />
+    <file path="/Dummy.txt" changelist="eef1a114-9e39-4c5b-ab9e-56093a6c66ca" time="1380035613101" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +46,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -245,6 +80,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -293,7 +129,7 @@
       <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.20833333">
+            <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.13392857">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -474,14 +310,14 @@
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work-libs/java/mockito-1.9.5/mockito-all-1.9.5.jar!/" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work-libs/java/mockito-1.9.5/mockito-all-1.9.5.jar!/" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="spinning-vocabulary-cards" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -497,8 +333,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -531,6 +367,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -556,19 +405,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -669,7 +505,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -679,7 +515,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34129694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -689,6 +524,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34129694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -852,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.20833333">
+        <state line="8" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.13392857">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
