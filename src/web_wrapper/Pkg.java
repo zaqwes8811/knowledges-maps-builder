@@ -17,7 +17,7 @@ import ui.UI;
 
 import java.io.IOException;
 
-class Pkg extends HttpServlet {
+public class Pkg extends HttpServlet {
   private Concentrator CONTAINER;
   @Override
   public void doGet(
@@ -26,10 +26,10 @@ class Pkg extends HttpServlet {
   	{
   	
   	try {
-  	if(null != CONTAINER) {
+  	if(null == CONTAINER) {
   		Wrapper wrapper = new Wrapper();
 
-      String pathToCfgFile = "app.yaml";
+      String pathToCfgFile = "my.yaml";
       ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
           namesNodes, new FabricImmutableNodeAccessors());
