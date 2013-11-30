@@ -31,7 +31,7 @@ class Wrapper {
     // Регистрируем обработчики
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/");
-    context.addServlet(new ServletHolder(new Pkg(container)),"/pkg");
+    //context.addServlet(new ServletHolder(new Pkg(container)),"/pkg");
 
     // Коннектим все
     HandlerList handlers = new HandlerList();

@@ -11,28 +11,17 @@ import through_functional.configurator.AppConfigurator;
 import through_functional.configurator.ConfFileIsCorrupted;
 import through_functional.configurator.NoFoundConfFile;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 15.09.13
- * Time: 9:35
- * To change this template use File | Settings | File Templates.
- */
 public class WebRelay {
   public static void main(String[] args) throws Exception {
-    // Сервлеты
     try {
-      ///*
       Wrapper wrapper = new Wrapper();
 
       String pathToCfgFile = "app.yaml";
       ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
-          namesNodes, new FabricImmutableNodeAccessors());//*/
+          namesNodes, new FabricImmutableNodeAccessors());
 
       Concentrator container = new AppConcentrator(accessors);
-        //FakeConcentrator();//(accessors);
-
       HandlerList handlers = Wrapper.buildHandlers(container);
 
       Server server = new Server(8081);
