@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\ui\UI.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\mapreduce\BECCache.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/BECCache.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\mapreduce\MapReduceChains.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\mapreduce\Mappers.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\mapreduce\Reduces.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/Reduces.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\totext\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\totext\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/write_chain/totext/ImmutableBECSave.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\totext\ImmutableTextExtractors.java" afterPath="$PROJECT_DIR$/src/write_chain/totext/ImmutableTextExtractors.java" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\nlp_core\totext\VParserException.java" afterPath="$PROJECT_DIR$/src/write_chain/totext/VParserException.java" />
-    </list>
+    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="" />
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385905390713" ignored="false" />
@@ -111,7 +98,7 @@
       <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="673" selection-end="673" vertical-scroll-proportion="0.35969868">
+            <state line="31" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.6478343">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -390,7 +377,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -406,7 +393,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36709887" sideWeight="0.67695963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -568,7 +555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="673" selection-end="673" vertical-scroll-proportion="0.35969868">
+        <state line="31" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.6478343">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
