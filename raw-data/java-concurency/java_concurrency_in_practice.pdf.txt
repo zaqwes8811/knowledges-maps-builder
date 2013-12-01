@@ -1199,7 +1199,7 @@ public class Sequence {
 } 
 
 In�the�absence�of�synchronization,�the�compiler,�hardware,�and�runtime�are�allowed�to�take�substantial� liberties�with�
-the� timing� and� ordering� of� actions,� such� as� caching� variables� in� registers� or� processorͲlocal� caches�where� they� are�
+the� timing� and� ordering� of� actions,� such� as� caching� variables� in� registers� or� processorͲlocal� read_chain.caches�where� they� are�
 temporarily� (or� even�permanently)� invisible� to�other� threads.� These� tricks� are� in� aid�of�better�performance� and� are�
 generally�desirable,�but� they�place� a�burden�on� the�developer� to� clearly� identify�where�data� is�being� shared� across�
 threads� so� that� these� optimizations� do� not� undermine� safety.� (Chapter� 16� gives� the� gory� details� on� exactly� what�
@@ -1240,7 +1240,7 @@ some�degree�of�runtime�overhead.�Context�switches� Ͳ�when�the
 another�thread�can�run� Ͳ�are�more�frequent� in�applications�with�many�threads,�and�have�significant�costs:�saving�and�
 restoring�execution� context,� loss�of� locality,�and�CPU� time� spent� scheduling� threads� instead�of� running� them.�When�
 threads� share� data,� they� must� use� synchronization� mechanisms� that� can� inhibit� compiler� optimizations,� flush� or�
-invalidate�memory�caches,�and�create� synchronization� traffic�on� the� shared�memory�bus.�All� these� factors� introduce�
+invalidate�memory�read_chain.caches,�and�create� synchronization� traffic�on� the� shared�memory�bus.�All� these� factors� introduce�
 additional�performance�costs;�Chapter�11�covers�techniques�for�analyzing�and�reducing�these�costs.��
 
 
@@ -2181,7 +2181,7 @@ without�synchronization,�the�reader�thread�could�see�those�write
 
 [1]� This�may� seem� like� a� broken� design,� but� it� is�meant� to� allow� JVMs� to� take� full� advantage� of� the� performance� of�modern�multiprocessor�
 hardware.�For�example,�in�the�absence�of�synchronization,�the�Java�Memory�Model�permits�the�compiler�to�reorder�operations�and�cache�values�in�
-registers,�and�permits�CPUs�to�reorder�operations�and�cache�values�in�processorͲspecific�caches.�For�more�details,�see�Chapter�16.�
+registers,�and�permits�CPUs�to�reorder�operations�and�cache�values�in�processorͲspecific�read_chain.caches.�For�more�details,�see�Chapter�16.�
 
 
 
@@ -2295,7 +2295,7 @@ toͲdate�values�of�shared�mutable�variables,�the�reading�and�w
 The� Java� language� also� provides� an� alternative,� weaker� form� of� synchronization,� volatile� variables,� to� ensure� that�
 updates�to�a�variable�are�propagated�predictably�to�other�threads.�When�a�field�is�declared�volatile,�the�compiler�and�
 runtime�are�put�on�notice� that� this�variable� is� shared�and� that�operations�on� it� should�not�be� reordered�with�other�
-memory� operations.� Volatile� variables� are� not� cached� in� registers� or� in� caches�where� they� are� hidden� from� other�
+memory� operations.� Volatile� variables� are� not� cached� in� registers� or� in� read_chain.caches�where� they� are� hidden� from� other�
 processors,�so�a�read�of�a�volatile�variable�always�returns�the�most�recent�write�by�any�thread.�
 
 A�good�way�to�think�about�volatile�variables�is�to�imagine�that�they�behave�roughly�like�the�SynchronizedInteger�class�
@@ -2655,7 +2655,7 @@ B3453B3449B3221B3220B3219B3214B3059B3058B3057B2535B2534B2190B2189B2188B2�Ͳ�
 Objects
 If� you� are�porting� a� singleͲthreaded� application� to� a�multithreaded�environment,� you� can�preserve� thread� safety�by�
 converting�shared�global�variables�into�ThreadLocals,�if�the�semantics�of�the�shared�globals�permits�this;�an�applicationͲ
-wide�cache�would�not�be�as�useful�if�it�were�turned�into�a�number�of�threadͲlocal�caches.�
+wide�cache�would�not�be�as�useful�if�it�were�turned�into�a�number�of�threadͲlocal�read_chain.caches.�
 
 ThreadLocal� is� widely� used� in� implementing� application� frameworks.� For� example,� J2EE� containers� associate� a�
 transaction�context�with�an�executing� thread� for� the�duration�of�an�EJB�call.�This� is�easily� implemented�using�a�static�
@@ -2700,7 +2700,7 @@ x It�is�properly�constructed�(the�this�reference�does�not�esca
 
 [12]�It�is�technically�possible�to�have�an�immutable�object�without�all�fields�being�final.�String�is�such�a�class�Ͳ�but�this�relies�on�delicate�reasoning�
 about�benign�data�races�that�requires�a�deep�understanding�of�the�Java�Memory�Model.�(For�the�curious:�String�lazily�computes�the�hash�code�the�
-first�time�hashCode�is�called�and�caches�it�in�a�nonͲfinal�field,�but�this�works�only�because�that�field�can�take�on�only�one�nonͲdefault�value�that�is�
+first�time�hashCode�is�called�and�read_chain.caches�it�in�a�nonͲfinal�field,�but�this�works�only�because�that�field�can�take�on�only�one�nonͲdefault�value�that�is�
 the�same�every�time�it�is�computed�because�it�is�derived�deterministically�from�immutable�state.�Don't�try�this�at�home.)�
 
 Immutable� objects� can� still� use�mutable� objects� internally� to�manage� their� state,� as� illustrated� by� ThreeStooges� in�
@@ -10020,7 +10020,7 @@ activity,�which�may�be�caused�by�blocking�due�to�I/O�or�lo
 11.3.2.�Memory�Synchronization�
 The� performance� cost� of� synchronization� comes� from� several� sources.� The� visibility� guarantees� provided� by�
 synchronized�and�volatile�may�entail�using�special� instructions�called�memory�barriers� that�can� flush�or� invalidate�
-caches,� flush� hardware� write� buffers,� and� stall� execution� pipelines.� Memory� barriers� may� also� have� indirect�
+read_chain.caches,� flush� hardware� write� buffers,� and� stall� execution� pipelines.� Memory� barriers� may� also� have� indirect�
 performance�consequences�because� they� inhibit�other�compiler�optimizations;�most�operations�cannot�be� reordered�
 with�memory�barriers.�
 
@@ -10637,7 +10637,7 @@ Most�tests�of�concurrent�classes�fall� into�one�or�both�of�
 defined�safety�as�"nothing�bad�ever�happens"�and�liveness�as�"something�good�eventually�happens".�
 
 Tests� of� safety,�which� verify� that� a� class's� behavior� conforms� to� its� specification,� usually� take� the� form� of� testing�
-invariants.�For�example,� in�a� linked� list� implementation� that�caches� the� size�of� the� list�every� time� it� is�modified,�one�
+invariants.�For�example,� in�a� linked� list� implementation� that�read_chain.caches� the� size�of� the� list�every� time� it� is�modified,�one�
 safety�test�would�be�to�compare�the�cached�count�against�the�actual�number�of�elements�in�the�list.�In�a�singleͲthreaded�
 program� this� is�easy,� since� the� list� contents�do�not� change�while� you� are� testing� its�properties.�But� in� a� concurrent�
 program,�such�a�test�is�likely�to�be�fraught�with�races�unless�you�can�observe�the�count�field�and�count�the�elements�in�a�
@@ -14007,8 +14007,8 @@ A�memory�model�addresses�the�question�"Under�what�conditions�d
 This�may�sound� like�a�dumb�question,�but� in�the�absence�of�synchronization,�there�are�a�number�of�reasons�a�thread�
 might�not�immediately�Ͳ�or�ever�Ͳ�see�the�results�of�an�operation�in�another�thread.�Compilers�may�generate�instructions�
 in�a�different�order�than�the�"obvious"�one�suggested�by�the�source�code,�or�store�variables� in�registers� instead�of� in�
-memory;�processors�may�execute�instructions�in�parallel�or�out�of�order;�caches�may�vary�the�order�in�which�writes�to�
-variables� are� committed� to�main�memory;� and� values� stored� in� processorͲlocal� caches�may� not� be� visible� to� other�
+memory;�processors�may�execute�instructions�in�parallel�or�out�of�order;�read_chain.caches�may�vary�the�order�in�which�writes�to�
+variables� are� committed� to�main�memory;� and� values� stored� in� processorͲlocal� read_chain.caches�may� not� be� visible� to� other�
 processors.�These� factors� can�prevent� a� thread� from� seeing� the�most�upͲtoͲdate� value� for�a� variable�and� can� cause�
 memory�actions�in�other�threads�to�appear�to�happen�out�of�order�Ͳ�if�you�don't�use�adequate�synchronization.�
 
@@ -14018,7 +14018,7 @@ thread�asͲifͲserial�semantics:�as� long�as�the�program�has�t
 strictly� sequential� environment,� all� these� games� are� permissible.� And� that's� a� good� thing,� too,� because� these�
 rearrangements� are� responsible� for�much� of� the� improvement� in� computing� performance� in� recent� years.� Certainly�
 higher�clock�rates�have�contributed�to� improved�performance,�but�so�has� increased�parallelism�Ͳ�pipelined�superscalar�
-execution�units,�dynamic�instruction�scheduling,�speculative�execution,�and�sophisticated�multilevel�memory�caches.�As�
+execution�units,�dynamic�instruction�scheduling,�speculative�execution,�and�sophisticated�multilevel�memory�read_chain.caches.�As�
 processors� have� become�more� sophisticated,� so� too� have� compilers,� rearranging� instructions� to� facilitate� optimal�
 execution�and�using� sophisticated�global� registerͲallocation�algorithms.�And�as�processor�manufacturers� transition� to�
 multicore�processors,�largely�because�clock�rates�are�getting�harder�to�increase�economically,�hardware�parallelism�will�
@@ -14082,7 +14082,7 @@ concurrent�programs�unless�they�are�correctly�synchronized.�It�i
 print� (1,�0),�or� (0,�1),�or� (1,�1):�thread�A�could�run� to�completion�before�B�starts,�B�could�run�to�completion�before�A�
 starts,�or� their�actions�could�be� interleaved.�But,�strangely,�PossibleReordering�can�also�print� (0,�0)!�The�actions� in�
 each�thread�have�no�dataflow�dependence�on�each�other,�and�accordingly�can�be�executed�out�of�order.�(Even� if�they�
-are�executed�in�order,�the�timing�by�which�caches�are�flushed�to�main�memory�can�make�it�appear,�from�the�perspective�
+are�executed�in�order,�the�timing�by�which�read_chain.caches�are�flushed�to�main�memory�can�make�it�appear,�from�the�perspective�
 of� B,� that� the� assignments� in� A� occurred� in� the� opposite� order.)� Figure� 16.1� shows� a� possible� interleaving� with�
 reordering�that�results�in�printing�(0,�0).�
 

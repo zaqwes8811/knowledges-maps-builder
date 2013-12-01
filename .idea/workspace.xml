@@ -2,29 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\checkthread_annotations_1_0_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\commons_lang3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\gson_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\javatuples_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\jcip_annotations.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\jetty_all_7_0_2_v20100331.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\junit_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\mockito_all_1_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\snakeyaml_1_12.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/AppConcentratorTest.java" afterPath="$PROJECT_DIR$/src/web_wrapper/AppConcentratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" afterPath="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/guava_14_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/guava_14_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\BECCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\MapReduceChains.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\Mappers.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\Reduces.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\targets\spider_extractor_target_onto.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/hided/ImmutableJobsFormer.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ImmutableJobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raw-data/java-concurency/java_concurrency_in_practice.pdf-processed.txt" afterPath="$PROJECT_DIR$/raw-data/java-concurency/java_concurrency_in_practice.pdf-processed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raw-data/java-concurency/java_concurrency_in_practice.pdf.txt" afterPath="$PROJECT_DIR$/raw-data/java-concurency/java_concurrency_in_practice.pdf.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vocabulary-cards.iml" afterPath="$PROJECT_DIR$/vocabulary-cards.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/vocabulary_cards_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/vocabulary_cards_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\caches\GCashesLearn.java" afterPath="$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\com\voc_cards\Voc_cardsServlet.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Voc_cardsServlet.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolder.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\ContentHolder.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ContentHolder.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\ContentStorageAccessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ContentStorageAccessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\ExternalCursorException.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ExternalCursorException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\FabricImmutableNodeAccessors.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeAccessors.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\IFabricImmutableNodeAccessors.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/IFabricImmutableNodeAccessors.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessorTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\ImmutableNodeAccessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableNodeAccessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\InternalCursorException.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/InternalCursorException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\NodeAccessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/NodeAccessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\NodeAlreadyExist.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/NodeAlreadyExist.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\NodeIsCorrupted.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/NodeIsCorrupted.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\NodeNoFound.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/NodeNoFound.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\OutOfRangeOnAccess.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/OutOfRangeOnAccess.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseCoursor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseFilter.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableDataExtractor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableOntoAssistant.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/KeyWordsCoursor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided\NotesProcessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided/NotesProcessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\idx_coursors\hided_code.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/hided_code.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\totext\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/nlp_core/totext/ImmutableBECParser.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\totext\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/nlp_core/totext/ImmutableBECSave.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\totext\ImmutableTextExtractors.java" afterPath="$PROJECT_DIR$/src/nlp_core/totext/ImmutableTextExtractors.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\totext\VParserException.java" afterPath="$PROJECT_DIR$/src/nlp_core/totext/VParserException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\AppConcentrator.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/AppConcentrator.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\AppConcentratorTest.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/AppConcentratorTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\Concentrator.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Concentrator.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\FakeConcentrator.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/FakeConcentrator.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\Getter.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getter.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\Getters.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\Pkg.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\WebRelay.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\web_wrapper\Wrapper.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385902963548" ignored="false" />
     <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385902963548" ignored="false" />
+    <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903349313" ignored="false" />
+    <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
+    <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903417879" ignored="false" />
+    <file path="/Reduces.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903616960" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +128,71 @@
     <favorites_list name="vocabulary-cards" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ProcessorTargetsTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="7" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="41" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/BECCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mappers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/Mappers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapReduceChains.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/MapReduceChains.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-3.6666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reduces.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/Reduces.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="22" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GCashesLearn.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -102,6 +213,12 @@
         <option value="$PROJECT_DIR$/src/web_wrapper/Pkg.java" />
         <option value="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" />
         <option value="$PROJECT_DIR$/src/web_wrapper/AppConcentratorTest.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java" />
+        <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/BECCache.java" />
+        <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/Mappers.java" />
+        <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/MapReduceChains.java" />
+        <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/Reduces.java" />
       </list>
     </option>
   </component>
@@ -169,6 +286,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="read_chain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="read_chain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caches" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nlp_core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -181,7 +356,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/war" />
@@ -350,12 +525,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33050847" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016628" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -364,7 +540,6 @@
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -429,7 +604,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/AppConcentratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/AppConcentratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="25" selection-start="894" selection-end="894" vertical-scroll-proportion="0.5461847">
           <folding />
@@ -443,7 +618,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_wrapper/Pkg.java">
+    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.23517786">
           <folding />
@@ -457,13 +632,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/idx_coursors/BaseContentHolderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="25" selection-start="406" selection-end="406" vertical-scroll-proportion="0.32177263">
           <folding>
-            <element signature="e#1463#1662#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1450#1649#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/hided/ProcessorTargetsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/hided/ProcessorTargets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="41" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/Mappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/Reduces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="22" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nlp_core/mapreduce/MapReduceChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-3.6666667">
+          <folding />
         </state>
       </provider>
     </entry>
