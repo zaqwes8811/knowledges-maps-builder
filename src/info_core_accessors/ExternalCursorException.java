@@ -1,11 +1,11 @@
-package common.nlp;
+package info_core_accessors;
 
 /**
  * Created with IntelliJ IDEA.
  * User: кей
- * Date: 11.05.13
- * Time: 15:11
+ * Date: 09.07.13
+ * Time: 18:18
  * To change this template use File | Settings | File Templates.
  */
-public class Compressors {
+public class ExternalCursorException {
 }

@@ -1,5 +1,0 @@
-for-scribe:
-  app-folder: ./app-folder
-
-registered-nodes:
-  - ./app-folder/bec-node

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <component name="ProjectDictionaryState">
   <dictionary name="кей">
     <words>
@@ -6,4 +7,14 @@
       <w>randomizer</w>
     </words>
   </dictionary>
+=======
+<component name="ProjectDictionaryState">
+  <dictionary name="кей">
+    <words>
+      <w>accessors</w>
+      <w>crosscuttings</w>
+      <w>randomizer</w>
+    </words>
+  </dictionary>
+>>>>>>> 92598b2434681afe0ac40bade35566cb5ef99a30
 </component>
