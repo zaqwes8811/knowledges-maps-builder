@@ -14,7 +14,7 @@ public class AppConcentratorTest {
   @Test
   public void testGeneratePackage() throws Exception {
     Wrapper wrapper = new Wrapper();
-    String pathToCfgFile = "app.yaml";
+    String pathToCfgFile = "./my.yaml";
     ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
     ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
       namesNodes, new FabricImmutableNodeAccessors());
