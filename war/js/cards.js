@@ -94,6 +94,7 @@ OneCard.prototype.processResponse = function (response) {
   leafsDeck.empty();
   $('#content').empty();
   
+  
   // Только этот словарь знаяет, какой ключ соответсвует карте
   var leafsHandlers = viewCreateLeafs(names);
   
@@ -119,6 +120,20 @@ OneCard.prototype.processResponse = function (response) {
     for (i = 0; i < components.length; ++i)
       $(components[i]).appendTo(handler);
   });
+  
+  // Решаем показывать ли нет
+  if ($('#content').is(':hidden')) {
+      $('#content').hide();
+      var titleButton = $('p.slide > a.btn-slide > span.text-fonter');
+      titleButton[0].innerHTML = 'Open context';
+  }
+
+  // Показываем если есть что
+  if (_.contains(names, "content")) {
+    $('p.slide').show();
+  } else {
+    $('p.slide').hide();
+  }
 };
 
 // Типовые контейнеры - их и нужно расщепить
@@ -192,6 +207,25 @@ function createTextDeck(content) {
   }
   return wrapper;
 }
+
+$(document).ready(function(){
+	$(".btn-slide").click(function(){
+        // Ошибки нет лигически соответсвует hidden
+        var isVisible = $("#content").is(":hidden");
+        console.log(isVisible);
+        // Нужно как-то разделить клики
+		$("#content").slideToggle("slow");
+        
+		$(this).toggleClass("active"); 
+        
+        var titleButton = $('p.slide > a.btn-slide > span.text-fonter');
+        if (!isVisible)
+            titleButton[0].innerHTML = 'Open context';
+        else
+            titleButton[0].innerHTML = 'Hide context';
+        return false;
+	});
+});
 
 
 
