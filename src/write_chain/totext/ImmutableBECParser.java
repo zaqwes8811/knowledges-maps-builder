@@ -119,11 +119,8 @@ public final class ImmutableBECParser {
       String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
       ImmutableList<String> content = Util.fileToList(fullFilename);
       ImmutableBECParser cash = ImmutableBECParser.create(content);
-
     } catch (IOException e) {
       Util.print(e.getMessage());
-    //} catch (VParserException e) {
-    //  Utils.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
     }

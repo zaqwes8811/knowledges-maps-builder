@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="" />
+    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\totext\ImmutableTextExtractors.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfigurator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\CompressorsTest.java" afterPath="$PROJECT_DIR$/src/common/nlp/CompressorsTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\through_functional\configurator\ConfFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/ConfigurationFileIsCorrupted.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\through_functional\configurator\NoFoundConfFile.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundConfigurationFile.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\through_functional\configurator\RecordNoFound.java" afterPath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundRecordInConfiguration.java" />
+    </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385905390713" ignored="false" />
+    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385905816328" ignored="false" />
     <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385902963548" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903349313" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
@@ -78,9 +90,9 @@
         </entry>
       </file>
       <file leaf-file-name="CompressorsTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/CompressorsTest.java">
+        <entry file="file://$PROJECT_DIR$/src/common/nlp/CompressorsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+            <state line="17" column="13" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,13 +107,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Pkg.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.6478343">
+            <state line="27" column="4" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableBECParser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="121" column="0" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.73333335">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/MapReduceChains.java" />
         <option value="$PROJECT_DIR$/src/nlp_core/mapreduce/Reduces.java" />
         <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
+        <option value="$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java" />
       </list>
     </option>
   </component>
@@ -203,6 +234,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="write_chain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="through_functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="through_functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -221,13 +310,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
   </component>
   <component name="RunManager" selected="JUnit.All in vocabulary-cards">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -242,19 +331,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -282,6 +358,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -387,13 +476,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016628" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36709887" sideWeight="0.67695963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.67695963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32304037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -461,11 +550,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/AppConcentratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="894" selection-end="894" vertical-scroll-proportion="0.5461847" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/AppConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="23" selection-start="382" selection-end="382" vertical-scroll-proportion="0.4258189">
@@ -478,11 +562,6 @@
         <state line="4" column="21" selection-start="131" selection-end="131" vertical-scroll-proportion="0.1310212" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="406" selection-end="406" vertical-scroll-proportion="0.32177263" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/Reduces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="22" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
@@ -492,9 +571,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java">
@@ -539,9 +616,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/CompressorsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/common/nlp/CompressorsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -555,10 +632,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.6478343">
+        <state line="27" column="4" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.73333335">
+          <folding />
         </state>
       </provider>
     </entry>
