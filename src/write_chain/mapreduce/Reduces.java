@@ -1,4 +1,4 @@
-package nlp_core.mapreduce;
+package write_chain.mapreduce;
 
 
 import com.google.common.collect.Multiset;

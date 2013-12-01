@@ -1,4 +1,4 @@
-package nlp_core.mapreduce;
+package write_chain.mapreduce;
 
 //import info_core_accessors.IdxAccessor;
 

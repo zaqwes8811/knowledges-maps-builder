@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.checkthread.annotations.NotThreadSafe;
 import through_functional.configurator.AppConfigurator;
-import ui.UI;
 
 import java.io.IOException;
 
@@ -28,18 +27,18 @@ public class Pkg extends HttpServlet {
   	{
   	
   	try {
-  	if(null == CONTAINER) {
-  		Wrapper wrapper = new Wrapper();
+      if(null == CONTAINER) {
+        Wrapper wrapper = new Wrapper();
 
-      String pathToCfgFile = "my.yaml";
-      ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
-      ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
-          namesNodes, new FabricImmutableNodeAccessors());
+        String pathToCfgFile = "my.yaml";
+        ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
+        ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
+            namesNodes, new FabricImmutableNodeAccessors());
 
-      CONTAINER = new AppConcentrator(accessors);
-  	}
+        CONTAINER = new AppConcentrator(accessors);
+      }
   	} catch (Exception e) {
-  		UI.showMessage(e);
+
   	}
 
     response.setContentType("text/html");
