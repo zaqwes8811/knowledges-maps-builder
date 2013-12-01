@@ -8,7 +8,7 @@ var CONSTANTS = (function () {
   SEL_RIGHT_TUNER : 'div.leafs-tuner-base.leafs-tuner-down',
   LEAF : ".leafs-container > div.leaf",
   SEL_LEAFS_DECK : '.leafs-container',
-  SEL_CARD_CONTAINER : '.card-container',
+  SEL_CARD_CONTAINER : '.card-word-container',
   LAYERS_CONTAINER: '.layer-inner'
   }
 })();

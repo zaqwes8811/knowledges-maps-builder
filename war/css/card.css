@@ -2,8 +2,18 @@
   position: relative;
   height: 200px;
   width: 350px;
+  background-color: green;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-word-container {
+  position: relative;
+  height: 200px;
+  width: 350px;
   background-color: #333399;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
 }
