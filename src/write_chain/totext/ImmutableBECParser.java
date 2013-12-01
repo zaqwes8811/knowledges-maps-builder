@@ -1,4 +1,4 @@
-package nlp_core.totext;
+package write_chain.totext;
 
 //import info_core_accessors.VParserException;
 import com.google.common.base.Joiner;

@@ -1,4 +1,4 @@
-package nlp_core.totext;
+package write_chain.totext;
 
 // TODO() TOTH: Приписка Immutable сильно увеличивает длину имени. @Immutable
 //
