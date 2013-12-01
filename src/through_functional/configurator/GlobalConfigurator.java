@@ -19,12 +19,12 @@ import java.util.Map;
 // Для тестиования удобно передать путь к конфигурационному файлу.
 @Immutable
 @NotThreadSafe
-public class AppConfigurator {
+public class GlobalConfigurator {
 
   //private final String ROOT_NAME = "App";
   private final String APP_CFG_FULL_FILENAME;
 
-  public AppConfigurator(String configurationFileName) {
+  public GlobalConfigurator(String configurationFileName) {
     APP_CFG_FULL_FILENAME = configurationFileName;
   }
 

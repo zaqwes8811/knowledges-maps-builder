@@ -22,7 +22,7 @@ public class BECCache {
   private BECCache() throws CrosscuttingsException {
     String nodeName = "bec-node";
     final String splitter = AppConstants.PATH_SPLITTER;
-    final String pathToAppFolder = AppConfigurator.getPathToAppFolder();
+    final String pathToAppFolder = GlobalConfigurator.getPathToAppFolder();
 
     final String pathToNode = Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
