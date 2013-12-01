@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
  
 import java.io.IOException;
 
-import business.originator_frequency_index.IIndexCursor;
-import business.originator_frequency_index.IndexCursorFactory;
+//import business.originator_frequency_index.IIndexCursor;
+//import business.originator_frequency_index.IndexCursorFactory;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -20,9 +20,9 @@ import org.eclipse.jetty.servlet.ServletHandler;
 
 //import java.util.
 // App
-import business.IndexContainer;
+//import business.IndexContainer;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 import java.util.*;
 import java.util.Random;
 
@@ -42,7 +42,7 @@ public class AppContainer {
     ResourceHandler resource_handler = new ResourceHandler();
     resource_handler.setDirectoriesListed(true);
     resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-    resource_handler.setResourceBase(".");
+    resource_handler.setResourceBase("./src/web_view");
  
     // Список обработчиков?
     HandlerList handlers = new HandlerList();
@@ -64,13 +64,13 @@ public class AppContainer {
   public static class App extends HttpServlet {
     /* Блок классов приложения? Должны быть потокозащищенными
     private  */
-    private  IIndexCursor ptr;
+    //private  IIndexCursor ptr;
 
     public void init() throws ServletException {
-      IndexCursorFactory factory = new IndexCursorFactory();
+      //IndexCursorFactory factory = new IndexCursorFactory();
 
-      String indexRoot = "src/indexes";
-      ptr = factory.create(indexRoot);
+      //String indexRoot = "src/indexes";
+      //ptr = factory.create(indexRoot);
 
 
 
@@ -81,7 +81,7 @@ public class AppContainer {
 
     //IndexContainer indexContainer = new IndexContainer();
 
-    private String getIndex() {
+    /*private String getIndex() {
       Gson gson = new Gson();
       //System.out.print(ptr.getListNodes());
 
@@ -120,7 +120,7 @@ public class AppContainer {
       // Сереализуем
       String json_response = gson.toJson(ints);
       return  json_response;
-    }
+    } */
 
     protected void doGet(
         HttpServletRequest request,
@@ -151,9 +151,9 @@ public class AppContainer {
       // И как быть с потокозащитой хэша? Кстати доступ только на чтение
       String json_response = "";
       if (name_requester.equals("get_axis")) {
-        json_response = getIndex();
+        json_response = "get_axis";//getIndex();
       } else if (name_requester.equals("get_nodes")) {
-        json_response = getListNodes();
+        json_response = "get_nodes";//getListNodes();
       } else {
         // No implemented
       }
