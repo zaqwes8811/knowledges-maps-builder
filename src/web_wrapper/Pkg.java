@@ -7,12 +7,12 @@ import com.google.gson.Gson;
 import idx_coursors.FabricImmutableNodeAccessors;
 import idx_coursors.ImmutableNodeAccessor;
 
-import javax.annotation.concurrent.NotThreadSafe;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.checkthread.annotations.NotThreadSafe;
 import through_functional.configurator.AppConfigurator;
 import ui.UI;
 
