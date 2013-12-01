@@ -40,7 +40,7 @@ public class AppConfigurator {
     }
 
     public Optional<V> read(Reader<V> reader, String key)
-        throws NoFoundConfFile, ConfFileIsCorrupted, RecordNoFound {
+        throws NoFoundConfigurationFile, ConfigurationFileIsCorrupted, NoFoundRecordInConfiguration {
       try {
         Closer closer = Closer.create();
         Optional<V> path = Optional.absent();
@@ -56,13 +56,13 @@ public class AppConfigurator {
         }
         return path;
       } catch (FileNotFoundException e) {
-        NoFoundConfFile c = new NoFoundConfFile(e);
+        NoFoundConfigurationFile c = new NoFoundConfigurationFile(e);
         c.setFileName(CFG_FULL_FILENAME);
         throw c;
       } catch (ScannerException e) {
-        throw new ConfFileIsCorrupted(e);
+        throw new ConfigurationFileIsCorrupted(e);
       } catch (NullPointerException e) {
-        throw new RecordNoFound(e, key);
+        throw new NoFoundRecordInConfiguration(e, key);
       } catch (IOException e) {
         throw new CrosscuttingsException(e);
       }
@@ -71,7 +71,7 @@ public class AppConfigurator {
 
   // Папка не обязательно в рабочей директории программы
   public Optional<String> getPathToAppFolder()
-      throws NoFoundConfFile, ConfFileIsCorrupted {
+      throws NoFoundConfigurationFile, ConfigurationFileIsCorrupted {
     String requestedPath = "for-scribe/app-folder";
     try {
     return new ReaderDecorator<String>(this.APP_CFG_FULL_FILENAME).read(
@@ -83,9 +83,9 @@ public class AppConfigurator {
               return Optional.of(result);
           }
         }, requestedPath);
-    } catch (RecordNoFound e) {
+    } catch (NoFoundRecordInConfiguration e) {
       // Путь задан жестко, и если его нет, то файл поврежден
-      throw new ConfFileIsCorrupted(e);
+      throw new ConfigurationFileIsCorrupted(e);
     }
   }
 
@@ -93,7 +93,7 @@ public class AppConfigurator {
   //
   // Пути уникальные.
   public Optional<ImmutableSet<String>> getRegisteredNodes()
-    throws NoFoundConfFile, ConfFileIsCorrupted {
+    throws NoFoundConfigurationFile, ConfigurationFileIsCorrupted {
     String requestedPath = "registered-nodes";
     try {
       return new ReaderDecorator<ImmutableSet<String>>(this.APP_CFG_FULL_FILENAME).read(
@@ -104,9 +104,9 @@ public class AppConfigurator {
               return Optional.of(ImmutableSet.copyOf(nodes));
             }
           }, requestedPath);
-    } catch (RecordNoFound e) {
+    } catch (NoFoundRecordInConfiguration e) {
       // Путь задан жестко, и если его нет, то файл поврежден
-      throw new ConfFileIsCorrupted(e, "Path no found - "+requestedPath);
+      throw new ConfigurationFileIsCorrupted(e, "Path no found - "+requestedPath);
     }
   }
 }

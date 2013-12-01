@@ -8,8 +8,8 @@ import info_core_accessors.ImmutableNodeAccessor;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import through_functional.configurator.AppConfigurator;
-import through_functional.configurator.ConfFileIsCorrupted;
-import through_functional.configurator.NoFoundConfFile;
+import through_functional.configurator.ConfigurationFileIsCorrupted;
+import through_functional.configurator.NoFoundConfigurationFile;
 
 public class WebRelay {
   public static void main(String[] args) throws Exception {
@@ -28,10 +28,10 @@ public class WebRelay {
       server.setHandler(handlers);
       server.start();
       server.join();
-    } catch (NoFoundConfFile e) {
+    } catch (NoFoundConfigurationFile e) {
       Util.print(e);
       throw new RuntimeException();
-    } catch (ConfFileIsCorrupted e) {
+    } catch (ConfigurationFileIsCorrupted e) {
       Util.print(e);
       throw new RuntimeException();
     }
