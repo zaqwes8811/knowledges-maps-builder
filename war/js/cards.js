@@ -112,6 +112,7 @@ OneCard.prototype.processResponse = function (response) {
   });
 };
 
+// Типовые контейнеры - их и нужно расщепить
 function viewCreateLeafs(names) {
   var cardsHandles = {};
 
@@ -127,21 +128,6 @@ function createWordLeaf(content) {
   
   // Текстовое заполнение
   components.push(createTextDeck(content));
-  
-  // Тюнеров пока нет
-  /*var triangle = $("<div/>").addClass("triangle-inner-right card-updaters-triangle");
-  var card-updaters = $("<div/>").addClass("card-updaters-tuner card-updaters");
-  $(triangle).appendTo(card-updaters);*/
-  
-  /*
-  var triangle = $("<div/>").addClass("triangle-inner-up");
-  var circleInner = $("<div/>").addClass("circle-child");
-  var circleParent = $("<div/>").addClass("circle-parent card-updaters-circle-parent");
-  var card-updaters = $("<div/>").addClass("card-updaters-tuner card-updaters");
-  $(triangle).appendTo(circleInner);
-  $(circleInner).appendTo(circleParent);
-  $(circleParent).appendTo(card-updaters);
-  components.push(card-updaters);*/
   return components;
 }
 
