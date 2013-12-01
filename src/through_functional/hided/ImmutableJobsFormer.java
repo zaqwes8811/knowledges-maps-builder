@@ -2,7 +2,7 @@ package through_functional.hided;
 
 import com.google.common.base.Joiner;
 import through_functional.CrosscuttingsException;
-import idx_coursors.hided.ImmutableBaseCoursor;
+import info_core_accessors.hided.ImmutableBaseCoursor;
 
 import java.util.ArrayList;
 import java.util.Arrays;

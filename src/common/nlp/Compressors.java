@@ -1,4 +1,4 @@
-package nlp;
+package common.nlp;
 
 /**
  * Created with IntelliJ IDEA.
