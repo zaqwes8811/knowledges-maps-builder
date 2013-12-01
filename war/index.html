@@ -12,26 +12,8 @@
     <!--script src="js/prototype.js"></script-->
     <script src="js/underscore.js"></script>
     <script src="js/jquery.min.js"></script>
-    
     <script src="js/reuse.js"></script>
-    
     <script src="js/cards.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$(".btn-slide").click(function(){
-        // Ошибки нет лигически соответсвует hidden
-        var isVisible = $("#content").is(":hidden");
-        console.log(isVisible);
-        // Нужно как-то разделить клики
-		$("#content").slideToggle("slow");
-        
-		$(this).toggleClass("active"); 
-        return false;
-	});
-});
-</script>
-
   </head>
   <body onload="init()">
     <!--div id="translate" class="card-container">
