@@ -92,13 +92,22 @@ OneCard.prototype.processResponse = function (response) {
 
   // Сбрасываем
   leafsDeck.empty();
+  $('#content').empty();
   
   // Только этот словарь знаяет, какой ключ соответсвует карте
   var leafsHandlers = viewCreateLeafs(names);
   
   // Заполняем
   $.each(names, function(key_local, value) {
-    $(leafsHandlers[value]).appendTo(leafsDeck);
+    console.log(value);
+    if (value === "word")
+        $(leafsHandlers[value]).appendTo(leafsDeck);
+    else if (value === "content") {
+        var contentHolder = $('#'+"content");
+        contentHolder.empty();
+        $(leafsHandlers[value]).appendTo(contentHolder);
+    } else
+        console.log("Translate no connected.");
   });
   
   var here = this;
