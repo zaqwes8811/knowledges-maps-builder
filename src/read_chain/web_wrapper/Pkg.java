@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.checkthread.annotations.NotThreadSafe;
-import through_functional.configurator.AppConfigurator;
+import through_functional.configurator.GlobalConfigurator;
 
 import java.io.IOException;
 
@@ -31,7 +31,7 @@ public class Pkg extends HttpServlet {
         Wrapper wrapper = new Wrapper();
 
         String pathToCfgFile = "my.yaml";
-        ImmutableSet<String> namesNodes = new AppConfigurator(pathToCfgFile).getRegisteredNodes().get();
+        ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
         ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
             namesNodes, new FabricImmutableNodeAccessors());
 

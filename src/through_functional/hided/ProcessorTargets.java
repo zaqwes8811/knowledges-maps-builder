@@ -43,7 +43,7 @@ public class ProcessorTargets {
   public static String getPathToIndex() throws CrosscuttingsException {
       String pathToIndex = "";/*Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-              AppConfigurator.getPathToAppFolder(),
+              GlobalConfigurator.getPathToAppFolder(),
               getIndexName());*/
       return pathToIndex;
   }
