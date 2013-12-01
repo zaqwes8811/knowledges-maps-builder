@@ -1,4 +1,4 @@
-package nlp_core.mapreduce;
+package write_chain.mapreduce;
 
 
 import com.google.common.base.Joiner;
@@ -12,7 +12,7 @@ import through_functional.CrosscuttingsException;
 import through_functional.hided.ImmutableJobsFormer;
 import through_functional.hided.ProcessorTargets;
 //import info_core_accessors.IdxAccessor;
-import nlp_core.totext.ImmutableBECParser;
+import write_chain.totext.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
