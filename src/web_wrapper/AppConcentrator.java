@@ -27,32 +27,37 @@ public class AppConcentrator implements Concentrator {
   // Translates:
   // Context:
   @Override
-  public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {
-
-    List<String> rawKeys = new ArrayList<String>();
-    List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
-    Integer currentKey = GENERATOR.getCodeWord();
-
-    // Добавляем, только если что-то есть
-    ImmutableList<String> content = ACTIVE_NODE_ACCESSOR.getContent(currentKey);
-    if (!content.isEmpty()) {
-      rawKeys.add("content");
-      values.add(content);
-    }
-
-    ImmutableList<String> translate = ImmutableList.of();
-    if (!translate.isEmpty()) {
-      rawKeys.add("translate");
-      values.add(translate);
-    }
-
-    // Обазятельно!
-    rawKeys.add("word");
-    values.add(ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
-
-    List<ImmutableList<String>> keys = new ArrayList<ImmutableList<String>>();
+  public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {	
+	  List<String> rawKeys = new ArrayList<String>();
+	  List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
+	  
+	  // Отправляем только если есть контекст
+	  while (true) {
+	  	boolean finded = false;
+	    Integer currentKey = GENERATOR.getCodeWord();
+	
+	    // Добавляем, только если что-то есть
+	    ImmutableList<String> content = ACTIVE_NODE_ACCESSOR.getContent(currentKey);
+	    if (!content.isEmpty()) {
+	      rawKeys.add("content");
+	      values.add(content);
+	      finded = true;
+	    }
+	
+	    ImmutableList<String> translate = ImmutableList.of();
+	    if (!translate.isEmpty()) {
+	      rawKeys.add("translate");
+	      values.add(translate);
+	    }
+	
+	    // Обязательно!
+	    rawKeys.add("word");
+	    values.add(ImmutableList.of(ACTIVE_NODE_ACCESSOR.getWord(currentKey)));
+	    if (finded)
+	    	break;
+  	}
+	  List<ImmutableList<String>> keys = new ArrayList<ImmutableList<String>>();
     keys.add(ImmutableList.copyOf(rawKeys));
-
     return ImmutableList.of(ImmutableList.copyOf(keys), ImmutableList.copyOf(values));
   }
 
