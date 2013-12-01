@@ -11,8 +11,8 @@ import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import through_functional.configurator.ConfFileIsCorrupted;
-import through_functional.configurator.NoFoundConfFile;
+import through_functional.configurator.ConfigurationFileIsCorrupted;
+import through_functional.configurator.NoFoundConfigurationFile;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,7 +40,7 @@ class Wrapper {
 
   public ImmutableList<ImmutableNodeAccessor> getNodes(
     ImmutableSet<String> nameNodes, IFabricImmutableNodeAccessors fabric)
-    throws ConfFileIsCorrupted, NoFoundConfFile
+    throws ConfigurationFileIsCorrupted, NoFoundConfigurationFile
   {
     Map<String, String> report = new HashMap<String, String>();
     List<ImmutableNodeAccessor> accessors = new ArrayList<ImmutableNodeAccessor>();

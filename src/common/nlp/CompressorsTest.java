@@ -1,4 +1,4 @@
-package common;
+package common.nlp;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;

@@ -3,7 +3,7 @@ package through_functional.configurator;
 import org.junit.Test;
 
 public class AppConfiguratorTest {
-  @Test(expected = NoFoundConfFile.class)
+  @Test(expected = NoFoundConfigurationFile.class)
   public void testGetPathToAppFolder() throws Exception {
     String path = "noExist-app.yaml";
     new AppConfigurator(path).getPathToAppFolder().get();
