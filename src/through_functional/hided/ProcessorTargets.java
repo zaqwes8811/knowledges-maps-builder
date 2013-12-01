@@ -84,7 +84,8 @@ public class ProcessorTargets {
         // Получаем строку задания
         while (true) {
           String s = in.readLine();
-          if (s == null) break;
+          if (s == null)
+              break;
 
           Iterable<String> oneRawTarget =
               Splitter.on('*').trimResults().omitEmptyStrings().split(s);
@@ -101,8 +102,7 @@ public class ProcessorTargets {
         }
         return resultTargets;
       } catch (FileNotFoundException e) {
-        e.printStackTrace();
-        throw new CrosscuttingsException();//"File no found - "+pathToTarget);
+        throw new CrosscuttingsException(e);//"File no found - "+pathToTarget);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
