@@ -11,7 +11,7 @@ public class AppConfiguratorTest {
 
   @Test
   public void testFileExist() throws Exception {
-    String path = "./app.yaml";
+    String path = "./my.yaml";
     new AppConfigurator(path).getPathToAppFolder().get();
   }
 }
