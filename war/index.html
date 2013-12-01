@@ -15,8 +15,54 @@
     <script src="js/reuse.js"></script>
     
     <script src="js/cards.js"></script>
-    
-    
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".btn-slide").click(function(){
+		$("#panel").slideToggle("slow");
+		$(this).toggleClass("active"); return false;
+	});
+});
+</script>
+
+<style type="text/css">
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 570px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+a:focus {
+	outline: none;
+}
+#panel {
+	background: #754c24;
+	height: 200px;
+	display: none;
+}
+.slide {
+	margin: 0;
+	padding: 0;
+	border-top: solid 4px #422410;
+	background: url(images/btn-slide.gif) no-repeat center top;
+}
+.btn-slide {
+	background: url(images/white-arrow.gif) no-repeat right -50px;
+    background-color: red;
+	text-align: center;
+	width: 144px;
+	height: 31px;
+	padding: 10px 10px 0 0;
+	margin: 0 auto;
+	display: block;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+.active {
+	background-position: right 12px;
+}
+</style>
   </head>
   <body onload="init()">
     <div id="translate" class="card-container">
@@ -67,7 +113,14 @@
     <div id="content" class="card-container">
       
     </div>
-    
+ 
+
+<div id="panel" style="display: none;">
+	you can put content here
+</div>
+<p class="slide">
+    <a href="" class="btn-slide">Slide Panel</a>
+</p> 
     
   </body>
 </html>
