@@ -21,7 +21,7 @@ public class WebRelay {
       ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
           namesNodes, new FabricImmutableNodeAccessors());
 
-      HolderNodeAccessors container = new HolderNodeAccessors(accessors);
+      HolderNodeControllers container = new HolderNodeControllers(accessors);
       HandlerList handlers = Wrapper.buildHandlers(container);
 
       Server server = new Server(8081);

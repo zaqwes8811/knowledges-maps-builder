@@ -19,7 +19,7 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class Pkg extends HttpServlet {
-  private HolderNodeAccessors CONTAINER;
+  private HolderNodeControllers CONTAINER;
   @Override
   public void doGet(
   		HttpServletRequest request,
@@ -32,10 +32,10 @@ public class Pkg extends HttpServlet {
 
         String pathToCfgFile = "my.yaml";
         ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
-        ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
+        ImmutableList<ImmutableNodeAccessor> controllers = wrapper.getNodes(
             namesNodes, new FabricImmutableNodeAccessors());
 
-        CONTAINER = new HolderNodeAccessors(accessors);
+        CONTAINER = new HolderNodeControllers(controllers);
       }
   	} catch (Exception e) {
 
