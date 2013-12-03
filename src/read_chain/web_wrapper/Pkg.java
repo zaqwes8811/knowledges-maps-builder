@@ -19,7 +19,7 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class Pkg extends HttpServlet {
-  private OneNodePackageGenerator CONTAINER;
+  private ListGetter CONTAINER;
   @Override
   public void doGet(
   		HttpServletRequest request,
@@ -35,7 +35,7 @@ public class Pkg extends HttpServlet {
         ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
             namesNodes, new FabricImmutableNodeAccessors());
 
-        CONTAINER = new OneNodePackageGeneratorImpl(accessors);
+        CONTAINER = new ListGetterImpl(accessors);
       }
   	} catch (Exception e) {
 
@@ -45,7 +45,7 @@ public class Pkg extends HttpServlet {
     response.setStatus(HttpServletResponse.SC_OK);
 
     //TODO(zaqwes): Сделать декоратор для класса
-    String jsonResponse = new Gson().toJson(CONTAINER.getPackageActiveNode());
+    String jsonResponse = new Gson().toJson(CONTAINER.getPerWordData());
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);
