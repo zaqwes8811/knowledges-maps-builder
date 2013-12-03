@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\HolderNodeAccessors.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\HolderNodeAccessorsTest.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllersTest.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,6 +18,7 @@
     <file path="/ListGetterImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091755514" ignored="false" />
     <file path="/ListGetterImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091000012" ignored="false" />
     <file path="/FakeListGetter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091015906" ignored="false" />
+    <file path="/Pkg.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091967692" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="56" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.51026857">
+            <state line="46" column="11" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.83254343">
               <folding />
             </state>
           </provider>
@@ -721,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="56" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.51026857">
+        <state line="46" column="11" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.83254343">
           <folding />
         </state>
       </provider>

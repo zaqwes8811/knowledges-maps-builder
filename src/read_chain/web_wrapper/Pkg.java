@@ -19,7 +19,7 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class Pkg extends HttpServlet {
-  private HolderNodeControllers CONTAINER;
+  private HolderNodeControllers CONTAINER_;
   @Override
   public void doGet(
   		HttpServletRequest request,
@@ -27,7 +27,7 @@ public class Pkg extends HttpServlet {
   	{
   	
   	try {
-      if(null == CONTAINER) {
+      if(null == CONTAINER_) {
         Wrapper wrapper = new Wrapper();
 
         String pathToCfgFile = "my.yaml";
@@ -35,17 +35,19 @@ public class Pkg extends HttpServlet {
         ImmutableList<ImmutableNodeAccessor> controllers = wrapper.getNodes(
             namesNodes, new FabricImmutableNodeAccessors());
 
-        CONTAINER = new HolderNodeControllers(controllers);
+        CONTAINER_ = new HolderNodeControllers(controllers);
       }
   	} catch (Exception e) {
-
+      // Вот проблемы создают эти проверяемые исключения
   	}
 
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
 
-    //TODO(zaqwes): Сделать декоратор для класса
-    String jsonResponse = new Gson().toJson(CONTAINER.getPerWordData(0));
+    // TODO: Сделать декоратор для класса
+    // TODO: Это хардкод!
+    Integer idxNode = 0;
+    String jsonResponse = new Gson().toJson(CONTAINER_.getPerWordData(idxNode));
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);
