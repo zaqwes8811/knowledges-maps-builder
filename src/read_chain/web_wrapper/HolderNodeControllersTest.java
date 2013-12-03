@@ -6,7 +6,7 @@ import info_core_accessors.*;
 import org.junit.Test;
 import through_functional.configurator.GlobalConfigurator;
 
-public class HolderNodeAccessorsTest {
+public class HolderNodeControllersTest {
   @Test
   public void testGeneratePackage() throws Exception {
     Wrapper wrapper = new Wrapper();
@@ -14,7 +14,7 @@ public class HolderNodeAccessorsTest {
     ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
     ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
       namesNodes, new FabricImmutableNodeAccessors());
-    HolderNodeAccessors container = new HolderNodeAccessors(accessors);
+    HolderNodeControllers container = new HolderNodeControllers(accessors);
     container.getPerWordData(0);
   }
 }
