@@ -19,7 +19,7 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class Pkg extends HttpServlet {
-  private Concentrator CONTAINER;
+  private OneNodePackageGenerator CONTAINER;
   @Override
   public void doGet(
   		HttpServletRequest request,
@@ -35,7 +35,7 @@ public class Pkg extends HttpServlet {
         ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
             namesNodes, new FabricImmutableNodeAccessors());
 
-        CONTAINER = new AppConcentrator(accessors);
+        CONTAINER = new OneNodePackageGeneratorImpl(accessors);
       }
   	} catch (Exception e) {
 

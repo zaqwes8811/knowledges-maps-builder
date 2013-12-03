@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 9:52
  * To change this template use File | Settings | File Templates.
  */
-public class FakeConcentrator implements Concentrator {
+public class FakeOneNodePackageGenerator implements OneNodePackageGenerator {
   @Override
   public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {
     List<String> rawKeys = new ArrayList<String>();

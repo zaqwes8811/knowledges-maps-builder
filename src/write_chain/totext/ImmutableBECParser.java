@@ -5,7 +5,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import through_functional.hided.AppConstants;
+import write_chain.hided.GlobalConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -116,7 +116,7 @@ public final class ImmutableBECParser {
 
   public static void main(String[] args) {
     try {
-      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
+      String fullFilename = Joiner.on(GlobalConstants.PATH_SPLITTER).join("raw-dicts", "vocabularity-folded.txt");
       ImmutableList<String> content = Util.fileToList(fullFilename);
       ImmutableBECParser cash = ImmutableBECParser.create(content);
     } catch (IOException e) {

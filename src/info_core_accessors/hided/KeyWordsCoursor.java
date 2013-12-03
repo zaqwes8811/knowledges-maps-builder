@@ -91,7 +91,7 @@ public class KeyWordsCoursor {
       // сохраняем отчет
 
       page.add("</body></html>");
-      String rptFileName = Joiner.on(AppConstants.PATH_SPLITTER)
+      String rptFileName = Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join("rpts", "key_words",node+".html");
       try {
         utils.list2file(page, rptFileName);
