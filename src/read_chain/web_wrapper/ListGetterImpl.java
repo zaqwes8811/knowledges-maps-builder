@@ -7,7 +7,9 @@ import info_core_accessors.*;
 import java.util.*;
 
 
-public class OneNodePackageGeneratorImpl implements OneNodePackageGenerator {
+// TODO: перейти на получение map, а не списков. Идея реаширения была избыточной.
+@Deprecated
+public class ListGetterImpl implements ListGetter {
   private final ImmutableList<ImmutableNodeAccessor> NODES;
   private final ImmutableNodeAccessor ACTIVE_NODE_ACCESSOR;
   private final GeneratorAnyRandom GENERATOR;
@@ -17,7 +19,7 @@ public class OneNodePackageGeneratorImpl implements OneNodePackageGenerator {
   // Translates:
   // Context:
   @Override
-  public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {	
+  public ImmutableList<ImmutableList<ImmutableList<String>>> getPerWordData() {
 	  List<String> rawKeys = new ArrayList<String>();
 	  List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
 	  
@@ -52,7 +54,7 @@ public class OneNodePackageGeneratorImpl implements OneNodePackageGenerator {
     return ImmutableList.of(ImmutableList.copyOf(keys), ImmutableList.copyOf(values));
   }
 
-  public OneNodePackageGeneratorImpl(ImmutableList<ImmutableNodeAccessor> nodes) {
+  public ListGetterImpl(ImmutableList<ImmutableNodeAccessor> nodes) {
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
     NODES = nodes;  // Должна упасть если при ошибке дошла до сюда
     ACTIVE_NODE_ACCESSOR = NODES.asList().get(0);

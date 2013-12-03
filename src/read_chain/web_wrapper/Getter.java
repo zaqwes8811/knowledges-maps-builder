@@ -5,5 +5,5 @@ import java.util.Map;
 
 // Пусть пока только геттеры, не знаю как назвать нормально
 public interface Getter {
-  public List<Map<String, List<String>>> getPackage();
+  public Map<String, List<String>> getPerWordData();
 }
