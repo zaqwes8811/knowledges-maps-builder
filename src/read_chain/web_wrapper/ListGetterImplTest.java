@@ -6,7 +6,8 @@ import info_core_accessors.*;
 import org.junit.Test;
 import through_functional.configurator.GlobalConfigurator;
 
-public class OneNodePackageGeneratorImplTest {
+@Deprecated
+public class ListGetterImplTest {
   @Test
   public void testGeneratePackage() throws Exception {
     Wrapper wrapper = new Wrapper();
@@ -14,7 +15,7 @@ public class OneNodePackageGeneratorImplTest {
     ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
     ImmutableList<ImmutableNodeAccessor> accessors = wrapper.getNodes(
       namesNodes, new FabricImmutableNodeAccessors());
-    OneNodePackageGeneratorImpl container = new OneNodePackageGeneratorImpl(accessors);
-    container.getPackageActiveNode();
+    ListGetterImpl container = new ListGetterImpl(accessors);
+    container.getPerWordData();
   }
 }

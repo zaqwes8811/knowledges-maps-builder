@@ -5,16 +5,10 @@ import com.google.common.collect.ImmutableList;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 15.09.13
- * Time: 9:52
- * To change this template use File | Settings | File Templates.
- */
-public class FakeOneNodePackageGenerator implements OneNodePackageGenerator {
+@Deprecated
+public class ListGetterFake implements ListGetter {
   @Override
-  public ImmutableList<ImmutableList<ImmutableList<String>>> getPackageActiveNode() {
+  public ImmutableList<ImmutableList<ImmutableList<String>>> getPerWordData() {
     List<String> rawKeys = new ArrayList<String>();
     List<ImmutableList<String>> values = new ArrayList<ImmutableList<String>>();
 
