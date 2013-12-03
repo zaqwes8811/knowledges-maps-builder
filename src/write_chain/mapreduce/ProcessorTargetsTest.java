@@ -1,7 +1,8 @@
-package write_chain.hided;
+package write_chain.mapreduce;
 
 import org.junit.Test;
 import through_functional.CrosscuttingsException;
+import write_chain.mapreduce.ProcessorTargets;
 
 import java.util.List;
 

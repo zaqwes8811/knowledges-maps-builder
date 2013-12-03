@@ -6,11 +6,11 @@ import java.util.*;
 class Getters {
   private Getters() {}
 
-  public static Getter createFake() {
-    return new FakeGetter();
+  public static GetterOneWordData createFake() {
+    return new FakeGetterOneWordData();
   }
 
-  private static class FakeGetter implements Getter {
+  private static class FakeGetterOneWordData implements GetterOneWordData {
     @Override
     public Map<String, List<String>> getPerWordData() {
       List<String> word = new ArrayList<String>(Arrays.asList("jetty"));

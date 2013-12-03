@@ -1,4 +1,4 @@
-package write_chain.totext;
+package parsers;
 
 //import info_core_accessors.VParserException;
 

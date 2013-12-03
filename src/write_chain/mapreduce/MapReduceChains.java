@@ -7,12 +7,9 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import write_chain.hided.GlobalConstants;
 import through_functional.CrosscuttingsException;
-import write_chain.hided.JobsFormer;
-import write_chain.hided.ProcessorTargets;
 //import info_core_accessors.IdxAccessor;
-import write_chain.totext.ImmutableBECParser;
+import parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
