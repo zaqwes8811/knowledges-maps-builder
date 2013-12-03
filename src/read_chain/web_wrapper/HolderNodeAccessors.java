@@ -8,8 +8,7 @@ import java.util.*;
 
 
 // TODO: перейти на получение map, а не списков. Идея реаширения была избыточной.
-@Deprecated
-public class ListGetterImpl implements ListGetter {
+public class HolderNodeAccessors {
   private final ImmutableList<ImmutableNodeAccessor> NODES;
   private static class OneNodePacker implements ListGetter {
     private final ImmutableNodeAccessor ACCESSOR_;
@@ -61,15 +60,14 @@ public class ListGetterImpl implements ListGetter {
     }
   }
 
-  @Override
-  public ImmutableList<ImmutableList<ImmutableList<String>>> getPerWordData() {
-    ImmutableNodeAccessor accessor = NODES.asList().get(0);
+  public ImmutableList<ImmutableList<ImmutableList<String>>> getPerWordData(Integer node) {
+    ImmutableNodeAccessor accessor = NODES.asList().get(node);
     ListGetter getter = new OneNodePacker(accessor);
     return getter.getPerWordData();
   }
 
 
-  public ListGetterImpl(ImmutableList<ImmutableNodeAccessor> nodes) {
+  public HolderNodeAccessors(ImmutableList<ImmutableNodeAccessor> nodes) {
     // В try сделать нельзя - компилятор будет ругаться не неинициализованность
     NODES = nodes;  // Должна упасть если при ошибке дошла до сюда
   }
