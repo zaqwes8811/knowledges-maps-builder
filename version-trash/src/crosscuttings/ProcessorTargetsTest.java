@@ -1,5 +1,6 @@
-package com.github.zaqwes8811.text_processor.crosscuttings;
+package crosscuttings;
 
+import crosscuttings.CrosscuttingsException;
 import jobs_processors.ImmutableProcessorTargets;
 import org.junit.Test;
 
