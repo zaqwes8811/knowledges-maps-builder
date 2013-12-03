@@ -6,15 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package info_core_accessors.hided;
+package info_core_accessors;
 
 
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import write_chain.hided.GlobalConstants;
+import write_chain.mapreduce.GlobalConstants;
 import through_functional.CrosscuttingsException;
-import write_chain.hided.ProcessorTargets;
+import write_chain.mapreduce.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // Список получаем по размеченным папкам в временной директории индекса
-//@Stateless
+@Deprecated
 final public class ImmutableBaseCoursor {
   public static Optional<List<String>> getListNodes() {
     try {

@@ -7,6 +7,6 @@ package info_core_accessors;
  * Time: 18:45
  * To change this template use File | Settings | File Templates.
  */
-public interface IFabricImmutableNodeAccessors {
+public interface FabricImmutableNodeControllers {
   public ImmutableNodeAccessor create(String pathToNode) throws NodeNoFound, NodeIsCorrupted;
 }

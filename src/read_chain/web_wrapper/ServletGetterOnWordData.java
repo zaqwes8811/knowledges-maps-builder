@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 
-import info_core_accessors.FabricImmutableNodeAccessors;
+import info_core_accessors.FabricImmutableNodeControllersImpl;
 import info_core_accessors.ImmutableNodeAccessor;
 
 import javax.servlet.ServletException;
@@ -18,8 +18,9 @@ import through_functional.configurator.GlobalConfigurator;
 import java.io.IOException;
 
 @NotThreadSafe
-public class Pkg extends HttpServlet {
-  private HolderNodeControllers CONTAINER_;
+public class ServletGetterOnWordData extends HttpServlet {
+  private ContainerNodeControllers CONTAINER_;
+  private final String PATH_TO_CONFIGURATION_FILE_ = "my.yaml";
   @Override
   public void doGet(
   		HttpServletRequest request,
@@ -28,14 +29,13 @@ public class Pkg extends HttpServlet {
   	
   	try {
       if(null == CONTAINER_) {
-        Wrapper wrapper = new Wrapper();
+        BuilderControllers builder = new BuilderControllers();
+        ImmutableSet<String> namesNodes =
+            new GlobalConfigurator(PATH_TO_CONFIGURATION_FILE_).getRegisteredNodes().get();
+        ImmutableList<ImmutableNodeAccessor> controllers = builder.createControllersForAllNodes(
+            namesNodes, new FabricImmutableNodeControllersImpl());
 
-        String pathToCfgFile = "my.yaml";
-        ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
-        ImmutableList<ImmutableNodeAccessor> controllers = wrapper.getNodes(
-            namesNodes, new FabricImmutableNodeAccessors());
-
-        CONTAINER_ = new HolderNodeControllers(controllers);
+        CONTAINER_ = new ContainerNodeControllers(controllers);
       }
   	} catch (Exception e) {
       // Вот проблемы создают эти проверяемые исключения

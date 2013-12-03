@@ -6,14 +6,7 @@ import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 15:04
- * To change this template use File | Settings | File Templates.
- */
-final public class BaseTokenizer {
+public class BaseTokenizer {
   public static Iterable<String> splitDocFormat(String line) {
     return Splitter.onPattern("(-|[0-9])?[:;]")
       .trimResults()

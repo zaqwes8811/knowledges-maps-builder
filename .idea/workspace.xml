@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/GlobalConstants.java" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\Wrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\hided\GlobalConstants.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java" afterPath="$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\FabricImmutableNodeAccessors.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllersImpl.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\IFabricImmutableNodeAccessors.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllers.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\info_core_accessors\hided\NotesProcessor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\Getter.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/GetterOneWordData.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\HolderNodeControllers.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllers.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\HolderNodeControllersTest.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllersTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\Pkg.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/ServletGetterOnWordData.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\read_chain\web_wrapper\WebRelay.java" afterPath="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\hided\JobsFormer.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\hided\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ProcessorTargets.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\hided\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ProcessorTargetsTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\mapreduce\BECCache.java" afterPath="$PROJECT_DIR$/src/read_chain/BECCache.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\totext\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECParser.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\totext\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/parsers/ImmutableBECSave.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\write_chain\totext\VParserException.java" afterPath="$PROJECT_DIR$/src/parsers/VParserException.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +50,18 @@
     <file path="/ListGetterImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091755514" ignored="false" />
     <file path="/ListGetterImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091000012" ignored="false" />
     <file path="/FakeListGetter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091015906" ignored="false" />
-    <file path="/Pkg.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091967692" ignored="false" />
+    <file path="/Pkg.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386091993042" ignored="false" />
+    <file path="/Wrapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386092916943" ignored="false" />
+    <file path="/FabricImmutableNodeAccessors.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386092594534" ignored="false" />
+    <file path="/ContainerNodeControllersTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386092624167" ignored="false" />
+    <file path="/WebRelay.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386092882569" ignored="false" />
+    <file path="/BECCache.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093155196" ignored="false" />
+    <file path="/ImmutableBaseCoursor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093213772" ignored="false" />
+    <file path="/ImmutableBaseFilter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093229196" ignored="false" />
+    <file path="/ImmutableDataExtractor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093238316" ignored="false" />
+    <file path="/ImmutableOntoAssistant.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093245696" ignored="false" />
+    <file path="/KeyWordsCoursor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093255275" ignored="false" />
+    <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,93 +120,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HolderNodeControllers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllers.java">
+      <file leaf-file-name="Mappers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListGetterImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java">
+      <file leaf-file-name="BECCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/read_chain/BECCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="11" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HolderNodeControllersTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllersTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+            <state line="8" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebRelay.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java">
+      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="42" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java">
+      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="64" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pkg.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
+      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="11" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.83254343">
+            <state line="24" column="11" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListGetterFake.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java">
+      <file leaf-file-name="ImmutableBaseFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+            <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListGetter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetter.java">
+      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+            <state line="3" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Getter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Getter.java">
+      <file leaf-file-name="ImmutableOntoAssistant.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="1" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+            <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Getters.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java">
+      <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="51" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+            <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotesProcessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="11" selection-start="42" selection-end="42" vertical-scroll-proportion="0.083333336">
               <folding />
             </state>
           </provider>
@@ -187,22 +228,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ConcentratorImpl.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/OneNodePackageGeneratorImpl.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/OneNodePackageGenerator.java" />
-        <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/Getter.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetter.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/FakeListGetter.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImplTest.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeAccessors.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/OneNodePacker.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" />
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java" />
+        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ServletGetterOnWordData.java" />
+        <option value="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" />
+        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderJettyHandlers.java" />
+        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" />
+        <option value="$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java" />
+        <option value="$PROJECT_DIR$/src/read_chain/BECCache.java" />
+        <option value="$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java" />
+        <option value="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseCoursor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseFilter.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableDataExtractor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableOntoAssistant.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/KeyWordsCoursor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/NotesProcessor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
       </list>
     </option>
   </component>
@@ -284,47 +325,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="write_chain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="through_functional" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="read_chain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web_wrapper" />
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="info_core_accessors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,7 +361,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="read_chain" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,7 +541,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -539,7 +558,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.807601" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19239905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19239905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -606,44 +625,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java">
+    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="721" selection-end="742" vertical-scroll-proportion="0.03250478">
+        <state line="32" column="21" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_chain/totext/ImmutableBECParser.java">
+    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/GetterOneWordData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="0" selection-start="5096" selection-end="5096" vertical-scroll-proportion="0.58380413">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="326" selection-end="326" vertical-scroll-proportion="0.03125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/nlp/CompressorsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="393" selection-end="393" vertical-scroll-proportion="0.03125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/nlp/Compressors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.28125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="562" selection-end="562" vertical-scroll-proportion="0.4015748">
+        <state line="8" column="1" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -655,20 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Getter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="51" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
@@ -676,46 +653,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/WebRelay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="42" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Wrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="64" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/HolderNodeControllers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+        <state line="48" column="23" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/Pkg.java">
+    <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="11" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.83254343">
+        <state line="34" column="55" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4935484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/read_chain/BECCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="11" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="42" selection-end="42" vertical-scroll-proportion="0.083333336">
           <folding />
         </state>
       </provider>

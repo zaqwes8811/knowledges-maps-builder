@@ -1,13 +1,7 @@
-package info_core_accessors.hided;
+package info_core_accessors;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 08.06.13
- * Time: 14:45
- * To change this template use File | Settings | File Templates.
- */
-public final class ImmutableBaseFilter {
+@Deprecated
+public class ImmutableBaseFilter {
   /*private static final Set<String> BASE_FILTER;
 
   static {
