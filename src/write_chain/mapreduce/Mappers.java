@@ -6,7 +6,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
-import through_functional.hided.ImmutableJobsFormer;
+import write_chain.hided.JobsFormer;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -48,7 +48,7 @@ final public class Mappers {
         // Reading
         BufferedReader reader =
             closer.register(
-                new BufferedReader(new FileReader(job.get(ImmutableJobsFormer.IDX_FILENAME))));
+                new BufferedReader(new FileReader(job.get(JobsFormer.IDX_FILENAME))));
         String s;
         List<String> contentItems = new ArrayList<String>();
         while ((s = reader.readLine()) != null) contentItems.add(s);
@@ -76,7 +76,7 @@ final public class Mappers {
         }
 
         // Pack
-        response.add(job.get(ImmutableJobsFormer.IDX_NODE_NAME));
+        response.add(job.get(JobsFormer.IDX_NODE_NAME));
         response.add(wordsFrequenceMultyset);
         response.add(langMap);
         response.add(sentencesPtrsMap);
@@ -202,10 +202,10 @@ final public class Mappers {
   * */
   public static List mapper_sentences_level(List<String> job) {
     List response = new ArrayList();
-    String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
+    String node = job.get(JobsFormer.IDX_NODE_NAME);
 
     // Имя файла с готовым разбиением на предложения?
-    String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
+    String filename = job.get(JobsFormer.IDX_FILENAME);
 
     List<Integer> sentencesLengths = new ArrayList<Integer>();
     List<Integer> syllablesLengths = new ArrayList<Integer>();

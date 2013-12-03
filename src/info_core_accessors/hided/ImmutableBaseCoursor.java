@@ -12,9 +12,9 @@ package info_core_accessors.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import through_functional.hided.AppConstants;
+import write_chain.hided.GlobalConstants;
 import through_functional.CrosscuttingsException;
-import through_functional.hided.ProcessorTargets;
+import write_chain.hided.ProcessorTargets;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -27,10 +27,10 @@ final public class ImmutableBaseCoursor {
   public static Optional<List<String>> getListNodes() {
     try {
       String pathToTmpFolder =
-        Joiner.on(AppConstants.PATH_SPLITTER)
+        Joiner.on(GlobalConstants.PATH_SPLITTER)
             .join(
               ProcessorTargets.getPathToIndex(),
-                AppConstants.TMP_FOLDER);
+                GlobalConstants.TMP_FOLDER);
 
       // Получаем список узлов по папкам, а на по заданиям
       File root = new File(pathToTmpFolder);

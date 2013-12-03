@@ -1,6 +1,7 @@
-package through_functional.hided;
+package write_chain.hided;
 
 import com.google.common.base.Joiner;
+import net.jcip.annotations.Immutable;
 import through_functional.CrosscuttingsException;
 import info_core_accessors.hided.ImmutableBaseCoursor;
 
@@ -8,18 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 12:18
- * To change this template use File | Settings | File Templates.
- *
- * Состояние для класса - это файлы индекса
- *
- * Возможно похожий класс может дробить файлы узла для балансировки нагрузки
- */
-final public class ImmutableJobsFormer {
+@Immutable
+public class JobsFormer {
   public static final int IDX_NODE_NAME = 0;
   public static final int IDX_FILENAME = 1;
 
@@ -29,12 +20,12 @@ final public class ImmutableJobsFormer {
     //
     List<String> nodes = ImmutableBaseCoursor.getListNodes().get();
     for (String node: nodes) {
-      String contentFilename = Joiner.on(AppConstants.PATH_SPLITTER)
+      String contentFilename = Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
-          AppConstants.CONTENT_FOLDER,
+          GlobalConstants.CONTENT_FOLDER,
           node,
-          AppConstants.CONTENT_FILENAME);
+          GlobalConstants.CONTENT_FILENAME);
       jobs.add(Arrays.asList(node, contentFilename));
     }
     return jobs;

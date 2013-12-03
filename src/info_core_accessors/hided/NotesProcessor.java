@@ -76,12 +76,12 @@ public class NotesProcessor {
     try {
 
    // Путь к мета-файлу
-    String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
+    String pathToMetaFile = Joiner.on(GlobalConstants.PATH_SPLITTER)
       .join(
         ImmutableProcessorTargets.getPathToIndex(),
-        AppConstants.CONTENT_FOLDER,
+        GlobalConstants.CONTENT_FOLDER,
         node,
-        AppConstants.CONTENT_META_FILENAME);
+        GlobalConstants.CONTENT_META_FILENAME);
 
     // Преобразуем в json
     String settingsInJson = utils.file2string(pathToMetaFile);
@@ -127,7 +127,7 @@ public class NotesProcessor {
 
     // пишем результат
     / *try {
-      utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
+      utils.list2file(rpt, Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
           "rpts",
           "real_notes.csv"));

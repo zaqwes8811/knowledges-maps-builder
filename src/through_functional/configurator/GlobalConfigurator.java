@@ -17,7 +17,6 @@ import java.util.Map;
 
 
 // Для тестиования удобно передать путь к конфигурационному файлу.
-@Immutable
 @NotThreadSafe
 public class GlobalConfigurator {
 

@@ -7,10 +7,10 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import through_functional.hided.AppConstants;
+import write_chain.hided.GlobalConstants;
 import through_functional.CrosscuttingsException;
-import through_functional.hided.ImmutableJobsFormer;
-import through_functional.hided.ProcessorTargets;
+import write_chain.hided.JobsFormer;
+import write_chain.hided.ProcessorTargets;
 //import info_core_accessors.IdxAccessor;
 import write_chain.totext.ImmutableBECParser;
 
@@ -30,7 +30,7 @@ public class MapReduceChains {
   public static void runSentencesLevelProcess () {
     /*
     // Получаем работы
-    List<List<String>> jobs = ImmutableJobsFormer.getJobs();
+    List<List<String>> jobs = JobsFormer.getJobs();
 
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
@@ -60,10 +60,10 @@ public class MapReduceChains {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String resultInJson = gson.toJson(result_reduce_stage);
         // Write
-        String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
+        String path_for_save = Joiner.on(GlobalConstants.PATH_SPLITTER)
           .join(
             ImmutableProcessorTargets.getPathToIndex(),
-            AppConstants.STATIC_NOTES_FILENAME);
+            GlobalConstants.STATIC_NOTES_FILENAME);
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
@@ -88,7 +88,7 @@ public class MapReduceChains {
     Optional<List<List<String>>> jobs = Optional.absent();
     try {
       // Получаем работы
-      jobs = Optional.of(ImmutableJobsFormer.getJobs());
+      jobs = Optional.of(JobsFormer.getJobs());
 
     } catch (CrosscuttingsException e) {
       Util.print(e.getMessage());
@@ -116,10 +116,10 @@ public class MapReduceChains {
     for (final List nodeResult: resultReduceStage) {
       String pathToNode;
       try {
-        pathToNode = Joiner.on(AppConstants.PATH_SPLITTER)
+        pathToNode = Joiner.on(GlobalConstants.PATH_SPLITTER)
           .join(
             ProcessorTargets.getPathToIndex(),
-            AppConstants.COMPRESSED_IDX_FOLDER,
+            GlobalConstants.COMPRESSED_IDX_FOLDER,
             nodeResult.get(Mappers.IDX_NODE_NAME));
       } catch (CrosscuttingsException e) {
         Util.print(e.getMessage());
@@ -148,16 +148,16 @@ public class MapReduceChains {
         try {
           // Сохраняем в JSON
           closer.register(new BufferedWriter(new FileWriter(
-            Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.SORTED_IDX_FILENAME))))
+            Joiner.on(GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.SORTED_IDX_FILENAME))))
             .write(new Gson().toJson(idxSortedByFrequencyForSave));
           closer.register(new BufferedWriter(new FileWriter(
-              Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FREQ_IDX_FILENAME))))
+              Joiner.on(GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FREQ_IDX_FILENAME))))
             .write(new Gson().toJson(idxFrequenciesForSave));
           //closer.register(new BufferedWriter(new FileWriter(
-          //    Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_REST_IDX))))
+          //    Joiner.on(GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FILENAME_REST_IDX))))
           //  .write(new Gson().toJson(idxRestWordsForSave));
           closer.register(new BufferedWriter(new FileWriter(
-              Joiner.on(AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX))))
+              Joiner.on(GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FILENAME_SENTENCES_IDX))))
             .write(new Gson().toJson(idxSentencesForSave));
         } catch (Throwable e) {
           closer.rethrow(e);
@@ -187,7 +187,7 @@ public class MapReduceChains {
       // Begin "MapReduce" stage
       ImmutableList<String> content =
           Util.fileToList(
-            Joiner.on(AppConstants.PATH_SPLITTER)
+            Joiner.on(GlobalConstants.PATH_SPLITTER)
               .join("raw-dicts", "vocabularity-folded.txt"));
       ImmutableBECParser cash = ImmutableBECParser.create(content);
 
@@ -214,7 +214,7 @@ public class MapReduceChains {
       }
 
       // Сохраняем список единиц контента
-      Util.listToFile(sentences, Joiner.on(AppConstants.PATH_SPLITTER)
+      Util.listToFile(sentences, Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(pathToAppFolder, "bec-node", "content.txt"));
 
       // Make frequency index. Пока плохо - словарь грязный.
@@ -224,19 +224,19 @@ public class MapReduceChains {
       // End "MapReduce" stage
 
       // Save
-      String pathToNode = pathToAppFolder+AppConstants.PATH_SPLITTER+"bec-node";
+      String pathToNode = pathToAppFolder+ GlobalConstants.PATH_SPLITTER+"bec-node";
       Map<String, Object> tmp = new HashMap<String, Object>();
       Map<String, Integer> idxFrequenciesForSave = recodeMultiset(frequencyIdx, idxSortedByFrequencyForSave);
       Map<String, Collection<Integer>> idxSentencesForSave = idxSentencesPtrs.asMap();
 
       tmp.put(Joiner.on(
-          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.SORTED_IDX_FILENAME),
+          GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.SORTED_IDX_FILENAME),
           idxSortedByFrequencyForSave);
       tmp.put(Joiner.on(
-          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FREQ_IDX_FILENAME),
+          GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FREQ_IDX_FILENAME),
           idxFrequenciesForSave);
       tmp.put(Joiner.on(
-          AppConstants.PATH_SPLITTER).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX),
+          GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FILENAME_SENTENCES_IDX),
           idxSentencesForSave);
 
       //IdxAccessor.saveListObjects(tmp);

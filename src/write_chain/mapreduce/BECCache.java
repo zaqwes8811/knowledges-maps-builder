@@ -21,18 +21,18 @@ public class BECCache {
   // Да, лучше передать, тогда будет Стратегией?
   private BECCache() throws CrosscuttingsException {
     String nodeName = "bec-node";
-    final String splitter = AppConstants.PATH_SPLITTER;
+    final String splitter = GlobalConstants.PATH_SPLITTER;
     final String pathToAppFolder = GlobalConfigurator.getPathToAppFolder();
 
-    final String pathToNode = Joiner.on(AppConstants.PATH_SPLITTER)
+    final String pathToNode = Joiner.on(GlobalConstants.PATH_SPLITTER)
       .join(
         pathToAppFolder,
         nodeName);
 
     SENTENCES_PTRS = IdxAccessor.getSentencesKeys(
-        Joiner.on(splitter).join(pathToNode, AppConstants.FILENAME_SENTENCES_IDX));
+        Joiner.on(splitter).join(pathToNode, GlobalConstants.FILENAME_SENTENCES_IDX));
     IDX_SORTED = IdxAccessor.getSortedIdx(
-        Joiner.on(splitter).join(pathToNode, AppConstants.SORTED_IDX_FILENAME));
+        Joiner.on(splitter).join(pathToNode, GlobalConstants.SORTED_IDX_FILENAME));
     COUNT_WORDS = IDX_SORTED.get().size();
   }
 
