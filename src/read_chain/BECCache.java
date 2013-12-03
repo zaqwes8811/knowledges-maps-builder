@@ -1,4 +1,4 @@
-package write_chain.mapreduce;
+package read_chain;
 
 //import info_core_accessors.IdxAccessor;
 
@@ -6,6 +6,7 @@ package write_chain.mapreduce;
 // @Immutable
 //
 // TODO(zaqwes) TOTH: Вот словарь это индекс или фильтр?
+@Deprecated
 public class BECCache {
   /*
   public static Optional<BECCache> create() {

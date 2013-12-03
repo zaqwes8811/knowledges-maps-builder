@@ -1,14 +1,6 @@
-package info_core_accessors.hided;
+package info_core_accessors;
 
-//import mapreduce.ImmutableReduceSentencesLevel;
-
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 15.05.13
- * Time: 19:27
- * To change this template use File | Settings | File Templates.
- */
+@Deprecated
 public class KeyWordsCoursor {
   private static final String WEB_NEW_LINE = "<br>";
   static Double cut_to(Double value) {

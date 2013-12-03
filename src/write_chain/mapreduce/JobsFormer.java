@@ -1,9 +1,9 @@
-package write_chain.hided;
+package write_chain.mapreduce;
 
 import com.google.common.base.Joiner;
 import net.jcip.annotations.Immutable;
 import through_functional.CrosscuttingsException;
-import info_core_accessors.hided.ImmutableBaseCoursor;
+import info_core_accessors.ImmutableBaseCoursor;
 
 import java.util.ArrayList;
 import java.util.Arrays;

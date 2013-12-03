@@ -1,8 +1,7 @@
-package info_core_accessors.hided;
+package info_core_accessors;
 
 
-//import mapreduce.ImmutableReduceSentencesLevel;
-
+@Deprecated
 public class NotesProcessor {
   static public final String NOTE_N80_CAPACITY = "f80_p";  // Core
   static public final String NOTE_N20_CAPACITY = "f20";

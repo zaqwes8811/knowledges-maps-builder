@@ -6,7 +6,6 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
-import write_chain.hided.JobsFormer;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -14,16 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-//import nlp.BaseTokenizer;
-
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 15:44
- * To change this template use File | Settings | File Templates.
- */
-final public class Mappers {
+public class Mappers {
 
   /*
   *
