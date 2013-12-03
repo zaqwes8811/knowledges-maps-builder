@@ -1,9 +1,9 @@
-package through_functional.hided;
+package write_chain.hided;
 
 // Очень плохая инкапсуляция, часть перенести бы в конфигурационный файл,
 //   или создать файл метаданных - yaml формата например
-public class AppConstants {
-  private AppConstants() {}
+public class GlobalConstants {
+  private GlobalConstants() {}
 
   // TODO(zaqwes): Перенести к конфигурационный файл
   public final static java.lang.String SPIDER_TARGETS_FILENAME = "apps/targets/spider_extractor_target.txt";

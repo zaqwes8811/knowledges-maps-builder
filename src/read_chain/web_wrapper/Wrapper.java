@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 class Wrapper {
-  public static HandlerList buildHandlers(Concentrator container) {
+  public static HandlerList buildHandlers(OneNodePackageGenerator container) {
     // Подключаем ресурсы
     ResourceHandler resourceHandler = new ResourceHandler();
     resourceHandler.setDirectoriesListed(true);

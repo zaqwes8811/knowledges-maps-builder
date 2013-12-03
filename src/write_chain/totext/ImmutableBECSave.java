@@ -21,7 +21,7 @@ public final class ImmutableBECSave {
       // Overhead! Объект создается всегда.
       final String PATH = "statistic-data";
       final String FILENAME = "vocabularity-folded.txt";
-      final String FULL_FILENAME = Joiner.on(AppConstants.PATH_SPLITTER).join(PATH, FILENAME);
+      final String FULL_FILENAME = Joiner.on(GlobalConstants.PATH_SPLITTER).join(PATH, FILENAME);
       // No lazily initializing!
       Optional<ImmutableBECParser> tmp;
       try {
@@ -148,7 +148,7 @@ public final class ImmutableBECSave {
 
   public static void main(String[] args) {
     try {
-      String fullFilename = Joiner.on(AppConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
+      String fullFilename = Joiner.on(GlobalConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
       //Optional<ImmutableBECParser> cash = ImmutableBECParser.getDefaultCashInstance();
       //   Кажется обращение через cash не верное
       //Utils.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(1110));

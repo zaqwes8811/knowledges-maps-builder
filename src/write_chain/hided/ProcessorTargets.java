@@ -1,4 +1,4 @@
-package through_functional.hided;
+package write_chain.hided;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
@@ -41,7 +41,7 @@ public class ProcessorTargets {
   public static int RESULT_FILENAME = 2;
 
   public static String getPathToIndex() throws CrosscuttingsException {
-      String pathToIndex = "";/*Joiner.on(AppConstants.PATH_SPLITTER)
+      String pathToIndex = "";/*Joiner.on(GlobalConstants.PATH_SPLITTER)
           .join(
               GlobalConfigurator.getPathToAppFolder(),
               getIndexName());*/
@@ -127,7 +127,7 @@ public class ProcessorTargets {
   }
 
   public static String getIndexName() {
-    String indexCfgFilename = AppConstants.SPIDER_TARGETS_FILENAME_GLOBAL;
+    String indexCfgFilename = GlobalConstants.SPIDER_TARGETS_FILENAME_GLOBAL;
     try {
       Closer closer = Closer.create();
       try {
