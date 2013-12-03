@@ -11,7 +11,7 @@ import to_text.IExtractorTextFromResource;
 import to_text.ITextToText;
 import to_text.IErrorContainer;
 
-public interface /*class*/ ITextToText /* implement ITextToText */ {
+public interface ITextToText /* implement ITextToText */ {
     // @param text зашумленнй текст, например html код
     // @return чистый текст
     // ! не возможно разрешить перегрузку
