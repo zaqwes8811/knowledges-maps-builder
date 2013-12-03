@@ -29,7 +29,7 @@ import org.eclipse.jetty.servlet.ServletHandler;
 import java.util.*;
 
 
-public class AppContainer {
+public class AppContainer_ {
   //private static Logger log = Logger.getLogger(AppContainer.class);
   public static void main(String[] args) throws Exception {
     //BasicConfigurator.configure();

@@ -1,30 +1,15 @@
-import javax.servlet.ServletConfig;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.ServletException;
- 
-import java.io.IOException;
-
-//import business.originator_frequency_index.IIndexCursor;
-//import business.originator_frequency_index.IndexCursorFactory;
+import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.handler.AbstractHandler;
-import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
-import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-//import java.util.
-// App
-//import business.IndexContainer;
-
-//import com.google.gson.Gson;
-import java.util.*;
-import java.util.Random;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 
 public class AppContainer {
@@ -35,7 +20,7 @@ public class AppContainer {
 
     Server server = new Server();
     SelectChannelConnector connector = new SelectChannelConnector();
-    connector.setPort(8080);
+    //connector.setPort(8080);
     server.addConnector(connector);
  
     // Подключаем корень?
