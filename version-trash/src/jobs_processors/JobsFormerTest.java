@@ -14,7 +14,7 @@ public class JobsFormerTest {
 
   @Test
   public void testDevelop() {
-    InnerReuse.print(ImmutableJobsFormer.getJobs());
+    InnerReuse.print(JobsFormer.getJobs());
 
   }
 }

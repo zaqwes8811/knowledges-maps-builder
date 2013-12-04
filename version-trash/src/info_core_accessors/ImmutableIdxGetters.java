@@ -1,4 +1,4 @@
-package coursors;
+package info_core_accessors;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashMultiset;
@@ -6,8 +6,8 @@ import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.Utils;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ final public class ImmutableIdxGetters {
     String sorted_freq_idx_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+                ProcessorTargets.getPathToIndex(),
                 AppConstants.COMPRESSED_IDX_FOLDER,
                 node,
                 AppConstants.FILENAME_REST_IDX));
@@ -62,7 +62,7 @@ final public class ImmutableIdxGetters {
   static public List<String> get_list_sentences(String node) {
     return Utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.CONTENT_FOLDER,
             node,
             AppConstants.CONTENT_FILENAME
@@ -74,7 +74,7 @@ final public class ImmutableIdxGetters {
     String sorted_freq_idx_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+                ProcessorTargets.getPathToIndex(),
                 AppConstants.COMPRESSED_IDX_FOLDER,
                 node,
                 AppConstants.FILENAME_SENTENCES_IDX));
@@ -86,7 +86,7 @@ final public class ImmutableIdxGetters {
     String sorted_freq_idx_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+                ProcessorTargets.getPathToIndex(),
                 AppConstants.COMPRESSED_IDX_FOLDER,
                 node,
                 AppConstants.FREQ_IDX_FILENAME));
@@ -99,7 +99,7 @@ final public class ImmutableIdxGetters {
     String sorted_idx_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+                ProcessorTargets.getPathToIndex(),
                 AppConstants.COMPRESSED_IDX_FOLDER,
                 node,
                 AppConstants.SORTED_IDX_FILENAME));
@@ -111,7 +111,7 @@ final public class ImmutableIdxGetters {
     String metadata_static_notes_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
-                ImmutableProcessorTargets.getPathToIndex(),
+                ProcessorTargets.getPathToIndex(),
                 AppConstants.STATIC_NOTES_FILENAME));
     return (new Gson().fromJson(metadata_static_notes_json,
       new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));

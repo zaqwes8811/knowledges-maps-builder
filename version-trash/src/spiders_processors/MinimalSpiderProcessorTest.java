@@ -1,7 +1,6 @@
 package spiders_processors;
 
-import coursors.ImmutableBaseCoursor;
-import spiders_processors.MinimalSpiderProcessor;
+import info_core_accessors.ImmutableBaseCoursor;
 import org.junit.Test;
 
 import java.util.List;

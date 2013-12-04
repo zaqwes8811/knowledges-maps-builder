@@ -1,6 +1,6 @@
-package crosscuttings;
+package through_functional;
 
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;
@@ -17,9 +17,9 @@ public class ProcessorTargetsTest {
   public void testRunParser() {
     String spiderTargetFname = "apps/targets/spider_extractor_target";
     try {
-      List<List<String>> listTargets = ImmutableProcessorTargets.runParser(spiderTargetFname);
+      List<List<String>> listTargets = ProcessorTargets.runParser(spiderTargetFname);
       for (List<String> target : listTargets)
-        ImmutableProcessorTargets.print(target);
+        ProcessorTargets.print(target);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());
     }
@@ -30,7 +30,7 @@ public class ProcessorTargetsTest {
     print("\nNEW TEST");
     String spiderTargetFname = "apps/targets/spider_extractor_target.json";
     try {
-      List<String> splittedPath =  ImmutableProcessorTargets.splitUrlToFilenameAndPath(spiderTargetFname);
+      List<String> splittedPath =  ProcessorTargets.splitUrlToFilenameAndPath(spiderTargetFname);
       print(splittedPath);
     } catch (CrosscuttingsException e) {
       System.out.println(e.getMessage());

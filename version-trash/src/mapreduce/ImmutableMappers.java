@@ -2,7 +2,7 @@ package mapreduce;
 
 
 import common.InnerReuse;
-import jobs_processors.ImmutableJobsFormer;
+import jobs_processors.JobsFormer;
 import business.nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.*;
@@ -36,8 +36,8 @@ final public class ImmutableMappers {
   public final static int IDX_RESTS_MAP = 4;
   public static List mapper_word_level(List<String> job) {
     List response = new ArrayList();
-    String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
-    String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
+    String node = job.get(JobsFormer.IDX_NODE_NAME);
+    String filename = job.get(JobsFormer.IDX_FILENAME);
 
     // Processing
     try {

@@ -5,9 +5,9 @@ package spiders_extractors;
 //import org.apache.log4j.Logger;
 
 import common.InnerReuse;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
+import through_functional.CrosscuttingsException;
 
 import java.util.List;
 
@@ -19,12 +19,12 @@ public class MinimalSpiderExtractor {
     //BasicConfigurator.configure();
     try {
       // Получаем цели
-      List<List<String>> targets = ImmutableProcessorTargets.runParser(AppConstants.SPIDER_TARGETS_FILENAME);
+      List<List<String>> targets = ProcessorTargets.runParser(AppConstants.SPIDER_TARGETS_FILENAME);
       for (List<String> target : targets) {
         try {
           // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
-          ImmutableTikaWrapper.extractAndSaveText(target);
-          ImmutableTikaWrapper.extractAndSaveMetadata(target);
+          TikaWrapper.extractAndSaveText(target);
+          TikaWrapper.extractAndSaveMetadata(target);
           //break;  // DEVELOP
         } catch (ExtractorException e) {
           // Ошибка может произойти на каждой итерации, но пусть обработка предолжается

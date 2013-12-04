@@ -1,9 +1,9 @@
-package coursors;
+package info_core_accessors;
 
 
 import common.Utils;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -84,7 +84,7 @@ public class NotesProcessor {
     // Путь к мета-файлу
     String pathToMetaFile = Joiner.on(AppConstants.PATH_SPLITTER)
       .join(
-        ImmutableProcessorTargets.getPathToIndex(),
+        ProcessorTargets.getPathToIndex(),
         AppConstants.CONTENT_FOLDER,
         node,
         AppConstants.CONTENT_META_FILENAME);

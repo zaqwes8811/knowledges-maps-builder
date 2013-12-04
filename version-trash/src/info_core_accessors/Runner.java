@@ -1,4 +1,4 @@
-package coursors;
+package info_core_accessors;
 
 /**
  * Created with IntelliJ IDEA.
