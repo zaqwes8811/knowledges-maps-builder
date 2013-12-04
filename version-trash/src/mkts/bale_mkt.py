@@ -65,56 +65,56 @@ class Name  !! no comments
 
   Usige:
     Java:
-    interface IAll extend/*(? это предположение)* / IExtractorTextFromResource, IExtracitorResourcePlan
-    class MixedClass2 implements IExtractorTextFromResource, IExtracitorResourcePlan
+    interface IAll extend/*(? это предположение)* / strange_things.IExtractorTextFromResource, strange_things.IExtracitorResourcePlan
+    class MixedClass2 implements strange_things.IExtractorTextFromResource, strange_things.IExtracitorResourcePlan
 """
 
 
-interface IExtracitorResourcePlan 
+interface strange_things.IExtracitorResourcePlan
     """ Как бы навигационная часть """
     # Спорный вызов. Как он будет использоваться при множественном наследовании?
     # Захватывает точку входа в ресурс (например, файл базы данных)
-    IErrorContainer captureRoot(String urlRoot)
+    strange_things.IErrorContainer captureRoot(String urlRoot)
     # Error _freeRoot();  # должен вызывать в деструкторе
 
     # @param url информация о том, как можно добраться до вершины ресурса
     # @return карта, по которой можно передвигаться
-    IGraphToText getPlan(String url, IErrorContainer err)
+    strange_things.IGraphToText getPlan(String url, strange_things.IErrorContainer err)
 
-    IGraphToText getPlanFromText(String url, IErrorContainer err)
+    strange_things.IGraphToText getPlanFromText(String url, strange_things.IErrorContainer err)
 
     # @return просто список "адресов"
     # Обобщить дробилку с рекурсией! Она использовалась для разбора страницы Курсеры
-    List<String> getListAddresses(String url, IErrorContainer err)
+    List<String> getListAddresses(String url, strange_things.IErrorContainer err)
 
     # Выделяем адреса без подключения, у нас есть текст, который доставерно
     #   отражает план ресурса
-    List<String> extractListAddressesFromText(String text, IErrorContainer err)
+    List<String> extractListAddressesFromText(String text, strange_things.IErrorContainer err)
 
 
-interface IExtractorTextFromResource
+interface strange_things.IExtractorTextFromResource
     """ Соединяется с ресурсом и преобразовывает его в текст.
       Thinks:
         Не забывать освободить ресурсы(о реализации), но как быть при множ. наследовании
     """
     # Выделяет весь текст из ресурса по некоторому адресу
     # @param url в переменной все данные, чтобы ресурс мог быть открыт
-    String extract(String url, IErrorContainer err) 
+    String extract(String url, strange_things.IErrorContainer err)
 
     # Получить из ресурса сразу список единиц контента - предложений, например
-    List<String> contentItemsToList(String url, IErrorContainer err)
+    List<String> contentItemsToList(String url, strange_things.IErrorContainer err)
 
-interface ITextToText
+interface strange_things.ITextToText
     # @param text зашумленнй текст, например html код
     # @return чистый текст
     # ! не возможно разрешить перегрузку
-    String testToText(String text, IErrorContainer err)  
+    String testToText(String text, strange_things.IErrorContainer err)
 
     # Получить сразу список единиц контента
-    List<String> contentItemsToList(String text, IErrorContainer err)
+    List<String> contentItemsToList(String text, strange_things.IErrorContainer err)
 
 
-interface IErrorContainer
+interface strange_things.IErrorContainer
     """ 
       Thinks:
         Как я понял в Java нельзя передать примитив по ссылке, исключениями для обработки ошибок
