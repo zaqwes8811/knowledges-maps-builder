@@ -1,3 +1,5 @@
+package web_relay;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,7 +38,7 @@ public class WebRelay {
     ResourceHandler resource_handler = new ResourceHandler();
     resource_handler.setDirectoriesListed(true);
     resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-    resource_handler.setResourceBase("apps/web_view");
+    resource_handler.setResourceBase("apps/web_relay.web_view");
 
 
     // Список обработчиков?

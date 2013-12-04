@@ -1,3 +1,5 @@
+package mapreduce;
+
 import com.google.common.collect.Multimap;
 import common.ImmutableAppUtils;
 import common.utils;
