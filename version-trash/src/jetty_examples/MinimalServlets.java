@@ -1,5 +1,6 @@
 package jetty_examples;
 
+
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.bio.SocketConnector;
@@ -21,7 +22,7 @@ import java.io.IOException;
           //connector.setPort(8080);   // Not work.
           server.setConnectors(new Connector[]{connector});
           
-          ServletHandler handler=new ServletHandler();
+          ServletHandler handler = new ServletHandler();
           server.setHandler(handler);
           
           handler.addServletWithMapping("MinimalServlets$HelloServlet", "/");

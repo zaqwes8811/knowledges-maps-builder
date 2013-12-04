@@ -4,28 +4,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
  
 import java.io.IOException;
-
-//import business.originator_frequency_index.IIndexCursor;
-//import business.originator_frequency_index.IndexCursorFactory;
-//import org.apache.log4j.BasicConfigurator;
-//import org.apache.log4j.Logger;
-
 import common.ImmutableAppUtils;
 import coursors.ImmutableBaseCoursor;
 import com.google.gson.Gson;
 import coursors.ReaderStaticData;
+import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
-import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-//import java.util.
-// App
-//import business.IndexContainer;
-
-//import com.google.gson.Gson;
 import java.util.*;
 
 
