@@ -1,8 +1,8 @@
-// Import
+package strange_things;// Import
 import java.util.List;
 
 
-public interface /*class*/ IExtracitorResourcePlan /* implement IExtracitorResourcePlan */ {
+public interface /*class*/ IExtracitorResourcePlan /* implement strange_things.IExtracitorResourcePlan */ {
     /** Как бы навигационная часть */
     // Спорный вызов. Как он будет использоваться при множественном наследовании?
     // Захватывает точку входа в ресурс (например, файл базы данных)
@@ -22,4 +22,4 @@ public interface /*class*/ IExtracitorResourcePlan /* implement IExtracitorResou
     // Выделяем адреса без подключения, у нас есть текст, который доставерно
     //   отражает план ресурса
     List<String> extractListAddressesFromText(String text, IErrorContainer err);//hided {}
-}  // IExtracitorResourcePlan
+}  // strange_things.IExtracitorResourcePlan

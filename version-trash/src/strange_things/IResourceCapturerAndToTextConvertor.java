@@ -1,4 +1,5 @@
-//# или может IResourceWrapper? or IResourceCapturer
+package strange_things;//# или может IResourceWrapper? or IResourceCapturer
+
 /** Соединяется с ресурсом и преобразовывает его в текст. !Почему подсвечивает красным!?*/
 // Не забывать освободить ресурсы(о реализации)!
 public interface IResourceCapturerAndToTextConvertor {
