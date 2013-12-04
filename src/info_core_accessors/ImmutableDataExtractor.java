@@ -1,9 +1,15 @@
 package info_core_accessors;
 
+import business.NotesProcessor;
+import com.google.common.collect.Multiset;
+import common.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 // Делает комплексные выборки данных
-@Deprecated
-public class ImmutableDataExtractor {
-  /*
+public final class ImmutableDataExtractor {
   static List<String> get_ww80_list(String node) {
     Map<String, String> base_node_notes = NotesProcessor.get_notes_for_node(node);
     List<String> sorted_base_idx = ImmutableIdxGetters.get_sorted_idx(node);
@@ -26,24 +32,24 @@ public class ImmutableDataExtractor {
   static Multiset<String> get_follow_data(String base_node, List<String> rest_nodes) {
     // получаем оценки для базового индекса
     List<String> WW20ListBase = get_ww20_list(base_node);
-    utils.print("Document name: " + base_node);
+    Utils.print("Document name: " + base_node);
 
     // обрабатываем по узлу
     for (String node: rest_nodes) {
       Map<String, Integer> freq_idx = ImmutableIdxGetters.get_freq_idx(node);
       // Получаем оценки для одного узла
       List<String> WW80List = get_ww80_list(node);
-      utils.print("\n"+node+"; WW80="+WW80List.size()+"; Число уникальных слов="+freq_idx.keySet().size());
+      Utils.print("\n" + node + "; WW80=" + WW80List.size() + "; Число уникальных слов=" + freq_idx.keySet().size());
       List<String> cross_words = new ArrayList<String>();
       for (String word: WW20ListBase) {
         if (WW80List.contains(word)) {
           cross_words.add(word+"/"+freq_idx.get(word));
         }
       }
-      utils.print(cross_words.size()+" "+cross_words);
+      Utils.print(cross_words.size() + " " + cross_words);
     }
     return null;
   }
-    */
+
 
 }
