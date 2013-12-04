@@ -1,19 +1,4 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Igor
- * Date: 22.04.13
- * Time: 10:47
- * To change this template use File | Settings | File Templates.
- */
-
-/*import org.apache.lucene.morphology.EnglishAnalyzer;
-import org.apache.lucene.morphology.english.EnglishLuceneMorphology;
-//import org.apache.lucene.morphology.english.
-import org.apache.lucene.morphology.russian.RussianLuceneMorphology;
-import org.apache.lucene.morphology.russian.RussianMorphology;
-import org.apache.lucene.morphology.LuceneMorphology;
-import org.apache.lucene.analysis.ru.RussianAnalyzer;
-import org.apache.lucene.analysis.ru.RussianLightStemmer;     */
+package src;
 import org.tartarus.snowball.ext.russianStemmer;
 
 import java.io.IOError;
