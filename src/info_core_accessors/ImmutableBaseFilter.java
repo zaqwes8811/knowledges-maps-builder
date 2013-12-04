@@ -1,12 +1,23 @@
 package info_core_accessors;
 
-@Deprecated
-public class ImmutableBaseFilter {
-  /*private static final Set<String> BASE_FILTER;
+import common.Utils;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: кей
+ * Date: 08.06.13
+ * Time: 14:45
+ * To change this template use File | Settings | File Templates.
+ */
+public final class ImmutableBaseFilter {
+  private static final Set<String> BASE_FILTER;
 
   static {
     String pathToFilterFile = "C:/Users/кей/Dropbox/rpts/onto/key-words-base-filter.txt";
-    BASE_FILTER = new HashSet<String>(Util.file2list(pathToFilterFile).get());
+    BASE_FILTER = new HashSet<String>(Utils.file2list(pathToFilterFile));
   }
 
   static boolean isContentStem(String stem) {
@@ -15,5 +26,5 @@ public class ImmutableBaseFilter {
 
   static public void main(String[] args) {
 
-  }   */
+  }
 }

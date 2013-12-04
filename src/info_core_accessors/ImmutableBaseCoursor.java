@@ -11,10 +11,8 @@ package info_core_accessors;
 
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
-import write_chain.mapreduce.GlobalConstants;
-import through_functional.CrosscuttingsException;
-import write_chain.mapreduce.ProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,24 +20,19 @@ import java.util.Arrays;
 import java.util.List;
 
 // Список получаем по размеченным папкам в временной директории индекса
-@Deprecated
 final public class ImmutableBaseCoursor {
-  public static Optional<List<String>> getListNodes() {
-    try {
-      String pathToTmpFolder =
-        Joiner.on(GlobalConstants.PATH_SPLITTER)
-            .join(
-              ProcessorTargets.getPathToIndex(),
-                GlobalConstants.TMP_FOLDER);
+  public static List<String> getListNodes() {
+    // Получаем список узлов по папкам, а на по заданиям
+    String pathToTmpFolder =
+      Joiner.on(AppConstants.PATH_SPLITTER).join(
+        ProcessorTargets.getPathToIndex(),
+        AppConstants.TMP_FOLDER);
 
-      // Получаем список узлов по папкам, а на по заданиям
-      File root = new File(pathToTmpFolder);
-      List<String> listNodes = new ArrayList<String>(Arrays.asList(root.list()));
-      return Optional.of(listNodes);
-    } catch (CrosscuttingsException e)  {
-       // Обработка ошибки сжимается до проверки результата на ноль.
-       // Потом в логах можно посмотреть что конкретно случилось.
-       return Optional.absent();
-    }
+    File rootTmp = new File(pathToTmpFolder);
+
+    // Итоговый список
+    List<String> listNodes = new ArrayList<String>();
+    listNodes.addAll(Arrays.asList(rootTmp.list()));
+    return listNodes;
   }
 }
