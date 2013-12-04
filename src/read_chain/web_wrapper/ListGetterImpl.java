@@ -1,7 +1,7 @@
 package read_chain.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
-import common.math.GeneratorAnyRandom;
+import business.math.GeneratorAnyRandom;
 import info_core_accessors.ImmutableNodeAccessor;
 
 import java.util.ArrayList;

@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import common.Util;
 import through_functional.CrosscuttingsException;
 //import info_core_accessors.IdxAccessor;
-import parsers.ImmutableBECParser;
+import write_chain.parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

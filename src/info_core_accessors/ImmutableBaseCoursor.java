@@ -11,7 +11,7 @@ package info_core_accessors;
 
 
 import com.google.common.base.Joiner;
-import jobs_processors.ProcessorTargets;
+import write_chain.jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
 
 import java.io.File;

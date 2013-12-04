@@ -5,17 +5,7 @@ package business.nlp;
 
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 17:55
- * To change this template use File | Settings | File Templates.
- *
- *
- * http://www.phonicsontheweb.com/vowel-combinations.php - Для улучшения подсчета слогов для англиского
- */
-final public class BaseSyllableCounter {
+public class BaseSyllableCounter {
   private static final String RUSSIAN_VOWEL[] = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"};
 
   // English
@@ -49,7 +39,7 @@ final public class BaseSyllableCounter {
         count -= StringUtils.countMatches(workCopy, ENGLISH_VOWEL_PAIRS[i]);
       }
 
-      //InnerReuse.print(count+" "+workCopy);
+      //ImmutableAppUtils.print(count+" "+workCopy);
       return count;
     } else {
       return -1;
