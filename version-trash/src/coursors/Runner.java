@@ -1,4 +1,4 @@
-package business.originator_frequency_index;
+package coursors;
 
 /**
  * Created with IntelliJ IDEA.
