@@ -11,8 +11,29 @@
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/Beach.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/IJythonTestInterface.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/JavaImpl.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
-    <file path="/fragment.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179726190" ignored="false" />
-    <file path="/Dummy.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179726190" ignored="false" />
+    <file path="/fragment.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179842623" ignored="false" />
+    <file path="/Dummy.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179842623" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/TestCallJy.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/EvalFile.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/EvalScript.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/JSRException.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/PyCaller.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/ScriptTestJython.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/SimpleEmbedded.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jsr/Trash.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026626" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/test/jsr/EvalFileTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026626" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/test/jsr/PyCallerTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/test/jsr/TPKFilterTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026626" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jetty_examples/HelloServlet.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180086021" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jetty_examples/HelloWorld.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180086021" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jetty_examples/MinimalServlets.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180086021" ignored="false" />
+    <file path="$PROJECT_DIR$/web-template/src/jetty_examples/OneServletContext.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180086021" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/targets/spider_extractor_target.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/targets/spider_extractor_target_onto.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/targets/crawler_schedule.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/targets/crawler_schedule_per_docs.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/targets/crawler_schedule_test.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
+    <file path="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180203326" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +92,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RunnerWordLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.063079774">
+            <state line="31" column="5" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentencesLevelProcessorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SentencesLevelProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestScript.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-template/scripts/TestScript.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_graph_variants.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-template/hided/index_graph_variants.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="27" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-8.615385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="19" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-template/scripts/pkgs/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="200" column="8" selection-start="6522" selection-end="6522" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run-jar.bat" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/run-jar.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="3" selection-start="466" selection-end="466" vertical-scroll-proportion="0.22972973">
               <folding />
             </state>
           </provider>
@@ -90,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/src/TestLuceneStemmer.java" />
-        <option value="$PROJECT_DIR$/src/jetty_examples/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/jetty_examples/OneServletContext.java" />
         <option value="$PROJECT_DIR$/src/jetty_examples/MinimalServlets.java" />
         <option value="$PROJECT_DIR$/src/AppContainer_.java" />
@@ -106,6 +188,8 @@
         <option value="$PROJECT_DIR$/src/IExtractorTextFromResource.java" />
         <option value="$PROJECT_DIR$/src/ITextToText.java" />
         <option value="$PROJECT_DIR$/src/RunnerWordLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/web-template/scripts/TestScript.py" />
+        <option value="$PROJECT_DIR$/apps/run-jar.bat" />
       </list>
     </option>
   </component>
@@ -190,7 +274,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../third_party/java/servlet-api-2.5.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.27622378" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -200,6 +284,12 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\version-trash\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src" />
+      <recent name="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\test_scripts" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.All in version-trash">
     <configuration default="true" type="Application" factoryName="Application">
@@ -247,7 +337,7 @@
       <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -274,12 +364,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -290,8 +380,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -358,75 +448,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TestLuceneStemmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BaseTokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/KeyWordsCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="6" selection-start="4369" selection-end="4369" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app-translate-assistant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src_pjy/nlp_components/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IToTextErr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="185" selection-end="185" vertical-scroll-proportion="0.14968553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IGraphToText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IResourceCapturerAndToTextConvertor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseGuavaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
@@ -477,7 +498,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.063079774">
+        <state line="31" column="5" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SentencesLevelProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jython_src/app-wrapping-jyja.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.45083487">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jython_src/app-translate-assistant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-template/scripts/TestScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-template/hided/index_graph_variants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="27" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-8.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="19" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-template/scripts/pkgs/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="8" selection-start="6522" selection-end="6522" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/run-jar.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="3" selection-start="466" selection-end="466" vertical-scroll-proportion="0.22972973">
           <folding />
         </state>
       </provider>
