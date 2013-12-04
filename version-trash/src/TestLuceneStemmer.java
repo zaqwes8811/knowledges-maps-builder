@@ -33,7 +33,7 @@ public class TestLuceneStemmer {
     public static void main(String[] args) {
         try {
             BufferedReader in = new BufferedReader(
-                    new FileReader("jython_src/apps/indexes/first_index.json"));
+                    new FileReader("apps/indexes/first_index.json"));
             String s;
 
 
@@ -96,7 +96,7 @@ public class TestLuceneStemmer {
             }
             Gson gson = new Gson();
             String json_index = gson.toJson(result_collection);
-            PrintWriter out = new PrintWriter("jython_src/apps/out.txt");
+            PrintWriter out = new PrintWriter("apps/out.txt");
             out.println(json_index);
             out.close();
 

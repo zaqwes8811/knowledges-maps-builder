@@ -15,7 +15,7 @@ import java.util.List;
 public class ProcessorTargetsTest {
   @Test
   public void testRunParser() {
-    String spiderTargetFname = "jython_src/apps/targets/spider_extractor_target";
+    String spiderTargetFname = "apps/targets/spider_extractor_target";
     try {
       List<List<String>> listTargets = ImmutableProcessorTargets.runParser(spiderTargetFname);
       for (List<String> target : listTargets)
@@ -28,7 +28,7 @@ public class ProcessorTargetsTest {
   @Test
   public void testPathSplitter() {
     print("\nNEW TEST");
-    String spiderTargetFname = "jython_src/apps/targets/spider_extractor_target.json";
+    String spiderTargetFname = "apps/targets/spider_extractor_target.json";
     try {
       List<String> splittedPath =  ImmutableProcessorTargets.splitUrlToFilenameAndPath(spiderTargetFname);
       print(splittedPath);
