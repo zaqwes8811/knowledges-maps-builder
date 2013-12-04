@@ -1,5 +1,6 @@
 package info_core_accessors;
 
+import business.NotesProcessor;
 import com.google.common.collect.Multiset;
 import common.Utils;
 

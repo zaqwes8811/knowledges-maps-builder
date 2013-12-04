@@ -1,7 +1,7 @@
-package through_functional;
+package jobs_processors;
 
-import jobs_processors.ProcessorTargets;
 import org.junit.Test;
+import through_functional.ThroughLevelBoundaryError;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class ProcessorTargetsTest {
       List<List<String>> listTargets = ProcessorTargets.runParser(spiderTargetFname);
       for (List<String> target : listTargets)
         ProcessorTargets.print(target);
-    } catch (CrosscuttingsException e) {
+    } catch (ThroughLevelBoundaryError e) {
       System.out.println(e.getMessage());
     }
   }
@@ -32,7 +32,7 @@ public class ProcessorTargetsTest {
     try {
       List<String> splittedPath =  ProcessorTargets.splitUrlToFilenameAndPath(spiderTargetFname);
       print(splittedPath);
-    } catch (CrosscuttingsException e) {
+    } catch (ThroughLevelBoundaryError e) {
       System.out.println(e.getMessage());
     }
   }

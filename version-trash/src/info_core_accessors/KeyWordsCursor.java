@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class KeyWordsCoursor {
+public class KeyWordsCursor {
   private static final String WEB_NEW_LINE = "<br>";
   static Double cut_to(Double value) {
     Double time_to_read = Math.floor(100*value)*1.0/100;

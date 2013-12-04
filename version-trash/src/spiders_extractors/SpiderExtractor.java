@@ -1,19 +1,15 @@
 package spiders_extractors;
 
-
-//import org.apache.log4j.BasicConfigurator;
-//import org.apache.log4j.Logger;
-
 import common.InnerReuse;
 import jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
-import through_functional.CrosscuttingsException;
+import through_functional.ThroughLevelBoundaryError;
 
 import java.util.List;
 
 
-public class MinimalSpiderExtractor {
-  //private static Logger log = Logger.getLogger(MinimalSpiderExtractor.class);
+public class SpiderExtractor {
+  //private static Logger log = Logger.getLogger(SpiderExtractor.class);
   // Main()
   public static void main(String [ ] args) {
     //BasicConfigurator.configure();
@@ -31,7 +27,7 @@ public class MinimalSpiderExtractor {
           InnerReuse.print(e.getMessage());
         }
       }
-    } catch (CrosscuttingsException e) {
+    } catch (ThroughLevelBoundaryError e) {
       InnerReuse.print(e.getMessage());
     }
     InnerReuse.print("Done. Spider extractor.\n");

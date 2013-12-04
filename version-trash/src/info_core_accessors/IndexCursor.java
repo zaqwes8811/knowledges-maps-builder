@@ -3,7 +3,7 @@ package info_core_accessors;
 
 import java.util.List;
 import java.util.Map;
-public interface IIndexCursor {
+public interface IndexCursor {
   void assignBranch(String branchName);
   void prIntegerBranch(String branchName);
   List<Map<String, Integer>> getSortedForwardIdx();
