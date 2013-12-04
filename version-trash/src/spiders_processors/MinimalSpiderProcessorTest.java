@@ -1,3 +1,4 @@
+package spiders_processors;
 
 import coursors.ImmutableBaseCoursor;
 import spiders_processors.MinimalSpiderProcessor;

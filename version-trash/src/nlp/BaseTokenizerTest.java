@@ -1,3 +1,5 @@
+package nlp;
+
 import com.google.common.base.Splitter;
 import common.ImmutableAppUtils;
 import org.junit.Test;

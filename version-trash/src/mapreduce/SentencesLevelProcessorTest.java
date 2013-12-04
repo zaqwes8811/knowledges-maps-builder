@@ -1,4 +1,4 @@
-
+package mapreduce;
 
 import mapreduce.SentencesLevelProcessor;
 import org.junit.Test;

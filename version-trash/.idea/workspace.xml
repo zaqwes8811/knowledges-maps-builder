@@ -11,7 +11,7 @@
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/Beach.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/IJythonTestInterface.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/test_call_jy/JavaImpl.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179401291" ignored="false" />
-    <file path="/fragment.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179842623" ignored="false" />
+    <file path="/fragment.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181276501" ignored="false" />
     <file path="/Dummy.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386179842623" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/TestCallJy.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
     <file path="$PROJECT_DIR$/web-template/src/jsr/EvalFile.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180026325" ignored="false" />
@@ -38,6 +38,8 @@
     <file path="/SentencesSplitterTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180884757" ignored="false" />
     <file path="/CallJythonTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180976642" ignored="false" />
     <file path="/LuceneStemmerTwoTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181103996" ignored="false" />
+    <file path="/LuceneStemmerTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181248735" ignored="false" />
+    <file path="/UseTikaTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181333974" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,93 +98,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WebRelay.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WebRelay.java">
+      <file leaf-file-name="ImmutableRGB.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/use_test/ImmutableRGB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="9" column="19" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UseGsonTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UseGsonTest.java">
+      <file leaf-file-name="MinimalStaticChart.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SentencesSplitterTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SentencesSplitterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+            <state line="30" column="39" selection-start="920" selection-end="920" vertical-scroll-proportion="0.35361215">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CallJythonTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CallJythonTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="10" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LuceneStemmerTwoTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LuceneStemmerTwoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="32" selection-start="614" selection-end="614" vertical-scroll-proportion="0.60714287">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SentencesLevelProcessorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SentencesLevelProcessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpiderExtractorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SpiderExtractorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="7" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RunnerWordLevelProcessingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="2" selection-start="620" selection-end="625" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -197,14 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/IResourceCapturerAndToTextConvertor.java" />
-        <option value="$PROJECT_DIR$/src/IGraphToText.java" />
-        <option value="$PROJECT_DIR$/src/GuavaUsigeTest.java" />
-        <option value="$PROJECT_DIR$/src/UseGuavaTest.java" />
-        <option value="$PROJECT_DIR$/src/IExtracitorResourcePlan.java" />
-        <option value="$PROJECT_DIR$/src/IErrorContainer.java" />
-        <option value="$PROJECT_DIR$/src/IExtractorTextFromResource.java" />
-        <option value="$PROJECT_DIR$/src/ITextToText.java" />
         <option value="$PROJECT_DIR$/src/RunnerWordLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/web-template/scripts/TestScript.py" />
         <option value="$PROJECT_DIR$/apps/run-jar.bat" />
@@ -213,6 +136,14 @@
         <option value="$PROJECT_DIR$/src/SentencesSplitterTest.java" />
         <option value="$PROJECT_DIR$/src/CallJythonTest.java" />
         <option value="$PROJECT_DIR$/src/LuceneStemmerTwoTest.java" />
+        <option value="$PROJECT_DIR$/src/LuceneStemmerTest.java" />
+        <option value="$PROJECT_DIR$/src/nlp/LuceneStemmerTest.java" />
+        <option value="$PROJECT_DIR$/src/UseTikaTest.java" />
+        <option value="$PROJECT_DIR$/src/spiders_extractors/UseTikaTest.java" />
+        <option value="$PROJECT_DIR$/src/use_test/UseTikaTest.java" />
+        <option value="$PROJECT_DIR$/src/use_test/ImmutableRGB.java" />
+        <option value="$PROJECT_DIR$/src/MinimalStaticChart.java" />
+        <option value="$PROJECT_DIR$/src/use_test/MinimalStaticChart.java" />
       </list>
     </option>
   </component>
@@ -310,6 +241,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data" />
       <recent name="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src" />
       <recent name="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\test_scripts" />
     </key>
@@ -387,12 +319,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -403,8 +335,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -471,36 +403,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BaseTokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="3" selection-start="1203" selection-end="1203" vertical-scroll-proportion="-14.6">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jobs_processors/ImmutableJobsFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="51" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/ImmutableBaseCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="37" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jobs_processors/ImmutableProcessorTargets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="62" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/crosscuttings/ImmutableAppConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="17" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
@@ -508,14 +410,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JobsFormerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/jobs_processors/JobsFormerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="14" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinimalSpiderProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/spiders_processors/MinimalSpiderProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="14" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
           <folding />
@@ -545,39 +447,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SpiderExtractorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/spiders_extractors/SpiderExtractorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+        <state line="19" column="7" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseGsonTest.java">
+    <entry file="file://$PROJECT_DIR$/src/use_test/UseGsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SentencesSplitterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/nlp/SentencesSplitterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="e#13#213#0" expanded="false" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SentencesLevelProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CallJythonTest.java">
+    <entry file="file://$PROJECT_DIR$/src/use_test/CallJythonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="10" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
           <folding>
@@ -586,9 +489,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LuceneStemmerTwoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/in_data/words_filter.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="614" selection-end="614" vertical-scroll-proportion="0.60714287">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nlp/LuceneStemmerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="4" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2760#2804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/use_test/UseTikaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="5" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/use_test/ImmutableRGB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="39" selection-start="920" selection-end="920" vertical-scroll-proportion="0.35361215">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

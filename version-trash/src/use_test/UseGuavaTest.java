@@ -1,3 +1,5 @@
+package use_test;
+
 import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
