@@ -1,7 +1,7 @@
 package mapreduce;
 
-import common.ImmutableAppUtils;
-import math.ImmutableSummators;
+import common.InnerReuse;
+import business.math.ImmutableSummators;
 
 import java.util.*;
 
@@ -48,7 +48,7 @@ final public class ImmutableReduceSentencesLevel {
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else {
       String nodeName = (String)task.get(ImmutableMappers.IDX_NODE_NAME);
-      ImmutableAppUtils.print("Warning: Lang no used - "+lang+". Node - "+nodeName);
+      InnerReuse.print("Warning: Lang no used - " + lang + ". Node - " + nodeName);
     }
 
     // Make results

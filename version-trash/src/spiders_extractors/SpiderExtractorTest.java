@@ -1,12 +1,10 @@
 package spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
 
 
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import jobs_processors.ImmutableProcessorTargets;
-import spiders_extractors.ExtractorException;
-import spiders_extractors.ImmutableTikaWrapper;
 import org.junit.Test;
 
 import java.util.List;
@@ -31,7 +29,7 @@ public class SpiderExtractorTest {
             //break;  // DEVELOP
           } catch (ExtractorException e) {
             // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
-            ImmutableAppUtils.print(e.getMessage());
+            InnerReuse.print(e.getMessage());
           }
         }
 

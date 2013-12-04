@@ -17,7 +17,7 @@ import java.util.Map;
  * Time: 22:07
  * To change this template use File | Settings | File Templates.
  */
-final public class utils {
+final public class Utils {
   static public void list2file(List<String> list, String filename) throws IOException {
     Closer closer = Closer.create();
     try {

@@ -1,6 +1,6 @@
 # How it known pyclasspath?
 # ['D:\\github-develop\\couples-compiling-and-scripting\\java\\Lib', '__classpath__', '__pyclasspath__/']
-from math import sqrt
+from m ath import sqrt
 import sys
 
 def TPK():

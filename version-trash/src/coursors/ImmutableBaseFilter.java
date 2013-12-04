@@ -1,10 +1,8 @@
 package coursors;
 
-import common.utils;
+import common.Utils;
 
-import javax.swing.*;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,7 +17,7 @@ public final class ImmutableBaseFilter {
 
   static {
     String pathToFilterFile = "C:/Users/кей/Dropbox/rpts/onto/key-words-base-filter.txt";
-    BASE_FILTER = new HashSet<String>(utils.file2list(pathToFilterFile));
+    BASE_FILTER = new HashSet<String>(Utils.file2list(pathToFilterFile));
   }
 
   static boolean isContentStem(String stem) {

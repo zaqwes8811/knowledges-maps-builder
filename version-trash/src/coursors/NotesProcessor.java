@@ -1,9 +1,7 @@
 package coursors;
 
 
-import com.google.common.collect.Multiset;
-import common.ImmutableAppUtils;
-import common.utils;
+import common.Utils;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
@@ -11,7 +9,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import mapreduce.ImmutableReduceSentencesLevel;
 
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.*;
 
@@ -69,7 +66,7 @@ public class NotesProcessor {
   }
 
   static public String get_one_record(String node, Map<String, String> info) {
-    utils.print(node+" "+info);
+    Utils.print(node + " " + info);
     String record = Joiner.on(";")
         .join(
           node,
@@ -93,7 +90,7 @@ public class NotesProcessor {
         AppConstants.CONTENT_META_FILENAME);
 
     // Преобразуем в json
-    String settingsInJson = utils.file2string(pathToMetaFile);
+    String settingsInJson = Utils.file2string(pathToMetaFile);
     Type type = new TypeToken<List<List<String>>>() {}.getType();
     List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
 
@@ -132,7 +129,7 @@ public class NotesProcessor {
 
     // пишем результат
     /*try {
-      utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
+      Utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           "rpts",
           "real_notes.csv"));

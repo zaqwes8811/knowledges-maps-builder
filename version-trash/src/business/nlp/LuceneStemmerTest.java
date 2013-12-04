@@ -1,4 +1,4 @@
-package nlp;
+package business.nlp;
 
 import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
