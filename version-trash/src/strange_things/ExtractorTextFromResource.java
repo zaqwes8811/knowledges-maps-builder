@@ -5,15 +5,15 @@ package strange_things;// coding: utf-8
 import java.util.List;
 
 
-public interface /*class*/ IExtractorTextFromResource /* implement strange_things.IExtractorTextFromResource */ {
+public interface /*class*/ ExtractorTextFromResource /* implement strange_things.ExtractorTextFromResource */ {
     /** Соединяется с ресурсом и преобразовывает его в текст.
       Thinks:
         Не забывать освободить ресурсы(о реализации), но как быть при множ. наследовании
     */
     // Выделяет весь текст из ресурса по некоторому адресу
     // @param url в переменной все данные, чтобы ресурс мог быть открыт
-    String extract(String url, IErrorContainer err);//hided {}
+    String extract(String url, ErrorContainer err);//hided {}
 
     // Получить из ресурса сразу список единиц контента - предложений, например
-    List<String> contentItemsToList(String url, IErrorContainer err);//hided {}
-}  // strange_things.IExtractorTextFromResource
+    List<String> contentItemsToList(String url, ErrorContainer err);//hided {}
+}  // strange_things.ExtractorTextFromResource

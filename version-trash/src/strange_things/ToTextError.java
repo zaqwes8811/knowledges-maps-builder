@@ -7,5 +7,5 @@ package strange_things;
  * Time: 21:51
  * To change this template use File | Settings | File Templates.
  */
-public interface IToTextErr {
+public interface ToTextError {
 }

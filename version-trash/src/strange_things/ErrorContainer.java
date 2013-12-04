@@ -3,7 +3,8 @@ package strange_things;// coding: utf-8
 
 
 
-public interface /*class*/ IErrorContainer /* implement strange_things.IErrorContainer */ {
+@Deprecated
+public interface /*class*/ ErrorContainer /* implement strange_things.ErrorContainer */ {
     /**
       Thinks:
         Как я понял в Java нельзя передать примитив по ссылке, исключениями для обработки ошибок
@@ -13,4 +14,4 @@ public interface /*class*/ IErrorContainer /* implement strange_things.IErrorCon
     */
     String what();//hided {}
     int getErrCode();//hided {}
-}  // strange_things.IErrorContainer
+}  // strange_things.ErrorContainer
