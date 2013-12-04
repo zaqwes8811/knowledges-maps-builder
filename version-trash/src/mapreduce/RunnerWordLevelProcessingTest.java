@@ -1,9 +1,9 @@
 package mapreduce;
 
 import com.google.common.collect.Multimap;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableJobsFormer;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.JobsFormer;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
@@ -19,7 +19,7 @@ public class RunnerWordLevelProcessingTest {
   @Test
   public void testDevelop () {
     // Получаем работы
-    List<List<String>> jobs = ImmutableJobsFormer.getJobs();
+    List<List<String>> jobs = JobsFormer.getJobs();
 
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
@@ -44,31 +44,31 @@ public class RunnerWordLevelProcessingTest {
       // Куда сохраняем результаты
       String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.COMPRESSED_IDX_FOLDER,
             result.get(ImmutableMappers.IDX_NODE_NAME));
 
       String path_for_save_sorted_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.SORTED_IDX_FILENAME);
       String path_for_save_freq_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.FREQ_IDX_FILENAME);
       String path_for_save_rest_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.FILENAME_REST_IDX);
       String path_for_save_sentences_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
           result.get(ImmutableMappers.IDX_NODE_NAME),
           AppConstants.FILENAME_SENTENCES_IDX);

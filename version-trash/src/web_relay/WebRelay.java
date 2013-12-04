@@ -7,9 +7,9 @@ import javax.servlet.ServletException;
  
 import java.io.IOException;
 import common.InnerReuse;
-import coursors.ImmutableBaseCoursor;
+import info_core_accessors.ImmutableBaseCoursor;
 import com.google.gson.Gson;
-//import coursors.ReaderStaticData;
+//import info_core_accessors.ReaderStaticData;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;

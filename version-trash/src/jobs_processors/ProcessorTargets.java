@@ -6,9 +6,9 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import crosscuttings.ImmutableAppConfigurator;
+import through_functional.AppConstants;
+import through_functional.CrosscuttingsException;
+import through_functional.ImmutableAppConfigurator;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -34,7 +34,7 @@ import java.util.List;
 // TODO(zaqwes): Сделано очень плохо! Может для именвание узлов не испльзовать []
 //   Guava and Python can remove spaces in begin and in end
 // TODO(zaqwes): но вообще подумать над удалением заданных краевых символов строки
-final public class ImmutableProcessorTargets {
+public class ProcessorTargets {
   public static String getPathToIndex() {
     String pathToIndex = "";
     try {

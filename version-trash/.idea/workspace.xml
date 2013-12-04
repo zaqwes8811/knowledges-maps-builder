@@ -33,7 +33,6 @@
     <file path="$PROJECT_DIR$/apps/targets/crawler_schedule.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
     <file path="$PROJECT_DIR$/apps/targets/crawler_schedule_per_docs.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
     <file path="$PROJECT_DIR$/apps/targets/crawler_schedule_test.txt" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180131041" ignored="false" />
-    <file path="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180489604" ignored="false" />
     <file path="/UseGsonTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180810482" ignored="false" />
     <file path="/SentencesSplitterTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180884757" ignored="false" />
     <file path="/CallJythonTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386180976642" ignored="false" />
@@ -98,15 +97,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImmutableRGB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/use_test/ImmutableRGB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MinimalStaticChart.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -139,16 +129,16 @@
       <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="24" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
+            <state line="34" column="24" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Runner.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+            <state line="16" column="25" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,10 +153,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InnerReuse.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InnerReuse.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.6899384">
+            <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobsFormer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jobs_processors/JobsFormer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessorTargets.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jobs_processors/ProcessorTargets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="14" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TikaWrapper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/spiders_extractors/TikaWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="21" selection-start="987" selection-end="987" vertical-scroll-proportion="-1.1071428">
               <folding />
             </state>
           </provider>
@@ -182,10 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/LuceneStemmerTest.java" />
-        <option value="$PROJECT_DIR$/src/nlp/LuceneStemmerTest.java" />
-        <option value="$PROJECT_DIR$/src/UseTikaTest.java" />
-        <option value="$PROJECT_DIR$/src/spiders_extractors/UseTikaTest.java" />
         <option value="$PROJECT_DIR$/src/use_test/UseTikaTest.java" />
         <option value="$PROJECT_DIR$/src/use_test/ImmutableRGB.java" />
         <option value="$PROJECT_DIR$/src/MinimalStaticChart.java" />
@@ -198,6 +211,10 @@
         <option value="$PROJECT_DIR$/web-template/scripts/TPK.py" />
         <option value="$PROJECT_DIR$/src/common/ImmutableAppUtils.java" />
         <option value="$PROJECT_DIR$/src/common/InnerReuse.java" />
+        <option value="$PROJECT_DIR$/src/jobs_processors/ImmutableJobsFormer.java" />
+        <option value="$PROJECT_DIR$/src/jobs_processors/ImmutableProcessorTargets.java" />
+        <option value="$PROJECT_DIR$/src/jobs_processors/ProcessorTargets.java" />
+        <option value="$PROJECT_DIR$/src/spiders_extractors/TikaWrapper.java" />
       </list>
     </option>
   </component>
@@ -283,7 +300,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="jobs_processors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,7 +413,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -407,8 +424,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.63420427" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -475,30 +492,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/use_test/UseGsonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#22#222#0" expanded="false" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/SentencesLevelProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/use_test/CallJythonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="10" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
@@ -574,14 +567,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
+        <state line="34" column="24" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+        <state line="16" column="25" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -595,7 +588,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.6899384">
+        <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jobs_processors/JobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jobs_processors/ProcessorTargets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="14" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spiders_extractors/TikaWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="21" selection-start="987" selection-end="987" vertical-scroll-proportion="-1.1071428">
           <folding />
         </state>
       </provider>

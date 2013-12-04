@@ -2,9 +2,9 @@ package mapreduce;
 
 
 import common.InnerReuse;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableJobsFormer;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.JobsFormer;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -29,7 +29,7 @@ public class SentencesLevelProcessor {
 
   public static void main(String [] args) {
     // Получаем работы
-    List<List<String>> jobs = ImmutableJobsFormer.getJobs();
+    List<List<String>> jobs = JobsFormer.getJobs();
 
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
@@ -61,7 +61,7 @@ public class SentencesLevelProcessor {
         // Write
         String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.STATIC_NOTES_FILENAME);
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));

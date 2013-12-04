@@ -1,4 +1,4 @@
-package coursors;
+package info_core_accessors;
 
 import com.google.common.base.Joiner;
 import common.Utils;

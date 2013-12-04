@@ -1,4 +1,4 @@
-package crosscuttings;
+package through_functional;
 
 import com.google.common.io.Closer;
 import org.yaml.snakeyaml.Yaml;

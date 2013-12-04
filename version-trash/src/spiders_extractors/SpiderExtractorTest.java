@@ -2,9 +2,9 @@ package spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbo
 
 
 import common.InnerReuse;
-import crosscuttings.AppConstants;
-import crosscuttings.CrosscuttingsException;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
+import through_functional.CrosscuttingsException;
 import org.junit.Test;
 
 import java.util.List;
@@ -20,12 +20,12 @@ public class SpiderExtractorTest {
       try {
         // Получаем цели
         String spiderTargetsFilename = AppConstants.SPIDER_TARGETS_FILENAME;
-        List<List<String>> targets = ImmutableProcessorTargets.runParser(spiderTargetsFilename);
+        List<List<String>> targets = ProcessorTargets.runParser(spiderTargetsFilename);
         for (List<String> target : targets) {
           try {
             // TODO(zaqwes): если файл существует, то будет перезаписан. Нужно хотя бы предупр.
-            ImmutableTikaWrapper.extractAndSaveText(target);
-            ImmutableTikaWrapper.extractAndSaveMetadata(target);
+            TikaWrapper.extractAndSaveText(target);
+            TikaWrapper.extractAndSaveMetadata(target);
             //break;  // DEVELOP
           } catch (ExtractorException e) {
             // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
