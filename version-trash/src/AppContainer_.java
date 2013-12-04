@@ -36,7 +36,7 @@ public class AppContainer_ {
     ResourceHandler resource_handler = new ResourceHandler();
     resource_handler.setDirectoriesListed(true);
     resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-    resource_handler.setResourceBase("./apps/web_view");
+    resource_handler.setResourceBase("jython_src/apps/web_view");
 
 
     // Список обработчиков?

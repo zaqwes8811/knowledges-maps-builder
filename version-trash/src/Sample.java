@@ -19,7 +19,7 @@ public class Sample {
     InputStream is = null;
 
     try {
-      is = new BufferedInputStream(new FileInputStream(new File("d:/MIT6_01SCS11_chap04.pdf")));
+      is = new BufferedInputStream(new FileInputStream(new File("d:/MIT6_01SCS11_chap04.jython_src.pdf")));
 
       Parser parser = new AutoDetectParser();
       ContentHandler handler = new BodyContentHandler(System.out);
