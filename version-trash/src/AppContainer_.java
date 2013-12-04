@@ -7,7 +7,7 @@ import java.io.IOException;
 import common.ImmutableAppUtils;
 import coursors.ImmutableBaseCoursor;
 import com.google.gson.Gson;
-import coursors.ReaderStaticData;
+//import coursors.ReaderStaticData;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -149,7 +149,7 @@ public class AppContainer_ {
       if (name_requester.equals("get_axis")) {
         json_response = "get_axis";
         String node = request.getParameter("node_name");
-        json_response = ReaderStaticData.json_get_notes_for_node(node);
+        //json_response = ReaderStaticData.json_get_notes_for_node(node);
         //ImmutableAppUtils.print();
       } else if (name_requester.equals("get_nodes")) {
         Gson gson = new Gson();

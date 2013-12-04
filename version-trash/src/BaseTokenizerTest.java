@@ -1,7 +1,5 @@
-package nlp;
-
-import com.github.zaqwes8811.text_processor.common.ImmutableAppUtils;
 import com.google.common.base.Splitter;
+import common.ImmutableAppUtils;
 import org.junit.Test;
 
 /**

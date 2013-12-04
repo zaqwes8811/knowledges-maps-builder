@@ -44,7 +44,7 @@ public class KeyWordsCoursor {
 
       // Получаем исходные адреса
       rpt.add("Content item name: "+node+WEB_NEW_LINE);
-      rpt.addAll(ImmutableIdxGetters.get_urls_and_langs_node(node));
+      //rpt.addAll(ImmutableIdxGetters.get_urls_and_langs_node(node));
       page.add(Joiner.on(WEB_NEW_LINE).join(rpt));
       page.add(WEB_NEW_LINE+WEB_NEW_LINE);
 
@@ -106,7 +106,7 @@ public class KeyWordsCoursor {
       //break;  // DEVELOP
 
     }
-    Multiset<String> confluence_idx = ImmutableIdxGetters.get_confluence_idx();
+    //Multiset<String> confluence_idx = ImmutableIdxGetters.get_confluence_idx();
     // rpt
   }
 }
