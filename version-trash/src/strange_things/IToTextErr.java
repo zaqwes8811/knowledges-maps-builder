@@ -1,3 +1,5 @@
+package strange_things;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zaqwes_user

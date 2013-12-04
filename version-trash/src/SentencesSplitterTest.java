@@ -4,12 +4,14 @@
  *    - Заголовки не имеют окончания (на выходе Tika, например)
  *
  * */
+import org.junit.Test;
+
 import java.text.BreakIterator;
 import java.util.Locale;
 
-public class TestSentSplitter {
-
-  public static void main(String[] args) {
+public class SentencesSplitterTest {
+  @Test
+  public void testMain() {
     // write your code here
 
     
