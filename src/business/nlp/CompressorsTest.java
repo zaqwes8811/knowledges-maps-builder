@@ -1,8 +1,8 @@
 package business.nlp;
 
-import common.InnerReuse;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import common.Util;
 import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
 
@@ -480,12 +480,12 @@ public class CompressorsTest {
     }
 
     /*for (String key: test.keySet()) {
-      InnerReuse.print(
+      ImmutableAppUtils.print(
         Joiner.on(" ").join(
           key,
           test.get(key)));
     } */
-    InnerReuse.print(compressed);
+    Util.print(compressed);
 
   }
 }

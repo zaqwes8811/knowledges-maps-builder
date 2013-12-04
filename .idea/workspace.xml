@@ -2,142 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/checkthread_annotations_1_0_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_guava_guava_14_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jcip_annotations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/net_sf_jchart2d_jchart2d_3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_commons_lang3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_tika_tika_parsers_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jetty_aggregate_jetty_all_7_0_2_v20100331.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_javatuples_javatuples_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_all_1_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_yaml_snakeyaml_1_12.xml" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\org_eclipse_jetty_aggregate_jetty_all_server_7_0_2_v20100331.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\bat.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\cfgs\app_cfg.yaml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\crawler-app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\run-jar.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\scriber-app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule_per_docs.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target_onto.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target_onto.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\journal.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\index_.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\subs\sys-settings-new.htm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_2_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_python_jython_standalone_2_5_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_python_jython_standalone_2_5_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vocabulary-cards.iml" afterPath="$PROJECT_DIR$/vocabulary-cards.iml" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\nlp\BaseSyllableCounter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\nlp\BaseTokenizer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\nlp\BaseTokenizerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\nlp\Compressors.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\nlp\CompressorsTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java" afterPath="$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/BaseTokenizer.java" afterPath="$PROJECT_DIR$/src/business/nlp/BaseTokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java" afterPath="$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/CompressorsTest.java" afterPath="$PROJECT_DIR$/src/business/nlp/CompressorsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/apps/run-jar.bat" afterPath="$PROJECT_DIR$/war/apps/run-jar.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\math\GeneratorAnyRandom.java" afterPath="$PROJECT_DIR$/src/business/math/GeneratorAnyRandom.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\math\RandomGeneratorException.java" afterPath="$PROJECT_DIR$/src/business/math/RandomGeneratorException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\math\hided\ImmutableSummators.java" afterPath="$PROJECT_DIR$/src/business/math/hided/ImmutableSummators.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\math\hided\Randomizer.java" afterPath="$PROJECT_DIR$/src/business/math/hided/Randomizer.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\common\math\hided\Randomizers.java" afterPath="$PROJECT_DIR$/src/business/math/hided/Randomizers.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\jobs_processors\JobsFormer.java" afterPath="$PROJECT_DIR$/src/write_chain/jobs_processors/JobsFormer.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\jobs_processors\JobsFormerTest.java" afterPath="$PROJECT_DIR$/src/write_chain/jobs_processors/JobsFormerTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\jobs_processors\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/write_chain/jobs_processors/ProcessorTargets.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\jobs_processors\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/write_chain/jobs_processors/ProcessorTargetsTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\ImmutableMapperSentencesLevel.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ImmutableMapperSentencesLevel.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ImmutableMappers.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\ImmutableReduceSentencesLevel.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ImmutableReduceSentencesLevel.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\ImmutableReduces.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ImmutableReduces.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\ImmutableSavers.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/ImmutableSavers.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/RunnerWordLevelProcessingTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/SentencesLevelProcessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\mapreduce\SentencesLevelProcessorTest.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/SentencesLevelProcessorTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\parsers\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/write_chain/parsers/ImmutableBECParser.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\parsers\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/write_chain/parsers/ImmutableBECSave.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\parsers\VParserException.java" afterPath="$PROJECT_DIR$/src/write_chain/parsers/VParserException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_extractors\ExtractorException.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/ExtractorException.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_extractors\SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_extractors\SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractorTest.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_extractors\TikaWrapper.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/TikaWrapper.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_processors\MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MOVED" beforePath="D:\home\lugansky-igor\vocabulary-cards\src\spiders_processors\MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_processors/MinimalSpiderProcessorTest.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,33 +130,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotesProcessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableIdxGetters.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="19" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IndexCursorFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -291,7 +171,7 @@
       <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+            <state line="1" column="31" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -311,7 +191,34 @@
       <file leaf-file-name="JobsFormer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.7245902">
+            <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.5566751">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobsFormer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/write_chain/jobs_processors/JobsFormer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="13" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseTokenizerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -335,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" />
         <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderJettyHandlers.java" />
         <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" />
         <option value="$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java" />
@@ -351,6 +257,7 @@
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
+        <option value="$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java" />
       </list>
     </option>
   </component>
@@ -415,60 +322,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="read_chain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="info_core_accessors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,6 +506,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -663,11 +517,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.44299287" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55700713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.5522565" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44774348" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -732,27 +585,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="11" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
@@ -827,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+        <state line="1" column="31" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -841,9 +673,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/write_chain/jobs_processors/JobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.7245902">
+        <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.5566751">
           <folding />
         </state>
       </provider>
