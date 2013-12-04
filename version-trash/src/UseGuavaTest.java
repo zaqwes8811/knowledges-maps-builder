@@ -2,7 +2,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-public class MainT {
+public class UseGuavaTest {
 
     public static void main(String[] args) {
 	// write your code here

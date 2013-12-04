@@ -1,4 +1,4 @@
-package test_call_jy;
+package jython_callers;
 
 /**
  * Created with IntelliJ IDEA.
