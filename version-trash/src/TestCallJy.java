@@ -1,4 +1,4 @@
-import jsr.PyCaller;
+import jython_callers.jsr.PyCaller;
 
 import  java.util.ArrayList;
 public class TestCallJy {

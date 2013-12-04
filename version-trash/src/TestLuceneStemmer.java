@@ -4,12 +4,11 @@ import org.tartarus.snowball.ext.russianStemmer;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
 //import com.google.gson.internal.LinkedHashTreeMap;  // in 2.2.3 not in 2.2.2
-import com.google.gson.internal.LinkedHashTreeMap;
+
 
 public class TestLuceneStemmer {
     public String stem(String fname) {
@@ -34,7 +33,7 @@ public class TestLuceneStemmer {
     public static void main(String[] args) {
         try {
             BufferedReader in = new BufferedReader(
-                    new FileReader("apps/indexes/first_index.json"));
+                    new FileReader("jython_src/apps/indexes/first_index.json"));
             String s;
 
 
@@ -97,7 +96,7 @@ public class TestLuceneStemmer {
             }
             Gson gson = new Gson();
             String json_index = gson.toJson(result_collection);
-            PrintWriter out = new PrintWriter("apps/out.txt");
+            PrintWriter out = new PrintWriter("jython_src/apps/out.txt");
             out.println(json_index);
             out.close();
 
