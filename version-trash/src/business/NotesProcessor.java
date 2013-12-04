@@ -1,7 +1,9 @@
-package info_core_accessors;
+package business;
 
 
 import common.Utils;
+import info_core_accessors.ImmutableBaseCoursor;
+import info_core_accessors.ImmutableIdxGetters;
 import jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
 import com.google.common.base.Joiner;

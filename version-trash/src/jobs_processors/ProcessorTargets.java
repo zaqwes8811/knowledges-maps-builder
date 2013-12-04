@@ -6,9 +6,9 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import through_functional.AppConfigurator;
 import through_functional.AppConstants;
-import through_functional.CrosscuttingsException;
-import through_functional.ImmutableAppConfigurator;
+import through_functional.ThroughLevelBoundaryError;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -39,12 +39,12 @@ public class ProcessorTargets {
     String pathToIndex = "";
     try {
       // Получаем путь к папке приложения
-      String pathToAppFolder = ImmutableAppConfigurator.getPathToAppFolder();
+      String pathToAppFolder = AppConfigurator.getPathToAppFolder();
 
       // Получаем имя индекса
       String idxName = getIndexName();
       pathToIndex = pathToAppFolder+'/'+idxName;
-    } catch (CrosscuttingsException e) {
+    } catch (ThroughLevelBoundaryError e) {
       System.out.println(e.getMessage());
     }
     return pathToIndex;
@@ -70,10 +70,10 @@ public class ProcessorTargets {
   // @return: Имя исходного файла+путь к хранилищу. Расширения нужно приляпать
   //   *.ptxt or *.meta
   public static List<String> splitUrlToFilenameAndPath(String fullPathToFile)
-      throws CrosscuttingsException {
+      throws ThroughLevelBoundaryError {
     // Запрещаем windows-разделители
     if (fullPathToFile.indexOf('\\') != -1) {
-      throw new CrosscuttingsException("Path content disabled separators. "+
+      throw new ThroughLevelBoundaryError("Path content disabled separators. "+
         "Need use *nix format - '/'. Path - "+fullPathToFile+"; Pos - "+fullPathToFile.indexOf('\\'));
     }
 
@@ -90,7 +90,7 @@ public class ProcessorTargets {
     return result;
   }
 
-  public static List<List<String>> runParser(String pathToTarget) throws CrosscuttingsException {
+  public static List<List<String>> runParser(String pathToTarget) throws ThroughLevelBoundaryError {
     // Строка задания = [Node name]*url*...
     List<List<String>> resultTargets = new ArrayList<List<String>>();
     try {
@@ -118,7 +118,7 @@ public class ProcessorTargets {
         return resultTargets;
       } catch (FileNotFoundException e) {
         e.printStackTrace();
-        throw new CrosscuttingsException("File no found - "+pathToTarget);
+        throw new ThroughLevelBoundaryError("File no found - "+pathToTarget);
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
       } finally {
@@ -126,7 +126,7 @@ public class ProcessorTargets {
       }
     } catch (IOException e) {
       e.printStackTrace();
-      throw new CrosscuttingsException("Error on read file - "+pathToTarget);
+      throw new ThroughLevelBoundaryError("Error on read file - "+pathToTarget);
     }
   }
 

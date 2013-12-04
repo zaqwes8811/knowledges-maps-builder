@@ -4,7 +4,7 @@ package spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbo
 import common.InnerReuse;
 import jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
-import through_functional.CrosscuttingsException;
+import through_functional.ThroughLevelBoundaryError;
 import org.junit.Test;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public class SpiderExtractorTest {
           }
         }
 
-      } catch (CrosscuttingsException e) {
+      } catch (ThroughLevelBoundaryError e) {
         System.out.println(e.getMessage());
       }
     }

@@ -30,9 +30,9 @@ public class IndexCursorFactory {
    * coercion of the referenced python module into Java bytecode
    */
 
-  public IIndexCursor create(String indexRoot) {
+  public IndexCursor create(String indexRoot) {
 
     PyObject buildingObject = buildingClass.__call__(new PyString(indexRoot));
-    return (IIndexCursor)buildingObject.__tojava__(IIndexCursor.class);
+    return (IndexCursor)buildingObject.__tojava__(IndexCursor.class);
   }
 }

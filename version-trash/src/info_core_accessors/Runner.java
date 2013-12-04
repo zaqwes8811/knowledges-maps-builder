@@ -1,5 +1,7 @@
 package info_core_accessors;
 
+import org.junit.Test;
+
 /**
  * Created with IntelliJ IDEA.
  * User: кей
@@ -8,11 +10,12 @@ package info_core_accessors;
  * To change this template use File | Settings | File Templates.
  */
 public class Runner {
-  public static void main(String[] args) {
+  @Test
+  public void testMain() {
     IndexCursorFactory factory = new IndexCursorFactory();
 
     String indexRoot = "src/indexes";
-    IIndexCursor ptr = factory.create(indexRoot);
+    IndexCursor ptr = factory.create(indexRoot);
 
     System.out.print(ptr.getListNodes());
 
