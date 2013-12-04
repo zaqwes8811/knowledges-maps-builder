@@ -13,10 +13,10 @@ import sys
 #from java.lang import System as javasystem
 
 # App
-from test_call_jy import IJythonTestInterface
-from test_call_jy import JavaImpl
+from jython_callers import IJythonTestInterface
+from jython_callers import JavaImpl
 # 
-from test_call_jy import Beach
+from jython_callers import Beach
     
 # TESTs
 def test_jython_impl():
