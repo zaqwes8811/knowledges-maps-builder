@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import crosscuttings.AppConstants;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 import common.InnerReuse;
-import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -28,20 +28,20 @@ import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
-final public class ImmutableTikaWrapper {
+final public class TikaWrapper {
   // Fields
   public static final String LANG_META = "lang";
   public static final String SOURCE_URL = "src_url";
 
   public static void extractAndSaveText(List<String> target) throws ExtractorException {
-    String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
-    String pathToSrcFile = target.get(ImmutableProcessorTargets.RESULT_PATH);
-    String inFileName = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
+    String nodeName = target.get(ProcessorTargets.RESULT_NODE_NAME);
+    String pathToSrcFile = target.get(ProcessorTargets.RESULT_PATH);
+    String inFileName = target.get(ProcessorTargets.RESULT_FILENAME);
     try {
       // Настраиваем пути
       String fullOutFilenameNoExt = Joiner.on("/")
           .join(Arrays.asList(
-            ImmutableProcessorTargets.getPathToIndex(),
+            ProcessorTargets.getPathToIndex(),
             AppConstants.TMP_FOLDER,
             nodeName,
             inFileName));
@@ -95,14 +95,14 @@ final public class ImmutableTikaWrapper {
 
   // {url: path_to_file, lang: ru}
   public static String extractAndSaveMetadata(List<String> target) {
-    String nodeName = target.get(ImmutableProcessorTargets.RESULT_NODE_NAME);
-    String onlyPathPartSourceFilename = target.get(ImmutableProcessorTargets.RESULT_PATH);
-    String onlyNameSourceFile = target.get(ImmutableProcessorTargets.RESULT_FILENAME);
+    String nodeName = target.get(ProcessorTargets.RESULT_NODE_NAME);
+    String onlyPathPartSourceFilename = target.get(ProcessorTargets.RESULT_PATH);
+    String onlyNameSourceFile = target.get(ProcessorTargets.RESULT_FILENAME);
     try {
       // Настраиваем пути
       String fullOutFilenameNoExt = Joiner.on("/")
         .join(Arrays.asList(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.TMP_FOLDER,
           nodeName,
           onlyNameSourceFile));

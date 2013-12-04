@@ -6,13 +6,13 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package coursors;
+package info_core_accessors;
 
 
 
 import com.google.common.base.Joiner;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import jobs_processors.ProcessorTargets;
+import through_functional.AppConstants;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ final public class ImmutableBaseCoursor {
     // Получаем список узлов по папкам, а на по заданиям
     String pathToTmpFolder =
       Joiner.on(AppConstants.PATH_SPLITTER).join(
-        ImmutableProcessorTargets.getPathToIndex(),
+        ProcessorTargets.getPathToIndex(),
         AppConstants.TMP_FOLDER);
 
     File rootTmp = new File(pathToTmpFolder);

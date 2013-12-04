@@ -3,13 +3,13 @@ package spiders_processors;
 
 import common.InnerReuse;
 import common.Utils;
-import coursors.ImmutableBaseCoursor;
-import crosscuttings.AppConstants;
-import jobs_processors.ImmutableProcessorTargets;
+import info_core_accessors.ImmutableBaseCoursor;
+import jobs_processors.ProcessorTargets;
+import spiders_extractors.TikaWrapper;
+import through_functional.AppConstants;
 
 
 import business.nlp.BaseTokenizer;
-import spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -85,8 +85,8 @@ public class MinimalSpiderProcessor {
         Gson gson = new Gson();
         Type type = new TypeToken<HashMap<String, String>>() {}.getType();
         HashMap<String, String> meta = gson.fromJson(jsonMeta, type);
-        allMetaData.add(meta.get(ImmutableTikaWrapper.LANG_META));
-        allMetaData.add(meta.get(ImmutableTikaWrapper.SOURCE_URL));
+        allMetaData.add(meta.get(TikaWrapper.LANG_META));
+        allMetaData.add(meta.get(TikaWrapper.SOURCE_URL));
 
       } catch (Throwable e) { // must catch Throwable
         throw closer.rethrow(e);
@@ -102,7 +102,7 @@ public class MinimalSpiderProcessor {
   public void processOneNode(String node) {
     StringBuilder summaryContent = new StringBuilder();
     String pathToNodeInTmpFolder = Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(ImmutableProcessorTargets.getPathToIndex(),
+        .join(ProcessorTargets.getPathToIndex(),
               AppConstants.TMP_FOLDER,
               node);
     List<List<String>> summaryMeta = new ArrayList<List<String>>();
@@ -142,7 +142,7 @@ public class MinimalSpiderProcessor {
       Closer writeCloser = Closer.create();
       try {
         String path = Joiner.on(AppConstants.PATH_SPLITTER)
-          .join(ImmutableProcessorTargets.getPathToIndex(),
+          .join(ProcessorTargets.getPathToIndex(),
                 AppConstants.CONTENT_FOLDER,
                 node);
 

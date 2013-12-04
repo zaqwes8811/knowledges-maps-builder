@@ -1,7 +1,7 @@
 package jobs_processors;
 
-import coursors.ImmutableBaseCoursor;
-import crosscuttings.AppConstants;
+import info_core_accessors.ImmutableBaseCoursor;
+import through_functional.AppConstants;
 
 import com.google.common.base.Joiner;
 
@@ -20,7 +20,7 @@ import java.util.List;
  *
  * Возможно похожий класс может дробить файлы узла для балансировки нагрузки
  */
-final public class ImmutableJobsFormer {
+public class JobsFormer {
   public static final int IDX_NODE_NAME = 0;
   public static final int IDX_FILENAME = 1;
 
@@ -31,7 +31,7 @@ final public class ImmutableJobsFormer {
     for (String node: nodes) {
       String contentFilename = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
-          ImmutableProcessorTargets.getPathToIndex(),
+          ProcessorTargets.getPathToIndex(),
           AppConstants.CONTENT_FOLDER,
           node,
           AppConstants.CONTENT_FILENAME);

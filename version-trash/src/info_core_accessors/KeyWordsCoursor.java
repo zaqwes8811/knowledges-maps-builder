@@ -1,9 +1,9 @@
-package coursors;
+package info_core_accessors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import common.Utils;
-import crosscuttings.AppConstants;
+import through_functional.AppConstants;
 import mapreduce.ImmutableReduceSentencesLevel;
 
 import java.io.IOException;

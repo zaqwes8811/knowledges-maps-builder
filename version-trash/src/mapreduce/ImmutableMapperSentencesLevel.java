@@ -1,6 +1,6 @@
 package mapreduce;
 
-import jobs_processors.ImmutableJobsFormer;
+import jobs_processors.JobsFormer;
 import business.nlp.BaseSyllableCounter;
 import business.nlp.BaseTokenizer;
 import com.google.common.io.Closer;
@@ -38,8 +38,8 @@ final public class ImmutableMapperSentencesLevel {
   * */
   public static List mapper_sentences_level(List<String> job) {
     List response = new ArrayList();
-    String node = job.get(ImmutableJobsFormer.IDX_NODE_NAME);
-    String filename = job.get(ImmutableJobsFormer.IDX_FILENAME);
+    String node = job.get(JobsFormer.IDX_NODE_NAME);
+    String filename = job.get(JobsFormer.IDX_FILENAME);
     List<Integer> sentencesLengths = new ArrayList<Integer>();
     List<Integer> syllablesLengths = new ArrayList<Integer>();
     String meanLang = "unknown";
