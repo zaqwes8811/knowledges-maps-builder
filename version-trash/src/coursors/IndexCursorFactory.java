@@ -1,6 +1,4 @@
-package business.originator_frequency_index;
-
-import business.originator_frequency_index.IIndexCursor;
+package coursors;
 
 import org.python.core.PyObject;
 import org.python.core.PyString;

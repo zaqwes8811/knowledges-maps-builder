@@ -136,10 +136,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="2" selection-start="640" selection-end="645" vertical-scroll-proportion="0.033663366">
+            <state line="38" column="24" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Runner.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.52509654">
               <folding />
             </state>
           </provider>
@@ -155,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/UseGsonTest.java" />
         <option value="$PROJECT_DIR$/src/SentencesSplitterTest.java" />
         <option value="$PROJECT_DIR$/src/CallJythonTest.java" />
         <option value="$PROJECT_DIR$/src/LuceneStemmerTwoTest.java" />
@@ -171,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/use_test/IndexContainer.java" />
         <option value="$PROJECT_DIR$/src/jython_callers/IndexContainer.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java" />
+        <option value="$PROJECT_DIR$/src/coursors/Runner.java" />
       </list>
     </option>
   </component>
@@ -430,13 +439,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/spiders_processors/MinimalSpiderProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -552,7 +554,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="640" selection-end="645" vertical-scroll-proportion="0.033663366">
+        <state line="38" column="24" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.52509654">
           <folding />
         </state>
       </provider>
