@@ -1,4 +1,4 @@
-//package com.github.zaqwes8811.text_processor.sandbox;
+package spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
 
 
 import common.ImmutableAppUtils;

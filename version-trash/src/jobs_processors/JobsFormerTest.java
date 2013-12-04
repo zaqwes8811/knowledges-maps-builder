@@ -1,3 +1,4 @@
+package jobs_processors;
 
 import common.ImmutableAppUtils;
 import jobs_processors.ImmutableJobsFormer;

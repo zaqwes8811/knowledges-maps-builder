@@ -1,3 +1,5 @@
+package use_test;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,12 +12,14 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.junit.Test;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
-public class Sample {
+public class UseTikaTest {
 
-  public static void main(String[] args){
+  @Test
+  public void testMain(){
     InputStream is = null;
 
     try {
