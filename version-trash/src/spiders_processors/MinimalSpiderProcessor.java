@@ -1,14 +1,14 @@
 package spiders_processors;
 
 
-import common.ImmutableAppUtils;
-import common.utils;
+import common.InnerReuse;
+import common.Utils;
 import coursors.ImmutableBaseCoursor;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableProcessorTargets;
 
 
-import nlp.BaseTokenizer;
+import business.nlp.BaseTokenizer;
 import spiders_extractors.ImmutableTikaWrapper;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
@@ -42,7 +42,7 @@ public class MinimalSpiderProcessor {
 
   public List<String> getListNamesMetaFiles(String pathToNode) {
     String regex = ".+\\.meta";
-    List<String> result = ImmutableAppUtils.getListNamesMetaFiles(pathToNode, regex);
+    List<String> result = InnerReuse.getListNamesMetaFiles(pathToNode, regex);
     return result;
   }
 
@@ -111,7 +111,7 @@ public class MinimalSpiderProcessor {
     for (List<String> target: targets) {
       try {  // внутри, чтобы не прервалась обработка из-за одного файла
         Closer readCloser = Closer.create();
-        utils.print(target);
+        Utils.print(target);
         try {
           String lang = target.get(MinimalSpiderProcessor.IDX_LANG);
           String srcUrl = target.get(MinimalSpiderProcessor.IDX_SRC_URL);
@@ -175,16 +175,16 @@ public class MinimalSpiderProcessor {
 
     // Processing
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
-    //ImmutableAppUtils.print(nodes);
+    //InnerReuse.print(nodes);
 
     // Обрабатываем каждый узел в отдельности
     for (String node : nodes) {
-      ImmutableAppUtils.print("Process node: "+node);
+      InnerReuse.print("Process node: " + node);
       spiderProcessor.processOneNode(node);
-      //utils.print(node);
+      //Utils.print(node);
       //break;  // DEVELOP
     }
-    ImmutableAppUtils.print("Done. Spider processor.\n");
+    InnerReuse.print("Done. Spider processor.\n");
   }
 }
 

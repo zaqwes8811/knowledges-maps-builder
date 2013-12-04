@@ -1,9 +1,8 @@
 package coursors;
 
 import com.google.common.base.Joiner;
-import common.utils;
+import common.Utils;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +21,7 @@ public class ImmutableOntoAssistant {
       // Получаем сортированных индекс
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
     for (String node: nodes) {
-      utils.print(node);
+      Utils.print(node);
       // сортированных индекс
       List<String> sorted_idx = ImmutableIdxGetters.get_sorted_idx(node);
       Map<String, String> rest_idx = ImmutableIdxGetters.get_rest_idx(node);
@@ -31,13 +30,13 @@ public class ImmutableOntoAssistant {
       int i = 0;
       for (String stem: sorted_idx) {
         if (i%7  != 0) {
-        utils.print(
-          Joiner.on(" * ")
-            .join(freq_idx.get(stem), stem, rest_idx.get(stem)));
-        } else {
-          utils.print(
+        Utils.print(
             Joiner.on(" * ")
-              .join("\n"+freq_idx.get(stem), stem, rest_idx.get(stem)));
+                .join(freq_idx.get(stem), stem, rest_idx.get(stem)));
+        } else {
+          Utils.print(
+              Joiner.on(" * ")
+                  .join("\n" + freq_idx.get(stem), stem, rest_idx.get(stem)));
         }
           i++;
       }

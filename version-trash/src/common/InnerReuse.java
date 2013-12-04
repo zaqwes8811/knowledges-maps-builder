@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * Time: 13:58
  * To change this template use File | Settings | File Templates.
  */
-final public class ImmutableAppUtils {
+final public class InnerReuse {
   public static List<String> getListNamesMetaFiles(String pathToNode, String regex) {
     File nodeContainer = new File(pathToNode);
     List<String> result = Arrays.asList(nodeContainer.list(new DirFilter(regex)));

@@ -1,7 +1,6 @@
 package jobs_processors;
 
-import common.ImmutableAppUtils;
-import jobs_processors.ImmutableJobsFormer;
+import common.InnerReuse;
 import org.junit.Test;
 
 /**
@@ -15,7 +14,7 @@ public class JobsFormerTest {
 
   @Test
   public void testDevelop() {
-    ImmutableAppUtils.print(ImmutableJobsFormer.getJobs());
+    InnerReuse.print(ImmutableJobsFormer.getJobs());
 
   }
 }

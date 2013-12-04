@@ -1,7 +1,7 @@
 package mapreduce;
 
 
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableJobsFormer;
 import jobs_processors.ImmutableProcessorTargets;
@@ -66,9 +66,9 @@ public class SentencesLevelProcessor {
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
-        ImmutableAppUtils.print(resultInJson);
+        InnerReuse.print(resultInJson);
 
-        ImmutableAppUtils.print("Notes write to file : "+path_for_save);
+        InnerReuse.print("Notes write to file : " + path_for_save);
 
       } catch (Throwable e) {
         closer.rethrow(e);
@@ -78,6 +78,6 @@ public class SentencesLevelProcessor {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    ImmutableAppUtils.print("Done. Sentences level processing.");
+    InnerReuse.print("Done. Sentences level processing.");
   }
 }

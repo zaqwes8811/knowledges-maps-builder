@@ -121,7 +121,7 @@
       <file leaf-file-name="SortMapOnValueExample.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/use_test/SortMapOnValueExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="45" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+            <state line="26" column="28" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,16 +139,34 @@
       <file leaf-file-name="RunnerWordLevelProcessingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="24" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+            <state line="34" column="24" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Runner.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Runner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.52509654">
+            <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TPK.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-template/scripts/TPK.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="7" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InnerReuse.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.6899384">
               <folding />
             </state>
           </provider>
@@ -164,9 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/SentencesSplitterTest.java" />
-        <option value="$PROJECT_DIR$/src/CallJythonTest.java" />
-        <option value="$PROJECT_DIR$/src/LuceneStemmerTwoTest.java" />
         <option value="$PROJECT_DIR$/src/LuceneStemmerTest.java" />
         <option value="$PROJECT_DIR$/src/nlp/LuceneStemmerTest.java" />
         <option value="$PROJECT_DIR$/src/UseTikaTest.java" />
@@ -180,6 +195,9 @@
         <option value="$PROJECT_DIR$/src/jython_callers/IndexContainer.java" />
         <option value="$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java" />
         <option value="$PROJECT_DIR$/src/coursors/Runner.java" />
+        <option value="$PROJECT_DIR$/web-template/scripts/TPK.py" />
+        <option value="$PROJECT_DIR$/src/common/ImmutableAppUtils.java" />
+        <option value="$PROJECT_DIR$/src/common/InnerReuse.java" />
       </list>
     </option>
   </component>
@@ -248,6 +266,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,7 +396,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -371,8 +407,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.63420427" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -439,22 +475,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/spiders_extractors/SpiderExtractorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/use_test/UseGsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
@@ -462,11 +482,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nlp/SentencesSplitterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#13#213#0" expanded="false" />
+            <element signature="e#22#222#0" expanded="false" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -495,11 +515,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nlp/LuceneStemmerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/LuceneStemmerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="4" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2760#2804#0" expanded="true" />
+            <element signature="e#2769#2813#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -540,7 +560,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/use_test/SortMapOnValueExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+        <state line="26" column="28" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -554,14 +574,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="24" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+        <state line="34" column="24" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/coursors/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.52509654">
+        <state line="16" column="25" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-template/scripts/TPK.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="18" selection-start="667" selection-end="667" vertical-scroll-proportion="0.6899384">
           <folding />
         </state>
       </provider>
