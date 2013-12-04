@@ -4,7 +4,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import common.Utils;
 import through_functional.AppConstants;
-import mapreduce.ImmutableReduceSentencesLevel;
+import write_chain.mapreduce.ImmutableReduceSentencesLevel;
 
 import java.io.IOException;
 import java.util.ArrayList;
