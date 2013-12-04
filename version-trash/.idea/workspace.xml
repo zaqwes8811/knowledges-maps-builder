@@ -40,6 +40,8 @@
     <file path="/LuceneStemmerTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181248735" ignored="false" />
     <file path="/UseTikaTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386181333974" ignored="false" />
     <file path="/ErrorContainer.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386182010888" ignored="false" />
+    <file path="/AppConfigurerTest.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386182559767" ignored="false" />
+    <file path="/Runner.java" changelist="00cac200-1991-4bac-938d-266184a9fe6a" time="1386182822168" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,10 +100,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExtracitorResourcePlan.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExtracitorResourcePlan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/strange_things/ExtracitorResourcePlan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="27" selection-start="85" selection-end="85" vertical-scroll-proportion="0.13737373">
+            <state line="17" column="18" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinimalSpiderProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/spiders_processors/MinimalSpiderProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="29" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/AppConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="18" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpiderExtractor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/spiders_extractors/SpiderExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="13" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConfigurator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/AppConfigurator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="26" selection-start="8" selection-end="26" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThroughLevelBoundaryError.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/ThroughLevelBoundaryError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyWordsCursor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="18" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotesProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/NotesProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Runner.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="4" selection-start="230" selection-end="230" vertical-scroll-proportion="0.41046277">
               <folding />
             </state>
           </provider>
@@ -117,14 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/MinimalStaticChart.java" />
-        <option value="$PROJECT_DIR$/src/use_test/MinimalStaticChart.java" />
-        <option value="$PROJECT_DIR$/src/use_test/SortMapOnValueExample.java" />
-        <option value="$PROJECT_DIR$/src/use_test/IndexContainer.java" />
-        <option value="$PROJECT_DIR$/src/jython_callers/IndexContainer.java" />
-        <option value="$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java" />
-        <option value="$PROJECT_DIR$/src/coursors/Runner.java" />
-        <option value="$PROJECT_DIR$/web-template/scripts/TPK.py" />
         <option value="$PROJECT_DIR$/src/common/ImmutableAppUtils.java" />
         <option value="$PROJECT_DIR$/src/common/InnerReuse.java" />
         <option value="$PROJECT_DIR$/src/jobs_processors/ImmutableJobsFormer.java" />
@@ -133,6 +203,14 @@
         <option value="$PROJECT_DIR$/src/spiders_extractors/TikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/strange_things/ErrorContainer.java" />
         <option value="$PROJECT_DIR$/src/strange_things/ExtracitorResourcePlan.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/AppConfigurerTest.java" />
+        <option value="$PROJECT_DIR$/src/spiders_extractors/SpiderExtractor.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/ThroughLevelError.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/ThroughLevelTopError.java" />
+        <option value="$PROJECT_DIR$/src/through_functional/ThroughLevelBoundaryError.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" />
+        <option value="$PROJECT_DIR$/src/business/NotesProcessor.java" />
+        <option value="$PROJECT_DIR$/src/info_core_accessors/Runner.java" />
       </list>
     </option>
   </component>
@@ -218,7 +296,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="strange_things" />
+              <option name="myItemId" value="through_functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="info_core_accessors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="version-trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +445,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -342,8 +456,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.63420427" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39384118" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -410,73 +524,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/business/nlp/LuceneStemmerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="4" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2769#2813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/use_test/UseTikaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/use_test/ImmutableRGB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="39" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/WebRelay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="673" selection-end="673" vertical-scroll-proportion="0.031539887">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/use_test/SortMapOnValueExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jython_callers/IndexContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/RunnerWordLevelProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="24" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -525,7 +575,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/strange_things/ExtracitorResourcePlan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="85" selection-end="85" vertical-scroll-proportion="0.13737373">
+        <state line="17" column="18" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spiders_processors/MinimalSpiderProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="29" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spiders_extractors/SpiderExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/AppConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="26" selection-start="8" selection-end="26" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/ThroughLevelBoundaryError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/NotesProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="4" selection-start="230" selection-end="230" vertical-scroll-proportion="0.41046277">
           <folding />
         </state>
       </provider>

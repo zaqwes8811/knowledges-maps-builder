@@ -60,7 +60,7 @@ public class WebRelay {
   public static class App extends HttpServlet {
     /* Блок классов приложения? Должны быть потокозащищенными
     private  */
-    //private  IIndexCursor ptr;
+    //private  IndexCursor ptr;
 
     public void init() throws ServletException {
       //IndexCursorFactory factory = new IndexCursorFactory();

@@ -15,9 +15,9 @@ import java.util.Map;
  *
  * Кофигуратор приложения
  */
-final public class ImmutableAppConfigurator {
+final public class AppConfigurator {
   private static final String ROOT_NAME = "App";
-  public static String getPathToAppFolder() throws CrosscuttingsException {
+  public static String getPathToAppFolder() throws ThroughLevelBoundaryError {
     String fullCfgFilename = AppConstants.APP_CFG_FILENAME;
     Yaml yaml = new Yaml();
     try {
@@ -37,10 +37,10 @@ final public class ImmutableAppConfigurator {
       }
     } catch (FileNotFoundException e) {
       e.printStackTrace();
-      throw new CrosscuttingsException("File with cfg, no found. File name - "+fullCfgFilename);
+      throw new ThroughLevelBoundaryError("File with cfg, no found. File name - "+fullCfgFilename);
     } catch (IOException e) {
       e.printStackTrace();
-      throw new CrosscuttingsException("Error on read file - "+fullCfgFilename);
+      throw new ThroughLevelBoundaryError("Error on read file - "+fullCfgFilename);
     }
   }
 }
