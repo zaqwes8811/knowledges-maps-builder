@@ -1,8 +1,8 @@
 package mapreduce;
 
 import jobs_processors.ImmutableJobsFormer;
-import nlp.BaseSyllableCounter;
-import nlp.BaseTokenizer;
+import business.nlp.BaseSyllableCounter;
+import business.nlp.BaseTokenizer;
 import com.google.common.io.Closer;
 
 import java.io.BufferedReader;

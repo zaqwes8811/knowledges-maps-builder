@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import crosscuttings.AppConstants;
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import jobs_processors.ImmutableProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
@@ -54,7 +54,7 @@ final public class ImmutableTikaWrapper {
             inFileName));
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
-      ImmutableAppUtils.print("Process file: " + fullNameSourceFile);
+      InnerReuse.print("Process file: " + fullNameSourceFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();

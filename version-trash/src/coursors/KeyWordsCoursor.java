@@ -2,8 +2,7 @@ package coursors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import com.google.common.collect.Multiset;
-import common.utils;
+import common.Utils;
 import crosscuttings.AppConstants;
 import mapreduce.ImmutableReduceSentencesLevel;
 
@@ -31,11 +30,11 @@ public class KeyWordsCoursor {
     for (String node: nodes) {
       Double time_to_read = cut_to(Double.parseDouble(
           notes.get(node).get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ)));
-      utils.print(Joiner.on(", ")
-        .join(
-          (long)Math.floor(time_to_read),
-          (long)Math.floor((time_to_read-Math.floor(time_to_read))*60),
-          node));
+      Utils.print(Joiner.on(", ")
+          .join(
+              (long) Math.floor(time_to_read),
+              (long) Math.floor((time_to_read - Math.floor(time_to_read)) * 60),
+              node));
       List<String> page = new ArrayList<String>();
       page.add("<!DOCTYPE html><html><head>" +
         "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">" +
@@ -68,7 +67,7 @@ public class KeyWordsCoursor {
         for (String rest_word: rest_words) {
           sentence = sentence.replace(rest_word,
               "<span style=\"background-color:Crimson;color:azure;\">"+rest_word+"</span>");
-          //utils.print(rest_word);
+          //Utils.print(rest_word);
           //break;  // DEVELOP
         }
 
@@ -99,7 +98,7 @@ public class KeyWordsCoursor {
       String rptFileName = Joiner.on(AppConstants.PATH_SPLITTER)
         .join("rpts", "key_words",node+".html");
       try {
-        utils.list2file(page, rptFileName);
+        Utils.list2file(page, rptFileName);
       } catch (IOException e) {
         e.printStackTrace();
       }

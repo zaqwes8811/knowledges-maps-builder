@@ -4,7 +4,7 @@ package spiders_extractors;
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;
 
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import crosscuttings.AppConstants;
 import crosscuttings.CrosscuttingsException;
 import jobs_processors.ImmutableProcessorTargets;
@@ -28,12 +28,12 @@ public class MinimalSpiderExtractor {
           //break;  // DEVELOP
         } catch (ExtractorException e) {
           // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
-          ImmutableAppUtils.print(e.getMessage());
+          InnerReuse.print(e.getMessage());
         }
       }
     } catch (CrosscuttingsException e) {
-      ImmutableAppUtils.print(e.getMessage());
+      InnerReuse.print(e.getMessage());
     }
-    ImmutableAppUtils.print("Done. Spider extractor.\n");
+    InnerReuse.print("Done. Spider extractor.\n");
   }
 }

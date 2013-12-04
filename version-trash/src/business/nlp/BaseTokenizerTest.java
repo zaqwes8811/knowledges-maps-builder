@@ -1,7 +1,7 @@
-package nlp;
+package business.nlp;
 
 import com.google.common.base.Splitter;
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import org.junit.Test;
 
 /**
@@ -28,7 +28,7 @@ public class BaseTokenizerTest {
       .omitEmptyStrings()
       .split(sent);
     for (String item: result) {
-      ImmutableAppUtils.print(item);
+      InnerReuse.print(item);
     }
 
   }

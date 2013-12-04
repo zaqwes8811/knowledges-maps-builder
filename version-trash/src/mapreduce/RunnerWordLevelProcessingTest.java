@@ -1,8 +1,6 @@
 package mapreduce;
 
 import com.google.common.collect.Multimap;
-import common.ImmutableAppUtils;
-import common.utils;
 import crosscuttings.AppConstants;
 import jobs_processors.ImmutableJobsFormer;
 import jobs_processors.ImmutableProcessorTargets;
@@ -10,8 +8,6 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import mapreduce.ImmutableMappers;
-import mapreduce.ImmutableReduces;
 import org.junit.Test;
 
 import java.io.BufferedWriter;
@@ -118,7 +114,7 @@ public class RunnerWordLevelProcessingTest {
             .write(new Gson().toJson(sentences_idx_for_save));
 
 
-          //ImmutableAppUtils.print(new Gson().toJson(index_for_save));
+          //InnerReuse.print(new Gson().toJson(index_for_save));
         } catch (Throwable e) {
           closer.rethrow(e);
         } finally {

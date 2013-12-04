@@ -1,9 +1,9 @@
 package mapreduce;
 
 
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import jobs_processors.ImmutableJobsFormer;
-import nlp.BaseTokenizer;
+import business.nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
@@ -70,7 +70,7 @@ final public class ImmutableMappers {
           sentenceNumber++;
         }
 
-        ImmutableAppUtils.print("Size Raw = " + wordsFrequenceMultyset.elementSet().size());
+        InnerReuse.print("Size Raw = " + wordsFrequenceMultyset.elementSet().size());
 
         // Make result
         response.add(node);
@@ -127,7 +127,7 @@ final public class ImmutableMappers {
           if (RUSSIAN_STOP_WORDS.contains(compressedKey)) {
             // В списке стоп-слов
             // Отброшенное слово при второй фильтарции
-            //ImmutableAppUtils.print(key);
+            //InnerReuse.print(key);
             continue;
           }
         } else if (meanLangWord.equals("en")) {
@@ -145,14 +145,14 @@ final public class ImmutableMappers {
         sentencesCompressed.putAll(compressedKey, sentencesRawMap.get(key));
       } else {
         // Отброшенное слово при перой фильтарции
-        //ImmutableAppUtils.print(key);
+        //InnerReuse.print(key);
       }
     }
 
     // Смотрим результат
     /*
     for (String key: frequenciesCompressed.elementSet()) {
-      ImmutableAppUtils.print(
+      InnerReuse.print(
         Joiner.on(" ").join(
           node,
           key,
@@ -162,7 +162,7 @@ final public class ImmutableMappers {
           frequenciesWordRest.get(key)));
     }
     //*/
-    ImmutableAppUtils.print("Size = "+frequenciesCompressed.elementSet().size()+" "+node);
+    InnerReuse.print("Size = " + frequenciesCompressed.elementSet().size() + " " + node);
 
     // Make result
     List result = new ArrayList();

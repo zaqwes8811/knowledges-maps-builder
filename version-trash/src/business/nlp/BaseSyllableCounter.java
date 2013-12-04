@@ -1,9 +1,8 @@
-package nlp;
+package business.nlp;
 
 
 //import com.sun.xml.internal.ws.util.StringUtils;
 
-import common.ImmutableAppUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -50,7 +49,7 @@ final public class BaseSyllableCounter {
         count -= StringUtils.countMatches(workCopy, ENGLISH_VOWEL_PAIRS[i]);
       }
 
-      //ImmutableAppUtils.print(count+" "+workCopy);
+      //InnerReuse.print(count+" "+workCopy);
       return count;
     } else {
       return -1;

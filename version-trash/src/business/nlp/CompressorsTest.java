@@ -1,6 +1,6 @@
-package nlp;
+package business.nlp;
 
-import common.ImmutableAppUtils;
+import common.InnerReuse;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import org.junit.Test;
@@ -480,12 +480,12 @@ public class CompressorsTest {
     }
 
     /*for (String key: test.keySet()) {
-      ImmutableAppUtils.print(
+      InnerReuse.print(
         Joiner.on(" ").join(
           key,
           test.get(key)));
     } */
-    ImmutableAppUtils.print(compressed);
+    InnerReuse.print(compressed);
 
   }
 }
