@@ -2,443 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\guava_14_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\bat.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\cfgs\app_cfg.yaml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\crawler-app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\run-jar.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\scriber-app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\crawler_schedule.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\crawler_schedule_per_docs.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\crawler_schedule_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\spider_extractor_target.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\spider_extractor_target.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\spider_extractor_target_onto.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\targets\spider_extractor_target_onto.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\hided\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\css\journal.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\img\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\index_.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\hided\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\apps\web_view\subs\sys-settings-new.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\NotesProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\math\ImmutableSummators.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\BaseSyllableCounter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\BaseTokenizer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\BaseTokenizerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\Compressors.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\CompressorsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\LuceneStemmerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\business\nlp\SentencesSplitterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\common\InnerReuse.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\common\utils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\Iron Man AA\Iron Man- Armored Adventures - 02x14 - Mandarin's Quest.[UM].English.C.updated.Addic7ed.com.srt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\Iron Man AA\Iron Man02x26.srt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\Iron Man AA\Iron1and8.srt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\t.doc" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\t.odt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\t.pdf" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\in_data\words_filter.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\ImmutableBaseCoursor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\ImmutableBaseFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\ImmutableDataExtractor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\ImmutableIdxGetters.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\ImmutableOntoAssistant.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\IndexCursor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\IndexCursorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\KeyWordsCursor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\info_core_accessors\Runner.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jobs_processors\JobsFormer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jobs_processors\JobsFormerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jobs_processors\ProcessorTargets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jobs_processors\ProcessorTargetsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\Beach.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\IJythonTestInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\IndexContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\JavaImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\EvalFile.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\EvalFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\EvalScript.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\JSRException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\PyCaller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\PyCallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\ScriptTestJython.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\SimpleEmbedded.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\TPKFilterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_callers\jsr\Trash.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\SimpleTask.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\TPK.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\TestScript.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\app-translate-assistant.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\app-wrapping-jyja.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\app.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\apps\app-spider-processor.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\for_test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\codecs.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\copy_reg.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\re.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\sre_compile.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\sre_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\sre_parse.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\jy27-pkgs\types.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\nlp_components\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\pdf\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\pdf\read_pdf.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\srts\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\srts\os_dal.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\jython_src\test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\ImmutableMapperSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\ImmutableMappers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\ImmutableReduceSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\ImmutableReduces.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\ImmutableSavers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\RunnerWordLevelProcessingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\SentencesLevelProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mapreduce\SentencesLevelProcessorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\_to_langs\Impl.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\_to_langs\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\_to_langs\_app_reuse.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\_to_langs\mkt_to_java.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\_to_langs\mkt_to_python.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\bale_mkt.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\conv_java_import.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\java_io_test.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\mkt_parser.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\test_import_to_jy.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\mkts\tmp.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\jython\book\interfaces\Building.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\jython\book\interfaces\BuildingType.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\jython\book\util\BuildingFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\jython\book\util\RunnerFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\Among.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\SnowballProgram.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\SnowballStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\TestApp.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\danishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\dutchStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\englishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\finnishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\frenchStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\germanStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\hungarianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\italianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\norwegianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\porterStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\portugueseStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\romanianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\russianStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\spanishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\swedishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\org\tartarus\snowball\ext\turkishStemmer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_extractors\ExtractorException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_extractors\SpiderExtractor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_extractors\SpiderExtractorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_extractors\TikaWrapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_processors\MinimalSpiderProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\spiders_processors\MinimalSpiderProcessorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\ErrorContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\ExtracitorResourcePlan.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\ExtractorTextFromResource.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\GraphToText.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\ResourceCapturerAndToTextConvertor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\TextToText.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\strange_things\ToTextError.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\through_functional\AppConfigurator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\through_functional\AppConstants.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\through_functional\ThroughLevelBoundaryError.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\CallJythonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\ImmutableRGB.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\MinimalStaticChart.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\SortMapOnValueExample.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\UseGsonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\UseGuavaTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\use_test\UseTikaTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\WebRelay.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\servlets\HelloServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\servlets\HelloWorld.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\servlets\MinimalServlets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\servlets\OneServletContext.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\app_carcass.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\app_liq.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\bottom.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\summary.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\web2py.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\css\hided\website.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\bg-scrollbar-thumb-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\bg-scrollbar-track-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\bg-scrollbar-trackend-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\gplus-32.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\add.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bar2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bg_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bullet.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bullet_m.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\bullet_p.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\button_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\button_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\button_left_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\button_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\button_right_xon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\del.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\ed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\footerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\go.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\headerbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\led_alm.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\led_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\led_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\logo_new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\logo_new1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\logo_new2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\map.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon_b.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon_b1.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon_b2.bmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\phon_big2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\rel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\sw_of.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\sw_on.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\tableft.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\tabright.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\temp1.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\img\temp2.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\index_flot.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\analytics.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\cross-browser-print.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\dd_belatedpng.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\js_hided_settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\new_journal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\no_w2p.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\settings-checkers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\settings-crosscuts.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\share.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\stat-html-save.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\statistic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\summator-info.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\sys-settings-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\js\web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\src\web_relay\web_view\subs\sys-settings-new.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.classpath" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\ant.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\description.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\libraries\junit_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\.settings\org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\CommandLine.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\bat.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\css\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\hided\index_graph_variants.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\hided\index_hided.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\SimpleTask.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\TPK.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\TestScript.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\for_test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\codecs.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\copy_reg.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\re.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\sre_compile.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\sre_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\sre_parse.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\pkgs\types.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\scripts\test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\AppContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\FromToJson.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\TestCallJy.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\app-jy.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\app-wrapping-jyja.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jetty_examples\HelloServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jetty_examples\HelloWorld.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jetty_examples\MinimalServlets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jetty_examples\OneServletContext.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\EvalFile.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\EvalScript.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\JSRException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\PyCaller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\ScriptTestJython.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\SimpleEmbedded.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\jsr\Trash.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\test_call_jy\Beach.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\test_call_jy\IJythonTestInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\src\test_call_jy\JavaImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\test\jsr\EvalFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\test\jsr\PyCallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\version-trash\web-template\test\jsr\TPKFilterTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/checkthread_annotations_1_0_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_guava_guava_14_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jcip_annotations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/net_sf_jchart2d_jchart2d_3_3_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_commons_lang3_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_tika_tika_parsers_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jetty_aggregate_jetty_all_7_0_2_v20100331.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_javatuples_javatuples_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_all_1_9_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_yaml_snakeyaml_1_12.xml" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\.idea\libraries\org_eclipse_jetty_aggregate_jetty_all_server_7_0_2_v20100331.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\cfgs\app_cfg.yaml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\crawler-app.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\run-jar.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\scriber-app.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\targets\spider_extractor_target_onto.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\hided\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\css\journal.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\del.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\ed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\go.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\rel.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\img\twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\index_.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\share.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\hided\web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\apps\web_view\subs\sys-settings-new.htm" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_python_jython_standalone_2_5_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_python_jython_standalone_2_5_3.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vocabulary-cards.iml" afterPath="$PROJECT_DIR$/vocabulary-cards.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/version-trash/.idea/workspace.xml" afterPath="$PROJECT_DIR$/version-trash/.idea/workspace.xml" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386183005452" ignored="false" />
-    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386089836524" ignored="false" />
+    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386184565950" ignored="false" />
+    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386184565950" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385906490599" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
     <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903417879" ignored="false" />
@@ -519,60 +223,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseTokenizer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableBaseCoursor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="11" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableBaseFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="11" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableDataExtractor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImmutableOntoAssistant.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="KeyWordsCoursor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -600,13 +250,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexCursorFactory.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IndexCursorFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="192" selection-end="192" vertical-scroll-proportion="-0.02233677">
+            <state line="8" column="18" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebRelay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalConfigurator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="27" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="28" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseSyllableCounter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="31" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinimalStaticChart.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="31" selection-start="466" selection-end="473" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobsFormer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.7245902">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -629,7 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/ServletGetterOnWordData.java" />
         <option value="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" />
         <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderJettyHandlers.java" />
         <option value="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" />
@@ -645,6 +350,7 @@
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/KeyWordsCoursor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
+        <option value="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
       </list>
     </option>
   </component>
@@ -680,8 +386,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -770,6 +474,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -781,18 +487,18 @@
     <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/version-trash" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jcip-annotations.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\war\WEB-INF\lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
   </component>
   <component name="RunManager" selected="JUnit.All in vocabulary-cards">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -807,19 +513,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -847,6 +540,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -952,13 +658,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2280285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4382423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.7719715" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19239905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820097" sideWeight="0.44299287" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55700713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1026,40 +732,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="23" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="55" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4935484" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/Mappers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/BECCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/nlp/BaseTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
@@ -1125,10 +797,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="192" selection-end="192" vertical-scroll-proportion="-0.02233677">
+        <state line="8" column="18" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="28" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="466" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="60" selection-start="619" selection-end="619" vertical-scroll-proportion="0.7245902">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,7 +18,7 @@ public class JobsFormer {
 
     List<List<String>> jobs = new ArrayList<List<String>>();
     //
-    List<String> nodes = ImmutableBaseCoursor.getListNodes().get();
+    List<String> nodes = ImmutableBaseCoursor.getListNodes();
     for (String node: nodes) {
       String contentFilename = Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
