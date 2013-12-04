@@ -2,28 +2,28 @@ package strange_things;//# или может IResourceWrapper? or IResourceCaptu
 
 /** Соединяется с ресурсом и преобразовывает его в текст. !Почему подсвечивает красным!?*/
 // Не забывать освободить ресурсы(о реализации)!
-public interface IResourceCapturerAndToTextConvertor {
+public interface ResourceCapturerAndToTextConvertor {
 
     /** Есть ли смысл в разделении захвата ресурса и преобразовании? Пока
      не используется преобразование по частям. А если использовать по частям?*/
 
     // @param url информация о том, как можно добраться до ресурса
-    IToTextErr capture(String url);  // будут использоваться внутри объекта
+    ToTextError capture(String url);  // будут использоваться внутри объекта
     // Returns: Представление ресурса графом?
 
-    IGraphToText getResourcePlan();
+    GraphToText getResourcePlan();
     // @param qualifier уточнитель
-    String toText(String qualifier, IToTextErr err);
+    String toText(String qualifier, ToTextError err);
 
     // Освобождаем ресурс
-    IToTextErr detach();
+    ToTextError detach();
     // Есть ли в Java деструкторы или финалайзеры?
 
     /** Разовое преобразование. Просто весь ресурс в текст.*/
-    String captureAndToText(String url, IToTextErr err);
+    String captureAndToText(String url, ToTextError err);
 
     /** Соединение с ресурсом не важно. Режим конвертера.*/
     // @param rawData не чистый текст, например html код
     // Returns: Чистый текст
-    String rawToText(String rawData, IToTextErr err);
+    String rawToText(String rawData, ToTextError err);
 }
