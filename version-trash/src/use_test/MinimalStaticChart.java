@@ -1,3 +1,5 @@
+package use_test;
+
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Random;
@@ -26,7 +28,7 @@ public class MinimalStaticChart {
     }
     // Make it visible:
     // Create a frame.
-    JFrame frame = new JFrame("MinimalStaticChart");
+    JFrame frame = new JFrame("Minimal StaticChart");
     // add the chart to the frame: 
     frame.getContentPane().add(chart);
     frame.setSize(400,300);

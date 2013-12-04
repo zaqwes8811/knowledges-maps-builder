@@ -1,3 +1,5 @@
+package use_test;
+
 import jython_callers.jsr.PyCaller;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package use_test;
+
 /**
  * Created with IntelliJ IDEA.
  * User: кей

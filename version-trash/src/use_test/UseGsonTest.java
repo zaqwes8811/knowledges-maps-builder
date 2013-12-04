@@ -1,3 +1,5 @@
+package use_test;
+
 import com.google.gson.Gson;
 import org.junit.Test;
 

@@ -1,4 +1,6 @@
+package nlp;
 
+import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
 
 import java.io.*;
@@ -10,7 +12,42 @@ import com.google.gson.Gson;
 //import com.google.gson.internal.LinkedHashTreeMap;  // in 2.2.3 not in 2.2.2
 
 
-public class TestLuceneStemmer {
+public class LuceneStemmerTest {
+  @Test
+  public void testMain1() {
+    try {
+      //EnglishAnalyzer english = new EnglishAnalyzer();
+      //english.
+            /*LuceneMorphology luceneMorph = new RussianLuceneMorphology();
+            String word = "раскраска";
+            List<String> wordBaseForms = luceneMorph.getMorphInfo(word);
+            System.out.print(wordBaseForms);
+            word = "вина";
+            wordBaseForms = luceneMorph.getMorphInfo(word);
+            System.out.print(wordBaseForms);
+
+            RussianLightStemmer rs = new RussianLightStemmer();
+            word = "смотрел";
+            int result = rs.stem(word.toCharArray(), word.length());
+            System.out.println("\n"+word);
+            word = "смотрела";
+            result = rs.stem(word.toCharArray(), word.length());
+            System.out.println(word);   */
+
+      String word = "смотрела";
+      russianStemmer rs_new = new russianStemmer();
+      rs_new.setCurrent(word);
+      rs_new.stem();
+      System.out.println(rs_new.getCurrent());
+
+      word = "смотрим";
+      rs_new.setCurrent(word);
+      rs_new.stem();
+      System.out.println(rs_new.getCurrent());
+    } catch (IOError e) {
+      e.getStackTrace();
+    }
+  }
     public String stem(String fname) {
         try {
             BufferedReader in = new BufferedReader(new FileReader(fname));
@@ -30,7 +67,9 @@ public class TestLuceneStemmer {
         return "Test return";
 
     }
-    public static void main(String[] args) {
+
+  @Test
+  public void testMain() {
         try {
             BufferedReader in = new BufferedReader(
                     new FileReader("apps/indexes/first_index.json"));
