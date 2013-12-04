@@ -17,13 +17,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 21:46
- * To change this template use File | Settings | File Templates.
- */
 public class RunnerWordLevelProcessingTest {
   @Test
   public void testDevelop () {

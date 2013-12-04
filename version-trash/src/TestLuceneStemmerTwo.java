@@ -1,11 +1,10 @@
-package src;
 import org.tartarus.snowball.ext.russianStemmer;
 
 import java.io.IOError;
 import java.io.IOException;
 import java.util.List;
 
-public class TestLuceneStemmer {
+public class TestLuceneStemmerTwo {
     public static void main(String[] args) {
         try {
             //EnglishAnalyzer english = new EnglishAnalyzer();

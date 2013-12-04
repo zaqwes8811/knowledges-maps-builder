@@ -1,12 +1,3 @@
-package to_text;
-
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 09.03.13
- * Time: 18:50
- * To change this template use File | Settings | File Templates.
- */
 //# или может IResourceWrapper? or IResourceCapturer
 /** Соединяется с ресурсом и преобразовывает его в текст. !Почему подсвечивает красным!?*/
 // Не забывать освободить ресурсы(о реализации)!
@@ -34,9 +25,4 @@ public interface IResourceCapturerAndToTextConvertor {
     // @param rawData не чистый текст, например html код
     // Returns: Чистый текст
     String rawToText(String rawData, IToTextErr err);
-}
-
-interface IToTextErr {
-
-   // TODO(zaqwes): Реализовать таки
 }
