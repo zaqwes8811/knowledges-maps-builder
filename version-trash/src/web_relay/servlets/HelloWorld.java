@@ -1,4 +1,4 @@
-package servlets;
+package web_relay.servlets;
 
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;

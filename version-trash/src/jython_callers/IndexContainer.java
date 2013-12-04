@@ -1,4 +1,4 @@
-package business;
+package jython_callers;
 
 import jython_callers.jsr.PyCaller;
 

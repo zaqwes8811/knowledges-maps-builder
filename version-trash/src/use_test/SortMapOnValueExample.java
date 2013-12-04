@@ -1,4 +1,4 @@
-/**
+package use_test; /**
  * Created with IntelliJ IDEA.
  * User: кей
  * Date: 11.05.13
