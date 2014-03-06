@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/aj_index.htm.html" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\war\js\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\war\js\prototype.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\lugansky-igor\vocabulary-cards\war\js\underscore.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="" />
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394120435143" ignored="false" />
@@ -110,10 +104,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aj_index.htm.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/aj_index.htm.html">
+      <file leaf-file-name="aj_index.htm" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/aj_index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="149" selection-end="149" vertical-scroll-proportion="0.15858209">
+            <state line="10" column="34" selection-start="298" selection-end="298" vertical-scroll-proportion="0.31716418">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cards.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/cards.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="28" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,6 +222,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,11 +516,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" />
@@ -592,9 +608,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/aj_index.htm.html">
+    <entry file="file://$PROJECT_DIR$/war/js/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="149" selection-end="149" vertical-scroll-proportion="0.15858209">
+        <state line="17" column="28" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/aj_index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="298" selection-end="298" vertical-scroll-proportion="0.31716418">
           <folding />
         </state>
       </provider>
