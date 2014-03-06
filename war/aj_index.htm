@@ -2,13 +2,16 @@
 <html ng-app>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    
+    <link rel="stylesheet" href="aj.css">
 </head>
 <body>
 <div>
-    <label>Name:</label>
+    <label>Word:</label>
     <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <div  class="div_item">{{yourName}}</div>
     <hr>
-    <h1>Hello {{yourName}}!</h1>
+    <div  class="div_item">Hello {{yourName}}!</div>
 </div>
 </body>
 </html>
