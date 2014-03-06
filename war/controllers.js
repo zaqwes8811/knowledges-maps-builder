@@ -11,6 +11,6 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
   ];
   
   $scope.go = function() {
-    alert('go');
+     $scope.phones.push({'name': 'ololo'});
   };
 });
