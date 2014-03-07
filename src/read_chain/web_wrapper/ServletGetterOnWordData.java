@@ -44,7 +44,7 @@ public class ServletGetterOnWordData extends HttpServlet {
       // Вот проблемы создают эти проверяемые исключения
   		int i = 0;
   		i = 9;
-  	}
+  	} 
 
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
