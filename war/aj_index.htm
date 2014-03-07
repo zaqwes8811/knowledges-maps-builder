@@ -9,16 +9,35 @@
 </head>
 <body ng-controller="PhoneListCtrl">
   <div>
-    Search: <input ng-model="query">
     Current space:
     <select ng-model="orderProp">
-      <option value="name">Alphabetical</option>
-      <option value="age">Newest</option>
+      <option value="age">BEC-dictonary</option>
     </select>
+    
+    <button ng-click="ni()">
+      Accept
+    </button>
+    
+    Search: <input ng-model="query">
+    
+    <button ng-click="ni()">
+      My progress
+    </button>
+    
+    <button ng-click="ni()">
+      Add new space
+    </button>
+    
     <hr>
+    
+    
 
     <!-- Own word -->
-    <div class="word_style" ng-model="word"> {{word}}</div>
+    <button ng-click="getNewWord()">
+      Get new word
+    </button>
+    <span class="word_style" ng-model="word"> {{word}}</span>
+    
     <hr>
 
     <button ng-click="showTranslates()">
@@ -29,9 +48,7 @@
       Context samples
     </button>
     
-    <button ng-click="getNewWord()">
-      Get new word
-    </button>
+    
 
     <!-- Addition data -->
     <br>
@@ -41,6 +58,10 @@
     filter:
     </label> 
     <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    Sort by:
+    <select ng-model="sorter">
+      <option value="name">Nothing</option>
+    </select>
 
     <!-- Translates -->
     <ul ng-hide="translateHided">
