@@ -14,5 +14,9 @@
 	<classpathentry kind="lib" path="D:/home/third_party/java/snakeyaml-1.12.jar"/>
 	<classpathentry kind="lib" path="D:/home/third_party/java/mockito-1.9.5/mockito-all-1.9.5.jar"/>
 	<classpathentry kind="lib" path="D:/home/third_party/java/checkthread-annotations-1.0.9.jar"/>
+	<classpathentry kind="lib" path="D:/home/vocabulary-cards/lib/tika-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/home/vocabulary-cards/lib/tika-parsers-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/home/vocabulary-cards/lib/jython-standalone-2.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/home/vocabulary-cards/lib/jchart2d-3.3.2.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
