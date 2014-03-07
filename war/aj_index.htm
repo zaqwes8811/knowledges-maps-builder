@@ -9,43 +9,45 @@
 </head>
 <body ng-controller="PhoneListCtrl">
   <div>
-  
-  <button ng-click="go()" ng-init="count=0">
-    Translate
-  </button> 
+    Search: <input ng-model="query">
+    Current space:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
+    <hr>
 
-  <button ng-click="go()" ng-init="count=0">
-    Context samples
-  </button>
+    <!-- Own word -->
+    <div class="word_style" ng-model="word"> {{word}}</div>
+    <hr>
 
-  <br>
-  
-  Search: <input ng-model="query">
-  Sort by:
-  <select ng-model="orderProp">
-    <option value="name">Alphabetical</option>
-    <option value="age">Newest</option>
-  </select>
+    <button ng-click="showTranslates()">
+      Translates
+    </button> 
 
-  <!-- Own word -->
-  <div class="word_style" ng-model="word"> {{word}}</div>
-  
-  <label>Filter:</label>
-  <input type="text" ng-model="yourName" placeholder="Enter a name here">    
-  <div  class="div_item">{{yourName}}</div>
-  <hr>
+    <button ng-click="showSamples()">
+      Context samples
+    </button>
 
-  <ul>
-    <li ng-repeat="phone in phones">
-      <div  class="div_item">{{phone.name}}</div>
-    </li>
-  </ul>
-  
-  <ul>
-    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-      <div  class="div_item">{{phone.name}}</div>
-    </li>
-  </ul>         
+    
+    <label>Filter:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">    
+    <div  class="div_item">{{yourName}}</div>
+
+    <!-- Translates -->
+    <ul ng-hide="translateHided">
+      <li ng-repeat="phone in phones">
+        <div  class="div_item">{{phone.name}}</div>
+      </li>
+    </ul>
+    
+    <!-- Context samples -->
+    <ul ng-hide="contextSamplesHided">
+      <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        <div  class="div_item">{{phone.name}}</div>
+      </li>
+    </ul>  
+
   </div>
 </body>
 </html>
