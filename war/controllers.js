@@ -18,5 +18,4 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
   // Сперва контекст
   $scope.contextSamplesHided = false;
   $scope.translateHided = true;  
->>>>>>> c5983ef610c841e143a85c560ff67ca58e71ffb2
 });
