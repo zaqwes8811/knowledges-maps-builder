@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.checkthread.annotations.NotThreadSafe;
 import through_functional.configurator.GlobalConfigurator;
+import com.google.gson.JsonSyntaxException;
 
 import java.io.IOException;
 
@@ -32,13 +33,17 @@ public class ServletGetterOnWordData extends HttpServlet {
         BuilderControllers builder = new BuilderControllers();
         ImmutableSet<String> namesNodes =
             new GlobalConfigurator(PATH_TO_CONFIGURATION_FILE_).getRegisteredNodes().get();
-        ImmutableList<ImmutableNodeAccessor> controllers = builder.createControllersForAllNodes(
-            namesNodes, new FabricImmutableNodeControllersImpl());
+        
+        ImmutableList<ImmutableNodeAccessor> controllers = 
+        		builder.createControllersForAllNodes(
+        				namesNodes, new FabricImmutableNodeControllersImpl());
 
         CONTAINER_ = new ContainerNodeControllers(controllers);
       }
   	} catch (Exception e) {
       // Вот проблемы создают эти проверяемые исключения
+  		int i = 0;
+  		i = 9;
   	}
 
     response.setContentType("text/html");
