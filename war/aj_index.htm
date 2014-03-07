@@ -43,8 +43,8 @@
     
     <!-- Context samples -->
     <ul ng-hide="contextSamplesHided">
-      <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-        <div  class="div_item">{{phone.name}}</div>
+      <li ng-repeat="phone in samples | filter:query | orderBy:orderProp">
+        <div  class="div_item">{{phone}}</div>
       </li>
     </ul>  
 
