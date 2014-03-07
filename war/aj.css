@@ -1,7 +1,13 @@
  
  
 .div_item {
-  background-color: red;
+  /*background-color: red;*/
+  height : 13 px;
+  width : 10 px;
+}
+
+.word_style {
+  background-color: gold;
   height : 13 px;
   width : 10 px;
 }

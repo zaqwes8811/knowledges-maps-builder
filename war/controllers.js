@@ -1,33 +1,22 @@
 var phonecatApp = angular.module('phonecatApp', []);
  
 phonecatApp.controller('PhoneListCtrl', function ($scope) {
-  $scope.translates = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
+  $scope.translates = ['Хор', 'Хелло','MOTOROLA XOOM'];
+  $scope.samples = ['Nexus S', 'Motorola XOOM with Wi-Fi','MOTOROLA XOOM'];
+  $scope.word = "My word";
   
-  $scope.contextOfWord = [
-    {'name': 'Nexus S asfdasdf',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
-  
+  $scope.showSamples = function() {
+     $scope.contextSamplesHided = false;
+     $scope.translateHided = true;
+  };
+
   $scope.showTranslates = function() {
-    $scope.myValue_tr = false;
-    $scope.myValue_co = true;
+     $scope.contextSamplesHided = true;
+     $scope.translateHided = false;
   };
-  
-  $scope.showContextItems = function() {
-    $scope.myValue_tr = true;
-    $scope.myValue_co = false;
-  };
-  
-  $scope.myValue_tr = true;
+
+  // Сперва контекст
+  $scope.contextSamplesHided = false;
+  $scope.translateHided = true;  
+>>>>>>> c5983ef610c841e143a85c560ff67ca58e71ffb2
 });
