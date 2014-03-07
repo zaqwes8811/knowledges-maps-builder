@@ -9,26 +9,48 @@
 </head>
 <body ng-controller="PhoneListCtrl">
   <div>
-  
-  <button ng-click="showTranslates()" ng-init="count=0">Translates</button> 
-  <button ng-click="showContextItems()" ng-init="count=0">Contexts</button> 
-  
-  <label>Filter:</label>
-  <input type="text" ng-model="yourName" placeholder="Enter a name here">    
-  <div class="div_item">{{yourName}}</div>
-  <hr>
+    Search: <input ng-model="query">
+    Current space:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
+    <hr>
 
-  <ul ng-hide="myValue_tr">
-    <li ng-repeat="phone in translates">
-      <div  class="div_item">{{phone.name}}</div>
-    </li>
-  </ul>
-  
-  <ul ng-hide="myValue_co">
-    <li ng-repeat="phone in contextOfWord">
-      <div  class="div_item">{{phone.name}}</div>
-    </li>
-  </ul>
+    <!-- Own word -->
+    <div class="word_style" ng-model="word"> {{word}}</div>
+    <hr>
+
+    <button ng-click="showTranslates()">
+      Translates
+    </button> 
+
+    <button ng-click="showSamples()">
+      Context samples
+    </button>
+
+    <!-- Addition data -->
+    <br>
+    <label>
+    <span ng-hide="translateHided">Translates</span> 
+    <span ng-hide="contextSamplesHided">Context samples</span>
+    filter:
+    </label> 
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+
+    <!-- Translates -->
+    <ul ng-hide="translateHided">
+      <li ng-repeat="translate in translates | filter:yourName">
+        {{translate}}
+      </li>
+    </ul>
+    
+    <!-- Context samples -->
+    <ul ng-hide="contextSamplesHided">
+      <li ng-repeat="sample in samples | filter:yourName">
+        {{sample}}
+      </li>
+    </ul>  
   </div>
 </body>
 </html>
