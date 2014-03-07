@@ -28,8 +28,9 @@ public class ServletGetterOnWordData extends HttpServlet {
   		HttpServletResponse response) throws ServletException, IOException
   	{
   	
+  	// TODO: syncronised
   	try {
-      if(null == CONTAINER_) {
+      if (null == CONTAINER_) {
         BuilderControllers builder = new BuilderControllers();
         ImmutableSet<String> namesNodes =
             new GlobalConfigurator(PATH_TO_CONFIGURATION_FILE_).getRegisteredNodes().get();
