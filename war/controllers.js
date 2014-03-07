@@ -9,9 +9,19 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
     {'name': 'MOTOROLA XOOM™',
      'snippet': 'The Next, Next Generation tablet.'}
   ];
+
+  $scope.samples = [
+    'asdf', 'asdfasdf'
+  ];
   
-  $scope.go = function() {
-     $scope.phones.push({'name': 'ololo'});
+  $scope.showSamples = function() {
+     $scope.contextSamplesHided = false;
+     $scope.translateHided = true;
+  };
+
+  $scope.showTranslates = function() {
+     $scope.contextSamplesHided = true;
+     $scope.translateHided = false;
   };
 
   $scope.word = "My word";
