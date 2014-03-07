@@ -2,8 +2,8 @@ var phonecatApp = angular.module('phonecatApp', []);
  
 phonecatApp.controller('PhoneListCtrl', function ($scope) {
   $scope.translates = ['Хор', 'Хелло','MOTOROLA XOOM'];
-
   $scope.samples = ['Nexus S', 'Motorola XOOM with Wi-Fi','MOTOROLA XOOM'];
+  $scope.word = "My word";
   
   $scope.showSamples = function() {
      $scope.contextSamplesHided = false;
@@ -15,9 +15,7 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
      $scope.translateHided = false;
   };
 
-  $scope.word = "My word";
-
+  // Сперва контекст
   $scope.contextSamplesHided = false;
-
-  $scope.translateHided = true;  // Сперва контекст
+  $scope.translateHided = true;  
 });
