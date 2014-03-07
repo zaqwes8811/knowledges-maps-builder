@@ -14,5 +14,9 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
      $scope.phones.push({'name': 'ololo'});
   };
 
-  $scope.word = "asdfasdf";
+  $scope.word = "My word";
+
+  $scope.contextSamplesHided = false;
+
+  $scope.translateHided = true;
 });
