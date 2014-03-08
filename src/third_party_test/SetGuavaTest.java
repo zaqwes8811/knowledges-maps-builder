@@ -1,6 +1,7 @@
 package third_party_test;
 
 import com.google.common.base.CharMatcher;
+import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
@@ -14,40 +15,38 @@ public class SetGuavaTest {
 
   @Test
     public void testSplit() {
-	// write your code here
-
-        Iterable<String> splitted = Splitter.on(',')
-                .trimResults()
-                .omitEmptyStrings()
-                .split("foo,bar,,   qux");
-
-        //for(String s: splitted) {
-        //    System.out.println(s);
-        //}
-
-        splitted = Splitter.on(',').trimResults().split("a,  l b,   c asfddf, d, d, d");
-        //for(String s: splitted) {
-        //    System.out.println(s);
-        //}
-
-        Multiset<String> wordsMultiset = HashMultiset.create(splitted);
-        // wordsMultiset.create(splitted);
-        for(String s: wordsMultiset.elementSet()) {
-            System.out.println((s));
-            System.out.println(wordsMultiset.count(s));
-        }
+        Iterable<String> result =
+          Splitter.on(',')
+            .trimResults()
+            .split("a,  l b,   c asfddf, d, d, d");
+        Multiset<String> wordsMultiset = HashMultiset.create(result);
         System.out.print(wordsMultiset);
     }
 
   @Test
   public void testTrimSpacesString() {
-    Iterable<String> splitted =
+    Iterable<String> result =
       Splitter
         .on(CharMatcher.WHITESPACE)
         .trimResults()
         .omitEmptyStrings()
         .split("   ");
-    assert ImmutableList.copyOf(splitted).isEmpty() == true;
-    //Utils.print(splitted);
+    assert ImmutableList.copyOf(result).isEmpty() == true;
+  }
+
+  @Test
+  public void testStringIsDigit() {
+    Iterable<String> result =
+      Splitter
+        .on(CharMatcher.WHITESPACE)
+        .trimResults()
+        .omitEmptyStrings()
+        .split("88  ");
+
+    assert ImmutableList.copyOf(result).size() == 1;
+
+    Joiner joiner = Joiner.on("; ").skipNulls();
+    String line = joiner.join(ImmutableList.copyOf(result));
+    //assert CharMatcher.is(CharMatcher.JAVA_DIGIT) == true;
   }
 }

@@ -39,7 +39,7 @@
     <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <file path="/ImmutableSummators.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394277970787" ignored="false" />
     <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394298883487" ignored="false" />
-    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394302997369" ignored="false" />
+    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394304538805" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,10 +101,19 @@
       <file leaf-file-name="SetGuavaTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="8" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.211946">
+            <state line="49" column="6" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.7707129">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UseTikaTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/common/nlp/BaseSyllableCounter.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseFilter.java" />
@@ -142,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
+        <option value="$PROJECT_DIR$/src/third_party_test/UseTikaTest.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
       </list>
     </option>
@@ -519,7 +528,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.6472684" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -671,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="51" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/CallJythonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
@@ -694,9 +696,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="8" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.211946">
+        <state line="49" column="6" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.7707129">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
