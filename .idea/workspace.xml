@@ -39,7 +39,7 @@
     <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <file path="/ImmutableSummators.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394277970787" ignored="false" />
     <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394298883487" ignored="false" />
-    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394304538805" ignored="false" />
+    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394304862947" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,29 @@
       <file leaf-file-name="SetGuavaTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="6" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.7707129">
+            <state line="51" column="19" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.88439304">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubtitlesParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="25" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseFilter.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableDataExtractor.java" />
@@ -149,8 +170,9 @@
         <option value="$PROJECT_DIR$/war/aj_index.htm.html" />
         <option value="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
-        <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/UseTikaTest.java" />
+        <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
+        <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
       </list>
     </option>
@@ -257,32 +279,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="parsers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SubtitlesParserTest.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -596,11 +592,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/srts/os_dal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/math/ImmutableSummators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" />
@@ -687,15 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="32" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
@@ -703,9 +685,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="25" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="6" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.7707129">
+        <state line="51" column="19" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.88439304">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
