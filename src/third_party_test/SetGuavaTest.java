@@ -46,7 +46,7 @@ public class SetGuavaTest {
 
     assert ImmutableList.copyOf(result).size() == 1;
 
-    Joiner joiner = Joiner.on("; ").skipNulls();
+    Joiner joiner = Joiner.on("").skipNulls();
     String line = joiner.join(ImmutableList.copyOf(result));
 
     assert StringUtils.isNumeric(line);
