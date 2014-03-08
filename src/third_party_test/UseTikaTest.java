@@ -20,7 +20,7 @@ public class UseTikaTest {
 
   @Test
   public void testMain(){
-    InputStream is = null;
+    /*InputStream is = null;
 
     try {
       is = new BufferedInputStream(new FileInputStream(new File("d:/MIT6_01SCS11_chap04.jython_src.pdf")));
@@ -40,7 +40,7 @@ public class UseTikaTest {
           System.out.println("Metadata Name:  " + name);
           System.out.println("Metadata Value: " + value);
         }
-      }  */
+      }  * /
     } catch (IOException e) {
       e.printStackTrace();
     } catch (TikaException e) {
@@ -55,6 +55,6 @@ public class UseTikaTest {
           e.printStackTrace();
         }
       }
-    }
+    } */
   }
 }
