@@ -38,8 +38,10 @@
     <file path="/KeyWordsCoursor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093255275" ignored="false" />
     <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <file path="/ImmutableSummators.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394277970787" ignored="false" />
-    <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394308045399" ignored="false" />
+    <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394308749737" ignored="false" />
     <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394304862947" ignored="false" />
+    <file path="/SubtitlesParser.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394310049203" ignored="false" />
+    <file path="/SentencesSplitter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394309936077" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,32 +100,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SetGuavaTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4258189">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="9" column="26" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubtitlesParser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SubtitlesParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="25" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+            <state line="71" column="35" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.44050634">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,11 +120,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UseTikaTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
+      <file leaf-file-name="SentencesSplitter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="15" column="102" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#596#604#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
-        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableBaseFilter.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableDataExtractor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/ImmutableOntoAssistant.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/hided/KeyWordsCoursor.java" />
@@ -171,9 +161,11 @@
         <option value="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/UseTikaTest.java" />
-        <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
+        <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java" />
+        <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java" />
+        <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
       </list>
     </option>
   </component>
@@ -255,7 +247,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_test" />
+              <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,25 +269,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
+              <option name="myItemId" value="nlp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,8 +497,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.6472684" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -592,32 +566,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/business/math/ImmutableSummators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_chain/spiders_extractors/ExtractorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="14" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/spiders_processors/MinimalSpiderProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="13" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
@@ -678,15 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
@@ -694,18 +633,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/srts/os_dal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5895954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
+        <state line="48" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.66502464">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="1454" selection-end="1742" vertical-scroll-proportion="0.45637584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/war/WEB-INF/lib/guava-14.0.1.jar!/com/google/common/collect/ImmutableList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="260" selection-end="260" vertical-scroll-proportion="0.2857143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="102" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#596#604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4258189">
+        <state line="9" column="26" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="35" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.44050634">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
