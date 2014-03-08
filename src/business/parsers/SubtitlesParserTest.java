@@ -1,12 +1,5 @@
 package business.parsers;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 08.03.14
- * Time: 15:29
- * To change this template use File | Settings | File Templates.
- */
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
@@ -15,22 +8,15 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
 import common.Utils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.tika.exception.TikaException;
-import org.apache.tika.metadata.Metadata;
-import org.apache.tika.mime.MediaType;
-import org.apache.tika.parser.ParseContext;
 import org.junit.Test;
-import org.xml.sax.ContentHandler;
-import org.xml.sax.SAXException;
 
 import java.io.*;
-import java.util.Set;
-
-
 
 public class SubtitlesParserTest {
   @Test
   public void testCreate() throws IOException {
+    char SPECIAL_SYMBOL = '’';  // TODO: it's trouble. Константа в коде - юникодная.
+
     // Пока файл строго юникод - UTF-8
     Closer closer = Closer.create();
     try {
@@ -42,8 +28,6 @@ public class SubtitlesParserTest {
         //Charsets.US_ASCII
         Charsets.UTF_8
       ));
-
-      char symbol = '’';
 
       String buffer;
       StringBuilder result = new StringBuilder();
@@ -65,7 +49,7 @@ public class SubtitlesParserTest {
             && !(splitted.size() == 1
               && StringUtils.isNumeric(joinString)))
           {
-          buffer = CharMatcher.is(symbol).replaceFrom(buffer, "'");
+          buffer = CharMatcher.is(SPECIAL_SYMBOL).replaceFrom(buffer, "'");
           Utils.print(buffer);
           result.append(buffer).append('\n');
         }
@@ -75,6 +59,5 @@ public class SubtitlesParserTest {
     } finally {
       closer.close();
     }
-
   }
 }
