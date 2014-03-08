@@ -1,4 +1,4 @@
-package com.github.zaqwes8811.text_processor.mapreduce;
+package write_chain.mapreduce;
 
 /**
  * Created with IntelliJ IDEA.
