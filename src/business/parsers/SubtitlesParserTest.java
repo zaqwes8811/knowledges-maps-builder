@@ -7,5 +7,11 @@ package business.parsers;
  * Time: 15:29
  * To change this template use File | Settings | File Templates.
  */
+import org.junit.Test;
+
 public class SubtitlesParserTest {
+  @Test
+  public void testCreate() {
+
+  }
 }
