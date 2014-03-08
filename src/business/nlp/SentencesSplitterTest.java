@@ -12,9 +12,6 @@ import java.util.Locale;
 public class SentencesSplitterTest {
   @Test
   public void testMain() {
-    // write your code here
-
-    
     String text = "\n" +
       "22.2 Сроки и порядок предоставления налоговой декларации \n" +
       "В соответствии с п. 5 статьи 204 НК РФ налогоплательщики обязаны представлять в \n" +
