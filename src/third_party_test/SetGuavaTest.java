@@ -7,6 +7,7 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 import common.Utils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,14 +15,14 @@ import java.util.ArrayList;
 public class SetGuavaTest {
 
   @Test
-    public void testSplit() {
-        Iterable<String> result =
-          Splitter.on(',')
-            .trimResults()
-            .split("a,  l b,   c asfddf, d, d, d");
-        Multiset<String> wordsMultiset = HashMultiset.create(result);
-        System.out.print(wordsMultiset);
-    }
+  public void testSplit() {
+      Iterable<String> result =
+        Splitter.on(',')
+          .trimResults()
+          .split("a,  l b,   c asfddf, d, d, d");
+      Multiset<String> wordsMultiset = HashMultiset.create(result);
+      System.out.print(wordsMultiset);
+  }
 
   @Test
   public void testTrimSpacesString() {
@@ -31,7 +32,7 @@ public class SetGuavaTest {
         .trimResults()
         .omitEmptyStrings()
         .split("   ");
-    assert ImmutableList.copyOf(result).isEmpty() == true;
+    assert ImmutableList.copyOf(result).isEmpty();
   }
 
   @Test
@@ -47,6 +48,7 @@ public class SetGuavaTest {
 
     Joiner joiner = Joiner.on("; ").skipNulls();
     String line = joiner.join(ImmutableList.copyOf(result));
-    //assert CharMatcher.is(CharMatcher.JAVA_DIGIT) == true;
+
+    assert StringUtils.isNumeric(line);
   }
 }
