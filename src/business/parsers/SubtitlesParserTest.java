@@ -53,7 +53,7 @@ public class SubtitlesParserTest {
       String buffer;
       StringBuilder result = new StringBuilder();
       while ((buffer = reader.readLine()) != null) {
-        result.append(buffer);
+        result.append(buffer+'\n');
       }
 
       Utils.print(result);

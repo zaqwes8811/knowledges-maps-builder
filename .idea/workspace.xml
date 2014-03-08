@@ -39,7 +39,7 @@
     <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <file path="/ImmutableSummators.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394277970787" ignored="false" />
     <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394298883487" ignored="false" />
-    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394298292581" ignored="false" />
+    <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394302997369" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,51 +98,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SetGuavaTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SetGuavaTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="5" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
+            <state line="48" column="8" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.211946">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="10" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.27938342">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CallJythonTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/third_party_test/CallJythonTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseTikaTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/third_party_test/UseTikaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="51" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseGsonTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/third_party_test/UseGsonTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="2" selection-start="131" selection-end="136" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,8 +141,8 @@
         <option value="$PROJECT_DIR$/war/aj_index.htm.html" />
         <option value="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
-        <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
+        <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
       </list>
     </option>
   </component>
@@ -362,7 +324,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.All in vocabulary-cards">
+  <component name="RunManager" selected="JUnit.Third party test">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -493,7 +455,13 @@
       <envs />
       <dir value="$PROJECT_DIR$/src/third_party_test" />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -535,13 +503,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -698,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/third_party_test/UseGsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="131" selection-end="136" vertical-scroll-proportion="0.0">
+        <state line="15" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -717,18 +685,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="5" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
+        <state line="55" column="32" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="10" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.27938342">
+        <state line="48" column="8" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.211946">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
