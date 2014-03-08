@@ -38,7 +38,7 @@
     <file path="/KeyWordsCoursor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093255275" ignored="false" />
     <file path="/NotesProcessor.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386093264098" ignored="false" />
     <file path="/ImmutableSummators.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394277970787" ignored="false" />
-    <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394307967559" ignored="false" />
+    <file path="/SubtitlesParserTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394308045399" ignored="false" />
     <file path="/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394304862947" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +112,7 @@
       <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="38" selection-start="925" selection-end="925" vertical-scroll-proportion="0.4431599">
+            <state line="13" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4258189">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -524,7 +524,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.6472684" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3527316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -705,7 +705,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="38" selection-start="925" selection-end="925" vertical-scroll-proportion="0.4431599">
+        <state line="13" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4258189">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
