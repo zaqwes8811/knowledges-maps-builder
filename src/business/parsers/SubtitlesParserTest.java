@@ -44,7 +44,8 @@ public class SubtitlesParserTest {
       String filename = "statistic/Frozen.2013.CAMRIP.CHiLLYWiLLY.srt";
       InputStream in = closer.register(new FileInputStream(new File(filename)));
 
-      BufferedReader reader = new BufferedReader(new InputStreamReader(in,
+      BufferedReader reader = new BufferedReader(new InputStreamReader(in
+        ,
         Charsets.US_ASCII
         //Charsets.UTF_8
       ));
