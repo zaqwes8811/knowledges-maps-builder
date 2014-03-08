@@ -1,4 +1,4 @@
-package write_chain.spiders_extractors;
+package business.nlp;
 
 import java.io.*;
 import java.net.URL;
@@ -27,6 +27,7 @@ import org.apache.tika.sax.BodyContentHandler;
 
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
+import write_chain.spiders_extractors.ExtractorException;
 
 final public class TikaWrapper {
   // Fields

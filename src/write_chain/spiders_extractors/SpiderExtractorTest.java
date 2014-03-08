@@ -1,6 +1,7 @@
 package write_chain.spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
 
 
+import business.nlp.TikaWrapper;
 import common.InnerReuse;
 import write_chain.jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;

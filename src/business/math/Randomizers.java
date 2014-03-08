@@ -1,4 +1,6 @@
-package business.math.hided;
+package business.math;
+
+import business.math.Randomizer;
 
 import java.util.Random;
 

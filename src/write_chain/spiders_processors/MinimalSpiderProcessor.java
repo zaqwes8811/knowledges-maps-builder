@@ -5,7 +5,7 @@ import common.InnerReuse;
 import common.Utils;
 import info_core_accessors.ImmutableBaseCoursor;
 import write_chain.jobs_processors.ProcessorTargets;
-import write_chain.spiders_extractors.TikaWrapper;
+import business.nlp.TikaWrapper;
 import through_functional.AppConstants;
 
 

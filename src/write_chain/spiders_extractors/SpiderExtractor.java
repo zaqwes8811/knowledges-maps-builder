@@ -1,5 +1,6 @@
 package write_chain.spiders_extractors;
 
+import business.nlp.TikaWrapper;
 import common.InnerReuse;
 import write_chain.jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
