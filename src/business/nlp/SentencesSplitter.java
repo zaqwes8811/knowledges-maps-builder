@@ -12,8 +12,15 @@ public class SentencesSplitter {
   //   split with some probability
   //
   // Troubles:
-  //   разбитие прямой речи из субтитров. Недоразбивает
-  //   Yeah, I just wasn't looking where I was going. - But I'm great, actually. - Oh, thank goodness.
+  /*
+    разбитие прямой речи из субтитров. Недоразбивает:
+
+    Yeah, I just wasn't looking where I was going. - But I'm great, actually. - Oh, thank goodness.
+    Pattern -
+
+    Sorry. ...Your  - Pattern -
+
+  */
   public ImmutableList<String> getSentences(String text) {
     BreakIterator bi = BreakIterator.getSentenceInstance();
     bi.setText(text);
