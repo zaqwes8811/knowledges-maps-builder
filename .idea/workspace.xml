@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\business\ImmutableSummators.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\parsers\ImmutableBECParser.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\parsers\ImmutableBECSave.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" afterPath="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/write_chain/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_processors/MinimalSpiderProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/write_chain/spiders_extractors/SpiderExtractorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/Evaluator/NotesProcessor.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\math\hided\Randomizer.java" afterPath="$PROJECT_DIR$/src/business/math/Randomizer.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\math\hided\Randomizers.java" afterPath="$PROJECT_DIR$/src/business/math/Randomizers.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\parsers\ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\parsers\ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\parsers\VParserException.java" afterPath="$PROJECT_DIR$/src/business/parsers/VParserException.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_extractors\TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
+      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\Evaluator\NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -624,7 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/Evaluator/NotesProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="12" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
           <folding />

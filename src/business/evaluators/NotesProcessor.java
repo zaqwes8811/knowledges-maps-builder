@@ -1,4 +1,4 @@
-package business.Evaluator;
+package business.evaluators;
 
 
 import common.Utils;
