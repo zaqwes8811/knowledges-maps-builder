@@ -1,9 +1,14 @@
 package third_party_test;
 
+import com.google.common.base.CharMatcher;
 import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
+import common.Utils;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 public class SetGuavaTest {
 
@@ -35,8 +40,14 @@ public class SetGuavaTest {
     }
 
   @Test
-  void testTrimSpacesString() {
-
-
+  public void testTrimSpacesString() {
+    Iterable<String> splitted =
+      Splitter
+        .on(CharMatcher.WHITESPACE)
+        .trimResults()
+        .omitEmptyStrings()
+        .split("   ");
+    assert ImmutableList.copyOf(splitted).isEmpty() == true;
+    //Utils.print(splitted);
   }
 }
