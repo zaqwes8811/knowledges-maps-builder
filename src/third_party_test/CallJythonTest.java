@@ -1,9 +1,8 @@
-package use_test;
+package third_party_test;
 
 import jython_callers.jsr.PyCaller;
 import org.junit.Test;
 
-import  java.util.ArrayList;
 public class CallJythonTest {
 
   @Test

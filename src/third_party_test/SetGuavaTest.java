@@ -1,12 +1,14 @@
-package use_test;
+package third_party_test;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
+import org.junit.Test;
 
-public class UseGuavaTest {
+public class SetGuavaTest {
 
-    public static void main(String[] args) {
+  @Test
+    public void testSplit() {
 	// write your code here
 
         Iterable<String> splitted = Splitter.on(',')
@@ -31,4 +33,10 @@ public class UseGuavaTest {
         }
         System.out.print(wordsMultiset);
     }
+
+  @Test
+  void testTrimSpacesString() {
+
+
+  }
 }
