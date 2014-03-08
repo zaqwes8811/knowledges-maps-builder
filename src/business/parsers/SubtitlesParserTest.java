@@ -21,20 +21,7 @@ import org.xml.sax.SAXException;
 import java.io.*;
 import java.util.Set;
 
-class SubtitlesParser implements org.apache.tika.parser.Parser {
-  @Override
-  public Set<MediaType> getSupportedTypes(ParseContext parseContext) {
-    return null;
-  }
 
-  @Override
-  public void parse(
-    InputStream stream, ContentHandler handler,
-    Metadata metadata, ParseContext context)
-    throws IOException, SAXException, TikaException {
-
-  }
-}
 
 public class SubtitlesParserTest {
   @Test
