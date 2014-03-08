@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\log.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\make.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\myapp.pro" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\myapp.pro.user" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/set_of_libs.xml" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\checkthread_annotations_1_0_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\com_google_code_gson_gson_2_2_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\com_google_guava_guava_14_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\jcip_annotations.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\junit_junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\net_sf_jchart2d_jchart2d_3_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_apache_tika_tika_parsers_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_eclipse_jetty_aggregate_jetty_all_7_0_2_v20100331.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_javatuples_javatuples_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_mockito_mockito_all_1_9_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_python_jython_standalone_2_5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\home\vocabulary-cards\.idea\libraries\org_yaml_snakeyaml_1_12.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vocabulary-cards.iml" afterPath="$PROJECT_DIR$/vocabulary-cards.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +26,7 @@
     <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386184565950" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385906490599" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
-    <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903417879" ignored="false" />
+    <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394272454372" ignored="false" />
     <file path="/Reduces.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903616960" ignored="false" />
     <file path="/JobsFormer.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385906460953" ignored="false" />
     <file path="/Getters.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1386090846700" ignored="false" />
@@ -91,11 +104,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="30" selection-start="976" selection-end="976" vertical-scroll-proportion="0.18434343">
+            <state line="20" column="30" selection-start="976" selection-end="976" vertical-scroll-proportion="-5.6153846">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalConfiguratorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="26" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdxNodeAccessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/jython/book/util/BuildingFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebRelay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_relay/WebRelay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="31" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseContentHolderTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="21" selection-start="981" selection-end="981" vertical-scroll-proportion="0.50239235">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,7 +267,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-template" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,9 +285,9 @@
     <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/war/WEB-INF/lib/mockito-all-1.9.5.jar!/" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.43589744" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -387,7 +447,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -402,7 +462,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3063209" sideWeight="0.5522565" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3063209" sideWeight="0.5522565" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44774348" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -471,39 +531,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="11" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" />
+        <state line="7" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="28" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.0" />
+        <state line="7" column="27" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseSyllableCounter.java">
@@ -513,22 +552,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/use_test/MinimalStaticChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="466" selection-end="473" vertical-scroll-proportion="0.0" />
+        <state line="18" column="31" selection-start="466" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" />
+        <state line="20" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" />
+        <state line="14" column="29" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/jobs_processors/JobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" />
+        <state line="22" column="13" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java">
@@ -554,8 +601,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="976" selection-end="976" vertical-scroll-proportion="0.18434343">
+        <state line="20" column="30" selection-start="976" selection-end="976" vertical-scroll-proportion="-5.6153846">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="26" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/jython/book/util/BuildingFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_relay/WebRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="21" selection-start="981" selection-end="981" vertical-scroll-proportion="0.50239235">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,7 +653,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
                 <option value="0.5" />
               </list>
             </option>
@@ -582,7 +666,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
               </list>
             </option>
           </splitter-proportions>
@@ -594,7 +678,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
               </list>
             </option>
           </splitter-proportions>
@@ -606,7 +690,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
               </list>
             </option>
           </splitter-proportions>
@@ -618,7 +702,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
               </list>
             </option>
           </splitter-proportions>
@@ -626,11 +710,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.python:jython-standalone:2.5.3</last-edited>
+          <last-edited>set of libs</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.43589744" />
               </list>
             </option>
           </splitter-proportions>
