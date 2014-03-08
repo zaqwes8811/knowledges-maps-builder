@@ -1,4 +1,4 @@
-package use_test;
+package third_party_test;
 
 import java.io.BufferedInputStream;
 import java.io.File;

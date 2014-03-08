@@ -1,4 +1,4 @@
-package use_test;
+package third_party_test;
 
 /**
  * Created with IntelliJ IDEA.

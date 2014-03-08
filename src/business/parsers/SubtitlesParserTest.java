@@ -7,6 +7,7 @@ package business.parsers;
  * Time: 15:29
  * To change this template use File | Settings | File Templates.
  */
+import com.google.common.base.Charsets;
 import com.google.common.io.Closer;
 import common.Utils;
 import org.apache.tika.exception.TikaException;
@@ -43,7 +44,10 @@ public class SubtitlesParserTest {
       String filename = "statistic/Frozen.2013.CAMRIP.CHiLLYWiLLY.srt";
       InputStream in = closer.register(new FileInputStream(new File(filename)));
 
-      BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+      BufferedReader reader = new BufferedReader(new InputStreamReader(in,
+        Charsets.US_ASCII
+        //Charsets.UTF_8
+      ));
 
       String buffer;
       StringBuilder result = new StringBuilder();

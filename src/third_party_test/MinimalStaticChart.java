@@ -1,4 +1,4 @@
-package use_test;
+package third_party_test;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
