@@ -1,4 +1,4 @@
-package third_party_test; /**
+package chew_third_party; /**
  * Created with IntelliJ IDEA.
  * User: кей
  * Date: 11.05.13

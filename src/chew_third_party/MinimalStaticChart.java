@@ -1,4 +1,4 @@
-package third_party_test;
+package chew_third_party;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
