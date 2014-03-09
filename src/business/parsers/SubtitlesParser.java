@@ -35,6 +35,7 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
   // TODO: Усилить регулярным выражением
   private final String TIME_TICKET_SIGN = "-->";
 
+  // Передать любой handler нельзя.
   @Override
   public void parse(
       InputStream stream, ContentHandler handler,
@@ -47,7 +48,8 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
       ));
 
     String buffer;
-    List<String> result = new ArrayList();
+    List<String> result = new ArrayList<String>();
+    handler.startDocument();
     while ((buffer = reader.readLine()) != null) {
       // TODO: not effective
 
@@ -70,17 +72,7 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
         result.add(buffer);
       }
     }
-
-    // Получили список строк.
-    String text = Joiner.on(" ").join(result);
-    ImmutableList<String> sentences = new SentencesSplitter().getSentences(text);
-
-    // Убираем знаки прямой речи
-
     // Summary
-    for (String sentence : sentences) {
-      Utils.print(sentence);
-    }
-
+    handler.endDocument();
   }
 }
