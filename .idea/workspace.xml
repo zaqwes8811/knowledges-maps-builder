@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew_language/StringCodingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" afterPath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chew_language/StringCodingTest.java" afterPath="$PROJECT_DIR$/src/chew_language/StringCodingTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\CallJythonTest.java" afterPath="$PROJECT_DIR$/src/chew_third_party/CallJythonTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\ImmutableRGB.java" afterPath="$PROJECT_DIR$/src/chew_third_party/ImmutableRGB.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\MinimalStaticChart.java" afterPath="$PROJECT_DIR$/src/chew_third_party/MinimalStaticChart.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\SetGuavaTest.java" afterPath="$PROJECT_DIR$/src/chew_third_party/SetGuavaTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\SortMapOnValueExample.java" afterPath="$PROJECT_DIR$/src/chew_third_party/SortMapOnValueExample.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\UseGsonTest.java" afterPath="$PROJECT_DIR$/src/chew_third_party/UseGsonTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\third_party_test\UseTikaTest.java" afterPath="$PROJECT_DIR$/src/chew_third_party/UseTikaTest.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +37,14 @@
     <file path="/SubtitlesParser.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394310049203" ignored="false" />
     <file path="/SentencesSplitter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394310225753" ignored="false" />
     <file path="/ContentHandlerImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348198933" ignored="false" />
-    <file path="/StringCodingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348524239" ignored="false" />
+    <file path="/StringCodingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348675923" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/CallJythonTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/ImmutableRGB.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/MinimalStaticChart.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/SortMapOnValueExample.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/UseGsonTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/SetGuavaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
+    <file path="$PROJECT_DIR$/src/chew_third_party/UseTikaTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348718265" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <file leaf-file-name="StringCodingTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chew_language/StringCodingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.12142857">
+            <state line="10" column="35" selection-start="259" selection-end="259" vertical-scroll-proportion="0.30357143">
               <folding />
             </state>
           </provider>
@@ -150,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/info_core_accessors/hided/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java" />
@@ -165,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/src/_chew_language/StringCodingTest.java" />
         <option value="$PROJECT_DIR$/src/chew_language/StringCodingTest.java" />
       </list>
     </option>
@@ -230,24 +228,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chew_language" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -521,7 +501,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -713,7 +693,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chew_language/StringCodingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.12142857">
+        <state line="10" column="35" selection-start="259" selection-end="259" vertical-scroll-proportion="0.30357143">
           <folding />
         </state>
       </provider>
