@@ -55,7 +55,7 @@ public class ContentHandlerImpl extends DefaultHandler {
 
   @Override
   public void characters(char[] ch, int start, int length) throws SAXException {
-    //String
+    sink_.add(new String(ch));
   }
 
   @Override

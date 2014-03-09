@@ -5,7 +5,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import write_chain.mapreduce.GlobalConstants;
+import business.mapreduce.GlobalConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
