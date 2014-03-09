@@ -1,5 +1,10 @@
 package chew_language;
 
+/**
+ *
+ http://javatutor.net/articles/working-with-encodings
+ */
+
 import com.google.common.base.Charsets;
 import org.junit.Test;
 
