@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import write_chain.jobs_processors.ProcessorTargets;
+import business.jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
 import common.InnerReuse;
 import com.google.common.base.Joiner;
@@ -27,7 +27,7 @@ import org.apache.tika.sax.BodyContentHandler;
 
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
-import write_chain.spiders_extractors.ExtractorException;
+import business.spiders_extractors.ExtractorException;
 
 final public class TikaWrapper {
   // Fields

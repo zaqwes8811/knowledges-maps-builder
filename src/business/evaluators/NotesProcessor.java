@@ -4,12 +4,12 @@ package business.evaluators;
 import common.Utils;
 import info_core_accessors.ImmutableBaseCoursor;
 import info_core_accessors.ImmutableIdxGetters;
-import write_chain.jobs_processors.ProcessorTargets;
+import business.jobs_processors.ProcessorTargets;
 import through_functional.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import write_chain.mapreduce.ImmutableReduceSentencesLevel;
+import business.mapreduce.ImmutableReduceSentencesLevel;
 
 import java.lang.reflect.Type;
 import java.util.*;
