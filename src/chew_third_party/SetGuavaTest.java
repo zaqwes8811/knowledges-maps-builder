@@ -1,4 +1,4 @@
-package third_party_test;
+package chew_third_party;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
@@ -6,11 +6,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
-import common.Utils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class SetGuavaTest {
 

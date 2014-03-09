@@ -1,4 +1,4 @@
-package third_party_test;
+package chew_third_party;
 
 import jython_callers.jsr.PyCaller;
 import org.junit.Test;
