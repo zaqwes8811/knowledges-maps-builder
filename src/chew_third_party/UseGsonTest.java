@@ -1,4 +1,4 @@
-package third_party_test;
+package chew_third_party;
 
 import com.google.gson.Gson;
 import org.junit.Test;
