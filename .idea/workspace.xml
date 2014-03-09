@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" afterPath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348578283" ignored="false" />
-    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348578283" ignored="false" />
+    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394381431397" ignored="false" />
+    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394381431397" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385906490599" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
     <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394272454372" ignored="false" />
@@ -37,6 +37,7 @@
     <file path="/SentencesSplitter.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394310225753" ignored="false" />
     <file path="/ContentHandlerImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394348198933" ignored="false" />
     <file path="/StringCodingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394350057972" ignored="false" />
+    <file path="/ContentHandlerImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383111433" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,39 +96,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubtitlesParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="5" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ContentHandlerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="24" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+            <state line="17" column="17" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringCodingTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/chew_language/StringCodingTest.java">
+      <file leaf-file-name="ContentHandlerImplTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="26" selection-start="316" selection-end="316" vertical-scroll-proportion="0.4857143">
+            <state line="21" column="28" selection-start="537" selection-end="537" vertical-scroll-proportion="0.6375">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#319#327#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,10 +147,10 @@
         <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java" />
-        <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" />
         <option value="$PROJECT_DIR$/src/_chew_language/StringCodingTest.java" />
         <option value="$PROJECT_DIR$/src/chew_language/StringCodingTest.java" />
+        <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
       </list>
     </option>
   </component>
@@ -202,6 +186,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,33 +237,9 @@
               <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,20 +253,20 @@
     <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/chew_language" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/chew_third_party" />
     <property name="project.structure.side.proportion" value="0.43589744" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -317,7 +279,7 @@
       <recent name="business.parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Language">
+  <component name="RunManager" selected="JUnit.Parsers">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -330,6 +292,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -357,19 +332,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -446,7 +408,7 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
-      <dir value="$PROJECT_DIR$/src/third_party_test" />
+      <dir value="$PROJECT_DIR$/src/chew_third_party" />
       <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -554,13 +516,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43586698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43483412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.695962" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30403802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30403802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -633,56 +595,9 @@
         <state line="74" column="20" selection-start="2417" selection-end="2431" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew_third_party/UseGsonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew_third_party/CallJythonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew_third_party/UseTikaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="25" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/srts/os_dal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5895954" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew_third_party/SetGuavaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.66502464">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="1454" selection-end="1742" vertical-scroll-proportion="0.45637584" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/war/WEB-INF/lib/guava-14.0.1.jar!/com/google/common/collect/ImmutableList.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="260" selection-end="260" vertical-scroll-proportion="0.2857143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_25/src.zip!/org/xml/sax/ContentHandler.java">
@@ -694,51 +609,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/nlp/TikaWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="16" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.88035715">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="463" selection-end="463" vertical-scroll-proportion="0.60714287">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#650#658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="5" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="24" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+        <state line="17" column="17" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew_language/StringCodingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="316" selection-end="316" vertical-scroll-proportion="0.4857143">
+        <state line="21" column="28" selection-start="537" selection-end="537" vertical-scroll-proportion="0.6375">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#319#327#0" expanded="true" />
           </folding>
         </state>
       </provider>
