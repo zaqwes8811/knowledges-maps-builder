@@ -4,11 +4,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
 /**
  http://docs.oracle.com/javase/tutorial/jaxp/sax/parsing.html
  */
-public class ContentHandlerImpl implements ContentHandler {
+public class ContentHandlerImpl extends DefaultHandler {
   @Override
   public void setDocumentLocator(Locator locator) {
     //To change body of implemented methods use File | Settings | File Templates.
