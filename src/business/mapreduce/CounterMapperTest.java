@@ -9,7 +9,7 @@ import org.junit.Test;
  * Time: 19:45
  * To change this template use File | Settings | File Templates.
  */
-public class WordCounterTest {
+public class CounterMapperTest {
   @Test
   public void testRun() throws Exception {
 
