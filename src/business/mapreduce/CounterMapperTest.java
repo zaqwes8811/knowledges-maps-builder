@@ -14,7 +14,11 @@ import org.junit.Test;
 public class CounterMapperTest {
   @Test
   public void testRun() throws Exception {
+    // build
     Multiset<String> summary = HashMultiset.create();
     CountReducer reducer = new CountReducer(summary);
+    CounterMapper mapper = new CounterMapper(reducer);
+
+    // work
   }
 }

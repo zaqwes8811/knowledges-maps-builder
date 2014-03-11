@@ -15,7 +15,11 @@ public class CounterMapper {
     reducer_ = reducer;
   }
 
-  public void map(String text, Multiset<String> output) {
+  private void emit(String key, Integer value) {
+    reducer_.reduce(key, value);
+  }
+
+  public void map(String text) {
 
   }
 }
