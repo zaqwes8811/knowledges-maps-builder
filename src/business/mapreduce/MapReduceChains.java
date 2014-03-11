@@ -1,6 +1,8 @@
 package business.mapreduce;
 
 
+import business.mapreduce.hided.GlobalConstants;
+import business.mapreduce.hided.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;

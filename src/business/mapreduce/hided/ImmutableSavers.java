@@ -1,4 +1,4 @@
-package business.mapreduce;
+package business.mapreduce.hided;
 
 /**
  * Created with IntelliJ IDEA.
