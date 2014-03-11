@@ -3,6 +3,8 @@ package business.mapreduce;
 import com.google.common.collect.Multiset;
 import org.checkthread.annotations.NotThreadSafe;
 
+import java.util.List;
+
 /**
  https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
 
@@ -19,7 +21,7 @@ public class CounterMapper {
     reducer_.reduce(key, value);
   }
 
-  public void map(String text) {
+  public void map(List<String> text) {
 
   }
 }

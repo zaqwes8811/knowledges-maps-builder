@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew_third_party/GuavaHashingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\mapreduce\GlobalConstants.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/GlobalConstants.java" />
+      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\mapreduce\ImmutableSavers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ImmutableSavers.java" />
+      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\mapreduce\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" />
+      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\business\mapreduce\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,9 +48,10 @@
     <file path="/ContentHandlerImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383191330" ignored="false" />
     <file path="/StringCodingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394350057972" ignored="false" />
     <file path="/ContentHandlerImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383225017" ignored="false" />
-    <file path="/WordMapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394553843053" ignored="false" />
-    <file path="/CountReducer.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394553471659" ignored="false" />
+    <file path="/WordMapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394554525738" ignored="false" />
+    <file path="/CountReducer.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394555435109" ignored="false" />
     <file path="/CounterMapperTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394553883846" ignored="false" />
+    <file path="/GuavaHashingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394555248031" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +122,7 @@
       <file leaf-file-name="CounterMapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="5" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+            <state line="21" column="17" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,10 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountReducer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CountReducer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+            <state line="15" column="16" selection-start="451" selection-end="451" vertical-scroll-proportion="0.43074325">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,10 +141,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CounterMapperTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GuavaHashingTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chew_third_party/GuavaHashingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="51" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterMapperTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="12" selection-start="389" selection-end="389" vertical-scroll-proportion="0.4857143">
+            <state line="21" column="12" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/third_party_test/SetGuavaTest.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitterTest.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/SentencesSplitter.java" />
         <option value="$PROJECT_DIR$/src/_chew_language/StringCodingTest.java" />
@@ -173,9 +193,10 @@
         <option value="$PROJECT_DIR$/src/business/mapreduce/WordMapper.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/WordCounterTest.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/WordCounter.java" />
-        <option value="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" />
-        <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
+        <option value="$PROJECT_DIR$/src/chew_third_party/GuavaHashingTest.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" />
       </list>
     </option>
   </component>
@@ -258,7 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="read_chain" />
+              <option name="myItemId" value="chew_third_party" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,50 +298,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders_processors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapreduce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +344,7 @@
       <recent name="business.parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CounterMapperTest">
+  <component name="RunManager" selected="JUnit.Third party test">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -623,17 +600,17 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26603326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43483412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43467933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.695962" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30403802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2350081" sideWeight="0.73396677" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30403802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -701,13 +678,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="24" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="20" selection-start="2417" selection-end="2431" vertical-scroll-proportion="0.0" />
@@ -767,17 +737,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/GlobalConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/hided/GlobalConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/ProcessorTargetsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="12" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -788,27 +767,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+        <state line="21" column="17" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/chew_third_party/GuavaHashingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="389" selection-end="389" vertical-scroll-proportion="0.4857143">
+        <state line="8" column="51" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="451" selection-end="451" vertical-scroll-proportion="0.43074325">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

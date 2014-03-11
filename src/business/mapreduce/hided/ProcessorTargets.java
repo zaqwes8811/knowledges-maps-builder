@@ -1,5 +1,6 @@
-package business.mapreduce;
+package business.mapreduce.hided;
 
+import business.mapreduce.hided.GlobalConstants;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
