@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,7 @@
     <file path="/ContentHandlerImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383225017" ignored="false" />
     <file path="/WordMapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394554525738" ignored="false" />
     <file path="/CountReducer.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394556944395" ignored="false" />
-    <file path="/CounterMapperTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394557216831" ignored="false" />
+    <file path="/CounterMapperTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394557458198" ignored="false" />
     <file path="/GuavaHashingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394555761528" ignored="false" />
     <file path="/CounterMapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394556517485" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,10 +146,10 @@
       <file leaf-file-name="CounterMapperTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.6982143">
+            <state line="44" column="39" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.6660714">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#978#986#0" expanded="true" />
+                <element signature="e#999#1007#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -786,10 +785,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.6982143">
+        <state line="44" column="39" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.6660714">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#978#986#0" expanded="true" />
+            <element signature="e#999#1007#0" expanded="true" />
           </folding>
         </state>
       </provider>
