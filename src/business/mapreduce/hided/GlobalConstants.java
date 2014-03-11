@@ -1,4 +1,4 @@
-package business.mapreduce;
+package business.mapreduce.hided;
 
 // Очень плохая инкапсуляция, часть перенести бы в конфигурационный файл,
 //   или создать файл метаданных - yaml формата например
