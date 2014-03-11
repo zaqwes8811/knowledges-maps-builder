@@ -24,5 +24,10 @@ public class GuavaHashingTest {
       .hash();
     Integer hash = hc.asInt();
 
+    HashCode hc2 = hf.newHasher()
+      .putString(name, Charsets.UTF_8)
+      .hash();
+    Integer hash2 = hc.asInt();
+    assert hash.equals(hash2);
   }
 }
