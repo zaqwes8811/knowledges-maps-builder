@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,7 +37,9 @@ public class CounterMapperTest {
 
     mapper.map(sentences);
 
+    Set<String> keys = summary.elementSet();
     assert inverseIndex.size() == 2;
-    assert summary.size() == 2;
+    assert summary.count("hello") == 2;
+    assert keys.size() == 2;
   }
 }
