@@ -2,64 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb83dfd8-bb50-468f-9d27-6454138e98c5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\GlobalConstants.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableMapperSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableMappers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableReduceSentencesLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableReduces.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableSavers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\JobsFormer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\MapReduceChains.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\Mappers.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ProcessorTargets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ProcessorTargetsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\Reduces.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\RunnerWordLevelProcessingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\SentencesLevelProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\SentencesLevelProcessorTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" afterPath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" afterPath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" afterPath="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\org\jython\book\interfaces\Building.py" afterPath="$PROJECT_DIR$/src/chew_third_party/book/interfaces/Building.py" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\org\jython\book\interfaces\BuildingType.java" afterPath="$PROJECT_DIR$/src/chew_third_party/book/interfaces/BuildingType.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\org\jython\book\util\BuildingFactory.java" afterPath="$PROJECT_DIR$/src/chew_third_party/book/util/BuildingFactory.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\org\jython\book\util\RunnerFactory.java" afterPath="$PROJECT_DIR$/src/chew_third_party/book/util/RunnerFactory.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\jobs_processors\JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\jobs_processors\JobsFormerTest.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormerTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\jobs_processors\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\jobs_processors\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\GlobalConstants.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/GlobalConstants.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableMapperSentencesLevel.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMapperSentencesLevel.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableReduceSentencesLevel.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableReduceSentencesLevel.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableReduces.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableReduces.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ImmutableSavers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableSavers.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\Mappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/Mappers.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\Reduces.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/Reduces.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\mapreduce\SentencesLevelProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessorTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_extractors\ExtractorException.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/ExtractorException.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_extractors\SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_extractors\SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_processors\MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" />
-      <change type="MOVED" beforePath="D:\home\vocabulary-cards\src\write_chain\spiders_processors\MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/mapreduce/WordCounter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/mapreduce/WordCounterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394381431397" ignored="false" />
-    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394381431397" ignored="false" />
+    <file path="/Dummy.txt" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394552742782" ignored="false" />
+    <file path="/fragment.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394552756226" ignored="false" />
     <file path="/ProcessorTargetsTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385906490599" ignored="false" />
     <file path="/ProcessorTargets.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1385903472375" ignored="false" />
     <file path="/a.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394387576262" ignored="false" />
@@ -90,6 +41,7 @@
     <file path="/ContentHandlerImpl.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383191330" ignored="false" />
     <file path="/StringCodingTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394350057972" ignored="false" />
     <file path="/ContentHandlerImplTest.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394383225017" ignored="false" />
+    <file path="/WordMapper.java" changelist="bb83dfd8-bb50-468f-9d27-6454138e98c5" time="1394552709386" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +56,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -138,7 +91,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -148,45 +100,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContentHandlerImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java">
+      <file leaf-file-name="ImmutableMappers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="30" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0">
+            <state line="40" column="8" selection-start="1137" selection-end="1153" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentHandlerImplTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java">
+      <file leaf-file-name="WordCounter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/WordCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#279#287#0" expanded="true" />
-              </folding>
+            <state line="7" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
+      <file leaf-file-name="WordCounterTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/WordCounterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="974" selection-end="974" vertical-scroll-proportion="0.4857143">
-              <folding>
-                <element signature="e#859#867#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubtitlesParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="24" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1665#1673#0" expanded="true" />
-              </folding>
+            <state line="15" column="3" selection-start="289" selection-end="289" vertical-scroll-proportion="0.31173593">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,10 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" />
-        <option value="$PROJECT_DIR$/src/write_chain/mapreduce/JobsFormer.java" />
-        <option value="$PROJECT_DIR$/src/business/nlp/BaseTokenizerTest.java" />
-        <option value="$PROJECT_DIR$/war/aj_index.htm.html" />
         <option value="$PROJECT_DIR$/src/business/math/ImmutableSummators.java" />
         <option value="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
         <option value="$PROJECT_DIR$/src/third_party_test/UseTikaTest.java" />
@@ -225,6 +157,10 @@
         <option value="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" />
         <option value="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/WordMapper.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/WordCounter.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/WordCounterTest.java" />
       </list>
     </option>
   </component>
@@ -261,7 +197,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,9 +264,54 @@
               <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders_processors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,32 +326,33 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/chew_third_party" />
-    <property name="project.structure.side.proportion" value="0.43589744" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="project.structure.side.proportion" value="0.43589744" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="D:\home\lugansky-igor\vocabulary-cards\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="business.mapreduce" />
+      <recent name="business.parsers" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="business.parsers" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="business.parsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Parsers">
+  <component name="RunManager" selected="JUnit.WordCounterTest">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -384,19 +365,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -424,6 +392,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -558,11 +539,32 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="WordCounterTest" type="JUnit" factoryName="JUnit">
+      <module name="vocabulary-cards" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="business.mapreduce" />
+      <option name="MAIN_CLASS_NAME" value="business.mapreduce.WordCounterTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in vocabulary-cards" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Third party test" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.Parsers" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.Language" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.WordCounterTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -598,7 +600,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -608,16 +610,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43483412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.695962" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273906" sideWeight="0.695962" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30403802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43483412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -682,6 +684,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#859#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="24" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="20" selection-start="2417" selection-end="2431" vertical-scroll-proportion="0.0" />
@@ -694,19 +712,13 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_25/src.zip!/org/xml/sax/ContentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="18" selection-start="10989" selection-end="10989" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#18090#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="285" column="18" selection-start="10989" selection-end="10989" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="24" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1665#1673#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -720,19 +732,65 @@
     <entry file="file://$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#279#287#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="974" selection-end="974" vertical-scroll-proportion="0.4857143">
+        <state line="29" column="42" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#859#867#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/GlobalConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/ProcessorTargetsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="8" selection-start="1137" selection-end="1153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/WordCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/WordCounterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="3" selection-start="289" selection-end="289" vertical-scroll-proportion="0.31173593">
+          <folding />
         </state>
       </provider>
     </entry>

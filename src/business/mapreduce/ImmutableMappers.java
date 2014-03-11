@@ -16,14 +16,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 15:44
- * To change this template use File | Settings | File Templates.
- */
-final public class ImmutableMappers {
+
+public class ImmutableMappers {
 
   /*
   *
