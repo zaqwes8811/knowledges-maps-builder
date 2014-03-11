@@ -19,5 +19,6 @@ public class CountReducer {
   // @param value inv. index key - index sentence - или лучше хеш.
   public void reduce(String key, Integer value) {
     index_.add(key);
+    inverseIndex_.put(key, value);
   }
 }
