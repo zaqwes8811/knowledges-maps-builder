@@ -6,6 +6,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
+import common.Utils;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -36,9 +37,12 @@ public class CounterMapperTest {
     sentences.add("world");
 
     mapper.map(sentences);
+    inverseIndex.put("hello", 9);
+    inverseIndex.put("hello", 9);
+    Utils.print(inverseIndex);
 
     Set<String> keys = summary.elementSet();
-    assert inverseIndex.size() == 2;
+    assert inverseIndex.keySet().size() == 2;
     assert summary.count("hello") == 2;
     assert keys.size() == 2;
   }
