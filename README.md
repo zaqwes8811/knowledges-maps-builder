@@ -1,5 +1,14 @@
-## Why? 
+### Why? 
 For help learing english language
 
-## Release notes
-- Do full chain for BEC dictonary
+### Как это работает?
+
+В данном проекте делается попыка создание карточки адаптивной к контексту, т.е. что на ней будует выпадал и с какой частотой зависит от того на какой контекст она "натренирована" сама. 
+
+### Существующие проекты
+- LingvoLeo
+
+### Связанные проекты
+https://github.com/bezbukv/knowledges-maps-builder
+
+
