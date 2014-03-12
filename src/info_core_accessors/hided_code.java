@@ -31,10 +31,10 @@ public class hided_code {
   /*
   static public HashMap<String, HashMap<String, String>>  get_static_notes() {
     String metadata_static_notes_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
+      Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
           ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.STATIC_NOTES_FILENAME));
+          GlobalConstants.STATIC_NOTES_FILENAME));
     return (new Gson().fromJson(metadata_static_notes_json,
       new TypeToken<HashMap<String, HashMap<String, String>>>() {}.getType()));
   }
@@ -86,12 +86,12 @@ public class hided_code {
   // Получить индекс со словами оставшимися после сжатия
   static public HashMap<String, String> get_rest_idx(String node) {
     String sorted_freq_idx_json = utils.file2string(
-      Joiner.on(AppConstants.PATH_SPLITTER)
+      Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
           ImmutableProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
+          GlobalConstants.COMPRESSED_IDX_FOLDER,
           node,
-          AppConstants.FILENAME_REST_IDX));
+          GlobalConstants.FILENAME_REST_IDX));
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, String>>() {}.getType()));
   }
@@ -103,12 +103,12 @@ public class hided_code {
   // Получить список указателей на предложеия в которых встречалось слово.
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
     String sorted_freq_idx_json = Util.fileToString(
-      Joiner.on(AppConstants.PATH_SPLITTER)
+      Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
-          AppConstants.COMPRESSED_IDX_FOLDER,
+          GlobalConstants.COMPRESSED_IDX_FOLDER,
           node,
-          AppConstants.FILENAME_SENTENCES_IDX));
+          GlobalConstants.FILENAME_SENTENCES_IDX));
     return (new Gson().fromJson(sorted_freq_idx_json,
       new TypeToken<HashMap<String, List<Integer>>>() {}.getType()));
   } */
@@ -119,12 +119,12 @@ public class hided_code {
   static public Optional<ImmutableList<String>> getSortedIdx(String node) {
     try {
       String sortedIdxJson = Util.file2string(
-        Joiner.on(AppConstants.PATH_SPLITTER)
+        Joiner.on(GlobalConstants.PATH_SPLITTER)
           .join(
             ProcessorTargets.getPathToIndex(),
-            AppConstants.COMPRESSED_IDX_FOLDER,
+            GlobalConstants.COMPRESSED_IDX_FOLDER,
             node,
-            AppConstants.SORTED_IDX_FILENAME));
+            GlobalConstants.SORTED_IDX_FILENAME));
 
       List<String> sortedIdxCash = (new Gson().fromJson(sortedIdxJson,
         new TypeToken<ArrayList<String>>() {}.getType()));
