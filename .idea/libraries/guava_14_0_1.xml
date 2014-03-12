@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="guava-14.0.1">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://D:/third_party/java/guava-14.0.1.jar!/" />
       <root url="jar://D:/third_party/java/commons-lang3-3.1.jar!/" />
       <root url="jar://D:/third_party/java/gson-2.2.3.jar!/" />
@@ -19,5 +20,11 @@
     <SOURCES>
       <root url="jar://D:/third_party/java/mockito-all-1.9.5.jar!/" />
     </SOURCES>
+=======
+      <root url="jar://D:/home/work-libs/java/guava-14.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+>>>>>>> 9afd227a49afac3e6ec5b2cb9aef75bd6a495dca
   </library>
 </component>
