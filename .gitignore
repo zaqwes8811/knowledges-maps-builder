@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.jar
 *.class
 out
@@ -39,4 +40,45 @@ nosetests.xml
 .project
 .pydevproject
 /netbeans-sln/business-layer/nbproject/private/
+=======
+*.jar
+*.class
+out
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+/netbeans-sln/business-layer/nbproject/private/
+>>>>>>> 9afd227a49afac3e6ec5b2cb9aef75bd6a495dca
 /netbeans-sln/app/nbproject/private/
