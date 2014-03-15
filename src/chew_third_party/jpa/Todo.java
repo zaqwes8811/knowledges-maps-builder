@@ -34,5 +34,4 @@ public class Todo {
     return "Todo [summary=" + summary + ", description=" + description
       + "]";
   }
-
 }
