@@ -8,14 +8,16 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.util.List;
 
+// Use singleton - local database
 public class TodoTest {
   private static final String PERSISTENCE_UNIT_NAME = "todos";
   private static EntityManagerFactory factory;
 
   @Test
-  public void testInstallation() {
+  public void testReadAll() {
     factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
     EntityManager em = factory.createEntityManager();
+
     // read the existing entries and write to console
     Query q = em.createQuery("select t from Todo t");
     List<Todo> todoList = q.getResultList();
@@ -23,6 +25,14 @@ public class TodoTest {
       System.out.println(todo);
     }
     System.out.println("Size: " + todoList.size());
+
+    em.close();
+  }
+
+  @Test
+  public void testAppend() {
+    factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+    EntityManager em = factory.createEntityManager();
 
     // create new todo
     em.getTransaction().begin();
