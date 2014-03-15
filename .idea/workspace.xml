@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew_third_party/jpa/Sentences.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\jpa\OneWordRecord.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" afterPath="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +80,7 @@
       <file leaf-file-name="SentencesTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="595">
+            <state line="11" column="60" selection-start="325" selection-end="325" vertical-scroll-proportion="0.33938295" vertical-offset="0" max-vertical-offset="595">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,7 +111,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="20" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="850">
+            <state line="30" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -142,10 +139,11 @@
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/Todo.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/TodoTest.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/OneWordRecord.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentenceTest.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentence.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/Sentences.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" />
       </list>
     </option>
   </component>
@@ -735,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="20" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chew_third_party/jpa/Sentences.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="31" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
@@ -758,9 +749,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="595">
+        <state line="11" column="60" selection-start="325" selection-end="325" vertical-scroll-proportion="0.33938295" vertical-offset="0" max-vertical-offset="595">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
