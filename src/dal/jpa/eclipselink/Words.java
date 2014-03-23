@@ -11,9 +11,7 @@ public class Words {
   private Integer id;
   private String value;
 
-  // Хеши предложений
-  @OneToMany(mappedBy = "hashSentence")
-  private final Set<Integer> sentences = new HashSet<Integer>();
+  private final Set<Sentences> sentences = new HashSet<Sentences>();
 
   public int getId() {
     return id;
@@ -31,7 +29,8 @@ public class Words {
     this.value = description;
   }
 
-  public Set<Integer> getMembers() {
+  @OneToMany
+  public Set<Sentences> getSentences() {
     return sentences;
   }
 }
