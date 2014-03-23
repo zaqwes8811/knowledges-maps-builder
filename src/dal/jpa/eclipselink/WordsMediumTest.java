@@ -19,9 +19,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.util.HashSet;
+import java.util.Set;
 
 public class WordsMediumTest {
-  private static final String PERSISTENCE_UNIT_NAME = "todo";
+  private static final String PERSISTENCE_UNIT_NAME = "words_test";
   private EntityManagerFactory factory;
 
   @Before
@@ -41,9 +43,16 @@ public class WordsMediumTest {
 
     if (createNewEntries) {
       assertTrue(q.getResultList().size() == 0);
+      Words word = new Words();
+      word.setValue("heart");
+      em.persist(word);
 
+      Sentences sentence = new Sentences();
+      sentence.setSentence("both foul and fair");
+      word.getSentences().add(sentence);
+      em.persist(sentence);
+      em.persist(word);
     }
-
 
     // Commit the transaction, which will cause the entity to
     // be stored in the database
@@ -56,6 +65,11 @@ public class WordsMediumTest {
 
   @Test
   public void testCreate() {
+
+  }
+
+  @Test
+  public void testRecreate() {
 
   }
 }
