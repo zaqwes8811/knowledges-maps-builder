@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +71,7 @@
       <file leaf-file-name="SentencesTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+            <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Words.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Words.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="16" selection-start="550" selection-end="550" vertical-scroll-proportion="0.6787659" vertical-offset="153" max-vertical-offset="714">
+            <state line="12" column="24" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="714">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#294#305#0" expanded="true" />
@@ -106,6 +106,17 @@
                 <element signature="e#535#536#0" expanded="true" />
                 <element signature="e#590#591#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordsMediumTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="9" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.80217785" vertical-offset="323" max-vertical-offset="969">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java" />
+        <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java" />
       </list>
     </option>
   </component>
@@ -216,6 +228,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eclipselink" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,7 +465,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -823,26 +853,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding>
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="550" selection-end="550" vertical-scroll-proportion="0.6787659" vertical-offset="153" max-vertical-offset="714">
+        <state line="12" column="24" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="714">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#294#305#0" expanded="true" />
@@ -856,6 +869,32 @@
             <element signature="e#535#536#0" expanded="true" />
             <element signature="e#590#591#0" expanded="true" />
             <element signature="e#616#617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding>
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="9" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.80217785" vertical-offset="323" max-vertical-offset="969">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
