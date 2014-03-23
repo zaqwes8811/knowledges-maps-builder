@@ -1,4 +1,4 @@
-package chew_third_party.jpa;
+package dal.jpa_eclipselink;
 
 import javax.persistence.*;
 
@@ -30,6 +30,6 @@ public class Sentences {
 
   @Override
   public String toString() {
-    return sentence;
+    return "Sentence ["+hashSentence+", "+sentence+"]";
   }
 }
