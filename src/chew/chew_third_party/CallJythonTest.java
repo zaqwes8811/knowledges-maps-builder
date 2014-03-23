@@ -1,13 +1,16 @@
+package chew.chew_third_party;
+
 import embedded_script_engines.jython_callers.jsr.PyCaller;
+import org.junit.Test;
 
-import  java.util.ArrayList;
-public class TestCallJy {
+public class CallJythonTest {
 
-    public static void main(String[] args) {
+  @Test
+    public void testMain() {
 	// write your code here
 
         PyCaller caller = new PyCaller();
-        String fname = "scripts/test_caller.py";
+        String fname = "jython_src/test_caller.py";
         String function_name = "get_string";
         String arg = "None";
 
@@ -15,8 +18,8 @@ public class TestCallJy {
         System.out.println(result);
 
         function_name = "get_list";
-        ArrayList resultlist = (ArrayList)caller.py_call_with_return(fname, function_name, arg);
-        resultlist.add("Java string");
-        System.out.println(resultlist);
+        //ArrayList resultlist = (ArrayList)caller.py_call_with_return(fname, function_name, arg);
+        //resultlist.add("Java string");
+        //System.out.println(resultlist);
     }
 }
