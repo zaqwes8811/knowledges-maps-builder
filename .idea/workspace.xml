@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +71,7 @@
       <file leaf-file-name="SentencesTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
+            <state line="25" column="75" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -112,10 +114,19 @@
       <file leaf-file-name="WordsMediumTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.27767694" vertical-offset="0" max-vertical-offset="1139">
+            <state line="55" column="0" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.56666666" vertical-offset="646" max-vertical-offset="1377">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="55" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="918">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,8 +166,9 @@
         <option value="$PROJECT_DIR$/src/dal/jpa_eclipselink/Sentences.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa/Sentences.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java" />
       </list>
     </option>
@@ -243,7 +255,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eclipselink" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,13 +421,13 @@
       <method />
     </configuration>
     <configuration default="false" name="jpa" type="JUnit" factoryName="JUnit">
-      <module name="smart-vocabulary-cards" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="dal.jpa.eclipselink" />
-      <option name="MAIN_CLASS_NAME" value="dal.jpa.eclipselink.SentencesTest" />
+      <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -426,7 +438,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -472,7 +490,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23404256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -483,7 +501,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3538634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3538634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -844,9 +862,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding>
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="75" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="46" selection-start="730" selection-end="730" vertical-scroll-proportion="0.40108892" vertical-offset="0" max-vertical-offset="646">
+        <state line="34" column="55" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
@@ -871,26 +906,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding>
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/WordsMediumTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.27767694" vertical-offset="0" max-vertical-offset="1139">
+        <state line="55" column="0" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.56666666" vertical-offset="646" max-vertical-offset="1377">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
