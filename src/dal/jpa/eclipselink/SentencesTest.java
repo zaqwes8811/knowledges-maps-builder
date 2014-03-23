@@ -15,7 +15,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class SentencesTest {
-  private static final String PERSISTENCE_UNIT_NAME = "todos";
+  private static final String PERSISTENCE_UNIT_NAME = "words_test";
   private static EntityManagerFactory factory;
 
   @Test
