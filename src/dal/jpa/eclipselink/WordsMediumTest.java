@@ -10,6 +10,7 @@ Has a frozen heart worth mining.
 
 */
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,20 +40,17 @@ public class WordsMediumTest {
     // Persons should be empty
 
     // do we have entries?
-    boolean createNewEntries = (q.getResultList().size() == 0);
+    assertTrue(q.getResultList().size() == 0);
+    Words word = new Words();
+    word.setValue("heart");
+    em.persist(word);
 
-    if (createNewEntries) {
-      assertTrue(q.getResultList().size() == 0);
-      Words word = new Words();
-      word.setValue("heart");
-      em.persist(word);
+    Sentences sentence = new Sentences();
+    sentence.setSentence("both foul and fair");
+    word.getSentences().add(sentence);
+    em.persist(sentence);
+    em.persist(word);
 
-      Sentences sentence = new Sentences();
-      sentence.setSentence("both foul and fair");
-      word.getSentences().add(sentence);
-      em.persist(sentence);
-      em.persist(word);
-    }
 
     // Commit the transaction, which will cause the entity to
     // be stored in the database
@@ -61,6 +59,11 @@ public class WordsMediumTest {
     // It is always good practice to close the EntityManager so that
     // resources are conserved.
     em.close();
+  }
+
+  @After
+  public void tearDown() {
+    // TODO: Очистить базу данных
   }
 
   @Test

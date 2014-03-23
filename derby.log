@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sun Mar 23 21:48:25 MSK 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0144-f00e-cb99-000000c50d28 
+Sun Mar 23 21:56:33 MSK 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0144-f016-3f86-000000c69308 
 on database directory D:\simpleDb with class loader sun.misc.Launcher$AppClassLoader@ad3ba4 
 Loaded from file:/D:/home/smart-vocabulary-cards/jlib/derby.jar
 java.vendor=Sun Microsystems Inc.
