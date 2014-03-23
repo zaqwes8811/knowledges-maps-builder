@@ -2,68 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\book\interfaces\Building.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\Beach.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\IJythonTestInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\IndexContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\JavaImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalFile.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalScript.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\JSRException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\PyCaller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\PyCallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\ScriptTestJython.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\SimpleEmbedded.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\TPKFilterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\Trash.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" afterPath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_language\StringCodingTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_language/StringCodingTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\CallJythonTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/CallJythonTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\GuavaHashingTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/GuavaHashingTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\ImmutableRGB.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/ImmutableRGB.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\MinimalStaticChart.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/MinimalStaticChart.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\SetGuavaTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/SetGuavaTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\SortMapOnValueExample.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/SortMapOnValueExample.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\UseGsonTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/UseGsonTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\UseTikaTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/UseTikaTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\book\interfaces\Building.py" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/book/interfaces/Building.py" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\book\interfaces\BuildingType.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/book/interfaces/BuildingType.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\book\util\BuildingFactory.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/book/util/BuildingFactory.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\book\util\RunnerFactory.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/book/util/RunnerFactory.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\jpa\Todo.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/jpa/Todo.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\chew_third_party\jpa\TodoTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/jpa/TodoTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\dal\jpa_eclipselink\Sentences.java" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\dal\jpa_eclipselink\SentencesTest.java" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\dal\jpa_eclipselink\Words.java" afterPath="$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\Beach.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/Beach.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\IJythonTestInterface.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IJythonTestInterface.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\IndexContainer.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IndexContainer.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\JavaImpl.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/JavaImpl.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalFile.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFile.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalFileTest.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFileTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\EvalScript.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalScript.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\JSRException.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/JSRException.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\PyCaller.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCaller.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\PyCallerTest.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCallerTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\ScriptTestJython.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/ScriptTestJython.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\SimpleEmbedded.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/SimpleEmbedded.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\TPKFilterTest.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/TPKFilterTest.java" />
-      <change type="MOVED" beforePath="D:\home\smart-vocabulary-cards\src\jython_callers\jsr\Trash.java" afterPath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/Trash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,7 +70,16 @@
       <file leaf-file-name="SentencesTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1292">
+            <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="26" selection-start="758" selection-end="758" vertical-scroll-proportion="0.46279493" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -193,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sentences.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Sentences.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="26" selection-start="229" selection-end="229" vertical-scroll-proportion="0.25835866" vertical-offset="0" max-vertical-offset="658">
+            <state line="23" column="10" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
               <folding>
                 <element signature="e#488#489#0" expanded="true" />
                 <element signature="e#530#531#0" expanded="true" />
@@ -208,7 +157,7 @@
       <file leaf-file-name="Words.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="14" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="731">
+            <state line="18" column="29" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="731">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#354#363#0" expanded="true" />
@@ -250,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/OneWordRecord.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentenceTest.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentence.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/Sentences.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa_eclipselink/SentencesTest.java" />
@@ -263,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/dal/jpa_eclipselink/Sentences.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa/Sentences.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
@@ -331,6 +280,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,30 +517,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23404256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23404256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48152295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3538634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3538634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48152295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -832,13 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chew/chew_third_party/GuavaHashingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -918,13 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Family.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="21" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
@@ -947,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Words.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="14" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="731">
+        <state line="18" column="29" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="731">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#354#363#0" expanded="true" />
@@ -967,11 +920,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="229" selection-end="229" vertical-scroll-proportion="0.25835866" vertical-offset="0" max-vertical-offset="658">
+        <state line="23" column="10" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
           <folding>
             <element signature="e#488#489#0" expanded="true" />
             <element signature="e#530#531#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/SentencesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="47" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="26" selection-start="758" selection-end="758" vertical-scroll-proportion="0.46279493" vertical-offset="0" max-vertical-offset="629">
+          <folding />
         </state>
       </provider>
     </entry>

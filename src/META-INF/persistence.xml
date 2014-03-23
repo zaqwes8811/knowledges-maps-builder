@@ -14,8 +14,8 @@
     </persistence-unit>
 
     <persistence-unit name="todos" transaction-type="RESOURCE_LOCAL">
-        <class>chew_third_party.jpa.Todo</class>
-        <class>chew_third_party.jpa.Sentences</class>
+        <class>chew.chew_third_party.jpa.Todo</class>
+        <class>dal.jpa.eclipselink.Sentences</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
