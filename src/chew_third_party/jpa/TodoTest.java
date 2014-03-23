@@ -1,3 +1,5 @@
+// Про базы данных
+//  http://habrahabr.ru/post/193136/
 package chew_third_party.jpa;
 
 import org.junit.Test;
@@ -15,6 +17,7 @@ public class TodoTest {
 
   @Test
   public void testReadAll() {
+    // http://stackoverflow.com/questions/17855882/is-the-eclipselink-entitymanagerfactory-thread-safe
     factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
     EntityManager em = factory.createEntityManager();
 
