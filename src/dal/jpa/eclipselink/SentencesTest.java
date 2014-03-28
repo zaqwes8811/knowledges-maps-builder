@@ -23,7 +23,7 @@ public class SentencesTest {
     factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
     EntityManager em = factory.createEntityManager();
 
-    Query q = em.createQuery("select t from Sentences t");
+    Query q = em.createQuery("SELECT t FROM Sentences t");
     List<Sentences> todoList = q.getResultList();
     for (Sentences todo : todoList) {
       System.out.println(todo);
