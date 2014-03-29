@@ -1,15 +1,40 @@
 package chew.chew_third_party;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
+import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Result;
 
 //import static com.googlecode.objectify.ObjectifyService;
 
 public class CarTest {
+	private static final LocalServiceTestHelper helper =
+	    new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
+	protected static ObjectifyFactory fact;
+
+	@BeforeClass
+	public static void setUp() {
+	    helper.setUp();
+	    fact = new ObjectifyFactory() {
+	        @Override
+	        public Objectify begin(ObjectifyOpts opts)
+	        {
+	            opts.setSessionCache(false);
+	            return super.begin(opts);
+	        }
+	    };
+
+	}
+
+	@AfterClass
+	public static void tearDown() {
+	    helper.tearDown();
+	}
+	
 	@Test
 	public void testCreate() {
 		Objectify ofy = ObjectifyService.begin();
