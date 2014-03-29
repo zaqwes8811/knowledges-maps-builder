@@ -1,3 +1,5 @@
+// https://groups.google.com/forum/#!topic/objectify-appengine/5I-B2wxog5g
+// https://developers.google.com/appengine/docs/java/tools/localunittesting?csw=1#Introducing_the_Java_Testing_Utilities
 package chew.chew_third_party;
 
 import org.junit.BeforeClass;
