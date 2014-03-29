@@ -1,7 +1,11 @@
 package chew.chew_third_party;
 
 import org.junit.Test;
-import static com.googlecode.objectify.ObjectifyService.ofy;
+
+import com.googlecode.objectify.Key;
+import com.googlecode.objectify.Result;
+
+import static com.googlecode.objectify.ObjectifyService;
 
 public class CarTest {
 	@Test
