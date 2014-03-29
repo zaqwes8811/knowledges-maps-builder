@@ -1,7 +1,10 @@
 // https://groups.google.com/forum/#!topic/objectify-appengine/5I-B2wxog5g
 // https://developers.google.com/appengine/docs/java/tools/localunittesting?csw=1#Introducing_the_Java_Testing_Utilities
-package chew.chew_third_party;
+package chew.chew_third_party.gae;
 
+import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
+import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -21,6 +24,7 @@ public class CarTest {
 	@BeforeClass
 	public static void setUp() {
 	    helper.setUp();
+    /*
 	    fact = new ObjectifyFactory() {
 	        @Override
 	        public Objectify begin(ObjectifyOpts opts)
@@ -29,6 +33,7 @@ public class CarTest {
 	            return super.begin(opts);
 	        }
 	    };
+	    */
 
 	}
 
