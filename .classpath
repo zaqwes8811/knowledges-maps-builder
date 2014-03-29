@@ -19,5 +19,8 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/checkthread-annotations-1.0.9.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/objectify-4.0a3.jar"/>
+	<classpathentry kind="lib" path="H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api.jar"/>
+	<classpathentry kind="lib" path="H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-labs.jar"/>
+	<classpathentry kind="lib" path="H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-stubs.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
