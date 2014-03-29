@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/gae/LocalDatastoreTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/gae/OfyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chew/chew_third_party/gae/CarTest.java" afterPath="$PROJECT_DIR$/src/chew/chew_third_party/gae/CarTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,9 +78,10 @@
       <file leaf-file-name="CarTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chew/chew_third_party/gae/CarTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="54" selection-start="886" selection-end="886" vertical-scroll-proportion="0.03219697" vertical-offset="306" max-vertical-offset="1377">
+            <state line="53" column="4" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.7405303" vertical-offset="510" max-vertical-offset="1377">
               <folding>
-                <element signature="e#0#2342#0" expanded="true" />
+                <element signature="e#0#2348#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -566,7 +564,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37961927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37961927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -890,9 +888,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chew/chew_third_party/gae/CarTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="54" selection-start="886" selection-end="886" vertical-scroll-proportion="0.03219697" vertical-offset="306" max-vertical-offset="1377">
+        <state line="53" column="4" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.7405303" vertical-offset="510" max-vertical-offset="1377">
           <folding>
-            <element signature="e#0#2342#0" expanded="true" />
+            <element signature="e#0#2348#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
