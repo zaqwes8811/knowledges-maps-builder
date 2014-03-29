@@ -1,4 +1,6 @@
 // https://developers.google.com/appengine/docs/java/tools/localunittesting?csw=1#Introducing_the_Java_Testing_Utilities
+//
+// TODO: in-depth - https://developers.google.com/appengine/articles/datastore/overview !!!
 package chew.chew_third_party.gae;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
