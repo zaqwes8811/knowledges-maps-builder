@@ -8,9 +8,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="checkthread-annotations-1.0.9" level="project" />
-    <orderEntry type="library" name="objectify-4.0a3" level="application" />
     <orderEntry type="library" name="appengine-api-stubs" level="project" />
     <orderEntry type="library" name="appengine-testing" level="project" />
+    <orderEntry type="library" name="objectify-4.0b1" level="project" />
   </component>
 </module>
 
