@@ -7,7 +7,7 @@ import com.googlecode.objectify.ObjectifyService;
 public class OfyService {
   static {
     factory().register(Car.class);
-    //factory().register(OtherThing.class);
+    factory().register(Engine.class);
     //...etc
   }
 
