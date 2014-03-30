@@ -18,6 +18,7 @@ import java.util.Map;
 import static chew.chew_third_party.gae.OfyService.ofy;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 //import static com.googlecode.objectify.ObjectifyService.ofy;
 
 public class CarTest {
@@ -48,6 +49,9 @@ public class CarTest {
 	
 	@Test
 	public void testCreate() {
+    // Troubles:
+    //  Result -> Ref - что будет с синхронностью/асинхронностью
+    //
 		Car porsche = new Car();
     porsche.color = 8;
     porsche.license = "6JHD";
@@ -75,19 +79,19 @@ public class CarTest {
 
     //Car fetched2 = ofy().load().type(Car.class).id(porsche.id);//.now();
 
-    /*
 		// More likely this is what you will type
-		Car fetched2 = ofy().load().type(Car.class).id(porsche.id).now();
+		Car fetched2 = ofy().load().type(Car.class).id(porsche.id).get();//.now();
+    assertNotNull(fetched2);
 
 		// Or you can issue a query
-		Car fetched3 = ofy().load().type(Car.class).filter("license", "2FAST").first().now();
+		Car fetched3 = ofy().load().type(Car.class).filter("license", "2FAST").first().get();//.now();
+    assertNull(fetched3);
 
 		// Change some data and write it
-		porsche.color = BLUE;
-		ofy().save().entity(porsche).now();    // async without the now()
+		//porsche.color = BLUE;
+		//ofy().save().entity(porsche).now();    // async without the now()
 
 		// Delete it
-		ofy().delete().entity(porsche).now();    // async without the now()
-		*/
+		//ofy().delete().entity(porsche).now();    // async without the now()
 	}
 }
