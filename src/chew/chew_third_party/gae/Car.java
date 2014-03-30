@@ -14,5 +14,5 @@ public class Car {
     @Id Long id;
     @Index String license;
     int color;
-    //@Load List<Ref<Engine>> owners = new ArrayList<Ref<Engine>>();
+    @Load List<Ref<Engine>> owners = new ArrayList<Ref<Engine>>();
 }
