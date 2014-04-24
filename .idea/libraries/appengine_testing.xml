@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="appengine-testing">
     <CLASSES>
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/testing/appengine-testing.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/testing/appengine-testing.jar!/com/google/appengine/repackaged/com/google/common/base/super" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/com/google/appengine/repackaged/com/google/common/base/super" />
     </SOURCES>
   </library>
 </component>
