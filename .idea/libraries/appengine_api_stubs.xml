@@ -1,14 +1,14 @@
 <component name="libraryTable">
   <library name="appengine-api-stubs">
     <CLASSES>
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-stubs.jar!/" />
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api.jar!/" />
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-labs.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-stubs.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/base/super" />
-      <root url="jar://H:/third_party/appengine-java-sdk-1.8.8/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/util/super" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/base/super" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/util/super" />
     </SOURCES>
   </library>
 </component>
