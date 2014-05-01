@@ -1,4 +1,4 @@
-package chew.chew_third_party;
+package chew.langs;
 
 import embedded_script_engines.jython_callers.jsr.PyCaller;
 import org.junit.Test;

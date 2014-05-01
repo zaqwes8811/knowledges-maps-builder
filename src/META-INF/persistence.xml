@@ -14,7 +14,7 @@
     </persistence-unit>
 
     <persistence-unit name="todos" transaction-type="RESOURCE_LOCAL">
-        <class>chew.chew_third_party.jpa.Todo</class>
+        <class>chew.third_party.jpa.Todo</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:derby:d:/simpleDb;create=true" />

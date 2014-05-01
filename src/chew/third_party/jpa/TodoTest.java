@@ -1,6 +1,6 @@
 // Про базы данных
 //  http://habrahabr.ru/post/193136/
-package chew.chew_third_party.jpa;
+package chew.third_party.jpa;
 
 import org.junit.Test;
 
