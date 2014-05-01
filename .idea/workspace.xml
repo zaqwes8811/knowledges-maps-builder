@@ -1,126 +1,748 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="third_party" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Family.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Job.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Person.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/Beach.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IJythonTestInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IndexContainer.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IndexContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/JavaImpl.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/JavaImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFileTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalScript.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/JSRException.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/JSRException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCaller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCallerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/ScriptTestJython.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/SimpleEmbedded.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/TPKFilterTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/Trash.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/Trash.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentHolder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ContentStorageAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentStorageAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ExternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ExternalCursorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllers.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllersImpl.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllersImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseCoursor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableDataExtractor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableIdxGetters.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableNodeAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableOntoAssistant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IndexCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursorFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/InternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/InternalCursorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCoursor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeAlreadyExist.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAlreadyExist.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeIsCorrupted.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeIsCorrupted.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeNoFound.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeNoFound.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NotesProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/OutOfRangeOnAccess.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/OutOfRangeOnAccess.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/Runner.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/Runner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/hided_code.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/hided_code.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/BECCache.java" afterPath="$PROJECT_DIR$/src/controllers/BECCache.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java" afterPath="$PROJECT_DIR$/src/controllers/caches/GCashesLearn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/BuilderControllers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllersTest.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/GetterOneWordData.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/GetterOneWordData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/Getters.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetter.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterFake.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ServletGetterOnWordData.java" afterPath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ErrorContainer.java" afterPath="$PROJECT_DIR$/src/abstractions/ErrorContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ExtracitorResourcePlan.java" afterPath="$PROJECT_DIR$/src/abstractions/ExtracitorResourcePlan.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ExtractorTextFromResource.java" afterPath="$PROJECT_DIR$/src/abstractions/ExtractorTextFromResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/GraphToText.java" afterPath="$PROJECT_DIR$/src/abstractions/GraphToText.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ResourceCapturerAndToTextConvertor.java" afterPath="$PROJECT_DIR$/src/abstractions/ResourceCapturerAndToTextConvertor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/TextToText.java" afterPath="$PROJECT_DIR$/src/abstractions/TextToText.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ToTextError.java" afterPath="$PROJECT_DIR$/src/abstractions/ToTextError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/AppConstants.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/CrosscuttingsException.java" afterPath="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/ThroughLevelBoundaryError.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ThroughLevelBoundaryError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/ConfigurationFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/ConfigurationFileIsCorrupted.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfigurator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundConfigurationFile.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundConfigurationFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundRecordInConfiguration.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundRecordInConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/WebRelay.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelay.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/HelloServlet.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/HelloWorld.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/MinimalServlets.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/OneServletContext.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trash/web-wrapper/src/AppContainer.java" afterPath="$PROJECT_DIR$/trash/web-wrapper/src/AppContainer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chew/langs/ImmutableRGB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chew/langs/SortMapOnValueExample.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IndexContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/Among.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/SnowballProgram.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/SnowballStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/TestApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/danishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/dutchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/englishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/finnishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/frenchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/germanStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/hungarianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/italianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/norwegianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/porterStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/portugueseStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/romanianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/russianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/spanishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/swedishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/tartarus/snowball/ext/turkishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/third_party/third_party.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/artifacts/processor_word_frequency_index_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/artifacts/spiders_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/description.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/commons_lang3_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/gson_2_2_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/guava_14_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/jetty_all_7_0_2_v20100331.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/log4j_1_2_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/servlet_api_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/snakeyaml_1_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/libraries/tika_app_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.settings/org.eclipse.core.resources.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/.settings/org.eclipse.ltk.core.refactoring.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/cfgs/app_cfg.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/crawler-app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/run-jar.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/scriber-app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/targets/spider_extractor_target_onto.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/examples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/summary.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/hided/website.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/css/journal.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/del.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/ed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/rel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/img/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/index_.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/share.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/hided/web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/js/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/apps/web_view/subs/sys-settings-new.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/common/ImmutableAppUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/common/utils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/math/ImmutableSummators.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/nlp/BaseSyllableCounter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/nlp/BaseTokenizer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/nlp/Compressors.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/Among.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/SnowballProgram.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/SnowballStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/TestApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/danishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/dutchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/englishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/finnishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/frenchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/germanStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/hungarianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/italianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/norwegianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/porterStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/portugueseStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/romanianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/russianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/spanishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/swedishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/src/org/tartarus/snowball/ext/turkishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/tests/BaseTokenizerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/common/tests/CompressorsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/AppConfigurerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/ProcessorTargetsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/src/crosscuttings/AppConstants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/src/crosscuttings/CrosscuttingsException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/src/crosscuttings/ImmutableAppConfigurator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/src/jobs_processors/ImmutableJobsFormer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/crosscuttings/src/jobs_processors/ImmutableProcessorTargets.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/devtools/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/devtools/get_stop_words.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/idx_coursors.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/ImmutableBaseCoursor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/ImmutableBaseFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/ImmutableDataExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/ImmutableIdxGetters.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/ImmutableOntoAssistant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/KeyWordsCoursor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/idx_coursors/src/coursors/NotesProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/info/preposition_ru.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/info/stop_words_en.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/info/stop_words_ru.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/information-theory-and-statistics-unit/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/map_reduce.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/ImmutableMapperSentencesLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/ImmutableMappers.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/ImmutableReduceSentencesLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/ImmutableReduces.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/ImmutableSavers.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/src/mapreduce/SentencesLevelProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/tests/JobsFormerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/tests/RunnerWordLevelProcessingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/map_reduce/tests/SentencesLevelProcessorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/_to_langs/Impl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/_to_langs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/_to_langs/_app_reuse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/_to_langs/mkt_to_java.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/_to_langs/mkt_to_python.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/bale_mkt.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/mkts/mkt_parser.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/processor-word-frequency-index.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/mappers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/mappers/tmp.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/reduces/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/reduces/runner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/runner_mapreduce.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/sufflers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/MapReduce/tmp.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/mutators/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/originators_node/IndexCursor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/originators_node/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/originators_node/generator_java_wrapper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/originators_node/orginator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/api_frequency_index/readers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app-raw-mapreduce.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app-spider.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app-test-stem.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app-translate-assistant.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app-wrapping-jyja.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/dev-spider-extractor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/dev-spider-processor-jy.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/filters/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/index/Iron$$Man$$AA/forward_index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/index/Stenf$$Online$$courses/forward_index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/index/Stenf$$Online$$courses/sorted_result.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/intermedia_storage/Iron Man AA 1/tmp1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/intermedia_storage/Iron Man AA 1/tmp2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/intermedia_storage/Iron Man AA 2/tmp1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/intermedia_storage/Iron Man AA 2/tmp2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/folder/intermedia_storage/Iron Man AA 2/tmp3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/codecs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/copy_reg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/re.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/sre_compile.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/sre_constants.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/sre_parse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/jy27-pkgs/types.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/_content_filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/content_items_processors.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/tokenizers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/nlp_components/word_level_processors.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/composer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/constructor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/cyaml.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/dumper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/emitter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/error.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/events.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/loader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/nodes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/parser.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/reader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/representer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/resolver.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/scanner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/serializer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/no-jython-libs/yaml/tokens.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/_test_task.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/iron_man_aa_target (2).txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/iron_man_aa_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/tmp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/tmp2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/npp_files/words_filter.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/process_data.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/processors_frequency_index/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/processors_frequency_index/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/tmp5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/Акцизы.pdf.txt_N0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/Аудит.pdf.txt_N1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/Водный налог.pdf.txt_N2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/Государственная пошлина.pdf.txt_N3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/Налоговое администрирование.pdf.txt_N4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/result_folder/противод коррупции в сфере Госупр.pdf.txt_N5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/_utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/_web_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/extracted_from_html.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/lessions_names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/read_pdf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/spider_extractor_jy_app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/test_spider.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/hided/trash.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/test_data/test_spider_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/test_data/test_spider_target_bad.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_extractors/tika_wrapper/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/_utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/custom_to_text_convertors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/srt_spider.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/std_to_text_convertors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/std_to_text_convertors/srt_to_text.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/test_data/test_spider_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/test_data/test_spider_target_bad.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/spiders_processors/test_spider_processor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/content_assembers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/originator_frequency_index/IIndexCursor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/originator_frequency_index/IndexCursorFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/originator_frequency_index/Runner.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/originator_frequency_index/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/IErrorContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/IExtracitorResourcePlan.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/IExtractorTextFromResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/IGraphToText.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/IResourceCapturerAndToTextConvertor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/ITextToText.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/pdf/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/pdf/read_pdf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/strs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/src/to_text/strs/os_dal.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/subtitles_to_text.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/SimpleTask.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/TPK.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/TestScript.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/for_test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/test_scripts/test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tests_data/t.doc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tests_data/t.odt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tika_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 1 - Quicksort- Overview (12 min)._N0_N2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 1 - Quicksort- Overview (12 min)._N0_N4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 1 - Quicksort- Overview (12 min)._N4_N1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 2 - Partitioning Around a Pivot (25 min)._N0_N3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 2 - Partitioning Around a Pivot (25 min)._N3_N2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N0_N1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N1_N3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/5 - 3 - Correctness of Quicksort [Review - Optional] (11 min)._N2_N5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/Stenf. courses II_N3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/Stenf. courses II_N4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/Stenf. courses II_N5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/Stenf. courses I_N1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp/Stenf. courses I_N2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/Акцизы.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/Аудит.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/Водный налог.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/Государственная пошлина.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/Налоговое администрирование.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/tmp_folder/противод коррупции в сфере Госупр.pdf.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/IErrorContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/IExtracitorResourcePlan.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/IExtractorTextFromResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/IGraphToText.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/IResourceCapturerAndToTextConvertor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/ITextToText.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/ReadMe.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/pdf/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/pdf/read_pdf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/strs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text/strs/os_dal.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/prototypes/to_text_jy_template.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/sandbox/TestLuceneStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/sandbox/TestSentSplitter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/sandbox/src/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/sandbox/src/MainT.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/spiders.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/src/spiders_extractors/ExtractorException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/src/spiders_extractors/ImmutableTikaWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/src/spiders_extractors/MinimalSpiderExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/src/spiders_processors/MinimalSpiderProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/tests/MinimalSpiderProcessorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/spiders/tests/SpiderExtractorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/app_utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/dirs_walker.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/_http_requester.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/_web_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/coursera_title_parser.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/extracted_from_html.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/lessions_html_code.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crawlers/hided/lessions_names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crosscuttings/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/crosscuttings/tools.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/dals/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/dals/local_host/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/dals/local_host/local_host_io_wrapper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/src/scriber/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/apps/text-find.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/dists/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/dists/setup.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/dists/test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/engine.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/find_engine.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/def_finder.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/engine_tmp.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/ffind.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/findStr.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/str_finder_ifaces.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/str_finder_lf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/for_analyse/str_finder_n.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/text_finders/todo.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/chardetect.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_cgi_packer_part.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_cmds_former_part.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_depend_form_cfg.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_engines.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_init_part.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_job.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_parsers.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_querys.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_rpt.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_small_part.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_state_parser.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_uni_header.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/data_processor_utf8_autoconv_trys/sampler_v1_part.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/test.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/to_utf8_trys/to_utf8.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/todo - копия.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/text-processors/todo.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/description.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/libraries/lucene_analyzers_common_4_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/libraries/russian_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/libraries/xmlgraphics_commons_1_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/.settings/org.eclipse.core.resources.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/Sample.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/TestSentSplitter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/apps/app-spider-processor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/build.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/Iron Man AA/Iron Man- Armored Adventures - 02x14 - Mandarin's Quest.[UM].English.C.updated.Addic7ed.com.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/Iron Man AA/Iron Man02x26.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/Iron Man AA/Iron1and8.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/t.doc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/t.odt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/data/t.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/manifest.mf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/_to_langs/Impl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/_to_langs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/_to_langs/_app_reuse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/_to_langs/mkt_to_java.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/_to_langs/mkt_to_python.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/bale_mkt.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/conv_java_import.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/java_io_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/mkt_parser.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/test_import_to_jy.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/mkts/tmp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/MinimalStaticChart.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/TestLuceneStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/Among.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/SnowballProgram.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/SnowballStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/TestApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/danishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/dutchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/englishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/finnishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/frenchStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/germanStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/hungarianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/italianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/norwegianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/porterStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/portugueseStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/romanianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/russianStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/spanishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/swedishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src/org/tartarus/snowball/ext/turkishStemmer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src_pjy/nlp_components/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/src_pjy/spiders_extractors/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/to-text.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/to-text-units/warning.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web-wrapper/src/AppContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web-wrapper/web-wrapper.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/description.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/libraries/guava_14_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/libraries/jetty_all_7_0_2_v20100331.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/libraries/processor_word_frequency_index.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/libraries/servlet_api_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/libraries/snakeyaml_1_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/error.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/examples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/summary.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/css/website.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/images/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/del.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/ed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/rel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/img/temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/index_flot.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/share.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/js/web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/out.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/hided/subs/sys-settings-new.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trash/web_view/web_view.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/CallJythonTest.java" afterPath="$PROJECT_DIR$/sandbox/src/langs/CallJythonTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/StringCodingTest.java" afterPath="$PROJECT_DIR$/sandbox/src/langs/StringCodingTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/book/interfaces/Building.py" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/book/interfaces/Building.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/book/interfaces/BuildingType.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/book/interfaces/BuildingType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/book/util/BuildingFactory.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/book/util/BuildingFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/langs/book/util/RunnerFactory.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/book/util/RunnerFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gae/Car.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/Car.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gae/CarTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gae/Engine.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/Engine.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gae/LocalDatastoreTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/LocalDatastoreTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gae/OfyService.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/OfyService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/gson/UseGsonTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/gson/UseGsonTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/guava/GuavaHashingTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/guava/GuavaHashingTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/guava/SetGuavaTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/guava/SetGuavaTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jpa/Todo.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jpa/Todo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jpa/TodoTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jpa/TodoTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/Beach.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/IJythonTestInterface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/JavaImpl.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/JavaImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/EvalFile.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/EvalFileTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/EvalScript.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/JSRException.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/JSRException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/PyCaller.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/PyCallerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/ScriptTestJython.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/SimpleEmbedded.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/TPKFilterTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/Trash.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/jsr/Trash.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloServlet.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/MinimalServlets.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/OneServletContext.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/third_party/tika/UseTikaTest.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/tika/UseTikaTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Family.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Family.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Job.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Job.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Person.java" afterPath="$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Person.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/trash/common/common.iml" afterPath="$PROJECT_DIR$/3rdparty/3rdparty.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/trash/prototypes/src/IndexContainer.java" afterPath="$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/IndexContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/trash/sandbox/sandbox.iml" afterPath="$PROJECT_DIR$/sandbox/sandbox.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/trash/sandbox/src/ImmutableRGB.java" afterPath="$PROJECT_DIR$/sandbox/src/langs/ImmutableRGB.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/trash/sandbox/src/SortMapOnValueExample.java" afterPath="$PROJECT_DIR$/sandbox/src/langs/SortMapOnValueExample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chew/langs/CallJythonTest.java" afterPath="$PROJECT_DIR$/src/chew/langs/CallJythonTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloServlet.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloWorld.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloWorld.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/InnerReuse.java" afterPath="$PROJECT_DIR$/src/common/InnerReuse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/MinimalServlets.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/MinimalServlets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/OneServletContext.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/OneServletContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" afterPath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smart-vocabulary-cards.iml" afterPath="$PROJECT_DIR$/smart-vocabulary-cards.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
@@ -185,22 +807,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CarTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chew/third_party/gae/CarTest.java">
+      <file leaf-file-name="CarTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1380">
-              <caret line="77" column="75" selection-start-line="77" selection-start-column="75" selection-end-line="77" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InnerReuse.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.100295" vertical-offset="92" max-vertical-offset="675">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.685422" vertical-offset="962" max-vertical-offset="1545">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -258,6 +872,8 @@
         <option value="$PROJECT_DIR$/src/chew/servlets/OneServletContext.java" />
         <option value="$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java" />
         <option value="$PROJECT_DIR$/src/common/InnerReuse.java" />
+        <option value="$PROJECT_DIR$/sandbox/src/chew/third_party_tests/gae/CarTest.java" />
+        <option value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarTest.java" />
       </list>
     </option>
   </component>
@@ -311,29 +927,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkthread-annotations-1.0.9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkthread-annotations-1.0.9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetty-servlets-7.0.2.v20100331.jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,6 +940,10 @@
               <option name="myItemId" value="smart-vocabulary-cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -354,64 +952,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,12 +970,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/chew/third_party/gae" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sandbox/src/chew/third_party_tests/gae" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -443,11 +991,14 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="chew_third_party.jpa" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sandbox/src" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.GAE">
@@ -606,7 +1157,7 @@
       <method />
     </configuration>
     <configuration default="false" name="GAE" type="JUnit" factoryName="JUnit">
-      <module name="smart-vocabulary-cards" />
+      <module name="sandbox" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/opt/jdks/jdk1.7.0_55" />
       <option name="PACKAGE_NAME" />
@@ -622,7 +1173,7 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
-      <dir value="$PROJECT_DIR$/src/chew/third_party/gae" />
+      <dir value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae" />
       <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -667,14 +1218,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3147541" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3147541" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45409837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -722,7 +1273,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="885">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
@@ -732,7 +1283,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="600">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -756,7 +1307,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="885">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
@@ -766,7 +1317,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="600">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -837,13 +1388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
@@ -851,7 +1395,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/langs/SortMapOnValueExample.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/langs/SortMapOnValueExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38593483" vertical-offset="0" max-vertical-offset="975">
           <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
@@ -859,7 +1403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15437393" vertical-offset="0" max-vertical-offset="583">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -867,7 +1411,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2761578" vertical-offset="169" max-vertical-offset="885">
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
@@ -901,7 +1445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/jython_callers/Beach.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -909,7 +1453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Family.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Family.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
@@ -917,7 +1461,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Person.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -925,7 +1469,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Job.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/tutorials/de/vogella/jpa/eclipselink/model/Job.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
@@ -949,7 +1493,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/OneServletContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
@@ -957,19 +1501,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chew/third_party/gae/CarTest.java">
+    <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1380">
-          <caret line="77" column="75" selection-start-line="77" selection-start-column="75" selection-end-line="77" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="675">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
+    <entry file="file://$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.100295" vertical-offset="92" max-vertical-offset="675">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1102" max-vertical-offset="1800">
+          <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="3585">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/LuceneStemmerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2385">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/nlp/CompressorsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7455">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.685422" vertical-offset="962" max-vertical-offset="1545">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -979,6 +1571,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>third_party</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1026,12 +1619,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>smart-vocabulary-cards</last-edited>
+          <last-edited>sandbox</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
