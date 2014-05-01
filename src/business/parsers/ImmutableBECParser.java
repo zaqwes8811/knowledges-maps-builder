@@ -1,6 +1,6 @@
 package business.parsers;
 
-//import info_core_accessors.VParserException;
+//import dal.info_core_accessors.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;

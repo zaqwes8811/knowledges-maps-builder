@@ -1,6 +1,6 @@
 package business.spiders_processors;
 
-import info_core_accessors.ImmutableBaseCoursor;
+import dal.info_core_accessors.ImmutableBaseCoursor;
 import org.junit.Test;
 
 import java.util.List;

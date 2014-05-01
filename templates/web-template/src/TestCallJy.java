@@ -1,4 +1,4 @@
-import embedded_script_engines.jython_callers.jsr.PyCaller;
+import chew.third_party.jython_callers.jsr.PyCaller;
 
 import  java.util.ArrayList;
 public class TestCallJy {
