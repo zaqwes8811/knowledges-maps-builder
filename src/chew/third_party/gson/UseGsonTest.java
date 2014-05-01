@@ -1,4 +1,4 @@
-package chew.chew_third_party;
+package chew.third_party.gson;
 
 import com.google.gson.Gson;
 import org.junit.Test;

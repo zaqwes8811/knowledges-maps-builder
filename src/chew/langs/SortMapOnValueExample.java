@@ -1,4 +1,4 @@
-package chew.chew_third_party; /**
+package chew.langs; /**
  * Created with IntelliJ IDEA.
  * User: кей
  * Date: 11.05.13

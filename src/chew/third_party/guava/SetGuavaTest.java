@@ -1,4 +1,4 @@
-package chew.chew_third_party;
+package chew.third_party.guava;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;

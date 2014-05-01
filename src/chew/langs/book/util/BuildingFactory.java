@@ -3,9 +3,9 @@
  * Object Factory that is used to coerce python module into a
  * Java class
  */
-package chew.chew_third_party.book.util;
+package chew.langs.book.util;
 
-import chew.chew_third_party.book.interfaces.BuildingType;
+import chew.langs.book.interfaces.BuildingType;
 
 import org.python.core.PyObject;
 import org.python.core.PyString;

@@ -2,7 +2,7 @@
 // https://developers.google.com/appengine/docs/java/tools/localunittesting?csw=1#Introducing_the_Java_Testing_Utilities
 //
 // https://developers.google.com/appengine/docs/java/datastore/index
-package chew.chew_third_party.gae;
+package chew.third_party.gae;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -11,9 +11,8 @@ import org.junit.*;
 
 //import static com.googlecode.objectify.ObjectifyService;
 import java.util.List;
-import java.util.Map;
 
-import static chew.chew_third_party.gae.OfyService.ofy;
+import static chew.third_party.gae.OfyService.ofy;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;

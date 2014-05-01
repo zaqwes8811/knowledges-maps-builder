@@ -1,4 +1,4 @@
-package chew.chew_third_party.jpa;
+package chew.third_party.jpa;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
