@@ -1,4 +1,4 @@
-package chew.chew_language;
+package chew.langs;
 
 /**
  *

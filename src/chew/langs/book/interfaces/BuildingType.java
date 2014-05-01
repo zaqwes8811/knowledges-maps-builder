@@ -1,4 +1,4 @@
-package chew.chew_third_party.book.interfaces;
+package chew.langs.book.interfaces;
 /**
  * Created with IntelliJ IDEA.
  * User: кей

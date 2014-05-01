@@ -1,6 +1,6 @@
-package chew.chew_third_party.book.util;
+package chew.langs.book.util;
 
-import chew.chew_third_party.book.interfaces.BuildingType;
+import chew.langs.book.interfaces.BuildingType;
 
 public class RunnerFactory {
 

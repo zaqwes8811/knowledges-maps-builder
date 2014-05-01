@@ -1,4 +1,4 @@
-package chew.chew_third_party.gae;
+package chew.third_party.gae;
 
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
