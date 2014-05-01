@@ -1,7 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="" />
+    <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Family.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Job.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/de/vogella/jpa/eclipselink/model/Person.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/Beach.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IJythonTestInterface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/IndexContainer.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/IndexContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/JavaImpl.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/JavaImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFile.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalFileTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/EvalScript.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/JSRException.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/JSRException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCaller.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/PyCallerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/ScriptTestJython.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/SimpleEmbedded.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/TPKFilterTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/embedded_script_engines/jython_callers/jsr/Trash.java" afterPath="$PROJECT_DIR$/src/chew/third_party/jython_callers/jsr/Trash.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolderTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ContentStorageAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentStorageAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ExternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ExternalCursorException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllers.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/FabricImmutableNodeControllersImpl.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllersImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseCoursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableDataExtractor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableIdxGetters.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableNodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableOntoAssistant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IndexCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/IndexCursorFactory.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursorFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/InternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/InternalCursorException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCoursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeAlreadyExist.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAlreadyExist.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeIsCorrupted.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeIsCorrupted.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NodeNoFound.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeNoFound.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NotesProcessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/OutOfRangeOnAccess.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/OutOfRangeOnAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/Runner.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/Runner.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/info_core_accessors/hided_code.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/hided_code.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/BECCache.java" afterPath="$PROJECT_DIR$/src/controllers/BECCache.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/apps/WebRelay.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/caches/GCashesLearn.java" afterPath="$PROJECT_DIR$/src/controllers/caches/GCashesLearn.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/BuilderControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/BuilderControllers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ContainerNodeControllersTest.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/GetterOneWordData.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/GetterOneWordData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/Getters.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/Getters.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetter.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterFake.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterFake.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/read_chain/web_wrapper/ServletGetterOnWordData.java" afterPath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ErrorContainer.java" afterPath="$PROJECT_DIR$/src/abstractions/ErrorContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ExtracitorResourcePlan.java" afterPath="$PROJECT_DIR$/src/abstractions/ExtracitorResourcePlan.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ExtractorTextFromResource.java" afterPath="$PROJECT_DIR$/src/abstractions/ExtractorTextFromResource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/GraphToText.java" afterPath="$PROJECT_DIR$/src/abstractions/GraphToText.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ResourceCapturerAndToTextConvertor.java" afterPath="$PROJECT_DIR$/src/abstractions/ResourceCapturerAndToTextConvertor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/TextToText.java" afterPath="$PROJECT_DIR$/src/abstractions/TextToText.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/strange_things/ToTextError.java" afterPath="$PROJECT_DIR$/src/abstractions/ToTextError.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/AppConstants.java" afterPath="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/CrosscuttingsException.java" afterPath="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/ThroughLevelBoundaryError.java" afterPath="$PROJECT_DIR$/src/crosscuttings/ThroughLevelBoundaryError.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/ConfigurationFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/ConfigurationFileIsCorrupted.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/GlobalConfigurator.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfigurator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundConfigurationFile.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundConfigurationFile.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/through_functional/configurator/NoFoundRecordInConfiguration.java" afterPath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundRecordInConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/WebRelay.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelay.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/HelloServlet.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/HelloWorld.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/MinimalServlets.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_relay/servlets/OneServletContext.java" afterPath="$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trash/web-wrapper/src/AppContainer.java" afterPath="$PROJECT_DIR$/trash/web-wrapper/src/AppContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/Beach.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chew/langs/CallJythonTest.java" afterPath="$PROJECT_DIR$/src/chew/langs/CallJythonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/EvalFileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/EvalScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloServlet.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloWorld.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/HelloWorld.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/IJythonTestInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/InnerReuse.java" afterPath="$PROJECT_DIR$/src/common/InnerReuse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/JSRException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" afterPath="$PROJECT_DIR$/templates/web-template/src/test_call_jy/JavaImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/MinimalServlets.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/MinimalServlets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/OneServletContext.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jetty_examples/OneServletContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/PyCaller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/PyCallerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/ScriptTestJython.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/SimpleEmbedded.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" afterPath="$PROJECT_DIR$/templates/web-template/test/jsr/TPKFilterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" afterPath="$PROJECT_DIR$/templates/web-template/src/TestCallJy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" afterPath="$PROJECT_DIR$/templates/web-template/src/jsr/Trash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,11 +185,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CarTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CarTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chew/third_party/gae/CarTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3690773" vertical-offset="797" max-vertical-offset="1380">
-              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1380">
+              <caret line="77" column="75" selection-start-line="77" selection-start-column="75" selection-end-line="77" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InnerReuse.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.100295" vertical-offset="92" max-vertical-offset="675">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,6 +251,13 @@
         <option value="$PROJECT_DIR$/src/chew/chew_third_party/gae/CarTest.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_api/User.java" />
         <option value="$PROJECT_DIR$/src/chew/langs/SortMapOnValueExample.java" />
+        <option value="$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java" />
+        <option value="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Family.java" />
+        <option value="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Person.java" />
+        <option value="$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Job.java" />
+        <option value="$PROJECT_DIR$/src/chew/servlets/OneServletContext.java" />
+        <option value="$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java" />
+        <option value="$PROJECT_DIR$/src/common/InnerReuse.java" />
       </list>
     </option>
   </component>
@@ -237,11 +375,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eclipselink" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,33 +393,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,62 +412,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="chew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,14 +654,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="714" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23278688" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39344263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -621,12 +673,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2324047" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29836065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45409837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -662,7 +714,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
+    <entry file="file://$PROJECT_DIR$/src/views/web/WebRelayApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1020">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
@@ -670,7 +722,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="885">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
@@ -680,7 +732,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="600">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -696,7 +748,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
+    <entry file="file://$PROJECT_DIR$/src/views/web/WebRelayApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1020">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
@@ -704,7 +756,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="885">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
@@ -714,7 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="600">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -750,42 +802,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/through_functional/configurator/GlobalConfiguratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_core_accessors/IdxNodeAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -799,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="435">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chew/langs/SortMapOnValueExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38593483" vertical-offset="0" max-vertical-offset="975">
@@ -814,7 +859,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15437393" vertical-offset="0" max-vertical-offset="583">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
@@ -822,7 +867,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_relay/servlets/MinimalServlets.java">
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/MinimalServlets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2761578" vertical-offset="169" max-vertical-offset="885">
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
@@ -832,7 +877,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/read_chain/apps/WebRelay.java">
+    <entry file="file://$PROJECT_DIR$/src/views/web/WebRelayApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.073756434" vertical-offset="17" max-vertical-offset="810">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
@@ -842,16 +887,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_api/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2058319" vertical-offset="0" max-vertical-offset="583">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.18703242" vertical-offset="0" max-vertical-offset="401">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/jpa/eclipselink/Sentences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="435">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/jython_callers/Beach.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chew/tutorials/de/vogella/jpa/eclipselink/model/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/web_wrapper/GetterOneWordData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chew/third_party/servlets/OneServletContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chew/third_party/gae/CarTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3690773" vertical-offset="797" max-vertical-offset="1380">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1380">
+          <caret line="77" column="75" selection-start-line="77" selection-start-column="75" selection-end-line="77" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/InnerReuse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.100295" vertical-offset="92" max-vertical-offset="675">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>

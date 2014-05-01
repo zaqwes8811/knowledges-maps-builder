@@ -6,9 +6,9 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import through_functional.AppConfigurator;
-import through_functional.AppConstants;
-import through_functional.ThroughLevelBoundaryError;
+import crosscuttings.AppConfigurator;
+import crosscuttings.AppConstants;
+import crosscuttings.ThroughLevelBoundaryError;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

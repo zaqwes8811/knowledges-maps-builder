@@ -1,6 +1,6 @@
 package chew.langs;
 
-import embedded_script_engines.jython_callers.jsr.PyCaller;
+import chew.third_party.jython_callers.jsr.PyCaller;
 import org.junit.Test;
 
 public class CallJythonTest {

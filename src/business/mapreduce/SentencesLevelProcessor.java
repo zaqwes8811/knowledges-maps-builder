@@ -4,7 +4,7 @@ package business.mapreduce;
 import common.InnerReuse;
 import business.jobs_processors.JobsFormer;
 import business.jobs_processors.ProcessorTargets;
-import through_functional.AppConstants;
+import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

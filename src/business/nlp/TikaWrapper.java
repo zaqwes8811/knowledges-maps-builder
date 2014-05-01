@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import business.jobs_processors.ProcessorTargets;
-import through_functional.AppConstants;
+import crosscuttings.AppConstants;
 import common.InnerReuse;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;

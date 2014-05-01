@@ -3,10 +3,10 @@ package business.spiders_processors;
 
 import common.InnerReuse;
 import common.Utils;
-import info_core_accessors.ImmutableBaseCoursor;
+import dal.info_core_accessors.ImmutableBaseCoursor;
 import business.jobs_processors.ProcessorTargets;
 import business.nlp.TikaWrapper;
-import through_functional.AppConstants;
+import crosscuttings.AppConstants;
 
 
 import business.nlp.BaseTokenizer;

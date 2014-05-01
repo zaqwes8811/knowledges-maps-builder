@@ -2,10 +2,10 @@ package business.evaluators;
 
 
 import common.Utils;
-import info_core_accessors.ImmutableBaseCoursor;
-import info_core_accessors.ImmutableIdxGetters;
+import dal.info_core_accessors.ImmutableBaseCoursor;
+import dal.info_core_accessors.ImmutableIdxGetters;
 import business.jobs_processors.ProcessorTargets;
-import through_functional.AppConstants;
+import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

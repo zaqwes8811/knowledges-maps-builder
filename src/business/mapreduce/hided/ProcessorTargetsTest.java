@@ -1,7 +1,7 @@
 package business.mapreduce.hided;
 
 import org.junit.Test;
-import through_functional.CrosscuttingsException;
+import crosscuttings.CrosscuttingsException;
 
 import java.util.List;
 

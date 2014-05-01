@@ -3,7 +3,7 @@ package business.mapreduce;
 import com.google.common.collect.Multimap;
 import business.jobs_processors.JobsFormer;
 import business.jobs_processors.ProcessorTargets;
-import through_functional.AppConstants;
+import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
