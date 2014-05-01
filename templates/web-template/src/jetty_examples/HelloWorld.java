@@ -1,4 +1,4 @@
-package web_relay.servlets;
+package chew.third_party.servlets;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;

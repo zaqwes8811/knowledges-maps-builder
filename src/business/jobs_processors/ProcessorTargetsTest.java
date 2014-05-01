@@ -1,7 +1,7 @@
 package business.jobs_processors;
 
 import org.junit.Test;
-import through_functional.ThroughLevelBoundaryError;
+import crosscuttings.ThroughLevelBoundaryError;
 
 import java.util.List;
 

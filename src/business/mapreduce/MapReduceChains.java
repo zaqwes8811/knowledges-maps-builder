@@ -9,8 +9,8 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import through_functional.CrosscuttingsException;
-//import info_core_accessors.IdxAccessor;
+import crosscuttings.CrosscuttingsException;
+//import dal.info_core_accessors.IdxAccessor;
 import business.parsers.ImmutableBECParser;
 
 import java.io.BufferedWriter;

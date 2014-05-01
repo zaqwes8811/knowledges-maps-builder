@@ -1,6 +1,6 @@
 package business.parsers;
 
-//import info_core_accessors.VParserException;
+//import dal.info_core_accessors.VParserException;
 
 
 // Наверное случайный выборщик будет оборачивать это класс, а не будет встроенным в него.

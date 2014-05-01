@@ -3,8 +3,8 @@ package business.spiders_extractors;
 import business.nlp.TikaWrapper;
 import common.InnerReuse;
 import business.jobs_processors.ProcessorTargets;
-import through_functional.AppConstants;
-import through_functional.ThroughLevelBoundaryError;
+import crosscuttings.AppConstants;
+import crosscuttings.ThroughLevelBoundaryError;
 
 import java.util.List;
 

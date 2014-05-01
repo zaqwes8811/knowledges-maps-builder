@@ -1,7 +1,7 @@
 package business.jobs_processors;
 
-import info_core_accessors.ImmutableBaseCoursor;
-import through_functional.AppConstants;
+import dal.info_core_accessors.ImmutableBaseCoursor;
+import crosscuttings.AppConstants;
 
 import com.google.common.base.Joiner;
 

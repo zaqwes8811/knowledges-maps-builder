@@ -32,14 +32,16 @@ final public class InnerReuse {
     List<String> result = Arrays.asList(new File(path).list(new DirFilter(regex)));
     return result;
   }
+
+
+    static class DirFilter implements FilenameFilter {
+        private Pattern pattern;
+        public DirFilter(String regex) {
+            pattern = Pattern.compile(regex);
+        }
+        public boolean accept(File dir, String name) {
+            return  pattern.matcher(name).matches();
+        }
+    }
 }
 
-final class DirFilter implements FilenameFilter {
-  private Pattern pattern;
-  public DirFilter(String regex) {
-    pattern = Pattern.compile(regex);
-  }
-  public boolean accept(File dir, String name) {
-    return  pattern.matcher(name).matches();
-  }
-}

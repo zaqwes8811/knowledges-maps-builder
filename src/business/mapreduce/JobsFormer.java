@@ -4,8 +4,8 @@ import business.mapreduce.hided.GlobalConstants;
 import business.mapreduce.hided.ProcessorTargets;
 import com.google.common.base.Joiner;
 import net.jcip.annotations.Immutable;
-import through_functional.CrosscuttingsException;
-import info_core_accessors.ImmutableBaseCoursor;
+import crosscuttings.CrosscuttingsException;
+import dal.info_core_accessors.ImmutableBaseCoursor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
