@@ -12,6 +12,7 @@ import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestC
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Result;
+import com.googlecode.objectify.cmd.Query;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -70,6 +71,13 @@ public class CarTest {
     // Or you can issue a query
     Car fetched3 = ofy().load().type(Car.class).filter("license", "2FAST").first().now();
     List<Car> listCars = ofy().load().type(Car.class).filter("license", "2FAST").list();
+
+    // Make Iterable
+    // The Query itself is Iterable
+    Query<Car> q = ofy().load().type(Car.class).filter("license", "2FAST");
+    for (Car car: q) {
+      //System.out.println(car.id);
+    }
 
     // Change some data and write it
     porsche.color = BLUE;
