@@ -2,7 +2,6 @@ package third_party_tests.gae;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.googlecode.objectify.Ref;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -40,9 +39,11 @@ public class CarOneToManyTest {
     Engine engine = new Engine();
     // TODO: Need to save? Yes. Throw exception.
     ofy().save().entity(engine).now();
-    porsche.driver = Ref.create(engine);
+    porsche.setEngine(engine);
 
     ofy().save().entity(porsche).now();
+
+    // Read
 
   }
 }
