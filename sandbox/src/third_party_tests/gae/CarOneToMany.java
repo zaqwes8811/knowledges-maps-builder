@@ -1,7 +1,9 @@
 package third_party_tests.gae;
 
+import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Load;
 
 @Entity
 public class CarOneToMany {
@@ -11,6 +13,10 @@ public class CarOneToMany {
   int color;
   //byte[] rawData;
   //@Ignore int irrelevant;
+
+  // Coupling
+  @Load // TODO: Why?
+  Ref<Engine> driver;
 
   private CarOneToMany() {}
 
