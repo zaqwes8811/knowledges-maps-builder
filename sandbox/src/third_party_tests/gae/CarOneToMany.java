@@ -16,7 +16,7 @@ public class CarOneToMany {
 
   // Coupling
   @Load // TODO: Why?
-  Ref<Engine> driver;
+  Ref<Engine> engine;
 
   private CarOneToMany() {}
 
@@ -24,4 +24,7 @@ public class CarOneToMany {
     this.vin = vin;
     this.color = color;
   }
+
+  public Engine getEngine() { return engine.get(); }
+  public void setEngine(Engine value) { engine = Ref.create(value); }
 }
