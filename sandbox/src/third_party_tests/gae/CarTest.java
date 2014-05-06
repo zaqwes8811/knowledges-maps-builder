@@ -83,6 +83,10 @@ public class CarTest {
     porsche.color = BLUE;
     ofy().save().entity(porsche).now();    // async without the now()
 
+    // You can query for just keys, which will return Key objects much more efficiently than fetching whole objects
+    Iterable<Key<Car>> allKeys = ofy().load().type(Car.class).keys();
+
+    // Update
     // Delete it
     ofy().delete().entity(porsche).now();    // async without the now()
   }

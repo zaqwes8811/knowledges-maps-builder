@@ -6,8 +6,6 @@ import com.googlecode.objectify.annotation.Index;
 
 @Entity
 public class Engine {
-  @Id
-  Long id;
-  @Index
-  String name;
+  @Id Long id;
+  @Index String name;
 }
