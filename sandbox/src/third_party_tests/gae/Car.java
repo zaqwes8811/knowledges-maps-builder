@@ -7,7 +7,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 public class Car {
   @Id Long id;
-  @Index String license;
+  @Index String license;  // для фильтрации нужно пометить
   int color; // public?
   //@Load List<Ref<Engine>> owners = new ArrayList<Ref<Engine>>();
 }
