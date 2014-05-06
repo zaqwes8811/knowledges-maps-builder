@@ -69,6 +69,7 @@ public class CarTest {
 
     // Or you can issue a query
     Car fetched3 = ofy().load().type(Car.class).filter("license", "2FAST").first().now();
+    List<Car> listCars = ofy().load().type(Car.class).filter("license", "2FAST").list();
 
     // Change some data and write it
     porsche.color = BLUE;
