@@ -10,7 +10,15 @@
     <orderEntry type="library" name="appengine-api-stubs" level="project" />
     <orderEntry type="library" name="appengine-testing" level="project" />
     <orderEntry type="library" name="checkthread-annotations-1.0.9" level="project" />
-    <orderEntry type="library" name="objectify-4.0b1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../third_party/java/lib/objectify-5.0.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
