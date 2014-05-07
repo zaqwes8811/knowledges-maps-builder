@@ -8,4 +8,7 @@ import com.googlecode.objectify.annotation.Index;
 public class Engine {
   @Id Long id;
   @Index String name;
+
+  public Engine() {}
+  public Engine(String name) { this.name = name; }
 }

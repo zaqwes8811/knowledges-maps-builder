@@ -8,7 +8,7 @@ public class OfyService {
   static {
     factory().register(Car.class);
     factory().register(Engine.class);
-    factory().register(CarOneToMany.class);
+    factory().register(CarOneToOne.class);
     factory().register(Person.class);
     //...etc
   }
