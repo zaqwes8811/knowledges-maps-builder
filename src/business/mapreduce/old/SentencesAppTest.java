@@ -1,4 +1,4 @@
-package business.mapreduce;
+package business.mapreduce.old;
 
 import org.junit.Test;
 
