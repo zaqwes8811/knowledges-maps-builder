@@ -1,4 +1,4 @@
-package business.jobs_processors;
+package hided.jobs_processors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;

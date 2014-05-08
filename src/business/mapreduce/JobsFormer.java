@@ -1,7 +1,7 @@
 package business.mapreduce;
 
-import business.mapreduce.hided.GlobalConstants;
-import business.mapreduce.hided.ProcessorTargets;
+import hided.GlobalConstants;
+import hided.ProcessorTargets;
 import com.google.common.base.Joiner;
 import net.jcip.annotations.Immutable;
 import crosscuttings.CrosscuttingsException;

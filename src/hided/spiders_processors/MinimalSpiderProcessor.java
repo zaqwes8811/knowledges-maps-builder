@@ -1,10 +1,10 @@
-package business.spiders_processors;
+package hided.spiders_processors;
 
 
 import common.InnerReuse;
 import common.Utils;
 import dal.info_core_accessors.ImmutableBaseCoursor;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.ProcessorTargets;
 import business.nlp.TikaWrapper;
 import crosscuttings.AppConstants;
 

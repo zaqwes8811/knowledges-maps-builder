@@ -1,4 +1,4 @@
-package business.mapreduce.hided;
+package hided;
 
 import org.junit.Test;
 import crosscuttings.CrosscuttingsException;
