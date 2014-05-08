@@ -1,4 +1,4 @@
-package business.mapreduce;
+package business.mapreduce.old;
 
 import hided.jobs_processors.JobsFormer;
 import business.nlp.BaseSyllableCounter;

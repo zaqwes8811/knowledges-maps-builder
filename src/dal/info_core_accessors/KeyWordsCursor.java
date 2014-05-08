@@ -1,6 +1,6 @@
 package dal.info_core_accessors;
 
-import business.mapreduce.SentencesReduce;
+import business.mapreduce.old.SentencesReduce;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import common.Utils;

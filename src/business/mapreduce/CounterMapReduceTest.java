@@ -20,7 +20,7 @@ import java.util.Set;
  * Time: 19:45
  * To change this template use File | Settings | File Templates.
  */
-public class CounterMapperTest {
+public class CounterMapReduceTest {
   @Test
   public void testRun() throws Exception {
     // build

@@ -1,7 +1,7 @@
 package hided.evaluators;
 
 
-import business.mapreduce.SentencesReduce;
+import business.mapreduce.old.SentencesReduce;
 import common.Utils;
 import dal.info_core_accessors.ImmutableBaseCoursor;
 import dal.info_core_accessors.ImmutableIdxGetters;
