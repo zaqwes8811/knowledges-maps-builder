@@ -1,6 +1,7 @@
 package business.mapreduce;
 
-import com.google.common.collect.Multiset;
+import com.google.common.collect.Multimap;
+import dal.gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
 /**
@@ -8,13 +9,13 @@ It's fake
  */
 @NotThreadSafe
 public class CountReducer {
-  private final Multiset<String> wordHistogram_;
-  public CountReducer(Multiset<String> wordHistogram) {
+  private final Multimap<String, ContentItem> wordHistogram_;
+  public CountReducer(Multimap<String, ContentItem> wordHistogram) {
     wordHistogram_ = wordHistogram;
   }
 
   // @param value inv. index key - index sentence - или лучше хеш.
-  public void reduce(String key, Integer contentItem) {
-    wordHistogram_.add(key);
+  public void reduce(String key, ContentItem value) {
+    wordHistogram_.put(key, value);
   }
 }

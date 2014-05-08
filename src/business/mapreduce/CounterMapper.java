@@ -1,5 +1,6 @@
 package business.mapreduce;
 
+import dal.gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
 import java.util.List;
@@ -16,14 +17,14 @@ public class CounterMapper {
     reducer_ = reducer;
   }
 
-  private void emit(String key, Integer value) {
+  private void emit(String key, ContentItem value) {
     reducer_.reduce(key, value);
   }
 
-  public void map(List<String> contentItems) {
-    for (String item : contentItems) {
-      String key = item;
-      emit(key, 1);
+  public void map(List<ContentItem> contentItems) {
+    for (ContentItem item : contentItems) {
+      String key = item.getItem();
+      emit(key, item);
     }
   }
 }
