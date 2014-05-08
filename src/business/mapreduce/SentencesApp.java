@@ -18,14 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 15:32
- * To change this template use File | Settings | File Templates.
- */
-public class SentencesLevelProcessor {
+public class SentencesApp {
 
   public static void main(String [] args) {
     // Получаем работы
@@ -34,7 +27,7 @@ public class SentencesLevelProcessor {
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      result_map_stage.add(ImmutableMapperSentencesLevel.mapper_sentences_level(job));
+      result_map_stage.add(SentencesMapper.map(job));
       //break;  // DEVELOP
     }
 
@@ -45,9 +38,9 @@ public class SentencesLevelProcessor {
     Map<String, Map<String, String>> result_reduce_stage =
         new HashMap<String, Map<String, String>>();
     for (List task: result_shuffle_stage) {
-      Map<String, String> one = ImmutableReduceSentencesLevel.reduce_sentences_level(task);
+      Map<String, String> one = SentencesReduce.reduce_sentences_level(task);
 
-      String node_name = (String)task.get(ImmutableMappers.IDX_NODE_NAME);
+      String node_name = (String)task.get(NewMapper.IDX_NODE_NAME);
       result_reduce_stage.put(node_name, one);
     }
 

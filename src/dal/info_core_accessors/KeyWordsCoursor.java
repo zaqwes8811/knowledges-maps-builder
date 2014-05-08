@@ -17,7 +17,7 @@ public class KeyWordsCoursor {
     // Real processing
     for (String node: nodes) {
       Double time_to_read = cut_to(Double.parseDouble(
-          notes.get(node).get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ)));
+          notes.get(node).get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ)));
       utils.print(Joiner.on(", ")
         .join(
           (long)Math.floor(time_to_read),

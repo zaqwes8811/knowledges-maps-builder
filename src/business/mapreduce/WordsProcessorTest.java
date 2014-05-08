@@ -15,7 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class RunnerWordLevelProcessingTest {
+public class WordsProcessorTest {
   @Test
   public void testDevelop () {
     // Получаем работы
@@ -24,7 +24,7 @@ public class RunnerWordLevelProcessingTest {
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      List one = ImmutableMappers.mapper_word_level_with_compression(job);
+      List one = NewMapper.mapper_word_level_with_compression(job);
       result_map_stage.add(one);
       //break;  // DEVELOP
     }
@@ -35,7 +35,7 @@ public class RunnerWordLevelProcessingTest {
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> result_reduce_stage = new ArrayList<List>();
     for (List task: result_shuffle_stage) {
-      List one = ImmutableReduces.reduce_word_level_base(task);
+      List one = NewReducer.reduce_word_level_base(task);
       result_reduce_stage.add(one);
     }
 
@@ -46,31 +46,31 @@ public class RunnerWordLevelProcessingTest {
           .join(
             ProcessorTargets.getPathToIndex(),
             AppConstants.COMPRESSED_IDX_FOLDER,
-            result.get(ImmutableMappers.IDX_NODE_NAME));
+            result.get(NewMapper.IDX_NODE_NAME));
 
       String path_for_save_sorted_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
-          result.get(ImmutableMappers.IDX_NODE_NAME),
+          result.get(NewMapper.IDX_NODE_NAME),
           AppConstants.SORTED_IDX_FILENAME);
       String path_for_save_freq_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
-          result.get(ImmutableMappers.IDX_NODE_NAME),
+          result.get(NewMapper.IDX_NODE_NAME),
           AppConstants.FREQ_IDX_FILENAME);
       String path_for_save_rest_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
-          result.get(ImmutableMappers.IDX_NODE_NAME),
+          result.get(NewMapper.IDX_NODE_NAME),
           AppConstants.FILENAME_REST_IDX);
       String path_for_save_sentences_idx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
-          result.get(ImmutableMappers.IDX_NODE_NAME),
+          result.get(NewMapper.IDX_NODE_NAME),
           AppConstants.FILENAME_SENTENCES_IDX);
 
       try {
@@ -79,19 +79,19 @@ public class RunnerWordLevelProcessingTest {
           // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
           // Сохраняем сортированные индекс
           List<String> sorted_index =
-              (ArrayList<String>)result.get(ImmutableReduces.IDX_SORTED_IDX);
+              (ArrayList<String>)result.get(NewReducer.IDX_SORTED_IDX);
 
           // частоты
           Multiset<String> frequency_index =
-              (Multiset<String>)result.get(ImmutableMappers.IDX_FREQ_INDEX);
+              (Multiset<String>)result.get(NewMapper.IDX_FREQ_INDEX);
 
           // Обрезки слов
           Multimap<String, String> rest_words =
-              (Multimap<String, String>)result.get(ImmutableMappers.IDX_RESTS_MAP);
+              (Multimap<String, String>)result.get(NewMapper.IDX_RESTS_MAP);
 
           // Sent. index
           Map<String, Collection<Integer>> sentences_inv_idx =
-            ((Multimap<String, Integer>)result.get(ImmutableMappers.IDX_SENT_MAP)).asMap();
+            ((Multimap<String, Integer>)result.get(NewMapper.IDX_SENT_MAP)).asMap();
 
 
           Map<String, Integer> index_for_save = new HashMap<String, Integer>();

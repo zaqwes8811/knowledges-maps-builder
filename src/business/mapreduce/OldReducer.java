@@ -6,14 +6,14 @@ import com.google.common.collect.Multiset;
 import java.util.*;
 
 /**  */
-public class Reduces {
+public class OldReducer {
 
   public static final int IDX_SORTED_IDX = 5;
 
   public static List reduce_word_level_base(List task) {
     List one = new ArrayList();
     // Сортируем индекс частот
-    Multiset<String> unsorted_index = (Multiset<String>)task.get(Mappers.IDX_FREQ_INDEX);
+    Multiset<String> unsorted_index = (Multiset<String>)task.get(OldMapper.IDX_FREQ_INDEX);
 
 
     Set<String> elems = unsorted_index.elementSet();
@@ -78,7 +78,7 @@ public class Reduces {
       RE = (206.835 - 84.6*meanLengthSyllable - 1.015*meanLengthSentence);
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else {
-      String nodeName = (String)task.get(Mappers.IDX_NODE_NAME);
+      String nodeName = (String)task.get(OldMapper.IDX_NODE_NAME);
       Util.print("Warning: Lang no used - "+lang+". Node - "+nodeName);
     }
 
