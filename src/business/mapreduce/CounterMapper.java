@@ -1,6 +1,5 @@
 package business.mapreduce;
 
-import com.google.common.hash.HashFunction;
 import org.checkthread.annotations.NotThreadSafe;
 
 import java.util.List;
@@ -13,10 +12,8 @@ import java.util.List;
 @NotThreadSafe
 public class CounterMapper {
   private final CountReducer reducer_;
-  private final HashFunction hashFunction_;
-  public CounterMapper(CountReducer reducer, HashFunction hashFunction) {
+  public CounterMapper(CountReducer reducer) {
     reducer_ = reducer;
-    hashFunction_ = hashFunction;
   }
 
   private void emit(String key, Integer value) {
@@ -25,9 +22,8 @@ public class CounterMapper {
 
   public void map(List<String> contentItems) {
     for (String item : contentItems) {
-      Integer value = hashFunction_.newHasher().putString(item).hash().asInt();
       String key = item;
-      emit(key, value);
+      emit(key, 1);
     }
   }
 }
