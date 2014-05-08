@@ -1,6 +1,6 @@
 package dal.info_core_accessors;
 
-import business.evaluators.NotesProcessor;
+import hided.evaluators.NotesProcessor;
 import com.google.common.collect.Multiset;
 import common.Utils;
 

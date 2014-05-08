@@ -1,4 +1,4 @@
-package business.jobs_processors;
+package hided.jobs_processors;
 
 import org.junit.Test;
 import crosscuttings.ThroughLevelBoundaryError;

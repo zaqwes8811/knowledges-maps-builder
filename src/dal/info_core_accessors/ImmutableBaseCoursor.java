@@ -11,7 +11,7 @@ package dal.info_core_accessors;
 
 
 import com.google.common.base.Joiner;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 
 import java.io.File;

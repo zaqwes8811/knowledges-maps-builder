@@ -1,4 +1,4 @@
-package business.jobs_processors;
+package hided.jobs_processors;
 
 import dal.info_core_accessors.ImmutableBaseCoursor;
 import crosscuttings.AppConstants;

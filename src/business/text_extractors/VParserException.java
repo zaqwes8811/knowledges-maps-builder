@@ -1,4 +1,4 @@
-package business.parsers;
+package business.text_extractors;
 
 /**
  * Created with IntelliJ IDEA.

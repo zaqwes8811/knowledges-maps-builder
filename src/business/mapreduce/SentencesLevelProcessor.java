@@ -2,8 +2,8 @@ package business.mapreduce;
 
 
 import common.InnerReuse;
-import business.jobs_processors.JobsFormer;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.JobsFormer;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;

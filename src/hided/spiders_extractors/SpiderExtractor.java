@@ -1,8 +1,8 @@
-package business.spiders_extractors;
+package hided.spiders_extractors;
 
 import business.nlp.TikaWrapper;
 import common.InnerReuse;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 import crosscuttings.ThroughLevelBoundaryError;
 

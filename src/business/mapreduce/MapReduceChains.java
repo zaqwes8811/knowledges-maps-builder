@@ -1,8 +1,8 @@
 package business.mapreduce;
 
 
-import business.mapreduce.hided.GlobalConstants;
-import business.mapreduce.hided.ProcessorTargets;
+import hided.GlobalConstants;
+import hided.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;
@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import common.Util;
 import crosscuttings.CrosscuttingsException;
 //import dal.info_core_accessors.IdxAccessor;
-import business.parsers.ImmutableBECParser;
+import business.text_extractors.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
