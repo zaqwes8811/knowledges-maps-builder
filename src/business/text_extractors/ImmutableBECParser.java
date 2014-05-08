@@ -1,6 +1,6 @@
 package business.text_extractors;
 
-//import dal.info_core_accessors.VParserException;
+//import dal.accessors_text_file_storage.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;

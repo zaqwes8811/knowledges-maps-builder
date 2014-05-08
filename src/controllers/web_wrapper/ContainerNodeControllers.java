@@ -1,7 +1,7 @@
 package controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
-import dal.info_core_accessors.*;
+import dal.accessors_text_file_storage.*;
 
 
 // TODO: перейти на получение map, а не списков. Идея реаширения была избыточной.

@@ -1,6 +1,6 @@
 package business.text_extractors;
 
-//import dal.info_core_accessors.VParserException;
+//import dal.accessors_text_file_storage.VParserException;
 
 
 // Наверное случайный выборщик будет оборачивать это класс, а не будет встроенным в него.

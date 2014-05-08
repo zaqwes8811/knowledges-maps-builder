@@ -2,7 +2,7 @@ package controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import dal.info_core_accessors.*;
+import dal.accessors_text_file_storage.*;
 import org.junit.Test;
 import crosscuttings.configurator.GlobalConfigurator;
 

@@ -1,4 +1,4 @@
-package dal.info_core_accessors;
+package dal.accessors_text_file_storage;
 
 import com.google.common.base.Optional;
 import org.junit.Test;

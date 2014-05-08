@@ -10,7 +10,7 @@ import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
 import crosscuttings.CrosscuttingsException;
-//import dal.info_core_accessors.IdxAccessor;
+//import dal.accessors_text_file_storage.IdxAccessor;
 import business.text_extractors.ImmutableBECParser;
 
 import java.io.BufferedWriter;
