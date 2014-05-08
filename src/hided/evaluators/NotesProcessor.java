@@ -3,8 +3,8 @@ package hided.evaluators;
 
 import business.mapreduce.old.SentencesReduce;
 import common.Utils;
-import dal.info_core_accessors.ImmutableBaseCoursor;
-import dal.info_core_accessors.ImmutableIdxGetters;
+import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import dal.accessors_text_file_storage.ImmutableIdxGetters;
 import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;

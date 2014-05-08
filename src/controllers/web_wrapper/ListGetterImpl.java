@@ -2,7 +2,7 @@ package controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import business.math.GeneratorAnyRandom;
-import dal.info_core_accessors.ImmutableNodeAccessor;
+import dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import java.util.ArrayList;
 import java.util.List;

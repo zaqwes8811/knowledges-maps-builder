@@ -1,4 +1,4 @@
-package dal.info_core_accessors;
+package dal.accessors_text_file_storage;
 
 import hided.evaluators.NotesProcessor;
 import com.google.common.collect.Multiset;

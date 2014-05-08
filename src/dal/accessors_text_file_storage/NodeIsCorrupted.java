@@ -1,4 +1,4 @@
-package dal.info_core_accessors;
+package dal.accessors_text_file_storage;
 
 // Ошибка в программе - комплексе программ - unchecked
 // Класс исключений можно расширять, а не только передавать сторку
