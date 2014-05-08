@@ -13,8 +13,16 @@ public class Word {
   Long id;
   @Index
   String word;
+  @Index
+  Long count;
 
   // List coupled content items.
+  public void addContentItem(ContentItem item) {
+
+  }
+
+  //ArrayList<Ref<ContentItem>> refs;
+
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
   // Идея на этапе mapreduce передавать в качестве ключей объекты слов, и пользоваться
@@ -23,4 +31,8 @@ public class Word {
   // TODO:Stop it!
   // equals()
   // hashCode() - need it?
+  private Word() {}
+  public Word(String word) {
+    this.word = word;
+  }
 }
