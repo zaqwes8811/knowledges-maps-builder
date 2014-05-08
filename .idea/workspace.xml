@@ -7,20 +7,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapReduceTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceApp.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/MapReduceApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/NewMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/NewMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/NewReducer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/NewReducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/OldMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/OldMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/OldReducer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/OldReducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesAppTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesAppTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesReduce.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesReduce.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/WordsProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/WordsProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/BaseContentHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolderTest.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/BaseContentHolderTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentHolder.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ContentHolder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ContentStorageAccessor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ContentStorageAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ExternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ExternalCursorException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllers.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/FabricImmutableNodeControllers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/FabricImmutableNodeControllersImpl.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/FabricImmutableNodeControllersImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/IdxNodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessorTest.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/IdxNodeAccessorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableBaseCoursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseFilter.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableBaseFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableDataExtractor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableIdxGetters.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableNodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableNodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableOntoAssistant.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableOntoAssistant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/IndexCursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/IndexCursorFactory.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/IndexCursorFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/InternalCursorException.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/InternalCursorException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCoursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCursor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAccessor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/NodeAccessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeAlreadyExist.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/NodeAlreadyExist.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeIsCorrupted.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/NodeIsCorrupted.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NodeNoFound.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/NodeNoFound.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/NotesProcessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/OutOfRangeOnAccess.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/OutOfRangeOnAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/Runner.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/Runner.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/hided_code.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/hided_code.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/BECCache.java" afterPath="$PROJECT_DIR$/src/controllers/BECCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/BuilderControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/BuilderControllers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllers.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECSave.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormer.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/MapReduceApp.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/MapReduceApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" afterPath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/WebRelay.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,11 +115,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CounterMapper.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CounterMapper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.74614066" vertical-offset="0" max-vertical-offset="583">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <element signature="e#563#564#0" expanded="true" />
                 <element signature="e#600#601#0" expanded="true" />
@@ -97,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapReduceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5368782" vertical-offset="77" max-vertical-offset="660">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="660">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -174,8 +205,8 @@
         <option value="$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/OldReduce.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/OldReducer.java" />
-        <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapReduceTest.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
       </list>
     </option>
   </component>
@@ -259,6 +290,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,7 +628,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="714" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -597,7 +646,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48688525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -724,14 +773,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/accessors_text_file_storage/IdxNodeAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="3585">
           <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/BaseContentHolderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/accessors_text_file_storage/BaseContentHolderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
           <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
@@ -1006,22 +1055,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapReduceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="660">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.74614066" vertical-offset="0" max-vertical-offset="583">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="e#563#564#0" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapReduceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5368782" vertical-offset="77" max-vertical-offset="660">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

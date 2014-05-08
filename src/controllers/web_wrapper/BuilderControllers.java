@@ -3,10 +3,10 @@ package controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import dal.info_core_accessors.FabricImmutableNodeControllers;
-import dal.info_core_accessors.ImmutableNodeAccessor;
-import dal.info_core_accessors.NodeIsCorrupted;
-import dal.info_core_accessors.NodeNoFound;
+import dal.accessors_text_file_storage.FabricImmutableNodeControllers;
+import dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import dal.accessors_text_file_storage.NodeIsCorrupted;
+import dal.accessors_text_file_storage.NodeNoFound;
 import crosscuttings.configurator.ConfigurationFileIsCorrupted;
 import crosscuttings.configurator.NoFoundConfigurationFile;
 

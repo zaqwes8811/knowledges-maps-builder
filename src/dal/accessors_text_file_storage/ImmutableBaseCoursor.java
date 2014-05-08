@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package dal.info_core_accessors;
+package dal.accessors_text_file_storage;
 
 
 

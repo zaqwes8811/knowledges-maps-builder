@@ -1,6 +1,6 @@
 package controllers;
 
-//import dal.info_core_accessors.IdxAccessor;
+//import dal.accessors_text_file_storage.IdxAccessor;
 
 
 // @Immutable

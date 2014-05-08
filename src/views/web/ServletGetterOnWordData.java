@@ -6,8 +6,8 @@ import com.google.gson.Gson;
 
 import controllers.web_wrapper.BuilderControllers;
 import controllers.web_wrapper.ContainerNodeControllers;
-import dal.info_core_accessors.FabricImmutableNodeControllersImpl;
-import dal.info_core_accessors.ImmutableNodeAccessor;
+import dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
+import dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

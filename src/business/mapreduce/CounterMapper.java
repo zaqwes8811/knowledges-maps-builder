@@ -24,9 +24,9 @@ public class CounterMapper {
   }
 
   public void map(List<String> text) {
-    for (String sentences : text) {
-      Integer value = hashFunction_.newHasher().putString(sentences).hash().asInt();
-      String key = sentences;
+    for (String sentence : text) {
+      Integer value = hashFunction_.newHasher().putString(sentence).hash().asInt();
+      String key = sentence;
       emit(key, value);
     }
   }
