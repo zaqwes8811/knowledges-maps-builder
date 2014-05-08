@@ -1,11 +1,7 @@
 package business.mapreduce;
 
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
-import com.google.common.hash.HashFunction;
-import com.google.common.hash.Hashing;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -24,18 +20,20 @@ public class CounterMapReduceTest {
   @Test
   public void testRun() throws Exception {
     // build
-    Multiset<String> summary = HashMultiset.create();
-    Multimap<String, Integer> inverseIndex = HashMultimap.create();
-    HashFunction hf = Hashing.md5();
-    CountReducer reducer = new CountReducer(summary, inverseIndex);
-    CounterMapper mapper = new CounterMapper(reducer, hf);
+    Multiset<String> wordHistogram = HashMultiset.create();
+    CountReducer reducer = new CountReducer(wordHistogram);
+    CounterMapper mapper = new CounterMapper(reducer);
 
     // work
-    mapper.map(getContentItems());
+    List<String> contentItems = getContentItems();
+    // Persist items
 
-    Set<String> keys = summary.elementSet();
-    assert inverseIndex.keySet().size() == 2;
-    assert summary.count("hello") == 2;
+    // Connect to page
+
+    mapper.map(contentItems);
+
+    Set<String> keys = wordHistogram.elementSet();
+    assert wordHistogram.count("hello") == 2;
     assert keys.size() == 2;
   }
 }
