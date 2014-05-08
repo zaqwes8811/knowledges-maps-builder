@@ -1,4 +1,4 @@
-package business.parsers;
+package business.text_extractors;
 
 import business.nlp.SentencesSplitter;
 import com.google.common.base.Joiner;

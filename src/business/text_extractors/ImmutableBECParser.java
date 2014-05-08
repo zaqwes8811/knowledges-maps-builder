@@ -1,11 +1,11 @@
-package business.parsers;
+package business.text_extractors;
 
 //import dal.info_core_accessors.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
 import common.Util;
-import business.mapreduce.hided.GlobalConstants;
+import hided.GlobalConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;

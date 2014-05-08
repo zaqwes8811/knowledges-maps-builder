@@ -1,4 +1,4 @@
-package business.parsers;
+package business.text_extractors;
 
 //import dal.info_core_accessors.VParserException;
 

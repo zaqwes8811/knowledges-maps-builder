@@ -1,6 +1,6 @@
 package business.mapreduce;
 
-import business.jobs_processors.JobsFormer;
+import hided.jobs_processors.JobsFormer;
 import business.nlp.BaseSyllableCounter;
 import business.nlp.BaseTokenizer;
 import com.google.common.io.Closer;

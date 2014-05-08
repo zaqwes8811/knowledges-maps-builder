@@ -2,7 +2,7 @@ package business.mapreduce;
 
 
 import common.InnerReuse;
-import business.jobs_processors.JobsFormer;
+import hided.jobs_processors.JobsFormer;
 import business.nlp.BaseTokenizer;
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.*;

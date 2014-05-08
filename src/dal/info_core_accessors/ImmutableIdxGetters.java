@@ -6,7 +6,7 @@ import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.Utils;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 
 import java.util.ArrayList;

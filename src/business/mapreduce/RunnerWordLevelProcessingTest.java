@@ -1,8 +1,8 @@
 package business.mapreduce;
 
 import com.google.common.collect.Multimap;
-import business.jobs_processors.JobsFormer;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.JobsFormer;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;

@@ -1,9 +1,9 @@
-package business.spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
+package hided.spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
 
 
 import business.nlp.TikaWrapper;
 import common.InnerReuse;
-import business.jobs_processors.ProcessorTargets;
+import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;
 import crosscuttings.ThroughLevelBoundaryError;
 import org.junit.Test;

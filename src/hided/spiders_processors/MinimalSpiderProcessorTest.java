@@ -1,4 +1,4 @@
-package business.spiders_processors;
+package hided.spiders_processors;
 
 import dal.info_core_accessors.ImmutableBaseCoursor;
 import org.junit.Test;
