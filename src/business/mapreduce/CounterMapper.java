@@ -23,10 +23,10 @@ public class CounterMapper {
     reducer_.reduce(key, value);
   }
 
-  public void map(List<String> text) {
-    for (String sentence : text) {
-      Integer value = hashFunction_.newHasher().putString(sentence).hash().asInt();
-      String key = sentence;
+  public void map(List<String> contentItems) {
+    for (String item : contentItems) {
+      Integer value = hashFunction_.newHasher().putString(item).hash().asInt();
+      String key = item;
       emit(key, value);
     }
   }

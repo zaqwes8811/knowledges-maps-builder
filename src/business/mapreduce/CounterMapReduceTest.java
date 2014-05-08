@@ -6,21 +6,21 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
-import common.Utils;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 11.03.14
- * Time: 19:45
- * To change this template use File | Settings | File Templates.
- */
 public class CounterMapReduceTest {
+  private List<String> getContentItems() {
+    List<String> sentences = new ArrayList<String>();
+    sentences.add("hello");
+    sentences.add("hello");
+    sentences.add("world");
+    return sentences;
+  }
+
   @Test
   public void testRun() throws Exception {
     // build
@@ -31,15 +31,7 @@ public class CounterMapReduceTest {
     CounterMapper mapper = new CounterMapper(reducer, hf);
 
     // work
-    List<String> sentences = new ArrayList<String>();
-    sentences.add("hello");
-    sentences.add("hello");
-    sentences.add("world");
-
-    mapper.map(sentences);
-    inverseIndex.put("hello", 9);
-    inverseIndex.put("hello", 9);
-    Utils.print(inverseIndex);
+    mapper.map(getContentItems());
 
     Set<String> keys = summary.elementSet();
     assert inverseIndex.keySet().size() == 2;
