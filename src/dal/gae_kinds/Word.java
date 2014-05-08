@@ -17,5 +17,6 @@ public class Word {
   // List coupled content items.
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
+  // equals
   // hashCode() - need it?
 }
