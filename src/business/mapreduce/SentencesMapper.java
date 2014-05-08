@@ -19,7 +19,7 @@ import java.util.List;
  * Time: 20:31
  * To change this template use File | Settings | File Templates.
  */
-final public class ImmutableMapperSentencesLevel {
+final public class SentencesMapper {
   public final static int IDX_NODE_NAME = 0;
   public final static int IDX_SENTENCES_LENS = 1;
   public final static int IDX_COUNT_SYLLABLES = 2;
@@ -36,7 +36,7 @@ final public class ImmutableMapperSentencesLevel {
   *      а значит, встрачается не соотв. языку слов, то число слогов в нем будет 0.
   *      Возможно оценка из-за этого будет искажаться. Определять язык по одному слову? Будут промахи!
   * */
-  public static List mapper_sentences_level(List<String> job) {
+  public static List map(List<String> job) {
     List response = new ArrayList();
     String node = job.get(JobsFormer.IDX_NODE_NAME);
     String filename = job.get(JobsFormer.IDX_FILENAME);

@@ -13,7 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class Mappers {
+public class OldMapper {
 
   /*
   *
@@ -84,18 +84,18 @@ public class Mappers {
 
   /*
   public static List mapperWordLevelWithCompression(List<String> job) {
-    List one = Mappers.mapperWordLevel(job);
-    Multiset<String> frequencies = (Multiset<String>)one.get(Mappers.IDX_FREQ_INDEX);
-    String node = (String)one.get(Mappers.IDX_NODE_NAME);
+    List one = OldMapper.mapperWordLevel(job);
+    Multiset<String> frequencies = (Multiset<String>)one.get(OldMapper.IDX_FREQ_INDEX);
+    String node = (String)one.get(OldMapper.IDX_NODE_NAME);
 
     // Буду брать только нулевыой элемент, но из-за того, что язык опред. по документу
     //   одному слову может соотв. несколько языков
     HashMultimap<String, String> langPerWordMap =
-        (HashMultimap<String, String>)one.get(Mappers.IDX_LANG_MAP);
+        (HashMultimap<String, String>)one.get(OldMapper.IDX_LANG_MAP);
 
     // Номера единиц контента
     HashMultimap<String, Integer> sentencesPtrsMap =
-      (HashMultimap<String, Integer>)one.get(Mappers.IDX_SENT_MAP);
+      (HashMultimap<String, Integer>)one.get(OldMapper.IDX_SENT_MAP);
 
     // Результаты стадии
     Multiset<String> frequenciesCompressed = HashMultiset.create();

@@ -12,7 +12,7 @@ import java.util.*;
  * Time: 20:38
  * To change this template use File | Settings | File Templates.
  */
-final public class ImmutableReduceSentencesLevel {
+final public class SentencesReduce {
   public static final int IDX_NODE_NAME = 0;
   public static final int IDX_SENT_LENGTH_MEAN = 1;
   public static final int IDX_RE = 2;
@@ -28,17 +28,17 @@ final public class ImmutableReduceSentencesLevel {
   public static Map<String, String> reduce_sentences_level(List task) {
     // Средняя длина предложения
     List<Integer> s = (List<Integer>)task.get(
-        ImmutableMapperSentencesLevel.IDX_SENTENCES_LENS);
+        SentencesMapper.IDX_SENTENCES_LENS);
     Double meanLengthSentence = ImmutableSummators.meanList(s);
     Double countWords = ImmutableSummators.sumIntList(s)*1.0;
 
     // Средняя длина слога
-    s = (List<Integer>)task.get(ImmutableMapperSentencesLevel.IDX_COUNT_SYLLABLES);
+    s = (List<Integer>)task.get(SentencesMapper.IDX_COUNT_SYLLABLES);
     Double meanLengthSyllable = ImmutableSummators.sumIntList(s)/countWords;
 
     Double RE = new Double(-1);
     Double timeForRead = new Double(-1);
-    String lang = (String)task.get(ImmutableMapperSentencesLevel.IDX_LANG);
+    String lang = (String)task.get(SentencesMapper.IDX_LANG);
     if (lang.equals("ru")) {
       RE = (206.835 - 60.1*meanLengthSyllable - 1.015*meanLengthSentence);
 
@@ -47,7 +47,7 @@ final public class ImmutableReduceSentencesLevel {
       RE = (206.835 - 84.6*meanLengthSyllable - 1.015*meanLengthSentence);
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else {
-      String nodeName = (String)task.get(ImmutableMappers.IDX_NODE_NAME);
+      String nodeName = (String)task.get(NewMapper.IDX_NODE_NAME);
       InnerReuse.print("Warning: Lang no used - " + lang + ". Node - " + nodeName);
     }
 

@@ -61,9 +61,9 @@ public class NotesProcessor {
     String record = Joiner.on(";")
         .join(
           node,
-          //info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
-          //info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
-          //info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
+          //info.get(SentencesReduce.NOTE_RE).replace('.', ','),
+          //info.get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
+          //info.get(SentencesReduce.NOTE_MEAN_LEN_SENT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
