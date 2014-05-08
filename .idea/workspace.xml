@@ -7,37 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormer.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/jobs_processors/JobsFormerTest.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/jobs_processors/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/GlobalConstants.java" afterPath="$PROJECT_DIR$/src/hided/GlobalConstants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ImmutableSavers.java" afterPath="$PROJECT_DIR$/src/hided/ImmutableSavers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/hided/ProcessorTargets.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/hided/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/hided/ProcessorTargetsTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImpl.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ContentHandlerImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/ContentHandlerImplTest.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ContentHandlerImplTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECParser.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/ImmutableBECSave.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/ImmutableBECSave.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/SubtitlesParser.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/SubtitlesParserTest.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesParserTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/parsers/VParserException.java" afterPath="$PROJECT_DIR$/src/business/text_extractors/VParserException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/ExtractorException.java" afterPath="$PROJECT_DIR$/src/hided/spiders_extractors/ExtractorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/spiders_processors/MinimalSpiderProcessorTest.java" afterPath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableDataExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/ImmutableIdxGetters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMapperSentencesLevel.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMapperSentencesLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/nlp/TikaWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesMapper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMapperSentencesLevel.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableMappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/NewMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableReduceSentencesLevel.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesReduce.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/ImmutableReduces.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/NewReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/MapReduceChains.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/MapReduceApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/Mappers.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/OldMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/Reduces.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/OldReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/RunnerWordLevelProcessingTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/WordsProcessorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessor.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/SentencesLevelProcessorTest.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/SentencesAppTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/KeyWordsCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/info_core_accessors/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/dal/info_core_accessors/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,71 +87,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SubtitlesParserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/text_extractors/SubtitlesParserTest.java">
+      <file leaf-file-name="SentencesAppTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/SentencesAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentHandlerImplTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/text_extractors/ContentHandlerImplTest.java">
+      <file leaf-file-name="SentencesApp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VParserException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/text_extractors/VParserException.java">
+      <file leaf-file-name="OldReducer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/OldReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="1425">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/Util.java">
+      <file leaf-file-name="NewMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/NewMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1620">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2760">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TikaWrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/nlp/TikaWrapper.java">
+      <file leaf-file-name="MapReduceApp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/MapReduceApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2010">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3600">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimalSpiderProcessor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java">
+      <file leaf-file-name="NewReducer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/NewReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8235295" vertical-offset="1764" max-vertical-offset="2640">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="795">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/Utils.java">
+      <file leaf-file-name="JobsFormer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
-              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterMapper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56149733" vertical-offset="0" max-vertical-offset="561">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterMapperTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="660">
+              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountReducer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -189,11 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/chew_third_party/MinimalStaticChart.java" />
-        <option value="$PROJECT_DIR$/src/chew_third_party/jpa/Todo.java" />
-        <option value="$PROJECT_DIR$/src/chew_third_party/jpa/OneWordRecord.java" />
-        <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentenceTest.java" />
-        <option value="$PROJECT_DIR$/src/chew_third_party/jpa/RecordOneSentence.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/Sentences.java" />
         <option value="$PROJECT_DIR$/src/chew_third_party/jpa/SentencesTest.java" />
         <option value="$PROJECT_DIR$/src/dal/jpa_eclipselink/SentencesTest.java" />
@@ -238,6 +249,13 @@
         <option value="$PROJECT_DIR$/sandbox/src/ads/Notes.java" />
         <option value="$PROJECT_DIR$/src/business/text_extractors/ContentHandlerImplTest.java" />
         <option value="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/SentencesReduce.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/WordsProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/MapReduceApp.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/OldReduce.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/OldReducer.java" />
+        <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
       </list>
     </option>
   </component>
@@ -338,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,6 +375,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -637,13 +659,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="714" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39344263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51311475" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -654,12 +677,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27859238" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48688525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39344263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3147541" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -691,97 +713,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/MinimalServlets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="885">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="600">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-          <caret line="19" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-          <caret line="19" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-          <caret line="19" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-          <caret line="19" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/info_core_accessors/IdxNodeAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="2" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/langs/SortMapOnValueExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38593483" vertical-offset="0" max-vertical-offset="975">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/src/third_party_tests/servlets/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15437393" vertical-offset="0" max-vertical-offset="583">
@@ -1043,14 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1620">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/nlp/TikaWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2010">
@@ -1061,8 +984,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8235295" vertical-offset="1764" max-vertical-offset="2640">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1764" max-vertical-offset="2640">
+          <caret line="149" column="67" selection-start-line="149" selection-start-column="67" selection-end-line="149" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4425386" vertical-offset="901" max-vertical-offset="1620">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/SentencesReduce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/WordsProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/OldMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3510">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/MapReduceApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3600">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/NewReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="795">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/NewMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2190" max-vertical-offset="2760">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/JobsFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/SentencesAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/SentencesApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/OldReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="1425">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="660">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56149733" vertical-offset="0" max-vertical-offset="561">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding />
         </state>
       </provider>

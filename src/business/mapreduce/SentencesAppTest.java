@@ -9,9 +9,9 @@ import org.junit.Test;
  * Time: 15:33
  * To change this template use File | Settings | File Templates.
  */
-public class  SentencesLevelProcessorTest{
+public class SentencesAppTest {
   @Test
   public void testDevelop() throws Exception {
-    SentencesLevelProcessor.main(null);
+    SentencesApp.main(null);
   }
 }

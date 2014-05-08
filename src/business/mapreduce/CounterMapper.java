@@ -1,6 +1,5 @@
 package business.mapreduce;
 
-import com.google.common.collect.Multiset;
 import com.google.common.hash.HashFunction;
 import org.checkthread.annotations.NotThreadSafe;
 
@@ -25,9 +24,9 @@ public class CounterMapper {
   }
 
   public void map(List<String> text) {
-    for (String item : text) {
-      Integer value = hashFunction_.newHasher().putString(item).hash().asInt();
-      String key = item;
+    for (String sentences : text) {
+      Integer value = hashFunction_.newHasher().putString(sentences).hash().asInt();
+      String key = sentences;
       emit(key, value);
     }
   }

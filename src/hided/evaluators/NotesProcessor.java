@@ -1,6 +1,7 @@
 package hided.evaluators;
 
 
+import business.mapreduce.SentencesReduce;
 import common.Utils;
 import dal.info_core_accessors.ImmutableBaseCoursor;
 import dal.info_core_accessors.ImmutableIdxGetters;
@@ -9,7 +10,6 @@ import crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import business.mapreduce.ImmutableReduceSentencesLevel;
 
 import java.lang.reflect.Type;
 import java.util.*;
@@ -72,9 +72,9 @@ public class NotesProcessor {
     String record = Joiner.on(";")
         .join(
           node,
-          info.get(ImmutableReduceSentencesLevel.NOTE_RE).replace('.', ','),
-          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
-          info.get(ImmutableReduceSentencesLevel.NOTE_MEAN_LEN_SENT).replace('.', ','),
+          info.get(SentencesReduce.NOTE_RE).replace('.', ','),
+          info.get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
+          info.get(SentencesReduce.NOTE_MEAN_LEN_SENT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
           info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),

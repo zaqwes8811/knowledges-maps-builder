@@ -19,11 +19,11 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class MapReduceChains {
-  private MapReduceChains() {}
+public class MapReduceApp {
+  private MapReduceApp() {}
 
   public static void main(String [] args) {
-    MapReduceChains.runBECChain();
+    MapReduceApp.runBECChain();
   }
 
   public static void runSentencesLevelProcess () {
@@ -34,7 +34,7 @@ public class MapReduceChains {
     // Map Stage
     List<List> result_map_stage = new ArrayList<List>();
     for (List<String> job : jobs) {
-      result_map_stage.add(Mappers.mapper_sentences_level(job));
+      result_map_stage.add(OldMapper.map(job));
       //break;  // DEVELOP
     }
 
@@ -45,9 +45,9 @@ public class MapReduceChains {
     Map<String, Map<String, String>> result_reduce_stage =
         new HashMap<String, Map<String, String>>();
     for (List task: result_shuffle_stage) {
-      Map<String, String> one = Reduces.reduce_sentences_level(task);
+      Map<String, String> one = OldReducer.reduce_sentences_level(task);
 
-      String node_name = (String)task.get(Mappers.IDX_NODE_NAME);
+      String node_name = (String)task.get(OldMapper.IDX_NODE_NAME);
       result_reduce_stage.put(node_name, one);
     }
 
@@ -96,7 +96,7 @@ public class MapReduceChains {
     // Map Stage
     List<List> resultMapStage = new ArrayList<List>();
     for (List<String> job : jobs.get()) {
-      List one = Mappers.mapperWordLevel(job);
+      List one = OldMapper.mapperWordLevel(job);
       resultMapStage.add(one);
       //break;  // DEVELOP
     }
@@ -107,7 +107,7 @@ public class MapReduceChains {
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
     List<List> resultReduceStage = new ArrayList<List>();
     for (List task: resultShuffleStage) {
-      List one = Reduces.reduce_word_level_base(task);
+      List one = OldReducer.reduce_word_level_base(task);
       resultReduceStage.add(one);
     }
 
@@ -119,7 +119,7 @@ public class MapReduceChains {
           .join(
             ProcessorTargets.getPathToIndex(),
             GlobalConstants.COMPRESSED_IDX_FOLDER,
-            nodeResult.get(Mappers.IDX_NODE_NAME));
+            nodeResult.get(OldMapper.IDX_NODE_NAME));
       } catch (CrosscuttingsException e) {
         Util.print(e.getMessage());
         pathToNode = "";
@@ -128,11 +128,11 @@ public class MapReduceChains {
       // TODO(zaqwes) TOTH: в защитной секции должно быть только то что нужно, или разное?
       // Может быть они тоже нормально сереализуются?
       // Вообще наверное лучше хранить в базе данных, а не в файлах.
-      List<String> idxSortedByFrequencyForSave = (ArrayList<String>)nodeResult.get(Reduces.IDX_SORTED_IDX);
-      Multiset<String> idxFrequencies = (Multiset<String>)nodeResult.get(Mappers.IDX_FREQ_INDEX);
+      List<String> idxSortedByFrequencyForSave = (ArrayList<String>)nodeResult.get(OldReducer.IDX_SORTED_IDX);
+      Multiset<String> idxFrequencies = (Multiset<String>)nodeResult.get(OldMapper.IDX_FREQ_INDEX);
 
-      Multimap<String, Integer> idxSentencesPtrs = (Multimap<String, Integer>)nodeResult.get(Mappers.IDX_SENT_MAP);
-      //Multimap<String, String> idxRestWords = (Multimap<String, String>)nodeResult.get(Mappers.IDX_RESTS_MAP);
+      Multimap<String, Integer> idxSentencesPtrs = (Multimap<String, Integer>)nodeResult.get(OldMapper.IDX_SENT_MAP);
+      //Multimap<String, String> idxRestWords = (Multimap<String, String>)nodeResult.get(OldMapper.IDX_RESTS_MAP);
 
       // Структуры для сереализации
       // Перекомпановка. Возможно есть средства в Guava, но пусть будет

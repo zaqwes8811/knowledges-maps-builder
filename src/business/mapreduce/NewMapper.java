@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class ImmutableMappers {
+public class NewMapper {
 
   /*
   *
@@ -85,18 +85,18 @@ public class ImmutableMappers {
   }
 
   public static List mapper_word_level_with_compression(List<String> job) {
-    List one = ImmutableMappers.mapper_word_level(job);
-    Multiset<String> frequencies = (Multiset<String>)one.get(ImmutableMappers.IDX_FREQ_INDEX);
-    String node = (String)one.get(ImmutableMappers.IDX_NODE_NAME);
+    List one = NewMapper.mapper_word_level(job);
+    Multiset<String> frequencies = (Multiset<String>)one.get(NewMapper.IDX_FREQ_INDEX);
+    String node = (String)one.get(NewMapper.IDX_NODE_NAME);
 
     // Буду брать только нулевыой элемент, но из-за того, что язык опред. по документу
     //   одному слову может соотв. несколько языков
     HashMultimap<String, String> langPerWordMap =
-        (HashMultimap<String, String>)one.get(ImmutableMappers.IDX_LANG_MAP);
+        (HashMultimap<String, String>)one.get(NewMapper.IDX_LANG_MAP);
 
     // Номера единиц контента
     HashMultimap<String, Integer> sentencesRawMap =
-      (HashMultimap<String, Integer>)one.get(ImmutableMappers.IDX_SENT_MAP);
+      (HashMultimap<String, Integer>)one.get(NewMapper.IDX_SENT_MAP);
 
     // Результаты стадии
     Multiset<String> frequenciesCompressed = HashMultiset.create();

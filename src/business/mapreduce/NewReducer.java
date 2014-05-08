@@ -12,14 +12,14 @@ import java.util.*;
  * Time: 18:57
  * To change this template use File | Settings | File Templates.
  */
-final public class ImmutableReduces {
+final public class NewReducer {
 
   public static final int IDX_SORTED_IDX = 5;
 
   public static List reduce_word_level_base(List task) {
     List one = new ArrayList();
     // Сортируем индекс частот
-    Multiset<String> unsorted_index = (Multiset<String>)task.get(ImmutableMappers.IDX_FREQ_INDEX);
+    Multiset<String> unsorted_index = (Multiset<String>)task.get(NewMapper.IDX_FREQ_INDEX);
 
 
     Set<String> elems = unsorted_index.elementSet();
