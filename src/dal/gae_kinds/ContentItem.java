@@ -10,4 +10,8 @@ import com.googlecode.objectify.annotation.Id;
 public class ContentItem {
   @Id
   Long id;
+
+  // value <= 500 symbols
+  // TODO: 500 чего именно?
+  String item;
 }

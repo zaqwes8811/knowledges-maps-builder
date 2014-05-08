@@ -14,7 +14,7 @@ public class CountReducer {
   }
 
   // @param value inv. index key - index sentence - или лучше хеш.
-  public void reduce(String key, Integer value) {
+  public void reduce(String key, Integer contentItem) {
     wordHistogram_.add(key);
   }
 }
