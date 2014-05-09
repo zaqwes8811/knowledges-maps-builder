@@ -1,6 +1,9 @@
-package business.mapreduce.old;
+package medium_tests;
 
 
+import business.mapreduce.old.JobsFormer;
+import business.mapreduce.old.OldMapper;
+import business.mapreduce.old.OldReducer;
 import hided.GlobalConstants;
 import hided.ProcessorTargets;
 import com.google.common.base.Joiner;
