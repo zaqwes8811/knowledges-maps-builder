@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
 import static third_party_tests.gae.relationships.OfyService.ofy;
 
 /**
@@ -30,16 +31,16 @@ public class PersonRelTest {
   public void testOneToOne() {
     PersonRel wife = new PersonRel();
     wife.name = "July";
-    ofy().save().entity(wife);
-    assert wife.id != null;
+    ofy().save().entity(wife).now();
+    assertNotNull(wife.id);
 
     PersonRel me = new PersonRel();
     me.name = "bob";
-    ofy().save().entity(me);
-    assert me.id != null;
+    ofy().save().entity(me).now();
+    assertNotNull(me.id);
 
     me.significantOther = Key.create(wife);
-    ofy().save().entity(me);
+    ofy().save().entity(me).now();
 
   }
 }
