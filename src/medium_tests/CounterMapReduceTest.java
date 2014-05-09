@@ -52,6 +52,7 @@ public class CounterMapReduceTest {
     mapper.map(contentItems);
 
     // Persist content items
+
     // Persist page
     // Persist words
 
