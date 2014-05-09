@@ -1,5 +1,6 @@
-package business.mapreduce.old;
+package medium_tests;
 
+import medium_tests.SentencesApp;
 import org.junit.Test;
 
 /**

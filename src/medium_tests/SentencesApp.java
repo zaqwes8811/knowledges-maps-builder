@@ -1,6 +1,9 @@
-package business.mapreduce.old;
+package medium_tests;
 
 
+import business.mapreduce.old.NewMapper;
+import business.mapreduce.old.SentencesMapper;
+import business.mapreduce.old.SentencesReduce;
 import common.InnerReuse;
 import hided.jobs_processors.JobsFormer;
 import hided.jobs_processors.ProcessorTargets;
