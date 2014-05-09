@@ -44,7 +44,7 @@ public class PersonRelTest {
 
     // Read
     PersonRel bob = ofy().load().type(PersonRel.class).filter("name", "bob").first().now();
-    //PersonRel bobswife = ofy().load().entity(bob.significantOther).now();
+    PersonRel bobswife = ofy().load().key(bob.significantOther).now();
 
   }
 }
