@@ -42,5 +42,9 @@ public class PersonRelTest {
     me.significantOther = Key.create(wife);
     ofy().save().entity(me).now();
 
+    // Read
+    PersonRel bob = ofy().load().type(PersonRel.class).filter("name", "bob").first().now();
+    //PersonRel bobswife = ofy().load().entity(bob.significantOther).now();
+
   }
 }
