@@ -1,6 +1,6 @@
 package business.text_extractors;
 
-import business.nlp.SentencesSplitter;
+import business.nlp.ContentItemsTokenizer;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
@@ -41,7 +41,7 @@ public class SubtitlesParserTest {
       String text = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
       assertFalse(text.isEmpty());
 
-      ImmutableList<String> sentences = new SentencesSplitter().getSentences(text);
+      ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
       assertFalse(sentences.isEmpty());
 
       // TODO: WARNING! Нужно просматривать глазами. Могут попадатся артифакты

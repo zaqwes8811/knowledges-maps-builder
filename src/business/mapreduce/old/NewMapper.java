@@ -3,7 +3,7 @@ package business.mapreduce.old;
 
 import common.InnerReuse;
 import hided.jobs_processors.JobsFormer;
-import business.nlp.BaseTokenizer;
+import business.nlp.SentenceTokenizer;
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
@@ -48,7 +48,7 @@ public class NewMapper {
         while ((s = reader.readLine()) != null) {
           String workCopy = s.toLowerCase();
           int langPtr = workCopy.indexOf(' ');
-          List<String> words = BaseTokenizer.extractWords(workCopy.substring(langPtr, workCopy.length()));
+          List<String> words = SentenceTokenizer.getWords(workCopy.substring(langPtr, workCopy.length()));
           String lang = workCopy.substring(0, langPtr);
 
           // Добавляем в частотный индекс

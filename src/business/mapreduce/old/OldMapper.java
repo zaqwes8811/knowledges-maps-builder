@@ -52,7 +52,7 @@ public class OldMapper {
           int langPtr = workCopy.indexOf(' ');
 
           // TODO() : DISCOTTECTD!!
-          List<String> words = null;//BaseTokenizer.extractWords(workCopy.substring(langPtr, workCopy.length()));
+          List<String> words = null;//SentenceTokenizer.getWords(workCopy.substring(langPtr, workCopy.length()));
           String lang = workCopy.substring(0, langPtr);
 
           wordsFrequenceMultyset.addAll(words);
@@ -207,14 +207,14 @@ public class OldMapper {
         String s;
         while ((s = reader.readLine()) != null) {
           int langPtr = s.indexOf(' ');
-          List<String> words = null;// BaseTokenizer.extractWords(s.substring(langPtr, s.length()));
+          List<String> words = null;// SentenceTokenizer.getWords(s.substring(langPtr, s.length()));
           sentencesLengths.add(words.size());
 
           // Получаем язык, нужно для деления на слоги
           meanLang = s.substring(0, langPtr);  // язык средний по документу
           int countSyllable = 0;
           for (String word : words) {
-            countSyllable += 0;//BaseSyllableCounter.calc(word, meanLang);
+            countSyllable += 0;//SyllableCounterImpl.calc(word, meanLang);
           }
           syllablesLengths.add(countSyllable);
         }

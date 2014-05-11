@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.text.BreakIterator;
 import java.util.Locale;
 
-public class SentencesSplitterTest {
+public class ContentItemsTokenizerTest {
   @Test
   public void testMain() {
     String text = "\n" +
