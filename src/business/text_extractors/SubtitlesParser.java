@@ -27,11 +27,18 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
     return null;
   }
 
-  private final char SPECIAL_SYMBOL = '’';  // TODO: it's trouble. Константа в коде - юникодная.
-  private final char REPLACE_SYMBOL = '\'';
+  private static final char APOSTROPHE_ = '’';  // TODO: it's trouble. Константа в коде - юникодная.
+  private static final char ONE_QUOTE_ = '\'';
+  private static final char LEFT_ANGLE_BRACKET_ = '[';
+  private static final char DOT_ = '.';
+  private static final char WHITESPACE_ = ' ';
+  private static final char RIGHT_ANGLE_BRACKET_ = ']';
+
   // TODO: it's weak. 00:31:19,764 --> 00:31:22,823
   // TODO: Усилить регулярным выражением
-  private final String TIME_TICKET_SIGN = "-->";
+  private static final String TIME_TICKET_SIGN_ = "-->";
+  private static final String EMPTY_STRING_ = "";
+
 
   // Передать любой handler нельзя.
   @Override
@@ -45,29 +52,35 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
         Charsets.UTF_8
       ));
 
-    String buffer;
-    List<String> result = new ArrayList<String>();
+    List<String> items = new ArrayList<String>();
     handler.startDocument();
-    while ((buffer = reader.readLine()) != null) {
-      // TODO: not effective
+    while (true) {
+      String buffer;
+      if ((buffer = reader.readLine()) == null)
+        break;
 
-      // Делим пробелами, а по всем пробельным символам
+      // TODO: not effective
+      // TODO: Что? Делим пробелами, а по всем пробельным символам
       // TODO: разделить не только пробелами
-      ImmutableList<String> splitted = ImmutableList.copyOf(
+      ImmutableList<String> list = ImmutableList.copyOf(
         Splitter.on(CharMatcher.WHITESPACE)
           .trimResults()
           .omitEmptyStrings()
           .split(buffer));
 
       // Удаляем просто числа
-      String joinString = Joiner.on("").join(splitted);
+      String line = Joiner.on(EMPTY_STRING_).join(list);
 
-      if (!splitted.isEmpty()
-          && !(splitted.size() == 1 && StringUtils.isNumeric(joinString))
-          && !buffer.contains(TIME_TICKET_SIGN))
+      if (!list.isEmpty()
+          && !(list.size() == 1 && StringUtils.isNumeric(line))
+          && !buffer.contains(TIME_TICKET_SIGN_))
         {
-        buffer = CharMatcher.is(SPECIAL_SYMBOL).replaceFrom(buffer, REPLACE_SYMBOL);
-        result.add(buffer);
+        // Некоторые замены исходя из статистики
+        buffer = CharMatcher.is(LEFT_ANGLE_BRACKET_).replaceFrom(buffer, WHITESPACE_);
+        buffer = CharMatcher.is(RIGHT_ANGLE_BRACKET_).replaceFrom(buffer, DOT_);
+        buffer = CharMatcher.is(APOSTROPHE_).replaceFrom(buffer, ONE_QUOTE_);
+
+        handler.characters(buffer.toCharArray(), 0, buffer.length());
       }
     }
     // Summary
