@@ -2,6 +2,7 @@ package dal.gae_kinds;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 
 /**
  * Created by zaqwes on 5/9/14.
@@ -16,6 +17,7 @@ public class ContentItem {
   // TODO: 500 чего именно?
   String item;
 
+  @Index
   Long idx;
   Long size;
 

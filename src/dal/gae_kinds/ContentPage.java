@@ -36,5 +36,7 @@ public class ContentPage {
     }
   }
 
+  public List<Key<ContentItem>> getItems() { return items; }
+
   // Words
 }
