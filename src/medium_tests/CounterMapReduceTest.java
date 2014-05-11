@@ -27,6 +27,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static medium_tests.OfyService.ofy;
@@ -122,6 +123,13 @@ public class CounterMapReduceTest {
 
     // Queries - failed
     //List<ContentItem> list = ofy().load().type(ContentItem.class).filterKey(page.getItems());
+    // TODO: Work but bad!! Как делать запросы не ясно. Похоже нужна ссылка и на страницу - бред.
+    // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
+    // Хотелось бы выбирать по некоторому критерию.
+    // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
+    // http://stackoverflow.com/questions/9867401/objectify-query-filter-by-list-in-entity-contains-search-parameter
+    // http://bighow.net/3869301-Objectify___how_to__Load_a_List_lt_Ref_lt___gt__gt__.html
+    Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
 
     // Persist words
 
