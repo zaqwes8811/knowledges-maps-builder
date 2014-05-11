@@ -1,6 +1,6 @@
 package hided.spiders_extractors;
 
-import business.nlp.TikaWrapper;
+import business.adapters_3rdparty.TikaWrapper;
 import common.InnerReuse;
 import hided.jobs_processors.ProcessorTargets;
 import crosscuttings.AppConstants;

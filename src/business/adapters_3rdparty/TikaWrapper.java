@@ -1,18 +1,12 @@
-package business.nlp;
+package business.adapters_3rdparty;
 
-import java.io.*;
-import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
-import common.InnerReuse;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
+import common.InnerReuse;
+import crosscuttings.AppConstants;
+import hided.jobs_processors.ProcessorTargets;
+import hided.spiders_extractors.ExtractorException;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
@@ -24,10 +18,15 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
-
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
-import hided.spiders_extractors.ExtractorException;
+
+import java.io.*;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 final public class TikaWrapper {
   // Fields
