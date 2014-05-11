@@ -16,10 +16,17 @@ public class ContentItem {
   // TODO: 500 чего именно?
   String item;
 
+  Long idx;
+  Long size;
+
   // Some add data for sorting on query.
 
   public String get() {
     return item;
+  }
+  public Long getId() { return id; }
+  public void setIdx(Long value) {
+    idx = value;
   }
 
   private ContentItem() {}
