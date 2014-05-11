@@ -4,9 +4,6 @@ import com.google.common.collect.Multimap;
 import dal.gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
-/**
-It's fake
- */
 @NotThreadSafe
 public class CountReducer {
   private final Multimap<String, ContentItem> wordHistogram_;

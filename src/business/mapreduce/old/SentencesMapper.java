@@ -50,7 +50,7 @@ final public class SentencesMapper {
         String s;
         while ((s = reader.readLine()) != null) {
           int langPtr = s.indexOf(' ');
-          List<String> words = SentenceTokenizer.getWords(s.substring(langPtr, s.length()));
+          List<String> words = new SentenceTokenizer().getWords(s.substring(langPtr, s.length()));
           sentencesLengths.add(words.size());
 
           // Получаем язык, нужно для деления на слоги

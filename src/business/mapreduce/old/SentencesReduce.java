@@ -1,7 +1,7 @@
 package business.mapreduce.old;
 
+import business.math.SummatorLists;
 import common.InnerReuse;
-import business.math.ImmutableSummators;
 
 import java.util.*;
 
@@ -29,12 +29,12 @@ final public class SentencesReduce {
     // Средняя длина предложения
     List<Integer> s = (List<Integer>)task.get(
         SentencesMapper.IDX_SENTENCES_LENS);
-    Double meanLengthSentence = ImmutableSummators.meanList(s);
-    Double countWords = ImmutableSummators.sumIntList(s)*1.0;
+    Double meanLengthSentence = SummatorLists.meanList(s);
+    Double countWords = SummatorLists.sumIntList(s)*1.0;
 
     // Средняя длина слога
     s = (List<Integer>)task.get(SentencesMapper.IDX_COUNT_SYLLABLES);
-    Double meanLengthSyllable = ImmutableSummators.sumIntList(s)/countWords;
+    Double meanLengthSyllable = SummatorLists.sumIntList(s)/countWords;
 
     Double RE = new Double(-1);
     Double timeForRead = new Double(-1);

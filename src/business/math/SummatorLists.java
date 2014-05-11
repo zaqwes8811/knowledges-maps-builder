@@ -9,8 +9,7 @@ import java.util.List;
  * Time: 19:33
  * To change this template use File | Settings | File Templates.
  */
-final public class ImmutableSummators {
-
+public class SummatorLists {
   public static int sumIntList(List<Integer> list) {
     int sum = 0;
     for (Integer value : list) {
