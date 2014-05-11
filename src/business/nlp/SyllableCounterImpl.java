@@ -5,7 +5,7 @@ package business.nlp;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class BaseSyllableCounter {
+public class SyllableCounterImpl {
   private static final String RUSSIAN_VOWEL[] = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"};
 
   // English

@@ -11,7 +11,7 @@ import org.junit.Test;
  * Time: 20:28
  * To change this template use File | Settings | File Templates.
  */
-public class BaseTokenizerTest {
+public class SentenceTokenizerTest {
   @Test
   public void testDevelop() {
     String sent = "Прочие, связанные с аудиторской деятельностью услуги представляют собой:  "+

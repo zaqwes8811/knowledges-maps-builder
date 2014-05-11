@@ -2,7 +2,7 @@ package medium_tests;
 
 import business.mapreduce.CountReducer;
 import business.mapreduce.CounterMapper;
-import business.nlp.SentencesSplitter;
+import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
 import business.text_extractors.SubtitlesParser;
@@ -73,7 +73,7 @@ public class CounterMapReduceTest {
       String text = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
       assertFalse(text.isEmpty());
 
-      ImmutableList<String> sentences = new SentencesSplitter().getSentences(text);
+      ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
       assertFalse(sentences.isEmpty());
 
       // Пакуем

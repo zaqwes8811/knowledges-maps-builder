@@ -1,19 +1,17 @@
 package hided.spiders_processors;
 
 
-import common.InnerReuse;
-import common.Utils;
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
-import hided.jobs_processors.ProcessorTargets;
 import business.adapters_3rdparty.TikaWrapper;
-import crosscuttings.AppConstants;
-
-
-import business.nlp.BaseTokenizer;
+import business.nlp.ContentItemsTokenizer;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import common.InnerReuse;
+import common.Utils;
+import crosscuttings.AppConstants;
+import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.jobs_processors.ProcessorTargets;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -124,8 +122,9 @@ public class MinimalSpiderProcessor {
           BufferedReader reader = readCloser.register(new BufferedReader(new FileReader(tmpFilename)));
           StringBuilder buffer = new StringBuilder();
           String s;
-          while ((s = reader.readLine())!= null) buffer.append(s+'\n');
-          summaryContent.append(BaseTokenizer.splitToSentences(buffer, lang));
+          while ((s = reader.readLine())!= null)
+            buffer.append(s+'\n');
+          summaryContent.append(ContentItemsTokenizer.splitToSentences(buffer, lang));
         } catch (Throwable e) { // must catch Throwable
           throw readCloser.rethrow(e);
         } finally {
