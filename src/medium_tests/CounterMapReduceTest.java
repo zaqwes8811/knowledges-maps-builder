@@ -36,6 +36,10 @@ public class CounterMapReduceTest {
     return sentences;
   }
 
+  private List<ContentItem> getItems(String text) {
+    return null;
+  }
+
   @Test
   public void testRun() throws Exception {
     // build
