@@ -31,7 +31,6 @@ import java.util.List;
 
 import static medium_tests.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
 
 public class CounterMapReduceTest {
   private static final LocalServiceTestHelper helper =
@@ -115,18 +114,13 @@ public class CounterMapReduceTest {
     // WARNING: Порядок важен!
     // Persist content items
     ofy().save().entities(contentItems).now();
-    assertNotNull(contentItems.get(0).getId());
-    //List<ContentItem> items = ofy().load().type(ContentItem.class).list();
 
     // Persist page
     ContentPage page = new ContentPage("Korra");
+    page.setItems(contentItems);  // TODO: Подключить в именованном конструкторе
     ofy().save().entity(page).now();
 
     // Persist words
-
-    //Set<String> keys = wordHistogram.elementSet();
-    //assert wordHistogram.count("hello") == 2;
-    //assert keys.size() == 2;
 
     // Delete full page
   }
