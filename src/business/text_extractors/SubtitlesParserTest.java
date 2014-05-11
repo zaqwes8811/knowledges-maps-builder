@@ -16,36 +16,37 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertFalse;
 
 public class SubtitlesParserTest {
   @Test
-  public void testCreate() throws IOException {
+  public void testSrtChainOnGAE() throws IOException {
     String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
       "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+    String rawText = Joiner.on('\n').join(Util.fileToList(filename));
+    //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
 
     // Пока файл строго юникод - UTF-8
     Closer closer = Closer.create();
     try {
-      String hello = "hello.\n high.";
-      InputStream in = closer.register(new ByteArrayInputStream(hello.getBytes(Charsets.UTF_8 )));
-      //InputStream in = closer.register(new FileInputStream(new File(filename)));
+      // http://stackoverflow.com/questions/247161/how-do-i-turn-a-string-into-a-stream-in-java
+      InputStream in = closer.register(new ByteArrayInputStream(rawText.getBytes(Charsets.UTF_8)));
+      SpecialSymbols symbols = new SpecialSymbols();
 
       Parser parser = new SubtitlesParser();
       List<String> sink = new ArrayList<String>();
       ContentHandler handler = new ContentHandlerImpl(sink);
       parser.parse(in, handler, null, null);
 
-      // Убираем знаки прямой речи
-
       // Получили список строк.
-      String text = Joiner.on(" ").join(sink);
-      assertNotEquals("", text);
+      String text = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
+      assertFalse(text.isEmpty());
 
       ImmutableList<String> sentences = new SentencesSplitter().getSentences(text);
-      for (String sentence: sentences) {
-        Util.print(sentence);
-      }
+      assertFalse(sentences.isEmpty());
+
+      // TODO: WARNING! Нужно просматривать глазами. Могут попадатся артифакты
+      
     } catch (Throwable e) { // must catch Throwable
       throw closer.rethrow(e);
     } finally {
