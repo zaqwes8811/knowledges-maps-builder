@@ -31,14 +31,13 @@ public class SubtitlesParserTest {
     try {
       // http://stackoverflow.com/questions/247161/how-do-i-turn-a-string-into-a-stream-in-java
       InputStream in = closer.register(new ByteArrayInputStream(rawText.getBytes(Charsets.UTF_8)));
-      SpecialSymbols symbols = new SpecialSymbols();
-
       Parser parser = new SubtitlesParser();
       List<String> sink = new ArrayList<String>();
       ContentHandler handler = new ContentHandlerImpl(sink);
       parser.parse(in, handler, null, null);
 
       // Получили список строк.
+      SpecialSymbols symbols = new SpecialSymbols();
       String text = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
       assertFalse(text.isEmpty());
 
@@ -46,7 +45,7 @@ public class SubtitlesParserTest {
       assertFalse(sentences.isEmpty());
 
       // TODO: WARNING! Нужно просматривать глазами. Могут попадатся артифакты
-      
+
     } catch (Throwable e) { // must catch Throwable
       throw closer.rethrow(e);
     } finally {
