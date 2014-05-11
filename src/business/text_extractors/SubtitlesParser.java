@@ -27,18 +27,9 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
     return null;
   }
 
-  private static final char APOSTROPHE_ = '’';  // TODO: it's trouble. Константа в коде - юникодная.
-  private static final char ONE_QUOTE_ = '\'';
-  private static final char LEFT_ANGLE_BRACKET_ = '[';
-  private static final char DOT_ = '.';
-  private static final char WHITESPACE_ = ' ';
-  private static final char RIGHT_ANGLE_BRACKET_ = ']';
-
-  // TODO: it's weak. 00:31:19,764 --> 00:31:22,823
-  // TODO: Усилить регулярным выражением
+  // TODO: it's weak. 00:31:19,764 --> 00:31:22,823. Усилить бы регулярным выражением
   private static final String TIME_TICKET_SIGN_ = "-->";
-  private static final String EMPTY_STRING_ = "";
-
+  private static final String CONST_0_ = "- ";
 
   // Передать любой handler нельзя.
   @Override
@@ -46,6 +37,7 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
       InputStream stream, ContentHandler handler,
       Metadata metadata, ParseContext context) throws IOException, SAXException, TikaException
     {
+    SpecialSymbols symbols = new SpecialSymbols();
     BufferedReader reader = new BufferedReader(new InputStreamReader(stream
         ,
         //Charsets.US_ASCII
@@ -60,8 +52,7 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
         break;
 
       // TODO: not effective
-      // TODO: Что? Делим пробелами, а по всем пробельным символам
-      // TODO: разделить не только пробелами
+      // TODO: Делим пробелами, разделить не только пробелами
       ImmutableList<String> list = ImmutableList.copyOf(
         Splitter.on(CharMatcher.WHITESPACE)
           .trimResults()
@@ -69,16 +60,18 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
           .split(buffer));
 
       // Удаляем просто числа
-      String line = Joiner.on(EMPTY_STRING_).join(list);
+      String line = Joiner.on(symbols.EMPTY_STRING).join(list);
 
       if (!list.isEmpty()
           && !(list.size() == 1 && StringUtils.isNumeric(line))
           && !buffer.contains(TIME_TICKET_SIGN_))
         {
         // Некоторые замены исходя из статистики
-        buffer = CharMatcher.is(LEFT_ANGLE_BRACKET_).replaceFrom(buffer, WHITESPACE_);
-        buffer = CharMatcher.is(RIGHT_ANGLE_BRACKET_).replaceFrom(buffer, DOT_);
-        buffer = CharMatcher.is(APOSTROPHE_).replaceFrom(buffer, ONE_QUOTE_);
+        // TODO: Убирать бы знаки прямой речи, но можно потерять информацию.
+        buffer = CharMatcher.is(symbols.LEFT_ANGLE_BRACKET).replaceFrom(buffer, symbols.WHITESPACE);
+        buffer = CharMatcher.is(symbols.RIGHT_ANGLE_BRACKET).replaceFrom(buffer, symbols.DOT);
+        buffer = CharMatcher.is(symbols.APOSTROPHE).replaceFrom(buffer, symbols.ONE_QUOTE);
+        buffer = buffer.replace(CONST_0_, symbols.WHITESPACE_STRING);
 
         handler.characters(buffer.toCharArray(), 0, buffer.length());
       }
