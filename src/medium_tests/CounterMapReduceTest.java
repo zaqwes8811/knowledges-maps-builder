@@ -129,6 +129,10 @@ public class CounterMapReduceTest {
     // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
     // http://stackoverflow.com/questions/9867401/objectify-query-filter-by-list-in-entity-contains-search-parameter
     // http://bighow.net/3869301-Objectify___how_to__Load_a_List_lt_Ref_lt___gt__gt__.html
+    //
+    // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
+    //
+    // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
     Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
 
     // Persist words
