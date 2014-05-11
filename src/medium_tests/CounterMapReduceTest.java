@@ -28,7 +28,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static medium_tests.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 public class CounterMapReduceTest {
   private static final LocalServiceTestHelper helper =
@@ -78,8 +80,13 @@ public class CounterMapReduceTest {
 
       // Пакуем
       List<ContentItem> contentItems = new ArrayList<ContentItem>();
-      for (String sentence: sentences)
-        contentItems.add(new ContentItem(sentence));
+      Long idx = new Long(1);
+      for (String sentence: sentences) {
+        ContentItem item = new ContentItem(sentence);
+        item.setIdx(idx);
+        contentItems.add(item);
+        idx++;
+      }
 
       return ImmutableList.copyOf(contentItems);
     } catch (Throwable e) {
@@ -102,9 +109,13 @@ public class CounterMapReduceTest {
     // Connect to page
 
     // Split
-    mapper.map(contentItems);
+    mapper.map(contentItems);  // TODO: implicit, but be so
 
+    // WARNING: Порядок важен!
     // Persist content items
+    ofy().save().entities(contentItems).now();
+    assertNotNull(contentItems.get(0).getId());
+    List<ContentItem> items = ofy().load().type(ContentItem.class).list();
 
     // Persist page
     // Persist words
@@ -112,5 +123,7 @@ public class CounterMapReduceTest {
     //Set<String> keys = wordHistogram.elementSet();
     //assert wordHistogram.count("hello") == 2;
     //assert keys.size() == 2;
+
+    // Delete full page
   }
 }
