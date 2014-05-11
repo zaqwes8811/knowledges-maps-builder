@@ -33,7 +33,7 @@ public class SubtitlesParserTest {
       InputStream in = closer.register(new ByteArrayInputStream(rawText.getBytes(Charsets.UTF_8)));
       Parser parser = new SubtitlesParser();
       List<String> sink = new ArrayList<String>();
-      ContentHandler handler = new ContentHandlerImpl(sink);
+      ContentHandler handler = new SubtitlesContentHandler(sink);
       parser.parse(in, handler, null, null);
 
       // Получили список строк.

@@ -1,4 +1,4 @@
-package business.text_extractors;
+package hided.spiders_extractors;
 
 /**
  * Created with IntelliJ IDEA.
