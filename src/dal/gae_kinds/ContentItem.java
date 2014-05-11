@@ -18,7 +18,7 @@ public class ContentItem {
 
   // Some add data for sorting on query.
 
-  public String getItem() {
+  public String get() {
     return item;
   }
 

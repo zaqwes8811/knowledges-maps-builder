@@ -2,11 +2,11 @@ package business.math;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import net.jcip.annotations.Immutable;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -16,8 +16,8 @@ import java.util.Random;
 //
 // TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
-// @Immutable
-public class GeneratorAnyRandom {
+@Immutable
+public class GeneratorAnyDistribution {
   private final Integer COUNT_POINTS;
   private final Integer MAX_VALUE;
   private final ImmutableList<ImmutableList<Integer>> CODE_BOOK;
@@ -43,7 +43,7 @@ public class GeneratorAnyRandom {
     return ranges;
   }
 
-  private GeneratorAnyRandom(List<Integer> distribution) {
+  private GeneratorAnyDistribution(List<Integer> distribution) {
     Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
     List<Integer> Fx = resultMakeFx.getValue0();
     COUNT_POINTS = resultMakeFx.getValue1();
@@ -87,20 +87,8 @@ public class GeneratorAnyRandom {
 
   // Любой список с числами
   // @throws: RandomGeneratorException
-  public static GeneratorAnyRandom create(List<Integer> distribution) {
+  public static GeneratorAnyDistribution create(List<Integer> distribution) {
     if (distribution.isEmpty()) throw new RandomGeneratorException("In list must be no empty.");
-    return new GeneratorAnyRandom(distribution);
-  }
-
-  public static void main(String[] args) throws  RandomGeneratorException {
-    List<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1,6,0,14,5,7));
-
-    GeneratorAnyRandom generator = GeneratorAnyRandom.create(distribution);
-    List<Integer> experiment = new ArrayList<Integer>();
-    for (int i = 0; i < 10000; ++i)
-      //experiment.add(distribution.get(generator.getCodeWord()));
-      experiment.add((generator.getCodeWord()));
-
-    System.out.println(experiment);
+    return new GeneratorAnyDistribution(distribution);
   }
 }
