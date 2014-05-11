@@ -120,6 +120,9 @@ public class CounterMapReduceTest {
     page.setItems(contentItems);  // TODO: Подключить в именованном конструкторе
     ofy().save().entity(page).now();
 
+    // Queries - failed
+    //List<ContentItem> list = ofy().load().type(ContentItem.class).filterKey(page.getItems());
+
     // Persist words
 
     // Delete full page
