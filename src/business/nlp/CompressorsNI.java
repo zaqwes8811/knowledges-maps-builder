@@ -7,5 +7,5 @@ package business.nlp;
  * Time: 15:11
  * To change this template use File | Settings | File Templates.
  */
-public class Compressors {
+public class CompressorsNI {
 }

@@ -1,12 +1,13 @@
 package business.nlp;
 
 import com.google.common.base.Splitter;
+import com.google.common.collect.ImmutableList;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseTokenizer {
+public class ContentItemsTokenizer {
   public static Iterable<String> splitDocFormat(String line) {
     return Splitter.onPattern("(-|[0-9])?[:;]")
       .trimResults()
@@ -41,23 +42,29 @@ public class BaseTokenizer {
     return summaryContent;
   }
 
-  // Split to words
-  public static List<String> extractWords(String target/*, BreakIterator wordIterator*/) {
-    BreakIterator wordIterator =
-      BreakIterator.getWordInstance();
-    wordIterator.setText(target);
-    int start = wordIterator.first();
-    int end = wordIterator.next();
+  // About:
+  //   split with some probability
+  //
+  // Troubles:
+  /*
+    разбитие прямой речи из субтитров. Недоразбивает:
 
-    List<String> resultWordList = new ArrayList<String>();
-    while (end != BreakIterator.DONE) {
-      String word = target.substring(start,end);
-      if (Character.isLetterOrDigit(word.charAt(0))) {
-        resultWordList.add(word);
-      }
-      start = end;
-      end = wordIterator.next();
+    Yeah, I just wasn't looking where I was going. - But I'm great, actually. - Oh, thank goodness.
+    Pattern -
+
+    Sorry. ...Your  - Pattern -
+
+  */
+  public ImmutableList<String> getSentences(String text) {
+    BreakIterator bi = BreakIterator.getSentenceInstance();
+    bi.setText(text);
+    List<String> result = new ArrayList<String>();
+    int index = 0;
+    while (bi.next() != BreakIterator.DONE) {
+      String sentence = text.substring(index, bi.current());
+      result.add(sentence);
+      index = bi.current();
     }
-    return resultWordList;
+    return ImmutableList.copyOf(result);
   }
 }

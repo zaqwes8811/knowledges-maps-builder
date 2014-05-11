@@ -15,7 +15,7 @@ import java.util.*;
  * Time: 15:11
  * To change this template use File | Settings | File Templates.
  */
-public class CompressorsTest {
+public class CompressorsNITest {
   @Test
   public void testDevelop() {
   List<String> ignoredWordsRu = new ArrayList<String>(Arrays.asList(
