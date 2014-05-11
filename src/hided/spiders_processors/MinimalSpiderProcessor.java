@@ -5,7 +5,7 @@ import common.InnerReuse;
 import common.Utils;
 import dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import hided.jobs_processors.ProcessorTargets;
-import business.nlp.TikaWrapper;
+import business.adapters_3rdparty.TikaWrapper;
 import crosscuttings.AppConstants;
 
 
