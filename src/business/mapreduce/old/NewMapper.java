@@ -48,7 +48,7 @@ public class NewMapper {
         while ((s = reader.readLine()) != null) {
           String workCopy = s.toLowerCase();
           int langPtr = workCopy.indexOf(' ');
-          List<String> words = SentenceTokenizer.getWords(workCopy.substring(langPtr, workCopy.length()));
+          List<String> words = new SentenceTokenizer().getWords(workCopy.substring(langPtr, workCopy.length()));
           String lang = workCopy.substring(0, langPtr);
 
           // Добавляем в частотный индекс

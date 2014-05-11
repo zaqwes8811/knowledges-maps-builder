@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SentenceTokenizer {
-  public static List<String> getWords(String contentItem) {
+  public List<String> getWords(String contentItem) {
     BreakIterator iterator = BreakIterator.getWordInstance();
     iterator.setText(contentItem);
     int start = iterator.first();

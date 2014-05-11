@@ -1,18 +1,9 @@
 package business.math;
 
-import business.math.Randomizer;
-
 import java.util.Random;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 09.07.13
- * Time: 19:24
- * To change this template use File | Settings | File Templates.
- */
-public class Randomizers {
-  private Randomizers() {}
+public class RandomizerImpls {
+  private RandomizerImpls() {}
 
   public static Randomizer create(Integer maxValue) {
     return new UniformRandomizer(maxValue);
@@ -23,11 +14,11 @@ public class Randomizers {
       MAX_VALUE = maxValue;
     }
     private final Integer MAX_VALUE;
-    private final Random RANDOM = new Random();
+    private final Random random_ = new Random();
 
     @Override
     public Integer getSample() {
-      return RANDOM.nextInt(MAX_VALUE);
+      return random_.nextInt(MAX_VALUE);
     }
   }
 }

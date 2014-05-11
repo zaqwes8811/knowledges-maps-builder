@@ -1,7 +1,7 @@
 package controllers.web_wrapper;
 
+import business.math.GeneratorAnyDistribution;
 import com.google.common.collect.ImmutableList;
-import business.math.GeneratorAnyRandom;
 import dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import java.util.ArrayList;
@@ -10,11 +10,11 @@ import java.util.List;
 @Deprecated
 public class ListGetterImpl implements ListGetter {
   private final ImmutableNodeAccessor ACCESSOR_;
-  private final GeneratorAnyRandom GENERATOR_;
+  private final GeneratorAnyDistribution GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
     List<Integer> distribution = ACCESSOR_.getDistribution();
-    GENERATOR_ = GeneratorAnyRandom.create(distribution);
+    GENERATOR_ = GeneratorAnyDistribution.create(distribution);
   }
 
   // Index: нужно для маркеровки

@@ -1,5 +1,6 @@
 package business.mapreduce;
 
+import business.nlp.SentenceTokenizer;
 import dal.gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
@@ -22,9 +23,11 @@ public class CounterMapper {
   }
 
   public void map(List<ContentItem> contentItems) {
+    SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (ContentItem item : contentItems) {
-      String key = item.getItem();
-      emit(key, item);
+      List<String> words = tokenizer.getWords(item.get());
+      for (String word: words)
+        emit(word, item);
     }
   }
 }
