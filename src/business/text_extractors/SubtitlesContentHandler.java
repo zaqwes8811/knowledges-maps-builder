@@ -10,10 +10,10 @@ import java.util.List;
 /**
  http://docs.oracle.com/javase/tutorial/jaxp/sax/parsing.html
  */
-public class ContentHandlerImpl extends DefaultHandler {
+public class SubtitlesContentHandler extends DefaultHandler {
   private List<String> sink_;  // Injected
 
-  public ContentHandlerImpl(List<String> sink) {
+  public SubtitlesContentHandler(List<String> sink) {
     sink_ = sink;
   }
 

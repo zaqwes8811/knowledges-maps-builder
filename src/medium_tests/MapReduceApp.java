@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 import common.Util;
 import crosscuttings.CrosscuttingsException;
 //import dal.accessors_text_file_storage.IdxAccessor;
-import business.text_extractors.ImmutableBECParser;
+import hided.spiders_extractors.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

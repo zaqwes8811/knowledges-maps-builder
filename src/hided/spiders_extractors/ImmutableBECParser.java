@@ -1,4 +1,4 @@
-package business.text_extractors;
+package hided.spiders_extractors;
 
 //import dal.accessors_text_file_storage.VParserException;
 import com.google.common.base.Joiner;
