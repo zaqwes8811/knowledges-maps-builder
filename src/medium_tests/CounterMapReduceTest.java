@@ -16,6 +16,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.io.Closer;
 import common.Util;
 import dal.gae_kinds.ContentItem;
+import dal.gae_kinds.ContentPage;
 import org.apache.tika.parser.Parser;
 import org.junit.After;
 import org.junit.Before;
@@ -115,9 +116,12 @@ public class CounterMapReduceTest {
     // Persist content items
     ofy().save().entities(contentItems).now();
     assertNotNull(contentItems.get(0).getId());
-    List<ContentItem> items = ofy().load().type(ContentItem.class).list();
+    //List<ContentItem> items = ofy().load().type(ContentItem.class).list();
 
     // Persist page
+    ContentPage page = new ContentPage("Korra");
+    ofy().save().entity(page).now();
+
     // Persist words
 
     //Set<String> keys = wordHistogram.elementSet();
