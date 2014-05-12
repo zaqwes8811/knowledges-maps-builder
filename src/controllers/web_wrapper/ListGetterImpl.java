@@ -29,7 +29,7 @@ public class ListGetterImpl implements ListGetter {
     // Отправляем только если есть контекст
     while (true) {
       boolean finded = false;
-      Integer currentKey = GENERATOR_.getCodeWord();
+      Integer currentKey = GENERATOR_.getPosition();
 
       // Добавляем, только если что-то есть
       ImmutableList<String> content = ACCESSOR_.getContent(currentKey);

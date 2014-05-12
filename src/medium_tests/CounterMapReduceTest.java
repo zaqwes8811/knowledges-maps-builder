@@ -17,6 +17,7 @@ import com.google.common.io.Closer;
 import common.Util;
 import dal.gae_kinds.ContentItem;
 import dal.gae_kinds.ContentPage;
+import dal.gae_kinds.Word;
 import org.apache.tika.parser.Parser;
 import org.junit.After;
 import org.junit.Before;
@@ -27,7 +28,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import static medium_tests.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
@@ -133,12 +136,18 @@ public class CounterMapReduceTest {
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
     //Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
-    List<ContentItem> i = ofy().load().type(ContentItem.class)
+    /*List<ContentItem> i = ofy().load().type(ContentItem.class)
         .filterKey("in", page.getItems())
-        .filter("idx <=", 8)
-        .list();
+        .filter("idx <=", 8) 
+        .list();*/
 
     // Persist words
+    for (Map.Entry<String, ContentItem> entry: wordHistogram.entries()) {
+      String word = entry.getKey();
+      Collection<ContentItem> value = wordHistogram.get(word);
+      Word wordObj = new Word(word);
+      //wordObj.
+    }
 
     // Delete full page
   }
