@@ -26,6 +26,8 @@ public class Word {
     return frequency;
   }
 
+  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
+  @Index
   Integer sortedIdx;  // 0-N в порядке возрастания по frequency
 
   // List coupled content items.
