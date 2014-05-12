@@ -141,15 +141,15 @@ public class CounterMapReduceTest {
         .filter("idx <=", 8) 
         .list();*/
 
-    // Sort words by frequency
-
     // Persist words
     for (Map.Entry<String, ContentItem> entry: wordHistogram.entries()) {
       String word = entry.getKey();
       Collection<ContentItem> value = wordHistogram.get(word);
       Word wordObj = new Word(word);
-      //wordObj.
+      wordObj.setFrequency(value.size());
     }
+
+    // Sort words by frequency and assign idx
 
     // Delete full page
   }
