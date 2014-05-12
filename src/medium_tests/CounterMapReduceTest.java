@@ -141,6 +141,8 @@ public class CounterMapReduceTest {
         .filter("idx <=", 8) 
         .list();*/
 
+    // Sort words by frequency
+
     // Persist words
     for (Map.Entry<String, ContentItem> entry: wordHistogram.entries()) {
       String word = entry.getKey();
