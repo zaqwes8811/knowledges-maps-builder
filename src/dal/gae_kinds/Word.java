@@ -5,10 +5,7 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by zaqwes on 5/9/14.
@@ -65,6 +62,10 @@ public class Word {
     for (ContentItem value: item) {
       this.items.add(Key.create(value));
     }
+  }
+
+  public Set<Key<ContentItem>> getItems() {
+    return items;
   }
 
   Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();

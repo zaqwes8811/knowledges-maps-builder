@@ -163,12 +163,12 @@ public class IdxNodeAccessor {
 
     // В принципе генерировать исключений не должно.
     @Override
-    final public ImmutableList<Integer> getDistribution() {
-      List<Integer> tmp = new ArrayList<Integer>();
+    final public ArrayList<Integer> getDistribution() {
+      ArrayList<Integer> tmp = new ArrayList<Integer>();
       for (final String item: CASH_SORTED_IDX) {
         tmp.add(CASH_FREQUENCY_IDX.get(item));
       }
-      return ImmutableList.copyOf(tmp);
+      return tmp;
     }
 
     @Override
