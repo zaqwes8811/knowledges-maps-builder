@@ -13,16 +13,23 @@ import java.util.List;
  * About: Отражает один элемент данный пользователя, например, один файл субтитров.
  */
 @Entity
-public class ContentPage {
+public class ContentPageKind {
   @Id
   Long id;
 
   @Index String name;
 
-  private ContentPage() {}
+  private ContentPageKind() {}
+
+  public static ContentPageKind create(String name, List<ContentItem> list, List<Word> words) {
+    ContentPageKind page = new ContentPageKind(name);
+    page.setWords(words);
+    page.setItems(list);
+    return page;
+  }
 
 
-  public ContentPage(String name) {
+  public ContentPageKind(String name) {
     this.name = name;
   }
 
@@ -30,7 +37,7 @@ public class ContentPage {
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
-  public void setItems(List<ContentItem> list) {
+  private void setItems(List<ContentItem> list) {
     for (ContentItem item: list) {
       items.add(Key.create(item));
     }
@@ -42,7 +49,7 @@ public class ContentPage {
   @Load
   List<Key<Word>> words = new ArrayList<Key<Word>>();
 
-  public void setWords(List<Word> words) {
+  private void setWords(List<Word> words) {
     for (Word word: words) {
       this.words.add(Key.create(word));
     }

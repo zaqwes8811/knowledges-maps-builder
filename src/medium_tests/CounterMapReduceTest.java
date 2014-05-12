@@ -17,7 +17,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.io.Closer;
 import common.Util;
 import dal.gae_kinds.ContentItem;
-import dal.gae_kinds.ContentPage;
+import dal.gae_kinds.ContentPageKind;
 import dal.gae_kinds.Word;
 import org.apache.tika.parser.Parser;
 import org.junit.After;
@@ -47,17 +47,7 @@ public class CounterMapReduceTest {
     helper.tearDown();
   }
 
-  private List<ContentItem> getContentItems() {
-    List<ContentItem> sentences = new ArrayList<ContentItem>();
-    sentences.add(new ContentItem("hello"));
-    sentences.add(new ContentItem("hello"));
-    sentences.add(new ContentItem("world"));
-    return sentences;
-  }
-
-  private ImmutableList<ContentItem> getItems() throws IOException {
-    String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
-      "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+  private String getTestText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Util.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
 
@@ -73,23 +63,7 @@ public class CounterMapReduceTest {
 
       // Получили список строк.
       SpecialSymbols symbols = new SpecialSymbols();
-      String text = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
-      assertFalse(text.isEmpty());
-
-      ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
-      assertFalse(sentences.isEmpty());
-
-      // Пакуем
-      List<ContentItem> contentItems = new ArrayList<ContentItem>();
-      Long idx = new Long(1);
-      for (String sentence: sentences) {
-        ContentItem item = new ContentItem(sentence);
-        item.setIdx(idx);
-        contentItems.add(item);
-        idx++;
-      }
-
-      return ImmutableList.copyOf(contentItems);
+      return Joiner.on(symbols.WHITESPACE_STRING).join(sink);
     } catch (Throwable e) {
       throw closer.rethrow(e);
     } finally {
@@ -99,13 +73,32 @@ public class CounterMapReduceTest {
 
   @Test
   public void testRun() throws Exception {
+    // TODO: Extract class
+    String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
+        "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+    String text = getTestText(filename);
+    assertFalse(text.isEmpty());
+
+    ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
+    assertFalse(sentences.isEmpty());
+
+    // Пакуем
+    List<ContentItem> contentItems1 = new ArrayList<ContentItem>();
+    Long idx = new Long(1);
+    for (String sentence: sentences) {
+      ContentItem item = new ContentItem(sentence);
+      item.setIdx(idx);
+      contentItems1.add(item);
+      idx++;
+    }
+
+    ImmutableList<ContentItem> contentItems = ImmutableList.copyOf(contentItems1);
+
+    /// ClassEdge
     // build
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
     CounterMapper mapper = new CounterMapper(reducer);
-
-    // work
-    ImmutableList<ContentItem> contentItems = getItems();
 
     // Split
     mapper.map(contentItems);  // TODO: implicit, but be so
@@ -139,15 +132,11 @@ public class CounterMapReduceTest {
     GeneratorAnyDistribution gen = GeneratorAnyDistribution.create(distribution);
 
     // Last - Persist page
-    ContentPage page = new ContentPage("Korra");
-    // TODO: Подключить в именованном конструкторе
-    page.setItems(contentItems);
-    page.setWords(words);
+    ContentPageKind page = ContentPageKind.create("Korra", contentItems, words);
+
     ofy().save().entity(page).now();
 
     /// Queries
-    //List<ContentItem> list = ofy().load().type(ContentItem.class).filterKey(page.getItems());
-    // TODO: Work but bad!! Как делать запросы не ясно. Похоже нужна ссылка и на страницу - бред.
     // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
     // Хотелось бы выбирать по некоторому критерию.
     // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
@@ -157,16 +146,12 @@ public class CounterMapReduceTest {
     // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
-    //Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
-    /*List<ContentItem> i = ofy().load().type(ContentItem.class)
-        .filterKey("in", page.getItems())
-        .filter("idx <=", 8)
-        .list();*/
     Integer idxPosition = gen.getPosition();
     int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
     List<ContentItem> coupled = ofy().load().type(ContentItem.class)
       .filterKey("in", elem.getItems())
+      //.filter("idx <=", 8)
       .limit(countFirst)
       .list();
 
