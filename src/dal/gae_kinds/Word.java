@@ -4,6 +4,8 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
+import java.util.Comparator;
+
 /**
  * Created by zaqwes on 5/9/14.
  */
@@ -18,6 +20,10 @@ public class Word {
 
   public void setFrequency(Integer value) {
     frequency = value;
+  }
+
+  public Integer getFrequency() {
+    return frequency;
   }
 
   Integer sortedIdx;  // 0-N в порядке возрастания по frequency
@@ -41,5 +47,19 @@ public class Word {
   public Word(String word) {
     this.word = word;
     sortedIdx = -1;
+  }
+
+  private static class WordFreqComparator implements Comparator<Word> {
+    // http://stackoverflow.com/questions/10017381/compareto-method-java
+    //
+    // In "Effective Java"
+    @Override
+    public int compare(Word o1, Word o2) {
+      return o1.getFrequency().compareTo(o2.getFrequency());
+    }
+  }
+
+  public static Comparator<Word> createFreqComparator() {
+    return new WordFreqComparator();
   }
 }
