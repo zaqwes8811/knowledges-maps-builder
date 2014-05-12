@@ -17,8 +17,8 @@ public class GeneratorAnyDistributionTest {
     GeneratorAnyDistribution generator = GeneratorAnyDistribution.create(distribution);
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)
-      //experiment.add(distribution.get(generator.getCodeWord()));
-      experiment.add((generator.getCodeWord()));
+      //experiment.add(distribution.get(generator.getPosition()));
+      experiment.add((generator.getPosition()));
 
     System.out.println(experiment);
   }
