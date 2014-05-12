@@ -14,7 +14,9 @@ public class Word {
   @Index
   String word;
   @Index
-  Long count;
+  Long frequency;  // Сколько раз встретилось слово.
+
+  Integer sortedIdx;  // 0-N в порядке возрастания по frequency
 
   // List coupled content items.
   public void addContentItem(ContentItem item) {
@@ -34,5 +36,6 @@ public class Word {
   private Word() {}
   public Word(String word) {
     this.word = word;
+    sortedIdx = -1;
   }
 }
