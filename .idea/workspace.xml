@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" afterPath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/User.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +74,8 @@
       <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43396226" vertical-offset="1039" max-vertical-offset="2490">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.43396226" vertical-offset="1399" max-vertical-offset="2580">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
@@ -87,9 +83,9 @@
                 <element signature="e#1491#1492#0" expanded="true" />
                 <element signature="e#1518#1519#0" expanded="true" />
                 <element signature="e#2120#2128#0" expanded="true" />
-                <element signature="e#3068#3081#0" expanded="true" />
-                <element signature="e#3822#3828#0" expanded="true" />
-                <element signature="e#4210#4219#0" expanded="true" />
+                <element signature="e#2751#2764#0" expanded="true" />
+                <element signature="e#3976#3982#0" expanded="true" />
+                <element signature="e#4364#4373#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -803,7 +799,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1368" height="717" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -823,7 +819,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27818447" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35073408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35073408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1204,7 +1200,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,8 +1254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43396226" vertical-offset="1039" max-vertical-offset="2490">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43396226" vertical-offset="1399" max-vertical-offset="2580">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1430#1431#0" expanded="true" />
@@ -1267,9 +1263,9 @@
             <element signature="e#1491#1492#0" expanded="true" />
             <element signature="e#1518#1519#0" expanded="true" />
             <element signature="e#2120#2128#0" expanded="true" />
-            <element signature="e#3068#3081#0" expanded="true" />
-            <element signature="e#3822#3828#0" expanded="true" />
-            <element signature="e#4210#4219#0" expanded="true" />
+            <element signature="e#2751#2764#0" expanded="true" />
+            <element signature="e#3976#3982#0" expanded="true" />
+            <element signature="e#4364#4373#0" expanded="true" />
           </folding>
         </state>
       </provider>
