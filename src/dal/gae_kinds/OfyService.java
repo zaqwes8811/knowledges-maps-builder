@@ -1,15 +1,14 @@
-package medium_tests;
+package dal.gae_kinds;
 
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
-import dal.gae_kinds.ContentItem;
-import dal.gae_kinds.ContentPage;
 
 public class OfyService {
   static {
     factory().register(ContentItem.class);
     factory().register(ContentPage.class);
+    factory().register(Word.class);
     //...etc
   }
 
