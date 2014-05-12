@@ -5,6 +5,7 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
@@ -36,6 +37,19 @@ public class Word {
 
   public Integer getFrequency() {
     return frequency;
+  }
+
+  public static Word create(String wordValue, Collection<ContentItem> items) {
+    Word word = new Word(wordValue);
+
+    // Частоту берем из списка ссылок.
+    word.setFrequency(items.size());
+
+    // Ссылки должны быть уникальными
+    Set<ContentItem> itemSet = new HashSet<ContentItem>();
+    itemSet.addAll(items);
+    word.setContentItems(itemSet);
+    return word;
   }
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
