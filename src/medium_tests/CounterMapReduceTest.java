@@ -27,10 +27,7 @@ import org.xml.sax.ContentHandler;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
@@ -142,12 +139,19 @@ public class CounterMapReduceTest {
         .list();*/
 
     // Persist words
+    List<Word> words = new ArrayList<Word>();
     for (Map.Entry<String, ContentItem> entry: wordHistogram.entries()) {
       String word = entry.getKey();
       Collection<ContentItem> value = wordHistogram.get(word);
       Word wordObj = new Word(word);
-      //ofy().save().entity(wordObj).now();
       wordObj.setFrequency(value.size());
+
+      // Ссылки должны быть уникальными
+      Set<ContentItem> itemSet = new HashSet<ContentItem>();
+      itemSet.addAll(value);
+      wordObj.setContentItems(itemSet);
+
+      words.add(wordObj);
     }
 
     // Sort words by frequency and assign idx

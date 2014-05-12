@@ -1,10 +1,13 @@
 package dal.gae_kinds;
 
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by zaqwes on 5/9/14.
@@ -31,9 +34,13 @@ public class Word {
   Integer sortedIdx;  // 0-N в порядке возрастания по frequency
 
   // List coupled content items.
-  public void addContentItem(ContentItem item) {
-
+  public void setContentItems(Set<ContentItem> item) {
+    for (ContentItem value: item) {
+      this.items.add(Key.create(value));
+    }
   }
+
+  Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
 
   //ArrayList<Ref<ContentItem>> refs;
 
