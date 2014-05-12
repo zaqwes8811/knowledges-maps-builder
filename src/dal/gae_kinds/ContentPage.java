@@ -41,4 +41,10 @@ public class ContentPage {
   // Words
   @Load
   List<Key<Word>> words = new ArrayList<Key<Word>>();
+
+  public void setWords(List<Word> words) {
+    for (Word word: words) {
+      this.words.add(Key.create(word));
+    }
+  }
 }
