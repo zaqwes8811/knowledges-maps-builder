@@ -2,6 +2,7 @@ package medium_tests;
 
 import business.mapreduce.CountReducer;
 import business.mapreduce.CounterMapper;
+import business.math.GeneratorAnyDistribution;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -124,13 +125,18 @@ public class CounterMapReduceTest {
     // Sort words by frequency and assign idx
     Collections.sort(words, Word.createFreqComparator());
     Collections.reverse(words);
-    List<Integer> distribution = new ArrayList<Integer>();
-    for (int i = 0; i < words.size(); i++)
+    ArrayList<Integer> distribution = new ArrayList<Integer>();
+    for (int i = 0; i < words.size(); i++) {
       words.get(i).setSortedIdx(i);
+
+      // нужны частоты для распределения
+      distribution.add(words.get(i).getFrequency());
+    }
 
     ofy().save().entities(words).now();
 
     // Заряжаем генератор
+    GeneratorAnyDistribution gen = GeneratorAnyDistribution.create(distribution);
 
     // Last - Persist page
     ContentPage page = new ContentPage("Korra");
@@ -156,11 +162,12 @@ public class CounterMapReduceTest {
         .filterKey("in", page.getItems())
         .filter("idx <=", 8)
         .list();*/
-    Integer idxPosition = 5;
+    Integer idxPosition = gen.getPosition();
+    int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
     List<ContentItem> coupled = ofy().load().type(ContentItem.class)
       .filterKey("in", elem.getItems())
-      .limit(4)
+      .limit(countFirst)
       .list();
 
     // TODO: Delete full page

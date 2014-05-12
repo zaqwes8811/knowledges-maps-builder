@@ -36,4 +36,8 @@ public class ContentItem {
   public ContentItem(String item) {
     this.item = item;
   }
+
+  public String toString() {
+    return "Value = "+item;
+  }
 }
