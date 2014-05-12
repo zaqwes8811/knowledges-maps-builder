@@ -140,17 +140,9 @@ public class CounterMapReduceTest {
 
     // Persist words
     List<Word> words = new ArrayList<Word>();
-    for (Map.Entry<String, ContentItem> entry: wordHistogram.entries()) {
-      String word = entry.getKey();
+    for (String word: wordHistogram.keySet()) {
       Collection<ContentItem> value = wordHistogram.get(word);
-      Word wordObj = new Word(word);
-      wordObj.setFrequency(value.size());
-
-      // Ссылки должны быть уникальными
-      Set<ContentItem> itemSet = new HashSet<ContentItem>();
-      itemSet.addAll(value);
-      wordObj.setContentItems(itemSet);
-
+      Word wordObj = Word.create(word, value);
       words.add(wordObj);
     }
 
@@ -160,8 +152,8 @@ public class CounterMapReduceTest {
     for(int i = 0; i < words.size(); i++)
       words.get(i).setSortedIdx(i);
 
-    Util.print(words);
+    ofy().save().entities(words).now();
 
-    // Delete full page
+    // TODO: Delete full page
   }
 }
