@@ -32,7 +32,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static medium_tests.OfyService.ofy;
+import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 
 public class CounterMapReduceTest {
@@ -146,6 +146,7 @@ public class CounterMapReduceTest {
       String word = entry.getKey();
       Collection<ContentItem> value = wordHistogram.get(word);
       Word wordObj = new Word(word);
+      //ofy().save().entity(wordObj).now();
       wordObj.setFrequency(value.size());
     }
 
