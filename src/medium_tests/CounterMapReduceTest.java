@@ -115,10 +115,7 @@ public class CounterMapReduceTest {
     // Persist content items
     ofy().save().entities(contentItems).now();
 
-    // Persist page
-    ContentPage page = new ContentPage("Korra");
-    page.setItems(contentItems);  // TODO: Подключить в именованном конструкторе
-    ofy().save().entity(page).now();
+
 
     // Queries - failed
     //List<ContentItem> list = ofy().load().type(ContentItem.class).filterKey(page.getItems());
@@ -153,6 +150,12 @@ public class CounterMapReduceTest {
       words.get(i).setSortedIdx(i);
 
     ofy().save().entities(words).now();
+
+    // Persist page
+    ContentPage page = new ContentPage("Korra");
+    page.setItems(contentItems);  // TODO: Подключить в именованном конструкторе
+    page.setWords(words);
+    ofy().save().entity(page).now();
 
     // TODO: Delete full page
   }
