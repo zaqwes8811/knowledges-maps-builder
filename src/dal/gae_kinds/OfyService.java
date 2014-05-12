@@ -7,7 +7,7 @@ import com.googlecode.objectify.ObjectifyService;
 public class OfyService {
   static {
     factory().register(ContentItem.class);
-    factory().register(ContentPage.class);
+    factory().register(ContentPageKind.class);
     factory().register(Word.class);
     //...etc
   }
