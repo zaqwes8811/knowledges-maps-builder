@@ -16,10 +16,19 @@ import java.util.Set;
 public class Word {
   @Id
   Long id;
+
+  // TODO: TOTH: может хранится стем или пара-тройка слов.
   @Index
   String word;
+
+  // TODO: TOTH: возможно лучше хранить логарифм от нормированной частоты
   @Index
   Integer frequency;  // Сколько раз встретилось слово.
+
+  @Override
+  public String toString() {
+    return "("+word+", "+frequency.toString()+", "+sortedIdx.toString()+")";
+  }
 
   public void setFrequency(Integer value) {
     frequency = value;
@@ -32,6 +41,10 @@ public class Word {
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   @Index
   Integer sortedIdx;  // 0-N в порядке возрастания по frequency
+
+  public void setSortedIdx(Integer value) {
+    sortedIdx = value;
+  }
 
   // List coupled content items.
   public void setContentItems(Set<ContentItem> item) {

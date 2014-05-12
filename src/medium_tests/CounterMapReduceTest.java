@@ -155,6 +155,12 @@ public class CounterMapReduceTest {
     }
 
     // Sort words by frequency and assign idx
+    Collections.sort(words, Word.createFreqComparator());
+    Collections.reverse(words);
+    for(int i = 0; i < words.size(); i++)
+      words.get(i).setSortedIdx(i);
+
+    Util.print(words);
 
     // Delete full page
   }
