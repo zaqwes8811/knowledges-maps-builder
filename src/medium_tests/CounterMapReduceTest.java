@@ -27,7 +27,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import static medium_tests.OfyService.ofy;
@@ -133,7 +132,8 @@ public class CounterMapReduceTest {
     // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
-    Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
+    //Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
+    List<ContentItem> i = ofy().load().type(ContentItem.class).filterKey("<", page.getItems().get(8)).list();
 
     // Persist words
 
