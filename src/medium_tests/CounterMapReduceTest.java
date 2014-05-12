@@ -133,7 +133,10 @@ public class CounterMapReduceTest {
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
     //Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
-    List<ContentItem> i = ofy().load().type(ContentItem.class).filterKey("<", page.getItems().get(8)).list();
+    List<ContentItem> i = ofy().load().type(ContentItem.class)
+        .filterKey("in", page.getItems())
+        .filter("idx <=", 8)
+        .list();
 
     // Persist words
 
