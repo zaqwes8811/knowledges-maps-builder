@@ -39,4 +39,6 @@ public class ContentPage {
   public List<Key<ContentItem>> getItems() { return items; }
 
   // Words
+  @Load
+  List<Key<Word>> words = new ArrayList<Key<Word>>();
 }
