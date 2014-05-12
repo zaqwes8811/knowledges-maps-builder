@@ -14,7 +14,11 @@ public class Word {
   @Index
   String word;
   @Index
-  Long frequency;  // Сколько раз встретилось слово.
+  Integer frequency;  // Сколько раз встретилось слово.
+
+  public void setFrequency(Integer value) {
+    frequency = value;
+  }
 
   Integer sortedIdx;  // 0-N в порядке возрастания по frequency
 
