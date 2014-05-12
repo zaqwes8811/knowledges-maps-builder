@@ -7,8 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" afterPath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +77,8 @@
       <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1484" max-vertical-offset="2370">
-              <caret line="130" column="12" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1784" max-vertical-offset="2370">
+              <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1646#1659#0" expanded="true" />
@@ -87,32 +89,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="WordComparator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43515357" vertical-offset="0" max-vertical-offset="586">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GeneratorAnyDistribution.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1425">
               <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratorAnyDistributionTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Word.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2320819" vertical-offset="89" max-vertical-offset="675">
+            <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="735">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/Engine.java" />
         <option value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/Person.java" />
         <option value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarOneToOne.java" />
         <option value="$PROJECT_DIR$/sandbox/src/third_party_tests/gae/CarOneToOneTest.java" />
@@ -184,8 +191,9 @@
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentItem.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" />
-        <option value="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
+        <option value="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
+        <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java" />
       </list>
     </option>
   </component>
@@ -795,13 +803,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/old/NewReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="795">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -1140,9 +1141,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state vertical-scroll-proportion="0.46075085" vertical-offset="0" max-vertical-offset="586">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="735">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,8 +1168,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1484" max-vertical-offset="2370">
-          <caret line="130" column="12" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1784" max-vertical-offset="2370">
+          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1646#1659#0" expanded="true" />
@@ -1167,11 +1179,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2320819" vertical-offset="89" max-vertical-offset="675">
+        <state vertical-scroll-proportion="0.43515357" vertical-offset="0" max-vertical-offset="586">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
