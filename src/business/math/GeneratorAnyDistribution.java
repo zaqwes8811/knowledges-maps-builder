@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-// Класс способен генерировать последовательности любого дискретного распределения
+// About:
+//   Класс способен генерировать последовательности любого дискретного распределения
+//   Возвращает индекс массива исходного распределения.
 //
 // На вход подается...
 //
@@ -18,9 +20,27 @@ import java.util.Random;
 //
 @Immutable
 public class GeneratorAnyDistribution {
-  private final Integer COUNT_POINTS;
-  private final Integer MAX_VALUE;
+  private final Integer COUNT_POINTS_;
+  private final Integer MAX_VALUE_;
   private final ImmutableList<ImmutableList<Integer>> CODE_BOOK;
+
+  // Любой список с числами
+  // @throws: RandomGeneratorException
+  public static GeneratorAnyDistribution create(List<Integer> distribution) {
+    if (distribution.isEmpty())
+      throw new RandomGeneratorException("In list must be no empty.");
+    return new GeneratorAnyDistribution(distribution);
+  }
+
+  public Integer getPosition() {
+    // Используется рекурсивная реализация на базе бинарного поиска.
+    // На модели она показала наилучшую масштабирумость и скорость работы.
+    Integer INTERVAL_POS = 1;
+    Integer IDX_POS = 2;
+    Float value = new Random().nextFloat()* MAX_VALUE_;
+    ImmutableList<Integer> result =  split(CODE_BOOK, COUNT_POINTS_, value).getValue1().get();
+    return result.get(IDX_POS);
+  }
 
   private Triplet<List<Integer>, Integer, Integer> makeFx(List<Integer> distribution) {
     List<Integer> Fx = new ArrayList<Integer>();
@@ -37,7 +57,7 @@ public class GeneratorAnyDistribution {
   private List<ImmutableList<Integer>> makeRanges(List<Integer> Fx) {
     List<ImmutableList<Integer>> ranges = new ArrayList<ImmutableList<Integer>>();
     ranges.add(ImmutableList.of(0, Fx.get(0), 0));
-    for (Integer i = 0; i < COUNT_POINTS-1; i++) {
+    for (Integer i = 0; i < COUNT_POINTS_ -1; i++) {
       ranges.add(ImmutableList.of(Fx.get(i), Fx.get(i+1), i+1));
     }
     return ranges;
@@ -46,19 +66,9 @@ public class GeneratorAnyDistribution {
   private GeneratorAnyDistribution(List<Integer> distribution) {
     Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
     List<Integer> Fx = resultMakeFx.getValue0();
-    COUNT_POINTS = resultMakeFx.getValue1();
-    MAX_VALUE = resultMakeFx.getValue2();
+    COUNT_POINTS_ = resultMakeFx.getValue1();
+    MAX_VALUE_ = resultMakeFx.getValue2();
     CODE_BOOK = ImmutableList.copyOf(makeRanges(Fx));
-  }
-
-  public Integer getCodeWord() {
-    // Используется рекурсивная реализация на базе бинарного поиска.
-    // На модели она показала наилучшую масштабирумость и скорость работы.
-    Integer INTERVAL_POS = 1;
-    Integer IDX_POS = 2;
-    Float value = new Random().nextFloat()*MAX_VALUE;
-    ImmutableList<Integer> result =  split(CODE_BOOK, COUNT_POINTS, value).getValue1().get();
-    return result.get(2);
   }
 
   private Pair<Boolean, Optional<ImmutableList<Integer>>> split(
@@ -83,12 +93,5 @@ public class GeneratorAnyDistribution {
 
   private Boolean isContain(ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
       return ranges.get(0).get(0) < value && value <= ranges.get(n-1).get(1);
-  }
-
-  // Любой список с числами
-  // @throws: RandomGeneratorException
-  public static GeneratorAnyDistribution create(List<Integer> distribution) {
-    if (distribution.isEmpty()) throw new RandomGeneratorException("In list must be no empty.");
-    return new GeneratorAnyDistribution(distribution);
   }
 }
