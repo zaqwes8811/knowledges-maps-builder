@@ -71,19 +71,12 @@ public class CounterMapReduceTest {
     }
   }
 
-  @Test
-  public void testRun() throws Exception {
-    // TODO: Extract class
-    String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
-        "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
-    String text = getTestText(filename);
-    assertFalse(text.isEmpty());
-
+  private ArrayList<ContentItem> getItems(String text) {
     ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
     assertFalse(sentences.isEmpty());
 
     // Пакуем
-    List<ContentItem> contentItems1 = new ArrayList<ContentItem>();
+    ArrayList<ContentItem> contentItems1 = new ArrayList<ContentItem>();
     Long idx = new Long(1);
     for (String sentence: sentences) {
       ContentItem item = new ContentItem(sentence);
@@ -92,10 +85,23 @@ public class CounterMapReduceTest {
       idx++;
     }
 
-    ImmutableList<ContentItem> contentItems = ImmutableList.copyOf(contentItems1);
+    return contentItems1;
+  }
+
+  @Test
+  public void testRun() throws Exception {
+    // TODO: Extract class
+    String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
+        "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+
+    // Phase I
+    String text = getTestText(filename);
+    assertFalse(text.isEmpty());
+
+    // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
+    ArrayList<ContentItem> contentItems = getItems(text);
 
     /// ClassEdge
-    // build
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
     CounterMapper mapper = new CounterMapper(reducer);
