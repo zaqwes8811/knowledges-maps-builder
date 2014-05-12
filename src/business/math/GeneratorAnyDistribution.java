@@ -26,7 +26,7 @@ public class GeneratorAnyDistribution {
 
   // Любой список с числами
   // @throws: RandomGeneratorException
-  public static GeneratorAnyDistribution create(List<Integer> distribution) {
+  public static GeneratorAnyDistribution create(ArrayList<Integer> distribution) {
     if (distribution.isEmpty())
       throw new RandomGeneratorException("In list must be no empty.");
     return new GeneratorAnyDistribution(distribution);
@@ -63,7 +63,7 @@ public class GeneratorAnyDistribution {
     return ranges;
   }
 
-  private GeneratorAnyDistribution(List<Integer> distribution) {
+  private GeneratorAnyDistribution(ArrayList<Integer> distribution) {
     Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
     List<Integer> Fx = resultMakeFx.getValue0();
     COUNT_POINTS_ = resultMakeFx.getValue1();

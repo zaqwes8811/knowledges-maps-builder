@@ -12,7 +12,7 @@ import java.util.List;
 public class GeneratorAnyDistributionTest {
   @Test
   public void testCreate() throws  RandomGeneratorException {
-    List<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
+    ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
 
     GeneratorAnyDistribution generator = GeneratorAnyDistribution.create(distribution);
     List<Integer> experiment = new ArrayList<Integer>();

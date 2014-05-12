@@ -13,7 +13,7 @@ public class ListGetterImpl implements ListGetter {
   private final GeneratorAnyDistribution GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
-    List<Integer> distribution = ACCESSOR_.getDistribution();
+    ArrayList<Integer> distribution = ACCESSOR_.getDistribution();
     GENERATOR_ = GeneratorAnyDistribution.create(distribution);
   }
 

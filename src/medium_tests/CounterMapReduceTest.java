@@ -106,8 +106,6 @@ public class CounterMapReduceTest {
     // work
     ImmutableList<ContentItem> contentItems = getItems();
 
-    // Connect to page
-
     // Split
     mapper.map(contentItems);  // TODO: implicit, but be so
 
@@ -115,9 +113,33 @@ public class CounterMapReduceTest {
     // Persist content items
     ofy().save().entities(contentItems).now();
 
+    // Persist words
+    List<Word> words = new ArrayList<Word>();
+    for (String word: wordHistogram.keySet()) {
+      Collection<ContentItem> value = wordHistogram.get(word);
+      Word wordObj = Word.create(word, value);
+      words.add(wordObj);
+    }
 
+    // Sort words by frequency and assign idx
+    Collections.sort(words, Word.createFreqComparator());
+    Collections.reverse(words);
+    List<Integer> distribution = new ArrayList<Integer>();
+    for (int i = 0; i < words.size(); i++)
+      words.get(i).setSortedIdx(i);
 
-    // Queries - failed
+    ofy().save().entities(words).now();
+
+    // Заряжаем генератор
+
+    // Last - Persist page
+    ContentPage page = new ContentPage("Korra");
+    // TODO: Подключить в именованном конструкторе
+    page.setItems(contentItems);
+    page.setWords(words);
+    ofy().save().entity(page).now();
+
+    /// Queries
     //List<ContentItem> list = ofy().load().type(ContentItem.class).filterKey(page.getItems());
     // TODO: Work but bad!! Как делать запросы не ясно. Похоже нужна ссылка и на страницу - бред.
     // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
@@ -132,30 +154,14 @@ public class CounterMapReduceTest {
     //Collection<ContentItem> i = ofy().load().keys(page.getItems()).values();
     /*List<ContentItem> i = ofy().load().type(ContentItem.class)
         .filterKey("in", page.getItems())
-        .filter("idx <=", 8) 
+        .filter("idx <=", 8)
         .list();*/
-
-    // Persist words
-    List<Word> words = new ArrayList<Word>();
-    for (String word: wordHistogram.keySet()) {
-      Collection<ContentItem> value = wordHistogram.get(word);
-      Word wordObj = Word.create(word, value);
-      words.add(wordObj);
-    }
-
-    // Sort words by frequency and assign idx
-    Collections.sort(words, Word.createFreqComparator());
-    Collections.reverse(words);
-    for (int i = 0; i < words.size(); i++)
-      words.get(i).setSortedIdx(i);
-
-    ofy().save().entities(words).now();
-
-    // Persist page
-    ContentPage page = new ContentPage("Korra");
-    page.setItems(contentItems);  // TODO: Подключить в именованном конструкторе
-    page.setWords(words);
-    ofy().save().entity(page).now();
+    Integer idxPosition = 5;
+    Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
+    List<ContentItem> coupled = ofy().load().type(ContentItem.class)
+      .filterKey("in", elem.getItems())
+      .limit(4)
+      .list();
 
     // TODO: Delete full page
   }
