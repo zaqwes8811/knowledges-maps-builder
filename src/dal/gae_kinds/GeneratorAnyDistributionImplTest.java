@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class GeneratorAnyDistributionImplTest {
   @Test
-  public void testCreate() throws  RandomGeneratorException {
+  public void testCreate() throws GeneratorDistributionExc {
     ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
 
     GeneratorAnyDistributionImpl generator = GeneratorAnyDistributionImpl.create(distribution);
