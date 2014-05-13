@@ -25,7 +25,7 @@ public class GeneratorAnyDistributionImpl {
   Long id;
   private Integer COUNT_POINTS_;
   private Integer MAX_VALUE_;
-  private ImmutableList<ImmutableList<Integer>> CODE_BOOK;
+  private ImmutableList<ImmutableList<Integer>> CODE_BOOK;  // TODO: Это сохранится в gae storage?
 
   private GeneratorAnyDistributionImpl() {
 
