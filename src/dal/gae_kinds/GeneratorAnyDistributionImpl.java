@@ -1,7 +1,9 @@
-package business.math;
+package dal.gae_kinds;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
@@ -17,10 +19,17 @@ import java.util.Random;
 //
 // TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
+@Entity
 public class GeneratorAnyDistributionImpl {
-  private final Integer COUNT_POINTS_;
-  private final Integer MAX_VALUE_;
-  private final ImmutableList<ImmutableList<Integer>> CODE_BOOK;
+  @Id
+  Long id;
+  private Integer COUNT_POINTS_;
+  private Integer MAX_VALUE_;
+  private ImmutableList<ImmutableList<Integer>> CODE_BOOK;
+
+  private GeneratorAnyDistributionImpl() {
+
+  }
 
   // Любой список с числами
   // @throws: RandomGeneratorException

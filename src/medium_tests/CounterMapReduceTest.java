@@ -1,6 +1,6 @@
 package medium_tests;
 
-import business.math.DistributionGenBuilder;
+import dal.gae_kinds.DistributionGenBuilder;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
