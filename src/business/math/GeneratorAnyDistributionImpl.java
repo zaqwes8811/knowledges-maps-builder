@@ -2,7 +2,6 @@ package business.math;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import net.jcip.annotations.Immutable;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
@@ -18,7 +17,6 @@ import java.util.Random;
 //
 // TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
-@Immutable
 public class GeneratorAnyDistributionImpl {
   private final Integer COUNT_POINTS_;
   private final Integer MAX_VALUE_;
@@ -64,10 +62,10 @@ public class GeneratorAnyDistributionImpl {
   }
 
   private GeneratorAnyDistributionImpl(ArrayList<Integer> distribution) {
-    Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
-    List<Integer> Fx = resultMakeFx.getValue0();
-    COUNT_POINTS_ = resultMakeFx.getValue1();
-    MAX_VALUE_ = resultMakeFx.getValue2();
+    Triplet<List<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
+    List<Integer> Fx = tupleFx.getValue0();
+    COUNT_POINTS_ = tupleFx.getValue1();
+    MAX_VALUE_ = tupleFx.getValue2();
     CODE_BOOK = ImmutableList.copyOf(makeRanges(Fx));
   }
 
