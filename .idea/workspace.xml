@@ -7,55 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/ErrorContainer.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/ErrorContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/ExtracitorResourcePlan.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/ExtracitorResourcePlan.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/ExtractorTextFromResource.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/ExtractorTextFromResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/GraphToText.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/GraphToText.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/ResourceCapturerAndToTextConvertor.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/ResourceCapturerAndToTextConvertor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/TextToText.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/TextToText.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/abstractions/ToTextError.java" afterPath="$PROJECT_DIR$/src/hided/abstractions/ToTextError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/BECCache.java" afterPath="$PROJECT_DIR$/src/hided/controllers/BECCache.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/caches/GCashesLearn.java" afterPath="$PROJECT_DIR$/src/hided/controllers/caches/GCashesLearn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/BuilderControllers.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/BuilderControllers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllers.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ContainerNodeControllers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ContainerNodeControllersTest.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ContainerNodeControllersTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/GetterOneWordData.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/GetterOneWordData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/Getters.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/Getters.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetter.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ListGetter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterFake.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ListGetterFake.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ListGetterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/AppConfigurator.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/AppConfigurator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/AppConstants.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/AppConstants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/CrosscuttingsException.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/CrosscuttingsException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/ThroughLevelBoundaryError.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/ThroughLevelBoundaryError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/configurator/ConfigurationFileIsCorrupted.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/configurator/ConfigurationFileIsCorrupted.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfigurator.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/configurator/GlobalConfigurator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/configurator/GlobalConfiguratorTest.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/configurator/GlobalConfiguratorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundConfigurationFile.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/configurator/NoFoundConfigurationFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/crosscuttings/configurator/NoFoundRecordInConfiguration.java" afterPath="$PROJECT_DIR$/src/hided/crosscuttings/configurator/NoFoundRecordInConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/math/DistributionGenBuilder.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" afterPath="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java" afterPath="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" afterPath="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableBaseCoursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableBaseCoursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableIdxGetters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormer.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/JobsFormer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/MapReduceApp.java" afterPath="$PROJECT_DIR$/src/medium_tests/MapReduceApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/hided/spiders_processors/MinimalSpiderProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/hided/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargets.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/hided/ProcessorTargetsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargetsTest.java" afterPath="$PROJECT_DIR$/src/hided/jobs_processors/ProcessorTargetsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/SentencesApp.java" afterPath="$PROJECT_DIR$/src/medium_tests/SentencesApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" afterPath="$PROJECT_DIR$/src/views/web/ServletGetterOnWordData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/hided/spiders_extractors/SpiderExtractorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/adapters_3rdparty/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/business/adapters_3rdparty/TikaWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" afterPath="$PROJECT_DIR$/src/views/web/WebRelayApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/WordsProcessorTest.java" afterPath="$PROJECT_DIR$/src/medium_tests/WordsProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/aj_index.htm" afterPath="$PROJECT_DIR$/war/aj_index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jython-version/platforms-and-companents/web2py_apps/progress.log" afterPath="$PROJECT_DIR$/jython-version/platforms-and-companents/web2py_apps/progress.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/hided/controllers/web_wrapper/ListGetterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/User.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
@@ -120,11 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CounterMapReduceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4555256" vertical-offset="1766" max-vertical-offset="2520">
-              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1279" max-vertical-offset="1980">
+              <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,17 +92,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentPageKind.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java">
+      <file leaf-file-name="OfyService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="975">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentPage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6451613" vertical-offset="795" max-vertical-offset="1755">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#2835#2836#0" expanded="true" />
+                <element signature="e#2857#2858#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistributionGenBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/math/DistributionGenBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/business/mapreduce/OldReduce.java" />
-        <option value="$PROJECT_DIR$/src/business/mapreduce/OldReducer.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_api/User.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/User.java" />
         <option value="$PROJECT_DIR$/sandbox/src/langs/object_methods/TODOEqualOverride.java" />
@@ -202,20 +178,22 @@
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java" />
         <option value="$PROJECT_DIR$/sandbox/src/langs/object_methods/TODOObjectMethods.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordComparatorTest.java" />
-        <option value="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordFreqComparatorTest.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/scheme.txt" />
-        <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
-        <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" />
         <option value="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java" />
         <option value="$PROJECT_DIR$/src/dal/accessors_text_file_storage/IdxNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentItem.java" />
-        <option value="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java" />
+        <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" />
+        <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImpl.java" />
+        <option value="$PROJECT_DIR$/src/business/math/DistributionGenBuilder.java" />
+        <option value="$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java" />
+        <option value="$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java" />
+        <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
       </list>
     </option>
   </component>
@@ -311,6 +289,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gae_kinds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="sandbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -330,28 +388,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +631,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="business.math" />
-      <option name="MAIN_CLASS_NAME" value="business.math.GeneratorAnyDistributionTest" />
+      <option name="MAIN_CLASS_NAME" value="business.math.GeneratorAnyDistributionImplTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
@@ -676,7 +712,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27818447" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35073408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34910277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -710,13 +746,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/medium_tests/SentencesApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/old/OldReducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="1425">
@@ -970,13 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49253732" vertical-offset="0" max-vertical-offset="335">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/WordFreqComparatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53731346" vertical-offset="0" max-vertical-offset="390">
@@ -1046,7 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
@@ -1058,14 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2209" max-vertical-offset="3420">
           <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16528925" vertical-offset="135" max-vertical-offset="1425">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1083,25 +1097,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPageKind.java">
+    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="975">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.46075085" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/medium_tests/CounterMapReduceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4555256" vertical-offset="1766" max-vertical-offset="2520">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1279" max-vertical-offset="1980">
+          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/OfyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/math/DistributionGenBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6451613" vertical-offset="795" max-vertical-offset="1755">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="e#2835#2836#0" expanded="true" />
+            <element signature="e#2857#2858#0" expanded="true" />
           </folding>
         </state>
       </provider>
