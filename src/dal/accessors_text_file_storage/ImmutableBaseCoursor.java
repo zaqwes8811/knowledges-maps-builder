@@ -12,7 +12,7 @@ package dal.accessors_text_file_storage;
 
 import com.google.common.base.Joiner;
 import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 
 import java.io.File;
 import java.util.ArrayList;

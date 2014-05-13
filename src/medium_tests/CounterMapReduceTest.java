@@ -138,7 +138,7 @@ public class CounterMapReduceTest {
     GeneratorAnyDistribution gen = GeneratorAnyDistribution.create(distribution);
 
     // Last - Persist page
-    ContentPageKind page = ContentPageKind.create("Korra", contentItems, words);
+    ContentPageKind page = ContentPageKind.createFromComponents("Korra", contentItems, words);
 
     ofy().save().entity(page).now();
 

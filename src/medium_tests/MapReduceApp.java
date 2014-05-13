@@ -12,7 +12,7 @@ import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
-import crosscuttings.CrosscuttingsException;
+import hided.crosscuttings.CrosscuttingsException;
 //import dal.accessors_text_file_storage.IdxAccessor;
 import hided.spiders_extractors.ImmutableBECParser;
 

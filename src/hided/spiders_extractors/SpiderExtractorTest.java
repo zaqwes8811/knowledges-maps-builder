@@ -4,8 +4,8 @@ package hided.spiders_extractors;//package com.github.zaqwes8811.text_processor.
 import business.adapters_3rdparty.TikaWrapper;
 import common.InnerReuse;
 import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
-import crosscuttings.ThroughLevelBoundaryError;
+import hided.crosscuttings.AppConstants;
+import hided.crosscuttings.ThroughLevelBoundaryError;
 import org.junit.Test;
 
 import java.util.List;
