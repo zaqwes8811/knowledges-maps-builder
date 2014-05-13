@@ -1,8 +1,6 @@
 package medium_tests;
 
-import business.mapreduce.CountReducer;
-import business.mapreduce.CounterMapper;
-import business.math.GeneratorAnyDistribution;
+import business.math.DistributionGenBuilder;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -11,13 +9,11 @@ import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestC
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Multimap;
 import com.google.common.io.Closer;
 import common.Util;
 import dal.gae_kinds.ContentItem;
-import dal.gae_kinds.ContentPageKind;
+import dal.gae_kinds.ContentPage;
 import dal.gae_kinds.Word;
 import org.apache.tika.parser.Parser;
 import org.junit.After;
@@ -28,7 +24,8 @@ import org.xml.sax.ContentHandler;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
@@ -101,45 +98,12 @@ public class CounterMapReduceTest {
     // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
     ArrayList<ContentItem> contentItems = getItems(text);
 
-    /// ClassEdge
-    Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
-    CountReducer reducer = new CountReducer(wordHistogram);
-    CounterMapper mapper = new CounterMapper(reducer);
-
-    // Split
-    mapper.map(contentItems);  // TODO: implicit, but be so
-
-    // WARNING: Порядок важен!
-    // Persist content items
-    ofy().save().entities(contentItems).now();
-
-    // Persist words
-    List<Word> words = new ArrayList<Word>();
-    for (String word: wordHistogram.keySet()) {
-      Collection<ContentItem> value = wordHistogram.get(word);
-      Word wordObj = Word.create(word, value);
-      words.add(wordObj);
-    }
-
-    // Sort words by frequency and assign idx
-    Collections.sort(words, Word.createFreqComparator());
-    Collections.reverse(words);
-    ArrayList<Integer> distribution = new ArrayList<Integer>();
-    for (int i = 0; i < words.size(); i++) {
-      words.get(i).setSortedIdx(i);
-
-      // нужны частоты для распределения
-      distribution.add(words.get(i).getFrequency());
-    }
-
-    ofy().save().entities(words).now();
-
     // Заряжаем генератор
-    GeneratorAnyDistribution gen = GeneratorAnyDistribution.create(distribution);
+    //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
+    DistributionGenBuilder builder = new DistributionGenBuilder();
 
     // Last - Persist page
-    ContentPageKind page = ContentPageKind.createFromComponents("Korra", contentItems, words);
-
+    ContentPage page = ContentPage.create("Korra", contentItems, builder);
     ofy().save().entity(page).now();
 
     /// Queries
@@ -152,7 +116,7 @@ public class CounterMapReduceTest {
     // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
-    Integer idxPosition = gen.getPosition();
+    Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
     List<ContentItem> coupled = ofy().load().type(ContentItem.class)
