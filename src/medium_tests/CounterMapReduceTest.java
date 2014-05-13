@@ -1,6 +1,5 @@
 package medium_tests;
 
-import dal.gae_kinds.DistributionGenBuilder;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -100,10 +99,9 @@ public class CounterMapReduceTest {
 
     // Заряжаем генератор
     //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
-    DistributionGenBuilder builder = new DistributionGenBuilder();
 
     // Last - Persist page
-    ContentPage page = ContentPage.create("Korra", contentItems, builder);
+    ContentPage page = ContentPage.create("Korra", contentItems);
     ofy().save().entity(page).now();
 
     /// Queries

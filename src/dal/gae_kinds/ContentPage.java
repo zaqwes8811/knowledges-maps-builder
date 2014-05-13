@@ -28,16 +28,14 @@ public class ContentPage {
   @Index String name;
 
   // TODO: troubles. Может добавить метод выкалывания точек?
-  DistributionGenBuilder genBuilder;  // Распределение нужно менять.
   GeneratorAnyDistributionImpl gen;
 
   private ContentPage() {}
 
   private static ContentPage createFromComponents(String name,
                                                   List<ContentItem> list,
-                                                  List<Word> words,
-                                                  DistributionGenBuilder builder) {
-    ContentPage page = new ContentPage(name, builder);
+                                                  List<Word> words) {
+    ContentPage page = new ContentPage(name);
     page.setWords(words);
     page.setItems(list);
 
@@ -45,8 +43,7 @@ public class ContentPage {
   }
 
   public static ContentPage create(String name,
-                                   List<ContentItem> contentItems,
-                                   DistributionGenBuilder builder) {
+                                   List<ContentItem> contentItems) {
 
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
@@ -86,7 +83,7 @@ public class ContentPage {
     // Last - Persist page
 
     //ofy().save().entity(page).now();  // Persist externally
-    return ContentPage.createFromComponents(name, contentItems, words, builder);
+    return ContentPage.createFromComponents(name, contentItems, words);
   }
 
   private boolean isEmpty() {
@@ -94,7 +91,7 @@ public class ContentPage {
   }
 
 
-  private ContentPage(String name, DistributionGenBuilder builder) {
+  private ContentPage(String name) {
     this.name = name;
     //genBuilder = builder;
   }
