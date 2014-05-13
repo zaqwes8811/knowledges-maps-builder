@@ -23,19 +23,17 @@ import java.util.Random;
 public class GeneratorAnyDistributionImpl {
   @Id
   Long id;
-  private Integer COUNT_POINTS_;
-  private Integer MAX_VALUE_;
-  private ImmutableList<ImmutableList<Integer>> CODE_BOOK;  // TODO: Это сохранится в gae storage?
+  private Integer countPoints;
+  private Integer maxValue;
+  private ImmutableList<ImmutableList<Integer>> codeBook;  // TODO: Это сохранится в gae storage?
 
-  private GeneratorAnyDistributionImpl() {
-
-  }
+  private GeneratorAnyDistributionImpl() { }
 
   // Любой список с числами
-  // @throws: RandomGeneratorException
+  // @throws: GeneratorDistributionExc
   public static GeneratorAnyDistributionImpl create(ArrayList<Integer> distribution) {
     if (distribution.isEmpty())
-      throw new RandomGeneratorException("In list must be no empty.");
+      throw new GeneratorDistributionExc("In list must be no empty.");
     return new GeneratorAnyDistributionImpl(distribution);
   }
 
@@ -44,8 +42,8 @@ public class GeneratorAnyDistributionImpl {
     // На модели она показала наилучшую масштабирумость и скорость работы.
     Integer INTERVAL_POS = 1;
     Integer IDX_POS = 2;
-    Float value = new Random().nextFloat()* MAX_VALUE_;
-    ImmutableList<Integer> result =  split(CODE_BOOK, COUNT_POINTS_, value).getValue1().get();
+    Float value = new Random().nextFloat()* maxValue;
+    ImmutableList<Integer> result =  split(codeBook, countPoints, value).getValue1().get();
     return result.get(IDX_POS);
   }
 
@@ -64,7 +62,7 @@ public class GeneratorAnyDistributionImpl {
   private List<ImmutableList<Integer>> makeRanges(List<Integer> Fx) {
     List<ImmutableList<Integer>> ranges = new ArrayList<ImmutableList<Integer>>();
     ranges.add(ImmutableList.of(0, Fx.get(0), 0));
-    for (Integer i = 0; i < COUNT_POINTS_ -1; i++) {
+    for (Integer i = 0; i < countPoints -1; i++) {
       ranges.add(ImmutableList.of(Fx.get(i), Fx.get(i+1), i+1));
     }
     return ranges;
@@ -73,9 +71,9 @@ public class GeneratorAnyDistributionImpl {
   private GeneratorAnyDistributionImpl(ArrayList<Integer> distribution) {
     Triplet<List<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
     List<Integer> Fx = tupleFx.getValue0();
-    COUNT_POINTS_ = tupleFx.getValue1();
-    MAX_VALUE_ = tupleFx.getValue2();
-    CODE_BOOK = ImmutableList.copyOf(makeRanges(Fx));
+    countPoints = tupleFx.getValue1();
+    maxValue = tupleFx.getValue2();
+    codeBook = ImmutableList.copyOf(makeRanges(Fx));
   }
 
   private Pair<Boolean, Optional<ImmutableList<Integer>>> split(
