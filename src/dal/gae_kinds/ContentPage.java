@@ -25,26 +25,21 @@ public class ContentPage {
   @Id
   Long id;
 
-  @Index String name;
+  @Index
+  String name;
+  @Load
+  List<Key<Word>> words = new ArrayList<Key<Word>>();
+  @Load
+  List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
   // TODO: troubles. Может добавить метод выкалывания точек?
-  GeneratorAnyDistributionImpl gen;
+  // TODO: Может лучше сделать ссылкой-ключом?
+  GeneratorAnyDistributionImpl gen;  // TODO: Как быть с ним? Они логическое целое.
 
-  private ContentPage() {}
+  /// Methods
+  private ContentPage() { }
 
-  private static ContentPage createFromComponents(String name,
-                                                  List<ContentItem> list,
-                                                  List<Word> words) {
-    ContentPage page = new ContentPage(name);
-    page.setWords(words);
-    page.setItems(list);
-
-    return page;
-  }
-
-  public static ContentPage create(String name,
-                                   List<ContentItem> contentItems) {
-
+  public static ContentPage create(String name, List<ContentItem> contentItems) {
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
     CounterMapper mapper = new CounterMapper(reducer);
@@ -76,14 +71,7 @@ public class ContentPage {
     }
 
     ofy().save().entities(words).now();
-
-    // Заряжаем генератор
-    //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
-
-    // Last - Persist page
-
-    //ofy().save().entity(page).now();  // Persist externally
-    return ContentPage.createFromComponents(name, contentItems, words);
+    return new ContentPage(name, contentItems, words);
   }
 
   private boolean isEmpty() {
@@ -91,9 +79,10 @@ public class ContentPage {
   }
 
 
-  private ContentPage(String name) {
+  private ContentPage(String name, List<ContentItem> list, List<Word> words) {
     this.name = name;
-    //genBuilder = builder;
+    this.setWords(words);
+    this.setItems(list);
   }
 
   // TODO: Удяляет на что ссылается из хранилища.
@@ -106,21 +95,15 @@ public class ContentPage {
 
   }
 
-  // Content items
-  @Load
-  List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
-
   private void setItems(List<ContentItem> list) {
     for (ContentItem item: list) {
       items.add(Key.create(item));
     }
   }
 
-  public List<Key<ContentItem>> getItems() { return items; }
-
-  // Words
-  @Load
-  List<Key<Word>> words = new ArrayList<Key<Word>>();
+  public List<Key<ContentItem>> getItems() {
+    return items;
+  }
 
   private void setWords(List<Word> words) {
     for (Word word: words) {
