@@ -1,7 +1,7 @@
 package hided.jobs_processors;
 
 import org.junit.Test;
-import crosscuttings.ThroughLevelBoundaryError;
+import hided.crosscuttings.ThroughLevelBoundaryError;
 
 import java.util.List;
 

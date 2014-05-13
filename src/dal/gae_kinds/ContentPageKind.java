@@ -21,16 +21,25 @@ public class ContentPageKind {
 
   private ContentPageKind() {}
 
-  public static ContentPageKind create(String name, List<ContentItem> list, List<Word> words) {
+  public static ContentPageKind createFromComponents(String name, List<ContentItem> list, List<Word> words) {
     ContentPageKind page = new ContentPageKind(name);
     page.setWords(words);
     page.setItems(list);
     return page;
   }
 
+  public static ContentPageKind create(String name, List<ContentItem> list) {
+    return null;
+  }
+
 
   public ContentPageKind(String name) {
     this.name = name;
+  }
+
+  // TODO:
+  public void empty() {
+
   }
 
   // Content items
