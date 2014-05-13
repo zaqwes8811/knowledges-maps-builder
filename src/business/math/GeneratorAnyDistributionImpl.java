@@ -19,17 +19,17 @@ import java.util.Random;
 // TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
 @Immutable
-public class GeneratorAnyDistribution {
+public class GeneratorAnyDistributionImpl {
   private final Integer COUNT_POINTS_;
   private final Integer MAX_VALUE_;
   private final ImmutableList<ImmutableList<Integer>> CODE_BOOK;
 
   // Любой список с числами
   // @throws: RandomGeneratorException
-  public static GeneratorAnyDistribution create(ArrayList<Integer> distribution) {
+  public static GeneratorAnyDistributionImpl create(ArrayList<Integer> distribution) {
     if (distribution.isEmpty())
       throw new RandomGeneratorException("In list must be no empty.");
-    return new GeneratorAnyDistribution(distribution);
+    return new GeneratorAnyDistributionImpl(distribution);
   }
 
   public Integer getPosition() {
@@ -63,7 +63,7 @@ public class GeneratorAnyDistribution {
     return ranges;
   }
 
-  private GeneratorAnyDistribution(ArrayList<Integer> distribution) {
+  private GeneratorAnyDistributionImpl(ArrayList<Integer> distribution) {
     Triplet<List<Integer>, Integer, Integer> resultMakeFx = makeFx(distribution);
     List<Integer> Fx = resultMakeFx.getValue0();
     COUNT_POINTS_ = resultMakeFx.getValue1();
