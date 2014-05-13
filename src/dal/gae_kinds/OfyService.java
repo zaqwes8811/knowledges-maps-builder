@@ -9,7 +9,8 @@ public class OfyService {
     factory().register(ContentItem.class);
     factory().register(ContentPage.class);
     factory().register(Word.class);
-    //factory().register(DistributionGenBuilder.class);
+    factory().register(DistributionGenBuilder.class);
+    factory().register(GeneratorAnyDistributionImpl.class);
     //...etc
   }
 

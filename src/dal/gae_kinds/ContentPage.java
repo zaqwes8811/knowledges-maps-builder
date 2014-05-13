@@ -2,7 +2,6 @@ package dal.gae_kinds;
 
 import business.mapreduce.CountReducer;
 import business.mapreduce.CounterMapper;
-import business.math.DistributionGenBuilder;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.googlecode.objectify.Key;
@@ -28,9 +27,9 @@ public class ContentPage {
 
   @Index String name;
 
-  // TODO: troubles.
-  //DistributionGenBuilder genBuilder;
-  //GeneratorAnyDistributionImpl gen;
+  // TODO: troubles. Может добавить метод выкалывания точек?
+  DistributionGenBuilder genBuilder;  // Распределение нужно менять.
+  GeneratorAnyDistributionImpl gen;
 
   private ContentPage() {}
 
