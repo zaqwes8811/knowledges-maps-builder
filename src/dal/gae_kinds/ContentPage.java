@@ -45,7 +45,9 @@ public class ContentPage {
     return page;
   }
 
-  public static ContentPage create(String name, List<ContentItem> contentItems, DistributionGenBuilder builder) {
+  public static ContentPage create(String name,
+                                   List<ContentItem> contentItems,
+                                   DistributionGenBuilder builder) {
 
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
@@ -100,6 +102,11 @@ public class ContentPage {
 
   // TODO: Удяляет на что ссылается из хранилища.
   public void empty() {
+
+  }
+
+  // TODO: Возможно нужно довосстановит состояние объекта после чтения из storage.
+  public void reanimatePageAfterLoad() {
 
   }
 
