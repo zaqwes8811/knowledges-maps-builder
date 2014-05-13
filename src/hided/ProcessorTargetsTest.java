@@ -1,7 +1,7 @@
 package hided;
 
 import org.junit.Test;
-import crosscuttings.CrosscuttingsException;
+import hided.crosscuttings.CrosscuttingsException;
 
 import java.util.List;
 

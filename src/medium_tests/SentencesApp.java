@@ -7,7 +7,7 @@ import business.mapreduce.old.SentencesReduce;
 import common.InnerReuse;
 import hided.jobs_processors.JobsFormer;
 import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

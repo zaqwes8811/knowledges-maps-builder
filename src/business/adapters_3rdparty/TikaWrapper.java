@@ -4,7 +4,7 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.InnerReuse;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 import hided.jobs_processors.ProcessorTargets;
 import hided.spiders_extractors.ExtractorException;
 import org.apache.tika.detect.DefaultDetector;

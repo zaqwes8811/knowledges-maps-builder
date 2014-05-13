@@ -6,7 +6,7 @@ import common.Utils;
 import dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import dal.accessors_text_file_storage.ImmutableIdxGetters;
 import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

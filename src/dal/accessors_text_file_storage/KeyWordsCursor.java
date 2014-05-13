@@ -4,7 +4,7 @@ import business.mapreduce.old.SentencesReduce;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import common.Utils;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;

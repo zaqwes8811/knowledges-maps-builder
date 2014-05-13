@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.InnerReuse;
 import common.Utils;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 import dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import hided.jobs_processors.ProcessorTargets;
 

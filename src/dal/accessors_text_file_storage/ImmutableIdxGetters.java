@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.Utils;
 import hided.jobs_processors.ProcessorTargets;
-import crosscuttings.AppConstants;
+import hided.crosscuttings.AppConstants;
 
 import java.util.ArrayList;
 import java.util.HashMap;
