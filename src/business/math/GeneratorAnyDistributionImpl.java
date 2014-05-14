@@ -2,8 +2,6 @@ package business.math;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
@@ -17,17 +15,15 @@ import java.util.Random;
 //
 // На вход подается...
 //
-// TODO: ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
-//
-// TODO: Как быть с полиморфизмом?
-@Entity  // TODO: не хотелось бы сохранять!
 public class GeneratorAnyDistributionImpl {
-  @Id
-  Long id;
-
-  public static class DistributionElement {
+  public static class DistributionElement /*implements Comparable*/ {
     public Integer frequency;
     public Boolean enabled;
+
+    @Override
+    public String toString() {
+      return frequency+" "+enabled;
+    }
   }
 
   private Integer countPoints;

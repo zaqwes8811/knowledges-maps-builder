@@ -1,6 +1,7 @@
 package dal.gae_kinds;
 
 import business.mapreduce.ContentPageBuilder;
+import business.math.GeneratorAnyDistributionImpl;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -88,7 +89,7 @@ public class ContentPageTest {
   }
 
   @Test
-  public void testCreateAndPersis() throws Exception {
+  public void testCreateAndPersist() throws Exception {
     String filename = getTestFileName();
 
     // Phase I
@@ -148,6 +149,12 @@ public class ContentPageTest {
     ofy().save().entity(page).now();
 
     /// Queries
+    ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> distribution =
+      page.getDistribution();
+    assertFalse(distribution.isEmpty());
+
+    // TODO: how do that?
+    //boolean sorted = Ordering.natural().isOrdered(distribution);
   }
 
   @Test
