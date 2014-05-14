@@ -1,7 +1,7 @@
 package dal.gae_kinds;
 
 import business.mapreduce.ContentPageBuilder;
-import business.math.GeneratorAnyDistributionImpl;
+import business.math.GeneratorDistributionsImpl;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -120,9 +120,9 @@ public class ContentPageTest {
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
     //
-    //GeneratorAnyDistributionImpl gen;  // TODO: Как быть с ним? Они логическое целое.
+    //GeneratorDistributionsImpl gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
-    //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
+    //GeneratorDistributionsImpl gen = GeneratorDistributionsImpl.create(distribution);
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
@@ -149,7 +149,7 @@ public class ContentPageTest {
     ofy().save().entity(page).now();
 
     /// Queries
-    ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> distribution =
+    ImmutableList<GeneratorDistributionsImpl.DistributionElement> distribution =
       page.getDistribution();
     assertFalse(distribution.isEmpty());
 
