@@ -74,7 +74,7 @@ public class ContentPageTest {
 
     // Пакуем
     ArrayList<ContentItem> contentItems = new ArrayList<ContentItem>();
-    Long idx = new Long(1);
+    Long idx = (long) 1;
     for (String sentence: sentences) {
       ContentItem item = new ContentItem(sentence);
       item.setIdx(idx);
