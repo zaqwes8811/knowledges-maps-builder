@@ -11,6 +11,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Ordering;
 import com.google.common.io.Closer;
 import common.Util;
 import org.apache.tika.parser.Parser;
@@ -27,6 +28,7 @@ import java.util.List;
 
 import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
@@ -154,7 +156,8 @@ public class ContentPageTest {
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
-    //boolean sorted = Ordering.natural().isOrdered(distribution);
+    boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
+    assertTrue(sorted);
   }
 
   @Test
