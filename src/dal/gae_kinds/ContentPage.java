@@ -51,19 +51,19 @@ public class ContentPage {
       new ArrayList<GeneratorDistributionsImpl.DistributionElement>();
     for (Word word : words) {
       // нужны частоты для распределения
-      GeneratorDistributionsImpl.DistributionElement elem = new GeneratorDistributionsImpl.DistributionElement();
-      elem.enabled = true;  // TODO: нет пока такого поля
-      elem.frequency = word.getFrequency();
+      // TODO: true -> enabled
+      GeneratorDistributionsImpl.DistributionElement elem =
+        new GeneratorDistributionsImpl.DistributionElement(word.getFrequency(), true);
       distribution.add(elem);
     }
 
     return ImmutableList.copyOf(distribution);
   }
 
-  public ContentPage(String name, List<ContentItem> list, List<Word> words) {
+  public ContentPage(String name, List<ContentItem> items, List<Word> words) {
     this.name = name;
     this.setWords(words);
-    this.setItems(list);
+    this.setItems(items);
   }
 
   // TODO: Удяляет на что ссылается из хранилища.
