@@ -47,11 +47,11 @@ public class ContentPage {
     // Формируем результат
     ArrayList<GeneratorDistributionsImpl.DistributionElement> distribution =
       new ArrayList<GeneratorDistributionsImpl.DistributionElement>();
-    for (int i = 0; i < words.size(); i++) {
+    for (Word word : words) {
       // нужны частоты для распределения
       GeneratorDistributionsImpl.DistributionElement elem = new GeneratorDistributionsImpl.DistributionElement();
       elem.enabled = true;  // TODO: нет пока такого поля
-      elem.frequency = words.get(i).getFrequency();
+      elem.frequency = word.getFrequency();
       distribution.add(elem);
     }
 
