@@ -41,7 +41,7 @@ public class ContentPage {
   /// Methods
   private ContentPage() { }
 
-  public static ContentPage create(String name, List<ContentItem> contentItems) {
+  public static ContentPage create(String name, ArrayList<ContentItem> contentItems) {
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogram);
     CounterMapper mapper = new CounterMapper(reducer);
@@ -54,7 +54,7 @@ public class ContentPage {
     ofy().save().entities(contentItems).now();
 
     // Persist words
-    List<Word> words = new ArrayList<Word>();
+    ArrayList<Word> words = new ArrayList<Word>();
     for (String word: wordHistogram.keySet()) {
       Collection<ContentItem> value = wordHistogram.get(word);
       Word wordObj = Word.create(word, value);
