@@ -20,7 +20,7 @@ import java.util.Random;
 // TODO: ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
 // TODO: Как быть с полиморфизмом?
-@Entity
+@Entity  // TODO: не хотелось бы сохранять!
 public class GeneratorAnyDistributionImpl {
   @Id
   Long id;
