@@ -9,6 +9,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static dal.gae_kinds.OfyService.ofy;
@@ -36,10 +37,25 @@ public class ContentPage {
 
   // TODO: возможно нужен кеш. см. Guava cache.
   public ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> getDistribution() {
-    List<ContentItem> coupled = ofy().load().type(ContentItem.class)
-      .filterKey("in", getItems()).list();
+    List<Word> words = ofy().load().type(Word.class)
+      .filterKey("in", this.words).list();
 
-    return null;//ImmutableList.copyOf(new GeneratorAnyDistributionImpl.DistributionElement());
+    // TODO: Отосортировать при выборке если можно
+    Collections.sort(words, Word.createFreqComparator());
+    Collections.reverse(words);
+
+    // Формируем результат
+    ArrayList<GeneratorAnyDistributionImpl.DistributionElement> distribution =
+      new ArrayList<GeneratorAnyDistributionImpl.DistributionElement>();
+    for (int i = 0; i < words.size(); i++) {
+      // нужны частоты для распределения
+      GeneratorAnyDistributionImpl.DistributionElement elem = new GeneratorAnyDistributionImpl.DistributionElement();
+      elem.enabled = true;  // TODO: нет пока такого поля
+      elem.frequency = words.get(i).getFrequency();
+      distribution.add(elem);
+    }
+
+    return ImmutableList.copyOf(distribution);
   }
 
   public ContentPage(String name, List<ContentItem> list, List<Word> words) {
