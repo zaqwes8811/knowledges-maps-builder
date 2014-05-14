@@ -1,5 +1,6 @@
 package dal.gae_kinds;
 
+import business.math.GeneratorAnyDistributionImpl;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
