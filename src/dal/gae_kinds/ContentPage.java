@@ -1,6 +1,6 @@
 package dal.gae_kinds;
 
-import business.math.GeneratorDistributionsImpl;
+import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
@@ -38,7 +38,7 @@ public class ContentPage {
   }
 
   // TODO: возможно нужен кеш. см. Guava cache.
-  public ImmutableList<GeneratorDistributionsImpl.DistributionElement> getDistribution() {
+  public ImmutableList<GeneratorDistributions.DistributionElement> getDistribution() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 
@@ -47,13 +47,13 @@ public class ContentPage {
     Collections.reverse(words);
 
     // Формируем результат
-    ArrayList<GeneratorDistributionsImpl.DistributionElement> distribution =
-      new ArrayList<GeneratorDistributionsImpl.DistributionElement>();
+    ArrayList<GeneratorDistributions.DistributionElement> distribution =
+      new ArrayList<GeneratorDistributions.DistributionElement>();
     for (Word word : words) {
       // нужны частоты для распределения
       // TODO: true -> enabled
-      GeneratorDistributionsImpl.DistributionElement elem =
-        new GeneratorDistributionsImpl.DistributionElement(word.getFrequency(), true);
+      GeneratorDistributions.DistributionElement elem =
+        new GeneratorDistributions.DistributionElement(word.getFrequency(), true);
       distribution.add(elem);
     }
 
@@ -68,6 +68,17 @@ public class ContentPage {
 
   // TODO: Удяляет на что ссылается из хранилища.
   public void empty_NI() { }
+
+  public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
+    // TODO: Проверка границ - это явно ошибка
+
+    // TODO: Похоже нужна non-XG - транзакция.
+    return null;
+  }
+
+  public ImmutableList<GeneratorDistributions.DistributionElement> enableWord(Integer idx) {
+    return null;
+  }
 
   private void setItems(List<ContentItem> list) {
     for (ContentItem item: list) items.add(Key.create(item));
