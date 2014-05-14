@@ -26,11 +26,6 @@ public class ContentPage {
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
-  // TODO: troubles. Может добавить метод выкалывания точек?
-  // TODO: Может лучше сделать ссылкой-ключом?
-  GeneratorAnyDistributionImpl gen;  // TODO: Как быть с ним? Они логическое целое.
-
-  /// Methods
   private ContentPage() { }
 
   private boolean isEmpty() {
