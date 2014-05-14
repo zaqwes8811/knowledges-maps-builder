@@ -17,8 +17,9 @@ import java.util.Random;
 //
 // На вход подается...
 //
-// TODO(zaqwes): ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
+// TODO: ImmutableLists для триплета избыточны, лучше сделать через Tuples - Triplet
 //
+// TODO: Как быть с полиморфизмом?
 @Entity
 public class GeneratorAnyDistributionImpl {
   @Id
@@ -47,8 +48,16 @@ public class GeneratorAnyDistributionImpl {
     return result.get(IDX_POS);
   }
 
-  private Triplet<List<Integer>, Integer, Integer> makeFx(List<Integer> distribution) {
-    List<Integer> Fx = new ArrayList<Integer>();
+  public void reloadGenerator(ArrayList<Integer> distribution) {
+    Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
+    ArrayList<Integer> Fx = tupleFx.getValue0();
+    countPoints = tupleFx.getValue1();
+    maxValue = tupleFx.getValue2();
+    codeBook = ImmutableList.copyOf(makeRanges(Fx));
+  }
+
+  private Triplet<ArrayList<Integer>, Integer, Integer> makeFx(ArrayList<Integer> distribution) {
+    ArrayList<Integer> Fx = new ArrayList<Integer>();
     Integer Fxi = 0;
     Integer count = 0;
     for (final Integer frequency: distribution) {
@@ -59,7 +68,7 @@ public class GeneratorAnyDistributionImpl {
     return Triplet.with(Fx, count, Fxi);
   }
 
-  private List<ImmutableList<Integer>> makeRanges(List<Integer> Fx) {
+  private List<ImmutableList<Integer>> makeRanges(ArrayList<Integer> Fx) {
     List<ImmutableList<Integer>> ranges = new ArrayList<ImmutableList<Integer>>();
     ranges.add(ImmutableList.of(0, Fx.get(0), 0));
     for (Integer i = 0; i < countPoints -1; i++) {
@@ -69,8 +78,10 @@ public class GeneratorAnyDistributionImpl {
   }
 
   private GeneratorAnyDistributionImpl(ArrayList<Integer> distribution) {
-    Triplet<List<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
-    List<Integer> Fx = tupleFx.getValue0();
+    // TODO: Сделать или нет? Можно ли вызывать виртуальные функции.
+    //reloadGenerator(distribution);
+    Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
+    ArrayList<Integer> Fx = tupleFx.getValue0();
     countPoints = tupleFx.getValue1();
     maxValue = tupleFx.getValue2();
     codeBook = ImmutableList.copyOf(makeRanges(Fx));
