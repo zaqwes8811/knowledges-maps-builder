@@ -15,7 +15,7 @@ import java.util.Random;
 //
 // На вход подается...
 //
-public class GeneratorAnyDistributionImpl {
+public class GeneratorDistributionsImpl {
   public static class DistributionElement /*implements Comparable*/ {
     public Integer frequency;
     public Boolean enabled;
@@ -30,14 +30,12 @@ public class GeneratorAnyDistributionImpl {
   private Integer maxValue;
   private ImmutableList<ImmutableList<Integer>> codeBook;  // TODO: Это сохранится в gae storage?
 
-  private GeneratorAnyDistributionImpl() { }
-
   // Любой список с числами
   // @throws: GeneratorDistributionExc
-  public static GeneratorAnyDistributionImpl create(ArrayList<Integer> distribution) {
+  public static GeneratorDistributionsImpl create(ArrayList<Integer> distribution) {
     if (distribution.isEmpty())
       throw new GeneratorDistributionExc("In list must be no empty.");
-    return new GeneratorAnyDistributionImpl(distribution);
+    return new GeneratorDistributionsImpl(distribution);
   }
 
   public Integer getPosition() {
@@ -79,7 +77,7 @@ public class GeneratorAnyDistributionImpl {
     return ranges;
   }
 
-  private GeneratorAnyDistributionImpl(ArrayList<Integer> distribution) {
+  private GeneratorDistributionsImpl(ArrayList<Integer> distribution) {
     // TODO: Сделать или нет? Можно ли вызывать виртуальные функции.
     //reloadGenerator(distribution);
     Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
