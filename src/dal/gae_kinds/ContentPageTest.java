@@ -113,6 +113,13 @@ public class ContentPageTest {
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
     //
+
+    // TODO: troubles. Может добавить метод выкалывания точек?
+    // TODO: Может лучше сделать ссылкой-ключом?
+    // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
+    //   можно использовать кэши, но как быть с обновлением данных?
+    //
+    //GeneratorAnyDistributionImpl gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
     //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
     Integer idxPosition = 4;//gen.getPosition();
