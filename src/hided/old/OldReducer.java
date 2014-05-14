@@ -1,4 +1,4 @@
-package business.mapreduce.old;
+package hided.old;
 
 
 import com.google.common.collect.Multiset;

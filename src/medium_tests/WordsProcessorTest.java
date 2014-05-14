@@ -1,7 +1,7 @@
 package medium_tests;
 
-import business.mapreduce.old.NewMapper;
-import business.mapreduce.old.NewReducer;
+import hided.old.NewMapper;
+import hided.old.NewReducer;
 import com.google.common.collect.Multimap;
 import hided.jobs_processors.JobsFormer;
 import hided.jobs_processors.ProcessorTargets;

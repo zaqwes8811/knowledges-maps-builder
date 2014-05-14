@@ -1,6 +1,6 @@
 package dal.accessors_text_file_storage;
 
-import business.mapreduce.old.SentencesReduce;
+import hided.old.SentencesReduce;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import common.Utils;

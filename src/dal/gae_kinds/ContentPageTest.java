@@ -1,5 +1,6 @@
 package dal.gae_kinds;
 
+import business.mapreduce.ContentPageBuilder;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -81,11 +82,14 @@ public class ContentPageTest {
     return contentItems;
   }
 
+  private String getTestFileName() {
+    return "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
+      "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+  }
+
   @Test
   public void testCreateAndPersis() throws Exception {
-    // TODO: Extract class
-    String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
-        "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+    String filename = getTestFileName();
 
     // Phase I
     String text = getTestText(filename);
@@ -94,11 +98,8 @@ public class ContentPageTest {
     // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
     ArrayList<ContentItem> contentItems = getItems(text);
 
-    // Заряжаем генератор
-    //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
-
     // Last - Persist page
-    ContentPage page = ContentPage.create("Korra", contentItems);
+    ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
     ofy().save().entity(page).now();
 
     /// Queries
@@ -111,6 +112,9 @@ public class ContentPageTest {
     // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
+    //
+    // Заряжаем генератор
+    //GeneratorAnyDistributionImpl gen = GeneratorAnyDistributionImpl.create(distribution);
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().get();
@@ -119,12 +123,15 @@ public class ContentPageTest {
       //.filter("idx <=", 8)
       .limit(countFirst)
       .list();
-
-    // TODO: Delete full page
   }
 
   @Test
   public void testGetDistribution() {
 
+  }
+
+  @Test
+  public void testDeletePage() {
+    // TODO: Delete full page
   }
 }
