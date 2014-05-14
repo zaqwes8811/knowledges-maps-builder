@@ -31,7 +31,7 @@ public class ContentPage {
 
   private ContentPage() { }
 
-  private boolean isEmpty() {
+  private boolean isEmpty_NI() {
     return false;
   }
 
@@ -65,14 +65,10 @@ public class ContentPage {
   }
 
   // TODO: Удяляет на что ссылается из хранилища.
-  public void empty() {
-
-  }
+  public void empty_NI() { }
 
   private void setItems(List<ContentItem> list) {
-    for (ContentItem item: list) {
-      items.add(Key.create(item));
-    }
+    for (ContentItem item: list) items.add(Key.create(item));
   }
 
   public List<Key<ContentItem>> getItems() {
@@ -80,8 +76,6 @@ public class ContentPage {
   }
 
   private void setWords(List<Word> words) {
-    for (Word word: words) {
-      this.words.add(Key.create(word));
-    }
+    for (Word word: words) this.words.add(Key.create(word));
   }
 }
