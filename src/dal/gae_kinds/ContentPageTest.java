@@ -1,4 +1,4 @@
-package medium_tests;
+package dal.gae_kinds;
 
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
@@ -11,9 +11,6 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
 import common.Util;
-import dal.gae_kinds.ContentItem;
-import dal.gae_kinds.ContentPage;
-import dal.gae_kinds.Word;
 import org.apache.tika.parser.Parser;
 import org.junit.After;
 import org.junit.Before;
@@ -29,7 +26,7 @@ import java.util.List;
 import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 
-public class CounterMapReduceTest {
+public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
@@ -72,20 +69,20 @@ public class CounterMapReduceTest {
     assertFalse(sentences.isEmpty());
 
     // Пакуем
-    ArrayList<ContentItem> contentItems1 = new ArrayList<ContentItem>();
+    ArrayList<ContentItem> contentItems = new ArrayList<ContentItem>();
     Long idx = new Long(1);
     for (String sentence: sentences) {
       ContentItem item = new ContentItem(sentence);
       item.setIdx(idx);
-      contentItems1.add(item);
+      contentItems.add(item);
       idx++;
     }
 
-    return contentItems1;
+    return contentItems;
   }
 
   @Test
-  public void testRun() throws Exception {
+  public void testCreateAndPersis() throws Exception {
     // TODO: Extract class
     String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
         "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
@@ -124,5 +121,10 @@ public class CounterMapReduceTest {
       .list();
 
     // TODO: Delete full page
+  }
+
+  @Test
+  public void testGetDistribution() {
+
   }
 }
