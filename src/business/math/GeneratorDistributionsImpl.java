@@ -1,5 +1,6 @@
 package business.math;
 
+import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import org.javatuples.Pair;
@@ -13,17 +14,8 @@ import java.util.Random;
 //   Класс способен генерировать последовательности любого дискретного распределения
 //   Возвращает индекс массива исходного распределения.
 //
-public class GeneratorDistributionsImpl {
-  public static class DistributionElement implements Comparable<DistributionElement> {
-    public Integer frequency;
-    public Boolean enabled;
-
-    @Override
-    public int compareTo(DistributionElement o2) {
-      return frequency.compareTo(o2.frequency);
-    }
-  }
-
+@NotThreadSafe
+public class GeneratorDistributionsImpl implements GeneratorDistributions {
   private Integer countPoints;
   private Integer maxValue;
   private ImmutableList<ImmutableList<Integer>> codeBook;  // TODO: Это сохранится в gae storage?
@@ -36,6 +28,7 @@ public class GeneratorDistributionsImpl {
     return new GeneratorDistributionsImpl(distribution);
   }
 
+  @Override
   public Integer getPosition() {
     // Используется рекурсивная реализация на базе бинарного поиска.
     // На модели она показала наилучшую масштабирумость и скорость работы.
@@ -46,6 +39,7 @@ public class GeneratorDistributionsImpl {
     return result.get(IDX_POS);
   }
 
+  @Override
   public void reloadGenerator(ArrayList<Integer> distribution) {
     Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
     ArrayList<Integer> Fx = tupleFx.getValue0();
