@@ -4,6 +4,7 @@ import business.mapreduce.CountReducer;
 import business.mapreduce.CounterMapper;
 import business.math.GeneratorAnyDistributionImpl;
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -79,6 +80,10 @@ public class ContentPage {
     return false;
   }
 
+  // TODO: возможно нужен кеш. см. Guava cache.
+  public ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> getDistribution() {
+    return null;//ImmutableList.copyOf(new GeneratorAnyDistributionImpl.DistributionElement());
+  }
 
   private ContentPage(String name, List<ContentItem> list, List<Word> words) {
     this.name = name;
