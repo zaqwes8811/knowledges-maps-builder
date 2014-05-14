@@ -4,10 +4,7 @@ import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Index;
-import com.googlecode.objectify.annotation.Load;
+import com.googlecode.objectify.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,15 +18,19 @@ import static dal.gae_kinds.OfyService.ofy;
 @NotThreadSafe
 @Entity
 public class ContentPage {
+  // In storage
   @Id
   Long id;
-
   @Index
   String name;
   @Load
   List<Key<Word>> words = new ArrayList<Key<Word>>();
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
+
+  // Own
+  // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища
+  private @Unindex Integer wordsCache_;  // TODO: Подставить реальную.
 
   private ContentPage() { }
 
@@ -72,7 +73,7 @@ public class ContentPage {
   public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
 
-    // TODO: Похоже нужна non-XG - транзакция.
+    // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
     return null;
   }
 
