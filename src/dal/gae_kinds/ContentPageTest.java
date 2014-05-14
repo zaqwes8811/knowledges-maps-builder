@@ -133,8 +133,21 @@ public class ContentPageTest {
   }
 
   @Test
-  public void testGetDistribution() {
+  public void testGetDistribution() throws IOException {
+    String filename = getTestFileName();
 
+    // Phase I
+    String text = getTestText(filename);
+    assertFalse(text.isEmpty());
+
+    // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
+    ArrayList<ContentItem> contentItems = getItems(text);
+
+    // Last - Persist page
+    ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
+    ofy().save().entity(page).now();
+
+    /// Queries
   }
 
   @Test

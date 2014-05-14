@@ -11,6 +11,8 @@ import com.googlecode.objectify.annotation.Load;
 import java.util.ArrayList;
 import java.util.List;
 
+import static dal.gae_kinds.OfyService.ofy;
+
 /**
  * About: Отражает один элемент данный пользователя, например, один файл субтитров.
  */
@@ -34,6 +36,9 @@ public class ContentPage {
 
   // TODO: возможно нужен кеш. см. Guava cache.
   public ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> getDistribution() {
+    List<ContentItem> coupled = ofy().load().type(ContentItem.class)
+      .filterKey("in", getItems()).list();
+
     return null;//ImmutableList.copyOf(new GeneratorAnyDistributionImpl.DistributionElement());
   }
 
