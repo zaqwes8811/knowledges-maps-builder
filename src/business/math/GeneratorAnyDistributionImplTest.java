@@ -1,4 +1,4 @@
-package dal.gae_kinds;
+package business.math;
 
 import org.junit.Test;
 
