@@ -40,8 +40,21 @@ public class GeneratorDistributionsImpl implements GeneratorDistributions {
   }
 
   @Override
-  public void reloadGenerator(ArrayList<Integer> distribution) {
-    Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(distribution);
+  public void reloadGenerator(ArrayList<DistributionElement> distribution) {
+    // Transpose
+    ArrayList<Integer> transposed = new ArrayList<Integer>();
+    for (DistributionElement elem: distribution)
+      // TODO: Проблема!! Похоже нужно обнулять частоты. Иначе индексы собъются.
+      // TODO: но как быть при выборке. while(not null)? Это может быть долго...
+      // TODO: Стоп - нулевые не должны вообще выпадать!
+      if (elem.enabled)
+        transposed.add(elem.frequency);
+      else {
+        transposed.add(0);
+      }
+
+    // TODO: Now only enabled
+    Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(transposed);
     ArrayList<Integer> Fx = tupleFx.getValue0();
     countPoints = tupleFx.getValue1();
     maxValue = tupleFx.getValue2();
