@@ -13,16 +13,14 @@ import java.util.Random;
 //   Класс способен генерировать последовательности любого дискретного распределения
 //   Возвращает индекс массива исходного распределения.
 //
-// На вход подается...
-//
 public class GeneratorDistributionsImpl {
-  public static class DistributionElement /*implements Comparable*/ {
+  public static class DistributionElement implements Comparable<DistributionElement> {
     public Integer frequency;
     public Boolean enabled;
 
     @Override
-    public String toString() {
-      return frequency+" "+enabled;
+    public int compareTo(DistributionElement o2) {
+      return frequency.compareTo(o2.frequency);
     }
   }
 
@@ -34,7 +32,7 @@ public class GeneratorDistributionsImpl {
   // @throws: GeneratorDistributionExc
   public static GeneratorDistributionsImpl create(ArrayList<Integer> distribution) {
     if (distribution.isEmpty())
-      throw new GeneratorDistributionExc("In list must be no empty.");
+      throw new GeneratorDistributionExc("Input list must be no empty.");
     return new GeneratorDistributionsImpl(distribution);
   }
 
@@ -94,7 +92,7 @@ public class GeneratorDistributionsImpl {
       Optional<ImmutableList<Integer>> none = Optional.absent();
       return Pair.with(false, none);
     }
-    if (n == 1) return Pair.with(contain, Optional.of(ranges.get(0)));
+    if (n == 1) return Pair.with(true, Optional.of(ranges.get(0)));
     else {
       Integer oneSize = n/2;
       Integer twoSize = n-oneSize;
@@ -108,6 +106,7 @@ public class GeneratorDistributionsImpl {
   }
 
   private Boolean isContain(ImmutableList<ImmutableList<Integer>> ranges, Integer n, Float value) {
-      return ranges.get(0).get(0) < value && value <= ranges.get(n-1).get(1);
+      return ranges.get(0).get(0) < value
+        && value <= ranges.get(n-1).get(1);
   }
 }
