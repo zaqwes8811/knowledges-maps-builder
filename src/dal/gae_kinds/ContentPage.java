@@ -1,6 +1,6 @@
 package dal.gae_kinds;
 
-import business.math.GeneratorAnyDistributionImpl;
+import business.math.GeneratorDistributionsImpl;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -36,7 +36,7 @@ public class ContentPage {
   }
 
   // TODO: возможно нужен кеш. см. Guava cache.
-  public ImmutableList<GeneratorAnyDistributionImpl.DistributionElement> getDistribution() {
+  public ImmutableList<GeneratorDistributionsImpl.DistributionElement> getDistribution() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 
@@ -45,11 +45,11 @@ public class ContentPage {
     Collections.reverse(words);
 
     // Формируем результат
-    ArrayList<GeneratorAnyDistributionImpl.DistributionElement> distribution =
-      new ArrayList<GeneratorAnyDistributionImpl.DistributionElement>();
+    ArrayList<GeneratorDistributionsImpl.DistributionElement> distribution =
+      new ArrayList<GeneratorDistributionsImpl.DistributionElement>();
     for (int i = 0; i < words.size(); i++) {
       // нужны частоты для распределения
-      GeneratorAnyDistributionImpl.DistributionElement elem = new GeneratorAnyDistributionImpl.DistributionElement();
+      GeneratorDistributionsImpl.DistributionElement elem = new GeneratorDistributionsImpl.DistributionElement();
       elem.enabled = true;  // TODO: нет пока такого поля
       elem.frequency = words.get(i).getFrequency();
       distribution.add(elem);

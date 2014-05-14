@@ -1,6 +1,6 @@
 package hided.controllers.web_wrapper;
 
-import business.math.GeneratorAnyDistributionImpl;
+import business.math.GeneratorDistributionsImpl;
 import com.google.common.collect.ImmutableList;
 import dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
@@ -10,11 +10,11 @@ import java.util.List;
 @Deprecated
 public class ListGetterImpl implements ListGetter {
   private final ImmutableNodeAccessor ACCESSOR_;
-  private final GeneratorAnyDistributionImpl GENERATOR_;
+  private final GeneratorDistributionsImpl GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
     ArrayList<Integer> distribution = ACCESSOR_.getDistribution();
-    GENERATOR_ = GeneratorAnyDistributionImpl.create(distribution);
+    GENERATOR_ = GeneratorDistributionsImpl.create(distribution);
   }
 
   // Index: нужно для маркеровки
