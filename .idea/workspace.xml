@@ -7,22 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/mapreduce/ContentPageBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/JobsFormer.java" afterPath="$PROJECT_DIR$/src/hided/old/JobsFormer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/NewMapper.java" afterPath="$PROJECT_DIR$/src/hided/old/NewMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/NewReducer.java" afterPath="$PROJECT_DIR$/src/hided/old/NewReducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/OldMapper.java" afterPath="$PROJECT_DIR$/src/hided/old/OldMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/OldReducer.java" afterPath="$PROJECT_DIR$/src/hided/old/OldReducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesMapper.java" afterPath="$PROJECT_DIR$/src/hided/old/SentencesMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/old/SentencesReduce.java" afterPath="$PROJECT_DIR$/src/hided/old/SentencesReduce.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/dal/accessors_text_file_storage/KeyWordsCursor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/MapReduceApp.java" afterPath="$PROJECT_DIR$/src/medium_tests/MapReduceApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/evaluators/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/SentencesApp.java" afterPath="$PROJECT_DIR$/src/medium_tests/SentencesApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/medium_tests/WordsProcessorTest.java" afterPath="$PROJECT_DIR$/src/medium_tests/WordsProcessorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +75,8 @@
       <file leaf-file-name="ContentPageTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1355" max-vertical-offset="2085">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1355" max-vertical-offset="2190">
+              <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,13 +87,13 @@
       <file leaf-file-name="ContentPage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71030045" vertical-offset="314" max-vertical-offset="1020">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.19098713" vertical-offset="479" max-vertical-offset="945">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
               <folding>
-                <element signature="e#982#983#0" expanded="true" />
-                <element signature="e#1004#1005#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#1474#1475#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,8 +187,8 @@
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/GeneratorAnyDistributionImpl.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/CounterMapReduceTest.java" />
-        <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/ContentPageBuilder.java" />
+        <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
       </list>
     </option>
@@ -1160,16 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1355" max-vertical-offset="2085">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/ContentPageBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="915">
@@ -1180,15 +1156,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1355" max-vertical-offset="2190">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71030045" vertical-offset="314" max-vertical-offset="1020">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.19098713" vertical-offset="479" max-vertical-offset="945">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
           <folding>
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1474#1475#0" expanded="true" />
           </folding>
         </state>
       </provider>
