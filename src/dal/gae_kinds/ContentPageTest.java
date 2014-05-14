@@ -1,6 +1,6 @@
 package dal.gae_kinds;
 
-import business.mapreduce.ContentPageBuilder;
+import business.mapreduce.MRContentPageBuilder;
 import business.math.GeneratorDistributionsImpl;
 import business.nlp.ContentItemsTokenizer;
 import business.text_extractors.SpecialSymbols;
@@ -102,7 +102,7 @@ public class ContentPageTest {
     ArrayList<ContentItem> contentItems = getItems(text);
 
     // Last - Persist page
-    ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
+    ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
     ofy().save().entity(page).now();
 
     /// Queries
@@ -147,7 +147,7 @@ public class ContentPageTest {
     ArrayList<ContentItem> contentItems = getItems(text);
 
     // Last - Persist page
-    ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
+    ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
     ofy().save().entity(page).now();
 
     /// Queries
