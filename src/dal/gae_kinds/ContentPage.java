@@ -1,6 +1,7 @@
 package dal.gae_kinds;
 
 import business.math.GeneratorDistributionsImpl;
+import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -17,6 +18,7 @@ import static dal.gae_kinds.OfyService.ofy;
 /**
  * About: Отражает один элемент данный пользователя, например, один файл субтитров.
  */
+@NotThreadSafe
 @Entity
 public class ContentPage {
   @Id
