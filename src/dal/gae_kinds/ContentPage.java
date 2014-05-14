@@ -31,7 +31,8 @@ public class ContentPage {
   // Own
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища
   // TODO: для кеша из Guava - invalidate
-  private @Unindex Integer wordsCache_;  // TODO: Подставить реальную.
+  @Unindex
+  private final Integer wordsCache_ = Integer.valueOf(0);  // TODO: Подставить реальную.
 
   private ContentPage() { }
 
