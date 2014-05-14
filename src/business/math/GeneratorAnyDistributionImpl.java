@@ -24,6 +24,12 @@ import java.util.Random;
 public class GeneratorAnyDistributionImpl {
   @Id
   Long id;
+
+  public static class DistributionElement {
+    public Integer frequency;
+    public Boolean enabled;
+  }
+
   private Integer countPoints;
   private Integer maxValue;
   private ImmutableList<ImmutableList<Integer>> codeBook;  // TODO: Это сохранится в gae storage?
