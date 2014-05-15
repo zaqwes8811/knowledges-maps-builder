@@ -4,16 +4,21 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
+import com.googlecode.objectify.annotation.Load;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by zaqwes on 5/9/14.
  */
+// TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class Word {
-  @Id
-  Long id;
+  /// Persistent
+  @Id Long id;
 
   // TODO: TOTH: может хранится стем или пара-тройка слов.
   @Index
@@ -22,7 +27,16 @@ public class Word {
   // TODO: TOTH: возможно лучше хранить логарифм от нормированной частоты
   @Index
   Integer frequency;  // Сколько раз встретилось слово.
+  @Load
+  Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
 
+  //ArrayList<Ref<ContentItem>> refs;
+
+  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
+  @Index
+  Integer sortedIdx;  // 0-N в порядке возрастания по frequency
+
+  /// Own
   @Override
   public String toString() {
     return "("+word+", "+frequency.toString()+", "+sortedIdx.toString()+")";
@@ -49,10 +63,6 @@ public class Word {
     return word;
   }
 
-  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
-  @Index
-  Integer sortedIdx;  // 0-N в порядке возрастания по frequency
-
   public void setSortedIdx(Integer value) {
     sortedIdx = value;
   }
@@ -67,11 +77,6 @@ public class Word {
   public Set<Key<ContentItem>> getItems() {
     return items;
   }
-
-  Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
-
-  //ArrayList<Ref<ContentItem>> refs;
-
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
   // Идея на этапе mapreduce передавать в качестве ключей объекты слов, и пользоваться
