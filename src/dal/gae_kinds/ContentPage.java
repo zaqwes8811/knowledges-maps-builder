@@ -28,6 +28,13 @@ public class ContentPage {
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
+  // TODO: Читать однажды, а так сохранять в хранилище. Проблема в ширине кеша. Так же он заполнятся поштучно!
+  // TODO: для чтения пойдет, а так не хотелось бы. Хотя на этапе может ширина известна на этапе формирования?
+  // TODO: Как изначально инициализировать. При формировании таблицы!
+  // TODO: Для горячего старта
+  ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
+      //new ArrayList<GeneratorDistributions.DistributionElement>();
+
   // Own
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища
   // TODO: для кеша из Guava - invalidate
