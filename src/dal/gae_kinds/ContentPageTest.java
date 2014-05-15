@@ -28,6 +28,7 @@ import java.util.List;
 
 import static dal.gae_kinds.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class ContentPageTest {
@@ -133,6 +134,9 @@ public class ContentPageTest {
       //.filter("idx <=", 8)
       .limit(countFirst)
       .list();
+
+    ContentPage loadedPage = ofy().load().type(ContentPage.class).filter("name = ", "Korra").first().get();
+    assertNotNull(loadedPage);
   }
 
   @Test
