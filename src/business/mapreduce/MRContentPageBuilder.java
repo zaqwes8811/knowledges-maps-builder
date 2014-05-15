@@ -42,6 +42,7 @@ public class MRContentPageBuilder {
 
     ofy().save().entities(words).now();
 
+    // Слова сортированы
     return new ContentPage(name, contentItems, words);
   }
 }
