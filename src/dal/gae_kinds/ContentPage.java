@@ -1,4 +1,6 @@
 package dal.gae_kinds;
+// Tasks:
+//   Сперва подключить кеш, затем думать о распределении
 
 import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
@@ -87,6 +89,12 @@ public class ContentPage {
 
   // TODO: Удяляет на что ссылается из хранилища.
   public void empty_NI() { }
+
+  // TODO:
+  // Имя persist and save похоже заняты
+  public void persistPage() {
+
+  }
 
   public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
