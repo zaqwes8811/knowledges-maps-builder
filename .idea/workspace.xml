@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,17 +83,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentPage.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ContentPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47058824" vertical-offset="275" max-vertical-offset="1425">
-              <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding>
                 <element signature="e#2147#2191#0" expanded="true" />
                 <element signature="e#3102#3103#0" expanded="true" />
                 <element signature="e#3123#3124#0" expanded="true" />
                 <element signature="e#3174#3175#0" expanded="true" />
                 <element signature="e#3240#3241#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Word.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6617647" vertical-offset="225" max-vertical-offset="1350">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#811#829#0" expanded="true" />
+                <element signature="e#1571#1584#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordFreqComparatorTest.java" />
         <option value="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/scheme.txt" />
-        <option value="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
         <option value="$PROJECT_DIR$/src/controllers/web_wrapper/ListGetterImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/accessors_text_file_storage/ImmutableNodeAccessor.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistributionTest.java" />
@@ -196,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/business/math/GeneratorDistributionsFake.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
+        <option value="$PROJECT_DIR$/src/dal/gae_kinds/Word.java" />
       </list>
     </option>
   </component>
@@ -989,31 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="1545">
-          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding>
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#1071#1084#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1688#1706#0" expanded="true" />
-            <element signature="e#2509#2510#0" expanded="true" />
-            <element signature="e#2576#2577#0" expanded="true" />
-            <element signature="e#2639#2640#0" expanded="true" />
-            <element signature="e#2680#2681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37292817" vertical-offset="0" max-vertical-offset="362">
@@ -1146,14 +1134,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47058824" vertical-offset="275" max-vertical-offset="1425">
-          <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           <folding>
             <element signature="e#2147#2191#0" expanded="true" />
             <element signature="e#3102#3103#0" expanded="true" />
             <element signature="e#3123#3124#0" expanded="true" />
             <element signature="e#3174#3175#0" expanded="true" />
             <element signature="e#3240#3241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6617647" vertical-offset="225" max-vertical-offset="1350">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#811#829#0" expanded="true" />
+            <element signature="e#1571#1584#0" expanded="true" />
           </folding>
         </state>
       </provider>
