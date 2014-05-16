@@ -33,10 +33,12 @@ public class ContentPage {
   Long id;
   @Index
   String name;
+  // Формированием не управляет, но остальным управляет.
   @Load
   List<Key<Word>> words = new ArrayList<Key<Word>>();
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
+  // TODO: Notes!
 
   // TODO: Как быть с распределением? Оно будет динамическим!
   // Вариант - читать через кеш, он все равно будет - медленно, очень, особенно при горячем старте - кеш пуст.
@@ -51,6 +53,7 @@ public class ContentPage {
   // TODO: Как изначально инициализировать. При формировании таблицы, например.
   // TODO: Для горячего старта.
   // TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
+  //   думаю она и должна оставаться управляемой извне.
   //ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
       //new ArrayList<GeneratorDistributions.DistributionElement>();
 
