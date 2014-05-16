@@ -1,7 +1,6 @@
 package dal_gae_kinds;
 
 import business.mapreduce.MRContentPageBuilder;
-import business.math.GeneratorDistributionsImpl;
 import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;

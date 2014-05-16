@@ -1,4 +1,4 @@
-package views.web;
+package hided.web;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;

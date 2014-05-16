@@ -1,4 +1,4 @@
-package views.web;
+package hided.web;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
