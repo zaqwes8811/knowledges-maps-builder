@@ -1,10 +1,15 @@
 package dal.gae_kinds;
 // Tasks:
-//   Сперва подключить кеш, затем думать о распределении
+//   Сперва подключить кеш,
+//   Затем думать о распределении
+//   Затем думать об удалении.
 
 import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.*;
@@ -13,6 +18,7 @@ import org.javatuples.Pair;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static dal.gae_kinds.OfyService.ofy;
 
@@ -52,9 +58,23 @@ public class ContentPage {
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища. Хранить не нужно.
   // TODO: для кеша из Guava - invalidate
   @Unindex
-  private final Integer wordsCache_ = Integer.valueOf(0);  // TODO: Подставить реальную.
+  private final LoadingCache<Integer, Optional<Word>> graphs = CacheBuilder.newBuilder()
+    .expireAfterAccess(10, TimeUnit.MINUTES)  // TODO: Make by size.
+    .build(
+      new CacheLoader<Integer, Optional<Word>>() {
+        public Optional<Word> load(Integer key) { // no checked exception
+          //
+          return Optional.absent();//createExpensiveGraph(key);
+        }
+      });
 
   public Pair<Optional<Word>, Optional<ArrayList<ContentItem>>> get(Integer position) {
+    /*try {
+      return graphs.get(key);
+    } catch (ExecutionException e) {
+      throw new OtherException(e.getCause());
+    }*/
+
     // TODO: Check position
     return Pair.with(Optional.<Word>absent(), Optional.<ArrayList<ContentItem>>absent());
   }
