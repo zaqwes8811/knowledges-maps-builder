@@ -1,6 +1,6 @@
 package hided.controllers.web_wrapper;
 
-import business.math.GeneratorDistributionsImpl;
+import dal_gae_kinds.GeneratorDistributionsImpl;
 import com.google.common.collect.ImmutableList;
 import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 

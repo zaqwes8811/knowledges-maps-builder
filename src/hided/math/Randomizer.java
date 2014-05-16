@@ -1,4 +1,4 @@
-package business.math;
+package hided.math;
 
 /**
  * Created with IntelliJ IDEA.
