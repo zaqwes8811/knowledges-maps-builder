@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" afterPath="$PROJECT_DIR$/src/dal/gae_kinds/ContentPageTest.java" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,18 +84,27 @@
       <file leaf-file-name="ContentPage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9735294" vertical-offset="539" max-vertical-offset="1410">
-              <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.20588236" vertical-offset="845" max-vertical-offset="2295">
+              <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#790#801#0" expanded="true" />
-                <element signature="e#859#877#0" expanded="true" />
-                <element signature="e#2300#2306#0" expanded="true" />
-                <element signature="e#2325#2349#0" expanded="true" />
-                <element signature="method#getDistribution#0;class#ContentPage#0" expanded="false" />
-                <element signature="e#2957#3001#0" expanded="true" />
-                <element signature="method#ContentPage#1;class#ContentPage#0" expanded="false" />
-                <element signature="method#disableWord#0;class#ContentPage#0" expanded="false" />
+                <element signature="e#998#1009#0" expanded="true" />
+                <element signature="e#1067#1085#0" expanded="true" />
+                <element signature="e#2448#2661#0" expanded="true" />
+                <element signature="e#2652#2653#0" expanded="true" />
+                <element signature="e#2945#2951#0" expanded="true" />
+                <element signature="e#2970#2994#0" expanded="true" />
+                <element signature="e#3084#3085#0" expanded="true" />
+                <element signature="e#3106#3107#0" expanded="true" />
+                <element signature="e#3602#3646#0" expanded="true" />
+                <element signature="e#4641#4642#0" expanded="true" />
+                <element signature="e#4662#4663#0" expanded="true" />
+                <element signature="e#4713#4714#0" expanded="true" />
+                <element signature="e#4779#4780#0" expanded="true" />
+                <element signature="e#4825#4826#0" expanded="true" />
+                <element signature="e#4847#4848#0" expanded="true" />
+                <element signature="e#4892#4893#0" expanded="true" />
+                <element signature="e#4957#4958#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -708,7 +716,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="714" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -727,7 +735,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27818447" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40130505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40130505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1133,18 +1141,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/gae_kinds/ContentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9735294" vertical-offset="539" max-vertical-offset="1410">
-          <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.20588236" vertical-offset="845" max-vertical-offset="2295">
+          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#790#801#0" expanded="true" />
-            <element signature="e#859#877#0" expanded="true" />
-            <element signature="e#2300#2306#0" expanded="true" />
-            <element signature="e#2325#2349#0" expanded="true" />
-            <element signature="method#getDistribution#0;class#ContentPage#0" expanded="false" />
-            <element signature="e#2957#3001#0" expanded="true" />
-            <element signature="method#ContentPage#1;class#ContentPage#0" expanded="false" />
-            <element signature="method#disableWord#0;class#ContentPage#0" expanded="false" />
+            <element signature="e#998#1009#0" expanded="true" />
+            <element signature="e#1067#1085#0" expanded="true" />
+            <element signature="e#2448#2661#0" expanded="true" />
+            <element signature="e#2652#2653#0" expanded="true" />
+            <element signature="e#2945#2951#0" expanded="true" />
+            <element signature="e#2970#2994#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3106#3107#0" expanded="true" />
+            <element signature="e#3602#3646#0" expanded="true" />
+            <element signature="e#4641#4642#0" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4713#4714#0" expanded="true" />
+            <element signature="e#4779#4780#0" expanded="true" />
+            <element signature="e#4825#4826#0" expanded="true" />
+            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4892#4893#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
           </folding>
         </state>
       </provider>
