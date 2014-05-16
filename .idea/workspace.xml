@@ -7,14 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesBuilderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsImpl.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/ImmutableDataExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/ImmutableIdxGetters.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/ImmutableIdxGetters.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/KeyWordsCoursor.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/KeyWordsCoursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/KeyWordsCursor.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/KeyWordsCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java" afterPath="$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/NotesProcessor.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/NotesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/hided_code.java" afterPath="$PROJECT_DIR$/src/hided/dal/accessors_text_file_storage/hided_code.java" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,29 +87,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentPage.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ContentPage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1770">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.4573379" vertical-offset="542" max-vertical-offset="1305">
+              <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
               <folding>
                 <element signature="e#1276#1305#0" expanded="true" />
                 <element signature="e#1647#1860#0" expanded="true" />
                 <element signature="e#1851#1852#0" expanded="true" />
-                <element signature="e#2798#2842#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotesBuilder.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.94148934" vertical-offset="711" max-vertical-offset="1530">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-              <folding>
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
+                <element signature="method#getStatistic#0;class#ContentPage#0" expanded="false" />
+                <element signature="e#2742#2786#0" expanded="true" />
+                <element signature="method#ContentPage#1;class#ContentPage#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -215,10 +203,10 @@
         <option value="$PROJECT_DIR$/sandbox/src/dal_gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/hided/RandomizerImpls.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsImpl.java" />
-        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/business/evaluators/NotesProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/business/evaluators/NotesProcessor.java" />
         <option value="$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java" />
+        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
       </list>
     </option>
   </component>
@@ -1104,19 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1770">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="e#1276#1305#0" expanded="true" />
-            <element signature="e#1647#1860#0" expanded="true" />
-            <element signature="e#1851#1852#0" expanded="true" />
-            <element signature="e#2798#2842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/evaluators/NotesBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="825">
@@ -1129,11 +1104,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.94148934" vertical-offset="711" max-vertical-offset="1530">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.30851063" vertical-offset="96" max-vertical-offset="1515">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="e#810#811#0" expanded="true" />
             <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4573379" vertical-offset="542" max-vertical-offset="1305">
+          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+          <folding>
+            <element signature="e#1276#1305#0" expanded="true" />
+            <element signature="e#1647#1860#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="method#getStatistic#0;class#ContentPage#0" expanded="false" />
+            <element signature="e#2742#2786#0" expanded="true" />
+            <element signature="method#ContentPage#1;class#ContentPage#0" expanded="false" />
           </folding>
         </state>
       </provider>

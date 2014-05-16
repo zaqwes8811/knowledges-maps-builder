@@ -107,7 +107,7 @@ final public class ImmutableIdxGetters {
       new TypeToken<ArrayList<String>>() {}.getType()));
   }
 
-  static public HashMap<String, HashMap<String, String>>  get_static_notes() {
+  static public HashMap<String, HashMap<String, String>> getStaticNotes() {
     String metadata_static_notes_json = Utils.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(

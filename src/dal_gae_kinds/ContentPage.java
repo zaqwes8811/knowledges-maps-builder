@@ -73,10 +73,6 @@ public class ContentPage {
   // MUST BE!
   private ContentPage() { }
 
-  private boolean isEmpty_NI() {
-    return false;
-  }
-
   // TODO: возможно нужен кеш. см. Guava cache.
   public ImmutableList<GeneratorDistributions.DistributionElement> getStatistic() {
     List<Word> words = ofy().load().type(Word.class)
@@ -106,12 +102,7 @@ public class ContentPage {
     this.setItems(items);
   }
 
-  // TODO: Удяляет на что ссылается из хранилища.
-  public void empty_NI() { }
-
-  // TODO:
-  // Имя persist and save похоже заняты
-  public void persistPage() { }
+  // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
 
   public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
     // TODO: Проверка границ - это явно ошибка

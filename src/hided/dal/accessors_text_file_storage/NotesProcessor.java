@@ -15,7 +15,7 @@ public class NotesProcessor {
 
   static public Map<String, String> get_notes_for_node(String node) {
     HashMap<String, HashMap<String, String>> metadata_static_notes =
-        ImmutableIdxGetters.get_static_notes();  // TODO(): bad!
+        ImmutableIdxGetters.getStaticNotes();  // TODO(): bad!
 
     // Получаем статические данные по сложности
     // Статические оценки
