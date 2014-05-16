@@ -7,7 +7,7 @@ import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContentItemsTokenizer {
+public class PlainTextTokenizer {
   public static Iterable<String> splitDocFormat(String line) {
     return Splitter.onPattern("(-|[0-9])?[:;]")
       .trimResults()

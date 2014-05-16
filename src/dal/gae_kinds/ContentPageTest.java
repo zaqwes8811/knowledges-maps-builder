@@ -2,7 +2,7 @@ package dal.gae_kinds;
 
 import business.mapreduce.MRContentPageBuilder;
 import business.math.GeneratorDistributionsImpl;
-import business.nlp.ContentItemsTokenizer;
+import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
 import business.text_extractors.SubtitlesParser;
@@ -27,9 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static dal.gae_kinds.OfyService.ofy;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
@@ -38,6 +36,22 @@ public class ContentPageTest {
   @Before
   public void setUp() {
     helper.setUp();
+
+    String filename = getTestFileName();
+    try {
+      // Phase I
+      String text = getTestText(filename);
+      assertFalse(text.isEmpty());
+
+      // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
+      ArrayList<ContentItem> contentItems = getItems(text);
+
+      // Last - Persist page
+      ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
+      ofy().save().entity(page).now();
+    } catch (IOException e)  {
+      assert false;
+    }
   }
 
   @After
@@ -70,7 +84,7 @@ public class ContentPageTest {
   }
 
   private ArrayList<ContentItem> getItems(String text) {
-    ImmutableList<String> sentences = new ContentItemsTokenizer().getSentences(text);
+    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
     assertFalse(sentences.isEmpty());
 
     // Пакуем
@@ -93,20 +107,6 @@ public class ContentPageTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    String filename = getTestFileName();
-
-    // Phase I
-    String text = getTestText(filename);
-    assertFalse(text.isEmpty());
-
-    // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-    ArrayList<ContentItem> contentItems = getItems(text);
-
-    // Last - Persist page
-    ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
-    ofy().save().entity(page).now();
-
-    /// Queries
     // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
     // Хотелось бы выбирать по некоторому критерию.
     // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
@@ -140,19 +140,9 @@ public class ContentPageTest {
   }
 
   @Test
+  @Deprecated
   public void testGetDistribution() throws IOException {
-    String filename = getTestFileName();
-
-    // Phase I
-    String text = getTestText(filename);
-    assertFalse(text.isEmpty());
-
-    // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-    ArrayList<ContentItem> contentItems = getItems(text);
-
-    // Last - Persist page
-    ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
-    ofy().save().entity(page).now();
+    ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().get();
 
     /// Queries
     ImmutableList<GeneratorDistributionsImpl.DistributionElement> distribution =
@@ -171,6 +161,7 @@ public class ContentPageTest {
 
   @Test
   public void testGetWordData() {
+    ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().get();
 
   }
 }
