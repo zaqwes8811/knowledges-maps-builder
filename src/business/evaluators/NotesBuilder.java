@@ -27,12 +27,11 @@ public class NotesBuilder {
   }
 
   static public Map<String, String> get_notes_for_node(String node) {
-    HashMap<String, HashMap<String, String>> metadata_static_notes =
-        ImmutableIdxGetters.get_static_notes();  // TODO(): bad!
+    HashMap<String, HashMap<String, String>> metadataStaticNotes = ImmutableIdxGetters.getStaticNotes();  // TODO(): bad!
 
     // Получаем статические данные по сложности
     // Статические оценки
-    Map<String, String> node_static_notes_info = metadata_static_notes.get(node);
+    Map<String, String> nodeStaticNotesInfo = metadataStaticNotes.get(node);
 
     // Данные для каждого из индексов по 80/20
     List<String> sorted_full_idx = ImmutableIdxGetters.get_sorted_idx(node);
@@ -62,11 +61,11 @@ public class NotesBuilder {
     Double N20_Amount = new Double(count_unique_words)-N80_Amount;
 
     // Итого
-    node_static_notes_info.put(NOTE_N80_CAPACITY, N80_Amount.toString());
-    node_static_notes_info.put(NOTE_N20_CAPACITY, N20_Amount.toString());
-    node_static_notes_info.put(NOTE_N20_COUNT, N20.toString());
-    node_static_notes_info.put(NOTE_N80_COUNT, N80.toString());
-    return node_static_notes_info;
+    nodeStaticNotesInfo.put(NOTE_N80_CAPACITY, N80_Amount.toString());
+    nodeStaticNotesInfo.put(NOTE_N20_CAPACITY, N20_Amount.toString());
+    nodeStaticNotesInfo.put(NOTE_N20_COUNT, N20.toString());
+    nodeStaticNotesInfo.put(NOTE_N80_COUNT, N80.toString());
+    return nodeStaticNotesInfo;
   }
 
   static public String get_one_record(String node, Map<String, String> info) {

@@ -29,7 +29,7 @@ public class hided_code {
 
 
   /*
-  static public HashMap<String, HashMap<String, String>>  get_static_notes() {
+  static public HashMap<String, HashMap<String, String>>  getStaticNotes() {
     String metadata_static_notes_json = utils.file2string(
       Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(

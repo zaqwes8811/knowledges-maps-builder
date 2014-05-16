@@ -24,7 +24,7 @@ public class KeyWordsCursor {
     List<String> nodes = ImmutableBaseCoursor.getListNodes();
 
     // Получаем индекс-пересечеие
-    HashMap<String, HashMap<String, String>>  notes = ImmutableIdxGetters.get_static_notes();
+    HashMap<String, HashMap<String, String>>  notes = ImmutableIdxGetters.getStaticNotes();
 
     // Real processing
     for (String node: nodes) {
