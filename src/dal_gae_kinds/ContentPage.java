@@ -4,6 +4,7 @@ package dal_gae_kinds;
 //   Затем думать о распределении
 //   Затем думать об удалении.
 
+import business.math.GeneratorAnyDistribution;
 import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
@@ -74,7 +75,7 @@ public class ContentPage {
   private ContentPage() { }
 
   // TODO: возможно нужен кеш. см. Guava cache.
-  public ImmutableList<GeneratorDistributions.DistributionElement> getStatistic() {
+  public ImmutableList<GeneratorAnyDistribution.DistributionElement> getStatistic() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 
@@ -83,13 +84,13 @@ public class ContentPage {
     Collections.reverse(words);
 
     // Формируем результат
-    ArrayList<GeneratorDistributions.DistributionElement> distribution =
-      new ArrayList<GeneratorDistributions.DistributionElement>();
+    ArrayList<GeneratorAnyDistribution.DistributionElement> distribution =
+      new ArrayList<GeneratorAnyDistribution.DistributionElement>();
     for (Word word : words) {
       // нужны частоты для распределения
       // TODO: true -> enabled
-      GeneratorDistributions.DistributionElement elem =
-        new GeneratorDistributions.DistributionElement(word.getFrequency(), true);
+      GeneratorAnyDistribution.DistributionElement elem =
+        new GeneratorAnyDistribution.DistributionElement(word.getFrequency(), true);
       distribution.add(elem);
     }
 
@@ -104,14 +105,14 @@ public class ContentPage {
 
   // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
 
-  public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
+  public ImmutableList<GeneratorAnyDistribution.DistributionElement> disableWord(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
 
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
     return null;
   }
 
-  public ImmutableList<GeneratorDistributions.DistributionElement> enableWord(Integer idx) {
+  public ImmutableList<GeneratorAnyDistribution.DistributionElement> enableWord(Integer idx) {
     return null;
   }
 
