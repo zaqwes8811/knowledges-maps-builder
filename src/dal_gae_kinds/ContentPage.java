@@ -38,24 +38,12 @@ public class ContentPage {
   List<Key<Word>> words = new ArrayList<Key<Word>>();
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
+
   // TODO: Notes!
 
-  // TODO: Как быть с распределением? Оно будет динамическим!
-  // Вариант - читать через кеш, он все равно будет - медленно, очень, особенно при горячем старте - кеш пуст.
-  //   лучше так кеш не использовать, а использовать для чтения.
-  // Вариант 2 - сохранять распределение в хранилище. Дублирование причем в 3 местах! Хуже всего что в генераторе,
-  //   но лучше генератор сделать внешним, хотяяяя... нет.
-
-  //
-  // Thinks:
-  // TODO: Читать однажды, а так сохранять в хранилище. Проблема в ширине кеша. Так же он заполнятся поштучно!
-  // TODO: Для чтения пойдет, а так не хотелось бы. Хотя на этапе может ширина известна на этапе формирования?
-  // TODO: Как изначально инициализировать. При формировании таблицы, например.
-  // TODO: Для горячего старта.
-  // TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
-  //   думаю она и должна оставаться управляемой извне.
-  //ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
-      //new ArrayList<GeneratorDistributions.DistributionElement>();
+  // TODO: Как быть с полиморфизмом?
+  @Load
+  List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
 
   // Own
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища. Хранить не нужно.
@@ -90,8 +78,7 @@ public class ContentPage {
   }
 
   // TODO: возможно нужен кеш. см. Guava cache.
-  @Deprecated
-  public ImmutableList<GeneratorDistributions.DistributionElement> getDistribution() {
+  public ImmutableList<GeneratorDistributions.DistributionElement> getStatistic() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 

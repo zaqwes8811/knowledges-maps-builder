@@ -5,6 +5,7 @@ import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import com.googlecode.objectify.annotation.Entity;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
@@ -16,7 +17,24 @@ import java.util.Random;
 //   Класс способен генерировать последовательности любого дискретного распределения
 //   Возвращает индекс массива исходного распределения.
 //
+// TODO: Как быть с распределением? Оно будет динамическим!
+// Вариант - читать через кеш, он все равно будет - медленно, очень, особенно при горячем старте - кеш пуст.
+//   лучше так кеш не использовать, а использовать для чтения.
+// Вариант 2 - сохранять распределение в хранилище. Дублирование причем в 3 местах! Хуже всего что в генераторе,
+//   но лучше генератор сделать внешним, хотяяяя... нет.
+
+//
+// Thinks:
+// TODO: Читать однажды, а так сохранять в хранилище. Проблема в ширине кеша. Так же он заполнятся поштучно!
+// TODO: Для чтения пойдет, а так не хотелось бы. Хотя на этапе может ширина известна на этапе формирования?
+// TODO: Как изначально инициализировать. При формировании таблицы, например.
+// TODO: Для горячего старта.
+// TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
+//   думаю она и должна оставаться управляемой извне.
+//ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
+//new ArrayList<GeneratorDistributions.DistributionElement>();
 @NotThreadSafe
+@Entity
 public class GeneratorDistributionsImpl implements GeneratorDistributions {
   private Integer countPoints;
   private Integer maxValue;
