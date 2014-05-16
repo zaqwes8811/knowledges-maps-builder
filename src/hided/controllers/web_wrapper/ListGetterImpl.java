@@ -2,7 +2,7 @@ package hided.controllers.web_wrapper;
 
 import business.math.GeneratorDistributionsImpl;
 import com.google.common.collect.ImmutableList;
-import dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import java.util.ArrayList;
 import java.util.List;

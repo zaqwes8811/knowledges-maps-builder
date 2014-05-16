@@ -1,6 +1,6 @@
 package hided.spiders_extractors;
 
-//import dal.accessors_text_file_storage.VParserException;
+//import hided.dal.accessors_text_file_storage.VParserException;
 
 
 // Наверное случайный выборщик будет оборачивать это класс, а не будет встроенным в него.

@@ -2,7 +2,7 @@ package hided.controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import dal.accessors_text_file_storage.*;
+import hided.dal.accessors_text_file_storage.*;
 import org.junit.Test;
 import hided.crosscuttings.configurator.GlobalConfigurator;
 

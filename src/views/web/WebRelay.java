@@ -7,9 +7,9 @@ import javax.servlet.ServletException;
  
 import java.io.IOException;
 import common.InnerReuse;
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import com.google.gson.Gson;
-//import dal.accessors_text_file_storage.ReaderStaticData;
+//import hided.dal.accessors_text_file_storage.ReaderStaticData;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;

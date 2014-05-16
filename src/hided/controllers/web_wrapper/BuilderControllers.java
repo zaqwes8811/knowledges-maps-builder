@@ -3,10 +3,10 @@ package hided.controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import dal.accessors_text_file_storage.FabricImmutableNodeControllers;
-import dal.accessors_text_file_storage.ImmutableNodeAccessor;
-import dal.accessors_text_file_storage.NodeIsCorrupted;
-import dal.accessors_text_file_storage.NodeNoFound;
+import hided.dal.accessors_text_file_storage.FabricImmutableNodeControllers;
+import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import hided.dal.accessors_text_file_storage.NodeIsCorrupted;
+import hided.dal.accessors_text_file_storage.NodeNoFound;
 import hided.crosscuttings.configurator.ConfigurationFileIsCorrupted;
 import hided.crosscuttings.configurator.NoFoundConfigurationFile;
 
