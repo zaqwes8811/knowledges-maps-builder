@@ -1,7 +1,8 @@
 package hided.controllers.web_wrapper;
 
-import dal_gae_kinds.GeneratorDistributionsImpl;
+import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import dal_gae_kinds.GeneratorDistributionsImpl;
 import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import java.util.ArrayList;
@@ -10,11 +11,11 @@ import java.util.List;
 @Deprecated
 public class ListGetterImpl implements ListGetter {
   private final ImmutableNodeAccessor ACCESSOR_;
-  private final GeneratorDistributionsImpl GENERATOR_;
+  private final Optional<GeneratorDistributionsImpl> GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
     ArrayList<Integer> distribution = ACCESSOR_.getDistribution();
-    GENERATOR_ = GeneratorDistributionsImpl.create(distribution);
+    GENERATOR_ = Optional.absent();//GeneratorDistributionsImpl.create(distribution);
   }
 
   // Index: нужно для маркеровки
@@ -29,7 +30,7 @@ public class ListGetterImpl implements ListGetter {
     // Отправляем только если есть контекст
     while (true) {
       boolean finded = false;
-      Integer currentKey = GENERATOR_.getPosition();
+      Integer currentKey = GENERATOR_.get().getPosition();
 
       // Добавляем, только если что-то есть
       ImmutableList<String> content = ACCESSOR_.getContent(currentKey);
