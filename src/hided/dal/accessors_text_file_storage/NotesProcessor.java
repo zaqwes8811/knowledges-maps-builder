@@ -64,10 +64,10 @@ public class NotesProcessor {
           //info.get(SentencesReduce.NOTE_RE).replace('.', ','),
           //info.get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
           //info.get(SentencesReduce.NOTE_MEAN_LEN_SENT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N20_CAPACITY).replace('.', ','));
+          info.get(NotesBuilder.NOTE_N20_COUNT).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N80_COUNT).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N80_CAPACITY).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N20_CAPACITY).replace('.', ','));
     return record;
   }
 

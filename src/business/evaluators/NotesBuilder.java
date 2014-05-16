@@ -1,20 +1,22 @@
-package hided.evaluators;
+package business.evaluators;
 
 
-import hided.old.SentencesReduce;
-import common.Utils;
-import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
-import hided.dal.accessors_text_file_storage.ImmutableIdxGetters;
-import hided.jobs_processors.ProcessorTargets;
-import hided.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import common.Utils;
+import hided.crosscuttings.AppConstants;
+import hided.dal.accessors_text_file_storage.ImmutableIdxGetters;
+import hided.jobs_processors.ProcessorTargets;
+import hided.old.SentencesReduce;
 
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class NotesProcessor {
+public class NotesBuilder {
   static public final String NOTE_N80_CAPACITY = "f80_p";  // Core
   static public final String NOTE_N20_CAPACITY = "f20";
   static public final String NOTE_N20_COUNT = "w20_p";  // Core
@@ -75,10 +77,10 @@ public class NotesProcessor {
           info.get(SentencesReduce.NOTE_RE).replace('.', ','),
           info.get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ).replace('.', ','),
           info.get(SentencesReduce.NOTE_MEAN_LEN_SENT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N20_COUNT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N80_COUNT).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N80_CAPACITY).replace('.', ','),
-          info.get(NotesProcessor.NOTE_N20_CAPACITY).replace('.', ','));
+          info.get(NotesBuilder.NOTE_N20_COUNT).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N80_COUNT).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N80_CAPACITY).replace('.', ','),
+          info.get(NotesBuilder.NOTE_N20_CAPACITY).replace('.', ','));
     return record;
   }
 
@@ -103,40 +105,5 @@ public class NotesProcessor {
       info.add(record);
     }
     return info;
-  }
-
-
-  // Launcher
-  static public void main(String [] args) {
-
-    // Получаем адреса соответствующие узлам и оцененный язык
-    List<String> nodes = ImmutableBaseCoursor.getListNodes();
-    List<String> rpt = new ArrayList<String>(
-      Arrays.asList(Joiner.on(";")
-        .join(
-          "Имя документа",
-          "Флеш",
-          "Время прочтения",
-          "Ср. дл. предл.",
-          "20% частых",
-          "80% редких",
-          "частые сост. 80% слов. состава",
-          "редкие - 20% состава")));
-
-    for (String node : nodes) {
-
-      //Map<String, String> node_static_notes_info = get_notes_for_node(node);
-      //rpt.add(get_one_record(node, node_static_notes_info));
-    }
-
-    // пишем результат
-    /*try {
-      Utils.list2file(rpt, Joiner.on(AppConstants.PATH_SPLITTER)
-        .join(
-          "rpts",
-          "real_notes.csv"));
-    } catch (IOException e) {
-      e.printStackTrace();
-    }*/
   }
 }
