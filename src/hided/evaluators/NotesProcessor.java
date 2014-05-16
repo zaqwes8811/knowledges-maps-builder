@@ -3,8 +3,8 @@ package hided.evaluators;
 
 import hided.old.SentencesReduce;
 import common.Utils;
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
-import dal.accessors_text_file_storage.ImmutableIdxGetters;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.dal.accessors_text_file_storage.ImmutableIdxGetters;
 import hided.jobs_processors.ProcessorTargets;
 import hided.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;

@@ -10,7 +10,7 @@ import com.google.gson.reflect.TypeToken;
 import common.InnerReuse;
 import common.Utils;
 import hided.crosscuttings.AppConstants;
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import hided.jobs_processors.ProcessorTargets;
 
 import java.io.*;

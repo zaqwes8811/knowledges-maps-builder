@@ -1,6 +1,6 @@
 package hided.controllers;
 
-//import dal.accessors_text_file_storage.IdxAccessor;
+//import hided.dal.accessors_text_file_storage.IdxAccessor;
 
 
 // @Immutable
