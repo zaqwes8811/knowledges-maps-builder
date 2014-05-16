@@ -1,5 +1,7 @@
-package business.math;
+package dal_gae_kinds;
 
+import business.math.GeneratorDistributionExc;
+import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;

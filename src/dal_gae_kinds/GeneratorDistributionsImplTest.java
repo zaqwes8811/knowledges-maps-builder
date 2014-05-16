@@ -1,5 +1,8 @@
-package business.math;
+package dal_gae_kinds;
 
+import business.math.GeneratorDistributionExc;
+import business.math.GeneratorDistributions;
+import dal_gae_kinds.GeneratorDistributionsImpl;
 import org.junit.Test;
 
 import java.util.ArrayList;
