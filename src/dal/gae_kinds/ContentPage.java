@@ -4,9 +4,11 @@ package dal.gae_kinds;
 
 import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
+import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.*;
+import org.javatuples.Pair;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -52,6 +54,12 @@ public class ContentPage {
   @Unindex
   private final Integer wordsCache_ = Integer.valueOf(0);  // TODO: Подставить реальную.
 
+  public Pair<Optional<Word>, Optional<ArrayList<ContentItem>>> get(Integer position) {
+    // TODO: Check position
+    return Pair.with(Optional.<Word>absent(), Optional.<ArrayList<ContentItem>>absent());
+  }
+
+  // MUST BE!
   private ContentPage() { }
 
   private boolean isEmpty_NI() {
@@ -92,9 +100,7 @@ public class ContentPage {
 
   // TODO:
   // Имя persist and save похоже заняты
-  public void persistPage() {
-
-  }
+  public void persistPage() { }
 
   public ImmutableList<GeneratorDistributions.DistributionElement> disableWord(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
