@@ -1,7 +1,7 @@
 package business.mapreduce;
 
 import business.nlp.SentenceTokenizer;
-import dal.gae_kinds.ContentItem;
+import dal_gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
 import java.util.List;

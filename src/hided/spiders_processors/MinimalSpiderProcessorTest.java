@@ -1,6 +1,6 @@
 package hided.spiders_processors;
 
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import org.junit.Test;
 
 import java.util.List;

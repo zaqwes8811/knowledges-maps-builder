@@ -1,7 +1,7 @@
 package business.mapreduce;
 
 import com.google.common.collect.Multimap;
-import dal.gae_kinds.ContentItem;
+import dal_gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
 @NotThreadSafe

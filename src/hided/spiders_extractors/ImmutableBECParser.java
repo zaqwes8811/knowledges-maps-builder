@@ -1,6 +1,6 @@
 package hided.spiders_extractors;
 
-//import dal.accessors_text_file_storage.VParserException;
+//import hided.dal.accessors_text_file_storage.VParserException;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;

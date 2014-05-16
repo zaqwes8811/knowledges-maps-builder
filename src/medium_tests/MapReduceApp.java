@@ -13,7 +13,7 @@ import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import common.Util;
 import hided.crosscuttings.CrosscuttingsException;
-//import dal.accessors_text_file_storage.IdxAccessor;
+//import hided.dal.accessors_text_file_storage.IdxAccessor;
 import hided.spiders_extractors.ImmutableBECParser;
 
 import java.io.BufferedWriter;

@@ -1,6 +1,6 @@
 package hided.jobs_processors;
 
-import dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import hided.crosscuttings.AppConstants;
 
 import com.google.common.base.Joiner;

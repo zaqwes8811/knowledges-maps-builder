@@ -1,7 +1,7 @@
 package hided.controllers.web_wrapper;
 
 import com.google.common.collect.ImmutableList;
-import dal.accessors_text_file_storage.*;
+import hided.dal.accessors_text_file_storage.*;
 
 
 // TODO: перейти на получение map, а не списков. Идея реаширения была избыточной.
