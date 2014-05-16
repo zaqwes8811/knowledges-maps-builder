@@ -2,7 +2,7 @@ package hided.spiders_processors;
 
 
 import business.adapters_3rdparty.TikaWrapper;
-import business.nlp.ContentItemsTokenizer;
+import business.nlp.PlainTextTokenizer;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
@@ -124,7 +124,7 @@ public class MinimalSpiderProcessor {
           String s;
           while ((s = reader.readLine())!= null)
             buffer.append(s+'\n');
-          summaryContent.append(ContentItemsTokenizer.splitToSentences(buffer, lang));
+          summaryContent.append(PlainTextTokenizer.splitToSentences(buffer, lang));
         } catch (Throwable e) { // must catch Throwable
           throw readCloser.rethrow(e);
         } finally {

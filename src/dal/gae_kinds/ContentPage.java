@@ -51,14 +51,14 @@ public class ContentPage {
   // TODO: Как изначально инициализировать. При формировании таблицы, например.
   // TODO: Для горячего старта.
   // TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
-  ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
+  //ArrayList<GeneratorDistributions.DistributionElement> savedDistribution;// =
       //new ArrayList<GeneratorDistributions.DistributionElement>();
 
   // Own
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища. Хранить не нужно.
   // TODO: для кеша из Guava - invalidate
   @Unindex
-  private final LoadingCache<Integer, Optional<Word>> graphs = CacheBuilder.newBuilder()
+  private final LoadingCache<Integer, Optional<Word>> wordsCache = CacheBuilder.newBuilder()
     .expireAfterAccess(10, TimeUnit.MINUTES)  // TODO: Make by size.
     .build(
       new CacheLoader<Integer, Optional<Word>>() {
@@ -87,6 +87,7 @@ public class ContentPage {
   }
 
   // TODO: возможно нужен кеш. см. Guava cache.
+  @Deprecated
   public ImmutableList<GeneratorDistributions.DistributionElement> getDistribution() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
