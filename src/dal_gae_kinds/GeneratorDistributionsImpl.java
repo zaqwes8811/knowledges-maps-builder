@@ -1,7 +1,6 @@
 package dal_gae_kinds;
 
 import business.math.GeneratorAnyDistribution;
-import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
@@ -30,7 +29,7 @@ import java.util.ArrayList;
 //   думаю она и должна оставаться управляемой извне.
 @NotThreadSafe
 @Entity
-public class GeneratorDistributionsImpl implements GeneratorDistributions {
+public class GeneratorDistributionsImpl implements ContentPage.GeneratorDistributions {
   /// Persist
   @Id
   Long id;
@@ -59,13 +58,15 @@ public class GeneratorDistributionsImpl implements GeneratorDistributions {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
-  public void disableWord(Integer idx) {
+  @Override
+  public void disablePoint(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
 
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
   }
 
-  public void enableWord(Integer idx) {
+  @Override
+  public void enablePoint(Integer idx) {
 
   }
 }
