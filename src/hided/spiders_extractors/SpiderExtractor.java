@@ -1,10 +1,10 @@
 package hided.spiders_extractors;
 
 import business.adapters_3rdparty.TikaWrapper;
-import common.InnerReuse;
-import hided.jobs_processors.ProcessorTargets;
+import common.Util;
 import hided.crosscuttings.AppConstants;
 import hided.crosscuttings.ThroughLevelBoundaryError;
+import hided.jobs_processors.ProcessorTargets;
 
 import java.util.List;
 
@@ -25,12 +25,12 @@ public class SpiderExtractor {
           //break;  // DEVELOP
         } catch (ExtractorException e) {
           // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
-          InnerReuse.print(e.getMessage());
+          Util.print(e.getMessage());
         }
       }
     } catch (ThroughLevelBoundaryError e) {
-      InnerReuse.print(e.getMessage());
+      Util.print(e.getMessage());
     }
-    InnerReuse.print("Done. Spider extractor.\n");
+    Util.print("Done. Spider extractor.\n");
   }
 }

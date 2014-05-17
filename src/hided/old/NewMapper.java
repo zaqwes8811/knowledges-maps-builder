@@ -1,12 +1,15 @@
 package hided.old;
 
 
-import common.InnerReuse;
-import hided.jobs_processors.JobsFormer;
 import business.nlp.SentenceTokenizer;
 import com.google.common.base.CharMatcher;
-import com.google.common.collect.*;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;
+import common.Util;
+import hided.jobs_processors.JobsFormer;
 import org.apache.commons.lang3.StringUtils;
 import org.tartarus.snowball.ext.englishStemmer;
 import org.tartarus.snowball.ext.russianStemmer;
@@ -64,7 +67,7 @@ public class NewMapper {
           sentenceNumber++;
         }
 
-        InnerReuse.print("Size Raw = " + wordsFrequenceMultyset.elementSet().size());
+        Util.print("Size Raw = " + wordsFrequenceMultyset.elementSet().size());
 
         // Make result
         response.add(node);
@@ -121,7 +124,6 @@ public class NewMapper {
           if (RUSSIAN_STOP_WORDS.contains(compressedKey)) {
             // В списке стоп-слов
             // Отброшенное слово при второй фильтарции
-            //InnerReuse.print(key);
             continue;
           }
         } else if (meanLangWord.equals("en")) {
@@ -139,24 +141,17 @@ public class NewMapper {
         sentencesCompressed.putAll(compressedKey, sentencesRawMap.get(key));
       } else {
         // Отброшенное слово при перой фильтарции
-        //InnerReuse.print(key);
+
       }
     }
 
     // Смотрим результат
     /*
     for (String key: frequenciesCompressed.elementSet()) {
-      InnerReuse.print(
-        Joiner.on(" ").join(
-          node,
-          key,
-          frequenciesCompressed.count(key),
-          langMeanMapCompressed.get(key),
-          sentencesCompressed.get(key),
-          frequenciesWordRest.get(key)));
+
     }
     //*/
-    InnerReuse.print("Size = " + frequenciesCompressed.elementSet().size() + " " + node);
+    Util.print("Size = " + frequenciesCompressed.elementSet().size() + " " + node);
 
     // Make result
     List result = new ArrayList();
