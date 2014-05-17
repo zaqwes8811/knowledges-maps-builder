@@ -29,7 +29,7 @@ import static dal_gae_kinds.OfyService.ofy;
 @NotThreadSafe
 @Entity
 public class ContentPage {
-  // In storage
+  /// Persist
   @Id
   Long id;
   @Index
@@ -46,7 +46,7 @@ public class ContentPage {
   @Load
   List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
 
-  // Own
+  /// Own
   // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища. Хранить не нужно.
   // TODO: для кеша из Guava - invalidate
   @Unindex
@@ -100,21 +100,13 @@ public class ContentPage {
 
   public ContentPage(String name, List<ContentItem> items, List<Word> words) {
     this.name = name;
-    this.setWords(words);
-    this.setItems(items);
+    for (Word word: words) this.words.add(Key.create(word));
+    for (ContentItem item: items) this.items.add(Key.create(item));
   }
 
   // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
 
-  private void setItems(List<ContentItem> list) {
-    for (ContentItem item: list) items.add(Key.create(item));
-  }
-
   public List<Key<ContentItem>> getItems() {
     return items;
-  }
-
-  private void setWords(List<Word> words) {
-    for (Word word: words) this.words.add(Key.create(word));
   }
 }
