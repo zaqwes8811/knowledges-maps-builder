@@ -83,7 +83,7 @@ public class ContentPageTest {
   }
 
   private ArrayList<ContentItem> getItems(String text) {
-    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
+    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 50);
     assertFalse(sentences.isEmpty());
 
     // Пакуем

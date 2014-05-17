@@ -5,10 +5,12 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 /**
- * Created by zaqwes on 5/9/14.
+ * About:
+ *
  */
 @Entity
 public class ContentItem {
+  /// Persist
   //@Parent // TODO: как быть если делать выборку по parent? Может быть несколько parents? Кажется нет.
   @Id
   Long id;
@@ -19,14 +21,14 @@ public class ContentItem {
 
   @Index
   Long idx;
-  Long size;
+  //Long size;
 
-  // Some add data for sorting on query.
-
+  /// Own
   public String get() {
     return item;
   }
   public Long getId() { return id; }
+
   public void setIdx(Long value) {
     idx = value;
   }

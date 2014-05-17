@@ -24,6 +24,8 @@ public class Word {
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   @Index
   Integer rawFrequency;  // Сколько раз встретилось слово.
+
+  // TODO: Как откешировать? Какой допустимый период между запросами? https://developers.google.com/appengine/pricing
   @Load
   Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
 
