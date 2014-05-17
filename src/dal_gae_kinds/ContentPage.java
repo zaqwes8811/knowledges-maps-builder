@@ -77,24 +77,18 @@ public class ContentPage {
 
   // TODO: возможно нужен кеш. см. Guava cache.
   // TODO: возвращать только частоты.
-  public ImmutableList<GeneratorAnyDistribution.DistributionElement> getSortedFrequencies() {
+  public ImmutableList<Integer> getSortedFrequencies() {
+    // TODO: Отосортировать при выборке если можно
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 
-    // TODO: Отосортировать при выборке если можно
+    // Сортируем
     Collections.sort(words, Word.createFreqComparator());
     Collections.reverse(words);
 
     // Формируем результат
-    ArrayList<GeneratorAnyDistribution.DistributionElement> distribution =
-      new ArrayList<GeneratorAnyDistribution.DistributionElement>();
-    for (Word word : words) {
-      // нужны частоты для распределения
-      // TODO: true -> enabled - Нет! хранится это будет внутри распредления, а не в слове
-      GeneratorAnyDistribution.DistributionElement elem =
-        new GeneratorAnyDistribution.DistributionElement(word.getFrequency(), true);
-      distribution.add(elem);
-    }
+    ArrayList<Integer> distribution = new ArrayList<Integer>();
+    for (final Word word : words) distribution.add(word.getFrequency());
 
     return ImmutableList.copyOf(distribution);
   }
