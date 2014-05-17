@@ -36,7 +36,7 @@ final public class Util {
       try {
         BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
         String s;
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         while ((s = in.readLine()) != null) buffer.append(s);
         return buffer.toString();
       } catch (Throwable e) {
@@ -99,30 +99,6 @@ final public class Util {
     return Optional.absent();
   }
 
-  // Файл по сути read-only т.е. это getter и поэтому результат будет константным.
-  // Плохо то, что не ясно что именно произошло. Хотя толку от сообщения тоже.
-  /*static public Optional<ImmutableList<String>> file2list(String filename) {
-    List<String> result = new ArrayList<String>();
-    try {
-      Closer closer = Closer.create();
-      try {
-        // TODO(zaqwes): Может лучше считать разом, а потом разбить на части?
-        BufferedReader in = closer.register(new BufferedReader(new FileReader(filename)));
-        String s;
-        while ((s = in.readLine()) != null) result.add(s);
-        return Optional.of(ImmutableList.copyOf(result));
-      } catch (Throwable e) {
-        closer.rethrow(e);
-      } finally {
-        closer.close();
-      }
-    } catch (IOException e) {
-      utils.print(e.getMessage());
-      return Optional.absent();
-    }
-    return Optional.absent();
-  }  */
-
   static public ImmutableList<String> fileToList(String filename) throws IOException {
     Closer closer = Closer.create();
     List<String> result = new ArrayList<String>();
@@ -145,10 +121,6 @@ final public class Util {
     } else {
       System.console().writer().println(msg);
     }
-  }
-
-  static public void log(Object msg) {
-    print(msg);
   }
 
   private final static  class DirFilter implements FilenameFilter {
