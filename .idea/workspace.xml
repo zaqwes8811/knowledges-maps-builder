@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580d27ab-9ee6-48f5-b455-cfb706e42fe6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/Printer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dal_gae_kinds/Word.java" afterPath="$PROJECT_DIR$/src/dal_gae_kinds/Word.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +76,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContentPageTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ContentPageTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1787" max-vertical-offset="2175">
-              <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.11597938" vertical-offset="810" max-vertical-offset="2175">
+              <caret line="85" column="94" selection-start-line="85" selection-start-column="94" selection-end-line="85" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Printer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/Printer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,27 +99,27 @@
       <file leaf-file-name="ContentPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1980">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1980">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1196#1207#0" expanded="true" />
                 <element signature="e#1265#1283#0" expanded="true" />
                 <element signature="e#1476#1505#0" expanded="true" />
-                <element signature="e#1958#2171#0" expanded="true" />
-                <element signature="e#2162#2163#0" expanded="true" />
-                <element signature="e#2376#2400#0" expanded="true" />
-                <element signature="e#2957#2966#0" expanded="true" />
+                <element signature="e#2234#2453#0" expanded="true" />
+                <element signature="e#2444#2445#0" expanded="true" />
+                <element signature="e#2693#2717#0" expanded="true" />
+                <element signature="e#3274#3283#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Word.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0051546" vertical-offset="0" max-vertical-offset="1320">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -115,10 +129,29 @@
         <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/WordCurrier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="e#291#292#0" expanded="true" />
                 <element signature="e#317#318#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="735">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,9 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/business/math/Randomizers.java" />
-        <option value="$PROJECT_DIR$/src/business/math/Summator.java" />
-        <option value="$PROJECT_DIR$/src/business/math/SummatorLists.java" />
         <option value="$PROJECT_DIR$/src/business/math/RandomizerImpls.java" />
         <option value="$PROJECT_DIR$/src/medium_tests/OfyService.java" />
         <option value="$PROJECT_DIR$/src/dal/gae_kinds/WordComparator.java" />
@@ -188,11 +218,14 @@
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsImplTest.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsImpl.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/GeneratorDistributionsFake.java" />
-        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/ImmutableWord.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/WordCurrier.java" />
-        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" />
+        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java" />
         <option value="$PROJECT_DIR$/src/dal_gae_kinds/Word.java" />
+        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java" />
+        <option value="$PROJECT_DIR$/src/common/print.java" />
+        <option value="$PROJECT_DIR$/src/common/Printer.java" />
+        <option value="$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java" />
       </list>
     </option>
   </component>
@@ -313,6 +346,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dal_gae_kinds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-vocabulary-cards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -703,7 +754,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27818447" sideWeight="0.6710214" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32300162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32300162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -737,13 +788,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/business/adapters_3rdparty/LuceneStemmerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61928934" vertical-offset="1346" max-vertical-offset="2325">
-          <caret line="106" column="63" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/text_extractors/SubtitlesParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38071066" vertical-offset="225" max-vertical-offset="1020">
@@ -977,19 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4827586" vertical-offset="181" max-vertical-offset="645">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/cases/algorithms.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="318">
@@ -1101,35 +1132,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1980">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1196#1207#0" expanded="true" />
-            <element signature="e#1265#1283#0" expanded="true" />
-            <element signature="e#1476#1505#0" expanded="true" />
-            <element signature="e#1958#2171#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2376#2400#0" expanded="true" />
-            <element signature="e#2957#2966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1787" max-vertical-offset="2175">
-          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/WordCurrier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="e#291#292#0" expanded="true" />
             <element signature="e#317#318#0" expanded="true" />
@@ -1137,10 +1143,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="735">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0051546" vertical-offset="0" max-vertical-offset="1320">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1980">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1196#1207#0" expanded="true" />
+            <element signature="e#1265#1283#0" expanded="true" />
+            <element signature="e#1476#1505#0" expanded="true" />
+            <element signature="e#2234#2453#0" expanded="true" />
+            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2693#2717#0" expanded="true" />
+            <element signature="e#3274#3283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal_gae_kinds/ContentPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11597938" vertical-offset="810" max-vertical-offset="2175">
+          <caret line="85" column="94" selection-start-line="85" selection-start-column="94" selection-end-line="85" selection-end-column="94" />
           <folding />
         </state>
       </provider>
