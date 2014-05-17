@@ -41,6 +41,9 @@ public class ContentPage {
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
+  // MUST BE!
+  private ContentPage() { }
+
   // TODO: Notes!
 
   // TODO: Как быть с полиморфизмом?
@@ -71,9 +74,6 @@ public class ContentPage {
     // TODO: Check position
     return Pair.with(Optional.<Word>absent(), Optional.<ArrayList<ContentItem>>absent());
   }
-
-  // MUST BE!
-  private ContentPage() { }
 
   // TODO: возможно нужен кеш. см. Guava cache.
   // TODO: возвращать только частоты.
