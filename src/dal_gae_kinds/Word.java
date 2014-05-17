@@ -33,6 +33,8 @@ public class Word {
   @Index
   Integer sortedIdx;  // 0-N в порядке возрастания по rawFrequency
 
+  private Word() {}
+
   /// Own
   @Override
   public String toString() {
@@ -82,7 +84,6 @@ public class Word {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  private Word() {}
   public Word(String word) {
     this.word = word;
     sortedIdx = -1;
