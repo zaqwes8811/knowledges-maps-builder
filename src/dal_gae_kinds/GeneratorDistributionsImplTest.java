@@ -2,7 +2,6 @@ package dal_gae_kinds;
 
 import business.math.GeneratorAnyDistribution;
 import business.math.GeneratorDistributionExc;
-import business.math.GeneratorDistributions;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class GeneratorDistributionsImplTest {
       real.add(new GeneratorAnyDistribution.DistributionElement(value, true));
     }
 
-    GeneratorDistributions generator = GeneratorDistributionsImpl.create(real);
+    ContentPage.GeneratorDistributions generator = GeneratorDistributionsImpl.create(real);
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)
       experiment.add(generator.getPosition());

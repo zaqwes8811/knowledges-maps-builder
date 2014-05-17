@@ -4,8 +4,9 @@ package dal_gae_kinds;
 //   Затем думать о распределении
 //   Затем думать об удалении.
 
+// http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#styleguide
+
 import business.math.GeneratorAnyDistribution;
-import business.math.GeneratorDistributions;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -108,5 +109,23 @@ public class ContentPage {
 
   public List<Key<ContentItem>> getItems() {
     return items;
+  }
+
+  /**
+   * About: Генерирует последовательность 0-N по заданному закону распределения.
+   * Позволяет исключать точки из генерируемой последовательности.
+    */
+  public interface GeneratorDistributions {
+
+    public Integer getPosition();
+
+    // TODO: Но нужно ли? Может сделать создание в конструкторе?
+    @Deprecated
+    public void reloadGenerator(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution);
+
+    public void disablePoint(Integer idx);
+    public void enablePoint(Integer idx);
+
+    // TODO: Получать распределение, иначе как узнаем как разрешить точку обратно.
   }
 }
