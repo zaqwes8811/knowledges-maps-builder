@@ -1,6 +1,6 @@
 package dal_gae_kinds;
 
-import business.mapreduce.MRContentPageBuilder;
+import business.mapreduce.ContentPageBuilder;
 import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -46,7 +46,7 @@ public class ContentPageTest {
       ArrayList<ContentItem> contentItems = getItems(text);
 
       // Last - Persist page
-      ContentPage page = new MRContentPageBuilder().build("Korra", contentItems);
+      ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
       ofy().save().entity(page).now();
     } catch (IOException e)  {
       assert false;
