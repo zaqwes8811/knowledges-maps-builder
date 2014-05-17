@@ -58,4 +58,14 @@ public class GeneratorDistributionsImpl implements GeneratorDistributions {
   private GeneratorDistributionsImpl(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution) {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
+
+  public void disableWord(Integer idx) {
+    // TODO: Проверка границ - это явно ошибка
+
+    // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
+  }
+
+  public void enableWord(Integer idx) {
+
+  }
 }
