@@ -1,9 +1,11 @@
 package hided.old;
 
 import business.math.SummatorLists;
-import common.InnerReuse;
+import common.Util;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -48,7 +50,7 @@ final public class SentencesReduce {
       timeForRead = countWords/RU_MEAN_SPEED_READ/60;  // часов
     } else {
       String nodeName = (String)task.get(NewMapper.IDX_NODE_NAME);
-      InnerReuse.print("Warning: Lang no used - " + lang + ". Node - " + nodeName);
+      Util.print("Warning: Lang no used - " + lang + ". Node - " + nodeName);
     }
 
     // Make results

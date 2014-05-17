@@ -5,9 +5,9 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import common.Utils;
-import hided.jobs_processors.ProcessorTargets;
+import common.Util;
 import hided.crosscuttings.AppConstants;
+import hided.jobs_processors.ProcessorTargets;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,7 +39,7 @@ final public class ImmutableIdxGetters {
       }
       // Если нашелся ключ
       if (occure) {
-        Utils.print(word + ", " + summary_frequency);
+        Util.print(word + ", " + summary_frequency);
         confluence_idx.add(word, summary_frequency);
       }
     }
@@ -47,7 +47,7 @@ final public class ImmutableIdxGetters {
 
   // Получить индекс со словами оставшимися после сжатия
   static public HashMap<String, String> get_rest_idx(String node) {
-    String sorted_freq_idx_json = Utils.file2string(
+    String sorted_freq_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
                 ProcessorTargets.getPathToIndex(),
@@ -60,7 +60,7 @@ final public class ImmutableIdxGetters {
 
   // Получить список единиц контанта узла
   static public List<String> get_list_sentences(String node) {
-    return Utils.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
+    return Util.file2list(Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
             ProcessorTargets.getPathToIndex(),
             AppConstants.CONTENT_FOLDER,
@@ -71,7 +71,7 @@ final public class ImmutableIdxGetters {
 
   // Получить список указателей на предложеия в которых встречалось слово.
   static public HashMap<String, List<Integer>> get_sentences_idx(String node) {
-    String sorted_freq_idx_json = Utils.file2string(
+    String sorted_freq_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
                 ProcessorTargets.getPathToIndex(),
@@ -83,7 +83,7 @@ final public class ImmutableIdxGetters {
   }
 
   static public HashMap<String, Integer> get_freq_idx(String node) {
-    String sorted_freq_idx_json = Utils.file2string(
+    String sorted_freq_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
                 ProcessorTargets.getPathToIndex(),
@@ -95,8 +95,8 @@ final public class ImmutableIdxGetters {
   }
 
   static public List<String> get_sorted_idx(String node) {
-    Utils.print(node);
-    String sorted_idx_json = Utils.file2string(
+    Util.print(node);
+    String sorted_idx_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
                 ProcessorTargets.getPathToIndex(),
@@ -108,7 +108,7 @@ final public class ImmutableIdxGetters {
   }
 
   static public HashMap<String, HashMap<String, String>> getStaticNotes() {
-    String metadata_static_notes_json = Utils.file2string(
+    String metadata_static_notes_json = Util.file2string(
         Joiner.on(AppConstants.PATH_SPLITTER)
             .join(
                 ProcessorTargets.getPathToIndex(),
@@ -136,11 +136,11 @@ final public class ImmutableIdxGetters {
     List<String> filtered_sorted_idx = get_base_filtered_sorted_idx(node);
     Map<String, Integer> freq_idx = get_freq_idx(node);
     for (String stem: filtered_sorted_idx) {
-      Utils.print(Joiner.on(",").join(stem, freq_idx.get(stem)));
+      Util.print(Joiner.on(",").join(stem, freq_idx.get(stem)));
     }
 
-    Utils.print(get_sorted_idx(node).size());
-    Utils.print(filtered_sorted_idx.size());
+    Util.print(get_sorted_idx(node).size());
+    Util.print(filtered_sorted_idx.size());
     //ImmutableIdxGetters.get_coupled_idx_for_node(node, nodes.subList(1, nodes.size()));
     //ImmutableIdxGetters.get_follow_data(node, nodes);//.subList(1, nodes.size()));
   }

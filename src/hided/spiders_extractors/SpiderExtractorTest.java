@@ -2,10 +2,10 @@ package hided.spiders_extractors;//package com.github.zaqwes8811.text_processor.
 
 
 import business.adapters_3rdparty.TikaWrapper;
-import common.InnerReuse;
-import hided.jobs_processors.ProcessorTargets;
+import common.Util;
 import hided.crosscuttings.AppConstants;
 import hided.crosscuttings.ThroughLevelBoundaryError;
+import hided.jobs_processors.ProcessorTargets;
 import org.junit.Test;
 
 import java.util.List;
@@ -30,7 +30,7 @@ public class SpiderExtractorTest {
             //break;  // DEVELOP
           } catch (ExtractorException e) {
             // Ошибка может произойти на каждой итерации, но пусть обработка предолжается
-            InnerReuse.print(e.getMessage());
+            Util.print(e.getMessage());
           }
         }
 

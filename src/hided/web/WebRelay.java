@@ -1,15 +1,8 @@
 package hided.web;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.ServletException;
- 
-import java.io.IOException;
-import common.InnerReuse;
-import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import com.google.gson.Gson;
-//import hided.dal.accessors_text_file_storage.ReaderStaticData;
+import common.Util;
+import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -17,7 +10,14 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-import java.util.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+//import hided.dal.accessors_text_file_storage.ReaderStaticData;
 
 
 public class WebRelay {
@@ -156,7 +156,7 @@ public class WebRelay {
       } else if (name_requester.equals("get_nodes")) {
         Gson gson = new Gson();
         json_response = gson.toJson(listNodes);
-        InnerReuse.print(json_response);
+        Util.print(json_response);
       } else {
         // No implemented
       }

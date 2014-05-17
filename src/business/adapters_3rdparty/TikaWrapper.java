@@ -3,7 +3,7 @@ package business.adapters_3rdparty;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import common.InnerReuse;
+import common.Util;
 import hided.crosscuttings.AppConstants;
 import hided.jobs_processors.ProcessorTargets;
 import hided.spiders_extractors.ExtractorException;
@@ -54,7 +54,7 @@ final public class TikaWrapper {
             inFileName));
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
-      InnerReuse.print("Process file: " + fullNameSourceFile);
+      Util.print("Process file: " + fullNameSourceFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();

@@ -1,17 +1,17 @@
 package medium_tests;
 
 
-import hided.old.NewMapper;
-import hided.old.SentencesMapper;
-import hided.old.SentencesReduce;
-import common.InnerReuse;
-import hided.jobs_processors.JobsFormer;
-import hided.jobs_processors.ProcessorTargets;
-import hided.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import common.Util;
+import hided.crosscuttings.AppConstants;
+import hided.jobs_processors.JobsFormer;
+import hided.jobs_processors.ProcessorTargets;
+import hided.old.NewMapper;
+import hided.old.SentencesMapper;
+import hided.old.SentencesReduce;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -62,9 +62,9 @@ public class SentencesApp {
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
-        InnerReuse.print(resultInJson);
+        Util.print(resultInJson);
 
-        InnerReuse.print("Notes write to file : " + path_for_save);
+        Util.print("Notes write to file : " + path_for_save);
 
       } catch (Throwable e) {
         closer.rethrow(e);
@@ -74,6 +74,6 @@ public class SentencesApp {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    InnerReuse.print("Done. Sentences level processing.");
+    Util.print("Done. Sentences level processing.");
   }
 }
