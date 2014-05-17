@@ -20,6 +20,7 @@ import org.javatuples.Pair;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 import static dal_gae_kinds.OfyService.ofy;
@@ -44,15 +45,19 @@ public class ContentPage {
   // MUST BE!
   private ContentPage() { }
 
-  // TODO: Notes!
+  // TODO: Добавить оценки текста
 
   // TODO: Как быть с полиморфизмом?
   @Load
   List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
 
   /// Own
-  // TODO: нужно сбрасывать запрещенные слова, чтобы грузились из хранилища. Хранить не нужно.
-  // TODO: для кеша из Guava - invalidate
+  public ContentPage(String name, List<ContentItem> items, List<Word> words) {
+    this.name = name;
+    for (final Word word: words) this.words.add(Key.create(word));
+    for (final ContentItem item: items) this.items.add(Key.create(item));
+  }
+
   @Unindex
   private final LoadingCache<Integer, Optional<Word>> wordsCache = CacheBuilder.newBuilder()
     .expireAfterAccess(10, TimeUnit.MINUTES)  // TODO: Make by size.
@@ -65,18 +70,15 @@ public class ContentPage {
       });
 
   public Pair<Optional<Word>, Optional<ArrayList<ContentItem>>> get(Integer position) {
-    /*try {
-      return graphs.get(key);
+    try {
+      // TODO: Получение элементов контекста
+      return Pair.with(wordsCache.get(position), Optional.<ArrayList<ContentItem>>absent());
     } catch (ExecutionException e) {
-      throw new OtherException(e.getCause());
-    }*/
-
-    // TODO: Check position
-    return Pair.with(Optional.<Word>absent(), Optional.<ArrayList<ContentItem>>absent());
+      throw new RuntimeException(e.getCause());
+    }
   }
 
-  // TODO: возможно нужен кеш. см. Guava cache.
-  // TODO: возвращать только частоты.
+  // About: Возвращать частоты, сортированные по убыванию.
   public ImmutableList<Integer> getSortedFrequencies() {
     // TODO: Отосортировать при выборке если можно
     List<Word> words = ofy().load().type(Word.class)
@@ -88,15 +90,9 @@ public class ContentPage {
 
     // Формируем результат
     ArrayList<Integer> distribution = new ArrayList<Integer>();
-    for (final Word word : words) distribution.add(word.getFrequency());
+    for (final Word word : words) distribution.add(word.getRawFrequency());
 
     return ImmutableList.copyOf(distribution);
-  }
-
-  public ContentPage(String name, List<ContentItem> items, List<Word> words) {
-    this.name = name;
-    for (Word word: words) this.words.add(Key.create(word));
-    for (ContentItem item: items) this.items.add(Key.create(item));
   }
 
   // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
@@ -122,4 +118,11 @@ public class ContentPage {
 
     // TODO: Получать распределение, иначе как узнаем как разрешить точку обратно.
   }
+
+  //@NotImmutable
+  //public final class Sample {
+  //  public final Optional<Word> word;
+  //  public final Optional<ArrayList<ContentItem>> items;
+  //  public Sample(Optional<Word> word, )
+  //}
 }
