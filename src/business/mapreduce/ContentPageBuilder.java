@@ -12,7 +12,7 @@ import java.util.Collections;
 
 import static dal_gae_kinds.OfyService.ofy;
 
-public class MRContentPageBuilder {
+public class ContentPageBuilder {
   public ContentPage build(String name, ArrayList<ContentItem> contentItems) {
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, ContentItem> wordHistogram = HashMultimap.create();
