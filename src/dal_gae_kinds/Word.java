@@ -20,13 +20,13 @@ public class Word {
   /// Persistent
   @Id Long id;
 
-  // TODO: TOTH: может хранится стем или пара-тройка слов.
+  // TODO: может хранится стем или пара-тройка слов.
   @Index
   String word;
 
-  // TODO: TOTH: возможно лучше хранить логарифм от нормированной частоты
+  // TODO: возможно лучше хранить логарифм от нормированной частоты
   @Index
-  Integer frequency;  // Сколько раз встретилось слово.
+  Integer rawFrequency;  // Сколько раз встретилось слово.
   @Load
   Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
 
@@ -34,27 +34,27 @@ public class Word {
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   @Index
-  Integer sortedIdx;  // 0-N в порядке возрастания по frequency
+  Integer sortedIdx;  // 0-N в порядке возрастания по rawFrequency
 
   /// Own
   @Override
   public String toString() {
-    return "("+word+", "+frequency.toString()+", "+sortedIdx.toString()+")";
+    return "("+word+", "+ rawFrequency.toString()+", "+sortedIdx.toString()+")";
   }
 
-  public void setFrequency(Integer value) {
-    frequency = value;
+  public void setRawFrequency(Integer value) {
+    rawFrequency = value;
   }
 
-  public Integer getFrequency() {
-    return frequency;
+  public Integer getRawFrequency() {
+    return rawFrequency;
   }
 
   public static Word create(String wordValue, Collection<ContentItem> items) {
     Word word = new Word(wordValue);
 
     // Частоту берем из списка ссылок.
-    word.setFrequency(items.size());
+    word.setRawFrequency(items.size());
 
     // Ссылки должны быть уникальными
     Set<ContentItem> itemSet = new HashSet<ContentItem>();
@@ -97,7 +97,7 @@ public class Word {
     // In "Effective Java"
     @Override
     public int compare(Word o1, Word o2) {
-      return o1.getFrequency().compareTo(o2.getFrequency());
+      return o1.getRawFrequency().compareTo(o2.getRawFrequency());
     }
   }
 
