@@ -75,6 +75,7 @@ public class ContentPage {
   private ContentPage() { }
 
   // TODO: возможно нужен кеш. см. Guava cache.
+  // TODO: возвращать только частоты.
   public ImmutableList<GeneratorAnyDistribution.DistributionElement> getStatistic() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
@@ -88,7 +89,7 @@ public class ContentPage {
       new ArrayList<GeneratorAnyDistribution.DistributionElement>();
     for (Word word : words) {
       // нужны частоты для распределения
-      // TODO: true -> enabled
+      // TODO: true -> enabled - Нет! хранится это будет внутри распредления, а не в слове
       GeneratorAnyDistribution.DistributionElement elem =
         new GeneratorAnyDistribution.DistributionElement(word.getFrequency(), true);
       distribution.add(elem);
