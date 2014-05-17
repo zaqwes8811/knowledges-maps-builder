@@ -105,17 +105,6 @@ public class ContentPage {
 
   // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
 
-  public ImmutableList<GeneratorAnyDistribution.DistributionElement> disableWord(Integer idx) {
-    // TODO: Проверка границ - это явно ошибка
-
-    // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-    return null;
-  }
-
-  public ImmutableList<GeneratorAnyDistribution.DistributionElement> enableWord(Integer idx) {
-    return null;
-  }
-
   private void setItems(List<ContentItem> list) {
     for (ContentItem item: list) items.add(Key.create(item));
   }
