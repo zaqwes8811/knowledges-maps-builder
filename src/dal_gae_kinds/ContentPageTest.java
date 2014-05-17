@@ -1,7 +1,6 @@
 package dal_gae_kinds;
 
 import business.mapreduce.MRContentPageBuilder;
-import business.math.GeneratorAnyDistribution;
 import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -145,8 +144,7 @@ public class ContentPageTest {
     ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().get();
 
     /// Queries
-    ImmutableList<GeneratorAnyDistribution.DistributionElement> distribution =
-      page.getSortedFrequencies();
+    ImmutableList<Integer> distribution = page.getSortedFrequencies();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
