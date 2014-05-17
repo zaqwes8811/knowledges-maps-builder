@@ -151,8 +151,8 @@ public final class ImmutableBECSave {
       String fullFilename = Joiner.on(GlobalConstants.PATH_SPLITTER).join("statistic-data", "vocabularity-folded.txt");
       //Optional<ImmutableBECParser> cash = ImmutableBECParser.getDefaultCashInstance();
       //   Кажется обращение через cash не верное
-      //Utils.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(1110));
-      //Utils.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(110));
+      //Util.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(1110));
+      //Util.print(ImmutableBECParser.getDefaultCashInstance().get().getWordByIdx(110));
       ImmutableList<String> content = Util.fileToList(fullFilename);
 
       ImmutableBECSave cash = ImmutableBECSave.create(content);
@@ -160,7 +160,7 @@ public final class ImmutableBECSave {
     } catch (IOException e) {
       Util.print(e.getMessage());
       //} catch (VParserException e) {
-      //  Utils.print(e.getMessage());
+      //  Util.print(e.getMessage());
     } catch (IllegalStateException e) {
       Util.print(e.getMessage());
     }

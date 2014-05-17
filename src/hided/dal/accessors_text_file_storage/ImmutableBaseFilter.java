@@ -1,6 +1,6 @@
 package hided.dal.accessors_text_file_storage;
 
-import common.Utils;
+import common.Util;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,7 +17,7 @@ public final class ImmutableBaseFilter {
 
   static {
     String pathToFilterFile = "C:/Users/кей/Dropbox/rpts/onto/key-words-base-filter.txt";
-    BASE_FILTER = new HashSet<String>(Utils.file2list(pathToFilterFile));
+    BASE_FILTER = new HashSet<String>(Util.file2list(pathToFilterFile));
   }
 
   static boolean isContentStem(String stem) {

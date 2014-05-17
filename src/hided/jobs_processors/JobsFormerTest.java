@@ -1,6 +1,6 @@
 package hided.jobs_processors;
 
-import common.InnerReuse;
+import common.Util;
 import org.junit.Test;
 
 /**
@@ -14,7 +14,7 @@ public class JobsFormerTest {
 
   @Test
   public void testDevelop() {
-    InnerReuse.print(JobsFormer.getJobs());
+    Util.print(JobsFormer.getJobs());
 
   }
 }

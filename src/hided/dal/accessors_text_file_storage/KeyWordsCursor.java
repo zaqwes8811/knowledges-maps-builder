@@ -1,10 +1,10 @@
 package hided.dal.accessors_text_file_storage;
 
-import hided.old.SentencesReduce;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import common.Utils;
+import common.Util;
 import hided.crosscuttings.AppConstants;
+import hided.old.SentencesReduce;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,11 +30,11 @@ public class KeyWordsCursor {
     for (String node: nodes) {
       Double time_to_read = cut_to(Double.parseDouble(
           notes.get(node).get(SentencesReduce.NOTE_MEAN_TIME_FOR_READ)));
-      Utils.print(Joiner.on(", ")
-          .join(
-              (long) Math.floor(time_to_read),
-              (long) Math.floor((time_to_read - Math.floor(time_to_read)) * 60),
-              node));
+      Util.print(Joiner.on(", ")
+        .join(
+          (long) Math.floor(time_to_read),
+          (long) Math.floor((time_to_read - Math.floor(time_to_read)) * 60),
+          node));
       List<String> page = new ArrayList<String>();
       page.add("<!DOCTYPE html><html><head>" +
         "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">" +
@@ -98,7 +98,7 @@ public class KeyWordsCursor {
       String rptFileName = Joiner.on(AppConstants.PATH_SPLITTER)
         .join("rpts", "key_words",node+".html");
       try {
-        Utils.list2file(page, rptFileName);
+        Util.list2file(page, rptFileName);
       } catch (IOException e) {
         e.printStackTrace();
       }
