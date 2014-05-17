@@ -139,8 +139,8 @@ public class ContentPageTest {
   }
 
   @Test
-  @Deprecated
   public void testGetDistribution() throws IOException {
+    // Очень медленно!!
     ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().get();
 
     /// Queries
