@@ -146,7 +146,7 @@ public class ContentPageTest {
 
     /// Queries
     ImmutableList<GeneratorAnyDistribution.DistributionElement> distribution =
-      page.getStatistic();
+      page.getSortedFrequencies();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
