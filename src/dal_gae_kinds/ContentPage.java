@@ -76,7 +76,7 @@ public class ContentPage {
 
   // TODO: возможно нужен кеш. см. Guava cache.
   // TODO: возвращать только частоты.
-  public ImmutableList<GeneratorAnyDistribution.DistributionElement> getStatistic() {
+  public ImmutableList<GeneratorAnyDistribution.DistributionElement> getSortedFrequencies() {
     List<Word> words = ofy().load().type(Word.class)
       .filterKey("in", this.words).list();
 
