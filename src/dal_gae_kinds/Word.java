@@ -11,9 +11,6 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by zaqwes on 5/9/14.
- */
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class Word {
@@ -82,7 +79,7 @@ public class Word {
   // Идея на этапе mapreduce передавать в качестве ключей объекты слов, и пользоваться
   // ими как ключами. Но слова имеют ссылки, то сразу большие проблемы с эквивалетностью!
   // На этапе формирования индекса может все не так просто, но потом метод equals будет работать очень странно.
-  // TODO:Stop it!
+  // TODO: Stop it!
   // equals()
   // hashCode() - need it?
   private Word() {}
