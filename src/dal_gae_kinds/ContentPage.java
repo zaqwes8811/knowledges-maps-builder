@@ -1,10 +1,4 @@
 package dal_gae_kinds;
-// Tasks:
-//   Сперва подключить кеш,
-//   Затем думать о распределении
-//   Затем думать об удалении.
-
-// http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#styleguide
 
 import business.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
@@ -25,8 +19,16 @@ import java.util.concurrent.TimeUnit;
 
 import static dal_gae_kinds.OfyService.ofy;
 
+// Tasks:
+//   Сперва подключить кеш,
+//   Затем думать о распределении
+//   Затем думать об удалении.
+
+// http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html#styleguide
+
 /**
- * About: Отражает один элемент данный пользователя, например, один файл субтитров.
+ * About:
+ *   Отражает один элемент данный пользователя, например, один файл субтитров.
  */
 @NotThreadSafe
 @Entity
