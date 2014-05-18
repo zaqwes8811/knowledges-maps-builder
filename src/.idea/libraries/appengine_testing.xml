@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="appengine-testing">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/com/google/appengine/repackaged/com/google/common/base/super" />
+    </SOURCES>
+  </library>
+</component>
