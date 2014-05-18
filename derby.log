@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 28 17:39:50 MSK 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0145-08eb-008e-000000b472f0 
+on database directory D:\simpleDb with class loader sun.misc.Launcher$AppClassLoader@9cab16 
+Loaded from file:/D:/home/smart-vocabulary-cards/jlib/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_43-b01
+user.dir=D:\home\smart-vocabulary-cards
+os.name=Windows 8
+os.arch=x86
+os.version=6.2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
