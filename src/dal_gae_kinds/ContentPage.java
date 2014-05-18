@@ -88,8 +88,7 @@ public class ContentPage {
   // About: Возвращать частоты, сортированные по убыванию.
   public ImmutableList<Integer> getSortedFrequencies() {
     // TODO: Отосортировать при выборке если можно
-    List<Word> words = ofy().load().type(Word.class)
-      .filterKey("in", this.words).list();
+    List<Word> words = ofy().load().type(Word.class).filterKey("in", this.words).list();
 
     // Сортируем
     Collections.sort(words, Word.createFreqComparator());
