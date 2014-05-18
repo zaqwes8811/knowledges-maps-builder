@@ -2,12 +2,12 @@ package DbC;
 
 import org.junit.Test;
 
-/**
- * Created by zaqwes on 5/18/14.
- */
+// On cofoja in IDEA http://java.dzone.com/articles/using-google-contracts-java
+
 public class ArrayListStackTest {
   @Test
   public void testPop() throws Exception {
-
+    Stack<Integer> stack = new ArrayListStack<Integer>();
+    stack.pop();
   }
 }
