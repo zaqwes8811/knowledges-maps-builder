@@ -1,7 +1,7 @@
 package business.mapreduce;
 
-import com.google.common.collect.Multiset;
-import com.google.common.hash.HashFunction;
+import business.nlp.SentenceTokenizer;
+import dal_gae_kinds.ContentItem;
 import org.checkthread.annotations.NotThreadSafe;
 
 import java.util.List;
@@ -14,21 +14,21 @@ import java.util.List;
 @NotThreadSafe
 public class CounterMapper {
   private final CountReducer reducer_;
-  private final HashFunction hashFunction_;
-  public CounterMapper(CountReducer reducer, HashFunction hashFunction) {
+  public CounterMapper(CountReducer reducer) {
     reducer_ = reducer;
-    hashFunction_ = hashFunction;
   }
 
-  private void emit(String key, Integer value) {
+  private void emit(String key, ContentItem value) {
     reducer_.reduce(key, value);
   }
 
-  public void map(List<String> text) {
-    for (String item : text) {
-      Integer value = hashFunction_.newHasher().putString(item).hash().asInt();
-      String key = item;
-      emit(key, value);
+  public void map(List<ContentItem> contentItems) {
+    SentenceTokenizer tokenizer = new SentenceTokenizer();
+    for (ContentItem item : contentItems) {
+      List<String> words = tokenizer.getWords(item.get());
+      for (String word: words)
+        // TODO: Сделать все буквы маленькими. Здесь?
+        emit(word, item);
     }
   }
 }

@@ -2,14 +2,13 @@
   <library name="checkthread-annotations-1.0.9">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/checkthread-annotations-1.0.9.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/commons-lang3-3.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/gson-2.2.3.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/guava-14.0.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/commons-lang3-3.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/javatuples-1.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/jchart2d-3.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/guava-14.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/gson-2.2.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/jcip-annotations-1.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/jetty-server-7.0.2.v20100331.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/jetty-all-7.0.2.v20100331.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/junit-4.11.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/jython-2.5.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/mockito-all-1.9.5.jar!/" />
@@ -17,10 +16,23 @@
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/snakeyaml-1.12.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/tika-core-1.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/tika-parsers-1.3.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/eclipselink/jlib/jpa/javax.persistence_1.0.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/out/test/smart-vocabulary-cards/war/WEB-INF/objectify-3.1/javadoc" />
+      <root url="file://$PROJECT_DIR$/war/WEB-INF/objectify-3.1/javadoc" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../third_party/java/lib/mockito-all-1.9.5.jar!/" />
+      <root url="file://$PROJECT_DIR$/out/test/smart-vocabulary-cards/src" />
+      <root url="file://$PROJECT_DIR$/out/test/smart-vocabulary-cards/war/WEB-INF/objectify-3.1/src" />
+      <root url="file://$PROJECT_DIR$/out/test/smart-vocabulary-cards/templates/web-template/src" />
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/war/WEB-INF/objectify-3.1/src" />
+      <root url="file://$PROJECT_DIR$/sandbox/src" />
+      <root url="file://$PROJECT_DIR$/3rdparty/src" />
+      <root url="file://$PROJECT_DIR$/templates/web-template/src" />
     </SOURCES>
   </library>
 </component>
