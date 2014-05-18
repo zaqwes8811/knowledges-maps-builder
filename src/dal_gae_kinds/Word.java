@@ -25,11 +25,11 @@ public class Word {
   @Index
   Integer rawFrequency;  // Сколько раз встретилось слово.
 
-  // TODO: Как откешировать? Какой допустимый период между запросами? https://developers.google.com/appengine/pricing
+  // TODO: Как откешировать? Какой допустимый период между запросами?
+  // https://developers.google.com/appengine/pricing
+  // Вроде бы нет ограничения между запросами.
   @Load
   Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
-
-  //ArrayList<Ref<ContentItem>> refs;
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   @Index
