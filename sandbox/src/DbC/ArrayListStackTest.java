@@ -9,6 +9,8 @@ import org.junit.Test;
 //
 // еще реализация DbC
 // http://docs.oracle.com/javase/6/docs/technotes/guides/language/assert.html#usage-conditions
+//
+// http://youtrack.jetbrains.com/issue/IDEA-117888
 
 public class ArrayListStackTest {
   @Test
