@@ -49,6 +49,7 @@ final public class Util {
     }
     return null;   // TODO(zaqwes): BAD!!
   }
+
   static public List<String> file2list(String filename) {
     List<String> result = new ArrayList<String>();
     try {
