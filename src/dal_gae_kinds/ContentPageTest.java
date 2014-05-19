@@ -28,6 +28,8 @@ import java.util.List;
 import static dal_gae_kinds.OfyService.ofy;
 import static org.junit.Assert.*;
 
+
+// Это таки юнитест, т.к. работает с фейковой базой данных
 public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());

@@ -31,6 +31,7 @@ import java.util.ArrayList;
 @Entity
 public class GeneratorDistributionsImpl implements ContentPage.GeneratorDistributions {
   /// Persist
+  // TODO: Кто управляет временем жизни в storage?
   @Id
   Long id;
 

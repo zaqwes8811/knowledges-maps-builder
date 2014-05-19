@@ -34,6 +34,9 @@ import static dal_gae_kinds.OfyService.ofy;
 @Entity
 public class ContentPage {
   /// Persist
+  // TODO: http://www.oracle.com/technetwork/articles/marx-jpa-087268.html
+  // TODO: скрыть персистентность в этом классе, пусть сам себя сохраняет и удаляет.
+  // не хочется выносить ofy()... выше. Но может быть, если использовать класс пользователя, то он может.
   @Id
   Long id;
   @Index
@@ -54,7 +57,10 @@ public class ContentPage {
   List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
 
   /// Own
+  //@Require("name != null")
   public ContentPage(String name, List<ContentItem> items, List<Word> words) {
+    if (name == null)
+      throw new IllegalArgumentException("Broken precondition on building page.");
     this.name = name;
     for (final Word word: words) this.words.add(Key.create(word));
     for (final ContentItem item: items) this.items.add(Key.create(item));
