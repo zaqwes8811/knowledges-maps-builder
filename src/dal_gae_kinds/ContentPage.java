@@ -1,6 +1,5 @@
 package dal_gae_kinds;
 
-import business.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -57,7 +56,11 @@ public class ContentPage {
   List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
 
   /// Own
-  //@Require("name != null")
+  // Странице никчему знать про детали интерфейса генераторов
+
+  // TODO: как быть с аргументами?
+  // https://code.google.com/p/cofoja/wiki/HowtoWriteGoodContracts
+  //@Requires("name != null")  // пока без проверки, но возможно удобно - визуально видно
   public ContentPage(String name, List<ContentItem> items, List<Word> words) {
     if (name == null)
       throw new IllegalArgumentException("Broken precondition on building page.");
@@ -113,23 +116,5 @@ public class ContentPage {
 
   public List<Key<ContentItem>> getItems() {
     return items;
-  }
-
-  /**
-   * About: Генерирует последовательность 0-N по заданному закону распределения.
-   * Позволяет исключать точки из генерируемой последовательности.
-    */
-  public interface GeneratorDistributions {
-
-    public Integer getPosition();
-
-    // TODO: Но нужно ли? Может сделать создание в конструкторе?
-    @Deprecated
-    public void reloadGenerator(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution);
-
-    public void disablePoint(Integer idx);
-    public void enablePoint(Integer idx);
-
-    // TODO: Получать распределение, иначе как узнаем как разрешить точку обратно.
   }
 }

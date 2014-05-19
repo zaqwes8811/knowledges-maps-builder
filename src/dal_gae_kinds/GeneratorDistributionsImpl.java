@@ -29,7 +29,7 @@ import java.util.ArrayList;
 //   думаю она и должна оставаться управляемой извне.
 @NotThreadSafe
 @Entity
-public class GeneratorDistributionsImpl implements ContentPage.GeneratorDistributions {
+public class GeneratorDistributionsImpl implements GeneratorDistributions {
   /// Persist
   // TODO: Кто управляет временем жизни в storage?
   @Id
@@ -68,6 +68,12 @@ public class GeneratorDistributionsImpl implements ContentPage.GeneratorDistribu
 
   @Override
   public void enablePoint(Integer idx) {
+
+  }
+
+  // TODO: Impl.
+  private void persist() {
+    // Объект должен быть уже сохраненным
 
   }
 }
