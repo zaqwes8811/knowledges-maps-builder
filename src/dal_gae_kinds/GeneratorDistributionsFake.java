@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by zaqwes on 5/15/14.
  */
 @Entity
-public class GeneratorDistributionsFake implements ContentPage.GeneratorDistributions {
+public class GeneratorDistributionsFake implements GeneratorDistributions {
   /// Persist
   @Id
   Long id;
