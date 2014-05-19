@@ -23,7 +23,7 @@ public class GeneratorDistributionsImplTest {
       real.add(new GeneratorAnyDistribution.DistributionElement(value, true));
     }
 
-    ContentPage.GeneratorDistributions generator = GeneratorDistributionsImpl.create(real);
+    GeneratorDistributions generator = GeneratorDistributionsImpl.create(real);
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)
       experiment.add(generator.getPosition());
