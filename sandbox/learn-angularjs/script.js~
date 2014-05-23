@@ -17,7 +17,7 @@ scotchApp.controller('mainController', function($scope) {
 // About: Данные по странице. Могут доформировываться дополнительными запросами.
 //   Фактически json данные.
 function PageData() {
-  var self = this;
+  var self = this;  // по-моему так лечятся некоторые проблемы с this
   this.id = 0;
   this.name = "noName";
   
