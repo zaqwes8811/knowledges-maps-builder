@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html  http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating-->
   <!DOCTYPE html>
   <html ng-app="scotchApp">
   <head>
@@ -9,11 +9,12 @@
 
     <!-- SPELLS -->
     <!-- load angular via CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
     <script src="script.js"></script>
   </head>
-  <body>
 
+  <body ng-controller="mainController">
     <!-- HEADER AND NAVBAR -->
     <header>
       <nav class="navbar navbar-default">
@@ -33,10 +34,9 @@
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main">
-        {{message}}
-
-      <!-- angular templating -->
-      <!-- this is where content will be injected -->
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
 
     </div>
 
