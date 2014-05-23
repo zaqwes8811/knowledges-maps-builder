@@ -17,7 +17,7 @@
 
   <body ng-controller="mainController">
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <button ng-click="changeName" type="button" class="btn btn-success">Success</button>
+    <button ng-click="changeName()" type="button" class="btn btn-success">Success</button>
     <div id="main">
       {{page.name}}
     </div>
