@@ -1,15 +1,20 @@
-package web_view;
+package medium_tests;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+
 import common.Util;
 import hided.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
+import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHandler;
+
 import hided.controllers.web_wrapper.BuilderControllers;
 import hided.controllers.web_wrapper.ContainerNodeControllers;
 import hided.crosscuttings.configurator.GlobalConfigurator;
@@ -17,6 +22,41 @@ import hided.crosscuttings.configurator.ConfigurationFileIsCorrupted;
 import hided.crosscuttings.configurator.NoFoundConfigurationFile;
 
 public class WebRelayApp {
+  //private static Logger log = Logger.getLogger(AppContainer.class);
+  public static void main2(String[] args) throws Exception {
+    //BasicConfigurator.configure();
+
+    // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
+    System.out.println("Working Directory = " +
+        System.getProperty("user.dir"));
+
+    Server server = new Server();
+    SelectChannelConnector connector = new SelectChannelConnector();
+    connector.setPort(8080);
+    server.addConnector(connector);
+ 
+    // Подключаем корень?
+    ResourceHandler resource_handler = new ResourceHandler();
+    resource_handler.setDirectoriesListed(true);
+    resource_handler.setWelcomeFiles(new String[]{ "index.html" });
+    resource_handler.setResourceBase("apps/views.views");
+
+
+    // Список обработчиков?
+    HandlerList handlers = new HandlerList();
+    ServletHandler handler = new ServletHandler();
+    handlers.setHandlers(new Handler[] { resource_handler/*, new DefaultHandler()*/, handler });
+    // ! если не находи index.html Открывает вид папки!!
+    
+    // Подключаем к серверу
+    server.setHandler(handlers);
+
+    // Регистрируем сервлет?
+    handler.addServletWithMapping("AppContainer$App", "/app");
+    server.start();
+    server.join();
+  }
+  
   // About:
   //   For local Jetty
   public static HandlerList buildHandlers() {
