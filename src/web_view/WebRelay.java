@@ -1,4 +1,4 @@
-package hided.web;
+package web_view;
 
 import com.google.gson.Gson;
 import common.Util;

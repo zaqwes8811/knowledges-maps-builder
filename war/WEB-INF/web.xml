@@ -7,7 +7,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<servlet>
 		<servlet-name>Package</servlet-name>
-		<servlet-class>hided.web.ServletGetterOnWordData</servlet-class>
+		<servlet-class>web_view.ServletGetterOnWordData</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Package</servlet-name>
