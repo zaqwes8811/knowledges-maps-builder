@@ -1,52 +1,75 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/leafs.css">
-    <link rel="stylesheet" href="css/layers.css">
-    <link rel="stylesheet" href="css/inner-reuse.css">
-    <link rel="stylesheet" href="css/sliders.css">
-   
-    <!--script src="js/prototype.js"></script-->
-    <script src="js/third_party/underscore.js"></script>
-    <script src="js/third_party/jquery.min.js"></script>
-    <script src="js/reuse.js"></script>
-    <script src="js/cards.js"></script>
-  </head>
-  <body onload="init()">
-    <!--div id="translate" class="card-container">
-        <span class="text-contents">Translate not implemented</span>
-    </div-->
+<!doctype html>
+<html ng-app="phonecatApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
     
-    <div class="card-word-container">     
-      <!-- Тюнеры по карточкам -->
-      <div class="card-tuner-base card-tuner-left-position">
-        <div class="circle-parent card-circle-parent-position">
-          <div class="circle-child">
-            <div class="triangle-inner-left"></div>
-          </div>
-        </div>
-      </div>
-      <div class="card-tuner-base card-tuner-right-position">
-        <div class="circle-parent card-circle-parent-position">
-          <div class="circle-child">
-            <div class="triangle-inner-right"></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Стопка листов-->
-      <div class="leafs-container"></div>
-    </div>
+    <script src="controllers.js" charset="UTF-8"></script>
     
-    <div id="content" class="card-container"></div>
-    <p class="slide">
-        <a href="" class="btn-slide">
-            <span class="text-fonter">Open context</span>
-        </a>
-    </p> 
+    <link rel="stylesheet" href="aj.css">
+</head>
+<body ng-controller="PhoneListCtrl">
+  <div>
+    Current space:
+    <select ng-model="orderProp">
+      <option value="age">BEC-dictonary</option>
+    </select>
     
-  </body>
+    <button ng-click="ni()">
+      Accept
+    </button>
+    
+    Search: <input ng-model="query">
+    
+    <button ng-click="ni()">
+      My progress
+    </button>
+    
+    <button ng-click="ni()">
+      Add new space
+    </button>
+    <hr>
+
+    <!-- Own word -->
+    <button ng-click="getNewWord()">
+      Get new word
+    </button>
+    <span class="word_style" ng-model="word"> {{word}}</span>
+    
+    <hr>
+    <button ng-click="showSamples()">
+      Context samples
+    </button>
+    
+    <button ng-click="showTranslates()">
+      Translates
+    </button>
+
+    <!-- Addition data -->
+    <br>
+    <label>
+    <span ng-hide="translateHided">Translates</span> 
+    <span ng-hide="contextSamplesHided">Context samples</span>
+    filter:
+    </label> 
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    Sort by:
+    <select ng-model="sorter">
+      <option value="name">Nothing</option>
+    </select>
+
+    <!-- Translates -->
+    <ul ng-hide="translateHided">
+      <li ng-repeat="translate in translates | filter:yourName">
+        {{translate}}
+      </li>
+    </ul>
+    
+    <!-- Context samples -->
+    <ul ng-hide="contextSamplesHided">
+      <li ng-repeat="sample in samples | filter:yourName">
+        {{sample}}
+      </li>
+    </ul>  
+  </div>
+</body>
 </html>
