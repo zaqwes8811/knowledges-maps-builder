@@ -6,10 +6,10 @@ var scotchApp = angular.module('scotchApp', []);
 scotchApp.controller('mainController', function($scope) {
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good I look!';
-  $scope.page = new PageData();
+  $scope.visiblePage = new PageData();
 
   $scope.changeName = function() {
-    $scope.page.name = "hello";
+    $scope.visiblePage.name = "hello";
   };
 });
 
