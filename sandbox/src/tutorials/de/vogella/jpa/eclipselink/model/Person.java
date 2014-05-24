@@ -15,7 +15,7 @@ import javax.persistence.Transient;
 public class Person {
   @Id
   @GeneratedValue(strategy = GenerationType.TABLE)
-  private String id;
+  private String id;  // TODO: Ругается нуклеос
   private String firstName;
   private String lastName;
 
