@@ -11,7 +11,7 @@ public class Words {
   private Integer id;
   private String value;
 
-  private final Set<Sentences> sentences = new HashSet<Sentences>();
+  //private Set<Sentences> sentences = new HashSet<Sentences>();
 
   public int getId() {
     return id;
@@ -29,8 +29,8 @@ public class Words {
     this.value = description;
   }
 
-  @OneToMany
-  public Set<Sentences> getSentences() {
-    return sentences;
-  }
+  //@OneToMany
+  //public Set<Sentences> getSentences() {
+  //  return sentences;
+  //}
 }
