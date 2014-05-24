@@ -45,7 +45,7 @@ public class WordsMediumTest {
 
     Sentences sentence = new Sentences();
     sentence.setSentence("both foul and fair");
-    word.getSentences().add(sentence);
+    //word.getSentences().add(sentence);
     em.persist(sentence);
     em.persist(word);  // TODO: еще раз? Да похоже мы к слову что-то добавили
 
