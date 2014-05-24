@@ -1,6 +1,0 @@
-GAE
-http://habrahabr.ru/post/115517/
-http://habrahabr.ru/post/115731/
-
-Limits
-https://developers.google.com/appengine/docs/quotas?hl=ru
