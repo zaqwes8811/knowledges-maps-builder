@@ -19,10 +19,11 @@ import hided.crosscuttings.configurator.GlobalConfigurator;
 
 import java.io.IOException;
 
-@NotThreadSafe
-public class GetterSingleWordDataServlet extends HttpServlet {
+@NotThreadSafe  // TODO: Bad it!
+public class FakeGetterSingleWordDataServlet extends HttpServlet {
   private ContainerNodeControllers CONTAINER_;
-  private final String PATH_TO_CONFIGURATION_FILE_ = "my.yaml";
+  private final String PATH_TO_CONFIGURATION_FILE_ = "own-app.yaml";
+  
   @Override
   public void doGet(
   		HttpServletRequest request,
