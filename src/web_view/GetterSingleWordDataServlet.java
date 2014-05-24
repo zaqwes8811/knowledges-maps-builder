@@ -20,7 +20,7 @@ import hided.crosscuttings.configurator.GlobalConfigurator;
 import java.io.IOException;
 
 @NotThreadSafe
-public class ServletGetterOnWordData extends HttpServlet {
+public class GetterSingleWordDataServlet extends HttpServlet {
   private ContainerNodeControllers CONTAINER_;
   private final String PATH_TO_CONFIGURATION_FILE_ = "my.yaml";
   @Override
