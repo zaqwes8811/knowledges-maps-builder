@@ -29,7 +29,7 @@ import java.util.ArrayList;
 //   думаю она и должна оставаться управляемой извне.
 @NotThreadSafe
 @Entity
-public class DistributionsImpl implements Distributions {
+public class DistributionGenImpl implements DistributionGen {
   @Id
   Long id;
 
@@ -41,8 +41,8 @@ public class DistributionsImpl implements Distributions {
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
-  public static DistributionsImpl create(ArrayList<DistributionElement> distribution) {
-    return new DistributionsImpl(distribution);
+  public static DistributionGenImpl create(ArrayList<DistributionElement> distribution) {
+    return new DistributionGenImpl(distribution);
   }
 
   @Override
@@ -55,7 +55,7 @@ public class DistributionsImpl implements Distributions {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
-  private DistributionsImpl(ArrayList<DistributionElement> distribution) {
+  private DistributionGenImpl(ArrayList<DistributionElement> distribution) {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
