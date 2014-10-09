@@ -9,6 +9,9 @@ public class OfyService {
     factory().register(ContentItem.class);
     factory().register(ContentPage.class);
     factory().register(WordItem.class);
+
+    //factory().register(DistributionGen.class);  // интерфейс не регистрируется
+    factory().register(DistributionGenImpl.class);
     //...etc
   }
 
