@@ -2,7 +2,7 @@ package business.nlp;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
-import common.Util;
+import common.Tools;
 import org.junit.Test;
 import org.tartarus.snowball.ext.russianStemmer;
 
@@ -485,7 +485,7 @@ public class CompressorsNITest {
           key,
           test.get(key)));
     } */
-    Util.print(compressed);
+    Tools.print(compressed);
 
   }
 }

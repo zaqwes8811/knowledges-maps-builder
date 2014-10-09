@@ -1,7 +1,7 @@
 package medium_tests;
 
-import medium_tests.SentencesApp;
 import org.junit.Test;
+
 
 /**
  * Created with IntelliJ IDEA.

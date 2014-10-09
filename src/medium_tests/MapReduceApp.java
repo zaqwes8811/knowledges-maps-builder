@@ -1,20 +1,20 @@
 package medium_tests;
 
 
-import hided.old.JobsFormer;
-import hided.old.OldMapper;
-import hided.old.OldReducer;
-import hided.GlobalConstants;
-import hided.ProcessorTargets;
+import common.Tools;
+import frozen.old.JobsFormer;
+import frozen.old.OldMapper;
+import frozen.old.OldReducer;
+import frozen.GlobalConstants;
+import frozen.ProcessorTargets;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.*;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import common.Util;
-import hided.crosscuttings.CrosscuttingsException;
-//import hided.dal.accessors_text_file_storage.IdxAccessor;
-import hided.spiders_extractors.ImmutableBECParser;
+import frozen.crosscuttings.CrosscuttingsException;
+//import frozen.dal.accessors_text_file_storage.IdxAccessor;
+import frozen.spiders_extractors.ImmutableBECParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -69,9 +69,9 @@ public class MapReduceApp {
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
-        Util.print(resultInJson);
+        Tools.print(resultInJson);
 
-        Util.print("Notes write to file : "+path_for_save);
+        Tools.print("Notes write to file : "+path_for_save);
 
       } catch (Throwable e) {
         closer.rethrow(e);
@@ -81,7 +81,7 @@ public class MapReduceApp {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    Util.print("Done. Sentences level processing.");
+    Tools.print("Done. Sentences level processing.");
     */
   }
 
@@ -93,7 +93,7 @@ public class MapReduceApp {
       jobs = Optional.of(JobsFormer.getJobs());
 
     } catch (CrosscuttingsException e) {
-      Util.print(e.getMessage());
+      Tools.print(e.getMessage());
 
     }
     // Map Stage
@@ -124,7 +124,7 @@ public class MapReduceApp {
             GlobalConstants.COMPRESSED_IDX_FOLDER,
             nodeResult.get(OldMapper.IDX_NODE_NAME));
       } catch (CrosscuttingsException e) {
-        Util.print(e.getMessage());
+        Tools.print(e.getMessage());
         pathToNode = "";
       }
 
@@ -188,7 +188,7 @@ public class MapReduceApp {
       final String pathToAppFolder = "";//GlobalConfigurator.getPathToAppFolder();
       // Begin "MapReduce" stage
       ImmutableList<String> content =
-          Util.fileToList(
+          Tools.fileToList(
             Joiner.on(GlobalConstants.PATH_SPLITTER)
               .join("raw-dicts", "vocabularity-folded.txt"));
       ImmutableBECParser cash = ImmutableBECParser.create(content);
@@ -216,7 +216,7 @@ public class MapReduceApp {
       }
 
       // Сохраняем список единиц контента
-      Util.listToFile(sentences, Joiner.on(GlobalConstants.PATH_SPLITTER)
+      Tools.listToFile(sentences, Joiner.on(GlobalConstants.PATH_SPLITTER)
         .join(pathToAppFolder, "bec-node", "content.txt"));
 
       // Make frequency index. Пока плохо - словарь грязный.
@@ -244,11 +244,11 @@ public class MapReduceApp {
       //IdxAccessor.saveListObjects(tmp);
 
     } catch (IOException e) {
-      Util.print(e.getMessage());
+      Tools.print(e.getMessage());
     } catch (IllegalStateException e) {
-      Util.print(e.getMessage());
+      Tools.print(e.getMessage());
     } /*catch (CrosscuttingsException e) {
-      Util.print(e.getMessage());
+      Tools.print(e.getMessage());
     } */
   }
 }

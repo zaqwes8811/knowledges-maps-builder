@@ -4,11 +4,11 @@ package business.evaluators;
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import common.Util;
-import hided.crosscuttings.AppConstants;
-import hided.dal.accessors_text_file_storage.ImmutableIdxGetters;
-import hided.jobs_processors.ProcessorTargets;
-import hided.old.SentencesReduce;
+import common.Tools;
+import frozen.crosscuttings.AppConstants;
+import frozen.dal.accessors_text_file_storage.ImmutableIdxGetters;
+import frozen.jobs_processors.ProcessorTargets;
+import frozen.old.SentencesReduce;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -69,7 +69,7 @@ public class NotesBuilder {
   }
 
   static public String get_one_record(String node, Map<String, String> info) {
-    Util.print(node + " " + info);
+    Tools.print(node + " " + info);
     String record = Joiner.on(";")
         .join(
           node,
@@ -93,7 +93,7 @@ public class NotesBuilder {
         AppConstants.CONTENT_META_FILENAME);
 
     // Преобразуем в json
-    String settingsInJson = Util.file2string(pathToMetaFile);
+    String settingsInJson = Tools.file2string(pathToMetaFile);
     Type type = new TypeToken<List<List<String>>>() {}.getType();
     List<List<String>> metadata = new Gson().fromJson(settingsInJson, type);
 
