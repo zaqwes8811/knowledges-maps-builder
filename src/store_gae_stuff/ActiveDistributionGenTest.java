@@ -55,12 +55,18 @@ public class ActiveDistributionGenTest {
     {
       ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
       ActiveDistributionGen d = build(distribution);
+
+      ofy().save().entity(d).now();
+
+      d.disablePoint(0);
+
       ofy().save().entity(d).now();
     }
 
     // try load
     {
       ActiveDistributionGen page = ofy().load().type(ActiveDistributionGen.class).id(1).now();
+      Integer action = page.codeAction;
     }
   }
 }
