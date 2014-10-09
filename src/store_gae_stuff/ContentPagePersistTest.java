@@ -1,6 +1,5 @@
 package store_gae_stuff;
 
-import business.mapreduce.ContentPageBuilder;
 import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -31,6 +30,10 @@ import static store_gae_stuff.OfyService.ofy;
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class ContentPagePersistTest {
+  private String getTestFileName() {
+    return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+  }
+
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
@@ -71,10 +74,6 @@ public class ContentPagePersistTest {
     }
 
     return contentElements;
-  }
-
-  private String getTestFileName() {
-    return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
 
   private ContentPage buildContentPage() {
@@ -127,7 +126,7 @@ public class ContentPagePersistTest {
 
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
-    Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().now();
+    WordItem elem = ofy().load().type(WordItem.class).filter("sortedIdx =", idxPosition).first().now();
     List<ContentItem> coupled = ofy().load().type(ContentItem.class)
       .filterKey("in", elem.getItems())
       //.filter("pos <=", 8)
@@ -164,6 +163,6 @@ public class ContentPagePersistTest {
     ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().now();
 
     Integer position = 9;
-    //Pair<Optional<Word> page.get(position);
+    //Pair<Optional<WordItem> page.get(position);
   }
 }

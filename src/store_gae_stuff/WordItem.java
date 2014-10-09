@@ -13,7 +13,7 @@ import java.util.Set;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
-public class Word {
+public class WordItem {
   /// Persistent
   @Id Long id;
 
@@ -35,7 +35,7 @@ public class Word {
   @Index
   Integer sortedIdx;  // 0-N в порядке возрастания по rawFrequency
 
-  private Word() {}
+  private WordItem() {}
 
   /// Own
   @Override
@@ -51,8 +51,8 @@ public class Word {
     return rawFrequency;
   }
 
-  public static Word create(String wordValue, Collection<ContentItem> items) {
-    Word word = new Word(wordValue);
+  public static WordItem create(String wordValue, Collection<ContentItem> items) {
+    WordItem word = new WordItem(wordValue);
 
     // Частоту берем из списка ссылок.
     word.setRawFrequency(items.size());
@@ -61,6 +61,14 @@ public class Word {
     Set<ContentItem> itemSet = new HashSet<ContentItem>();
     itemSet.addAll(items);
     word.setContentItems(itemSet);
+    return word;
+  }
+
+  public static WordItem create(String wordValue, int rawFrequency) {
+    WordItem word = new WordItem(wordValue);
+
+    // Частоту берем из списка ссылок.
+    word.setRawFrequency(rawFrequency);
     return word;
   }
 
@@ -86,22 +94,26 @@ public class Word {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  public Word(String word) {
+  public WordItem(String word) {
     this.word = word;
     sortedIdx = -1;
   }
 
-  private static class WordFreqComparator implements Comparator<Word> {
+  private static class WordFreqComparator implements Comparator<WordItem> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(Word o1, Word o2) {
+    public int compare(WordItem o1, WordItem o2) {
       return o1.getRawFrequency().compareTo(o2.getRawFrequency());
     }
   }
 
-  public static Comparator<Word> createFreqComparator() {
+  public static Comparator<WordItem> createFrequencyComparator() {
     return new WordFreqComparator();
+  }
+
+  public static class WordValue {
+    
   }
 }

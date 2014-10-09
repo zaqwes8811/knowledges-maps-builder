@@ -1,4 +1,4 @@
-package business.mapreduce;
+package store_gae_stuff;
 
 import org.junit.Test;
 
