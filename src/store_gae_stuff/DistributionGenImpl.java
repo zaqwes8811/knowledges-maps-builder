@@ -2,8 +2,6 @@ package store_gae_stuff;
 
 import business.math.DistributionElement;
 import business.math.GeneratorAnyDistribution;
-import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
-import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Unindex;
@@ -27,17 +25,24 @@ import java.util.ArrayList;
 // TODO: Для горячего старта.
 // TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
 //   думаю она и должна оставаться управляемой извне.
-@NotThreadSafe
+//@NotThreadSafe
 @Entity
-public class DistributionGenImpl implements DistributionGen {
+//@Subclass
+public class DistributionGenImpl
+  //implements DistributionGen
+{
   @Id
   Long id;
 
   // Можно и не индексировать - пока алгоритм одни
-  @Unindex Optional<GeneratorAnyDistribution> gen = Optional.absent();
+  @Unindex
+  GeneratorAnyDistribution gen;  // TODO: как быть?
+
+  @Unindex
+  Integer code;  // возможность подкл. алгоритма при создании
 
   // Индексируется!!
-  ArrayList<DistributionElement> distribution;
+  //ArrayList<DistributionElement> distribution;
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
@@ -45,28 +50,28 @@ public class DistributionGenImpl implements DistributionGen {
     return new DistributionGenImpl(distribution);
   }
 
-  @Override
+  //@Override
   public Integer getPosition() {
-    return gen.get().getPosition();
-  }
+    return gen.getPosition();
+ }
 
-  @Override
   public void reloadGenerator(ArrayList<DistributionElement> distribution) {
-    gen = Optional.of(GeneratorAnyDistribution.create(distribution));
+    gen = GeneratorAnyDistribution.create(distribution);
   }
 
   private DistributionGenImpl(ArrayList<DistributionElement> distribution) {
-    gen = Optional.of(GeneratorAnyDistribution.create(distribution));
+    gen = GeneratorAnyDistribution.create(distribution);
   }
 
-  @Override
   public void disablePoint(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
-
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
+
   }
 
-  @Override
+  private DistributionGenImpl() { }
+
+  //@Override
   public void enablePoint(Integer idx) {
 
   }

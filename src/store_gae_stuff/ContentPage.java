@@ -48,9 +48,9 @@ public class ContentPage {
 
   private ContentPage() { }
 
-  // TODO: Как быть с полиморфизмом?
-  @Load
-  List<Key<DistributionGen>> distributions = new ArrayList<Key<DistributionGen>>();
+  // TODO: Как быть с полиморфизмом? Не будет работать
+  //@Load
+  //List<Key<DistributionGen>> distributions = new ArrayList<Key<DistributionGen>>();
 
   // Странице никчему знать про детали интерфейса генераторов
   // TODO: как быть с аргументами?
