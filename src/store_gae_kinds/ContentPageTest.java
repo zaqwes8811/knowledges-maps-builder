@@ -49,6 +49,7 @@ public class ContentPageTest {
 
       // Last - Persist page
       ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
+
       ofy().save().entity(page).now();
     } catch (IOException e)  {
       assert false;
@@ -102,8 +103,7 @@ public class ContentPageTest {
   }
 
   private String getTestFileName() {
-    return "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
-      "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+    return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
 
   @Test
