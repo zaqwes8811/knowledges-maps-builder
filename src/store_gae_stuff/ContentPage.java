@@ -1,4 +1,4 @@
-package store_gae_kinds;
+package store_gae_stuff;
 
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-import static store_gae_kinds.OfyService.ofy;
+import static store_gae_stuff.OfyService.ofy;
 
 // Tasks:
 //   Сперва подключить кеш,
@@ -38,11 +38,13 @@ public class ContentPage {
   // не хочется выносить ofy()... выше. Но может быть, если использовать класс пользователя, то он может.
   @Id
   Long id;
+
   @Index
   String name;
   // Формированием не управляет, но остальным управляет.
   @Load
   List<Key<Word>> words = new ArrayList<Key<Word>>();
+
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
@@ -64,6 +66,7 @@ public class ContentPage {
   public ContentPage(String name, List<ContentItem> items, List<Word> words) {
     if (name == null)
       throw new IllegalArgumentException("Broken precondition on building page.");
+
     this.name = name;
     for (final Word word: words) this.words.add(Key.create(word));
     for (final ContentItem item: items) this.items.add(Key.create(item));
@@ -80,7 +83,6 @@ public class ContentPage {
     .build(
       new CacheLoader<Integer, Optional<Word>>() {
         public Optional<Word> load(Integer key) { // TODO: no checked exception
-          //
           return Optional.absent();//createExpensiveGraph(key);
         }
       });

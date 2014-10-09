@@ -1,4 +1,4 @@
-package store_gae_kinds;
+package store_gae_stuff;
 
 import business.mapreduce.ContentPageBuilder;
 import business.nlp.PlainTextTokenizer;
@@ -26,11 +26,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static store_gae_kinds.OfyService.ofy;
+import static store_gae_stuff.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class ContentPageTest {
+public class ContentPagePersistTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
@@ -124,7 +124,6 @@ public class ContentPageTest {
     // Заряжаем генератор
     //GeneratorDistributionsImpl gen = GeneratorDistributionsImpl.create(distribution);
     ofy().save().entity(buildContentPage()).now();
-
 
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
