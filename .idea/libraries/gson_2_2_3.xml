@@ -23,8 +23,18 @@
       <root url="jar://$PROJECT_DIR$/../../third_party/java/lib/jetty-servlets-7.0.2.v20100331.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../third_party/java/lib/jetty-server-7.0.2.v20100331.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../third_party/java/lib/derby-10.10.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-stubs.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api.jar!/" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../third_party/java/lib/eclipselink-2.4.2.v20130514-5956486.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../third_party/java/lib/eclipselink/jlib/jpa/javax.persistence_2.0.5.v201212031355.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/testing/appengine-testing.jar!/com/google/appengine/repackaged/com/google/common/base/super" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/base/super" />
+      <root url="jar://$USER_HOME$/opt/appengine-java-sdk-1.9.3/lib/impl/appengine-api-labs.jar!/com/google/appengine/labs/repackaged/com/google/common/util/super" />
+    </SOURCES>
   </library>
 </component>
