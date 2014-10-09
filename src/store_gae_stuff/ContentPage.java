@@ -7,6 +7,7 @@
 // TODO: http://www.oracle.com/technetwork/articles/marx-jpa-087268.html
 // TODO: скрыть персистентность в этом классе, пусть сам себя сохраняет и удаляет.
 // TODO: Функция очистки данных связанных со страницей, себя не удаляет.
+// TODO: Добавить оценки текста
 // не хочется выносить ofy()... выше. Но может быть, если использовать класс пользователя, то он может.
 /**
  * About:
@@ -47,18 +48,10 @@ public class ContentPage {
 
   private ContentPage() { }
 
-  // TODO: Добавить оценки текста
-
   // TODO: Как быть с полиморфизмом?
   @Load
-  List<Key<GeneratorDistributions>> distributions = new ArrayList<Key<GeneratorDistributions>>();
+  List<Key<Distributions>> distributions = new ArrayList<Key<Distributions>>();
 
-  // генератор должен быть уже сохранен
-  public void addGenerator() {
-    //assert
-  }
-
-  // Own
   // Странице никчему знать про детали интерфейса генераторов
   // TODO: как быть с аргументами?
   // https://code.google.com/p/cofoja/wiki/HowtoWriteGoodContracts
@@ -69,12 +62,12 @@ public class ContentPage {
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
-  public ImmutableList<Integer> getSortedFrequencies() {
+  public ImmutableList<Integer> getRawDistribution() {
     // TODO: Отосортировать при выборке если можно
+    // TODO: может при запросе можно отсортировать?
     List<WordItem> wordItems = ofy().load().type(WordItem.class).filterKey("in", this.words).list();
 
     // Сортируем - элементы могут прийти в случайном порядке
-    // TODO: может при запросе можно отсортировать?
     Collections.sort(wordItems, WordItem.createFrequencyComparator());
     Collections.reverse(wordItems);
 
@@ -90,26 +83,3 @@ public class ContentPage {
     return items;
   }
 }
-
-/*
-  @Unindex
-  private final LoadingCache<Integer, Optional<WordItem>> wordsCache = CacheBuilder.newBuilder()
-    .expireAfterAccess(10, TimeUnit.MINUTES)  // TODO: Make by size.
-    .build(
-      new CacheLoader<Integer, Optional<WordItem>>() {
-        public Optional<WordItem> load(Integer key) { // TODO: no checked exception
-          return Optional.absent();//createExpensiveGraph(key);
-        }
-      });
-
-  public Pair<Optional<WordItem>, Optional<ArrayList<ContentItem>>> get(Integer position) {
-    try {
-      // TODO: Получение элементов контекста
-      Optional<WordItem> word = wordsCache.get(position);
-
-      return Pair.with(word, Optional.<ArrayList<ContentItem>>absent());
-    } catch (ExecutionException e) {
-      throw new RuntimeException(e.getCause());
-    }
-  }
-*/

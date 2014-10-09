@@ -1,7 +1,7 @@
 package store_gae_stuff;
 
-import business.math.GeneratorAnyDistribution;
-import business.math.GeneratorDistributionExc;
+import business.math.DistributionElement;
+import business.math.GeneratorDistributionException;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,17 +13,17 @@ import static org.junit.Assert.assertFalse;
 /**
  * Created by zaqwes on 5/12/14.
  */
-public class GeneratorDistributionsImplTest {
+public class DistributionsImplTest {
   @Test
-  public void testCreate() throws GeneratorDistributionExc {
+  public void testCreate() throws GeneratorDistributionException {
     ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
-    ArrayList<GeneratorAnyDistribution.DistributionElement> real = new ArrayList<GeneratorAnyDistribution.DistributionElement>();
+    ArrayList<DistributionElement> real = new ArrayList<DistributionElement>();
 
     for (Integer value: distribution) {
-      real.add(new GeneratorAnyDistribution.DistributionElement(value, true));
+      real.add(new DistributionElement(value, true));
     }
 
-    GeneratorDistributions generator = GeneratorDistributionsImpl.create(real);
+    Distributions generator = DistributionsImpl.create(real);
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)
       experiment.add(generator.getPosition());

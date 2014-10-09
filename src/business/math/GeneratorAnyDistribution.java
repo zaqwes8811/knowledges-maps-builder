@@ -12,24 +12,6 @@ import java.util.Random;
 // TODO: Вещь довольно законченная, пока расширять не хочу.
 @Immutable
 public final class GeneratorAnyDistribution {
-  @Immutable  // TODO: Maybe
-  public static final class DistributionElement implements Comparable<DistributionElement> {
-    // http://stackoverflow.com/questions/5560176/is-integer-immutable
-    public final Integer frequency;
-    public final Boolean enabled;
-
-    public DistributionElement(Integer freq, Boolean ena) {
-      frequency = freq;
-      enabled = ena;
-    }
-
-    @Override
-    //@NotNull  // TODO: Какое-то предупреждение в idea ide
-    public int compareTo(DistributionElement o2) {
-      return frequency.compareTo(o2.frequency);
-    }
-  }
-
   private final Integer countPoints_;
   private final Integer maxValue_;
   private final ImmutableList<ImmutableList<Integer>> codeBook_;  // TODO: Это сохранится в gae storage?
@@ -37,10 +19,10 @@ public final class GeneratorAnyDistribution {
   private final Integer IDX_POSITION_ = 2;
 
   // Любой список с числами
-  // @throws: GeneratorDistributionExc
+  // @throws: GeneratorDistributionException
   public static GeneratorAnyDistribution create(ArrayList<DistributionElement> distribution) {
     if (distribution.isEmpty())
-      throw new GeneratorDistributionExc("Input list must be no empty.");
+      throw new GeneratorDistributionException("Input list must be no empty.");
     return new GeneratorAnyDistribution(distribution);
   }
 

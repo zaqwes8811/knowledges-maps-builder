@@ -1,5 +1,6 @@
 package store_gae_stuff;
 
+import business.math.DistributionElement;
 import business.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
@@ -18,9 +19,8 @@ import java.util.ArrayList;
 //   лучше так кеш не использовать, а использовать для чтения.
 // Вариант 2 - сохранять распределение в хранилище. Дублирование причем в 3 местах! Хуже всего что в генераторе,
 //   но лучше генератор сделать внешним, хотяяяя... нет.
-
 //
-// Thinks:
+// TODO: Кто управляет временем жизни в storage?
 // TODO: Читать однажды, а так сохранять в хранилище. Проблема в ширине кеша. Так же он заполнятся поштучно!
 // TODO: Для чтения пойдет, а так не хотелось бы. Хотя на этапе может ширина известна на этапе формирования?
 // TODO: Как изначально инициализировать. При формировании таблицы, например.
@@ -29,20 +29,20 @@ import java.util.ArrayList;
 //   думаю она и должна оставаться управляемой извне.
 @NotThreadSafe
 @Entity
-public class GeneratorDistributionsImpl implements GeneratorDistributions {
-  /// Persist
-  // TODO: Кто управляет временем жизни в storage?
+public class DistributionsImpl implements Distributions {
   @Id
   Long id;
 
-  /// Own
+  // Можно и не индексировать - пока алгоритм одни
   @Unindex Optional<GeneratorAnyDistribution> gen = Optional.absent();
 
+  // Индексируется!!
+  ArrayList<DistributionElement> distribution;
+
   // Любой список с числами
-  // @throws: GeneratorDistributionExc
-  public static GeneratorDistributionsImpl create(
-      ArrayList<GeneratorAnyDistribution.DistributionElement> distribution) {
-    return new GeneratorDistributionsImpl(distribution);
+  // @throws: GeneratorDistributionException
+  public static DistributionsImpl create(ArrayList<DistributionElement> distribution) {
+    return new DistributionsImpl(distribution);
   }
 
   @Override
@@ -51,11 +51,11 @@ public class GeneratorDistributionsImpl implements GeneratorDistributions {
   }
 
   @Override
-  public void reloadGenerator(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution) {
+  public void reloadGenerator(ArrayList<DistributionElement> distribution) {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
-  private GeneratorDistributionsImpl(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution) {
+  private DistributionsImpl(ArrayList<DistributionElement> distribution) {
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
@@ -68,12 +68,6 @@ public class GeneratorDistributionsImpl implements GeneratorDistributions {
 
   @Override
   public void enablePoint(Integer idx) {
-
-  }
-
-  // TODO: Impl.
-  private void persist() {
-    // Объект должен быть уже сохраненным
 
   }
 }
