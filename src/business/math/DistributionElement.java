@@ -10,7 +10,9 @@ import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
 public class DistributionElement implements Comparable<DistributionElement> {
   // http://stackoverflow.com/questions/5560176/is-integer-immutable
   public final Integer frequency;
-  public final Boolean enabled;
+  public
+  //final  // таки должно меняться
+  Boolean enabled;
 
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;

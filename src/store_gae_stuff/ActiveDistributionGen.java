@@ -3,9 +3,11 @@ package store_gae_stuff;
 import business.math.DistributionElement;
 import business.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
+import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Unindex;
+import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 
 import java.util.ArrayList;
 
@@ -45,20 +47,18 @@ public class ActiveDistributionGen
   @Unindex
   Integer codeAction;  // возможность подкл. алгоритма при создании
 
-  // Индексируется!!
+  // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
   ArrayList<DistributionElement> distribution;
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static ActiveDistributionGen create(ArrayList<DistributionElement> distribution) {
-
     return new ActiveDistributionGen(distribution);
   }
 
-  //@Override
   public Integer getPosition() {
-    return gen.getPosition();
+    return Optional.of(gen).get().getPosition();
  }
 
   public void reloadGenerator(ArrayList<DistributionElement> distribution) {
@@ -66,22 +66,40 @@ public class ActiveDistributionGen
   }
 
   private ActiveDistributionGen(ArrayList<DistributionElement> distribution) {
-    gen = GeneratorAnyDistribution.create(distribution);
     this.distribution = distribution;
+    reloadGenerator(distribution);
   }
 
   public void disablePoint(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-
+    getElem(idx).enabled = false;
+    reloadGenerator(distribution);
   }
 
+  private DistributionElement getElem(Integer idx) {
+    if (idx >= distribution.size() || idx < 0)
+      throw new OutOfRangeOnAccess("On get element");  // сообщения безсмысленны, тип важнее
+
+    // хотя наверное и так бросит
+    return distribution.get(idx);
+  }
+
+  // DANGER:
+  //   http://www.quizful.net/post/java-fields-initialization
   private ActiveDistributionGen() {
     // похоже при восстановлении вызывается он
+    // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
+    reloadGenerator(distribution);
   }
 
-  //@Override
   public void enablePoint(Integer idx) {
+    getElem(idx).enabled = true;
+    reloadGenerator(distribution);
+  }
 
+  ActiveDistributionGen cloneGenerator() {
+    // Возможно еще придется что-то добавить
+    return create(this.distribution);
   }
 }
