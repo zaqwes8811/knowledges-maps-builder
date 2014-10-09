@@ -1,4 +1,4 @@
-package store_gae_kinds;
+package store_gae_stuff;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -35,6 +35,7 @@ public class ContentItem {
   public Long getId() { return id; }
 
   // tools
+  @Override
   public String toString() {
     return "Value = "+sentence;
   }

@@ -1,4 +1,4 @@
-package store_gae_kinds;
+package store_gae_stuff;
 
 // TODO: Генераторы разные, и данные по слову рассматриваются через генератор.
 //@Immutable
