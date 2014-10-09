@@ -29,7 +29,7 @@ import static store_gae_stuff.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class ContentPagePersistTest {
+public class PersistContentPageTest {
   private String getTestFileName() {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
@@ -119,9 +119,9 @@ public class ContentPagePersistTest {
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
     //
-    //DistributionGenImpl gen;  // TODO: Как быть с ним? Они логическое целое.
+    //ActiveDistributionGen gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
-    //DistributionGenImpl gen = DistributionGenImpl.create(distribution);
+    //ActiveDistributionGen gen = ActiveDistributionGen.create(distribution);
     ofy().save().entity(buildContentPage()).now();
 
     Integer idxPosition = 4;//gen.getPosition();
