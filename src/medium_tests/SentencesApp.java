@@ -5,13 +5,13 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import common.Util;
-import hided.crosscuttings.AppConstants;
-import hided.jobs_processors.JobsFormer;
-import hided.jobs_processors.ProcessorTargets;
-import hided.old.NewMapper;
-import hided.old.SentencesMapper;
-import hided.old.SentencesReduce;
+import common.Tools;
+import frozen.crosscuttings.AppConstants;
+import frozen.jobs_processors.JobsFormer;
+import frozen.jobs_processors.ProcessorTargets;
+import frozen.old.NewMapper;
+import frozen.old.SentencesMapper;
+import frozen.old.SentencesReduce;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -62,9 +62,9 @@ public class SentencesApp {
 
         BufferedWriter out = closer.register(new BufferedWriter(new FileWriter(path_for_save)));
         out.write(resultInJson);
-        Util.print(resultInJson);
+        Tools.print(resultInJson);
 
-        Util.print("Notes write to file : " + path_for_save);
+        Tools.print("Notes write to file : " + path_for_save);
 
       } catch (Throwable e) {
         closer.rethrow(e);
@@ -74,6 +74,6 @@ public class SentencesApp {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    Util.print("Done. Sentences level processing.");
+    Tools.print("Done. Sentences level processing.");
   }
 }

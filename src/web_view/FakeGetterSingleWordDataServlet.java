@@ -4,10 +4,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
 
-import hided.controllers.web_wrapper.BuilderControllers;
-import hided.controllers.web_wrapper.ContainerNodeControllers;
-import hided.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
-import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import frozen.controllers.web_wrapper.BuilderControllers;
+import frozen.controllers.web_wrapper.ContainerNodeControllers;
+import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
+import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.checkthread.annotations.NotThreadSafe;
-import hided.crosscuttings.configurator.GlobalConfigurator;
+import frozen.crosscuttings.configurator.GlobalConfigurator;
 
 import java.io.IOException;
 

@@ -3,10 +3,10 @@ package business.adapters_3rdparty;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;
-import common.Util;
-import hided.crosscuttings.AppConstants;
-import hided.jobs_processors.ProcessorTargets;
-import hided.spiders_extractors.ExtractorException;
+import common.Tools;
+import frozen.crosscuttings.AppConstants;
+import frozen.jobs_processors.ProcessorTargets;
+import frozen.spiders_extractors.ExtractorException;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
@@ -54,7 +54,7 @@ final public class TikaWrapper {
             inFileName));
 
       // TODO(zaqwes): Как установить читабельными русски буквы?
-      Util.print("Process file: " + fullNameSourceFile);
+      Tools.print("Process file: " + fullNameSourceFile);
 
       // Извлекаем содержимое файла
       Closer closer = Closer.create();
