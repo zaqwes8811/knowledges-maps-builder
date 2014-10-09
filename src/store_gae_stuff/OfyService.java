@@ -11,7 +11,7 @@ public class OfyService {
     factory().register(WordItem.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
-    factory().register(DistributionGenImpl.class);
+    factory().register(ActiveDistributionGen.class);
     //...etc
   }
 

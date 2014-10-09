@@ -2,6 +2,7 @@ package store_gae_stuff;
 
 import business.math.DistributionElement;
 import business.math.GeneratorAnyDistribution;
+import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Unindex;
@@ -25,11 +26,14 @@ import java.util.ArrayList;
 // TODO: Для горячего старта.
 // TODO: Если мы меняем поля, то нужно сохранятся страницу в базу, сейчас персистентность управляется извне!
 //   думаю она и должна оставаться управляемой извне.
-//@NotThreadSafe
+//
+// Есть проблемы с сохранением
+// http://code.google.com/p/objectify-appengine/wiki/IntroductionToObjectify#Embedded_Collections_and_Arrays
+//
+@NotThreadSafe
 @Entity
-//@Subclass
-public class DistributionGenImpl
-  //implements DistributionGen
+public class ActiveDistributionGen
+  //implements DistributionGen  // no way
 {
   @Id
   Long id;
@@ -39,15 +43,17 @@ public class DistributionGenImpl
   GeneratorAnyDistribution gen;  // TODO: как быть?
 
   @Unindex
-  Integer code;  // возможность подкл. алгоритма при создании
+  Integer codeAction;  // возможность подкл. алгоритма при создании
 
   // Индексируется!!
-  //ArrayList<DistributionElement> distribution;
+  //@Embedded  // кажеться и так понимает
+  ArrayList<DistributionElement> distribution;
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
-  public static DistributionGenImpl create(ArrayList<DistributionElement> distribution) {
-    return new DistributionGenImpl(distribution);
+  public static ActiveDistributionGen create(ArrayList<DistributionElement> distribution) {
+
+    return new ActiveDistributionGen(distribution);
   }
 
   //@Override
@@ -59,8 +65,9 @@ public class DistributionGenImpl
     gen = GeneratorAnyDistribution.create(distribution);
   }
 
-  private DistributionGenImpl(ArrayList<DistributionElement> distribution) {
+  private ActiveDistributionGen(ArrayList<DistributionElement> distribution) {
     gen = GeneratorAnyDistribution.create(distribution);
+    this.distribution = distribution;
   }
 
   public void disablePoint(Integer idx) {
@@ -69,7 +76,9 @@ public class DistributionGenImpl
 
   }
 
-  private DistributionGenImpl() { }
+  private ActiveDistributionGen() {
+    // похоже при восстановлении вызывается он
+  }
 
   //@Override
   public void enablePoint(Integer idx) {
