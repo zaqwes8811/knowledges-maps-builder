@@ -50,7 +50,7 @@ public class ContentPage {
 
   // TODO: Как быть с полиморфизмом?
   @Load
-  List<Key<Distributions>> distributions = new ArrayList<Key<Distributions>>();
+  List<Key<DistributionGen>> distributions = new ArrayList<Key<DistributionGen>>();
 
   // Странице никчему знать про детали интерфейса генераторов
   // TODO: как быть с аргументами?

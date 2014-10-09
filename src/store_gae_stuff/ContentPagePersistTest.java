@@ -119,9 +119,9 @@ public class ContentPagePersistTest {
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
     //
-    //DistributionsImpl gen;  // TODO: Как быть с ним? Они логическое целое.
+    //DistributionGenImpl gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
-    //DistributionsImpl gen = DistributionsImpl.create(distribution);
+    //DistributionGenImpl gen = DistributionGenImpl.create(distribution);
     ofy().save().entity(buildContentPage()).now();
 
     Integer idxPosition = 4;//gen.getPosition();

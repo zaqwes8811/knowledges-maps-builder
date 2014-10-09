@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * About: Генерирует последовательность 0-N по заданному закону распределения.
  * Позволяет исключать точки из генерируемой последовательности.
  */
-public interface Distributions {
+public interface DistributionGen {
 
   public Integer getPosition();
 
