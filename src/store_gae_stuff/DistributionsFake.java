@@ -1,6 +1,6 @@
 package store_gae_stuff;
 
-import business.math.GeneratorAnyDistribution;
+import business.math.DistributionElement;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by zaqwes on 5/15/14.
  */
 @Entity
-public class GeneratorDistributionsFake implements GeneratorDistributions {
+public class DistributionsFake implements Distributions {
   /// Persist
   @Id
   Long id;
@@ -22,7 +22,7 @@ public class GeneratorDistributionsFake implements GeneratorDistributions {
   }
 
   @Override
-  public void reloadGenerator(ArrayList<GeneratorAnyDistribution.DistributionElement> distribution) { }
+  public void reloadGenerator(ArrayList<DistributionElement> distribution) { }
 
   @Override
   public void disablePoint(Integer idx) {
