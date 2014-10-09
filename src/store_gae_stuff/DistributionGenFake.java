@@ -9,6 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by zaqwes on 5/15/14.
  */
+@Deprecated
 @Entity
 public class DistributionGenFake implements DistributionGen {
   /// Persist
