@@ -25,8 +25,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static store_gae_kinds.OfyService.ofy;
 import static org.junit.Assert.*;
+import static store_gae_kinds.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
@@ -34,7 +34,7 @@ public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
-  private String getPlainText(String filename) throws IOException {
+  private String getSubtitlesToPlainText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
 
@@ -77,34 +77,30 @@ public class ContentPageTest {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
 
-  @Before
-  public void setUp() {
-    helper.setUp();
-
+  private ContentPage buildContentPage() {
     String filename = getTestFileName();
     try {
       // Phase I
-      String plainText = getPlainText(filename);
+      String plainText = getSubtitlesToPlainText(filename);
       assertFalse(plainText.isEmpty());
 
       // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
       ArrayList<ContentItem> contentElements = getContentElements(plainText);
 
       // Last - Persist page
-      ContentPage page = new ContentPageBuilder().build("Korra", contentElements);
-
-      ofy().save().entity(page).now();
+      return new ContentPageBuilder().build("Korra", contentElements);     
     } catch (IOException e)  {
-      assert false;
+      throw new RuntimeException(e);
     }
   }
+
+  @Before
+  public void setUp() { helper.setUp(); }
 
   @After
   public void tearDown() {
     helper.tearDown();
   }
-
-
 
   @Test
   public void testCreateAndPersist() throws Exception {
@@ -127,6 +123,9 @@ public class ContentPageTest {
     //GeneratorDistributionsImpl gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
     //GeneratorDistributionsImpl gen = GeneratorDistributionsImpl.create(distribution);
+    ofy().save().entity(buildContentPage()).now();
+
+
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().now();
@@ -142,6 +141,8 @@ public class ContentPageTest {
 
   @Test
   public void testGetDistribution() throws IOException {
+    ofy().save().entity(buildContentPage()).now();
+    
     // Очень медленно!!
     ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().now();
 
