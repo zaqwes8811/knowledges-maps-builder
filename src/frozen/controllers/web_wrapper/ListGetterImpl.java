@@ -19,7 +19,7 @@ public class ListGetterImpl implements ListGetter {
   }
 
   // Index: нужно для маркеровки
-  // Word: само слово
+  // WordItem: само слово
   // Translates:
   // Context:
   @Override
