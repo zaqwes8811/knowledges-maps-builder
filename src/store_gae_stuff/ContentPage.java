@@ -43,7 +43,7 @@ public class ContentPage {
   String name;
   // Формированием не управляет, но остальным управляет.
   @Load
-  List<Key<Word>> words = new ArrayList<Key<Word>>();
+  List<Key<WordItem>> words = new ArrayList<Key<WordItem>>();
 
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
@@ -63,34 +63,29 @@ public class ContentPage {
   // TODO: как быть с аргументами?
   // https://code.google.com/p/cofoja/wiki/HowtoWriteGoodContracts
   //@Requires("name != null")  // пока без проверки, но возможно удобно - визуально видно
-  public ContentPage(String name, List<ContentItem> items, List<Word> words) {
+  public ContentPage(String name, List<ContentItem> items, List<WordItem> words) {
     if (name == null)
       throw new IllegalArgumentException("Broken precondition on building page.");
 
     this.name = name;
-    for (final Word word: words) this.words.add(Key.create(word));
+    for (final WordItem word: words) this.words.add(Key.create(word));
     for (final ContentItem item: items) this.items.add(Key.create(item));
   }
 
-  // TODO: Кеш для контекста. Можно по ключам, но подгрузка поштучная.
-  // TODO: Холодный старт может быть медленным. Хорошо бы сделат общий кеш, но как?
-  //@Unindex final LoadingCache<Key<ContentItem>, ContentItem> contentCache = CacheBuilder.newBuilder()
-  //  .build();
-
   @Unindex
-  private final LoadingCache<Integer, Optional<Word>> wordsCache = CacheBuilder.newBuilder()
+  private final LoadingCache<Integer, Optional<WordItem>> wordsCache = CacheBuilder.newBuilder()
     .expireAfterAccess(10, TimeUnit.MINUTES)  // TODO: Make by size.
     .build(
-      new CacheLoader<Integer, Optional<Word>>() {
-        public Optional<Word> load(Integer key) { // TODO: no checked exception
+      new CacheLoader<Integer, Optional<WordItem>>() {
+        public Optional<WordItem> load(Integer key) { // TODO: no checked exception
           return Optional.absent();//createExpensiveGraph(key);
         }
       });
 
-  public Pair<Optional<Word>, Optional<ArrayList<ContentItem>>> get(Integer position) {
+  public Pair<Optional<WordItem>, Optional<ArrayList<ContentItem>>> get(Integer position) {
     try {
       // TODO: Получение элементов контекста
-      Optional<Word> word = wordsCache.get(position);
+      Optional<WordItem> word = wordsCache.get(position);
 
       return Pair.with(word, Optional.<ArrayList<ContentItem>>absent());
     } catch (ExecutionException e) {
@@ -101,15 +96,15 @@ public class ContentPage {
   // About: Возвращать частоты, сортированные по убыванию.
   public ImmutableList<Integer> getSortedFrequencies() {
     // TODO: Отосортировать при выборке если можно
-    List<Word> words = ofy().load().type(Word.class).filterKey("in", this.words).list();
+    List<WordItem> words = ofy().load().type(WordItem.class).filterKey("in", this.words).list();
 
     // Сортируем
-    Collections.sort(words, Word.createFreqComparator());
+    Collections.sort(words, WordItem.createFrequencyComparator());
     Collections.reverse(words);
 
     // Формируем результат
     ArrayList<Integer> distribution = new ArrayList<Integer>();
-    for (final Word word : words) distribution.add(word.getRawFrequency());
+    for (final WordItem word : words) distribution.add(word.getRawFrequency());
 
     return ImmutableList.copyOf(distribution);
   }

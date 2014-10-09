@@ -8,7 +8,7 @@ public class OfyService {
   static {
     factory().register(ContentItem.class);
     factory().register(ContentPage.class);
-    factory().register(Word.class);
+    factory().register(WordItem.class);
     //...etc
   }
 
