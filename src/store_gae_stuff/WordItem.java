@@ -6,16 +6,14 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class WordItem {
   /// Persistent
-  @Id Long id;
+  @Id
+  Long id;
 
   // TODO: может хранится стем или пара-тройка слов.
   @Index
@@ -32,8 +30,11 @@ public class WordItem {
   Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
+  // Нужно для генератора распределения
+  // 0-N в порядке возрастания по rawFrequency
+  // По нему будет делаться выборка
   @Index
-  Integer sortedIdx;  // 0-N в порядке возрастания по rawFrequency
+  Integer sortedIdx;
 
   private WordItem() {}
 
@@ -51,11 +52,11 @@ public class WordItem {
     return rawFrequency;
   }
 
-  public static WordItem create(String wordValue, Collection<ContentItem> items) {
+  public static WordItem create(String wordValue, Collection<ContentItem> items, int rawFrequency) {
     WordItem word = new WordItem(wordValue);
 
     // Частоту берем из списка ссылок.
-    word.setRawFrequency(items.size());
+    word.setRawFrequency(rawFrequency);
 
     // Ссылки должны быть уникальными
     Set<ContentItem> itemSet = new HashSet<ContentItem>();
@@ -114,6 +115,21 @@ public class WordItem {
   }
 
   public static class WordValue {
-    
+    final Integer frequency;
+    final String word;
+    final Collection<ContentItem> items;
+
+    WordValue(String word, Integer frequency, Collection<ContentItem> c) {
+      this.word = word;
+      this.frequency = frequency;
+      this.items = c;
+    }
+  }
+
+  public static class WordValueFrequencyComparator implements Comparator<WordValue> {
+    @Override
+    public int compare(WordValue o1, WordValue o2) {
+      return o1.frequency.compareTo(o2.frequency);
+    }
   }
 }

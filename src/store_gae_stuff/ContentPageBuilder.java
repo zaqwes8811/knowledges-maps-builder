@@ -21,29 +21,33 @@ public class ContentPageBuilder {
     // Split
     mapper.map(contentElements);  // TODO: implicit, but be so
 
-    // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
-    //   к словам.
-    //
-    // Persist content items
-    // TODO: как вынести в транзакцию?
-    ofy().save().entities(contentElements).now();
-
-    // Persist words
-    // TODO: сделать через временный не связанны с базой тип, а потом все разом сохранить
-    ArrayList<WordItem> words = new ArrayList<WordItem>();
+    ArrayList<WordItem.WordValue> value = new ArrayList<WordItem.WordValue>();
     for (String word: wordHistogramSink.keySet()) {
-      Collection<ContentItem> value = wordHistogramSink.get(word);
-      words.add(WordItem.create(word, value));
+      Collection<ContentItem> content = wordHistogramSink.get(word);
+      int rawFrequency = content.size();
+      value.add(new WordItem.WordValue(word, rawFrequency, content));
     }
 
     // Sort words by frequency and assign idx
-    Collections.sort(words, WordItem.createFrequencyComparator());
-    Collections.reverse(words);
+    Collections.sort(value, new WordItem.WordValueFrequencyComparator());
+    Collections.reverse(value);
 
-    for (int i = 0; i < words.size(); i++)
-      words.get(i).setSortedIdx(i);
 
+    ArrayList<WordItem> words = new ArrayList<WordItem>();
     {
+      // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
+      //   к словам.
+      //
+      // Persist content items
+      // TODO: как вынести в транзакцию?
+      ofy().save().entities(contentElements).now();
+
+      for (int i = 0; i < value.size(); i++) {
+        WordItem.WordValue v = value.get(i);
+        words.add(WordItem.create(v.word, v.items, v.frequency));
+        words.get(i).setSortedIdx(i);
+      }
+
       // TODO: вынести все операции с базой данных сюда
       ofy().save().entities(words).now();
     }
