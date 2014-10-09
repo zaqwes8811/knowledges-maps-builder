@@ -2,7 +2,7 @@ package frozen.controllers.web_wrapper;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import store_gae_stuff.DistributionGenImpl;
+import store_gae_stuff.ActiveDistributionGen;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import java.util.ArrayList;
@@ -11,11 +11,11 @@ import java.util.List;
 @Deprecated
 public class ListGetterImpl implements ListGetter {
   private final ImmutableNodeAccessor ACCESSOR_;
-  private final Optional<DistributionGenImpl> GENERATOR_;
+  private final Optional<ActiveDistributionGen> GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
     ArrayList<Integer> distribution = ACCESSOR_.getDistribution();
-    GENERATOR_ = Optional.absent();//DistributionGenImpl.create(distribution);
+    GENERATOR_ = Optional.absent();//ActiveDistributionGen.create(distribution);
   }
 
   // Index: нужно для маркеровки

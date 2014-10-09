@@ -15,7 +15,7 @@ import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static store_gae_stuff.OfyService.ofy;
 
-public class DistributionGenImplTest {
+public class ActiveDistributionGenTest {
   private static final LocalServiceTestHelper helper =
     new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
@@ -27,21 +27,21 @@ public class DistributionGenImplTest {
     helper.tearDown();
   }
 
-  DistributionGenImpl build(ArrayList<Integer> distribution) {
+  ActiveDistributionGen build(ArrayList<Integer> distribution) {
 
     ArrayList<DistributionElement> real = new ArrayList<DistributionElement>();
 
     for (Integer value: distribution) {
       real.add(new DistributionElement(value, true));
     }
-    return DistributionGenImpl.create(real);
+    return ActiveDistributionGen.create(real);
   }
 
   @Test
   public void testCreate() throws GeneratorDistributionException {
     ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
 
-    DistributionGenImpl g = build(distribution);
+    ActiveDistributionGen g = build(distribution);
 
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)
@@ -52,8 +52,15 @@ public class DistributionGenImplTest {
 
   @Test
   public void testPersist() {
-    ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
-    DistributionGenImpl d = build(distribution);
-    ofy().save().entity(d).now();
+    {
+      ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
+      ActiveDistributionGen d = build(distribution);
+      ofy().save().entity(d).now();
+    }
+
+    // try load
+    {
+      ActiveDistributionGen page = ofy().load().type(ActiveDistributionGen.class).id(1).now();
+    }
   }
 }
