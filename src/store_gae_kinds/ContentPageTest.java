@@ -34,34 +34,7 @@ public class ContentPageTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
-  @Before
-  public void setUp() {
-    helper.setUp();
-
-    String filename = getTestFileName();
-    try {
-      // Phase I
-      String text = getTestText(filename);
-      assertFalse(text.isEmpty());
-
-      // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-      ArrayList<ContentItem> contentItems = getItems(text);
-
-      // Last - Persist page
-      ContentPage page = new ContentPageBuilder().build("Korra", contentItems);
-
-      ofy().save().entity(page).now();
-    } catch (IOException e)  {
-      assert false;
-    }
-  }
-
-  @After
-  public void tearDown() {
-    helper.tearDown();
-  }
-
-  private String getTestText(String filename) throws IOException {
+  private String getPlainText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
 
@@ -85,26 +58,53 @@ public class ContentPageTest {
     }
   }
 
-  private ArrayList<ContentItem> getItems(String text) {
+  private ArrayList<ContentItem> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 50);
     assertFalse(sentences.isEmpty());
 
     // Пакуем
-    ArrayList<ContentItem> contentItems = new ArrayList<ContentItem>();
-    Long idx = (long) 1;
+    ArrayList<ContentItem> contentElements = new ArrayList<ContentItem>();
+    Long pos = (long) 1;
     for (String sentence: sentences) {
-      ContentItem item = new ContentItem(sentence);
-      item.setIdx(idx);
-      contentItems.add(item);
-      idx++;
+      contentElements.add(new ContentItem(sentence, pos));
+      pos++;
     }
 
-    return contentItems;
+    return contentElements;
   }
 
   private String getTestFileName() {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
+
+  @Before
+  public void setUp() {
+    helper.setUp();
+
+    String filename = getTestFileName();
+    try {
+      // Phase I
+      String plainText = getPlainText(filename);
+      assertFalse(plainText.isEmpty());
+
+      // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
+      ArrayList<ContentItem> contentElements = getContentElements(plainText);
+
+      // Last - Persist page
+      ContentPage page = new ContentPageBuilder().build("Korra", contentElements);
+
+      ofy().save().entity(page).now();
+    } catch (IOException e)  {
+      assert false;
+    }
+  }
+
+  @After
+  public void tearDown() {
+    helper.tearDown();
+  }
+
+
 
   @Test
   public void testCreateAndPersist() throws Exception {
@@ -132,7 +132,7 @@ public class ContentPageTest {
     Word elem = ofy().load().type(Word.class).filter("sortedIdx =", idxPosition).first().now();
     List<ContentItem> coupled = ofy().load().type(ContentItem.class)
       .filterKey("in", elem.getItems())
-      //.filter("idx <=", 8)
+      //.filter("pos <=", 8)
       .limit(countFirst)
       .list();
 
