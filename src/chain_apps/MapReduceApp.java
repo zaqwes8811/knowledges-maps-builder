@@ -1,4 +1,4 @@
-package medium_tests;
+package chain_apps;
 
 
 import common.Tools;
@@ -94,8 +94,8 @@ public class MapReduceApp {
 
     } catch (CrosscuttingsException e) {
       Tools.print(e.getMessage());
-
     }
+
     // Map Stage
     List<List> resultMapStage = new ArrayList<List>();
     for (List<String> job : jobs.get()) {
