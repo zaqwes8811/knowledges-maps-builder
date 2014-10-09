@@ -1,11 +1,11 @@
 package medium_tests;
 
-import hided.old.NewMapper;
-import hided.old.NewReducer;
+import frozen.old.NewMapper;
+import frozen.old.NewReducer;
 import com.google.common.collect.Multimap;
-import hided.jobs_processors.JobsFormer;
-import hided.jobs_processors.ProcessorTargets;
-import hided.crosscuttings.AppConstants;
+import frozen.jobs_processors.JobsFormer;
+import frozen.jobs_processors.ProcessorTargets;
+import frozen.crosscuttings.AppConstants;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Multiset;
 import com.google.common.io.Closer;

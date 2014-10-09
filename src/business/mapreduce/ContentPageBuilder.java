@@ -2,15 +2,15 @@ package business.mapreduce;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import dal_gae_kinds.ContentItem;
-import dal_gae_kinds.ContentPage;
-import dal_gae_kinds.Word;
+import store_gae_kinds.ContentItem;
+import store_gae_kinds.ContentPage;
+import store_gae_kinds.Word;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-import static dal_gae_kinds.OfyService.ofy;
+import static store_gae_kinds.OfyService.ofy;
 
 public class ContentPageBuilder {
   public ContentPage build(String name, ArrayList<ContentItem> contentItems) {

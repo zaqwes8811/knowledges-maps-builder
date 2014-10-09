@@ -3,9 +3,9 @@ package medium_tests;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
-import common.Util;
-import hided.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
-import hided.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import common.Tools;
+import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
+import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -15,11 +15,11 @@ import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-import hided.controllers.web_wrapper.BuilderControllers;
-import hided.controllers.web_wrapper.ContainerNodeControllers;
-import hided.crosscuttings.configurator.GlobalConfigurator;
-import hided.crosscuttings.configurator.ConfigurationFileIsCorrupted;
-import hided.crosscuttings.configurator.NoFoundConfigurationFile;
+import frozen.controllers.web_wrapper.BuilderControllers;
+import frozen.controllers.web_wrapper.ContainerNodeControllers;
+import frozen.crosscuttings.configurator.GlobalConfigurator;
+import frozen.crosscuttings.configurator.ConfigurationFileIsCorrupted;
+import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 
 public class WebRelayApp {
   //private static Logger log = Logger.getLogger(AppContainer.class);
@@ -92,10 +92,10 @@ public class WebRelayApp {
       server.start();
       server.join();
     } catch (NoFoundConfigurationFile e) {
-      Util.print(e);
+      Tools.print(e);
       throw new RuntimeException();
     } catch (ConfigurationFileIsCorrupted e) {
-      Util.print(e);
+      Tools.print(e);
       throw new RuntimeException();
     }
   }

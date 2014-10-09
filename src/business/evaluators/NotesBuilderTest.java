@@ -1,7 +1,7 @@
 package business.evaluators;
 
 import com.google.common.base.Joiner;
-import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
+import frozen.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 import org.junit.Test;
 
 import java.util.ArrayList;

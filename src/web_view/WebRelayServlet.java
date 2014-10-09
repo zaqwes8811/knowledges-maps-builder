@@ -1,14 +1,8 @@
 package web_view;
 
 import com.google.gson.Gson;
-import common.Util;
-import hided.dal.accessors_text_file_storage.ImmutableBaseCoursor;
-import org.eclipse.jetty.server.Handler;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.HandlerList;
-import org.eclipse.jetty.server.handler.ResourceHandler;
-import org.eclipse.jetty.server.nio.SelectChannelConnector;
-import org.eclipse.jetty.servlet.ServletHandler;
+import common.Tools;
+import frozen.dal.accessors_text_file_storage.ImmutableBaseCoursor;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -116,7 +110,7 @@ public class WebRelayServlet  extends HttpServlet {
     } else if (name_requester.equals("get_nodes")) {
       Gson gson = new Gson();
       json_response = gson.toJson(listNodes);
-      Util.print(json_response);
+      Tools.print(json_response);
     } else {
       // No implemented
     }

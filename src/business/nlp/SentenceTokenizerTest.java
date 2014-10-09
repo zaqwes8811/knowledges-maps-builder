@@ -1,7 +1,7 @@
 package business.nlp;
 
 import com.google.common.base.Splitter;
-import common.Util;
+import common.Tools;
 import org.junit.Test;
 
 /**
@@ -28,7 +28,7 @@ public class SentenceTokenizerTest {
       .omitEmptyStrings()
       .split(sent);
     for (String item: result) {
-      Util.print(item);
+      Tools.print(item);
     }
 
   }
