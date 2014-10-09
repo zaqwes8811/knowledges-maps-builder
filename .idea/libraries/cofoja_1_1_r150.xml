@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="cofoja-1.1-r150">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../third_party/java/lib/cofoja-1.1-r150.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
