@@ -1,4 +1,4 @@
-package medium_tests;
+package chain_apps;
 
 import frozen.old.NewMapper;
 import frozen.old.NewReducer;
