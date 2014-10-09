@@ -119,9 +119,9 @@ public class ContentPagePersistTest {
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
     //
-    //GeneratorDistributionsImpl gen;  // TODO: Как быть с ним? Они логическое целое.
+    //DistributionsImpl gen;  // TODO: Как быть с ним? Они логическое целое.
     // Заряжаем генератор
-    //GeneratorDistributionsImpl gen = GeneratorDistributionsImpl.create(distribution);
+    //DistributionsImpl gen = DistributionsImpl.create(distribution);
     ofy().save().entity(buildContentPage()).now();
 
     Integer idxPosition = 4;//gen.getPosition();
@@ -145,7 +145,7 @@ public class ContentPagePersistTest {
     ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().now();
 
     /// Queries
-    ImmutableList<Integer> distribution = page.getSortedFrequencies();
+    ImmutableList<Integer> distribution = page.getRawDistribution();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
