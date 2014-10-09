@@ -1,4 +1,4 @@
-package store_gae_kinds;
+package store_gae_stuff;
 
 import business.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
