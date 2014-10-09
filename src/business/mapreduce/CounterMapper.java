@@ -25,7 +25,7 @@ public class CounterMapper {
   public void map(List<ContentItem> contentItems) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (ContentItem item : contentItems) {
-      List<String> words = tokenizer.getWords(item.get());
+      List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words)
         // TODO: Сделать все буквы маленькими. Здесь?
         emit(word, item);

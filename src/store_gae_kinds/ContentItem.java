@@ -10,6 +10,13 @@ import com.googlecode.objectify.annotation.Index;
  */
 @Entity
 public class ContentItem {
+  // ctor/...
+  private ContentItem() {}
+  public ContentItem(String item, Long pos) {
+    this.sentence = item;
+    this.pos = pos;
+  }
+
   /// Persist
   //@Parent // TODO: как быть если делать выборку по parent? Может быть несколько parents? Кажется нет.
   @Id
@@ -17,29 +24,18 @@ public class ContentItem {
 
   // value <= 500 symbols
   // TODO: 500 чего именно?
-  String item;
+  String sentence;
 
   @Index
-  Long idx;
-  //Long size;
+  Long pos;  // номер в тексте 1..pos..N - no nulls
 
-  /// Own
-  public String get() {
-    return item;
+  public String getSentence() {
+    return sentence;
   }
   public Long getId() { return id; }
 
-  public void setIdx(Long value) {
-    idx = value;
-  }
-
-  private ContentItem() {}
-
-  public ContentItem(String item) {
-    this.item = item;
-  }
-
+  // tools
   public String toString() {
-    return "Value = "+item;
+    return "Value = "+sentence;
   }
 }
