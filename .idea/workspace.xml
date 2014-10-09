@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPagePersistTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/DistributionGenImpl.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/DistributionGenImplTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/math/DistributionElement.java" afterPath="$PROJECT_DIR$/src/business/math/DistributionElement.java" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,13 +30,23 @@
       <file leaf-file-name="ActiveDistributionGen.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71537" vertical-offset="343" max-vertical-offset="1395">
-              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.34535104" vertical-offset="1063" max-vertical-offset="1665">
+              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2313#2314#0" expanded="true" />
-                <element signature="e#2346#2347#0" expanded="true" />
+                <element signature="e#2429#2430#0" expanded="true" />
+                <element signature="e#2481#2482#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistributionElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/business/math/DistributionElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,8 +54,8 @@
       <file leaf-file-name="ActiveDistributionGenTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="545" max-vertical-offset="1050">
-              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1140">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#933#954#0" expanded="true" />
@@ -124,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/store_gae_stuff/Word.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilder.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/WordItem.java" />
-        <option value="$PROJECT_DIR$/src/business/math/DistributionElement.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorDistributionException.java" />
         <option value="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/GeneratorDistributionsFake.java" />
@@ -140,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ContentPagePersistTest.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/DistributionGenFake.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/DistributionGenImpl.java" />
+        <option value="$PROJECT_DIR$/src/business/math/DistributionElement.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java" />
       </list>
@@ -539,7 +546,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.259375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37594798" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37594798" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -564,7 +571,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -760,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/DistributionElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorDistributionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
@@ -858,10 +857,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/math/DistributionElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="545" max-vertical-offset="1050">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1140">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#933#954#0" expanded="true" />
@@ -874,12 +881,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71537" vertical-offset="343" max-vertical-offset="1395">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.34535104" vertical-offset="1063" max-vertical-offset="1665">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2313#2314#0" expanded="true" />
-            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2429#2430#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
           </folding>
         </state>
       </provider>
