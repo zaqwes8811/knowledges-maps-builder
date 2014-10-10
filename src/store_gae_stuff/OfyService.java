@@ -6,9 +6,9 @@ import com.googlecode.objectify.ObjectifyService;
 
 public class OfyService {
   static {
-    factory().register(ContentItem.class);
+    factory().register(ContentItemKind.class);
     factory().register(ContentPageKind.class);
-    factory().register(WordItem.class);
+    factory().register(WordItemKind.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
     factory().register(ActiveDistributionGenKind.class);

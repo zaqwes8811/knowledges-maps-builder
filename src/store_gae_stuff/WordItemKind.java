@@ -10,7 +10,7 @@ import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
-public class WordItem {
+public class WordItemKind {
   /// Persistent
   @Id
   Long id;
@@ -27,7 +27,7 @@ public class WordItem {
   // https://developers.google.com/appengine/pricing
   // Вроде бы нет ограничения между запросами.
   @Load
-  Set<Key<ContentItem>> items = new HashSet<Key<ContentItem>>();
+  Set<Key<ContentItemKind>> items = new HashSet<Key<ContentItemKind>>();
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
@@ -36,7 +36,7 @@ public class WordItem {
   @Index
   Integer sortedIdx;
 
-  private WordItem() {}
+  private WordItemKind() {}
 
   /// Own
   @Override
@@ -52,21 +52,21 @@ public class WordItem {
     return rawFrequency;
   }
 
-  public static WordItem create(String wordValue, Collection<ContentItem> items, int rawFrequency) {
-    WordItem word = new WordItem(wordValue);
+  public static WordItemKind create(String wordValue, Collection<ContentItemKind> items, int rawFrequency) {
+    WordItemKind word = new WordItemKind(wordValue);
 
     // Частоту берем из списка ссылок.
     word.setRawFrequency(rawFrequency);
 
     // Ссылки должны быть уникальными
-    Set<ContentItem> itemSet = new HashSet<ContentItem>();
+    Set<ContentItemKind> itemSet = new HashSet<ContentItemKind>();
     itemSet.addAll(items);
     word.setContentItems(itemSet);
     return word;
   }
 
-  public static WordItem create(String wordValue, int rawFrequency) {
-    WordItem word = new WordItem(wordValue);
+  public static WordItemKind create(String wordValue, int rawFrequency) {
+    WordItemKind word = new WordItemKind(wordValue);
 
     // Частоту берем из списка ссылок.
     word.setRawFrequency(rawFrequency);
@@ -78,13 +78,13 @@ public class WordItem {
   }
 
   // List coupled content items.
-  public void setContentItems(Set<ContentItem> item) {
-    for (ContentItem value: item) {
+  public void setContentItems(Set<ContentItemKind> item) {
+    for (ContentItemKind value: item) {
       this.items.add(Key.create(value));
     }
   }
 
-  public Set<Key<ContentItem>> getItems() {
+  public Set<Key<ContentItemKind>> getItems() {
     return items;
   }
 
@@ -95,31 +95,31 @@ public class WordItem {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  public WordItem(String word) {
+  public WordItemKind(String word) {
     this.word = word;
     sortedIdx = -1;
   }
 
-  private static class WordFreqComparator implements Comparator<WordItem> {
+  private static class WordFreqComparator implements Comparator<WordItemKind> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(WordItem o1, WordItem o2) {
+    public int compare(WordItemKind o1, WordItemKind o2) {
       return o1.getRawFrequency().compareTo(o2.getRawFrequency());
     }
   }
 
-  public static Comparator<WordItem> createFrequencyComparator() {
+  public static Comparator<WordItemKind> createFrequencyComparator() {
     return new WordFreqComparator();
   }
 
   public static class WordValue {
     final Integer frequency;
     final String word;
-    final Collection<ContentItem> items;
+    final Collection<ContentItemKind> items;
 
-    WordValue(String word, Integer frequency, Collection<ContentItem> c) {
+    WordValue(String word, Integer frequency, Collection<ContentItemKind> c) {
       this.word = word;
       this.frequency = frequency;
       this.items = c;

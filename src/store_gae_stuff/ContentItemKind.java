@@ -9,10 +9,10 @@ import com.googlecode.objectify.annotation.Index;
  *
  */
 @Entity
-public class ContentItem {
+public class ContentItemKind {
   // ctor/...
-  private ContentItem() {}
-  public ContentItem(String item, Long pos) {
+  private ContentItemKind() {}
+  public ContentItemKind(String item, Long pos) {
     this.sentence = item;
     this.pos = pos;
   }

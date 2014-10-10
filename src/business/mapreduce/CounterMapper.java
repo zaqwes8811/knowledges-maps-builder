@@ -1,7 +1,7 @@
 package business.mapreduce;
 
 import business.nlp.SentenceTokenizer;
-import store_gae_stuff.ContentItem;
+import store_gae_stuff.ContentItemKind;
 import org.checkthread.annotations.NotThreadSafe;
 
 import java.util.List;
@@ -18,13 +18,13 @@ public class CounterMapper {
     reducer_ = reducer;
   }
 
-  private void emit(String key, ContentItem value) {
+  private void emit(String key, ContentItemKind value) {
     reducer_.reduce(key, value);
   }
 
-  public void map(List<ContentItem> contentItems) {
+  public void map(List<ContentItemKind> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
-    for (ContentItem item : contentItems) {
+    for (ContentItemKind item : contentItemKinds) {
       List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words)
         // TODO: Сделать все буквы маленькими. Здесь?

@@ -5,15 +5,15 @@ import org.junit.Test;
 /**
  * Created by zaqwes on 5/12/14.
  */
-public class WordItemFreqComparatorTest {
+public class WordItemKindFreqComparatorTest {
   @Test
   public void testCompare() throws Exception {
-    WordItem o1 = new WordItem("hello");
+    WordItemKind o1 = new WordItemKind("hello");
     o1.setRawFrequency(1);
-    WordItem o2 = new WordItem("dfasdf");
+    WordItemKind o2 = new WordItemKind("dfasdf");
     o2.setRawFrequency(1);
 
-    assert 0 == WordItem.createFrequencyComparator().compare(o1, o2);
+    assert 0 == WordItemKind.createFrequencyComparator().compare(o1, o2);
 
     o2.setRawFrequency(2);
   }
