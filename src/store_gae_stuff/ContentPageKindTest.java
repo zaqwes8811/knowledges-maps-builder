@@ -77,10 +77,8 @@ public class ContentPageKindTest {
 
     // Пакуем
     ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();
-    Long pos = (long) 0;
     for (String sentence: sentences) {
-      contentElements.add(new ContentItemKind(sentence, pos));
-      pos++;
+      contentElements.add(new ContentItemKind(sentence));
     }
 
     return contentElements;
@@ -158,14 +156,14 @@ public class ContentPageKindTest {
     // TODO: Может лучше сделать ссылкой-ключом?
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
-    //
-    // build
+
+    // Check store
     String activePageName = "Korra";
     ContentPageKind loadedPage =
       ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+    assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
 
-    assertNull(loadedPage);
-
+    // Create new page
     ContentPageKind page = buildContentPage(activePageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
@@ -180,18 +178,17 @@ public class ContentPageKindTest {
 
     // слово одно, но если страниц много, то получим для всех
     List<WordItemKind> words = ofy().load()
-      .type(WordItemKind.class)
-      //.ancestor(page)  // don't work
-      //.parent(page)
-      .filterKey("in", page.words)
-      .filter("pointPos =", pointPosition)
-      .list();
+        .type(WordItemKind.class)
+        //.ancestor(page)  // don't work
+        //.parent(page)  // don't work
+        .filterKey("in", page.words)
+        .filter("pointPos =", pointPosition)
+        .list();
 
     assertEquals(words.size(), 1);  // не прошли не свои страницы
     WordItemKind word = words.get(0);
-    List<ContentItemKind> content =
-      ofy().load().type(ContentItemKind.class)
-      .filterKey("in", word.getItems()).list();
+    List<ContentItemKind> content = ofy().load().type(ContentItemKind.class)
+        .filterKey("in", word.getItems()).list();
 
     for (ContentItemKind e: content) {
       String v = e.getSentence();
@@ -201,5 +198,7 @@ public class ContentPageKindTest {
       boolean in = v.toLowerCase().contains(word.word.toLowerCase());
       assertTrue(in);
     }
+
+    // запрещаем точку
   }
 }
