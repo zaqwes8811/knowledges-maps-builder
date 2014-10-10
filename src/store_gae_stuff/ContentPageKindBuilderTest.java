@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Created by zaqwes on 10/9/14.
  */
-public class ContentPageBuilderTest {
+public class ContentPageKindBuilderTest {
   private String getPlainText() {
     return
     "Born of cold and Winter air And mountain rain combining, This icy force" +

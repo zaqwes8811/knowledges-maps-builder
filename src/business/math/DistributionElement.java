@@ -19,6 +19,11 @@ public class DistributionElement implements Comparable<DistributionElement> {
     enabled = ena;
   }
 
+  public  DistributionElement(Integer freq) {
+    enabled = true;
+    frequency = freq;
+  }
+
   @Override
   //@NotNull  // TODO: Какое-то предупреждение в idea ide
   public int compareTo(DistributionElement o2) {

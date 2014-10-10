@@ -12,7 +12,7 @@ import java.util.Collections;
 import static store_gae_stuff.OfyService.ofy;
 
 public class ContentPageBuilder {
-  public ContentPage build(String name, ArrayList<ContentItem> contentElements) {
+  public ContentPageKind build(String name, ArrayList<ContentItem> contentElements) {
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, ContentItem> wordHistogramSink = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogramSink);
@@ -31,7 +31,6 @@ public class ContentPageBuilder {
     // Sort words by frequency and assign idx
     Collections.sort(value, new WordItem.WordValueFrequencyComparator());
     Collections.reverse(value);
-
 
     ArrayList<WordItem> words = new ArrayList<WordItem>();
     {
@@ -53,6 +52,6 @@ public class ContentPageBuilder {
     }
 
     // Слова сортированы
-    return new ContentPage(name, contentElements, words);
+    return new ContentPageKind(name, contentElements, words);
   }
 }
