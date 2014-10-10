@@ -66,21 +66,25 @@ public class WebRelayTest {
     // Подключаем корень?
     ResourceHandler resourceHandler = new ResourceHandler();
     resourceHandler.setDirectoriesListed(true);
-    resourceHandler.setWelcomeFiles(new String[]{"index.html"});
-    resourceHandler.setResourceBase("apps/views.views");  // что это-то?
+    resourceHandler.setWelcomeFiles(new String[]{"war/index.html"});
+    resourceHandler.setResourceBase("war");  // что это-то?
+
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath(".");
 
     // Список обработчиков?
     // FIXME: Если не находи index.html Открывает вид папки!!
     HandlerList handlers = new HandlerList();
     ServletHandler handler = new ServletHandler();
-    handlers.setHandlers(new Handler[] { resourceHandler, handler });
+    handlers.setHandlers(new Handler[] { resourceHandler, handler, context });
 
     // Подключаем к серверу
     server.setHandler(handlers);
 
     // Регистрируем сервлет?
     handler.addServletWithMapping("servlets.OldSingleWordGetterServlet", "/get_word_data");
-///*
+
+    ///*
     server.start();
     server.join();//*/
   }
