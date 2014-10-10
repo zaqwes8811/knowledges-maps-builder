@@ -62,15 +62,15 @@ public class PersistContentPageKindTest {
     }
   }
 
-  private ArrayList<ContentItem> getContentElements(String text) {
+  private ArrayList<ContentItemKind> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 50);
     assertFalse(sentences.isEmpty());
 
     // Пакуем
-    ArrayList<ContentItem> contentElements = new ArrayList<ContentItem>();
+    ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();
     Long pos = (long) 1;
     for (String sentence: sentences) {
-      contentElements.add(new ContentItem(sentence, pos));
+      contentElements.add(new ContentItemKind(sentence, pos));
       pos++;
     }
 
@@ -85,7 +85,7 @@ public class PersistContentPageKindTest {
       assertFalse(plainText.isEmpty());
 
       // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-      ArrayList<ContentItem> contentElements = getContentElements(plainText);
+      ArrayList<ContentItemKind> contentElements = getContentElements(plainText);
 
       // Last - Persist page
       return new ContentPageBuilder().build("Korra", contentElements);     
@@ -125,14 +125,16 @@ public class PersistContentPageKindTest {
 
     ofy().save().entity(page).now();
 
-    Integer idxPosition = 4;//gen.getPosition();
+    Integer idxPosition = gen.getPosition();
     int countFirst = 4;
-    WordItem elem = ofy().load().type(WordItem.class).filter("sortedIdx =", idxPosition).first().now();
-    List<ContentItem> coupled = ofy().load().type(ContentItem.class)
+    WordItemKind elem = ofy().load().type(WordItemKind.class).filter("sortedIdx =", idxPosition).first().now();
+    List<ContentItemKind> coupled = ofy().load().type(ContentItemKind.class)
       .filterKey("in", elem.getItems())
       //.filter("pos <=", 8)
       .limit(countFirst)
       .list();
+
+    assertFalse(coupled.isEmpty());
 
     ContentPageKind loadedPage = ofy().load().type(ContentPageKind.class).filter("name = ", "Korra").first().now();
     assertNotNull(loadedPage);
@@ -164,6 +166,6 @@ public class PersistContentPageKindTest {
     ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
 
     Integer position = 9;
-    //Pair<Optional<WordItem> page.get(position);
+    //Pair<Optional<WordItemKind> page.get(position);
   }
 }

@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/business/math/DistributionEqualizerImpl_NI.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGen.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKind.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPage.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilderTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKindBuilderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/WordCurrier.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentItem.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentItemKind.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/User.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/UserKind.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/WordItem.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/WordItemKind.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/store_gae_stuff/WordItemFreqComparatorTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/WordItemKindFreqComparatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilder.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/math/DistributionElement.java" afterPath="$PROJECT_DIR$/src/business/math/DistributionElement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetter.java" afterPath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetterImpl.java" afterPath="$PROJECT_DIR$/src/frozen/controllers/web_wrapper/ListGetterImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/User.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
@@ -36,13 +38,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PersistContentPageKindTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersistContentPageKindTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2890995" vertical-offset="1962" max-vertical-offset="2595">
-              <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1647" max-vertical-offset="2625">
+              <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserKind.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/UserKind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordItemKindFreqComparatorTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItemKindFreqComparatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47393364" vertical-offset="0" max-vertical-offset="633">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordItemKind.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItemKind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1140">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+              <folding>
+                <element signature="e#863#885#0" expanded="true" />
+                <element signature="method#create#0;class#WordItemKind#0" expanded="false" />
+                <element signature="method#create#1;class#WordItemKind#0" expanded="false" />
+                <element signature="method#setContentItems#0;class#WordItemKind#0" expanded="false" />
+                <element signature="method#WordItemKind#1;class#WordItemKind#0" expanded="false" />
+                <element signature="class#WordFreqComparator#0;class#WordItemKind#0" expanded="false" />
+                <element signature="class#WordValue#0;class#WordItemKind#0" expanded="false" />
+                <element signature="class#WordValueFrequencyComparator#0;class#WordItemKind#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,6 +140,8 @@
         <option value="$PROJECT_DIR$/src/business/math/DistributionElement.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java" />
+        <option value="$PROJECT_DIR$/src/store_gae_stuff/User.java" />
+        <option value="$PROJECT_DIR$/src/store_gae_stuff/WordItemKindFreqComparatorTest.java" />
       </list>
     </option>
   </component>
@@ -567,14 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItemFreqComparatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
@@ -631,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1266892" vertical-offset="0" max-vertical-offset="592">
@@ -652,27 +679,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#855#873#0" expanded="true" />
-            <element signature="method#create#0;class#WordItem#0" expanded="false" />
-            <element signature="method#create#1;class#WordItem#0" expanded="false" />
-            <element signature="method#setContentItems#0;class#WordItem#0" expanded="false" />
-            <element signature="method#WordItem#1;class#WordItem#0" expanded="false" />
-            <element signature="class#WordFreqComparator#0;class#WordItem#0" expanded="false" />
-            <element signature="e#3118#3119#0" expanded="true" />
-            <element signature="e#3191#3192#0" expanded="true" />
-            <element signature="class#WordValue#0;class#WordItem#0" expanded="false" />
-            <element signature="class#WordValueFrequencyComparator#0;class#WordItem#0" expanded="false" />
-            <element signature="e#3752#3753#0" expanded="true" />
-            <element signature="e#3809#3810#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,8 +743,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
-            <element signature="e#829#849#0" expanded="true" />
-            <element signature="e#1290#1300#0" expanded="true" />
+            <element signature="e#841#865#0" expanded="true" />
+            <element signature="e#1322#1336#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -755,7 +761,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ContentItem.java">
+    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ContentItemKind.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="630">
           <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
@@ -792,22 +798,55 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1335">
           <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding>
-            <element signature="e#0#2966#0" expanded="true" />
+            <element signature="e#0#3034#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1416#1431#0" expanded="true" />
-            <element signature="e#1490#1508#0" expanded="true" />
-            <element signature="e#2726#2747#0" expanded="true" />
+            <element signature="e#1420#1439#0" expanded="true" />
+            <element signature="e#1502#1524#0" expanded="true" />
+            <element signature="e#2782#2803#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/PersistContentPageKindTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2890995" vertical-offset="1962" max-vertical-offset="2595">
-          <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1647" max-vertical-offset="2625">
+          <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItemKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#863#885#0" expanded="true" />
+            <element signature="method#create#0;class#WordItemKind#0" expanded="false" />
+            <element signature="method#create#1;class#WordItemKind#0" expanded="false" />
+            <element signature="method#setContentItems#0;class#WordItemKind#0" expanded="false" />
+            <element signature="method#WordItemKind#1;class#WordItemKind#0" expanded="false" />
+            <element signature="class#WordFreqComparator#0;class#WordItemKind#0" expanded="false" />
+            <element signature="class#WordValue#0;class#WordItemKind#0" expanded="false" />
+            <element signature="class#WordValueFrequencyComparator#0;class#WordItemKind#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/UserKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/WordItemKindFreqComparatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47393364" vertical-offset="0" max-vertical-offset="633">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
