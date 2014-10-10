@@ -66,17 +66,17 @@ public class WebRelayTest {
     // Подключаем корень?
     ResourceHandler resourceHandler = new ResourceHandler();
     resourceHandler.setDirectoriesListed(true);
-    resourceHandler.setWelcomeFiles(new String[]{"war/index.html"});
+    resourceHandler.setWelcomeFiles(new String[]{"index.html"});
     resourceHandler.setResourceBase("war");  // что это-то?
 
-    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-    context.setContextPath(".");
+    //ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    //context.setContextPath(".");
 
     // Список обработчиков?
     // FIXME: Если не находи index.html Открывает вид папки!!
     HandlerList handlers = new HandlerList();
     ServletHandler handler = new ServletHandler();
-    handlers.setHandlers(new Handler[] { resourceHandler, handler, context });
+    handlers.setHandlers(new Handler[] { resourceHandler, handler/*, context*/ });
 
     // Подключаем к серверу
     server.setHandler(handlers);
