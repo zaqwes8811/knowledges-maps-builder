@@ -2,11 +2,13 @@ package spec;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-
-import common.Tools;
+import frozen.controllers.web_wrapper.BuilderControllers;
+import frozen.controllers.web_wrapper.ContainerNodeControllers;
+import frozen.crosscuttings.configurator.ConfigurationFileIsCorrupted;
+import frozen.crosscuttings.configurator.GlobalConfigurator;
+import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
-
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -14,12 +16,6 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
-
-import frozen.controllers.web_wrapper.BuilderControllers;
-import frozen.controllers.web_wrapper.ContainerNodeControllers;
-import frozen.crosscuttings.configurator.GlobalConfigurator;
-import frozen.crosscuttings.configurator.ConfigurationFileIsCorrupted;
-import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import org.junit.Test;
 
 public class WebRelayTest {
@@ -42,8 +38,8 @@ public class WebRelayTest {
   }
 
   @Test
-  public void testServerMain2() throws Exception {
-    // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
+  public void blockedTestCore() throws Exception {
+    // FIXME: Сделать через конфигурационные файлы. Можно ли и нужно ли?
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
     Server server = new Server();
@@ -52,28 +48,29 @@ public class WebRelayTest {
     server.addConnector(connector);
  
     // Подключаем корень?
-    ResourceHandler resource_handler = new ResourceHandler();
-    resource_handler.setDirectoriesListed(true);
-    resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-    resource_handler.setResourceBase("apps/views.views");
+    ResourceHandler resourceHandler = new ResourceHandler();
+    resourceHandler.setDirectoriesListed(true);
+    resourceHandler.setWelcomeFiles(new String[]{"index.html"});
+    resourceHandler.setResourceBase("apps/views.views");  // что это-то?
 
     // Список обработчиков?
+    // FIXME: Если не находи index.html Открывает вид папки!!
     HandlerList handlers = new HandlerList();
     ServletHandler handler = new ServletHandler();
-    handlers.setHandlers(new Handler[] { resource_handler/*, new DefaultHandler()*/, handler });
-    // ! если не находи index.html Открывает вид папки!!
-    
+    handlers.setHandlers(new Handler[] { resourceHandler, handler });
+
     // Подключаем к серверу
     server.setHandler(handlers);
 
     // Регистрируем сервлет?
-    handler.addServletWithMapping("AppContainer$App", "/app");
+    handler.addServletWithMapping("servlets.SingleWordGetterServlet", "/get_word_data");
+
     server.start();
     server.join();
   }
 
   @Test
-  public void testServerMain() throws Exception {
+  public void blockedTestServerOld() throws Exception {
     try {
       BuilderControllers wrapper = new BuilderControllers();
 
@@ -90,10 +87,8 @@ public class WebRelayTest {
       server.start();
       server.join();
     } catch (NoFoundConfigurationFile e) {
-      Tools.print(e);
       throw new RuntimeException();
     } catch (ConfigurationFileIsCorrupted e) {
-      Tools.print(e);
       throw new RuntimeException();
     }
   }

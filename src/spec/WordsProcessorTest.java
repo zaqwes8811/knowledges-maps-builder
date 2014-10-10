@@ -24,25 +24,25 @@ public class WordsProcessorTest {
     List<List<String>> jobs = JobsFormer.getJobs();
 
     // Map Stage
-    List<List> result_map_stage = new ArrayList<List>();
+    List<List> resultMapStage = new ArrayList<List>();
     for (List<String> job : jobs) {
       List one = NewMapper.mapper_word_level_with_compression(job);
-      result_map_stage.add(one);
+      resultMapStage.add(one);
       //break;  // DEVELOP
     }
 
     // Shuffle Stage - сейчас фактически нет - один узел - один файл
-    List<List> result_shuffle_stage  = result_map_stage;
+    List<List> resultShuffleStage  = resultMapStage;
 
     // Reduce Stage  - так же нет, т.к. - один узел - один файл
-    List<List> result_reduce_stage = new ArrayList<List>();
-    for (List task: result_shuffle_stage) {
+    List<List> resultReduceStage = new ArrayList<List>();
+    for (List task: resultShuffleStage) {
       List one = NewReducer.reduce_word_level_base(task);
-      result_reduce_stage.add(one);
+      resultReduceStage.add(one);
     }
 
     // Save results
-    for (List result: result_reduce_stage) {
+    for (List result: resultReduceStage) {
       // Куда сохраняем результаты
       String path_for_save = Joiner.on(AppConstants.PATH_SPLITTER)
           .join(
@@ -50,7 +50,7 @@ public class WordsProcessorTest {
             AppConstants.COMPRESSED_IDX_FOLDER,
             result.get(NewMapper.IDX_NODE_NAME));
 
-      String path_for_save_sorted_idx = Joiner.on(AppConstants.PATH_SPLITTER)
+      String pathForSaveSortedIdx = Joiner.on(AppConstants.PATH_SPLITTER)
         .join(
           ProcessorTargets.getPathToIndex(),
           AppConstants.COMPRESSED_IDX_FOLDER,
@@ -106,7 +106,7 @@ public class WordsProcessorTest {
           }
 
           // Сохраняем в JSON
-          closer.register(new BufferedWriter(new FileWriter(path_for_save_sorted_idx)))
+          closer.register(new BufferedWriter(new FileWriter(pathForSaveSortedIdx)))
               .write(new Gson().toJson(sorted_index));
           closer.register(new BufferedWriter(new FileWriter(path_for_save_freq_idx)))
               .write(new Gson().toJson(index_for_save));
