@@ -30,7 +30,7 @@ import static store_gae_stuff.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class PersistContentPageKindTest {
+public class ContentPageKindTest {
   private String getTestFileName() {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }

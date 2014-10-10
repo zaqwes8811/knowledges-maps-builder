@@ -1,8 +1,9 @@
-package store_gae_stuff;
+package frozen;
 
 import business.math.DistributionElement;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import frozen.DistributionGen;
 
 import java.util.ArrayList;
 
