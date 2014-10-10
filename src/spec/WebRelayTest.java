@@ -23,12 +23,26 @@ import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import org.junit.Test;
 
 public class WebRelayTest {
-  //private static Logger log = Logger.getLogger(AppContainer.class);
+  // About:
+  //   For local Jetty
+  public HandlerList buildHandlers() {
+    // Подключаем ресурсы
+    ResourceHandler resourceHandler = new ResourceHandler();
+    resourceHandler.setDirectoriesListed(true);
+    resourceHandler.setWelcomeFiles(new String[]{ "index.html" });
+    resourceHandler.setResourceBase("./web-pages");
+
+    // Регистрируем обработчики
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath("/");
+    // Коннектим все
+    HandlerList handlers = new HandlerList();
+    handlers.setHandlers(new Handler[] { resourceHandler, context });
+    return handlers;
+  }
 
   @Test
-  public void testMain2() throws Exception {
-    //BasicConfigurator.configure();
-
+  public void testServerMain2() throws Exception {
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
@@ -57,27 +71,9 @@ public class WebRelayTest {
     server.start();
     server.join();
   }
-  
-  // About:
-  //   For local Jetty
-  public HandlerList buildHandlers() {
-    // Подключаем ресурсы
-    ResourceHandler resourceHandler = new ResourceHandler();
-    resourceHandler.setDirectoriesListed(true);
-    resourceHandler.setWelcomeFiles(new String[]{ "index.html" });
-    resourceHandler.setResourceBase("./web-pages");
-
-    // Регистрируем обработчики
-    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-    context.setContextPath("/");
-    // Коннектим все
-    HandlerList handlers = new HandlerList();
-    handlers.setHandlers(new Handler[] { resourceHandler, context });
-    return handlers;
-  }
 
   @Test
-  public void testMain() throws Exception {
+  public void testServerMain() throws Exception {
     try {
       BuilderControllers wrapper = new BuilderControllers();
 

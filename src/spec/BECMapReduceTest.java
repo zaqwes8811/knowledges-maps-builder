@@ -243,14 +243,10 @@ public class BECMapReduceTest {
           GlobalConstants.PATH_SPLITTER).join(pathToNode, GlobalConstants.FILENAME_SENTENCES_IDX),
           idxSentencesForSave);
 
-      //IdxAccessor.saveListObjects(tmp);
-
     } catch (IOException e) {
       Tools.print(e.getMessage());
     } catch (IllegalStateException e) {
       Tools.print(e.getMessage());
-    } /*catch (CrosscuttingsException e) {
-      Tools.print(e.getMessage());
-    } */
+    }
   }
 }
