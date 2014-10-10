@@ -10,11 +10,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 // TODO: Вещь довольно законченная, пока расширять не хочу.
+// TODO: Проблема!! Похоже нужно обнулять частоты. Иначе индексы собъются.
+// TODO: но как быть при выборке. while(not null)? Это может быть долго...
+// TODO: Стоп - нулевые не должны вообще выпадать!
 @Immutable
 public final class GeneratorAnyDistribution {
   private final Integer countPoints_;
   private final Integer maxValue_;
-  private final ImmutableList<ImmutableList<Integer>> codeBook_;  // TODO: Это сохранится в gae storage?
+  private final ImmutableList<ImmutableList<Integer>> codeBook_;
   private final Integer INTERVAL_POS_ = 1;
   private final Integer IDX_POSITION_ = 2;
 
@@ -27,20 +30,15 @@ public final class GeneratorAnyDistribution {
   }
 
   private GeneratorAnyDistribution(ArrayList<DistributionElement> distribution) {
-    // TODO: Сделать или нет? Можно ли вызывать виртуальные функции.
     // Transpose
     ArrayList<Integer> transposed = new ArrayList<Integer>();
     for (DistributionElement elem: distribution)
-      // TODO: Проблема!! Похоже нужно обнулять частоты. Иначе индексы собъются.
-      // TODO: но как быть при выборке. while(not null)? Это может быть долго...
-      // TODO: Стоп - нулевые не должны вообще выпадать!
       if (elem.enabled)
         transposed.add(elem.frequency);
       else {
-        transposed.add(0);
+        transposed.add(0);  // просто обнуляем частоту, она не появится
       }
 
-    // TODO: Now only enabled
     Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(transposed);
     ArrayList<Integer> Fx = tupleFx.getValue0();
     countPoints_ = tupleFx.getValue1();
@@ -48,6 +46,7 @@ public final class GeneratorAnyDistribution {
     codeBook_ = ImmutableList.copyOf(makeRanges(Fx));
   }
 
+  // 0..N-1
   public Integer getPosition() {
     // Используется рекурсивная реализация на базе бинарного поиска.
     // На модели она показала наилучшую масштабирумость и скорость работы.

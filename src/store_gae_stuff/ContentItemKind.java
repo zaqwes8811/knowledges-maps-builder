@@ -27,7 +27,7 @@ public class ContentItemKind {
   String sentence;
 
   @Index
-  Long pos;  // номер в тексте 1..pos..N - no nulls
+  Long pos;  // номер в тексте 0..pos..N-1 - все с нуля путь и это будет тоже
 
   public String getSentence() {
     return sentence;

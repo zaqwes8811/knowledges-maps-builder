@@ -31,6 +31,15 @@ import static store_gae_stuff.OfyService.ofy;
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class ContentPageKindTest {
+  private String getPlainText() {
+    return
+      "Born of cold and Winter air And mountain rain combining, This icy force" +
+        "both foul and fair Has a frozen heart worth mining. Cut through the heart, Cold and Clear. Strike for love And" +
+        "Strike for fear. See the beauty Sharp and Sheer.  Split the ice apart" +
+        "And break the frozen heart. Hup! Ho! Watch your step! Let it go! Hup! Ho! " +
+        "Watch your step! Let it go! Beautiful! Powerful! Dangerous! Cold!";
+  }
+
   private String getTestFileName() {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
@@ -68,7 +77,7 @@ public class ContentPageKindTest {
 
     // Пакуем
     ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();
-    Long pos = (long) 1;
+    Long pos = (long) 0;
     for (String sentence: sentences) {
       contentElements.add(new ContentItemKind(sentence, pos));
       pos++;
@@ -77,7 +86,7 @@ public class ContentPageKindTest {
     return contentElements;
   }
 
-  private ContentPageKind buildContentPage() {
+  private ContentPageKind buildContentPage(String pageName) {
     String filename = getTestFileName();
     try {
       // Phase I
@@ -88,7 +97,7 @@ public class ContentPageKindTest {
       ArrayList<ContentItemKind> contentElements = getContentElements(plainText);
 
       // Last - Persist page
-      return new ContentPageBuilder().build("Korra", contentElements);     
+      return new ContentPageBuilder().build(pageName, contentElements);
     } catch (IOException e)  {
       throw new RuntimeException(e);
     }
@@ -104,45 +113,16 @@ public class ContentPageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
-    // Хотелось бы выбирать по некоторому критерию.
-    // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
-    // http://stackoverflow.com/questions/9867401/objectify-query-filter-by-list-in-entity-contains-search-parameter
-    // http://bighow.net/3869301-Objectify___how_to__Load_a_List_lt_Ref_lt___gt__gt__.html
-    //
-    // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
-    //
-    // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
-    //
-
-    // TODO: troubles. Может добавить метод выкалывания точек?
-    // TODO: Может лучше сделать ссылкой-ключом?
-    // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
-    //   можно использовать кэши, но как быть с обновлением данных?
-    //
-    ContentPageKind page = buildContentPage();
+    ContentPageKind page = buildContentPage("Korra");
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
-
+    ofy().save().entity(gen).now();
+    page.addGenerator(gen);
     ofy().save().entity(page).now();
-
-    Integer idxPosition = gen.getPosition();
-    int countFirst = 4;
-    WordItemKind elem = ofy().load().type(WordItemKind.class).filter("sortedIdx =", idxPosition).first().now();
-    List<ContentItemKind> coupled = ofy().load().type(ContentItemKind.class)
-      .filterKey("in", elem.getItems())
-      //.filter("pos <=", 8)
-      .limit(countFirst)
-      .list();
-
-    assertFalse(coupled.isEmpty());
-
-    ContentPageKind loadedPage = ofy().load().type(ContentPageKind.class).filter("name = ", "Korra").first().now();
-    assertNotNull(loadedPage);
   }
 
   @Test
   public void testGetDistribution() throws IOException {
-    ofy().save().entity(buildContentPage()).now();
+    ofy().save().entity(buildContentPage("Korra")).now();
     
     // Очень медленно!!
     ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
@@ -163,9 +143,63 @@ public class ContentPageKindTest {
 
   @Test
   public void testGetWordData() {
-    ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
+    // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
+    // Хотелось бы выбирать по некоторому критерию.
+    // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
+    // http://stackoverflow.com/questions/9867401/objectify-query-filter-by-list-in-entity-contains-search-parameter
+    // http://bighow.net/3869301-Objectify___how_to__Load_a_List_lt_Ref_lt___gt__gt__.html
+    //
+    // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
+    //
+    // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
+    //
 
-    Integer position = 9;
-    //Pair<Optional<WordItemKind> page.get(position);
+    // TODO: troubles. Может добавить метод выкалывания точек?
+    // TODO: Может лучше сделать ссылкой-ключом?
+    // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
+    //   можно использовать кэши, но как быть с обновлением данных?
+    //
+    // build
+    String activePageName = "Korra";
+    ContentPageKind loadedPage =
+      ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+
+    assertNull(loadedPage);
+
+    ContentPageKind page = buildContentPage(activePageName);
+    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    ofy().save().entity(gen).now();
+    page.addGenerator(gen);
+
+    // создаем две страницы, важно для проверки разделения запросов.
+    ofy().save().entity(page).now();
+    ofy().save().entity(buildContentPage("Korra1")).now();  //
+
+    // queries
+    Integer pointPosition = gen.getPosition();
+
+    // слово одно, но если страниц много, то получим для всех
+    List<WordItemKind> words = ofy().load()
+      .type(WordItemKind.class)
+      //.ancestor(page)  // don't work
+      //.parent(page)
+      .filterKey("in", page.words)
+      .filter("pointPos =", pointPosition)
+      .list();
+
+    assertEquals(words.size(), 1);  // не прошли не свои страницы
+    WordItemKind word = words.get(0);
+    List<ContentItemKind> content =
+      ofy().load().type(ContentItemKind.class)
+      .filterKey("in", word.getItems()).list();
+
+    for (ContentItemKind e: content) {
+      String v = e.getSentence();
+
+      // TODO: пока будет работать. Сейчас используется только стеммер
+      // http://stackoverflow.com/questions/2275004/in-java-how-to-check-if-a-string-contains-a-substring-ignoring-the-case
+      boolean in = v.toLowerCase().contains(word.word.toLowerCase());
+      assertTrue(in);
+    }
   }
 }
