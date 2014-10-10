@@ -1,7 +1,7 @@
 package frozen.spiders_extractors;//package com.github.zaqwes8811.text_processor.sandbox;
 
 
-import business.adapters_3rdparty.TikaWrapper;
+import core.adapters_3rdparty.TikaWrapper;
 import common.Tools;
 import frozen.crosscuttings.AppConstants;
 import frozen.crosscuttings.ThroughLevelBoundaryError;

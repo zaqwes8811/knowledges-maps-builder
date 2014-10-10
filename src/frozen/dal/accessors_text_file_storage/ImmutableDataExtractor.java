@@ -1,6 +1,6 @@
 package frozen.dal.accessors_text_file_storage;
 
-import business.evaluators.NotesBuilder;
+import core.evaluators.NotesBuilder;
 import com.google.common.collect.Multiset;
 import common.Tools;
 

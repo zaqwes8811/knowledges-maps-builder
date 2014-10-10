@@ -1,7 +1,7 @@
 package store_gae_stuff;
 
-import business.math.DistributionElement;
-import business.math.GeneratorAnyDistribution;
+import core.math.DistributionElement;
+import core.math.GeneratorAnyDistribution;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;

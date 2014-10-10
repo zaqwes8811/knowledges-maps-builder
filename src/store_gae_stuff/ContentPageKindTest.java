@@ -1,10 +1,10 @@
 package store_gae_stuff;
 
-import business.math.DistributionElement;
-import business.nlp.PlainTextTokenizer;
-import business.text_extractors.SpecialSymbols;
-import business.text_extractors.SubtitlesContentHandler;
-import business.text_extractors.SubtitlesParser;
+import core.math.DistributionElement;
+import core.nlp.PlainTextTokenizer;
+import core.text_extractors.SpecialSymbols;
+import core.text_extractors.SubtitlesContentHandler;
+import core.text_extractors.SubtitlesParser;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Charsets;

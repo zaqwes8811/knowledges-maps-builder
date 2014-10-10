@@ -38,7 +38,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
-/netbeans-sln/business-layer/nbproject/private/
+/netbeans-sln/core-layer/nbproject/private/
 *.jar
 *.class
 out
@@ -77,5 +77,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
-/netbeans-sln/business-layer/nbproject/private/
+/netbeans-sln/core-layer/nbproject/private/
 /netbeans-sln/app/nbproject/private/

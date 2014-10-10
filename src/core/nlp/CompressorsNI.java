@@ -1,4 +1,4 @@
-package business.nlp;
+package core.nlp;
 
 /**
  * Created with IntelliJ IDEA.

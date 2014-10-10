@@ -1,7 +1,7 @@
 package frozen;
 
 
-import business.math.DistributionElement;
+import core.math.DistributionElement;
 
 import java.util.ArrayList;
 

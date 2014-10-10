@@ -1,4 +1,4 @@
-package business.text_extractors;
+package core.text_extractors;
 
 import org.junit.Test;
 import org.xml.sax.ContentHandler;

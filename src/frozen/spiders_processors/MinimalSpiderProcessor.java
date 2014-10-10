@@ -1,8 +1,8 @@
 package frozen.spiders_processors;
 
 
-import business.adapters_3rdparty.TikaWrapper;
-import business.nlp.PlainTextTokenizer;
+import core.adapters_3rdparty.TikaWrapper;
+import core.nlp.PlainTextTokenizer;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 import com.google.gson.Gson;

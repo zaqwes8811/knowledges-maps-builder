@@ -1,5 +1,7 @@
 package spec;
 
+import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
+import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import frozen.controllers.web_wrapper.BuilderControllers;
@@ -16,9 +18,22 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class WebRelayTest {
+  private static final LocalServiceTestHelper helper =
+    new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
+
+  @Before
+  public void setUp() { helper.setUp(); }
+
+  @After
+  public void tearDown() {
+    helper.tearDown();
+  }
+
   // About:
   //   For local Jetty
   public HandlerList buildHandlers() {
@@ -39,6 +54,7 @@ public class WebRelayTest {
 
   @Test
   public void blockedTestCore() throws Exception {
+    // FIXME: перенаправить логи, лог от хранилища не попадает в основной вывод.
     // FIXME: Сделать через конфигурационные файлы. Можно ли и нужно ли?
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
@@ -63,10 +79,10 @@ public class WebRelayTest {
     server.setHandler(handlers);
 
     // Регистрируем сервлет?
-    handler.addServletWithMapping("servlets.SingleWordGetterServlet", "/get_word_data");
-
+    handler.addServletWithMapping("servlets.OldSingleWordGetterServlet", "/get_word_data");
+///*
     server.start();
-    server.join();
+    server.join();//*/
   }
 
   @Test

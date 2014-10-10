@@ -1,14 +1,7 @@
 package servlets;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
+import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.gson.Gson;
-import frozen.controllers.web_wrapper.BuilderControllers;
-import frozen.controllers.web_wrapper.ContainerNodeControllers;
-import frozen.crosscuttings.configurator.GlobalConfigurator;
-import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
-import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
-import org.checkthread.annotations.NotThreadSafe;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,31 +11,11 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class SingleWordGetterServlet extends HttpServlet {
-  private ContainerNodeControllers CONTAINER_;
-  private final String PATH_TO_CONFIGURATION_FILE_ = "own-app.yaml";
-  
   @Override
   public void doGet(
-  		HttpServletRequest request,
-  		HttpServletResponse response) throws ServletException, IOException
-  	{
-  	
-  	// TODO: syncronised
-  	try {
-      if (null == CONTAINER_) {
-        BuilderControllers builder = new BuilderControllers();
-        ImmutableSet<String> namesNodes =
-            new GlobalConfigurator(PATH_TO_CONFIGURATION_FILE_).getRegisteredNodes().get();
-        
-        ImmutableList<ImmutableNodeAccessor> controllers = 
-        		builder.createControllersForAllNodes(
-        				namesNodes, new FabricImmutableNodeControllersImpl());
-
-        CONTAINER_ = new ContainerNodeControllers(controllers);
-      }
-  	} catch (Exception e) {
-      // Вот проблемы создают эти проверяемые исключения
-  	}
+    HttpServletRequest request,
+    HttpServletResponse response) throws ServletException, IOException
+  {
 
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
@@ -50,7 +23,7 @@ public class SingleWordGetterServlet extends HttpServlet {
     // TODO: Сделать декоратор для класса
     // TODO: Это хардкод!
     Integer idxNode = 0;
-    String jsonResponse = new Gson().toJson(CONTAINER_.getPerWordData(idxNode));
+    String jsonResponse = new Gson().toJson(idxNode);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);

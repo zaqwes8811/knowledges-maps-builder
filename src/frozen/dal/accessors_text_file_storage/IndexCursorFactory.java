@@ -21,7 +21,7 @@ public class IndexCursorFactory {
     PythonInterpreter interpreter = new PythonInterpreter();
     interpreter.exec("import sys");
     interpreter.exec("sys.path.append('.');");
-    interpreter.exec("from jysrc.business.originator_frequency_index.IndexCursor import IndexCursor");
+    interpreter.exec("from jysrc.core.originator_frequency_index.IndexCursor import IndexCursor");
     buildingClass = interpreter.get("IndexCursor");
   }
 

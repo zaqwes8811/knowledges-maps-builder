@@ -1,4 +1,4 @@
-package business.nlp;
+package core.nlp;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
