@@ -11,7 +11,11 @@ import java.util.*;
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class WordItemKind {
-  /// Persistent
+  @Override
+  public String toString() {
+    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
+  }
+
   @Id
   Long id;
 
@@ -37,12 +41,6 @@ public class WordItemKind {
   Integer pointPos;
 
   private WordItemKind() {}
-
-  /// Own
-  @Override
-  public String toString() {
-    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
-  }
 
   public void setRawFrequency(Integer value) {
     rawFrequency = value;

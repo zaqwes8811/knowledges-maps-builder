@@ -105,8 +105,6 @@ public class WebRelayServlet  extends HttpServlet {
     if (name_requester.equals("get_axis")) {
       json_response = "get_axis";
       String node = request.getParameter("node_name");
-      //json_response = ReaderStaticData.json_get_notes_for_node(node);
-      //InnerReuse.print();
     } else if (name_requester.equals("get_nodes")) {
       Gson gson = new Gson();
       json_response = gson.toJson(listNodes);
