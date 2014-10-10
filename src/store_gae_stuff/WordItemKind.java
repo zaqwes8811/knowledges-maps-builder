@@ -34,14 +34,14 @@ public class WordItemKind {
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
   @Index
-  Integer sortedIdx;
+  Integer pointPos;
 
   private WordItemKind() {}
 
   /// Own
   @Override
   public String toString() {
-    return "("+word+", "+ rawFrequency.toString()+", "+sortedIdx.toString()+")";
+    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
   }
 
   public void setRawFrequency(Integer value) {
@@ -73,11 +73,11 @@ public class WordItemKind {
     return word;
   }
 
-  public void setSortedIdx(Integer value) {
-    sortedIdx = value;
+  public void setPointPos(Integer value) {
+    pointPos = value;
   }
 
-  // List coupled content items.
+  // List coupled content contentItems.
   public void setContentItems(Set<ContentItemKind> item) {
     for (ContentItemKind value: item) {
       this.items.add(Key.create(value));
@@ -97,7 +97,7 @@ public class WordItemKind {
   // hashCode() - need it?
   public WordItemKind(String word) {
     this.word = word;
-    sortedIdx = -1;
+    pointPos = -1;
   }
 
   private static class WordFreqComparator implements Comparator<WordItemKind> {
