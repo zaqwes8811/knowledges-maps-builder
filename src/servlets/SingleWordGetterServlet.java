@@ -1,26 +1,24 @@
-package web_view;
+package servlets;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
-
 import frozen.controllers.web_wrapper.BuilderControllers;
 import frozen.controllers.web_wrapper.ContainerNodeControllers;
+import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import org.checkthread.annotations.NotThreadSafe;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.checkthread.annotations.NotThreadSafe;
-import frozen.crosscuttings.configurator.GlobalConfigurator;
-
 import java.io.IOException;
 
-@NotThreadSafe  // TODO: Bad it!
-public class FakeGetterSingleWordDataServlet extends HttpServlet {
+// TODO: Bad it!
+@NotThreadSafe
+public class SingleWordGetterServlet extends HttpServlet {
   private ContainerNodeControllers CONTAINER_;
   private final String PATH_TO_CONFIGURATION_FILE_ = "own-app.yaml";
   
