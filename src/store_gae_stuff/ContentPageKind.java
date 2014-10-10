@@ -16,9 +16,9 @@
 
 package store_gae_stuff;
 
+import business.math.DistributionElement;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
-import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -33,7 +33,7 @@ import static store_gae_stuff.OfyService.ofy;
 
 @NotThreadSafe
 @Entity
-public class ContentPage {
+public class ContentPageKind {
   @Id
   Long id;
 
@@ -46,7 +46,7 @@ public class ContentPage {
   @Load
   List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
 
-  private ContentPage() { }
+  private ContentPageKind() { }
 
   // TODO: Как быть с полиморфизмом? Не будет работать
   //@Load
@@ -55,14 +55,14 @@ public class ContentPage {
   // Странице никчему знать про детали интерфейса генераторов
   // TODO: как быть с аргументами?
   // https://code.google.com/p/cofoja/wiki/HowtoWriteGoodContracts
-  public ContentPage(String name, List<ContentItem> items, List<WordItem> words) {
+  public ContentPageKind(String name, List<ContentItem> items, List<WordItem> words) {
     this.name = Optional.of(name).get();
     for (final WordItem word: words) this.words.add(Key.create(word));
     for (final ContentItem item: items) this.items.add(Key.create(item));
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
-  public ImmutableList<Integer> getRawDistribution() {
+  public ArrayList<DistributionElement> getRawDistribution() {
     // TODO: Отосортировать при выборке если можно
     // TODO: может при запросе можно отсортировать?
     List<WordItem> wordItems = ofy().load().type(WordItem.class).filterKey("in", this.words).list();
@@ -72,11 +72,11 @@ public class ContentPage {
     Collections.reverse(wordItems);
 
     // Формируем результат
-    ArrayList<Integer> distribution = new ArrayList<Integer>();
+    ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
     for (final WordItem word : wordItems)
-      distribution.add(word.getRawFrequency());
+      distribution.add(new DistributionElement(word.getRawFrequency()));
 
-    return ImmutableList.copyOf(distribution);
+    return distribution;
   }
 
   public List<Key<ContentItem>> getItems() {

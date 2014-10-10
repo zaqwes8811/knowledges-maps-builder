@@ -34,7 +34,7 @@ import java.util.ArrayList;
 //
 @NotThreadSafe
 @Entity
-public class ActiveDistributionGen
+public class ActiveDistributionGenKind
   //implements DistributionGen  // no way
 {
   @Id
@@ -50,22 +50,23 @@ public class ActiveDistributionGen
   // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
   ArrayList<DistributionElement> distribution;
+  // EqualizeMask ...
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
-  public static ActiveDistributionGen create(ArrayList<DistributionElement> distribution) {
-    return new ActiveDistributionGen(distribution);
+  public static ActiveDistributionGenKind create(ArrayList<DistributionElement> distribution) {
+    return new ActiveDistributionGenKind(distribution);
   }
 
   public Integer getPosition() {
     return Optional.of(gen).get().getPosition();
  }
 
-  public void reloadGenerator(ArrayList<DistributionElement> distribution) {
+  private void reloadGenerator(ArrayList<DistributionElement> distribution) {
     gen = GeneratorAnyDistribution.create(distribution);
   }
 
-  private ActiveDistributionGen(ArrayList<DistributionElement> distribution) {
+  private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
     this.distribution = distribution;
     reloadGenerator(distribution);
   }
@@ -87,7 +88,7 @@ public class ActiveDistributionGen
 
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
-  private ActiveDistributionGen() {
+  private ActiveDistributionGenKind() {
     // похоже при восстановлении вызывается он
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
     reloadGenerator(distribution);
@@ -98,7 +99,7 @@ public class ActiveDistributionGen
     reloadGenerator(distribution);
   }
 
-  ActiveDistributionGen cloneGenerator() {
+  ActiveDistributionGenKind cloneGenerator() {
     // Возможно еще придется что-то добавить
     return create(this.distribution);
   }
