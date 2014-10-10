@@ -1,7 +1,7 @@
 package frozen.old;
 
 
-import business.nlp.SentenceTokenizer;
+import core.nlp.SentenceTokenizer;
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;

@@ -16,7 +16,7 @@
 
 package store_gae_stuff;
 
-import business.math.DistributionElement;
+import core.math.DistributionElement;
 import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;

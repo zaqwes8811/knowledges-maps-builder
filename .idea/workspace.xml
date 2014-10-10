@@ -2,9 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/adapters_3rdparty/LuceneStemmerTest.java" afterPath="$PROJECT_DIR$/src/core/adapters_3rdparty/LuceneStemmerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/adapters_3rdparty/TikaWrapper.java" afterPath="$PROJECT_DIR$/src/core/adapters_3rdparty/TikaWrapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesBuilder.java" afterPath="$PROJECT_DIR$/src/core/evaluators/NotesBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/evaluators/NotesBuilderTest.java" afterPath="$PROJECT_DIR$/src/core/evaluators/NotesBuilderTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/CountReducer.java" afterPath="$PROJECT_DIR$/src/core/mapreduce/CountReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/core/mapreduce/CounterMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/DistributionElement.java" afterPath="$PROJECT_DIR$/src/core/math/DistributionElement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java" afterPath="$PROJECT_DIR$/src/core/math/GeneratorAnyDistribution.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/GeneratorDistributionException.java" afterPath="$PROJECT_DIR$/src/core/math/GeneratorDistributionException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/math/SummatorLists.java" afterPath="$PROJECT_DIR$/src/core/math/SummatorLists.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/CompressorsNI.java" afterPath="$PROJECT_DIR$/src/core/nlp/CompressorsNI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/CompressorsNITest.java" afterPath="$PROJECT_DIR$/src/core/nlp/CompressorsNITest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/PlainTextTokenizer.java" afterPath="$PROJECT_DIR$/src/core/nlp/PlainTextTokenizer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/PlainTextTokenizerTest.java" afterPath="$PROJECT_DIR$/src/core/nlp/PlainTextTokenizerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/SentenceTokenizer.java" afterPath="$PROJECT_DIR$/src/core/nlp/SentenceTokenizer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/SentenceTokenizerTest.java" afterPath="$PROJECT_DIR$/src/core/nlp/SentenceTokenizerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/nlp/SyllableCounterImpl.java" afterPath="$PROJECT_DIR$/src/core/nlp/SyllableCounterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/text_extractors/SpecialSymbols.java" afterPath="$PROJECT_DIR$/src/core/text_extractors/SpecialSymbols.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesContentHandler.java" afterPath="$PROJECT_DIR$/src/core/text_extractors/SubtitlesContentHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesContentHandlerTest.java" afterPath="$PROJECT_DIR$/src/core/text_extractors/SubtitlesContentHandlerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesParser.java" afterPath="$PROJECT_DIR$/src/core/text_extractors/SubtitlesParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/business/text_extractors/SubtitlesParserTest.java" afterPath="$PROJECT_DIR$/src/core/text_extractors/SubtitlesParserTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java" afterPath="$PROJECT_DIR$/src/servlets/OldSingleWordGetterServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKind.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilder.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKindTest.java" afterPath="$PROJECT_DIR$/src/store_gae_stuff/ContentPageKindTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/DistributionGen.java" afterPath="$PROJECT_DIR$/src/frozen/DistributionGen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/DistributionGenFake.java" afterPath="$PROJECT_DIR$/src/frozen/DistributionGenFake.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/dal/accessors_text_file_storage/ImmutableDataExtractor.java" afterPath="$PROJECT_DIR$/src/frozen/dal/accessors_text_file_storage/ImmutableDataExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/dal/accessors_text_file_storage/IndexCursorFactory.java" afterPath="$PROJECT_DIR$/src/frozen/dal/accessors_text_file_storage/IndexCursorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/spiders_processors/MinimalSpiderProcessor.java" afterPath="$PROJECT_DIR$/src/frozen/spiders_processors/MinimalSpiderProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/old/NewMapper.java" afterPath="$PROJECT_DIR$/src/frozen/old/NewMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/old/SentencesMapper.java" afterPath="$PROJECT_DIR$/src/frozen/old/SentencesMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/old/SentencesReduce.java" afterPath="$PROJECT_DIR$/src/frozen/old/SentencesReduce.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java" afterPath="$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/spiders_extractors/SpiderExtractor.java" afterPath="$PROJECT_DIR$/src/frozen/spiders_extractors/SpiderExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frozen/spiders_extractors/SpiderExtractorTest.java" afterPath="$PROJECT_DIR$/src/frozen/spiders_extractors/SpiderExtractorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spec/WebRelayTest.java" afterPath="$PROJECT_DIR$/src/spec/WebRelayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spec/WordsProcessorTest.java" afterPath="$PROJECT_DIR$/src/spec/WordsProcessorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/bec-dictionary.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/bec-dictionary.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/content.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/bec-node/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/frequences.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/bec-node/frequences.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/frequences.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/default-node/frequences.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/ptrs-to-sentences.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/bec-node/ptrs-to-sentences.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/sentences.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/default-node/sentences.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/sorted.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/sorted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/sorted.txt" afterPath="$PROJECT_DIR$/war/trash/app-folder/default-node/sorted.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
@@ -28,46 +74,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BECMapReduceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/spec/BECMapReduceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="3870">
-              <caret line="249" column="5" selection-start-line="249" selection-start-column="5" selection-end-line="249" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebRelayTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/spec/WebRelayTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56692916" vertical-offset="315" max-vertical-offset="1275">
-              <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.51968503" vertical-offset="405" max-vertical-offset="1425">
+              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordsProcessorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/spec/WordsProcessorTest.java">
+      <file leaf-file-name="ActiveDistributionGenKindTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="1815">
-              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="2" selection-end-line="27" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="OldSingleWordGetterServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/OldSingleWordGetterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3461537" vertical-offset="0" max-vertical-offset="255">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+              <caret line="35" column="8" selection-start-line="17" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="SingleWordGetterServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -84,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/store_gae_kinds/ContentPageTest.java" />
         <option value="$PROJECT_DIR$/src/store_gae_kinds/ContentPage.java" />
         <option value="$PROJECT_DIR$/src/store_gae_kinds/ContentItem.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/ContentItem.java" />
@@ -124,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/web_view/PagesLifeControlServlet.java" />
         <option value="$PROJECT_DIR$/src/web_view/WebRelayServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/FakeGetterSingleWordDataServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java" />
         <option value="$PROJECT_DIR$/src/chain_apps/SentencesApp.java" />
         <option value="$PROJECT_DIR$/src/chain_apps/WebRelaySpecTest.java" />
         <option value="$PROJECT_DIR$/src/chain_apps/WordsProcessorSpecTest.java" />
@@ -134,6 +177,8 @@
         <option value="$PROJECT_DIR$/src/spec/BECMapReduceTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/spec/WordsProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/servlets/OldSingleWordGetterServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java" />
         <option value="$PROJECT_DIR$/src/spec/WebRelayTest.java" />
       </list>
     </option>
@@ -187,56 +232,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,6 +494,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997833" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -511,10 +507,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.259375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28277355" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28277355" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
@@ -576,6 +571,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1990" max-vertical-offset="3135">
           <caret line="164" column="76" selection-start-line="164" selection-start-column="76" selection-end-line="164" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -604,6 +602,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1230">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/text_extractors/SubtitlesParser.java">
+    <entry file="file://$PROJECT_DIR$/src/core/text_extractors/SubtitlesParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="1275">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
@@ -656,28 +655,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/text_extractors/SubtitlesContentHandlerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/core/text_extractors/SubtitlesContentHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6315789" vertical-offset="0" max-vertical-offset="570">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CountReducer.java">
+    <entry file="file://$PROJECT_DIR$/src/core/mapreduce/CountReducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1266892" vertical-offset="0" max-vertical-offset="592">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/mapreduce/CounterMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/core/mapreduce/CounterMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorDistributionException.java">
+    <entry file="file://$PROJECT_DIR$/src/core/math/GeneratorDistributionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -712,17 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/DistributionElement.java">
+    <entry file="file://$PROJECT_DIR$/src/core/math/DistributionElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="1140">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -747,7 +739,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/evaluators/NotesBuilderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/core/evaluators/NotesBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="735">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -783,7 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/math/GeneratorAnyDistribution.java">
+    <entry file="file://$PROJECT_DIR$/src/core/math/GeneratorAnyDistribution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.87677723" vertical-offset="0" max-vertical-offset="1545">
           <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
@@ -794,6 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="538" max-vertical-offset="1230">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,6 +815,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2224" max-vertical-offset="3120">
           <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -838,16 +834,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="945">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,16 +858,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/spec/WordsProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="1815">
+        <state vertical-scroll-proportion="-0.6304348" vertical-offset="941" max-vertical-offset="1815">
           <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/OldSingleWordGetterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="35" column="8" selection-start-line="17" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/SingleWordGetterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store_gae_stuff/ActiveDistributionGenKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="2" selection-end-line="27" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/spec/WebRelayTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56692916" vertical-offset="315" max-vertical-offset="1275">
-          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.51968503" vertical-offset="405" max-vertical-offset="1425">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding />
         </state>
       </provider>

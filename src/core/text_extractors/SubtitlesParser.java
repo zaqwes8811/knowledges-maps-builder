@@ -1,4 +1,4 @@
-package business.text_extractors;
+package core.text_extractors;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Charsets;

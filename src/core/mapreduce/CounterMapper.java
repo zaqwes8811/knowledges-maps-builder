@@ -1,6 +1,6 @@
-package business.mapreduce;
+package core.mapreduce;
 
-import business.nlp.SentenceTokenizer;
+import core.nlp.SentenceTokenizer;
 import store_gae_stuff.ContentItemKind;
 import org.checkthread.annotations.NotThreadSafe;
 

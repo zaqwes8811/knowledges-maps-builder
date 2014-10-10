@@ -1,4 +1,4 @@
-package business.nlp;
+package core.nlp;
 
 import com.google.common.base.Splitter;
 import common.Tools;

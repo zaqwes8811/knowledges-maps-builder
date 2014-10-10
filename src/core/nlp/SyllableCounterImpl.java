@@ -1,4 +1,4 @@
-package business.nlp;
+package core.nlp;
 
 
 //import com.sun.xml.internal.ws.util.StringUtils;

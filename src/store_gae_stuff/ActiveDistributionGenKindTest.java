@@ -1,7 +1,7 @@
 package store_gae_stuff;
 
-import business.math.DistributionElement;
-import business.math.GeneratorDistributionException;
+import core.math.DistributionElement;
+import core.math.GeneratorDistributionException;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.After;
