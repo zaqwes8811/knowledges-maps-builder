@@ -8,7 +8,4 @@ For help learing english language
 ### Существующие проекты
 - LingvoLeo
 
-### Это ответвление проекта
-https://github.com/bezbukv/knowledges-maps-builder
-
 
