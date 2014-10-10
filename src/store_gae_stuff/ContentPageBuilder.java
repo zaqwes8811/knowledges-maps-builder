@@ -1,7 +1,7 @@
 package store_gae_stuff;
 
-import business.mapreduce.CountReducer;
-import business.mapreduce.CounterMapper;
+import core.mapreduce.CountReducer;
+import core.mapreduce.CounterMapper;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 

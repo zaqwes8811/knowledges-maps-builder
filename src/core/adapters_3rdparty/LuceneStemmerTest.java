@@ -1,4 +1,4 @@
-package business.adapters_3rdparty;
+package core.adapters_3rdparty;
 
 import com.google.gson.Gson;
 import org.junit.Test;

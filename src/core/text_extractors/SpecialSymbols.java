@@ -1,4 +1,4 @@
-package business.text_extractors;
+package core.text_extractors;
 
 /**
  * Created by zaqwes on 5/11/14.

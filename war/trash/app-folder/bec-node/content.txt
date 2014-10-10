@@ -36,7 +36,7 @@ What aspect of your work do you like most?
 We aim to increase turnover by 5% this year.
 His aim was to become MD.
 He’s going by air instead of by train.
-I have a business engagement on that day.
+I have a core engagement on that day.
 We’ve run out of paper for the printer.
 Have you sethe screw?
 Screw this in for me, please.
@@ -100,7 +100,7 @@ too dear to buy
 Oh dear!
 Dear Sir
 consumer confidence
-to raise capital for a business
+to raise capital for a core
 the capital (city) of a country
 capital letters
 Do the books balance?
@@ -113,7 +113,7 @@ an air/computer terminal
 deal with someone/something
 make a deal
 deal in
-a business deal
+a core deal
 an annual turnover of £1 million
 Sales increased dramatically.
 a liberal style of management
@@ -141,14 +141,14 @@ the male/female sex
 I must fill in this form.
 measure the length of something
 The return fare is £252.
-company business
-set up in business
-go out of business
-get down to business
-be in/on business
-He runs a business.
-do business
-go into business
+company core
+set up in core
+go out of core
+get down to core
+be in/on core
+He runs a core.
+do core
+go into core
 to claim for travel expenses
 the expense of hiring staff
 Following the meeting, he made changes to the report.
@@ -284,7 +284,7 @@ We’ve got around that problem.
 The company carried out a study of consumer shopping habits.
 I’m studying Marketing.
 She studied the report.
-business studies
+core studies
 hit sales targets
 a hit on a website
 They experimented with new materials.
@@ -318,7 +318,7 @@ The factory has closed down.
 I get along quite well with my boss.
 Put the file away before you leave.
 a depressed area/industry
-corporate business
+corporate core
 corporate entertainment
 corporate rate(s)
 corporate client
@@ -364,9 +364,9 @@ spend money
 spend time
 security pass
 reception desk in a hotel or an office
-a business reception for delegates
+a core reception for delegates
 Turn off the lights whyou leave the office.
-The MD’s away on business until Thursday.
+The MD’s away on core until Thursday.
 He threw away the documents by mistake.
 Now the project is finished, we have to cut back on the number of staff.
 Further financial cutbacks are expected next year.
@@ -396,7 +396,7 @@ at the foot of the page
 telephone receiver
 Take 15 away from 78.
 manage to do something
-manage a business
+manage a core
 the first turning on the left
 He took up a new position in the company.
 She took up golf as a good way of networking.
@@ -462,7 +462,7 @@ raw materials
 construction materials
 training material(s)
 in the field of engineering
-good business practice
+good core practice
 out of practice
 The exercises in the book provide plenty of practice.
 He’s keto increase sales.
@@ -560,7 +560,7 @@ Can you separate these for me?
 The sales forecast is very positive.
 We forecast a growth in this sector.
 filing cabinet
-set up a business
+set up a core
 I’ll call in and see you next time I’m in town.
 multiply 14 by 2
 a demonstration of a new product
@@ -579,7 +579,7 @@ mature student
 mature sector of the market
 mature investment
 Profits grew very quickly last year.
-They wanted to grow their company/business/profits/sales.
+They wanted to grow their company/core/profits/sales.
 It’s a fast-growing company.
 This is a key post.
 be certain of something
@@ -589,7 +589,7 @@ sportswear
 childrens’ wear
 The blind needs repairing.
 night shift
-Here is the business news in brief.
+Here is the core news in brief.
 The MD made a brief visit to the factory.
 competition from another company
 a competition
@@ -728,7 +728,7 @@ chief executive
 the chief problem
 global market
 first class, second class
-a class of business students
+a class of core students
 Share prices have jumped by 200%.
 There’s bea big jump in prices.
 She bought some flowers from the market.
@@ -767,7 +767,7 @@ Her office was in a very untidy state.
 excess capacity
 stocks and shares
 a water pipe
-Her main business was a keep-fit centre.
+Her main core was a keep-fit centre.
 He fitted into the team very well.
 I share an office with the Marketing Director.
 Our market share has increased this year.
@@ -803,11 +803,11 @@ Is anything the matter?
 fill something to the top
 He’s rather poor at maths.
 She is very poor and earns hardly any money at all.
-a business strategy
+a core strategy
 In addition, I’d like to order a new printer.
 With his experience, he will be a useful addition to the team.
 Get your coat on and thwe can leave.
-How is the business getting on?
+How is the core getting on?
 Domestic sales are down.
 Domestic appliances are the company’s most profitable line.
 The news of the low sales figures came as a shock.

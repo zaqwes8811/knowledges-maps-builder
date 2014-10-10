@@ -1,4 +1,4 @@
-package business.mapreduce;
+package core.mapreduce;
 
 import com.google.common.collect.Multimap;
 import store_gae_stuff.ContentItemKind;

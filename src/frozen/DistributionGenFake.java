@@ -1,9 +1,8 @@
 package frozen;
 
-import business.math.DistributionElement;
+import core.math.DistributionElement;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import frozen.DistributionGen;
 
 import java.util.ArrayList;
 

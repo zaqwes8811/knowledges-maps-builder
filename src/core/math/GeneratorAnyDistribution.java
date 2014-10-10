@@ -1,4 +1,4 @@
-package business.math;
+package core.math;
 
 import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
 import com.google.common.base.Optional;

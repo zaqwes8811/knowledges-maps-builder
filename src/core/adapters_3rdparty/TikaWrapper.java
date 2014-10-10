@@ -1,4 +1,4 @@
-package business.adapters_3rdparty;
+package core.adapters_3rdparty;
 
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;

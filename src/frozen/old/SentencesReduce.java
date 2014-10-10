@@ -1,6 +1,6 @@
 package frozen.old;
 
-import business.math.SummatorLists;
+import core.math.SummatorLists;
 import common.Tools;
 
 import java.util.List;

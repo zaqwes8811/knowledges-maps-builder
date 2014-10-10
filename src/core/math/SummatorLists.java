@@ -1,4 +1,4 @@
-package business.math;
+package core.math;
 
 import java.util.List;
 

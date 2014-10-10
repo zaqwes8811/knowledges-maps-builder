@@ -1,4 +1,4 @@
-package business.evaluators;
+package core.evaluators;
 
 import com.google.common.base.Joiner;
 import frozen.dal.accessors_text_file_storage.ImmutableBaseCoursor;

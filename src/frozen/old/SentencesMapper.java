@@ -1,8 +1,8 @@
 package frozen.old;
 
-import business.nlp.SyllableCounterImpl;
+import core.nlp.SyllableCounterImpl;
 import frozen.jobs_processors.JobsFormer;
-import business.nlp.SentenceTokenizer;
+import core.nlp.SentenceTokenizer;
 import com.google.common.io.Closer;
 
 import java.io.BufferedReader;
