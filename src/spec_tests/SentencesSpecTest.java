@@ -1,4 +1,4 @@
-package chain_apps;
+package spec_tests;
 
 
 import com.google.common.base.Joiner;
@@ -12,6 +12,7 @@ import frozen.jobs_processors.ProcessorTargets;
 import frozen.old.NewMapper;
 import frozen.old.SentencesMapper;
 import frozen.old.SentencesReduce;
+import org.junit.Test;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -21,9 +22,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SentencesApp {
+public class SentencesSpecTest {
 
-  public static void main(String [] args) {
+  @Test
+  public void main() {
     // Получаем работы
     List<List<String>> jobs = JobsFormer.getJobs();
 

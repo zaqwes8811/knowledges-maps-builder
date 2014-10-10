@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-// TODO: Bad it!
 @NotThreadSafe
 public class SingleWordGetterServlet extends HttpServlet {
   private ContainerNodeControllers CONTAINER_;
@@ -43,8 +42,7 @@ public class SingleWordGetterServlet extends HttpServlet {
       }
   	} catch (Exception e) {
       // Вот проблемы создают эти проверяемые исключения
-
-  	} 
+  	}
 
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
