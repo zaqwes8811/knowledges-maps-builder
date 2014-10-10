@@ -7,7 +7,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<servlet>
 		<servlet-name>PageLifeControl</servlet-name>
-		<servlet-class>web_view.PagesLifeControlServlet</servlet-class>
+		<servlet-class>servlets.PagesLifeControlServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>PageLifeControl</servlet-name>

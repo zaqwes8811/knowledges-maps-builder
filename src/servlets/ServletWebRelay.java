@@ -1,4 +1,4 @@
-package web_view;
+package servlets;
 
 import com.google.gson.Gson;
 import common.Tools;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class WebRelayServlet  extends HttpServlet {
+public class ServletWebRelay extends HttpServlet {
   /* Блок классов приложения? Должны быть потокозащищенными
   private  */
   //private  IndexCursor ptr;
@@ -21,8 +21,6 @@ public class WebRelayServlet  extends HttpServlet {
 
     //String indexRoot = "src/indexes";
     //ptr = factory.create(indexRoot);
-
-
 
     // Получаем индекс
     //System.out.print();
