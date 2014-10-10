@@ -1,5 +1,6 @@
 package store_gae_stuff;
 
+import business.math.DistributionElement;
 import business.nlp.PlainTextTokenizer;
 import business.text_extractors.SpecialSymbols;
 import business.text_extractors.SubtitlesContentHandler;
@@ -29,7 +30,7 @@ import static store_gae_stuff.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class PersistContentPageTest {
+public class PersistContentPageKindTest {
   private String getTestFileName() {
     return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
   }
@@ -76,7 +77,7 @@ public class PersistContentPageTest {
     return contentElements;
   }
 
-  private ContentPage buildContentPage() {
+  private ContentPageKind buildContentPage() {
     String filename = getTestFileName();
     try {
       // Phase I
@@ -119,10 +120,10 @@ public class PersistContentPageTest {
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
     //
-    //ActiveDistributionGen gen;  // TODO: Как быть с ним? Они логическое целое.
-    // Заряжаем генератор
-    //ActiveDistributionGen gen = ActiveDistributionGen.create(distribution);
-    ofy().save().entity(buildContentPage()).now();
+    ContentPageKind page = buildContentPage();
+    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+
+    ofy().save().entity(page).now();
 
     Integer idxPosition = 4;//gen.getPosition();
     int countFirst = 4;
@@ -133,7 +134,7 @@ public class PersistContentPageTest {
       .limit(countFirst)
       .list();
 
-    ContentPage loadedPage = ofy().load().type(ContentPage.class).filter("name = ", "Korra").first().now();
+    ContentPageKind loadedPage = ofy().load().type(ContentPageKind.class).filter("name = ", "Korra").first().now();
     assertNotNull(loadedPage);
   }
 
@@ -142,10 +143,10 @@ public class PersistContentPageTest {
     ofy().save().entity(buildContentPage()).now();
     
     // Очень медленно!!
-    ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().now();
+    ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
 
     /// Queries
-    ImmutableList<Integer> distribution = page.getRawDistribution();
+    ArrayList<DistributionElement> distribution = page.getRawDistribution();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
@@ -160,7 +161,7 @@ public class PersistContentPageTest {
 
   @Test
   public void testGetWordData() {
-    ContentPage page = ofy().load().type(ContentPage.class).filter("name =", "Korra").limit(1).first().now();
+    ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
 
     Integer position = 9;
     //Pair<Optional<WordItem> page.get(position);

@@ -7,11 +7,11 @@ import com.googlecode.objectify.ObjectifyService;
 public class OfyService {
   static {
     factory().register(ContentItem.class);
-    factory().register(ContentPage.class);
+    factory().register(ContentPageKind.class);
     factory().register(WordItem.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
-    factory().register(ActiveDistributionGen.class);
+    factory().register(ActiveDistributionGenKind.class);
     //...etc
   }
 
