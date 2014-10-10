@@ -1,4 +1,4 @@
-package spec_tests;
+package spec;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
@@ -22,7 +22,7 @@ import frozen.crosscuttings.configurator.ConfigurationFileIsCorrupted;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import org.junit.Test;
 
-public class WebRelaySpecTest {
+public class WebRelayTest {
   //private static Logger log = Logger.getLogger(AppContainer.class);
 
   @Test

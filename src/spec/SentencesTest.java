@@ -1,4 +1,4 @@
-package spec_tests;
+package spec;
 
 
 import com.google.common.base.Joiner;
@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SentencesSpecTest {
+public class SentencesTest {
 
   @Test
   public void main() {
