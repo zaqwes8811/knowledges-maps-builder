@@ -20,15 +20,17 @@ import frozen.controllers.web_wrapper.ContainerNodeControllers;
 import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.crosscuttings.configurator.ConfigurationFileIsCorrupted;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
+import org.junit.Test;
 
-public class WebRelayApp {
+public class WebRelayTest {
   //private static Logger log = Logger.getLogger(AppContainer.class);
-  public static void main2(String[] args) throws Exception {
+
+  @Test
+  public void testMain2() throws Exception {
     //BasicConfigurator.configure();
 
     // TODO(zaqwes): Сделать через конфигурационные файлы. Можно ли и нужно ли?
-    System.out.println("Working Directory = " +
-        System.getProperty("user.dir"));
+    System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
     Server server = new Server();
     SelectChannelConnector connector = new SelectChannelConnector();
@@ -40,7 +42,6 @@ public class WebRelayApp {
     resource_handler.setDirectoriesListed(true);
     resource_handler.setWelcomeFiles(new String[]{ "index.html" });
     resource_handler.setResourceBase("apps/views.views");
-
 
     // Список обработчиков?
     HandlerList handlers = new HandlerList();
@@ -59,7 +60,7 @@ public class WebRelayApp {
   
   // About:
   //   For local Jetty
-  public static HandlerList buildHandlers() {
+  public HandlerList buildHandlers() {
     // Подключаем ресурсы
     ResourceHandler resourceHandler = new ResourceHandler();
     resourceHandler.setDirectoriesListed(true);
@@ -75,16 +76,17 @@ public class WebRelayApp {
     return handlers;
   }
 
-  public static void main(String[] args) throws Exception {
+  @Test
+  public void testMain() throws Exception {
     try {
       BuilderControllers wrapper = new BuilderControllers();
 
       String pathToCfgFile = "app.yaml";
       ImmutableSet<String> namesNodes = new GlobalConfigurator(pathToCfgFile).getRegisteredNodes().get();
-      ImmutableList<ImmutableNodeAccessor> accessors = wrapper.createControllersForAllNodes(
+      ImmutableList<ImmutableNodeAccessor> a = wrapper.createControllersForAllNodes(
           namesNodes, new FabricImmutableNodeControllersImpl());
 
-      ContainerNodeControllers container = new ContainerNodeControllers(accessors);
+      ContainerNodeControllers container = new ContainerNodeControllers(a);
       HandlerList handlers = buildHandlers();
 
       Server server = new Server(8081);
