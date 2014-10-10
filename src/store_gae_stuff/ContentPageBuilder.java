@@ -37,14 +37,14 @@ public class ContentPageBuilder {
       // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
       //   к словам.
       //
-      // Persist content items
+      // Persist content contentItems
       // TODO: как вынести в транзакцию?
       ofy().save().entities(contentElements).now();
 
       for (int i = 0; i < value.size(); i++) {
         WordItemKind.WordValue v = value.get(i);
         words.add(WordItemKind.create(v.word, v.items, v.frequency));
-        words.get(i).setSortedIdx(i);
+        words.get(i).setPointPos(i);
       }
 
       // TODO: вынести все операции с базой данных сюда
