@@ -1,4 +1,4 @@
-package spec_tests;
+package spec;
 
 
 import common.Tools;
@@ -23,12 +23,12 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class BECMapReduceSpecTest {
-  private BECMapReduceSpecTest() {}
+public class BECMapReduceTest {
+  private BECMapReduceTest() {}
 
   @Test
   public void main() {
-    BECMapReduceSpecTest.runBECChain();
+    BECMapReduceTest.runBECChain();
   }
 
   public static void runSentencesLevelProcess () {
