@@ -5,7 +5,7 @@ import com.google.common.collect.ImmutableList;
 @Deprecated
 public interface ListGetter {
   // Index: нужно для маркеровки
-  // WordItem: само слово
+  // WordItemKind: само слово
   // Translates:
   // Context:
   ImmutableList<ImmutableList<ImmutableList<String>>> getPerWordData();

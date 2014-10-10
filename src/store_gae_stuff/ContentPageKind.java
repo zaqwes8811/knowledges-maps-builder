@@ -41,10 +41,10 @@ public class ContentPageKind {
   String name;
   // Формированием не управляет, но остальным управляет.
   @Load
-  List<Key<WordItem>> words = new ArrayList<Key<WordItem>>();
+  List<Key<WordItemKind>> words = new ArrayList<Key<WordItemKind>>();
 
   @Load
-  List<Key<ContentItem>> items = new ArrayList<Key<ContentItem>>();
+  List<Key<ContentItemKind>> items = new ArrayList<Key<ContentItemKind>>();
 
   private ContentPageKind() { }
 
@@ -55,31 +55,31 @@ public class ContentPageKind {
   // Странице никчему знать про детали интерфейса генераторов
   // TODO: как быть с аргументами?
   // https://code.google.com/p/cofoja/wiki/HowtoWriteGoodContracts
-  public ContentPageKind(String name, List<ContentItem> items, List<WordItem> words) {
+  public ContentPageKind(String name, List<ContentItemKind> items, List<WordItemKind> words) {
     this.name = Optional.of(name).get();
-    for (final WordItem word: words) this.words.add(Key.create(word));
-    for (final ContentItem item: items) this.items.add(Key.create(item));
+    for (final WordItemKind word: words) this.words.add(Key.create(word));
+    for (final ContentItemKind item: items) this.items.add(Key.create(item));
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
   public ArrayList<DistributionElement> getRawDistribution() {
     // TODO: Отосортировать при выборке если можно
     // TODO: может при запросе можно отсортировать?
-    List<WordItem> wordItems = ofy().load().type(WordItem.class).filterKey("in", this.words).list();
+    List<WordItemKind> wordItemKinds = ofy().load().type(WordItemKind.class).filterKey("in", this.words).list();
 
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(wordItems, WordItem.createFrequencyComparator());
-    Collections.reverse(wordItems);
+    Collections.sort(wordItemKinds, WordItemKind.createFrequencyComparator());
+    Collections.reverse(wordItemKinds);
 
     // Формируем результат
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
-    for (final WordItem word : wordItems)
+    for (final WordItemKind word : wordItemKinds)
       distribution.add(new DistributionElement(word.getRawFrequency()));
 
     return distribution;
   }
 
-  public List<Key<ContentItem>> getItems() {
+  public List<Key<ContentItemKind>> getItems() {
     return items;
   }
 }

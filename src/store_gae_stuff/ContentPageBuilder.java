@@ -12,27 +12,27 @@ import java.util.Collections;
 import static store_gae_stuff.OfyService.ofy;
 
 public class ContentPageBuilder {
-  public ContentPageKind build(String name, ArrayList<ContentItem> contentElements) {
+  public ContentPageKind build(String name, ArrayList<ContentItemKind> contentElements) {
     // TODO: BAD! В страницу собрана обработка
-    Multimap<String, ContentItem> wordHistogramSink = HashMultimap.create();
+    Multimap<String, ContentItemKind> wordHistogramSink = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogramSink);
     CounterMapper mapper = new CounterMapper(reducer);
 
     // Split
     mapper.map(contentElements);  // TODO: implicit, but be so
 
-    ArrayList<WordItem.WordValue> value = new ArrayList<WordItem.WordValue>();
+    ArrayList<WordItemKind.WordValue> value = new ArrayList<WordItemKind.WordValue>();
     for (String word: wordHistogramSink.keySet()) {
-      Collection<ContentItem> content = wordHistogramSink.get(word);
+      Collection<ContentItemKind> content = wordHistogramSink.get(word);
       int rawFrequency = content.size();
-      value.add(new WordItem.WordValue(word, rawFrequency, content));
+      value.add(new WordItemKind.WordValue(word, rawFrequency, content));
     }
 
     // Sort words by frequency and assign idx
-    Collections.sort(value, new WordItem.WordValueFrequencyComparator());
+    Collections.sort(value, new WordItemKind.WordValueFrequencyComparator());
     Collections.reverse(value);
 
-    ArrayList<WordItem> words = new ArrayList<WordItem>();
+    ArrayList<WordItemKind> words = new ArrayList<WordItemKind>();
     {
       // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
       //   к словам.
@@ -42,8 +42,8 @@ public class ContentPageBuilder {
       ofy().save().entities(contentElements).now();
 
       for (int i = 0; i < value.size(); i++) {
-        WordItem.WordValue v = value.get(i);
-        words.add(WordItem.create(v.word, v.items, v.frequency));
+        WordItemKind.WordValue v = value.get(i);
+        words.add(WordItemKind.create(v.word, v.items, v.frequency));
         words.get(i).setSortedIdx(i);
       }
 
