@@ -1,4 +1,4 @@
-package chain_apps;
+package spec_tests;
 
 
 import common.Tools;
@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import frozen.crosscuttings.CrosscuttingsException;
 //import frozen.dal.accessors_text_file_storage.IdxAccessor;
 import frozen.spiders_extractors.ImmutableBECParser;
+import org.junit.Test;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -22,11 +23,12 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class MapReduceApp {
-  private MapReduceApp() {}
+public class BECMapReduceSpecTest {
+  private BECMapReduceSpecTest() {}
 
-  public static void main(String [] args) {
-    MapReduceApp.runBECChain();
+  @Test
+  public void main() {
+    BECMapReduceSpecTest.runBECChain();
   }
 
   public static void runSentencesLevelProcess () {

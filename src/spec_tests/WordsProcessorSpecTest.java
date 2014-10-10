@@ -1,4 +1,4 @@
-package chain_apps;
+package spec_tests;
 
 import frozen.old.NewMapper;
 import frozen.old.NewReducer;
@@ -17,7 +17,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class WordsProcessorTest {
+public class WordsProcessorSpecTest {
   @Test
   public void testDevelop () {
     // Получаем работы
