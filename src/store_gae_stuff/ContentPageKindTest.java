@@ -7,7 +7,7 @@ import core.math.DistributionElement;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import store_gae_stuff.fakes.OnePageBuilder;
+import store_gae_stuff.fakes.BuilderOneFakePage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class ContentPageKindTest {
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
   public ContentPageKind buildContentPage(String pageName) {
-    return new OnePageBuilder().buildContentPage(pageName);
+    return new BuilderOneFakePage().buildContentPage(pageName);
   }
 
   @Before

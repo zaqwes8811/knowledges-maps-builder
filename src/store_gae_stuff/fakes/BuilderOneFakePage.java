@@ -23,7 +23,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 
-public class OnePageBuilder {
+public class BuilderOneFakePage {
   private String getSubtitlesToPlainText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
