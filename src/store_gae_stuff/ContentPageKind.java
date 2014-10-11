@@ -17,7 +17,7 @@
 package store_gae_stuff;
 
 import core.math.DistributionElement;
-import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
+
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import net.jcip.annotations.NotThreadSafe;
 import static store_gae_stuff.OfyService.ofy;
 
 @NotThreadSafe
@@ -46,7 +47,11 @@ public class ContentPageKind {
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
   List<Key<ActiveDistributionGenKind>> generators = new ArrayList<Key<ActiveDistributionGenKind>>();
 
-  public void addGenerator(ActiveDistributionGenKind gen) {
+  public List<ActiveDistributionGenKind> getGenerators() {
+    return ofy().load().type(ActiveDistributionGenKind.class).filterKey(generators).list();
+  }
+
+  public void setGenerator(ActiveDistributionGenKind gen) {
     generators.add(Key.create(gen));
   }
 

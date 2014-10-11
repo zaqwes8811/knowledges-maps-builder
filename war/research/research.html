@@ -14,13 +14,16 @@
 
     <!-- App -->
     <script type="text/javascript" src="/js/no_w2p.js"></script>
-    <script type="text/javascript" src="/js/test_flot.js"></script>
+    <script type="text/javascript" src="/research/test_flot.js"></script>
 
     <link rel="stylesheet" href="/css/app_carcass.css">
 </head>
 <body onload="init()">
 
 <div id="placeholder" style="width:500px; height:300px"></div>
+
+<input type="button" onclick="get_data()"/>
+
 <script type="text/javascript">
 $(function() {
   var data, data1, options, chart;
