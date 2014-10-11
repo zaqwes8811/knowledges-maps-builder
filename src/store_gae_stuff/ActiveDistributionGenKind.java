@@ -51,22 +51,22 @@ public class ActiveDistributionGenKind
 
   // Можно и не индексировать - пока алгоритм одни
   // придется хранить отдельно
-  //@Unindex  // все-таки на объект накладываются ограничения!!
-  //GeneratorAnyDistribution gen;// = null;  // TODO: как быть?
+  @Unindex  // все-таки на объект накладываются ограничения!!
+  GeneratorAnyDistribution gen;// = null;  // TODO: как быть?
 
-  //@Unindex
-  //Integer codeAction;  // возможность подкл. алгоритма при создании
+  @Unindex
+  Integer codeAction;  // возможность подкл. алгоритма при создании
 
   // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
   // FIXME: какая лажа с порадком загрузки
   //@Load
-  //ArrayList<DistributionElement> distribution;  // порядок важен
+  ArrayList<DistributionElement> distribution;  // порядок важен
   // EqualizeMask ...
 
-  //public ImmutableList<DistributionElement> getDistribution() {
-  //  return ImmutableList.copyOf(distribution);
-  //}
+  public ImmutableList<DistributionElement> getDistribution() {
+    return ImmutableList.copyOf(distribution);
+  }
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
@@ -74,62 +74,53 @@ public class ActiveDistributionGenKind
     return new ActiveDistributionGenKind(distribution);
   }
 
-  //public Integer getPosition() {
-  //  return Optional.of(gen).get().getPosition();
- //}
+  public Integer getPosition() {
+    return Optional.of(gen).get().getPosition();
+  }
 
   private void reloadGenerator(ArrayList<DistributionElement> distribution) {
-  	//assert distribution != null;
-    //gen = GeneratorAnyDistribution.create(distribution);
+    gen = GeneratorAnyDistribution.create(distribution);
   }
 
   private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
-    //this.distribution = distribution;
-    //reloadGenerator(distribution);
+    this.distribution = distribution;
+    reloadGenerator(distribution);
   }
 
   public void disablePoint(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-    //getElem(idx).enabled = false;
-    //reloadGenerator(distribution);
+    getElem(idx).enabled = false;
+    reloadGenerator(distribution);
   }
 
-  /*
+
   private DistributionElement getElem(Integer idx) {
-    //if (idx >= distribution.size() || idx < 0)
-     // throw new OutOfRangeOnAccess("On get element");  // сообщения безсмысленны, тип важнее
+    if (idx >= distribution.size() || idx < 0)
+      throw new OutOfRangeOnAccess("On get element");  // сообщения безсмысленны, тип важнее
 
     // хотя наверное и так бросит
     return distribution.get(idx);
   }
-  */
 
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   private ActiveDistributionGenKind() {
-  	
-  }
-  
-  public void reset_() {
-  	/*if (this.distribution == null)
+  	if (this.distribution == null)
   		throw new IllegalStateException();
   		
     // похоже при восстановлении вызывается он
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
     reloadGenerator(distribution);
-    */
   }
 
   public void enablePoint(Integer idx) {
-    //getElem(idx).enabled = true;
-    //reloadGenerator(distribution);
+    getElem(idx).enabled = true;
+    reloadGenerator(distribution);
   }
 
-  /*
   ActiveDistributionGenKind cloneGenerator() {
     // Возможно еще придется что-то добавить
     return create(this.distribution);
   }
-  */
 }

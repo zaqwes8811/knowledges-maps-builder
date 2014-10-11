@@ -38,26 +38,24 @@ import static store_gae_stuff.OfyService.ofy;
 public class ContentPageKind {
   private ContentPageKind() { }
 
-  @Id
-  Long id;
+  @Id Long id;
 
-  @Index
-  String name;
+  @Index String name;
 
   // Формированием не управляет, но остальным управляет.
   List<Key<WordItemKind>> words = new ArrayList<Key<WordItemKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
   
-  List<Key<ActiveDistributionGenKind>> g = new ArrayList<Key<ActiveDistributionGenKind>>();  // FIXME: почему отношение не работает?
+  Key<ActiveDistributionGenKind> g;  // FIXME: почему отношение не работает?
 
   public ActiveDistributionGenKind getGenerator() {
     ActiveDistributionGenKind gens = ofy().load().type(ActiveDistributionGenKind.class)
-    			.id(g.get(0).getId()).now();
+    			.id(g.getId()).now();
     return gens; 
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
-    g.add(Key.create(gen));
+    g = Key.create(gen);
   }
 
   public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordItemKind> words) {
