@@ -37,10 +37,17 @@ public class GetDistribution extends HttpServlet {
     String activePageName = "Korra";
     ContentPageKind loadedPage =
       ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+    
+    assert loadedPage != null;
+    
+    List<ActiveDistributionGenKind> gen = loadedPage.getGenerators();
 
     // подгружаем генератор
-    List<ActiveDistributionGenKind> gen = Optional.of(loadedPage).get().getGenerators();
+    //List<ActiveDistributionGenKind> gen = Optional.of(loadedPage).get().getGenerators();
+    assert gen != null;
     assert !gen.isEmpty();
+    
+    gen.get(0);
 
     String jsonResponse = new Gson().toJson(gen.get(0).getDistribution());
     

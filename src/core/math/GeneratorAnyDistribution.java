@@ -1,8 +1,11 @@
 package core.math;
 
-import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
+
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+
+import net.jcip.annotations.Immutable;
+
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
@@ -24,6 +27,9 @@ public final class GeneratorAnyDistribution {
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static GeneratorAnyDistribution create(ArrayList<DistributionElement> distribution) {
+  	if (distribution == null)
+  		throw new IllegalArgumentException();
+  	
     if (distribution.isEmpty())
       throw new GeneratorDistributionException("Input list must be no empty.");
     return new GeneratorAnyDistribution(distribution);

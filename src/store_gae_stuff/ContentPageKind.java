@@ -48,7 +48,13 @@ public class ContentPageKind {
   List<Key<ActiveDistributionGenKind>> generators = new ArrayList<Key<ActiveDistributionGenKind>>();
 
   public List<ActiveDistributionGenKind> getGenerators() {
-    return ofy().load().type(ActiveDistributionGenKind.class).filterKey(generators).list();
+    List<ActiveDistributionGenKind> gens = //null;
+    		ofy().load().type(ActiveDistributionGenKind.class).filterKey("in", generators).list();
+    
+    //assert gens != null;
+    //assert !gens.isEmpty();
+    
+    return gens; 
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
