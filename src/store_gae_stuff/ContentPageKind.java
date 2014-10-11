@@ -25,6 +25,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -45,20 +46,25 @@ public class ContentPageKind {
   // Формированием не управляет, но остальным управляет.
   List<Key<WordItemKind>> words = new ArrayList<Key<WordItemKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
-  List<Key<ActiveDistributionGenKind>> generators = new ArrayList<Key<ActiveDistributionGenKind>>();
 
-  public List<ActiveDistributionGenKind> getGenerators() {
-    List<ActiveDistributionGenKind> gens = //null;
-    		ofy().load().type(ActiveDistributionGenKind.class).filterKey("in", generators).list();
+  //Key<
+  ActiveDistributionGenKind g;  // FIXME: почему отношение не работает?
+
+  public ActiveDistributionGenKind getGenerators() {
+    ActiveDistributionGenKind gens = //null;
+    		ofy().load().type(ActiveDistributionGenKind.class)
+    		.id(g.id).now();
     
-    //assert gens != null;
-    //assert !gens.isEmpty();
+    //gem
+
+    //for (ActiveDistributionGenKind a: gens)
+    //	a.reset_();
     
     return gens; 
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
-    generators.add(Key.create(gen));
+    g = gen;
   }
 
   public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordItemKind> words) {

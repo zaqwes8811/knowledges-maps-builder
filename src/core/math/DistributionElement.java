@@ -1,12 +1,11 @@
 package core.math;
 
-import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
+//import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
 
 /**
  * Created by zaqwes on 10/9/14.
  */
 
-@Immutable  // TODO: Maybe
 public class DistributionElement implements Comparable<DistributionElement> {
   // http://stackoverflow.com/questions/5560176/is-integer-immutable
   public final Integer frequency;
@@ -17,6 +16,12 @@ public class DistributionElement implements Comparable<DistributionElement> {
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
     enabled = ena;
+  }
+  
+  // FIXME: for persist
+  DistributionElement() {
+  	this.frequency = 0;
+  	enabled = true;
   }
 
   public  DistributionElement(Integer freq) {

@@ -48,8 +48,9 @@ public class ActiveDistributionGenKind
   Long id;
 
   // Можно и не индексировать - пока алгоритм одни
-  @Unindex
-  GeneratorAnyDistribution gen;  // TODO: как быть?
+  // придется хранить отдельно
+  @Unindex  // все-таки на объект накладываются ограничения!!
+  GeneratorAnyDistribution gen;// = null;  // TODO: как быть?
 
   @Unindex
   Integer codeAction;  // возможность подкл. алгоритма при создании
@@ -57,6 +58,7 @@ public class ActiveDistributionGenKind
   // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
   // FIXME: какая лажа с порадком загрузки
+  @Unindex
   ArrayList<DistributionElement> distribution;  // порядок важен
   // EqualizeMask ...
 
@@ -102,6 +104,10 @@ public class ActiveDistributionGenKind
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   private ActiveDistributionGenKind() {
+  	
+  }
+  
+  public void reset_() {
   	if (this.distribution == null)
   		throw new IllegalStateException();
   		

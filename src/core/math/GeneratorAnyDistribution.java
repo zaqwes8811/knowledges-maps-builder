@@ -23,6 +23,13 @@ public final class GeneratorAnyDistribution {
   private final ImmutableList<ImmutableList<Integer>> codeBook_;
   private final Integer INTERVAL_POS_ = 1;
   private final Integer IDX_POSITION_ = 2;
+  
+  // FIXME: VERY BAD!!
+  GeneratorAnyDistribution() {
+  	countPoints_ = 0;
+  	maxValue_ = 0;
+  	codeBook_ = null;
+  }
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
