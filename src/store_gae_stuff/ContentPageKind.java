@@ -23,6 +23,7 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
+import com.googlecode.objectify.annotation.Load;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,25 +47,17 @@ public class ContentPageKind {
   // Формированием не управляет, но остальным управляет.
   List<Key<WordItemKind>> words = new ArrayList<Key<WordItemKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
+  
+  List<Key<ActiveDistributionGenKind>> g = new ArrayList<Key<ActiveDistributionGenKind>>();  // FIXME: почему отношение не работает?
 
-  //Key<
-  ActiveDistributionGenKind g;  // FIXME: почему отношение не работает?
-
-  public ActiveDistributionGenKind getGenerators() {
-    ActiveDistributionGenKind gens = //null;
-    		ofy().load().type(ActiveDistributionGenKind.class)
-    		.id(g.id).now();
-    
-    //gem
-
-    //for (ActiveDistributionGenKind a: gens)
-    //	a.reset_();
-    
+  public ActiveDistributionGenKind getGenerator() {
+    ActiveDistributionGenKind gens = ofy().load().type(ActiveDistributionGenKind.class)
+    			.id(g.get(0).getId()).now();
     return gens; 
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
-    g = gen;
+    g.add(Key.create(gen));
   }
 
   public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordItemKind> words) {
