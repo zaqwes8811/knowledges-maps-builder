@@ -36,28 +36,14 @@ $(function() {
 });
 
 function get_data() {
-  var request_processor = '/app';
+  var request_processor = '/research/get_distribution';
   var response_branch = {'name':'get_axis'};
   var jqxhr = $.get(request_processor, response_branch)
     .success(function(data) {
       process_response(data);
     })
     .error(function(data) { 
-      if (data.status == 404) {
-            /*err_action(
-                'Запрос к несуществующей странице. '+
-                'Ошибка 404. Запрос будет повторен.');*/
-          }
-          if (data.status == 500) {
-            /*err_action(
-                'Внутренняя ошибка сервера. Ошибка 500. '+
-                'Запрос будет повторен.');*/
-          }
-          if (data.status == 0) {
-            /*err_action(
-                'Отсутствует связь с сервером. '+
-                'Запрос будет повторен.');*/
-          }
+
     });
 }
 

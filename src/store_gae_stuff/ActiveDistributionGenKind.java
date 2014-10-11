@@ -1,15 +1,21 @@
 package store_gae_stuff;
 
+import com.google.common.collect.ImmutableList;
+
 import core.math.DistributionElement;
 import core.math.GeneratorAnyDistribution;
-import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
+
+//import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Unindex;
+
 import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 
 import java.util.ArrayList;
+
+import net.jcip.annotations.NotThreadSafe;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -49,8 +55,12 @@ public class ActiveDistributionGenKind
 
   // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
-  ArrayList<DistributionElement> distribution;
+  ArrayList<DistributionElement> distribution;  // порядок важен
   // EqualizeMask ...
+
+  public ImmutableList<DistributionElement> getDistribution() {
+    return ImmutableList.copyOf(distribution);
+  }
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
