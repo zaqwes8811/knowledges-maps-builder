@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/index_flot.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/war/research.html" afterPath="$PROJECT_DIR$/war/research/research.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/index.html" afterPath="$PROJECT_DIR$/war/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/spec.txt" afterPath="$PROJECT_DIR$/design/spec.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" afterPath="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/research/dsp_space" afterPath="$PROJECT_DIR$/research/dsp_space" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
@@ -30,13 +27,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Flot_Examples_Series_Types.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html">
+      <file leaf-file-name="flot_samples.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/research/flot_samples/flot_samples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70234114" vertical-offset="315" max-vertical-offset="1725">
-              <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="611">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
-                <element signature="n#style#0;n#canvas#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/store_gae_stuff/GeneratorDistributionsImpl.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/GeneratorDistributions.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/Distributions.java" />
         <option value="$PROJECT_DIR$/src/business/math/DistributionEqualizerImpl_NI.java" />
@@ -106,6 +102,7 @@
         <option value="$PROJECT_DIR$/war/index.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples/RAW_Flot_Examples_Series_Types.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" />
+        <option value="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" />
       </list>
     </option>
   </component>
@@ -844,7 +841,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="1485">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,9 +851,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2025">
           <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#996#997#0" expanded="false" />
+            <element signature="e#1023#1024#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,12 +935,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html">
+    <entry file="file://$PROJECT_DIR$/war/research/flot_samples/flot_samples.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70234114" vertical-offset="315" max-vertical-offset="1725">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="611">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#canvas#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
