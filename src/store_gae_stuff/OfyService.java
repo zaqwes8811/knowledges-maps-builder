@@ -13,6 +13,8 @@ public class OfyService {
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
     factory().register(ActiveDistributionGenKind.class);
     //...etc
+    
+    factory().register(EasyKind.class);
   }
 
   public static Objectify ofy() {
