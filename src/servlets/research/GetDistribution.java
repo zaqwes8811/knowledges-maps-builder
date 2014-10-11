@@ -32,17 +32,17 @@ public class GetDistribution extends HttpServlet {
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-		System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
     String activePageName = "Korra";
     ContentPageKind loadedPage =
       ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
     
-    assert loadedPage != null;
+    ActiveDistributionGenKind gen = loadedPage.getGenerator();
     
-    ActiveDistributionGenKind gen = loadedPage.getGenerators();
+    if (gen == null) {
+    	throw new IllegalStateException();
+    }
 
-    String jsonResponse = new Gson().toJson(gen.getDistribution());
+    String jsonResponse = "";//new Gson().toJson(gen.getDistribution());
     
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
