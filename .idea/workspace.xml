@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/examples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/src_Flot_Examples_Series_Types.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/jquery.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/research/dsp_space" afterPath="$PROJECT_DIR$/research/dsp_space" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/research/flot_samples.html" afterPath="$PROJECT_DIR$/war/research/flot_samples.html" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +54,8 @@
       <file leaf-file-name="flot_samples.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49099836" vertical-offset="0" max-vertical-offset="611">
-              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.47658864" vertical-offset="0" max-vertical-offset="598">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -906,8 +927,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49099836" vertical-offset="0" max-vertical-offset="611">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.47658864" vertical-offset="0" max-vertical-offset="598">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>

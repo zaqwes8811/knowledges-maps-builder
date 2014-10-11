@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<title>Flot Examples: Series Types</title>
-	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="./excanvas.min.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="./jquery.js"></script>
-	<script language="javascript" type="text/javascript" src="./jquery.flot.js"></script>
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/3rdparty/excanvas.min.js"></script><![endif]-->
+	<script language="javascript" type="text/javascript" src="/3rdparty/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="/3rdparty/jquery.flot.js"></script>
 
 </head>
 <body>
@@ -15,7 +15,12 @@
 $(function() {
   var data, data1, options, chart;
     data1 = [[1, 4], [2,5], [3, 6], [4,9]];
-    data = [data1];
+    var data2 = [], data3 = [];
+
+    data = [
+        {data:data1, label:"eq", lines:{show:true}, points:{show:true}},
+        data2, data3];
+
     options = {};
 
     // Просто сохранять страницы толку нет, т.к. она изменена js'ом
