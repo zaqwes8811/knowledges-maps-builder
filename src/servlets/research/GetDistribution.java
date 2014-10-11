@@ -9,9 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
 import servlets.FakeAppWrapper;
+import store_gae_stuff.ActiveDistributionGenKind;
 import store_gae_stuff.ContentPageKind;
 import store_gae_stuff.EasyKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
@@ -25,37 +27,36 @@ public class GetDistribution extends HttpServlet {
   static private FakeAppWrapper w; 
   static {
   	w = new FakeAppWrapper();
-  	
-  	
   }
   
+  static final String activePageName = "Korra";
+  
   @Override
-  public void init(ServletConfig config) {
-  	/*EasyKind k0 = new EasyKind();
-  	EasyKind k1 = new EasyKind();
-  	
-  	// они не удаляются
-  	ofy().save().entity(k1).now();
-  	k0.k = Key.create(k1);
-  	ofy().save().entity(k0).now();
-  	
-  	
-  	List<EasyKind> l = ofy().load().type(EasyKind.class).list();
-  	l.size();
-  	
-  	System.out.println(l);
-  	*/
+  public void init(ServletConfig config) {	
+  	List<Key<ContentPageKind>> keys = ofy().load().type(ContentPageKind.class).keys().list();
+  	ofy().delete().keys(keys).now();
+  	List<Key<ActiveDistributionGenKind>> keys_gen = ofy().load().type(ActiveDistributionGenKind.class).keys().list();
+  	ofy().delete().keys(keys_gen).now();
   	
   	// Own tables
-  	
-  	String activePageName = "Korra";
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(activePageName);
+  	ofy().save().entity(p0).now();
   	ofy().save().entity(p0).now();
   	
   	List<ContentPageKind> pages = 
   			ofy().load().type(ContentPageKind.class).list();
   	
-  	System.out.println(pages);
+  	if (pages.size() != 1) {
+  		throw new IllegalStateException();
+  	}
+  	
+  	// add generator
+  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+  	ofy().save().entity(g).now();
+  	p0.setGenerator(g);
+  	ofy().save().entity(p0).now();  
+  	
+  	// may work
   }
 
 	@Override
@@ -63,25 +64,32 @@ public class GetDistribution extends HttpServlet {
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-    /*String activePageName = "Korra";
-    ContentPageKind loadedPage =
-      ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+    try {
+      List<ContentPageKind> pages = 
+      		ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).list();
+      
+      if (pages.size() != 1) {
+    		throw new IllegalStateException();
+    	}
     
-    ActiveDistributionGenKind gen = loadedPage.getGenerator();
-    
-    if (gen == null) {
-    	throw new IllegalStateException();
-    }*/
-
-    String jsonResponse = "";//new Gson().toJson(gen.getDistribution());
-    
-    response.setContentType("text/html");
-    response.setStatus(HttpServletResponse.SC_OK);
-    
-    response.setCharacterEncoding("UTF-8");
-    response.getWriter().println(jsonResponse);
-    
-    List<Key<ContentPageKind>> keys = ofy().load().type(ContentPageKind.class).keys().list();
-    ofy().delete().keys(keys);
+	    ActiveDistributionGenKind gen = pages.get(0).getGenerator();
+	    
+	    if (gen == null) {
+	    	throw new IllegalStateException();
+	    }
+	
+	    String jsonResponse = new Gson().toJson(gen.getDistribution());
+	    
+	    response.setContentType("text/html");
+	    response.setStatus(HttpServletResponse.SC_OK);
+	    
+	    response.setCharacterEncoding("UTF-8");
+	    response.getWriter().println(jsonResponse);
+    } catch (Exception e) {
+    	//e.rethrow();
+    	throw e;
+    } finally {
+    	
+    }
   }
 }

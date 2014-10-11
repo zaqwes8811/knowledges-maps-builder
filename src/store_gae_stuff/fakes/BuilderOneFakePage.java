@@ -66,7 +66,7 @@ public class BuilderOneFakePage {
   }
 
   private ArrayList<ContentItemKind> getContentElements(String text) {
-    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 5);
+    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 50);
     assert !sentences.isEmpty();
 
     // Пакуем
