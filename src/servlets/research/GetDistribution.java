@@ -40,16 +40,9 @@ public class GetDistribution extends HttpServlet {
     
     assert loadedPage != null;
     
-    List<ActiveDistributionGenKind> gen = loadedPage.getGenerators();
+    ActiveDistributionGenKind gen = loadedPage.getGenerators();
 
-    // подгружаем генератор
-    //List<ActiveDistributionGenKind> gen = Optional.of(loadedPage).get().getGenerators();
-    assert gen != null;
-    assert !gen.isEmpty();
-    
-    gen.get(0);
-
-    String jsonResponse = new Gson().toJson(gen.get(0).getDistribution());
+    String jsonResponse = new Gson().toJson(gen.getDistribution());
     
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
