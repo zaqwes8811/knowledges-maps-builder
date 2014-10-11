@@ -39,7 +39,7 @@ public class ContentPageKindTest {
     ContentPageKind page = buildContentPage("Korra");
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
-    page.addGenerator(gen);
+    page.setGenerator(gen);
     ofy().save().entity(page).now();
   }
 
@@ -92,7 +92,7 @@ public class ContentPageKindTest {
     ContentPageKind page = buildContentPage(activePageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
-    page.addGenerator(gen);
+    page.setGenerator(gen);
 
     // создаем две страницы, важно для проверки разделения запросов.
     ofy().save().entity(page).now();

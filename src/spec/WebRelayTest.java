@@ -21,11 +21,13 @@ import org.eclipse.jetty.servlet.ServletHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import store_gae_stuff.ActiveDistributionGenKind;
 import store_gae_stuff.ContentPageKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 
 import static store_gae_stuff.OfyService.ofy;
 
+@Deprecated  // Такие тесты не запустить - "No API env. is reg..."
 public class WebRelayTest {
   private static final LocalServiceTestHelper helper =
     new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
@@ -75,6 +77,7 @@ public class WebRelayTest {
     // Список обработчиков
     ServletHandler handler = new ServletHandler();
     handler.addServletWithMapping("servlets.OldSingleWordGetterServlet", "/get_word_data");
+    handler.addServletWithMapping("servlets.research.GetDistribution", "/research/get_distribution");
 
     // Connect handlers
     HandlerList handlers = new HandlerList();
@@ -95,6 +98,9 @@ public class WebRelayTest {
 
     // store page
     ContentPageKind page = new BuilderOneFakePage().buildContentPage("Korra");
+    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    ofy().save().entity(gen).now();
+    page.setGenerator(gen);
     ofy().save().entity(page).now();
 
     // run server
