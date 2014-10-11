@@ -2,33 +2,153 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery-1.8.2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/left-nspace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit-1.10.0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit-1.10.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/qunit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic-to-call.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic-to-names.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/statistic.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/thinks.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/prototype.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/third_party/underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/tvct-lib-1.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/used-regex.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/web2py.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/web2py_bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/js/stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/content.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/descriptions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/bec-dictionary.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/filters/sorted.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/frequences.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/bec-node/ptrs-to-sentences.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/frequences.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/sentences.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/app-folder/default-node/sorted.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/cfgs/app_cfg.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/crawler-app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/run-jar.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/scriber-app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/targets/spider_extractor_target_onto.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/examples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/summary.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/hided/website.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/css/journal.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/del.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/ed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/rel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/img/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/index_.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/share.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/hided/web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/js/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/apps/web_view/subs/sys-settings-new.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/card.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/inner-reuse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/layers.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/leafs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/css/sliders.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/js/cards.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/js/fakes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/js/reuse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/trash/targets/spider_extractor_target_onto.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/research/dsp_space" afterPath="$PROJECT_DIR$/research/dsp_space" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/research/flot_samples.html" afterPath="$PROJECT_DIR$/war/research/flot_samples.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/research/research.html" afterPath="$PROJECT_DIR$/war/research/research.html" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +171,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="flot_samples.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="flot_samples.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47658864" vertical-offset="0" max-vertical-offset="598">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="570">
+              <caret line="10" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="research.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/research/research.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="1635">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -74,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/store_gae_stuff/Distributions.java" />
         <option value="$PROJECT_DIR$/src/business/math/DistributionEqualizerImpl_NI.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/DistributionGen.java" />
@@ -125,6 +254,7 @@
         <option value="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples.html" />
+        <option value="$PROJECT_DIR$/war/research/research.html" />
       </list>
     </option>
   </component>
@@ -482,7 +612,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="-1" width="1282" height="1027" extended-state="7" />
+    <frame x="1365" y="-1" width="1282" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -868,39 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/research/research.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="1035" max-vertical-offset="2325">
-          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/index_legacy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
@@ -927,8 +1024,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47658864" vertical-offset="0" max-vertical-offset="598">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="570">
+          <caret line="10" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/research/research.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="1635">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding />
         </state>
       </provider>
