@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableList;
 import core.math.DistributionElement;
 import core.math.GeneratorAnyDistribution;
 
+
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
@@ -55,6 +56,7 @@ public class ActiveDistributionGenKind
 
   // Индексируется - это состояние генератора
   //@Embedded  // кажеться и так понимает
+  // FIXME: какая лажа с порадком загрузки
   ArrayList<DistributionElement> distribution;  // порядок важен
   // EqualizeMask ...
 
@@ -73,6 +75,7 @@ public class ActiveDistributionGenKind
  }
 
   private void reloadGenerator(ArrayList<DistributionElement> distribution) {
+  	//assert distribution != null;
     gen = GeneratorAnyDistribution.create(distribution);
   }
 
@@ -99,6 +102,9 @@ public class ActiveDistributionGenKind
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   private ActiveDistributionGenKind() {
+  	if (this.distribution == null)
+  		throw new IllegalStateException();
+  		
     // похоже при восстановлении вызывается он
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
     reloadGenerator(distribution);

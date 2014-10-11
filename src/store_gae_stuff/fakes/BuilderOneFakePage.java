@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertFalse;
+//import static org.junit.Assert.assertFalse;
 
 public class BuilderOneFakePage {
   private String getSubtitlesToPlainText(String filename) throws IOException {
@@ -53,7 +53,7 @@ public class BuilderOneFakePage {
     try {
       // Phase I
       String plainText = getSubtitlesToPlainText(filename);
-      assertFalse(plainText.isEmpty());
+      assert !plainText.isEmpty();
 
       // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
       ArrayList<ContentItemKind> contentElements = getContentElements(plainText);
@@ -67,7 +67,7 @@ public class BuilderOneFakePage {
 
   private ArrayList<ContentItemKind> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text).subList(1, 50);
-    assertFalse(sentences.isEmpty());
+    assert !sentences.isEmpty();
 
     // Пакуем
     ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();

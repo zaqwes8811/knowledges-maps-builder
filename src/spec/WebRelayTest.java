@@ -90,6 +90,7 @@ public class WebRelayTest {
     server.join();
   }
 
+  @Deprecated
   @Test
   public void blockedTestCore() throws Exception {
     // FIXME: перенаправить логи, лог от хранилища не попадает в основной вывод.
