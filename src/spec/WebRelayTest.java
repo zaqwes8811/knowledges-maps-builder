@@ -26,6 +26,9 @@ public class WebRelayTest {
   private static final LocalServiceTestHelper helper =
     new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
+  static final String ROOT_DIR = "war";
+  static final Integer PORT_SERVER = 8080;
+
   @Before
   public void setUp() { helper.setUp(); }
 
@@ -52,41 +55,44 @@ public class WebRelayTest {
     return handlers;
   }
 
+  private void startServer() throws Exception {
+    Server server = new Server();
+    SelectChannelConnector connector = new SelectChannelConnector();
+    connector.setPort(PORT_SERVER);
+    server.addConnector(connector);
+
+    // Подключаем корень
+    // FIXME: Если не находи index.html Открывает вид папки!!
+    ResourceHandler resourceHandler = new ResourceHandler();
+    resourceHandler.setDirectoriesListed(true);
+    resourceHandler.setWelcomeFiles(new String[] { "index.html" });
+    resourceHandler.setResourceBase(ROOT_DIR);  // что это-то?
+
+    // Список обработчиков
+    ServletHandler handler = new ServletHandler();
+    handler.addServletWithMapping("servlets.OldSingleWordGetterServlet", "/get_word_data");
+
+    // Connect handlers
+    HandlerList handlers = new HandlerList();
+    handlers.setHandlers(new Handler[] { resourceHandler, handler/*, context*/ });
+
+    // Подключаем к серверу
+    server.setHandler(handlers);
+
+    server.start();
+    server.join();
+  }
+
   @Test
   public void blockedTestCore() throws Exception {
     // FIXME: перенаправить логи, лог от хранилища не попадает в основной вывод.
     // FIXME: Сделать через конфигурационные файлы. Можно ли и нужно ли?
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
-    Server server = new Server();
-    SelectChannelConnector connector = new SelectChannelConnector();
-    connector.setPort(8080);
-    server.addConnector(connector);
- 
-    // Подключаем корень?
-    ResourceHandler resourceHandler = new ResourceHandler();
-    resourceHandler.setDirectoriesListed(true);
-    resourceHandler.setWelcomeFiles(new String[]{"index.html"});
-    resourceHandler.setResourceBase("war");  // что это-то?
+    // store page
 
-    //ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-    //context.setContextPath(".");
-
-    // Список обработчиков?
-    // FIXME: Если не находи index.html Открывает вид папки!!
-    HandlerList handlers = new HandlerList();
-    ServletHandler handler = new ServletHandler();
-    handlers.setHandlers(new Handler[] { resourceHandler, handler/*, context*/ });
-
-    // Подключаем к серверу
-    server.setHandler(handlers);
-
-    // Регистрируем сервлет?
-    handler.addServletWithMapping("servlets.OldSingleWordGetterServlet", "/get_word_data");
-
-    ///*
-    server.start();
-    server.join();//*/
+    // run server
+    startServer();
   }
 
   @Test
@@ -102,7 +108,7 @@ public class WebRelayTest {
       ContainerNodeControllers container = new ContainerNodeControllers(a);
       HandlerList handlers = buildHandlers();
 
-      Server server = new Server(8081);
+      Server server = new Server(PORT_SERVER);
       server.setHandler(handlers);
       server.start();
       server.join();
