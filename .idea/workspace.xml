@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b628-c20e-41d3-a6a8-6b035d50b347" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" afterPath="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/examples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types_files/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/research/flot_samples/src_Flot_Examples_Series_Types.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/research/dsp_space" afterPath="$PROJECT_DIR$/research/dsp_space" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart-vocabulary-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +31,11 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="flot_samples.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/research/flot_samples/flot_samples.html">
+        <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="611">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.49099836" vertical-offset="0" max-vertical-offset="611">
+              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/store_gae_stuff/GeneratorDistributions.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/Distributions.java" />
         <option value="$PROJECT_DIR$/src/business/math/DistributionEqualizerImpl_NI.java" />
         <option value="$PROJECT_DIR$/src/store_gae_stuff/OfyService.java" />
@@ -103,6 +103,7 @@
         <option value="$PROJECT_DIR$/war/research/flot_samples/RAW_Flot_Examples_Series_Types.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples/Flot_Examples_Series_Types.html" />
         <option value="$PROJECT_DIR$/war/research/flot_samples/flot_samples.html" />
+        <option value="$PROJECT_DIR$/war/research/flot_samples.html" />
       </list>
     </option>
   </component>
@@ -185,28 +186,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="research" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-vocabulary-cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="research" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flot_samples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -482,7 +461,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="-1" width="1282" height="1027" extended-state="6" />
+    <frame x="1365" y="-1" width="1282" height="1027" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -901,16 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/research/flot_samples/src_Flot_Examples_Series_Types.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.458334" vertical-offset="9805" max-vertical-offset="10485">
-          <caret line="680" column="20" selection-start-line="680" selection-start-column="20" selection-end-line="680" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/index_legacy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
@@ -935,13 +904,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/research/flot_samples/flot_samples.html">
+    <entry file="file://$PROJECT_DIR$/war/research/flot_samples.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="611">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.49099836" vertical-offset="0" max-vertical-offset="611">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
