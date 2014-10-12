@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.labs.repackaged.com.google.common.base.Optional;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
@@ -26,51 +27,18 @@ public class GetDistribution extends HttpServlet {
   private static final long serialVersionUID = 4122657047047348423L;
   
   private FakeAppWrapper w = FakeAppWrapper.getInstance(); 
-  
-  static final String activePageName = "Korra";
-  
-  @Override
-  public void init(ServletConfig config) {	
-  	List<Key<ContentPageKind>> keys = ofy().load().type(ContentPageKind.class).keys().list();
-  	ofy().delete().keys(keys).now();
-  	List<Key<ActiveDistributionGenKind>> keys_gen = ofy().load().type(ActiveDistributionGenKind.class).keys().list();
-  	ofy().delete().keys(keys_gen).now();
-  	
-  	// Own tables
-  	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(activePageName);
-  	ofy().save().entity(p0).now();
-  	ofy().save().entity(p0).now();
-  	
-  	List<ContentPageKind> pages = 
-  			ofy().load().type(ContentPageKind.class).list();
-  	
-  	if (pages.size() != 1) {
-  		throw new IllegalStateException();
-  	}
-  	
-  	// add generator
-  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
-  	ofy().save().entity(g).now();
-  	p0.setGenerator(g);
-  	ofy().save().entity(p0).now();  
-  	
-  	// may work
-  }
 
+  
 	@Override
   public void doGet(
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
     try {
-      List<ContentPageKind> pages = 
-      		ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).list();
-      
-      if (pages.size() != 1) {
-    		throw new IllegalStateException();
-    	}
-    
-	    ActiveDistributionGenKind gen = pages.get(0).getGenerator();
+    	String genName = "No";
+    	
+	    // TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
+    	ActiveDistributionGenKind gen = Optional.of(w.getPage(FakeAppWrapper.defaultPageName).getGenerator()).get();
 	    
 	    if (gen == null) {
 	    	throw new IllegalStateException();
