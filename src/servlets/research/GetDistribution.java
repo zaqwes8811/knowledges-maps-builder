@@ -24,10 +24,8 @@ public class GetDistribution extends HttpServlet {
 	 * 
 	 */
   private static final long serialVersionUID = 4122657047047348423L;
-  static private FakeAppWrapper w; 
-  static {
-  	w = new FakeAppWrapper();
-  }
+  
+  private FakeAppWrapper w = FakeAppWrapper.getInstance(); 
   
   static final String activePageName = "Korra";
   

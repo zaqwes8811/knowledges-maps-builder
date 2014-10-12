@@ -20,4 +20,12 @@ public class FakeAppWrapper {
 
     }
 	}
+	
+	static class Holder {
+		static final FakeAppWrapper w = new FakeAppWrapper();
+	}
+	
+	public static FakeAppWrapper getInstance() {
+		return Holder.w;
+	}
 }
