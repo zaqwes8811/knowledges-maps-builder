@@ -1,24 +1,19 @@
 package store_gae_stuff;
 
-import com.google.common.collect.ImmutableList;
-
-import core.math.DistributionElement;
-import core.math.GeneratorAnyDistribution;
-
-
-
-//import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
-import com.google.common.base.Optional;
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Load;
-import com.googlecode.objectify.annotation.Unindex;
-
-import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
-
 import java.util.ArrayList;
 
 import net.jcip.annotations.NotThreadSafe;
+
+//import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
+import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Unindex;
+
+import core.math.DistributionElement;
+import core.math.GeneratorAnyDistribution;
+import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -48,21 +43,26 @@ public class ActiveDistributionGenKind
 {
   @Id
   public Long id;
-
-  // Можно и не индексировать - пока алгоритм одни
-  // придется хранить отдельно
-  @Unindex  // все-таки на объект накладываются ограничения!!
-  GeneratorAnyDistribution gen;// = null;  // TODO: как быть?
-
-  @Unindex
-  Integer codeAction;  // возможность подкл. алгоритма при создании
-
-  // Индексируется - это состояние генератора
+  
+  @Index
+  String name;
+  
+  // Индексируется as embedded- это состояние генератора
   //@Embedded  // кажеться и так понимает
   // FIXME: какая лажа с порадком загрузки
   //@Load
   ArrayList<DistributionElement> distribution;  // порядок важен
-  // EqualizeMask ...
+  ArrayList<Integer> equalizeMask;  // same size as distr.
+  
+  // Можно и не индексировать - пока алгоритм одни
+  // придется хранить отдельно
+  // все-таки на объект накладываются ограничения!!
+  // FIXME: вообще нужно быть внимательным, порядок иниц. может все сломать
+  @Unindex  
+  GeneratorAnyDistribution gen;
+
+  @Unindex
+  Integer codeAction;  // возможность подкл. алгоритма при создании
 
   public ImmutableList<DistributionElement> getDistribution() {
     return ImmutableList.copyOf(distribution);
@@ -93,7 +93,6 @@ public class ActiveDistributionGenKind
     getElem(idx).enabled = false;
     reloadGenerator(distribution);
   }
-
 
   private DistributionElement getElem(Integer idx) {
     if (idx >= distribution.size() || idx < 0)
