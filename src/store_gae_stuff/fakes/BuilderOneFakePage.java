@@ -24,6 +24,9 @@ import java.util.List;
 //import static org.junit.Assert.assertFalse;
 
 public class BuilderOneFakePage {
+	public static final String defailtPageName = "Korra";
+	public static final String defaultGenName = "Gen";
+	
   private String getSubtitlesToPlainText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
