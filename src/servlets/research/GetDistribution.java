@@ -33,7 +33,6 @@ public class GetDistribution extends HttpServlet {
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-    try {
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
   	ActiveDistributionGenKind gen = app
   			.getPage(FakeAppWrapper.defaultPageName)  // FIXME: страница тоже может быть не найдена
@@ -47,9 +46,5 @@ public class GetDistribution extends HttpServlet {
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(r);
-    } catch (Exception e) {
-    	e.printStackTrace();
-    	throw e;
-    }
   }
 }
