@@ -13,6 +13,8 @@ import store_gae_stuff.fakes.BuilderOneFakePage;
 public class FakeAppWrapper {
 	public static final String defaultPageName = "Korra";
 	
+	public static final String defaultGenName = "No";
+	
 	public FakeAppWrapper() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.

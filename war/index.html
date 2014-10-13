@@ -3,32 +3,28 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
     
-    <script src="controllers.js" charset="UTF-8"></script>
+    <script src="/js/controllers.js" charset="UTF-8"></script>
     
     <link rel="stylesheet" href="css/aj.css">
 </head>
 <body ng-controller="PhoneListCtrl">
-    <a href="/research/flot_samples/Flot_Examples_Series_Types.html">Research</a>
+    
   <div>
-    Current space:
+    Current page:
     <select ng-model="orderProp">
-      <option value="age">BEC-dictonary</option>
+      <option value="age">Korra</option>
     </select>
-    
-    <button ng-click="ni()">
-      Accept
-    </button>
-    
-    Search: <input ng-model="query">
     
     <button ng-click="ni()">
       My progress
     </button>
     
     <button ng-click="ni()">
-      Add new space
+      Add new page
     </button>
+    <a href="/research/flot_samples/Flot_Examples_Series_Types.html">Research page</a>
     <hr>
+    
 
     <!-- Own word -->
     <button ng-click="getNewWord()">
@@ -40,10 +36,6 @@
     <button ng-click="showSamples()">
       Context samples
     </button>
-    
-    <button ng-click="showTranslates()">
-      Translates
-    </button>
 
     <!-- Addition data -->
     <br>
@@ -53,10 +45,6 @@
     filter:
     </label> 
     <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    Sort by:
-    <select ng-model="sorter">
-      <option value="name">Nothing</option>
-    </select>
 
     <!-- Translates -->
     <ul ng-hide="translateHided">
@@ -72,5 +60,7 @@
       </li>
     </ul>  
   </div>
+  
+  <!-- Как бы сюда прилепить график генераторов, пусть будет на одной стр. -->
 </body>
 </html>
