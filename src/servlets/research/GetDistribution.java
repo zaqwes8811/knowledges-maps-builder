@@ -13,11 +13,11 @@ import com.google.common.base.Optional;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
-import servlets.FakeAppWrapper;
 import store_gae_stuff.ActiveDistributionGenKind;
 import store_gae_stuff.ContentPageKind;
 import store_gae_stuff.EasyKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
+import store_gae_stuff.fakes.FakeAppWrapper;
 import static store_gae_stuff.OfyService.ofy;
 
 

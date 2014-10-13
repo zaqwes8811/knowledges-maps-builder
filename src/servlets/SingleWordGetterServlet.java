@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import store_gae_stuff.ContentPageKind;
 import store_gae_stuff.ContentPageKind.WordDataValue;
 import store_gae_stuff.fakes.BuilderOneFakePage;
+import store_gae_stuff.fakes.FakeAppWrapper;
 import net.jcip.annotations.NotThreadSafe;
 
 import java.io.IOException;

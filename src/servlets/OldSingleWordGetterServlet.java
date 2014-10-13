@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Deprecated
 @NotThreadSafe
 public class OldSingleWordGetterServlet extends HttpServlet {
   private ContainerNodeControllers container_;

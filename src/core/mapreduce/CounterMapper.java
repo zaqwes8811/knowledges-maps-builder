@@ -27,7 +27,8 @@ public class CounterMapper {
     for (ContentItemKind item : contentItemKinds) {
       List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words)
-        // TODO: Сделать все буквы маленькими. Здесь?
+      	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
+      	
         emit(word.toLowerCase(), item);
     }
   }
