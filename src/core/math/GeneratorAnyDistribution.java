@@ -19,20 +19,12 @@ import java.util.Random;
 @Immutable
 public final class GeneratorAnyDistribution {
 	// All finals was removed.
-  private Integer countPoints_;
-  private Integer maxValue_;
+  private final Integer countPoints_;
+  private final Integer maxValue_;
   private final ImmutableList<ImmutableList<Integer>> codeBook_;
-  private Integer INTERVAL_POS_ = 1;
-  private Integer IDX_POSITION_ = 2;
+  private final Integer INTERVAL_POS_ = 1;
+  private final Integer IDX_POSITION_ = 2;
   private final ArrayList<DistributionElement> d;
-  
-  // FIXME: VERY BAD!!
-  public GeneratorAnyDistribution() {
-  	//countPoints_ = 0;
-  	//maxValue_ = 0;
-  	codeBook_ = null;
-  	d = null;
-  }
   
   // Любой список с числами
   // @throws: GeneratorDistributionException
