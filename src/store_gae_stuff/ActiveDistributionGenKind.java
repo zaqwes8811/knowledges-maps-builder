@@ -106,6 +106,16 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   private ActiveDistributionGenKind() {
+  	/*if (this.distribution == null)
+  		throw new IllegalStateException();
+  		
+    // похоже при восстановлении вызывается он
+    // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
+    reloadGenerator(distribution);
+    */
+  }
+  
+  public void reset() {
   	if (this.distribution == null)
   		throw new IllegalStateException();
   		
@@ -113,6 +123,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
     reloadGenerator(distribution);
   }
+
 
   public void enablePoint(Integer idx) {
     getElem(idx).enabled = true;
