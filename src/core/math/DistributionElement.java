@@ -1,14 +1,16 @@
 package core.math;
 
+import java.io.Serializable;
+
 //http://stackoverflow.com/questions/5560176/is-integer-immutable
 // сохраняется в базе!
-public class DistributionElement implements Comparable<DistributionElement> {
+public class DistributionElement implements Comparable<DistributionElement>, Serializable {
   // FIXME: make get/set
 	public Integer frequency;
   public Boolean enabled;
   
   // FIXME: for persist
-  DistributionElement() { }
+  //DistributionElement() { }
   
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
