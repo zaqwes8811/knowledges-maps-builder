@@ -8,7 +8,7 @@ import com.googlecode.objectify.Key;
 
 import store_gae_stuff.ActiveDistributionGenKind;
 import store_gae_stuff.ContentPageKind;
-import store_gae_stuff.WordItemKind;
+import store_gae_stuff.WordKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 
 public class FakeAppWrapper {
@@ -22,7 +22,7 @@ public class FakeAppWrapper {
 		//
   	ofy().delete().keys(ofy().load().type(ContentPageKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(ActiveDistributionGenKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(WordItemKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
   	
   	// Own tables
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);

@@ -8,12 +8,12 @@ import org.junit.Test;
 public class WordItemKindTest {
   @Test
   public void testCompare() throws Exception {
-    WordItemKind o1 = new WordItemKind("hello");
+    WordKind o1 = new WordKind("hello");
     o1.setRawFrequency(1);
-    WordItemKind o2 = new WordItemKind("dfasdf");
+    WordKind o2 = new WordKind("dfasdf");
     o2.setRawFrequency(1);
 
-    assert 0 == WordItemKind.createFrequencyComparator().compare(o1, o2);
+    assert 0 == WordKind.createFrequencyComparator().compare(o1, o2);
 
     o2.setRawFrequency(2);
   }

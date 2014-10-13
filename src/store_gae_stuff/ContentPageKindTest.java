@@ -114,15 +114,15 @@ public class ContentPageKindTest {
     Integer pointPosition = page.getGenerator(BuilderOneFakePage.defaultGenName).getPosition();
 
     // слово одно, но если страниц много, то получим для всех
-    List<WordItemKind> words = ofy().load()
-        .type(WordItemKind.class)
+    List<WordKind> words = ofy().load()
+        .type(WordKind.class)
         //.ancestor(page)  // don't work
         //.parent(page)  // don't work
         .filterKey("in", page.wordKeys).filter("pointPos =", pointPosition)
         .list();
 
     assertEquals(words.size(), 1);  // не прошли не свои страницы
-    WordItemKind word = words.get(0);
+    WordKind word = words.get(0);
     List<ContentItemKind> content = 
     		ofy().load().type(ContentItemKind.class).filterKey("in", word.getItems()).list();
 
