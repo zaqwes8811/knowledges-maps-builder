@@ -27,6 +27,7 @@ import java.util.List;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 import net.jcip.annotations.NotThreadSafe;
 
+import com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -85,29 +86,30 @@ public class ContentPageKind {
     return distribution;
   }
   
+  public ImmutableList<ContentItemKind> getContendKinds(WordItemKind wordKind) {
+  	// берем часть
+  	return ImmutableList.copyOf(ofy().load().type(ContentItemKind.class).filterKey("in", wordKind.getItems()).list());
+  }
+  
   public Optional<WordDataValue> getWordData(String genName) {
-  	// queries
   	Optional<ActiveDistributionGenKind> go = getGenerator(genName);
     
   	if (go.isPresent()) {
 			Integer pointPosition = go.get().getPosition();
-			
-			Optional<WordItemKind> word =  getWordKind(pointPosition);
-					
-			List<ContentItemKind> content = 
-					ofy().load().type(ContentItemKind.class).filterKey("in", word.getItems()).list();
-			
-			for (ContentItemKind e: content) {
+			WordItemKind wordKind =  getWordKind(pointPosition);
+			ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
+
+			for (ContentItemKind e: contentKinds) {
 			  String v = e.getSentence();
-			
-			  // TODO: пока будет работать. Сейчас используется только стеммер
-			  // http://stackoverflow.com/questions/2275004/in-java-how-to-check-if-a-string-contains-a-substring-ignoring-the-case
-			  boolean in = v.toLowerCase().contains(word.word.toLowerCase());
-			  assertTrue(in);
 			}
+			
+			//new WordDataValue(null, null);
+			return Optional.absent();
+  	} else {
+  		// генератор не был найден по имени - вообще такого быть не должно
+  		// но браузер далеко.
+  		return Optional.absent();
   	}
-    
-  	return Optional.absent();//new WordDataValue(null, null);
   }
   
   // FIXME: а логика разрешает Отсутствующее значение?
