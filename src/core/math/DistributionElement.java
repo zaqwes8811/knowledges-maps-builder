@@ -5,7 +5,9 @@ import java.io.Serializable;
 //http://stackoverflow.com/questions/5560176/is-integer-immutable
 // сохраняется в базе!
 public class DistributionElement implements Comparable<DistributionElement>, Serializable {
-  // FIXME: make get/set
+  private static final long serialVersionUID = -3004460083142639254L;
+  
+	// FIXME: make get/set
 	public Integer frequency;
   public Boolean enabled;
   
