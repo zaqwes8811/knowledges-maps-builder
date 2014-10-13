@@ -81,4 +81,19 @@ public class ContentPageKind {
 
     return distribution;
   }
+  
+  public WordDataValue getWordData(String genName) {
+  	return new WordDataValue(null, null);
+  }
+  
+  public static class WordDataValue {
+  	public WordDataValue(String word, ArrayList<String> sentences) {
+  		this.word = word;
+  		this.sentences = sentences;
+  	}
+  	public final String word;
+  	public final ArrayList<String> sentences;
+  	
+  	// cluster range name - важность слова - три или 4 группы
+  }
 }
