@@ -4,16 +4,19 @@ import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
+
 import common.Tools;
 import core.nlp.PlainTextTokenizer;
 import core.text_extractors.SpecialSymbols;
 import core.text_extractors.SubtitlesContentHandler;
 import core.text_extractors.SubtitlesParser;
+
 import org.apache.tika.parser.Parser;
 import org.xml.sax.ContentHandler;
-import store_gae_stuff.ContentItemKind;
-import store_gae_stuff.ContentPageBuilder;
-import store_gae_stuff.ContentPageKind;
+
+import gae_store_space.ContentItemKind;
+import gae_store_space.ContentPageBuilder;
+import gae_store_space.ContentPageKind;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

@@ -1,5 +1,9 @@
 package servlets.research;
 
+import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.ContentPageKind;
+import gae_store_space.EasyKind;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -13,12 +17,9 @@ import com.google.common.base.Optional;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
-import store_gae_stuff.ActiveDistributionGenKind;
-import store_gae_stuff.ContentPageKind;
-import store_gae_stuff.EasyKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 import store_gae_stuff.fakes.FakeAppWrapper;
-import static store_gae_stuff.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 
 
 // CASE: на вебе есть список генераторов страницы, берем имя генератора, и для него возврящаем 

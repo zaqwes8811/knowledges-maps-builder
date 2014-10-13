@@ -14,9 +14,9 @@
  *   Отражает один элемент данный пользователя, например, один файл субтитров.
  */
 
-package store_gae_stuff;
+package gae_store_space;
 
-import static store_gae_stuff.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 
 import java.util.ArrayList;
 import java.util.Collections;

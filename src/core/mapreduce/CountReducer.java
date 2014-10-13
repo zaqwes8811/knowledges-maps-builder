@@ -1,7 +1,9 @@
 package core.mapreduce;
 
+import gae_store_space.ContentItemKind;
+
 import com.google.common.collect.Multimap;
-import store_gae_stuff.ContentItemKind;
+
 import org.checkthread.annotations.NotThreadSafe;
 
 @NotThreadSafe
