@@ -55,10 +55,7 @@ public class ContentPageKind {
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
   public ActiveDistributionGenKind getGenerator(String name) {  
-  	
-  	System.out.println("Befor create");
-  	ActiveDistributionGenKind gen = ofy().load().type(ActiveDistributionGenKind.class)
-    			.id(g.getId()).now();
+  	ActiveDistributionGenKind gen = ofy().load().key(g).now();
   	
   	if (gen == null) {
   		throw new IllegalStateException();
