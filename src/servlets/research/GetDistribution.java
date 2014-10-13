@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.appengine.labs.repackaged.com.google.common.base.Optional;
+import com.google.common.base.Optional;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
@@ -20,42 +20,37 @@ import store_gae_stuff.EasyKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 import static store_gae_stuff.OfyService.ofy;
 
+
+// CASE: на вебе есть список генераторов страницы, берем имя генератора, и для него возврящаем 
+//   распределение. Если генератор не найден - данные на вебе устарели.
 public class GetDistribution extends HttpServlet {
-  /**
-	 * 
-	 */
   private static final long serialVersionUID = 4122657047047348423L;
   
-  private FakeAppWrapper w = FakeAppWrapper.getInstance(); 
-
+  private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
   
 	@Override
   public void doGet(
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-    try {
-    	String genName = "No";
-    	
-	    // TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-    	ActiveDistributionGenKind gen = Optional.of(w.getPage(FakeAppWrapper.defaultPageName).getGenerator()).get();
-	    
-	    if (gen == null) {
-	    	throw new IllegalStateException();
-	    }
-	
-	    String jsonResponse = new Gson().toJson(gen.getDistribution());
-	    
-	    response.setContentType("text/html");
-	    response.setStatus(HttpServletResponse.SC_OK);
-	    
-	    response.setCharacterEncoding("UTF-8");
-	    response.getWriter().println(jsonResponse);
-    } catch (Exception e) {
-    	//e.rethrow();
-    	throw e;
-    } finally {
-    	
-    }
+    // TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
+  	Optional<ActiveDistributionGenKind> gen = app
+  			.getPage(FakeAppWrapper.defaultPageName)  // FIXME: страница тоже может быть не найдена
+  			.getGenerator(FakeAppWrapper.defaultGenName);
+  	
+  	String r = "";
+  	response.setContentType("text/html");
+  	// Если нашли
+  	if (gen.isPresent()) {
+  		r = new Gson().toJson(gen.get().getDistribution());
+  		response.setStatus(HttpServletResponse.SC_OK);
+  	} else {
+  		// error occure
+  		// Запись не найдена, но по идее должна быть - data races
+  		response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+  	}
+
+    response.setCharacterEncoding("UTF-8");
+    response.getWriter().println(r);
   }
 }
