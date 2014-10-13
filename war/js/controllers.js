@@ -15,8 +15,8 @@ phonecatApp.controller('PhoneListCtrl', function ($scope, $http) {
   
   $scope.getNewWord = function() {
 	  $http.get('/pkg').success(function(data) {
-		  $scope.word = data[1][1][0];
-		  $scope.samples = data[1][0];
+		  $scope.word = data.word;
+		  $scope.samples = data.sentences;
 		  $scope.yourName = '';
 	  });
   };

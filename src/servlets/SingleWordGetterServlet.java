@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import store_gae_stuff.ContentPageKind;
+import store_gae_stuff.ContentPageKind.WordDataValue;
+import store_gae_stuff.fakes.BuilderOneFakePage;
 import net.jcip.annotations.NotThreadSafe;
 
 import java.io.IOException;
@@ -26,11 +29,10 @@ public class SingleWordGetterServlet extends HttpServlet {
 
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
-
-    // TODO: Сделать декоратор для класса
-    // TODO: Это хардкод!
-    Integer idxNode = 0;
-    String jsonResponse = new Gson().toJson(idxNode);
+    
+    ContentPageKind p = app.getPage(BuilderOneFakePage.defailtPageName);
+    WordDataValue v = p.getWordData(BuilderOneFakePage.defaultGenName).get();
+    String jsonResponse = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);

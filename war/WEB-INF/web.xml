@@ -15,6 +15,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/research/get_distribution</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Top</servlet-name>
+		<servlet-class>servlets.SingleWordGetterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Top</servlet-name>
+		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
+		<url-pattern>/pkg</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
