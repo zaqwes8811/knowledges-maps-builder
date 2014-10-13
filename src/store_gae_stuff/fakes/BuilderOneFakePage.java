@@ -92,6 +92,6 @@ public class BuilderOneFakePage {
 
   private String getTestFileName() {
   	// FIXME: troubles on GAE
-    return "test_data/korra/The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
+    return "./test_data/korra/data.srt";
   }
 }

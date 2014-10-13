@@ -40,16 +40,16 @@ public class FakeAppWrapper {
   	// Try read
   	///*
   	// Скрыл, но должно работать!!
-  	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
+  	//List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
   	
   	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
-  	if (pages.isEmpty()) {
-  		throw new IllegalStateException();
-  	}
+  	//if (pages.isEmpty()) {
+  	//	throw new IllegalStateException();
+  	//}
   	
-  	if (pages.size() > 1) {
-  		throw new IllegalStateException();
-  	}
+  	//if (pages.size() > 1) {
+  	//	throw new IllegalStateException();
+  	//}
   	//*/  
 	}
 	
@@ -67,12 +67,17 @@ public class FakeAppWrapper {
     
     return pages.get(0);  // 1 item
 	}
+
+	private static FakeAppWrapper w = null;
+	static {
+		w = new FakeAppWrapper(); 
+	}
 	
-	static class Holder {
+	private static class Holder {
 		static final FakeAppWrapper w = new FakeAppWrapper();
 	}
 	
 	public static FakeAppWrapper getInstance() {
-		return Holder.w;
+		return w;
 	}
 }
