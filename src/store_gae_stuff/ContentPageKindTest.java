@@ -2,11 +2,15 @@ package store_gae_stuff;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.common.base.Optional;
 import com.google.common.collect.Ordering;
+
 import core.math.DistributionElement;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import store_gae_stuff.fakes.BuilderOneFakePage;
 
 import java.io.IOException;
@@ -136,5 +140,7 @@ public class ContentPageKindTest {
   @Test 
   public void testGetPackedWordData() {
   	ContentPageKind page = putPagesInStore();
+  	Optional<ContentPageKind.WordDataValue> v = page.getWordData(BuilderOneFakePage.defaultGenName);
+  	assertTrue(v.isPresent());
   } 
 }

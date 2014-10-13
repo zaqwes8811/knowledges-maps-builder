@@ -27,8 +27,8 @@ import java.util.List;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 import net.jcip.annotations.NotThreadSafe;
 
-import com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -40,6 +40,8 @@ import core.math.DistributionElement;
 @Entity
 public class ContentPageKind {
   private ContentPageKind() { }
+  
+  public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 
   @Id Long id;
 
@@ -86,9 +88,13 @@ public class ContentPageKind {
     return distribution;
   }
   
-  public ImmutableList<ContentItemKind> getContendKinds(WordItemKind wordKind) {
+  private ImmutableList<ContentItemKind> getContendKinds(WordItemKind wordKind) {
   	// берем часть
-  	return ImmutableList.copyOf(ofy().load().type(ContentItemKind.class).filterKey("in", wordKind.getItems()).list());
+  	// FIXME: делать выборки с перемешиванием
+  	return ImmutableList.copyOf(
+  			ofy().load().type(ContentItemKind.class)
+  			.filterKey("in", wordKind.getItems())
+  			.limit(MAX_CONTENT_ITEMS_IN_PACK).list());
   }
   
   public Optional<WordDataValue> getWordData(String genName) {
@@ -99,12 +105,11 @@ public class ContentPageKind {
 			WordItemKind wordKind =  getWordKind(pointPosition);
 			ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
 
-			for (ContentItemKind e: contentKinds) {
-			  String v = e.getSentence();
-			}
+			ArrayList<String> content = new ArrayList<String>(); 
+			for (ContentItemKind e: contentKinds)
+			  content.add(e.getSentence());
 			
-			//new WordDataValue(null, null);
-			return Optional.absent();
+			return Optional.of(new WordDataValue(wordKind.getWord(), content));
   	} else {
   		// генератор не был найден по имени - вообще такого быть не должно
   		// но браузер далеко.

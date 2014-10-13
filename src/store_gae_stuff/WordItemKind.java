@@ -20,7 +20,7 @@ public class WordItemKind {
   Long id;
 
   // TODO: может хранится стем или пара-тройка слов.
-  @Index
+  //@Index
   String word;
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
@@ -39,6 +39,10 @@ public class WordItemKind {
   // По нему будет делаться выборка
   @Index
   Integer pointPos;
+  
+  public String getWord() {
+  	return word;
+  }
 
   private WordItemKind() {}
 
