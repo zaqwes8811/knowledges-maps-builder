@@ -111,7 +111,7 @@ public class ContentPageKindTest {
   	ContentPageKind page = putPagesInStore();
 
     // queries
-    Integer pointPosition = page.getGenerator(BuilderOneFakePage.defaultGenName).get().getPosition();
+    Integer pointPosition = page.getGenerator(BuilderOneFakePage.defaultGenName).getPosition();
 
     // слово одно, но если страниц много, то получим для всех
     List<WordItemKind> words = ofy().load()

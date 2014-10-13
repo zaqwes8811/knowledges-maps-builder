@@ -53,11 +53,18 @@ public class ContentPageKind {
   
   Key<ActiveDistributionGenKind> g;  // FIXME: почему отношение не работает?
 
-  public Optional<ActiveDistributionGenKind> getGenerator(String name) {  
-  	ActiveDistributionGenKind gens = ofy().load().type(ActiveDistributionGenKind.class)
+  // throws: 
+  //   IllegalStateException - генератор не найден. Система замкнута, если 
+  //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
+  //     вводится только при создании, потом они только читаются.
+  public ActiveDistributionGenKind getGenerator(String name) {  
+  	ActiveDistributionGenKind gen = ofy().load().type(ActiveDistributionGenKind.class)
     			.id(g.getId()).now();
   	
-  	return Optional.fromNullable(gens);
+  	if (gen == null) {
+  		throw new IllegalStateException();
+  	}
+  	return gen;
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
@@ -98,23 +105,17 @@ public class ContentPageKind {
   }
   
   public Optional<WordDataValue> getWordData(String genName) {
-  	Optional<ActiveDistributionGenKind> go = getGenerator(genName);
+  	ActiveDistributionGenKind go = getGenerator(genName);
     
-  	if (go.isPresent()) {
-			Integer pointPosition = go.get().getPosition();
-			WordItemKind wordKind =  getWordKind(pointPosition);
-			ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
+		Integer pointPosition = go.getPosition();
+		WordItemKind wordKind =  getWordKind(pointPosition);
+		ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
 
-			ArrayList<String> content = new ArrayList<String>(); 
-			for (ContentItemKind e: contentKinds)
-			  content.add(e.getSentence());
-			
-			return Optional.of(new WordDataValue(wordKind.getWord(), content));
-  	} else {
-  		// генератор не был найден по имени - вообще такого быть не должно
-  		// но браузер далеко.
-  		return Optional.absent();
-  	}
+		ArrayList<String> content = new ArrayList<String>(); 
+		for (ContentItemKind e: contentKinds)
+		  content.add(e.getSentence());
+		
+		return Optional.of(new WordDataValue(wordKind.getWord(), content));
   }
   
   // FIXME: а логика разрешает Отсутствующее значение?
