@@ -2,8 +2,9 @@ package frozen.controllers.web_wrapper;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import store_gae_stuff.ActiveDistributionGenKind;
+
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import gae_store_space.ActiveDistributionGenKind;
 
 import java.util.ArrayList;
 import java.util.List;

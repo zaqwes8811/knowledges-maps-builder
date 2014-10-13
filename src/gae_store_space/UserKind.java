@@ -1,4 +1,4 @@
-package store_gae_stuff;
+package gae_store_space;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;

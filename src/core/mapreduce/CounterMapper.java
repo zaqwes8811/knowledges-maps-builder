@@ -1,8 +1,10 @@
 package core.mapreduce;
 
 import core.nlp.SentenceTokenizer;
-import store_gae_stuff.ContentItemKind;
+
 import org.checkthread.annotations.NotThreadSafe;
+
+import gae_store_space.ContentItemKind;
 
 import java.util.List;
 

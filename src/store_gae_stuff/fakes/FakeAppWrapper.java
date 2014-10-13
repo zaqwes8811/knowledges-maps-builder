@@ -1,14 +1,13 @@
 package store_gae_stuff.fakes;
 
-import static store_gae_stuff.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
+import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.ContentPageKind;
+import gae_store_space.WordKind;
 
 import java.util.List;
 
 import com.googlecode.objectify.Key;
-
-import store_gae_stuff.ActiveDistributionGenKind;
-import store_gae_stuff.ContentPageKind;
-import store_gae_stuff.WordKind;
 
 public class FakeAppWrapper {
 	public static final String defaultPageName = "Korra";
