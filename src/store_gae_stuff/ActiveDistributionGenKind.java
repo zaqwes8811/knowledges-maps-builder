@@ -6,6 +6,7 @@ import net.jcip.annotations.NotThreadSafe;
 
 
 
+
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -13,6 +14,7 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
+import com.googlecode.objectify.annotation.Serialize;
 import com.googlecode.objectify.annotation.Unindex;
 
 import core.math.DistributionElement;
@@ -51,11 +53,9 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   String name;
   
   // Индексируется as embedded- это состояние генератора
-  //@Embedded  // кажеться и так понимает
-  // FIXME: какая лажа с порадком загрузки
-  //@Load
-  ArrayList<DistributionElement> distribution;  // порядок важен
-  ArrayList<Integer> equalizeMask;  // same size as distr.
+  // FIXME: какая лажа с порядком загрузки
+  @Serialize ArrayList<DistributionElement> distribution;  // порядок важен
+  @Serialize ArrayList<Integer> equalizeMask;  // same size as distr.
   
   // Можно и не индексировать - пока алгоритм одни
   // придется хранить отдельно
