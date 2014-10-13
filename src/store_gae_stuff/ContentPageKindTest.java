@@ -36,7 +36,7 @@ public class ContentPageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    ContentPageKind page = buildContentPage("Korra");
+    ContentPageKind page = buildContentPage(BuilderOneFakePage.defailtPageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
@@ -45,10 +45,11 @@ public class ContentPageKindTest {
 
   @Test
   public void testGetDistribution() throws IOException {
-    ofy().save().entity(buildContentPage("Korra")).now();
+    ofy().save().entity(buildContentPage(BuilderOneFakePage.defailtPageName)).now();
     
     // Очень медленно!!
-    ContentPageKind page = ofy().load().type(ContentPageKind.class).filter("name =", "Korra").limit(1).first().now();
+    ContentPageKind page =
+    		ofy().load().type(ContentPageKind.class).filter("name =", BuilderOneFakePage.defailtPageName).limit(1).first().now();
 
     /// Queries
     ArrayList<DistributionElement> distribution = page.getRawDistribution();
@@ -83,7 +84,7 @@ public class ContentPageKindTest {
     //   можно использовать кэши, но как быть с обновлением данных?
 
     // Check store
-    String activePageName = "Korra";
+    String activePageName = BuilderOneFakePage.defailtPageName;
     ContentPageKind loadedPage =
       ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
     assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
@@ -126,4 +127,9 @@ public class ContentPageKindTest {
 
     // запрещаем точку
   }
+  
+  @Test 
+  public void testGetPackedWordData() {
+  	
+  } 
 }
