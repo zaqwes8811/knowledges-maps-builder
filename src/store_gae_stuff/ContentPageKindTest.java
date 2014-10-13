@@ -49,7 +49,9 @@ public class ContentPageKindTest {
     
     // Очень медленно!!
     ContentPageKind page =
-    		ofy().load().type(ContentPageKind.class).filter("name =", BuilderOneFakePage.defailtPageName).limit(1).first().now();
+    		ofy().load().type(ContentPageKind.class)
+    			.filter("name =", BuilderOneFakePage.defailtPageName)
+    			.limit(1).first().now();
 
     /// Queries
     ArrayList<DistributionElement> distribution = page.getRawDistribution();
@@ -64,6 +66,27 @@ public class ContentPageKindTest {
   public void testDeletePage() {
     // TODO: Delete full page
   }
+  
+  private ContentPageKind putPagesInStore() {
+  	// Check store
+    String activePageName = BuilderOneFakePage.defailtPageName;
+    ContentPageKind loadedPage =
+      ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+    assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
+
+    // Create new page
+    ContentPageKind page = buildContentPage(activePageName);
+    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    ofy().save().entity(gen).now();
+    page.setGenerator(gen);
+    ofy().save().entity(page).now();
+    
+    // создаем две страницы, важно для проверки разделения запросов.
+    // Add noise page
+    ofy().save().entity(buildContentPage(activePageName+"_noise")).now();
+    
+    return page;
+  }
 
   @Test
   public void testGetWordData() {
@@ -77,44 +100,27 @@ public class ContentPageKindTest {
     //
     // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
     //
-
     // TODO: troubles. Может добавить метод выкалывания точек?
     // TODO: Может лучше сделать ссылкой-ключом?
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
-
-    // Check store
-    String activePageName = BuilderOneFakePage.defailtPageName;
-    ContentPageKind loadedPage =
-      ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
-    assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
-
-    // Create new page
-    ContentPageKind page = buildContentPage(activePageName);
-    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
-    ofy().save().entity(gen).now();
-    page.setGenerator(gen);
-
-    // создаем две страницы, важно для проверки разделения запросов.
-    ofy().save().entity(page).now();
-    ofy().save().entity(buildContentPage("Korra1")).now();  //
+  	ContentPageKind page = putPagesInStore();
 
     // queries
-    Integer pointPosition = gen.getPosition();
+    Integer pointPosition = page.getGenerator(BuilderOneFakePage.defaultGenName).get().getPosition();
 
     // слово одно, но если страниц много, то получим для всех
     List<WordItemKind> words = ofy().load()
         .type(WordItemKind.class)
         //.ancestor(page)  // don't work
         //.parent(page)  // don't work
-        .filterKey("in", page.words)
-        .filter("pointPos =", pointPosition)
+        .filterKey("in", page.wordKeys).filter("pointPos =", pointPosition)
         .list();
 
     assertEquals(words.size(), 1);  // не прошли не свои страницы
     WordItemKind word = words.get(0);
-    List<ContentItemKind> content = ofy().load().type(ContentItemKind.class)
-        .filterKey("in", word.getItems()).list();
+    List<ContentItemKind> content = 
+    		ofy().load().type(ContentItemKind.class).filterKey("in", word.getItems()).list();
 
     for (ContentItemKind e: content) {
       String v = e.getSentence();
@@ -124,12 +130,11 @@ public class ContentPageKindTest {
       boolean in = v.toLowerCase().contains(word.word.toLowerCase());
       assertTrue(in);
     }
-
     // запрещаем точку
   }
   
   @Test 
   public void testGetPackedWordData() {
-  	
+  	ContentPageKind page = putPagesInStore();
   } 
 }
