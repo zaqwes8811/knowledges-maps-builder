@@ -8,6 +8,7 @@ import com.googlecode.objectify.Key;
 
 import store_gae_stuff.ActiveDistributionGenKind;
 import store_gae_stuff.ContentPageKind;
+import store_gae_stuff.WordItemKind;
 import store_gae_stuff.fakes.BuilderOneFakePage;
 
 public class FakeAppWrapper {
@@ -23,14 +24,16 @@ public class FakeAppWrapper {
   	ofy().delete().keys(keys).now();
   	List<Key<ActiveDistributionGenKind>> keys_gen = ofy().load().type(ActiveDistributionGenKind.class).keys().list();
   	ofy().delete().keys(keys_gen).now();
+  	List<Key<WordItemKind>> w = ofy().load().type(WordItemKind.class).keys().list();
+  	ofy().delete().keys(w).now();
   	
   	// Own tables
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
   	ofy().save().entity(p0).now();
-  	ofy().save().entity(p0).now();
   	
-  	List<ContentPageKind> pages = 
-  			ofy().load().type(ContentPageKind.class).list();
+  	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).list();
+  	
+  	System.out.println(pages);
   	
   	if (pages.size() != 1) {
   		throw new IllegalStateException();
