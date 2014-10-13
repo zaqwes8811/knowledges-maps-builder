@@ -18,18 +18,18 @@ import java.util.Random;
 // TODO: Стоп - нулевые не должны вообще выпадать!
 @Immutable
 public final class GeneratorAnyDistribution {
-  private final Integer countPoints_;
-  private final Integer maxValue_;
+	// All finals was removed.
+  private Integer countPoints_;
+  private Integer maxValue_;
   private final ImmutableList<ImmutableList<Integer>> codeBook_;
-  private final Integer INTERVAL_POS_ = 1;
-  private final Integer IDX_POSITION_ = 2;
-  
+  private Integer INTERVAL_POS_ = 1;
+  private Integer IDX_POSITION_ = 2;
   private final ArrayList<DistributionElement> d;
   
   // FIXME: VERY BAD!!
   public GeneratorAnyDistribution() {
-  	countPoints_ = 0;
-  	maxValue_ = 0;
+  	//countPoints_ = 0;
+  	//maxValue_ = 0;
   	codeBook_ = null;
   	d = null;
   }
