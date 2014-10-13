@@ -1,4 +1,4 @@
-package store_gae_stuff;
+package gae_store_space;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -25,7 +25,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import store_gae_stuff.fakes.BuilderOneFakePage;
-import static store_gae_stuff.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 
 @Deprecated  // Такие тесты не запустить - "No API env. is reg..."
 public class WebRelayTest {

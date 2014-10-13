@@ -1,7 +1,8 @@
-package store_gae_stuff;
+package gae_store_space;
 
 import core.mapreduce.CountReducer;
 import core.mapreduce.CounterMapper;
+
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-import static store_gae_stuff.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 
 public class ContentPageBuilder {
   public ContentPageKind build(String name, ArrayList<ContentItemKind> contentElements) {

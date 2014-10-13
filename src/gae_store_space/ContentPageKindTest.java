@@ -1,4 +1,4 @@
-package store_gae_stuff;
+package gae_store_space;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static gae_store_space.OfyService.ofy;
 import static org.junit.Assert.*;
-import static store_gae_stuff.OfyService.ofy;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных

@@ -1,9 +1,11 @@
-package store_gae_stuff;
+package gae_store_space;
 
 import core.math.DistributionElement;
 import core.math.GeneratorDistributionException;
+
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +14,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static gae_store_space.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
-import static store_gae_stuff.OfyService.ofy;
 
 public class ActiveDistributionGenKindTest {
   private static final LocalServiceTestHelper helper =
