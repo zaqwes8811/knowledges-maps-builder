@@ -8,10 +8,8 @@ package core.math;
 
 public class DistributionElement implements Comparable<DistributionElement> {
   // http://stackoverflow.com/questions/5560176/is-integer-immutable
-  public final Integer frequency;
-  public
-  //final  // таки должно меняться
-  Boolean enabled;
+  public Integer frequency;
+  public Boolean enabled;
 
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
@@ -20,8 +18,8 @@ public class DistributionElement implements Comparable<DistributionElement> {
   
   // FIXME: for persist
   DistributionElement() {
-  	this.frequency = 0;
-  	enabled = true;
+  	//this.frequency = 0;
+  	//enabled = true;
   }
 
   public  DistributionElement(Integer freq) {
