@@ -24,12 +24,15 @@ public final class GeneratorAnyDistribution {
   private final Integer INTERVAL_POS_ = 1;
   private final Integer IDX_POSITION_ = 2;
   
+  private final ArrayList<DistributionElement> d;
+  
   // FIXME: VERY BAD!!
-  GeneratorAnyDistribution() {
+  /*GeneratorAnyDistribution() {
   	countPoints_ = 0;
   	maxValue_ = 0;
   	codeBook_ = null;
   }
+  */
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
@@ -43,6 +46,8 @@ public final class GeneratorAnyDistribution {
   }
 
   private GeneratorAnyDistribution(ArrayList<DistributionElement> distribution) {
+  	d = distribution;
+  	
     // Transpose
     ArrayList<Integer> transposed = new ArrayList<Integer>();
     for (DistributionElement elem: distribution)
@@ -65,7 +70,12 @@ public final class GeneratorAnyDistribution {
     // На модели она показала наилучшую масштабирумость и скорость работы.
     Float value = new Random().nextFloat()* maxValue_;
     ImmutableList<Integer> result =  split(codeBook_, countPoints_, value).getValue1().get();
-    return result.get(IDX_POSITION_);
+    Integer r = result.get(IDX_POSITION_);
+    
+    if (!d.get(r).enabled)
+    	throw new IllegalStateException();
+    
+    return r;
   }
 
   private Triplet<ArrayList<Integer>, Integer, Integer> makeFx(ArrayList<Integer> distribution) {
