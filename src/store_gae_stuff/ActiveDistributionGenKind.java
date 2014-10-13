@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import net.jcip.annotations.NotThreadSafe;
 
 
+
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Unindex;
 
@@ -59,8 +61,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   // придется хранить отдельно
   // все-таки на объект накладываются ограничения!!
   // FIXME: вообще нужно быть внимательным, порядок иниц. может все сломать
-  @Unindex  
-  GeneratorAnyDistribution gen;
+  @Ignore GeneratorAnyDistribution gen;
 
   @Unindex
   Integer codeAction;  // возможность подкл. алгоритма при создании
@@ -110,7 +111,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
-  // Обязательно! конструктором по умолчанию воспользоваться нельзя!
+  // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
   public void reset() {
   	if (this.distribution == null)
   		throw new IllegalStateException();

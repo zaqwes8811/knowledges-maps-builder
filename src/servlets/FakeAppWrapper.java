@@ -20,30 +20,27 @@ public class FakeAppWrapper {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
 		//
-		List<Key<ContentPageKind>> keys = ofy().load().type(ContentPageKind.class).keys().list();
-  	ofy().delete().keys(keys).now();
-  	List<Key<ActiveDistributionGenKind>> keys_gen = ofy().load().type(ActiveDistributionGenKind.class).keys().list();
-  	ofy().delete().keys(keys_gen).now();
-  	List<Key<WordItemKind>> w = ofy().load().type(WordItemKind.class).keys().list();
-  	ofy().delete().keys(w).now();
+  	ofy().delete().keys(ofy().load().type(ContentPageKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(ActiveDistributionGenKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(WordItemKind.class).keys()).now();
   	
   	// Own tables
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
   	ofy().save().entity(p0).now();
-  	ofy().save().entity(p0).now();
   	
   	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).list();
   	
-  	System.out.println(pages);
+  	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
+  	if (pages.isEmpty()) {
+  		throw new IllegalStateException();
+  	}
   	
-  	// FIXME: часто страбатывает
-  	if (pages.size() != 1) {
+  	if (pages.size() > 1) {
   		throw new IllegalStateException();
   	}
   	
   	// add generator
   	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
-  	g.reset();
   	ofy().save().entity(g).now();
   	p0.setGenerator(g);
   	ofy().save().entity(p0).now();  
