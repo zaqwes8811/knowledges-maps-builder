@@ -46,7 +46,7 @@ public class ContentPageKind {
   @Index String name;
 
   // Формированием не управляет, но остальным управляет.
-  List<Key<WordItemKind>> wordKeys = new ArrayList<Key<WordItemKind>>();
+  List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
   
   // FIXME: почему отношение не работает?
@@ -78,9 +78,9 @@ public class ContentPageKind {
     g = Key.create(gen);
   }
 
-  public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordItemKind> words) {
+  public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordKind> words) {
     this.name = Optional.of(name).get();
-    for (WordItemKind word: words) this.wordKeys.add(Key.create(word));
+    for (WordKind word: words) this.wordKeys.add(Key.create(word));
     for (ContentItemKind item: items) this.contentItems.add(Key.create(item));
   }
 
@@ -88,21 +88,21 @@ public class ContentPageKind {
   public ArrayList<DistributionElement> getRawDistribution() {
     // TODO: Отосортировать при выборке если можно
     // TODO: может при запросе можно отсортировать?
-    List<WordItemKind> wordKinds = ofy().load().type(WordItemKind.class).filterKey("in", this.wordKeys).list();
+    List<WordKind> wordKinds = ofy().load().type(WordKind.class).filterKey("in", this.wordKeys).list();
 
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(wordKinds, WordItemKind.createFrequencyComparator());
+    Collections.sort(wordKinds, WordKind.createFrequencyComparator());
     Collections.reverse(wordKinds);
 
     // Form result
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
-    for (WordItemKind word : wordKinds)
+    for (WordKind word : wordKinds)
       distribution.add(new DistributionElement(word.getRawFrequency()));
 
     return distribution;
   }
   
-  private ImmutableList<ContentItemKind> getContendKinds(WordItemKind wordKind) {
+  private ImmutableList<ContentItemKind> getContendKinds(WordKind wordKind) {
   	// берем часть
   	// FIXME: делать выборки с перемешиванием
   	return ImmutableList.copyOf(
@@ -115,7 +115,7 @@ public class ContentPageKind {
   	ActiveDistributionGenKind go = getGenerator(genName);
     
 		Integer pointPosition = go.getPosition();
-		WordItemKind wordKind =  getWordKind(pointPosition);
+		WordKind wordKind =  getWordKind(pointPosition);
 		ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
 
 		ArrayList<String> content = new ArrayList<String>(); 
@@ -128,12 +128,12 @@ public class ContentPageKind {
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
-  private WordItemKind getWordKind(Integer pos) {
+  private WordKind getWordKind(Integer pos) {
   	if (!(pos < this.wordKeys.size()))
   		throw new IllegalArgumentException();
   	
-  	List<WordItemKind> kinds = 
-				ofy().load().type(WordItemKind.class)
+  	List<WordKind> kinds = 
+				ofy().load().type(WordKind.class)
 		    .filterKey("in", wordKeys).filter("pointPos =", pos)
 		    .list();
   	

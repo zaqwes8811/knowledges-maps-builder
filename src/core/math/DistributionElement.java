@@ -1,24 +1,20 @@
 package core.math;
 
-//import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
-
-/**
- * Created by zaqwes on 10/9/14.
- */
-
+//http://stackoverflow.com/questions/5560176/is-integer-immutable
+// сохраняется в базе!
 public class DistributionElement implements Comparable<DistributionElement> {
-  // http://stackoverflow.com/questions/5560176/is-integer-immutable
-  public Integer frequency;
+  // FIXME: make get/set
+	public Integer frequency;
   public Boolean enabled;
-
+  
+  // FIXME: for persist
+  DistributionElement() { }
+  
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
     enabled = ena;
   }
   
-  // FIXME: for persist
-  DistributionElement() { }
-
   public  DistributionElement(Integer freq) {
     enabled = true;
     frequency = freq;

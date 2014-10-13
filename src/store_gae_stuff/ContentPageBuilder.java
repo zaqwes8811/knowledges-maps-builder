@@ -21,18 +21,18 @@ public class ContentPageBuilder {
     // Split
     mapper.map(contentElements);  // TODO: implicit, but be so
 
-    ArrayList<WordItemKind.WordValue> value = new ArrayList<WordItemKind.WordValue>();
+    ArrayList<WordKind.WordValue> value = new ArrayList<WordKind.WordValue>();
     for (String word: wordHistogramSink.keySet()) {
       Collection<ContentItemKind> content = wordHistogramSink.get(word);
       int rawFrequency = content.size();
-      value.add(new WordItemKind.WordValue(word, rawFrequency, content));
+      value.add(new WordKind.WordValue(word, rawFrequency, content));
     }
 
     // Sort words by frequency and assign idx
-    Collections.sort(value, new WordItemKind.WordValueFrequencyComparator());
+    Collections.sort(value, new WordKind.WordValueFrequencyComparator());
     Collections.reverse(value);
 
-    ArrayList<WordItemKind> words = new ArrayList<WordItemKind>();
+    ArrayList<WordKind> words = new ArrayList<WordKind>();
     {
       // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
       //   к словам.
@@ -42,8 +42,8 @@ public class ContentPageBuilder {
       ofy().save().entities(contentElements).now();
 
       for (int i = 0; i < value.size(); i++) {
-        WordItemKind.WordValue v = value.get(i);
-        words.add(WordItemKind.create(v.word, v.items, v.frequency));
+        WordKind.WordValue v = value.get(i);
+        words.add(WordKind.create(v.word, v.items, v.frequency));
         words.get(i).setPointPos(i);
       }
 
