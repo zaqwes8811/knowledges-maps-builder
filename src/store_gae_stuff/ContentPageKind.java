@@ -16,15 +16,12 @@
 
 package store_gae_stuff;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static store_gae_stuff.OfyService.ofy;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import store_gae_stuff.fakes.BuilderOneFakePage;
 import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.base.Optional;
@@ -51,19 +48,24 @@ public class ContentPageKind {
   List<Key<WordItemKind>> wordKeys = new ArrayList<Key<WordItemKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
   
-  Key<ActiveDistributionGenKind> g;  // FIXME: почему отношение не работает?
+  Key<ActiveDistributionGenKind> g;// = Key.create(null);  // FIXME: почему отношение не работает?
 
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
   public ActiveDistributionGenKind getGenerator(String name) {  
+  	
+  	System.out.println("Befor create");
   	ActiveDistributionGenKind gen = ofy().load().type(ActiveDistributionGenKind.class)
     			.id(g.getId()).now();
   	
   	if (gen == null) {
   		throw new IllegalStateException();
   	}
+  	
+  	gen.reset();
+  	
   	return gen;
   }
 
