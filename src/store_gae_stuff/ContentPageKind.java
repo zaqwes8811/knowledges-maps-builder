@@ -30,6 +30,7 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
+import com.googlecode.objectify.annotation.Load;
 
 import core.math.DistributionElement;
 
@@ -48,13 +49,20 @@ public class ContentPageKind {
   List<Key<WordItemKind>> wordKeys = new ArrayList<Key<WordItemKind>>();
   List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
   
-  Key<ActiveDistributionGenKind> g;// = Key.create(null);  // FIXME: почему отношение не работает?
+  // FIXME: почему отношение не работает?
+  // Попытка сделать так чтобы g не стал нулевым указателем
+  @Load
+  Key<ActiveDistributionGenKind> g;
 
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
   public ActiveDistributionGenKind getGenerator(String name) {  
+  	if (g == null) {
+  		throw new IllegalStateException();
+  	}
+  	
   	ActiveDistributionGenKind gen = ofy().load().key(g).now();
   	
   	if (gen == null) {
