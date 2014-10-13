@@ -61,6 +61,8 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   // придется хранить отдельно
   // все-таки на объект накладываются ограничения!!
   // FIXME: вообще нужно быть внимательным, порядок иниц. может все сломать
+  // Наверное можно было бы сереализовать его, но из-за эквалайзинга,
+  //   сохраняю исходные распределения отдельно
   @Ignore GeneratorAnyDistribution gen;
 
   @Unindex

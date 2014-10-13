@@ -25,6 +25,7 @@ public class FakeAppWrapper {
   	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
   	
   	// Own tables
+  	// FIXME: GAE can't read file.
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
   	ofy().save().entity(p0).now();
   	
