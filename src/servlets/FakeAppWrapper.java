@@ -28,7 +28,16 @@ public class FakeAppWrapper {
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
   	ofy().save().entity(p0).now();
   	
-  	/*
+  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
+  	
+  	// add generator
+  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+  	ofy().save().entity(g).now();
+  	p0.setGenerator(g);
+  	ofy().save().entity(p0).now();
+  	
+  	// Try read
+  	///*
   	// Скрыл, но должно работать!!
   	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
   	
@@ -40,16 +49,14 @@ public class FakeAppWrapper {
   	if (pages.size() > 1) {
   		throw new IllegalStateException();
   	}
-  	*/
-  	
-  	// add generator
-  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
-  	ofy().save().entity(g).now();
-  	p0.setGenerator(g);
-  	ofy().save().entity(p0).now();  
+  	//*/  
 	}
 	
-	public ContentPageKind getPage(String name) {
+	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
+	public 
+	//synchronized  // не в этом дело 
+	ContentPageKind getPage(String name) {
+		
 		List<ContentPageKind> pages = 
     		ofy().load().type(ContentPageKind.class).filter("name = ", name).list();
     
