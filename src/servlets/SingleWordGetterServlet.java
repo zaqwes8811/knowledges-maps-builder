@@ -14,7 +14,11 @@ import java.io.IOException;
 
 @NotThreadSafe
 public class SingleWordGetterServlet extends HttpServlet {
-  @Override
+  private static final long serialVersionUID = -1906449812056035297L;
+  
+  private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+
+	@Override
   public void doGet(
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
