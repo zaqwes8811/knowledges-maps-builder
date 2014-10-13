@@ -73,6 +73,11 @@ public class ContentPageKind {
   	
   	return gen;
   }
+  
+  // Пока поиска по словам нет, удаляем по позиции
+  public void markDone(Integer pos) {
+  	throw new UnsupportedOperationException();
+  }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
     g = Key.create(gen);
@@ -165,6 +170,8 @@ public class ContentPageKind {
   	}
   	public final String word;  // хорошо бы Optional, но скорее всего не сереализуется
   	public final ArrayList<String> sentences;
+  	
+  	public final Integer pointPos = 0;  // FIXME: impl.
   	
   	// cluster range name - важность слова - три или 4 группы
   }
