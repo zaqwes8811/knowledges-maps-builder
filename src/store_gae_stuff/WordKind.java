@@ -10,7 +10,7 @@ import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
-public class WordItemKind {
+public class WordKind {
   @Override
   public String toString() {
     return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
@@ -44,7 +44,7 @@ public class WordItemKind {
   	return word;
   }
 
-  private WordItemKind() {}
+  private WordKind() {}
 
   public void setRawFrequency(Integer value) {
     rawFrequency = value;
@@ -54,8 +54,8 @@ public class WordItemKind {
     return rawFrequency;
   }
 
-  public static WordItemKind create(String wordValue, Collection<ContentItemKind> items, int rawFrequency) {
-    WordItemKind word = new WordItemKind(wordValue);
+  public static WordKind create(String wordValue, Collection<ContentItemKind> items, int rawFrequency) {
+    WordKind word = new WordKind(wordValue);
 
     // Частоту берем из списка ссылок.
     word.setRawFrequency(rawFrequency);
@@ -67,8 +67,8 @@ public class WordItemKind {
     return word;
   }
 
-  public static WordItemKind create(String wordValue, int rawFrequency) {
-    WordItemKind word = new WordItemKind(wordValue);
+  public static WordKind create(String wordValue, int rawFrequency) {
+    WordKind word = new WordKind(wordValue);
 
     // Частоту берем из списка ссылок.
     word.setRawFrequency(rawFrequency);
@@ -97,22 +97,22 @@ public class WordItemKind {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  public WordItemKind(String word) {
+  public WordKind(String word) {
     this.word = word;
     pointPos = -1;
   }
 
-  private static class WordFreqComparator implements Comparator<WordItemKind> {
+  private static class WordFreqComparator implements Comparator<WordKind> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(WordItemKind o1, WordItemKind o2) {
+    public int compare(WordKind o1, WordKind o2) {
       return o1.getRawFrequency().compareTo(o2.getRawFrequency());
     }
   }
 
-  public static Comparator<WordItemKind> createFrequencyComparator() {
+  public static Comparator<WordKind> createFrequencyComparator() {
     return new WordFreqComparator();
   }
 

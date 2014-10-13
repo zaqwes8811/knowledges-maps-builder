@@ -8,7 +8,7 @@ public class OfyService {
   static {
     factory().register(ContentItemKind.class);
     factory().register(ContentPageKind.class);
-    factory().register(WordItemKind.class);
+    factory().register(WordKind.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
     factory().register(ActiveDistributionGenKind.class);
