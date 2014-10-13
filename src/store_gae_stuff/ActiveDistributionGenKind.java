@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 import net.jcip.annotations.NotThreadSafe;
 
+
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Unindex;
 
 import core.math.DistributionElement;
@@ -38,8 +40,7 @@ import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 //
 @NotThreadSafe
 @Entity
-public class ActiveDistributionGenKind
-  //implements DistributionGen  // no way
+public class ActiveDistributionGenKind //implements DistributionGen  // no way
 {
   @Id
   public Long id;

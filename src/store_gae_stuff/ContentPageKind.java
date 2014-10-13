@@ -16,22 +16,21 @@
 
 package store_gae_stuff;
 
-import core.math.DistributionElement;
+import static store_gae_stuff.OfyService.ofy;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
-import com.googlecode.objectify.annotation.Load;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import net.jcip.annotations.NotThreadSafe;
-import static store_gae_stuff.OfyService.ofy;
+import core.math.DistributionElement;
 
 @NotThreadSafe
 @Entity
@@ -48,10 +47,11 @@ public class ContentPageKind {
   
   Key<ActiveDistributionGenKind> g;  // FIXME: почему отношение не работает?
 
-  public ActiveDistributionGenKind getGenerator() {
-    ActiveDistributionGenKind gens = ofy().load().type(ActiveDistributionGenKind.class)
+  public Optional<ActiveDistributionGenKind> getGenerator(String name) {  
+  	ActiveDistributionGenKind gens = ofy().load().type(ActiveDistributionGenKind.class)
     			.id(g.getId()).now();
-    return gens; 
+  	
+  	return Optional.fromNullable(gens);
   }
 
   public void setGenerator(ActiveDistributionGenKind gen) {
