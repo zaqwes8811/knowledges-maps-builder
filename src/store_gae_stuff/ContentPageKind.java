@@ -51,8 +51,8 @@ public class ContentPageKind {
   
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
-  @Load
-  Key<ActiveDistributionGenKind> g;
+  @Load  // все равно может упасть
+  Key<ActiveDistributionGenKind> g;  // FIXME: вообще это проблема!!
 
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
