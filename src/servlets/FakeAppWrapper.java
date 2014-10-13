@@ -30,6 +30,7 @@ public class FakeAppWrapper {
   	// Own tables
   	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
   	ofy().save().entity(p0).now();
+  	ofy().save().entity(p0).now();
   	
   	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).list();
   	
