@@ -103,18 +103,14 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
     return distribution.get(idx);
   }
 
+  
+  private ActiveDistributionGenKind() { }
+  
+  // похоже при восстановлении вызывается он
+  // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
-  private ActiveDistributionGenKind() {
-  	/*if (this.distribution == null)
-  		throw new IllegalStateException();
-  		
-    // похоже при восстановлении вызывается он
-    // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
-    reloadGenerator(distribution);
-    */
-  }
-  
+  // Обязательно! конструктором по умолчанию воспользоваться нельзя!
   public void reset() {
   	if (this.distribution == null)
   		throw new IllegalStateException();
