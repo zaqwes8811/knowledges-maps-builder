@@ -10,29 +10,26 @@
 <body ng-controller="PhoneListCtrl">
     
   <div>
-    Current page:
+    Current page name:
     <select ng-model="orderProp">
       <option value="age">Korra</option>
     </select>
     
     <button ng-click="ni()">
-      My progress
-    </button>
-    
-    <button ng-click="ni()">
       Add new page
     </button>
     <a href="/research/research.html">Research page</a>
-    <hr>
+    <br>
 
     <!-- Own word -->
     <button ng-click="getNewWord()">
       Get new word
     </button>
     <br/>
+    <br/>
     <span class="word_style" ng-model="word"> {{word}}</span>
     
-    <hr>
+    <br>
 
     <!-- Addition data -->
     <label>
