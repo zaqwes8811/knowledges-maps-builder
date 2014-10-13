@@ -35,17 +35,17 @@ public class FakeAppWrapper {
   	
   	System.out.println(pages);
   	
+  	// FIXME: часто страбатывает
   	if (pages.size() != 1) {
   		throw new IllegalStateException();
   	}
   	
   	// add generator
   	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+  	g.reset();
   	ofy().save().entity(g).now();
   	p0.setGenerator(g);
   	ofy().save().entity(p0).now();  
-  	
-  	// may work
 	}
 	
 	public ContentPageKind getPage(String name) {

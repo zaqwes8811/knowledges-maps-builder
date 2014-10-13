@@ -27,13 +27,13 @@ public final class GeneratorAnyDistribution {
   private final ArrayList<DistributionElement> d;
   
   // FIXME: VERY BAD!!
-  /*GeneratorAnyDistribution() {
+  public GeneratorAnyDistribution() {
   	countPoints_ = 0;
   	maxValue_ = 0;
   	codeBook_ = null;
+  	d = null;
   }
-  */
-
+  
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static GeneratorAnyDistribution create(ArrayList<DistributionElement> distribution) {
