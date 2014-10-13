@@ -24,35 +24,19 @@
     </button>
     <a href="/research/research.html">Research page</a>
     <hr>
-    
 
     <!-- Own word -->
     <button ng-click="getNewWord()">
       Get new word
     </button>
+    <br/>
     <span class="word_style" ng-model="word"> {{word}}</span>
     
     <hr>
-    <button ng-click="showSamples()">
-      Context samples
-    </button>
 
     <!-- Addition data -->
-    <br>
     <label>
-    <span ng-hide="translateHided">Translates</span> 
-    <span ng-hide="contextSamplesHided">Context samples</span>
-    filter:
-    </label> 
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-
-    <!-- Translates -->
-    <ul ng-hide="translateHided">
-      <li ng-repeat="translate in translates | filter:yourName">
-        {{translate}}
-      </li>
-    </ul>
-    
+    <span ng-hide="translateHided">Translates</span>    
     <!-- Context samples -->
     <ul ng-hide="contextSamplesHided">
       <li ng-repeat="sample in samples | filter:yourName">

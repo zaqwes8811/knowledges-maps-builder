@@ -39,7 +39,7 @@ import core.math.DistributionElement;
 public class ContentPageKind {
   private ContentPageKind() { }
   
-  public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
+  public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
 
   @Id Long id;
 
