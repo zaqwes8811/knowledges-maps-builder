@@ -2,6 +2,8 @@
 var g_map = {};
 var g_need_set_known = false;
 var g_current_word_data = {};
+var gUserSummary = new UserSummary([]);
+var gView = new View();
 
 function UserSummary(listPagesSum) {
   //var self = this;  // помогает ли вообще - if prototype looks line no!
@@ -27,6 +29,10 @@ View.prototype.getCurrentPageName = function () {
   return $('#pages > option:selected').text();
 }
 
+View.prototype.getCurrentGenName = function() {
+  return $('#pageGenerators > option:selected').text();
+};
+
 View.prototype.resetPagesOptions = function(newNames) {
   var pageSelect = $('#pages');
   var pageGens = $('#pageGenerators');
@@ -34,12 +40,14 @@ View.prototype.resetPagesOptions = function(newNames) {
   
   pageSelect.empty();
   _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
+  
+  var currentPageName = this.getCurrentPageName();
+  var genNames = gUserSummary.getGenNames(currentPageName);
+  _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); }); 
 }
 
-var gUserSummary = new UserSummary([]);
-
 // Actions
-function ctor() {
+View.prototype.onCreate = function() {
   $('#know_it').change(function() {
     // this represents the checkbox that was checked
     // do something with it
@@ -62,8 +70,9 @@ function ctor() {
     .error(function(data) { 
        alert("error on get sum about user");
     });
-  
 }
+
+
 
 function set_know_it() {
   alert("Know");
@@ -179,3 +188,8 @@ function get_word_pkg() {
 
     });
 }
+
+$(function() {
+  // Handler for .ready() called.
+  gView.onCreate();
+});
