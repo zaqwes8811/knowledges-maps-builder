@@ -14,7 +14,11 @@ UserSummary.prototype.getGenNames = function (_pageName) {
   return r.genNames;
 }
 
-UserSummary.prototype.getPageNames = function () {}
+UserSummary.prototype.getPageNames = function () {
+  var r = [];
+  _.each(this.raw, function (val) { r.push(val.pageName); });
+  return r;
+}
 
 // View
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
@@ -26,10 +30,9 @@ View.prototype.getCurrentPageName = function () {
 }
 
 View.prototype.resetPagesOptions = function(newNames) {
-  $('#pages').empty();//find('option').remove();
-  
-  $('#example').append(new Option('Foo', 'foo', true, true))
-  
+  var pageSelect = $('#pages');
+  pageSelect.empty();
+  _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
 }
 
 var gUserSummary = new UserSummary([]);
@@ -53,6 +56,7 @@ function ctor() {
       gUserSummary = new UserSummary(JSON.parse(data));
       
       // заполняем чекбоксы
+      (new View()).resetPagesOptions(gUserSummary.getPageNames());
     })
     .error(function(data) { 
        alert("error on get sum about user");
