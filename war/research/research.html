@@ -9,23 +9,27 @@
     <script type="text/javascript" src="/3rdparty/jquery.js"></script>
     <script type="text/javascript" src="/3rdparty/jquery.flot.js"></script>
     <script type="text/javascript" src="/3rdparty/jquery.tinyscrollbar.min.js"></script>
-    <script type="text/javascript" src="/3rdparty/bootstrap.js"></script>
     <script type="text/javascript" src="/3rdparty/underscore.js"></script>
     <script type="text/javascript" src="/research/research.js"></script>
 
     <link rel="stylesheet" href="/css/app_carcass.css"/>
+    <!--link rel="stylesheet" href="/3rdparty/bootstrap.min.css"/  очень косо стало все-->
 </head>
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
 
 <select id="pages"></select>
 <select id="pageGenerators"></select>
+<br/>
 
-<input type="button" value="Get" onclick="get_word_pkg()"></input><br/>
+<input type="button" class="btn btn-primary" value="Get" onclick="get_word_pkg()"></input><br/>
+
 <span id="word_holder_id"></span><br/>
-<input type="checkbox" id="know_it" value="Bike">I know it</input><br>
+<input type="checkbox" id="know_it" value="Bike">I know it</input>
+<br/>
 
+<input type="button" class="btn btn-success" value="Get generator info" onclick="get_data()"/>
 <div id="placeholder" style="width:500px; height:300px"></div>
-<input type="button" value="Get gen info" onclick="get_data()"/>
+
 </body>
 </html>
