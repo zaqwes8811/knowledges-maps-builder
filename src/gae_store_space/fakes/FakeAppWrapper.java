@@ -5,6 +5,7 @@ import gae_store_space.ActiveDistributionGenKind;
 import gae_store_space.ContentPageKind;
 import gae_store_space.WordKind;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.base.Optional;
@@ -95,8 +96,14 @@ public class FakeAppWrapper {
 	}
 	
 	// пока не ясно, что за идентификация будет для пользователя
-	public Optional<PageSummaryValue> getUserInformation(String userId) {
+	// данных может и не быть, так что 
+	public List<PageSummaryValue> getUserInformation(String userId) {
+		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		
-		return Optional.absent();
+		// FIXME: пока без фильтра пользователя
+		List<ContentPageKind> pages = 
+    		ofy().load().type(ContentPageKind.class).list();
+		
+		return r;
 	}
 }

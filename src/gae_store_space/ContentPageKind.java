@@ -74,6 +74,13 @@ public class ContentPageKind {
   	return gen;
   }
   
+  public List<String> getGenNames() {
+  	ActiveDistributionGenKind g = getGenerator(null);
+  	List<String> r = new ArrayList<String>();
+  	r.add(g.name); 	
+  	return r;
+  }
+  
   // Пока поиска по словам нет, удаляем по позиции
   public void markDone(Integer pos) {
   	throw new UnsupportedOperationException();
