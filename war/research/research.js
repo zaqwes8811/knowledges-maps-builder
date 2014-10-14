@@ -3,6 +3,19 @@ var g_map = {};
 var g_need_set_known = false;
 var g_current_word_data = {};
 
+function UserSummary(listPagesSum) {
+  //var self = this;  // помогает ли вообще - if prototype looks line no!
+  this.raw = listPagesSum;
+}
+
+UserSummary.prototype.getGenNames = function (_pageName) {
+  // ищем по списку
+  var r = _.findWhere(this.raw, {pageName: _pageName});
+  alert(r.genNames);
+}
+
+var gUserSummary = new UserSummary([]);
+
 // Actions
 function ctor() {
   $('#know_it').change(function() {
@@ -13,6 +26,20 @@ function ctor() {
       g_need_set_known = true;
     }
   });
+  
+  // Get user data
+  // Нужно по имени страницы получать список генераторов
+  var uri = '/user_summary';
+  var jqxhr = $.get(uri)
+    .success(function(data) {
+      gUserSummary = new UserSummary(JSON.parse(data));
+      
+      // заполняем чекбоксы
+    })
+    .error(function(data) { 
+       alert("error on get sum about user");
+    });
+  
 }
 
 function set_know_it() {
