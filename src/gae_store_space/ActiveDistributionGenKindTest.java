@@ -16,6 +16,7 @@ import java.util.List;
 
 import static gae_store_space.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 public class ActiveDistributionGenKindTest {
   private static final LocalServiceTestHelper helper =
@@ -44,6 +45,8 @@ public class ActiveDistributionGenKindTest {
     ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
 
     ActiveDistributionGenKind g = build(distribution);
+    
+    assertNotNull(g);  // иногда падает
 
     List<Integer> experiment = new ArrayList<Integer>();
     for (int i = 0; i < 10000; ++i)

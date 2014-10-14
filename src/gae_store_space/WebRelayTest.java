@@ -35,10 +35,10 @@ public class WebRelayTest {
   static final String ROOT_DIR = "war";
   static final Integer PORT_SERVER = 8080;
 
-  @Before
+  //@Before
   public void setUp() { helper.setUp(); }
 
-  @After
+ // @After
   public void tearDown() {
     helper.tearDown();
   }
@@ -91,7 +91,7 @@ public class WebRelayTest {
   }
 
   @Deprecated
-  @Test
+  //@Test
   public void blockedTestCore() throws Exception {
     // FIXME: перенаправить логи, лог от хранилища не попадает в основной вывод.
     // FIXME: Сделать через конфигурационные файлы. Можно ли и нужно ли?
@@ -108,7 +108,7 @@ public class WebRelayTest {
     startServer();
   }
 
-  @Test
+  //@Test
   public void blockedTestServerOld() throws Exception {
     try {
       BuilderControllers wrapper = new BuilderControllers();
