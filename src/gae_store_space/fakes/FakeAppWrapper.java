@@ -98,11 +98,14 @@ public class FakeAppWrapper {
 	// пока не ясно, что за идентификация будет для пользователя
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation(String userId) {
-		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
-		
 		// FIXME: пока без фильтра пользователя
 		List<ContentPageKind> pages = 
     		ofy().load().type(ContentPageKind.class).list();
+		
+		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
+		for (ContentPageKind page: pages) {
+			r.add(new PageSummaryValue(page.getName(), page.getGenNames()));
+		}
 		
 		return r;
 	}

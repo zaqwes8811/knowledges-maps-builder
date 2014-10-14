@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.gson.Gson;
 
 public class FakeAppWrapperTest {
 	private static final LocalServiceTestHelper helper =
@@ -21,7 +22,8 @@ public class FakeAppWrapperTest {
 	
 	@Test
 	public void testGetUserInformation() {
-		
+		FakeAppWrapper a = FakeAppWrapper.getInstance();
+		new Gson().toJson(a.getUserInformation(BuilderOneFakePage.defaultUserId));
 	}
 
 }

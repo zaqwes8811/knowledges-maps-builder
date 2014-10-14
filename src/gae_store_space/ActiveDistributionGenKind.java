@@ -91,6 +91,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
     this.distribution = distribution;
     reloadGenerator(distribution);
+    name = BuilderOneFakePage.defaultGenName;
   }
 
   public void disablePoint(Integer idx) {

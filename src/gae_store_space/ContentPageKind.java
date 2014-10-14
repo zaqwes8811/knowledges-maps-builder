@@ -53,6 +53,8 @@ public class ContentPageKind {
   // Попытка сделать так чтобы g не стал нулевым указателем
   @Load  // все равно может упасть
   Key<ActiveDistributionGenKind> g;  // FIXME: вообще это проблема!!
+  
+  public String getName() { return name; }
 
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
