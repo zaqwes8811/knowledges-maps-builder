@@ -24,18 +24,33 @@ public class FakeAppWrapper {
   	ofy().delete().keys(ofy().load().type(ActiveDistributionGenKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
   	
-  	// Own tables
-  	// FIXME: GAE can't read file.
-  	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
-  	ofy().save().entity(p0).now();
+  	{
+	  	// Own tables
+	  	// FIXME: GAE can't read file.
+	  	ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName);
+	  	ofy().save().entity(p0).now();
+	  	
+	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
+	  	
+	  	// add generator
+	  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+	  	ofy().save().entity(g).now();
+	  	p0.setGenerator(g);
+	  	ofy().save().entity(p0).now();
+  	}
   	
-  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
-  	
-  	// add generator
-  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
-  	ofy().save().entity(g).now();
-  	p0.setGenerator(g);
-  	ofy().save().entity(p0).now();
+  	{
+  		ContentPageKind p0 = new BuilderOneFakePage().buildContentPage(defaultPageName+"_fake");
+    	ofy().save().entity(p0).now();
+    	
+    	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
+    	
+    	// add generator
+    	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+    	ofy().save().entity(g).now();
+    	p0.setGenerator(g);
+    	ofy().save().entity(p0).now();
+  	}
   	
   	// Try read
   	///*

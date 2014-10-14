@@ -29,6 +29,9 @@ View.prototype.getCurrentPageName = function () {
 
 View.prototype.resetPagesOptions = function(newNames) {
   var pageSelect = $('#pages');
+  var pageGens = $('#pageGenerators');
+  pageGens.empty();
+  
   pageSelect.empty();
   _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
 }
