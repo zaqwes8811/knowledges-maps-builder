@@ -4,6 +4,14 @@ var g_need_set_known = false;
 var g_current_word_data = {};
 var gUserSummary = new UserSummary([]);
 var gView = new View();
+var gPlotView = new PlotView();
+var gDataAccessLayer = new DataAccessLayer();
+
+function Point(page, gen, pos) {
+  this.page = page;
+  this.gen = gen;
+  this.pos = pos;
+}
 
 function UserSummary(listPagesSum) {
   //var self = this;  // помогает ли вообще - if prototype looks line no!
@@ -27,7 +35,20 @@ UserSummary.prototype.getPageNames = function () {
 // View
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
-function View() { }
+function View() {
+
+  // init know checkbox 
+  $('#know_it').change(function() {
+    // this represents the checkbox that was checked
+    // do something with it
+    var $this = $(this);
+    if ($this.is(':checked')) {
+      // думается лучше выполнить синхронно, хотя если здесь, то все равно
+      // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+      g_need_set_known = true;
+    }
+  });
+}
 
 View.prototype.getCurrentPageName = function () {
   return $('#pages > option:selected').text();
@@ -52,15 +73,6 @@ View.prototype.resetPagesOptions = function(newNames) {
 
 // Actions
 View.prototype.onCreate = function() {
-  $('#know_it').change(function() {
-    // this represents the checkbox that was checked
-    // do something with it
-    var $this = $(this);
-    if ($this.is(':checked')) {
-      g_need_set_known = true;
-    }
-  });
-  
   // Get user data
   // Нужно по имени страницы получать список генераторов
   var uri = '/user_summary';
@@ -76,15 +88,47 @@ View.prototype.onCreate = function() {
     });
 }
 
-// http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+
 function set_know_it() {
   alert("Know");
+}
+
+function PlotView() { }
+
+PlotView.prototype.plot = function (data) {
+  var getted_axises = $.parseJSON(data);
+  
+  // FIXME: Нужно усреднять данные на отрезках, а через zoom увеличивать.
+  var zoomed_data = [];
+  for(var i = 0; i < getted_axises.length; ++i) {
+    tmp = []
+    for(var name in getted_axises[i]) {
+      if (getted_axises[i].hasOwnProperty(name)) {
+        tmp.push(i);
+        tmp.push(getted_axises[i][name]);
+      }
+      g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
+    }
+    zoomed_data.push(tmp);
+  }
+
+  // Функция рисования
+  var _plot = $.plot("#placeholder", [{ data: zoomed_data, label: "distr(x)"}], {
+    series: {
+      lines: {show: true},
+      points: {show: false}
+    },
+    grid: {
+      hoverable: true,
+      clickable: true
+    }
+  });
 }
 
 // Zoom:
 //   - До определенного момента кружочки не должны выключаться. 
 // Например при zoom = 1, когда показываются все элементы.
-$(function() {
+PlotView.prototype.reset = function() {
   function showTooltip(x, y, contents) {
     $("<div id='tooltip'>" + contents + "</div>").css({
       position: "absolute",
@@ -117,67 +161,31 @@ $(function() {
       previousPoint = null;            
     }
   });
-});
+}
+
+// Ajax wrapper
+function DataAccessLayer() { }
+
+DataAccessLayer.prototype.onError = function (message) {
+  alert(message);
+}
+
+DataAccessLayer.prototype.markIsDone = function (point) {
+  var uri = '/pkg';
+  var args = point;
+  $.get(uri, args)
+    .error(function(data) { this.onError(data); });
+}
 
 function get_data() {
   var request_processor = '/research/get_distribution';
   var response_branch = {'name':'get_axis'};
   var jqxhr = $.get(request_processor, response_branch)
-    .success(function(data) {
-      process_response(data);
-    })
-    .error(function(data) { 
-
-    });
+    .success(function(data) { gPlotView.plot(data); })
+    .error(function(data) { gDataAccessLayer.onError(data); });
 }
 
-function process_response(data) {
-  var getted_axises = $.parseJSON(data);
-  
-  // Нужно усреднять данные на отрезках, а через zoom увеличивать.
-  var save = 0;
-  var zoomed_data = [];
-  var catch_every = 1;
-  for(var i = 0; i < getted_axises.length; ++i) {
-    tmp = []
-    for(var name in getted_axises[i]) {
-      if (getted_axises[i].hasOwnProperty(name)) {
-        tmp.push(i);
-        tmp.push(getted_axises[i][name]);
-      }
-      g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
-    }
-    zoomed_data.push(tmp);
-  }
-
-  // Функция рисования
-  var plot = $.plot("#placeholder", [{ data: zoomed_data, label: "distr(x)"}], {
-    series: {
-      lines: {show: true},
-      points: {show: false}
-    },
-    grid: {
-      hoverable: true,
-      clickable: true
-    }
-  });
-}
-
-function get_word_pkg() {
-  // маркеруем слово как известное - уже в базе данных
-  if (g_current_word_data) {
-    (function() {
-      var uri = '/pkg';
-      var point = 0;
-      var args = {'page':'get_axis', 'gen':'', 'point': point};
-      var _ = $.get(uri, args)
-        .success(function(data) { })
-        .error(function(data) { });
-      // установлю сразу, но вообще запрос асинхронный, поэтому не очень
-      g_need_set_known = false;  
-    })();
-  }
-  
+function get_word_pkg() { 
   // делаем запрос
   var uri = '/pkg';
   var args = {'name':'get_axis'};
@@ -195,4 +203,5 @@ function get_word_pkg() {
 $(function() {
   // Handler for .ready() called.
   gView.onCreate();
+  gPlotView.reset();
 });
