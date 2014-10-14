@@ -1,10 +1,8 @@
 // State
 var gUserSummary = new UserSummary([]);
-var gView = new View();
-var gPlotView = new PlotView();
 var gDataAccessLayer = new DataAccessLayer();
-var gCurrentWordData = new CurrentWordData(gView);
-var g_map = {};
+var gView = new View(gDataAccessLayer);
+var gPlotView = new PlotView();
 
 function Point(page, gen, pos) {
   this.page = page;
@@ -12,8 +10,7 @@ function Point(page, gen, pos) {
   this.pos = pos;
 }
 
-function CurrentWordData(view) {
-  this.view = view;
+function CurrentWordData() {
   this.data = {};
 }
 
@@ -21,8 +18,8 @@ CurrentWordData.prototype.set = function (data) {
   this.data = data;
 }
 
+// Class
 function UserSummary(listPagesSum) {
-  //var self = this;  // помогает ли вообще - if prototype looks line no!
   this.raw = listPagesSum;
 }
 
@@ -40,10 +37,12 @@ UserSummary.prototype.getPageNames = function () {
   return _.pluck(this.raw, 'pageName');
 }
 
-// View
+// Class
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
-function View() {
+function View(dal) {
+  this.dal = dal;
+  this.currentWordData = new CurrentWordData();
 
   // init know checkbox 
   $('#know_it').change(function() {
@@ -68,10 +67,11 @@ View.prototype.getCurrentGenName = function() {
 
 View.prototype.resetPagesOptions = function(newNames) {
   var pageSelect = $('#pages');
+  pageSelect.empty();
+
   var pageGens = $('#pageGenerators');
   pageGens.empty();
   
-  pageSelect.empty();
   _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
   
   var currentPageName = this.getCurrentPageName();
@@ -86,12 +86,34 @@ View.prototype.drawWordValue = function (word) {
 // Actions
 View.prototype.onCreate = function() {
   // Get user data
-  gDataAccessLayer.getUserSummary(function(data) {
+  var that = this;
+  this.dal.getUserSummary(function(data) {
       gUserSummary.reset(JSON.parse(data));
-      gView.resetPagesOptions(gUserSummary.getPageNames());});
+      var pages = gUserSummary.getPageNames();
+      that.resetPagesOptions(pages);
+    });
 }
 
-function PlotView() { }
+View.prototype.get_data = function () {
+  this.dal.getDistributionAsync(function(data) { gPlotView.plot(data); });
+}
+
+View.prototype.get_word_pkg = function () { 
+  // Нужны еще данные - страница и имя генератора
+  var that = this;
+
+  // делаем запрос
+  this.dal.getWordPkgAsync(function(data) {
+      var v = JSON.parse(data);
+      that.currentWordData.set(v);
+      gView.drawWordValue(v.word);
+    });
+}
+
+// Class
+function PlotView() { 
+  this.g_map = {};
+}
 
 PlotView.prototype.plot = function (data) {
   var getted_axises = $.parseJSON(data);
@@ -105,7 +127,7 @@ PlotView.prototype.plot = function (data) {
         tmp.push(i);
         tmp.push(getted_axises[i][name]);
       }
-      g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
+      this.g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
     }
     zoomed_data.push(tmp);
   }
@@ -152,7 +174,7 @@ PlotView.prototype.reset = function() {
         var x = item.datapoint[0].toFixed(2),
         y = item.datapoint[1].toFixed(2);
 
-        showTooltip(item.pageX, item.pageY, g_map[Math.floor(x)]);
+        showTooltip(item.pageX, item.pageY, this.g_map[Math.floor(x)]);
       }
     } else {
       $("#tooltip").remove();
@@ -200,23 +222,6 @@ DataAccessLayer.prototype.getUserSummary = function (callback) {
   var jqxhr = $.get(uri)
     .success(callback)
     .error(function(data) { this.onError(data); });
-}
-
-
-// DOM callbacks
-function get_data() {
-  gDataAccessLayer.getDistributionAsync(function(data) { gPlotView.plot(data); });
-}
-
-function get_word_pkg() { 
-  // Нужны еще данные - страница и имя генератора
-
-  // делаем запрос
-  gDataAccessLayer.getWordPkgAsync(function(data) {
-      var v = JSON.parse(data);
-      gCurrentWordData.set(v);
-      gView.drawWordValue(v.word);
-    });
 }
 
 $(function() {
