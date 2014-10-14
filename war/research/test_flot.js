@@ -136,3 +136,24 @@ function get_list_items() {
         $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(bind_obj);
     }
 }
+
+/*
+ <script type="text/javascript">
+$(function() {
+  var data, data1, options, chart;
+    data1 = [[1, 4], [2,5], [3, 6], [4,9]];
+    var data2 = [], data3 = [];
+
+    data = [
+        {data:data1, label:"eq", lines:{show:true}, points:{show:true}},
+        data2, data3];
+
+    options = {};
+
+    // Просто сохранять страницы толку нет, т.к. она изменена js'ом
+    $(document).ready(function() {
+      chart1 = $.plot($("#placeholder"), data, options);
+    });
+});
+</script>
+ * */
