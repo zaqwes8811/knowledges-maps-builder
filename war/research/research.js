@@ -130,28 +130,28 @@ View.prototype._markIsKnowIt = function(context) {
 // Actions
 View.prototype.onCreate = function() {
   // Get user data
-  var that = this;
+  var self = this;
   this.dal.getUserSummary(function(data) {
-      that.userSummary.reset(JSON.parse(data));
-      var pages = that.userSummary.getPageNames();
-      that.resetPagesOptions(pages);
+      self.userSummary.reset(JSON.parse(data));
+      var pages = self.userSummary.getPageNames();
+      self.resetPagesOptions(pages);
     });
 
   // FIXME: don't work
   $('#know_it').change(function() {
-    that._markIsKnowIt($(this));
+    self._markIsKnowIt($(this));
   });
 }
 
 View.prototype.onGetWordPackage = function () { 
   // Нужны еще данные - страница и имя генератора
-  var that = this;
+  var self = this;
 
   // делаем запрос
   this.dal.getWordPkgAsync(function(data) {
       var v = JSON.parse(data);
-      that.currentWordData.set(v);
-      that.drawWordValue(v.word);
+      self.currentWordData.set(v);
+      self.drawWordValue(v.word);
     });
 }
 
@@ -162,9 +162,9 @@ function PlotView(dal) {
 }
 
 PlotView.prototype.onGetData = function () {
-  var that = this;
+  var self = this;
   this.dal.getDistributionAsync(function(data) { 
-    that.plot(data); 
+    self.plot(data); 
   });
 }
 
@@ -244,43 +244,45 @@ DataAccessLayer.prototype.onError = function (message) {
 }
 
 DataAccessLayer.prototype.markIsDone = function (point) {
+  var self = this;
   var uri = '/pkg';
   var args = point;
   $.get(uri, args)
-    .error(function(data) { this.onError(data); });
+    .error(function(data) { self.onError(data); });
   // FIXME: better sync()
 }
 
 DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
-    // делаем запрос
+  // делаем запрос
+  var self = this;
   var uri = '/pkg';
   var args = {'name':'get_axis'};
   var _ = $.get(uri, args)
     .success(callback)
-    .error(function(data) { this.onError(data); });
+    .error(function(data) { self.onError(data); });
 }
 
 DataAccessLayer.prototype.getDistributionAsync = function (callback) {
+  var self = this;
   var request_processor = '/research/get_distribution';
   var response_branch = {'name':'get_axis'};
   var jqxhr = $.get(request_processor, response_branch)
     .success(callback)
-    .error(function(data) { gDataAccessLayer.onError(data); });
+    .error(function(data) { self.onError(data); });
 }
 
 DataAccessLayer.prototype.getUserSummary = function (callback) {
+  var self = this;
   // Get user data
   // Нужно по имени страницы получать список генераторов
   var uri = '/user_summary';
   var jqxhr = $.get(uri)
     .success(callback)
-    .error(function(data) { this.onError(data); });
+    .error(function(data) { self.onError(data); });
 }
 
 $(function() {
   // Handler for .ready() called.
   gView.onCreate();
   gPlotView.reset();
-
-
 });
