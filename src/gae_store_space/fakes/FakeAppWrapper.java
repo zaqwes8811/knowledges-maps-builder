@@ -7,6 +7,7 @@ import gae_store_space.WordKind;
 
 import java.util.List;
 
+import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 
 public class FakeAppWrapper {
@@ -77,5 +78,25 @@ public class FakeAppWrapper {
 	
 	public static FakeAppWrapper getInstance() {
 		return w;
+	}
+	
+	public static class PageSummaryValue {
+		public final String pageName;
+		public final List<String> genNames;
+		
+		private PageSummaryValue(String pageName, List<String> genNames) {
+			this.pageName = pageName;
+			this.genNames = genNames;
+		}
+		
+		public PageSummaryValue create(String pageName, List<String> genNames) {
+			return new PageSummaryValue(pageName, genNames);
+		}
+	}
+	
+	// пока не ясно, что за идентификация будет для пользователя
+	public Optional<PageSummaryValue> getUserInformation(String userId) {
+		
+		return Optional.absent();
 	}
 }
