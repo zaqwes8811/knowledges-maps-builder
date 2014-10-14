@@ -1,4 +1,4 @@
-package store_gae_stuff.fakes;
+package gae_store_space.fakes;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;

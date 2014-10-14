@@ -3,6 +3,8 @@ package servlets.research;
 import gae_store_space.ActiveDistributionGenKind;
 import gae_store_space.ContentPageKind;
 import gae_store_space.EasyKind;
+import gae_store_space.fakes.BuilderOneFakePage;
+import gae_store_space.fakes.FakeAppWrapper;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,8 +19,6 @@ import com.google.common.base.Optional;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 
-import store_gae_stuff.fakes.BuilderOneFakePage;
-import store_gae_stuff.fakes.FakeAppWrapper;
 import static gae_store_space.OfyService.ofy;
 
 
