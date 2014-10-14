@@ -4,8 +4,10 @@ import gae_store_space.ContentPageKind;
 import gae_store_space.ContentPageKind.WordDataValue;
 import gae_store_space.fakes.BuilderOneFakePage;
 import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.fakes.FakeAppWrapper.PageSummaryValue;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,9 +34,8 @@ public class GetterUserInformation extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    //ContentPageKind p = app.getPage(BuilderOneFakePage.defailtPageName);
-    //WordDataValue v = p.getWordData(BuilderOneFakePage.defaultGenName).get();
-    String jsonResponse = "";//new Gson().toJson(v);
+    List<PageSummaryValue> v = app.getUserInformation(BuilderOneFakePage.defaultUserId);
+    String jsonResponse = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);

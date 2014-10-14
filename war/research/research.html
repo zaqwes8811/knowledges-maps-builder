@@ -10,11 +10,15 @@
     <script type="text/javascript" src="/3rdparty/jquery.flot.js"></script>
     <script type="text/javascript" src="/3rdparty/jquery.tinyscrollbar.min.js"></script>
     <script type="text/javascript" src="/3rdparty/bootstrap.js"></script>
+    <script type="text/javascript" src="/3rdparty/underscore.js"></script>
     <script type="text/javascript" src="/research/research.js"></script>
 
     <link rel="stylesheet" href="/css/app_carcass.css"/>
 </head>
 <body onload="ctor()">
+
+<select id="pages"></select>
+<select id="pageGenerators"></select>
 
 <input type="button" value="Get" onclick="get_word_pkg()"></input><br/>
 <span id="word_holder_id"></span><br/>
