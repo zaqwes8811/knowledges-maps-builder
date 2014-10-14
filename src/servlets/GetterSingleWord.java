@@ -5,14 +5,14 @@ import com.google.gson.Gson;
 
 import gae_store_space.ContentPageKind;
 import gae_store_space.ContentPageKind.WordDataValue;
+import gae_store_space.fakes.BuilderOneFakePage;
+import gae_store_space.fakes.FakeAppWrapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import store_gae_stuff.fakes.BuilderOneFakePage;
-import store_gae_stuff.fakes.FakeAppWrapper;
 import net.jcip.annotations.NotThreadSafe;
 
 import java.io.IOException;

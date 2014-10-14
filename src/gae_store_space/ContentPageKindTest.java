@@ -11,7 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import store_gae_stuff.fakes.BuilderOneFakePage;
+import gae_store_space.fakes.BuilderOneFakePage;
 
 import java.io.IOException;
 import java.util.ArrayList;
