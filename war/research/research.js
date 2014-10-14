@@ -4,6 +4,7 @@ var gView = new View();
 var gPlotView = new PlotView();
 var gDataAccessLayer = new DataAccessLayer();
 var gCurrentWordData = new CurrentWordData(gView);
+var g_map = {};
 
 function Point(page, gen, pos) {
   this.page = page;
@@ -85,18 +86,9 @@ View.prototype.drawWordValue = function (word) {
 // Actions
 View.prototype.onCreate = function() {
   // Get user data
-  // Нужно по имени страницы получать список генераторов
-  var uri = '/user_summary';
-  var jqxhr = $.get(uri)
-    .success(function(data) {
+  gDataAccessLayer.getUserSummary(function(data) {
       gUserSummary.reset(JSON.parse(data));
-      
-      // заполняем чекбоксы
-      gView.resetPagesOptions(gUserSummary.getPageNames());
-    })
-    .error(function(data) { 
-       alert("error on get sum about user");
-    });
+      gView.resetPagesOptions(gUserSummary.getPageNames());});
 }
 
 function PlotView() { }
@@ -193,15 +185,32 @@ DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
     .error(function(data) { this.onError(data); });
 }
 
-function get_data() {
+DataAccessLayer.prototype.getDistributionAsync = function (callback) {
   var request_processor = '/research/get_distribution';
   var response_branch = {'name':'get_axis'};
   var jqxhr = $.get(request_processor, response_branch)
-    .success(function(data) { gPlotView.plot(data); })
+    .success(callback)
     .error(function(data) { gDataAccessLayer.onError(data); });
 }
 
+DataAccessLayer.prototype.getUserSummary = function (callback) {
+  // Get user data
+  // Нужно по имени страницы получать список генераторов
+  var uri = '/user_summary';
+  var jqxhr = $.get(uri)
+    .success(callback)
+    .error(function(data) { this.onError(data); });
+}
+
+
+// DOM callbacks
+function get_data() {
+  gDataAccessLayer.getDistributionAsync(function(data) { gPlotView.plot(data); });
+}
+
 function get_word_pkg() { 
+  // Нужны еще данные - страница и имя генератора
+
   // делаем запрос
   gDataAccessLayer.getWordPkgAsync(function(data) {
       var v = JSON.parse(data);
