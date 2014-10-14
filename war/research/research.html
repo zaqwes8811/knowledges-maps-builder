@@ -3,25 +3,24 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>Flot Examples: Series Types</title>
+    <title>Research page</title>
+    
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/3rdparty/excanvas.min.js"></script><![endif]-->
-    <script language="javascript" type="text/javascript" src="/3rdparty/jquery.js"></script>
-    <script language="javascript" type="text/javascript" src="/3rdparty/jquery.flot.js"></script>
-
+    <script type="text/javascript" src="/3rdparty/jquery.js"></script>
+    <script type="text/javascript" src="/3rdparty/jquery.flot.js"></script>
     <script type="text/javascript" src="/3rdparty/jquery.tinyscrollbar.min.js"></script>
     <script type="text/javascript" src="/3rdparty/bootstrap.js"></script>
+    <script type="text/javascript" src="/research/research.js"></script>
 
-    <!-- App -->
-    <script type="text/javascript" src="/research/test_flot.js"></script>
-
-    <link rel="stylesheet" href="/css/app_carcass.css">
+    <link rel="stylesheet" href="/css/app_carcass.css"/>
 </head>
-<body onload="init()">
+<body onload="ctor()">
+
+<input type="button" value="Get" onclick="get_word_pkg()"></input><br/>
+<span id="word_holder_id"></span><br/>
+<input type="checkbox" id="know_it" value="Bike">I know it</input><br>
 
 <div id="placeholder" style="width:500px; height:300px"></div>
-
-<input type="button" value="Press me" onclick="get_data()"/>
-
+<input type="button" value="Get gen info" onclick="get_data()"/>
 </body>
 </html>

@@ -1,3 +1,18 @@
+function ctor() {
+  $('#know_it').change(function() {
+    // this represents the checkbox that was checked
+    // do something with it
+    var $this = $(this);
+    if ($this.is(':checked')) {
+      set_know_it();
+    }
+  });
+}
+
+function set_know_it() {
+  alert("Know");
+}
+
 // Zoom:
 //   - До определенного момента кружочки не должны выключаться. Например при zoom = 1, когда показываются все элементы.
 $(function() {
@@ -135,6 +150,19 @@ function get_list_items() {
         };
         $('#'+list_names[i]).parent(".parent").parent(".first_one8").bind(bind_obj);
     }
+}
+
+function get_word_pkg() {
+  var uri = '/pkg';
+  var args = {'name':'get_axis'};
+  var _ = $.get(uri, args)
+    .success(function(data) {
+      var v = JSON.parse(data);
+      $("#word_holder_id").text(v.word);
+    })
+    .error(function(data) { 
+
+    });
 }
 
 /*
