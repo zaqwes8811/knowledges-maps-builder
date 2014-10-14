@@ -29,6 +29,7 @@ import java.util.List;
 public class BuilderOneFakePage {
 	public static final String defailtPageName = "Korra";
 	public static final String defaultGenName = "Gen";
+	public static final String defaultUserId = "user";
 	
   private String getSubtitlesToPlainText(String filename) throws IOException {
     String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
