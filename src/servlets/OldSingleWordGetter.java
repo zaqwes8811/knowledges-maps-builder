@@ -18,7 +18,7 @@ import java.io.IOException;
 
 @Deprecated
 @NotThreadSafe
-public class OldSingleWordGetterServlet extends HttpServlet {
+public class OldSingleWordGetter extends HttpServlet {
   private ContainerNodeControllers container_;
   private final String PATH_TO_CONFIGURATION_FILE_ = "own-app.yaml";
   

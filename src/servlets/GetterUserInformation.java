@@ -1,10 +1,9 @@
 package servlets;
 
-//import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
-import com.google.gson.Gson;
-
 import gae_store_space.ContentPageKind;
 import gae_store_space.ContentPageKind.WordDataValue;
+
+import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,15 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import store_gae_stuff.fakes.BuilderOneFakePage;
 import store_gae_stuff.fakes.FakeAppWrapper;
-import net.jcip.annotations.NotThreadSafe;
 
-import java.io.IOException;
+import com.google.gson.Gson;
 
-@NotThreadSafe
-public class SingleWordGetterServlet extends HttpServlet {
-  private static final long serialVersionUID = -1906449812056035297L;
+// 
+public class GetterUserInformation extends HttpServlet {
+	/**
+	 * 
+	 */
+  private static final long serialVersionUID = 5249671566813631715L;
   
-  private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+	private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
 
 	@Override
   public void doGet(
@@ -32,9 +33,9 @@ public class SingleWordGetterServlet extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    ContentPageKind p = app.getPage(BuilderOneFakePage.defailtPageName);
-    WordDataValue v = p.getWordData(BuilderOneFakePage.defaultGenName).get();
-    String jsonResponse = new Gson().toJson(v);
+    //ContentPageKind p = app.getPage(BuilderOneFakePage.defailtPageName);
+    //WordDataValue v = p.getWordData(BuilderOneFakePage.defaultGenName).get();
+    String jsonResponse = "";//new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);
