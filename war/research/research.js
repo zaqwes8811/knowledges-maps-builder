@@ -1,5 +1,4 @@
 // State
-var gUserSummary = new UserSummary([]);
 var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
@@ -75,6 +74,7 @@ UserSummary.prototype.getPageNames = function () {
 function View(dal) {
   this.dal = dal;
   this.currentWordData = new CurrentWordData();
+  this.userSummary = new UserSummary([]);
 }
 
 View.prototype.getCurrentPageName = function () {
@@ -95,7 +95,7 @@ View.prototype.resetPagesOptions = function(newNames) {
   _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
   
   var currentPageName = this.getCurrentPageName();
-  var genNames = gUserSummary.getGenNames(currentPageName);
+  var genNames = this.userSummary.getGenNames(currentPageName);
   _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); }); 
 }
 
@@ -104,26 +104,25 @@ View.prototype.drawWordValue = function (word) {
 }
 
 View.prototype._markIsKnowIt = function(context) {
-  var that = this;  // вроде бы не теряется
-  if (that.currentWordData.isActive()) {
+  if (this.currentWordData.isActive()) {
     // this represents the checkbox that was checked
     // do something with it
     var $this = context;
     if ($this.is(':checked')) {
       // думается лучше выполнить синхронно, хотя если здесь, то все равно
       // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-      var page = that.getCurrentPageName();
+      var page = this.getCurrentPageName();
       if (!page)
         return;
 
-      var gen = that.getCurrentGenName();
+      var gen = this.getCurrentGenName();
       if (!gen)
         return;
 
-      var pointPos = that.currentWordData.getPos();
+      var pointPos = this.currentWordData.getPos();
 
       var point = new Point(page, gen, pointPos);
-      that.dal.markIsDone(point);
+      this.dal.markIsDone(point);
     }
   }
 }
@@ -133,14 +132,14 @@ View.prototype.onCreate = function() {
   // Get user data
   var that = this;
   this.dal.getUserSummary(function(data) {
-      gUserSummary.reset(JSON.parse(data));
-      var pages = gUserSummary.getPageNames();
+      that.userSummary.reset(JSON.parse(data));
+      var pages = that.userSummary.getPageNames();
       that.resetPagesOptions(pages);
     });
 
   // FIXME: don't work
   $('#know_it').change(function() {
-    that._markIsKnowIt($(this), that);
+    that._markIsKnowIt($(this));
   });
 }
 
