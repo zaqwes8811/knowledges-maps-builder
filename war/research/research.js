@@ -11,7 +11,25 @@ function UserSummary(listPagesSum) {
 UserSummary.prototype.getGenNames = function (_pageName) {
   // ищем по списку
   var r = _.findWhere(this.raw, {pageName: _pageName});
-  alert(r.genNames);
+  return r.genNames;
+}
+
+UserSummary.prototype.getPageNames = function () {}
+
+// View
+// http://www.electrictoolbox.com/jquery-add-option-select-jquery/
+// http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
+function View() { }
+
+View.prototype.getCurrentPageName = function () {
+  return $('#pages > option:selected').text();
+}
+
+View.prototype.resetPagesOptions = function(newNames) {
+  $('#pages').empty();//find('option').remove();
+  
+  $('#example').append(new Option('Foo', 'foo', true, true))
+  
 }
 
 var gUserSummary = new UserSummary([]);
