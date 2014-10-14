@@ -10,6 +10,10 @@ function UserSummary(listPagesSum) {
   this.raw = listPagesSum;
 }
 
+UserSummary.prototype.reset = function (listPagesSum) {
+  this.raw = listPagesSum;
+}
+
 UserSummary.prototype.getGenNames = function (_pageName) {
   // ищем по списку
   var r = _.findWhere(this.raw, {pageName: _pageName});
@@ -62,18 +66,17 @@ View.prototype.onCreate = function() {
   var uri = '/user_summary';
   var jqxhr = $.get(uri)
     .success(function(data) {
-      gUserSummary = new UserSummary(JSON.parse(data));
+      gUserSummary.reset(JSON.parse(data));
       
       // заполняем чекбоксы
-      (new View()).resetPagesOptions(gUserSummary.getPageNames());
+      gView.resetPagesOptions(gUserSummary.getPageNames());
     })
     .error(function(data) { 
        alert("error on get sum about user");
     });
 }
 
-
-
+// http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
 function set_know_it() {
   alert("Know");
 }
