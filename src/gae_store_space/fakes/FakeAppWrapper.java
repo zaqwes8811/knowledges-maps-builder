@@ -1,4 +1,4 @@
-package store_gae_stuff.fakes;
+package gae_store_space.fakes;
 
 import static gae_store_space.OfyService.ofy;
 import gae_store_space.ActiveDistributionGenKind;

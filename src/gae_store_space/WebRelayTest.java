@@ -12,6 +12,7 @@ import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import gae_store_space.fakes.BuilderOneFakePage;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -24,7 +25,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import store_gae_stuff.fakes.BuilderOneFakePage;
 import static gae_store_space.OfyService.ofy;
 
 @Deprecated  // Такие тесты не запустить - "No API env. is reg..."
