@@ -1,8 +1,3 @@
-// State
-var gDataAccessLayer = new DataAccessLayer();
-var gView = new View(gDataAccessLayer);
-var gPlotView = new PlotView(gDataAccessLayer);
-
 function Point(page, gen, pos) {
   this.page = page;
   this.gen = gen;
@@ -42,7 +37,7 @@ CurrentWordData.prototype.set = function (data) {
 }
 
 CurrentWordData.prototype.getPos = function () {
-  return this.data.pointPos;
+  return this.data.PointValuePos;
 }
 
 CurrentWordData.prototype.isActive = function () {
@@ -121,14 +116,14 @@ View.prototype._markIsKnowIt = function(context) {
 
       var pointPos = this.currentWordData.getPos();
 
-      var point = new Point(page, gen, pointPos);
+      var point = new PointValue(page, gen, pointPos);
       this.dal.markIsDone(point);
     }
   }
 }
 
 // Actions
-View.prototype.onCreate = function() {
+View.prototype.reload = function() {
   // Get user data
   var self = this;
   this.dal.getUserSummary(function(data) {
@@ -137,7 +132,7 @@ View.prototype.onCreate = function() {
       self.resetPagesOptions(pages);
     });
 
-  // FIXME: don't work
+  // FIXME: don't work in constructor
   $('#know_it').change(function() {
     self._markIsKnowIt($(this));
   });
@@ -281,8 +276,14 @@ DataAccessLayer.prototype.getUserSummary = function (callback) {
     .error(function(data) { self.onError(data); });
 }
 
+// State
+// создаются до загрузки DOM?
+var gDataAccessLayer = new DataAccessLayer();
+var gView = new View(gDataAccessLayer);
+var gPlotView = new PlotView(gDataAccessLayer);
+
 $(function() {
   // Handler for .ready() called.
-  gView.onCreate();
+  gView.reload();
   gPlotView.reset();
 });
