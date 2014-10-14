@@ -75,13 +75,6 @@ UserSummary.prototype.getPageNames = function () {
 function View(dal) {
   this.dal = dal;
   this.currentWordData = new CurrentWordData();
-
-  var that = this;
-
-  //var f = ;
-
-  // init know checkbox 
-  
 }
 
 View.prototype.getCurrentPageName = function () {
@@ -111,7 +104,7 @@ View.prototype.drawWordValue = function (word) {
 }
 
 View.prototype._markIsKnowIt = function(context) {
-  var that = this;
+  var that = this;  // вроде бы не теряется
   if (that.currentWordData.isActive()) {
     // this represents the checkbox that was checked
     // do something with it
@@ -130,7 +123,6 @@ View.prototype._markIsKnowIt = function(context) {
       var pointPos = that.currentWordData.getPos();
 
       var point = new Point(page, gen, pointPos);
-
       that.dal.markIsDone(point);
     }
   }
@@ -148,7 +140,7 @@ View.prototype.onCreate = function() {
 
   // FIXME: don't work
   $('#know_it').change(function() {
-    that._markIsKnowIt($(this));
+    that._markIsKnowIt($(this), that);
   });
 }
 
