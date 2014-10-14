@@ -2,7 +2,7 @@
 var gUserSummary = new UserSummary([]);
 var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
-var gPlotView = new PlotView();
+var gPlotView = new PlotView(gDataAccessLayer);
 
 function Point(page, gen, pos) {
   this.page = page;
@@ -10,12 +10,44 @@ function Point(page, gen, pos) {
   this.pos = pos;
 }
 
+// Speed up calls to hasOwnProperty
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+function isEmpty(obj) {
+
+    // null and undefined are "empty"
+    if (obj == null) return true;
+
+    // Assume if it has a length property with a non-zero value
+    // that that property is correct.
+    if (obj.length > 0)    return false;
+    if (obj.length === 0)  return true;
+
+    // Otherwise, does it have any properties of its own?
+    // Note that this doesn't handle
+    // toString and valueOf enumeration bugs in IE < 9
+    for (var key in obj) {
+        if (hasOwnProperty.call(obj, key)) return false;
+    }
+
+    return true;
+}
+
+// http://stackoverflow.com/questions/4994201/is-object-empty
 function CurrentWordData() {
   this.data = {};
 }
 
 CurrentWordData.prototype.set = function (data) {
   this.data = data;
+}
+
+CurrentWordData.prototype.getPos = function () {
+  return this.data.pointPos;
+}
+
+CurrentWordData.prototype.isActive = function () {
+  return !isEmpty(this.data);
 }
 
 // Class
@@ -44,17 +76,12 @@ function View(dal) {
   this.dal = dal;
   this.currentWordData = new CurrentWordData();
 
+  var that = this;
+
+  //var f = ;
+
   // init know checkbox 
-  $('#know_it').change(function() {
-    // this represents the checkbox that was checked
-    // do something with it
-    var $this = $(this);
-    if ($this.is(':checked')) {
-      // думается лучше выполнить синхронно, хотя если здесь, то все равно
-      // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-      g_need_set_known = true;
-    }
-  });
+  
 }
 
 View.prototype.getCurrentPageName = function () {
@@ -83,6 +110,32 @@ View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
+View.prototype._markIsKnowIt = function(context) {
+  var that = this;
+  if (that.currentWordData.isActive()) {
+    // this represents the checkbox that was checked
+    // do something with it
+    var $this = context;
+    if ($this.is(':checked')) {
+      // думается лучше выполнить синхронно, хотя если здесь, то все равно
+      // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+      var page = that.getCurrentPageName();
+      if (!page)
+        return;
+
+      var gen = that.getCurrentGenName();
+      if (!gen)
+        return;
+
+      var pointPos = that.currentWordData.getPos();
+
+      var point = new Point(page, gen, pointPos);
+
+      that.dal.markIsDone(point);
+    }
+  }
+}
+
 // Actions
 View.prototype.onCreate = function() {
   // Get user data
@@ -92,13 +145,14 @@ View.prototype.onCreate = function() {
       var pages = gUserSummary.getPageNames();
       that.resetPagesOptions(pages);
     });
+
+  // FIXME: don't work
+  $('#know_it').change(function() {
+    that._markIsKnowIt($(this));
+  });
 }
 
-View.prototype.get_data = function () {
-  this.dal.getDistributionAsync(function(data) { gPlotView.plot(data); });
-}
-
-View.prototype.get_word_pkg = function () { 
+View.prototype.onGetWordPackage = function () { 
   // Нужны еще данные - страница и имя генератора
   var that = this;
 
@@ -106,13 +160,21 @@ View.prototype.get_word_pkg = function () {
   this.dal.getWordPkgAsync(function(data) {
       var v = JSON.parse(data);
       that.currentWordData.set(v);
-      gView.drawWordValue(v.word);
+      that.drawWordValue(v.word);
     });
 }
 
 // Class
-function PlotView() { 
+function PlotView(dal) { 
+  this.dal = dal;
   this.g_map = {};
+}
+
+PlotView.prototype.onGetData = function () {
+  var that = this;
+  this.dal.getDistributionAsync(function(data) { 
+    that.plot(data); 
+  });
 }
 
 PlotView.prototype.plot = function (data) {
@@ -228,4 +290,6 @@ $(function() {
   // Handler for .ready() called.
   gView.onCreate();
   gPlotView.reset();
+
+
 });
