@@ -1,16 +1,23 @@
 // State
-var g_map = {};
-var g_need_set_known = false;
-var g_current_word_data = {};
 var gUserSummary = new UserSummary([]);
 var gView = new View();
 var gPlotView = new PlotView();
 var gDataAccessLayer = new DataAccessLayer();
+var gCurrentWordData = new CurrentWordData(gView);
 
 function Point(page, gen, pos) {
   this.page = page;
   this.gen = gen;
   this.pos = pos;
+}
+
+function CurrentWordData(view) {
+  this.view = view;
+  this.data = {};
+}
+
+CurrentWordData.prototype.set = function (data) {
+  this.data = data;
 }
 
 function UserSummary(listPagesSum) {
@@ -71,6 +78,10 @@ View.prototype.resetPagesOptions = function(newNames) {
   _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); }); 
 }
 
+View.prototype.drawWordValue = function (word) {
+  $("#word_holder_id").text(word);
+}
+
 // Actions
 View.prototype.onCreate = function() {
   // Get user data
@@ -86,11 +97,6 @@ View.prototype.onCreate = function() {
     .error(function(data) { 
        alert("error on get sum about user");
     });
-}
-
-
-function set_know_it() {
-  alert("Know");
 }
 
 function PlotView() { }
@@ -175,6 +181,16 @@ DataAccessLayer.prototype.markIsDone = function (point) {
   var args = point;
   $.get(uri, args)
     .error(function(data) { this.onError(data); });
+  // FIXME: better sync()
+}
+
+DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
+    // делаем запрос
+  var uri = '/pkg';
+  var args = {'name':'get_axis'};
+  var _ = $.get(uri, args)
+    .success(callback)
+    .error(function(data) { this.onError(data); });
 }
 
 function get_data() {
@@ -187,16 +203,10 @@ function get_data() {
 
 function get_word_pkg() { 
   // делаем запрос
-  var uri = '/pkg';
-  var args = {'name':'get_axis'};
-  var _ = $.get(uri, args)
-    .success(function(data) {
+  gDataAccessLayer.getWordPkgAsync(function(data) {
       var v = JSON.parse(data);
-      g_current_word_data = v;  // FIXME: bad, but...
-      $("#word_holder_id").text(v.word);
-    })
-    .error(function(data) { 
-
+      gCurrentWordData.set(v);
+      gView.drawWordValue(v.word);
     });
 }
 
