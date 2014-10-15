@@ -206,6 +206,7 @@ PlotView.prototype.plot = function (data) {
 //   - До определенного момента кружочки не должны выключаться. 
 // Например при zoom = 1, когда показываются все элементы.
 PlotView.prototype.reset = function() {
+  var self = this;
   function showTooltip(x, y, contents) {
     $("<div id='tooltip'>" + contents + "</div>").css({
       position: "absolute",
@@ -231,7 +232,7 @@ PlotView.prototype.reset = function() {
         var x = item.datapoint[0].toFixed(2),
         y = item.datapoint[1].toFixed(2);
 
-        showTooltip(item.pageX, item.pageY, this.g_map[Math.floor(x)]);
+        showTooltip(item.pageX, item.pageY, self.g_map[Math.floor(x)]);
       }
     } else {
       $("#tooltip").remove();
