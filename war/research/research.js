@@ -177,16 +177,16 @@ PlotView.prototype.onGetData = function () {
   });
 }
 
-PlotView.prototype.plot = function (getted_axises) {
+PlotView.prototype.plot = function (distribution) {
   // FIXME: Нужно усреднять данные на отрезках, а через zoom увеличивать.
   var zoomedData = [];
 
-  for(var i = 0; i < getted_axises.length; ++i) {
-    var elem = new protocols.DistributionElem(getted_axises[i]);  // FIXME: bad - можно и напрямую пользоваться
+  for(var i = 0; i < distribution.length; ++i) {
+    var elem = new protocols.DistributionElem(distribution[i]);  // FIXME: bad - можно и напрямую пользоваться
 
     tmp = []
-    tmp.push(i);
-    tmp.push(elem.frequency);
+    tmp.push(i);  // x 
+    tmp.push(elem.frequency);  // y
 
     this.store[i] = 'Position : '+tmp[0]+'/'+"name"+'/'+tmp[1]
 
