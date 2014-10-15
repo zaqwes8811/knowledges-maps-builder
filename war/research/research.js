@@ -1,8 +1,17 @@
-function Point(page, gen, pos) {
-  this.page = page;
-  this.gen = gen;
-  this.pos = pos;
-}
+
+var protocols = {
+
+  // On server-side exist Java class
+  PathValue: function (page, gen, pos) {
+    //this.user
+    this.pageName = page;
+    this.genName = gen;
+    this.pointPos = pos;
+  }
+};
+
+
+
 
 // Speed up calls to hasOwnProperty
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -116,7 +125,7 @@ View.prototype._markIsKnowIt = function(context) {
 
       var pointPos = this.currentWordData.getPos();
 
-      var point = new PointValue(page, gen, pointPos);
+      var point = new protocols.PathValue(page, gen, pointPos);
       this.dal.markIsDone(point);
     }
   }
