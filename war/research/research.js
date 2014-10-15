@@ -7,6 +7,11 @@ var protocols = {
     this.pageName = page;
     this.genName = gen;
     this.pointPos = pos;
+  },
+
+  DistributionElem: function(elem) {
+    this.frequency = elem.frequency;
+    this.enabled = elem.enabled;
   }
 };
 
@@ -162,35 +167,34 @@ View.prototype.onGetWordPackage = function () {
 // Class
 function PlotView(dal) { 
   this.dal = dal;
-  this.g_map = {};
+  this.store = {};
 }
 
 PlotView.prototype.onGetData = function () {
   var self = this;
   this.dal.getDistributionAsync(function(data) { 
-    self.plot(data); 
+    self.plot( $.parseJSON(data)); 
   });
 }
 
-PlotView.prototype.plot = function (data) {
-  var getted_axises = $.parseJSON(data);
-  
+PlotView.prototype.plot = function (getted_axises) {
   // FIXME: Нужно усреднять данные на отрезках, а через zoom увеличивать.
-  var zoomed_data = [];
+  var zoomedData = [];
+
   for(var i = 0; i < getted_axises.length; ++i) {
+    var elem = new protocols.DistributionElem(getted_axises[i]);  // FIXME: bad - можно и напрямую пользоваться
+
     tmp = []
-    for(var name in getted_axises[i]) {
-      if (getted_axises[i].hasOwnProperty(name)) {
-        tmp.push(i);
-        tmp.push(getted_axises[i][name]);
-      }
-      this.g_map[tmp[0]] = 'Position : '+tmp[0]+'/'+name+'/'+tmp[1]
-    }
-    zoomed_data.push(tmp);
+    tmp.push(i);
+    tmp.push(elem.frequency);
+
+    this.store[i] = 'Position : '+tmp[0]+'/'+"name"+'/'+tmp[1]
+
+    zoomedData.push(tmp);
   }
 
   // Функция рисования
-  var _plot = $.plot("#placeholder", [{ data: zoomed_data, label: "distr(x)"}], {
+  var _plot = $.plot("#placeholder", [{ data: zoomedData, label: "distr(x)"}], {
     series: {
       lines: {show: true},
       points: {show: false}
@@ -232,7 +236,7 @@ PlotView.prototype.reset = function() {
         var x = item.datapoint[0].toFixed(2),
         y = item.datapoint[1].toFixed(2);
 
-        showTooltip(item.pageX, item.pageY, self.g_map[Math.floor(x)]);
+        showTooltip(item.pageX, item.pageY, self.store[Math.floor(x)]);
       }
     } else {
       $("#tooltip").remove();
