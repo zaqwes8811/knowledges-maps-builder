@@ -16,6 +16,19 @@ public class FakeAppWrapper {
 	
 	public static final String defaultGenName = "No";
 	
+	public static class PathValue {
+		//public final UserId
+		public final String pageName;
+		public final String genName;
+		public final Integer pointPos;
+		
+		public PathValue(String p, String g, Integer pos) {
+			pageName = p;
+			genName = g;
+			pointPos = pos;
+		}
+	}
+	
 	public FakeAppWrapper() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
@@ -124,4 +137,10 @@ public class FakeAppWrapper {
 		
 		return r;
 	}
+	
+	public void disablePoint(PathValue p) {
+		ContentPageKind page = this.getPage(p.pageName);
+		ActiveDistributionGenKind g = page.getGenerator(p.genName);
+		
+	} 
 }
