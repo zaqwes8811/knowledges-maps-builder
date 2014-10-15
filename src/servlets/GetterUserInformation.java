@@ -1,10 +1,7 @@
 package servlets;
 
-import gae_store_space.ContentPageKind;
-import gae_store_space.ContentPageKind.WordDataValue;
 import gae_store_space.fakes.BuilderOneFakePage;
 import gae_store_space.fakes.FakeAppWrapper;
-import gae_store_space.fakes.FakeAppWrapper.PageSummaryValue;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,6 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import servlets.protocols.PageSummaryValue;
 
 import com.google.gson.Gson;
 
