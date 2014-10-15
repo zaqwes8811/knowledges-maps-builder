@@ -38,6 +38,7 @@ function isEmpty(obj) {
     return true;
 }
 
+// Class
 // http://stackoverflow.com/questions/4994201/is-object-empty
 function CurrentWordData() {
   this.data = {};
