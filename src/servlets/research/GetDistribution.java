@@ -2,7 +2,6 @@ package servlets.research;
 
 import gae_store_space.ActiveDistributionGenKind;
 import gae_store_space.ContentPageKind;
-import gae_store_space.EasyKind;
 import gae_store_space.fakes.BuilderOneFakePage;
 import gae_store_space.fakes.FakeAppWrapper;
 
@@ -14,6 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import sand.third_party_tests.gae.EasyKind;
 
 import com.google.common.base.Optional;
 import com.google.gson.Gson;

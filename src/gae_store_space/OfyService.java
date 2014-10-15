@@ -1,5 +1,7 @@
 package gae_store_space;
 
+import sand.third_party_tests.gae.EasyKind;
+
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;

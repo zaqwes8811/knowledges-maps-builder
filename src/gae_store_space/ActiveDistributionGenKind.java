@@ -120,7 +120,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   //   http://www.quizful.net/post/java-fields-initialization
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
   public void reset() {
-  	if (this.distribution == null)
+  	if (distribution == null)
   		throw new IllegalStateException();
   		
     // похоже при восстановлении вызывается он

@@ -60,7 +60,6 @@ public class BuilderOneFakePage {
     try {
       // Phase I
       String plainText = getSubtitlesToPlainText(filename);
-      assert !plainText.isEmpty();
 
       // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
       ArrayList<ContentItemKind> contentElements = getContentElements(plainText);
@@ -78,9 +77,8 @@ public class BuilderOneFakePage {
 
     // Пакуем
     ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();
-    for (String sentence: sentences) {
+    for (String sentence: sentences)
       contentElements.add(new ContentItemKind(sentence));
-    }
 
     return contentElements;
   }

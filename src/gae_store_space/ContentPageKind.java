@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import servlets.protocols.WordDataValue;
 import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.base.Optional;
@@ -67,9 +68,8 @@ public class ContentPageKind {
   	
   	ActiveDistributionGenKind gen = ofy().load().key(g).now();
   	
-  	if (gen == null) {
+  	if (gen == null)
   		throw new IllegalStateException();
-  	}
   	
   	gen.reset();
   	
@@ -110,8 +110,9 @@ public class ContentPageKind {
 
     // Form result
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
-    for (WordKind word : wordKinds)
+    for (WordKind word : wordKinds) {
       distribution.add(new DistributionElement(word.getRawFrequency()));
+    }
 
     return distribution;
   }
@@ -156,32 +157,13 @@ public class ContentPageKind {
   	// Optional затрудняет поиск ситуаций - низкое разрешение по типам ошибок.
   	//
   	// It's IO - DbC wrong here.
-  	if (kinds == null) {
-  		//return Optional.absent();
+  	if (kinds == null)
   		throw new IllegalStateException();
-  	}
   	
   	// не прошли не свои страницы
-  	if (kinds.size() != 1) {
-  		//return Optional.absent();  // code error
+  	if (kinds.size() != 1) 
   		throw new IllegalStateException();
-  	}
   	
-  	// FIXME: А ноль то может быть? Вряд ли
-		//return Optional.fromNullable(kinds.get(0));
 		return kinds.get(0);
-  }
-  
-  public static class WordDataValue {
-  	public WordDataValue(String word, ArrayList<String> sentences) {
-  		this.word = word;
-  		this.sentences = sentences;
-  	}
-  	public final String word;  // хорошо бы Optional, но скорее всего не сереализуется
-  	public final ArrayList<String> sentences;
-  	
-  	public final Integer pointPos = 0;  // FIXME: impl.
-  	
-  	// cluster range name - важность слова - три или 4 группы
   }
 }
