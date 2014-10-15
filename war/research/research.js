@@ -249,7 +249,7 @@ DataAccessLayer.prototype.onError = function (message) {
 
 DataAccessLayer.prototype.markIsDone = function (point) {
   var self = this;
-  var uri = '/pkg';
+  var uri = '/know_it';
   var args = point;
   $.get(uri, args)
     .error(function(data) { self.onError(data); });
