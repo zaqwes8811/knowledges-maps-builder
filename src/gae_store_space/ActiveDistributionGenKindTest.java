@@ -37,6 +37,7 @@ public class ActiveDistributionGenKindTest {
     for (Integer value: distribution) {
       real.add(new DistributionElement(value, true));
     }
+    
     return ActiveDistributionGenKind.create(real);
   }
 
@@ -49,8 +50,9 @@ public class ActiveDistributionGenKindTest {
     assertNotNull(g);  // иногда падает
 
     List<Integer> experiment = new ArrayList<Integer>();
-    for (int i = 0; i < 10000; ++i)
+    for (int i = 0; i < 10000; ++i) {
       experiment.add(g.getPosition());
+    }
 
     assertFalse(experiment.contains(new Integer(distribution.indexOf(0))));
   }

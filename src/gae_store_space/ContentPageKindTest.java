@@ -11,6 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import servlets.protocols.WordDataValue;
 import gae_store_space.fakes.BuilderOneFakePage;
 
 import java.io.IOException;
@@ -140,7 +141,7 @@ public class ContentPageKindTest {
   @Test 
   public void testGetPackedWordData() {
   	ContentPageKind page = putPagesInStore();
-  	Optional<ContentPageKind.WordDataValue> v = page.getWordData(BuilderOneFakePage.defaultGenName);
+  	Optional<WordDataValue> v = page.getWordData(BuilderOneFakePage.defaultGenName);
   	assertTrue(v.isPresent());
   } 
 }
