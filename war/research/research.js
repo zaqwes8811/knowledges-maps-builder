@@ -179,22 +179,22 @@ PlotView.prototype.onGetData = function () {
 
 PlotView.prototype.plot = function (distribution) {
   // FIXME: Нужно усреднять данные на отрезках, а через zoom увеличивать.
-  var zoomedData = [];
+  var allPoints = [];
+  var disabledPoints = [[1, 12]];
+  var self = this;
 
-  for(var i = 0; i < distribution.length; ++i) {
-    var elem = new protocols.DistributionElem(distribution[i]);  // FIXME: bad - можно и напрямую пользоваться
-
-    tmp = []
-    tmp.push(i);  // x 
-    tmp.push(elem.frequency);  // y
-
-    this.store[i] = 'Position : '+tmp[0]+'/'+"name"+'/'+tmp[1]
-
-    zoomedData.push(tmp);
-  }
+  _.each(distribution, function(e, index) {
+    var elem = new protocols.DistributionElem(e);  // FIXME: bad - можно и напрямую пользоваться
+    self.store[index] = 'Position : ' + index;
+    allPoints.push([index, elem.frequency]);
+  });
 
   // Функция рисования
-  var _plot = $.plot("#placeholder", [{ data: zoomedData, label: "distr(x)"}], {
+  $.plot("#placeholder", [
+    { data: allPoints, label: "frequency(x)"}, 
+    { data: disabledPoints, label: "disabled", points: { show:true } }], 
+
+    {
     series: {
       lines: {show: true},
       points: {show: false}
