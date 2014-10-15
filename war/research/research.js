@@ -196,7 +196,7 @@ PlotView.prototype.plot = function (data) {
       points: {show: false}
     },
     grid: {
-      hoverable: true,
+      hoverable: true,  // FIXME: don't work
       clickable: true
     }
   });
