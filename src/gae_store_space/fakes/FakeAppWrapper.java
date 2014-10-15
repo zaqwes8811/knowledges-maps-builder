@@ -58,17 +58,14 @@ public class FakeAppWrapper {
   	// Try read
   	///*
   	// Скрыл, но должно работать!!
-  	//List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
+  	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
   	
   	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
-  	//if (pages.isEmpty()) {
-  	//	throw new IllegalStateException();
-  	//}
+  	if (pages.isEmpty()) 
+  		throw new IllegalStateException();
   	
-  	//if (pages.size() > 1) {
-  	//	throw new IllegalStateException();
-  	//}
-  	//*/  
+  	if (pages.size() > 1) 
+  		throw new IllegalStateException();
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
@@ -79,9 +76,8 @@ public class FakeAppWrapper {
 		List<ContentPageKind> pages = 
     		ofy().load().type(ContentPageKind.class).filter("name = ", name).list();
     
-    if (pages.size() != 1) {
+    if (pages.size() != 1)
   		throw new IllegalStateException();
-  	}
     
     return pages.get(0);  // 1 item
 	}
