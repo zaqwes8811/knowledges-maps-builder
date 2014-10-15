@@ -16,7 +16,6 @@ import com.googlecode.objectify.Key;
 
 public class FakeAppWrapper {
 	public static final String defaultPageName = "Korra";
-	
 	public static final String defaultGenName = "No";
 	
 	public FakeAppWrapper() {
@@ -103,14 +102,15 @@ public class FakeAppWrapper {
     		ofy().load().type(ContentPageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
-		for (ContentPageKind page: pages) 
+		for (ContentPageKind page: pages) {
 			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
+		}
 		
 		return r;
 	}
 	
 	public void disablePoint(PathValue p) {
-		ContentPageKind page = this.getPage(p.pageName);
+		ContentPageKind page = getPage(p.pageName);
 		ActiveDistributionGenKind g = page.getGenerator(p.genName);
 	} 
 }

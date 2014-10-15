@@ -81,9 +81,8 @@ public class WordKind {
 
   // List coupled content contentItems.
   public void setContentItems(Set<ContentItemKind> item) {
-    for (ContentItemKind value: item) {
-      this.items.add(Key.create(value));
-    }
+    for (ContentItemKind value: item)
+      items.add(Key.create(value));
   }
 
   public Set<Key<ContentItemKind>> getItems() {
