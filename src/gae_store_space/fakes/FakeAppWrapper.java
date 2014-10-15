@@ -103,9 +103,8 @@ public class FakeAppWrapper {
     		ofy().load().type(ContentPageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
-		for (ContentPageKind page: pages) {
+		for (ContentPageKind page: pages) 
 			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
-		}
 		
 		return r;
 	}
@@ -113,6 +112,5 @@ public class FakeAppWrapper {
 	public void disablePoint(PathValue p) {
 		ContentPageKind page = this.getPage(p.pageName);
 		ActiveDistributionGenKind g = page.getGenerator(p.genName);
-		
 	} 
 }
