@@ -8,6 +8,9 @@ import gae_store_space.WordKind;
 import java.util.ArrayList;
 import java.util.List;
 
+import servlets.protocols.PageSummaryValue;
+import servlets.protocols.PathValue;
+
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 
@@ -15,19 +18,6 @@ public class FakeAppWrapper {
 	public static final String defaultPageName = "Korra";
 	
 	public static final String defaultGenName = "No";
-	
-	public static class PathValue {
-		//public final UserId
-		public final String pageName;
-		public final String genName;
-		public final Integer pointPos;
-		
-		public PathValue(String p, String g, Integer pos) {
-			pageName = p;
-			genName = g;
-			pointPos = pos;
-		}
-	}
 	
 	public FakeAppWrapper() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
@@ -109,20 +99,6 @@ public class FakeAppWrapper {
 		return w;
 	}
 	
-	public static class PageSummaryValue {
-		public final String pageName;
-		public final List<String> genNames;
-		
-		private PageSummaryValue(String pageName, List<String> genNames) {
-			this.pageName = pageName;
-			this.genNames = genNames;
-		}
-		
-		public PageSummaryValue create(String pageName, List<String> genNames) {
-			return new PageSummaryValue(pageName, genNames);
-		}
-	}
-	
 	// пока не ясно, что за идентификация будет для пользователя
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation(String userId) {
@@ -132,7 +108,7 @@ public class FakeAppWrapper {
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (ContentPageKind page: pages) {
-			r.add(new PageSummaryValue(page.getName(), page.getGenNames()));
+			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
 		}
 		
 		return r;
