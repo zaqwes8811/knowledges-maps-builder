@@ -1,4 +1,4 @@
-package servlets;
+package frozen;
 
 import com.google.gson.Gson;
 import common.Tools;

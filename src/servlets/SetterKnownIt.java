@@ -12,7 +12,7 @@ import org.checkthread.annotations.NotThreadSafe;
 import com.google.gson.Gson;
 
 @NotThreadSafe
-public class SetterToKnown extends HttpServlet {
+public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
   
   @Override
