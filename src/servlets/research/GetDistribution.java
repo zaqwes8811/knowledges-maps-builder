@@ -37,8 +37,8 @@ public class GetDistribution extends HttpServlet {
   {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-		PageKind page = app.getPage(AppInstance.defaultPageName);  // FIXME: страница тоже может быть не найдена
-  	ActiveDistributionGenKind gen = page.getGenerator(AppInstance.defaultGenName);
+		PageKind page = app.getPage(OnePageProcessor.defaultPageName);  // FIXME: страница тоже может быть не найдена
+  	ActiveDistributionGenKind gen = page.getGenerator(OnePageProcessor.defaultGenName);
   	
   	String r = "";
   	response.setContentType("text/html");

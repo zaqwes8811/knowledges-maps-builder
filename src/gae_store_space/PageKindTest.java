@@ -41,7 +41,7 @@ public class PageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    PageKind page = buildContentPage(OnePageProcessor.defailtPageName);
+    PageKind page = buildContentPage(OnePageProcessor.defaultPageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
@@ -50,12 +50,12 @@ public class PageKindTest {
 
   @Test
   public void testGetDistribution() throws IOException {
-    ofy().save().entity(buildContentPage(OnePageProcessor.defailtPageName)).now();
+    ofy().save().entity(buildContentPage(OnePageProcessor.defaultPageName)).now();
     
     // Очень медленно!!
     PageKind page =
     		ofy().load().type(PageKind.class)
-    			.filter("name =", OnePageProcessor.defailtPageName)
+    			.filter("name =", OnePageProcessor.defaultPageName)
     			.limit(1).first().now();
 
     /// Queries
@@ -74,7 +74,7 @@ public class PageKindTest {
   
   private PageKind putPagesInStore() {
   	// Check store
-    String activePageName = OnePageProcessor.defailtPageName;
+    String activePageName = OnePageProcessor.defaultPageName;
     PageKind loadedPage =
       ofy().load().type(PageKind.class).filter("name = ", activePageName).first().now();
     assertNull(loadedPage);  // с одним именем могуть быть, id будут разными

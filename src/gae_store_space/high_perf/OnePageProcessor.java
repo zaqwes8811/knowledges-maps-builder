@@ -33,7 +33,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class OnePageProcessor {
-	public static final String defailtPageName = "Korra";
+	public static final String defaultPageName = "Korra";
 	public static final String defaultGenName = "Gen";
 	public static final String defaultUserId = "user";
 	
