@@ -160,6 +160,9 @@ View.prototype.onGetWordPackage = function () {
       var v = JSON.parse(data);
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
+
+      // сбрасываем флаг "i know"
+      $('#know_it').prop('checked', false);
     });
 }
 
