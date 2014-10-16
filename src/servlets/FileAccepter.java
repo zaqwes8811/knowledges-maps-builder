@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlets.protocols.PathValue;
 import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.collect.ImmutableList;
