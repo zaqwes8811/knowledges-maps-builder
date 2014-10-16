@@ -1,4 +1,4 @@
-package gae_store_space;
+package frozen;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -12,6 +12,8 @@ import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
+import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.ContentPageKind;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import org.eclipse.jetty.server.Handler;
