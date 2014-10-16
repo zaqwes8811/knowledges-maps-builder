@@ -12,7 +12,6 @@ import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
-import gae_store_space.fakes.BuilderOneFakePage;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -98,7 +97,7 @@ public class WebRelayTest {
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
     // store page
-    ContentPageKind page = new BuilderOneFakePage().buildContentPage("Korra");
+    ContentPageKind page = new OnePageBuilder().buildContentPage("Korra");
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);

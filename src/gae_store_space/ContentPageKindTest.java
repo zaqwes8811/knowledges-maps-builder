@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import servlets.protocols.WordDataValue;
-import gae_store_space.fakes.BuilderOneFakePage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class ContentPageKindTest {
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
   public ContentPageKind buildContentPage(String pageName) {
-    return new BuilderOneFakePage().buildContentPage(pageName);
+    return new OnePageBuilder().buildContentPage(pageName);
   }
 
   @Before
@@ -41,7 +40,7 @@ public class ContentPageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    ContentPageKind page = buildContentPage(BuilderOneFakePage.defailtPageName);
+    ContentPageKind page = buildContentPage(OnePageBuilder.defailtPageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
@@ -50,12 +49,12 @@ public class ContentPageKindTest {
 
   @Test
   public void testGetDistribution() throws IOException {
-    ofy().save().entity(buildContentPage(BuilderOneFakePage.defailtPageName)).now();
+    ofy().save().entity(buildContentPage(OnePageBuilder.defailtPageName)).now();
     
     // Очень медленно!!
     ContentPageKind page =
     		ofy().load().type(ContentPageKind.class)
-    			.filter("name =", BuilderOneFakePage.defailtPageName)
+    			.filter("name =", OnePageBuilder.defailtPageName)
     			.limit(1).first().now();
 
     /// Queries
@@ -74,7 +73,7 @@ public class ContentPageKindTest {
   
   private ContentPageKind putPagesInStore() {
   	// Check store
-    String activePageName = BuilderOneFakePage.defailtPageName;
+    String activePageName = OnePageBuilder.defailtPageName;
     ContentPageKind loadedPage =
       ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
     assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
@@ -112,7 +111,7 @@ public class ContentPageKindTest {
   	ContentPageKind page = putPagesInStore();
 
     // queries
-    Integer pointPosition = page.getGenerator(BuilderOneFakePage.defaultGenName).getPosition();
+    Integer pointPosition = page.getGenerator(OnePageBuilder.defaultGenName).getPosition();
 
     // слово одно, но если страниц много, то получим для всех
     List<WordKind> words = ofy().load()
@@ -141,7 +140,7 @@ public class ContentPageKindTest {
   @Test 
   public void testGetPackedWordData() {
   	ContentPageKind page = putPagesInStore();
-  	Optional<WordDataValue> v = page.getWordData(BuilderOneFakePage.defaultGenName);
+  	Optional<WordDataValue> v = page.getWordData(OnePageBuilder.defaultGenName);
   	assertTrue(v.isPresent());
   } 
 }
