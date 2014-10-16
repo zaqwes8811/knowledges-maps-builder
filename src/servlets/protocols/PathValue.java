@@ -1,5 +1,7 @@
 package servlets.protocols;
 
+
+// troubles on deserialize
 public class PathValue {
 	//public final UserId
 	public final String pageName;
