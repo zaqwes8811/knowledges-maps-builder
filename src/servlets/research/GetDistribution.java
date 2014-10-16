@@ -37,14 +37,15 @@ public class GetDistribution extends HttpServlet {
   {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-		PageKind page = app.getPage(OnePageProcessor.defaultPageName);  // FIXME: страница тоже может быть не найдена
+		// FIXME: страница тоже может быть не найдена
+		PageKind page = app.getPage(OnePageProcessor.defaultPageName);  
   	ActiveDistributionGenKind gen = page.getGenerator(OnePageProcessor.defaultGenName);
   	
-  	String r = "";
   	response.setContentType("text/html");
+  	response.setStatus(HttpServletResponse.SC_OK);
 
-		r = new Gson().toJson(gen.getDistribution());
-		response.setStatus(HttpServletResponse.SC_OK);
+  	String r = new Gson().toJson(gen.getDistribution());
+		
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(r);
