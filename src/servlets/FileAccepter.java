@@ -23,7 +23,18 @@ public class FileAccepter extends HttpServlet {
   
 	private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
 	
+	// FIXME: нужно выделить имя файла, иначе похоже файл не идентифицировать.
 	private ImmutableList<String> process(ArrayList<String> in) {
+		// http://stackoverflow.com/questions/24769832/uploaded-file-only-contains-webkitformboundary
+		if (in.size() < 3)
+			throw new IllegalArgumentException();
+		
+		// выделяем заголовок
+		// name
+		// filename
+		
+		// Кажется будет перевод строки после заголовка
+		
 		return ImmutableList.copyOf(in);
 	}
 
@@ -42,6 +53,7 @@ public class FileAccepter extends HttpServlet {
 	  	String line;
 	    while ((line = reader.readLine()) != null) {
 	    	lines.add(line);
+	    	System.out.println(line);
 	    }
 	    
 	    // purge from headers and bottoms

@@ -330,6 +330,7 @@ $(function() {
 
 
   // http://hayageek.com/ajax-file-upload-jquery/
+  // https://github.com/blueimp/jQuery-File-Upload/wiki/Basic-plugin - еще вариант
   var options = { 
     beforeSend: function() {
         $("#progress").show();
