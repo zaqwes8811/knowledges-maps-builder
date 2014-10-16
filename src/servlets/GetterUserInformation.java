@@ -1,6 +1,6 @@
 package servlets;
 
-import gae_store_space.fakes.BuilderOneFakePage;
+import gae_store_space.OnePageBuilder;
 import gae_store_space.fakes.FakeAppWrapper;
 
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class GetterUserInformation extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    List<PageSummaryValue> v = app.getUserInformation(BuilderOneFakePage.defaultUserId);
+    List<PageSummaryValue> v = app.getUserInformation(OnePageBuilder.defaultUserId);
     String jsonResponse = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");

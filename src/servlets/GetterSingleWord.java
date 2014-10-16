@@ -3,8 +3,8 @@ package servlets;
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.gson.Gson;
 
+import gae_store_space.OnePageBuilder;
 import gae_store_space.ContentPageKind;
-import gae_store_space.fakes.BuilderOneFakePage;
 import gae_store_space.fakes.FakeAppWrapper;
 
 import javax.servlet.ServletException;
@@ -32,8 +32,8 @@ public class GetterSingleWord extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    ContentPageKind p = app.getPage(BuilderOneFakePage.defailtPageName);
-    WordDataValue v = p.getWordData(BuilderOneFakePage.defaultGenName).get();
+    ContentPageKind p = app.getPage(OnePageBuilder.defailtPageName);
+    WordDataValue v = p.getWordData(OnePageBuilder.defaultGenName).get();
     String jsonResponse = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");

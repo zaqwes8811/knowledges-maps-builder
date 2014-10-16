@@ -8,6 +8,7 @@ import net.jcip.annotations.NotThreadSafe;
 
 
 
+
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -21,7 +22,6 @@ import com.googlecode.objectify.annotation.Unindex;
 import core.math.DistributionElement;
 import core.math.GeneratorAnyDistribution;
 import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
-import gae_store_space.fakes.BuilderOneFakePage;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -91,7 +91,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
     this.distribution = distribution;
     reloadGenerator(distribution);
-    name = BuilderOneFakePage.defaultGenName;
+    name = OnePageBuilder.defaultGenName;
   }
 
   public void disablePoint(Integer idx) {
@@ -111,7 +111,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
 
   
   private ActiveDistributionGenKind() { 
-  	name = BuilderOneFakePage.defaultGenName;
+  	name = OnePageBuilder.defaultGenName;
   }
   
   // похоже при восстановлении вызывается он

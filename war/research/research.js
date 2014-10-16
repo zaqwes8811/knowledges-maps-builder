@@ -349,7 +349,8 @@ $(function() {
  
     },
     complete: function(response) {
-        $("#message").html("<font color='green'>"+response.responseText+"</font>");
+        // FIXME: можно же в принципе ничего не выводить?
+        //$("#message").html("<font color='green'>"+response.responseText+"</font>");
 
         // FIXME: обновить бы данные страницы - списки страниц и генераторов
     },
