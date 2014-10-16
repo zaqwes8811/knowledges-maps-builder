@@ -1,5 +1,8 @@
 package gae_store_space;
 
+import static gae_store_space.OfyService.ofy;
+
+import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -11,6 +14,8 @@ import java.util.*;
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class WordKind {
+	 public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
+	 
   @Override
   public String toString() {
     return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
@@ -31,7 +36,7 @@ public class WordKind {
   // https://developers.google.com/appengine/pricing
   // Вроде бы нет ограничения между запросами.
   @Load
-  Set<Key<ContentItemKind>> items = new HashSet<Key<ContentItemKind>>();
+  private Set<Key<ContentItemKind>> items = new HashSet<Key<ContentItemKind>>();
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
@@ -44,7 +49,7 @@ public class WordKind {
   	return word;
   }
 
-  private WordKind() {}
+  private WordKind() { }
 
   public void setRawFrequency(Integer value) {
     rawFrequency = value;
@@ -84,9 +89,14 @@ public class WordKind {
     for (ContentItemKind value: item)
       items.add(Key.create(value));
   }
-
-  public Set<Key<ContentItemKind>> getItems() {
-    return items;
+ 
+  public ImmutableList<ContentItemKind> getContendKinds() {
+  	// берем часть
+  	// FIXME: делать выборки с перемешиванием
+  	return ImmutableList.copyOf(
+  			ofy().load().type(ContentItemKind.class)
+  			.filterKey("in", items)
+  			.limit(MAX_CONTENT_ITEMS_IN_PACK).list());
   }
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.

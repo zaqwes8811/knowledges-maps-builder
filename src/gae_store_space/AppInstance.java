@@ -9,13 +9,7 @@ import java.util.List;
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
 
-import com.google.common.base.Optional;
-import com.googlecode.objectify.Key;
-
 public class AppInstance {
-	//public static final String defaultPageName = "Korra";
-	//public static final String defaultGenName = "No";
-	
 	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
@@ -66,12 +60,11 @@ public class AppInstance {
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-	public 
 	//synchronized  // не в этом дело 
-	PageKind getPage(String name) {
+	public PageKind getPage(String nameName) {
 		
 		List<PageKind> pages = 
-    		ofy().load().type(PageKind.class).filter("name = ", name).list();
+    		ofy().load().type(PageKind.class).filter("name = ", nameName).list();
     
     if (pages.size() != 1)
   		throw new IllegalStateException();
@@ -79,17 +72,17 @@ public class AppInstance {
     return pages.get(0);  // 1 item
 	}
 
-	private static AppInstance w = null;
-	static {
-		w = new AppInstance(); 
-	}
+	//private static AppInstance w = null;
+	//static {
+	//	w = new AppInstance(); 
+	//}
 	
 	private static class Holder {
 		static final AppInstance w = new AppInstance();
 	}
 	
 	public static AppInstance getInstance() {
-		return w;
+		return Holder.w;
 	}
 	
 	// пока не ясно, что за идентификация будет для пользователя

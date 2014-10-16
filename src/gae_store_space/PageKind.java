@@ -39,16 +39,18 @@ import core.math.DistributionElement;
 @Entity
 public class PageKind {
   private PageKind() { }
-  
-  public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
 
   @Id Long id;
 
   @Index String name;
 
   // Формированием не управляет, но остальным управляет.
-  List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
-  List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
+  private List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
+  private List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
+  
+  public List<Key<WordKind>> getWordKeys() {
+  	return this.wordKeys;
+  }
   
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
@@ -110,28 +112,18 @@ public class PageKind {
 
     // Form result
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
-    for (WordKind word : wordKinds) {
+    for (WordKind word : wordKinds)
       distribution.add(new DistributionElement(word.getRawFrequency()));
-    }
 
     return distribution;
   }
-  
-  private ImmutableList<ContentItemKind> getContendKinds(WordKind wordKind) {
-  	// берем часть
-  	// FIXME: делать выборки с перемешиванием
-  	return ImmutableList.copyOf(
-  			ofy().load().type(ContentItemKind.class)
-  			.filterKey("in", wordKind.getItems())
-  			.limit(MAX_CONTENT_ITEMS_IN_PACK).list());
-  }
-  
+   
   public Optional<WordDataValue> getWordData(String genName) {
   	ActiveDistributionGenKind go = getGenerator(genName);
     
 		Integer pointPosition = go.getPosition();
 		WordKind wordKind =  getWordKind(pointPosition);
-		ImmutableList<ContentItemKind> contentKinds = getContendKinds(wordKind);
+		ImmutableList<ContentItemKind> contentKinds = wordKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
 		for (ContentItemKind e: contentKinds)
