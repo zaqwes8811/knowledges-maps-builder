@@ -119,13 +119,13 @@ public class PageKindTest {
         .type(WordKind.class)
         //.ancestor(page)  // don't work
         //.parent(page)  // don't work
-        .filterKey("in", page.wordKeys).filter("pointPos =", pointPosition)
+        .filterKey("in", page.getWordKeys()).filter("pointPos =", pointPosition)
         .list();
-
     assertEquals(words.size(), 1);  // не прошли не свои страницы
+    
     WordKind word = words.get(0);
-    List<ContentItemKind> content = 
-    		ofy().load().type(ContentItemKind.class).filterKey("in", word.getItems()).list();
+    
+    List<ContentItemKind> content = word.getContendKinds();
 
     for (ContentItemKind e: content) {
       String v = e.getSentence();
