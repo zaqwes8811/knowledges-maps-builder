@@ -354,7 +354,6 @@ $(function() {
         $("#message").html("<font color='red'> ERROR: unable to upload files</font>");
  
     }
- 
   }; 
  
   $("#myForm").ajaxForm(options);
