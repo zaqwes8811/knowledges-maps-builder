@@ -1,8 +1,8 @@
 package servlets.research;
 
 import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.OnePageBuilder;
 import gae_store_space.ContentPageKind;
-import gae_store_space.fakes.BuilderOneFakePage;
 import gae_store_space.fakes.FakeAppWrapper;
 
 import java.io.IOException;

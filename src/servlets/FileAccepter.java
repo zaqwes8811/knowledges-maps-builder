@@ -48,6 +48,8 @@ public class FileAccepter extends HttpServlet {
 		
 		if (name.isEmpty() || filename.isEmpty())
 			throw new IllegalArgumentException();
+		
+		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
 
 		
 		// Кажется будет перевод строки после заголовка
