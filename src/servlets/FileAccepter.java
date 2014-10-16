@@ -31,7 +31,7 @@ public class FileAccepter extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    String jsonResponse = new Gson().toJson(v);
+    String jsonResponse = new Gson().toJson(9);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);
