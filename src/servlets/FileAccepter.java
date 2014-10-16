@@ -1,6 +1,6 @@
 package servlets;
 
-import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.AppInstance;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import core.text_extractors.ParserPOSTFile;
 public class FileAccepter extends HttpServlet {
   private static final long serialVersionUID = -8709394805924640800L;
   
-	private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+	private AppInstance app = AppInstance.getInstance(); 
 	
 	// FIXME: нужно выделить имя файла, иначе похоже файл не идентифицировать.
 	private ImmutableList<String> process(ArrayList<String> in) {

@@ -4,7 +4,7 @@ package servlets;
 import com.google.gson.Gson;
 
 import gae_store_space.ContentPageKind;
-import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ import java.io.IOException;
 public class GetterSingleWord extends HttpServlet {
   private static final long serialVersionUID = -1906449812056035297L;
   
-  private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+  private AppInstance app = AppInstance.getInstance(); 
 
 	@Override
   public void doGet(
