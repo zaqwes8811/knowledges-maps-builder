@@ -13,10 +13,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.javatuples.Pair;
+
 import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
+
+import core.text_extractors.ParserPOSTFile;
 
 @NotThreadSafe
 public class FileAccepter extends HttpServlet {
@@ -26,18 +30,25 @@ public class FileAccepter extends HttpServlet {
 	
 	// FIXME: нужно выделить имя файла, иначе похоже файл не идентифицировать.
 	private ImmutableList<String> process(ArrayList<String> in) {
-		// http://stackoverflow.com/questions/24769832/uploaded-file-only-contains-webkitformboundary
 		if (in.size() < 3)
 			throw new IllegalArgumentException();
 		
+		// http://stackoverflow.com/questions/24769832/uploaded-file-only-contains-webkitformboundary
 		List<String> workSpace = in.subList(1, in.size()-1);
 		for(String line: workSpace)
 			common.Tools.print(line);
 
 		String contentDisposition = workSpace.get(0);
+		
+		Pair<String, String> pair = new ParserPOSTFile().getNameAndFilename(contentDisposition);
+				
 		// выделяем заголовок
-		// name
-		// filename
+		String name = pair.getValue0();
+		String filename = pair.getValue1();
+		
+		if (name.isEmpty() || filename.isEmpty())
+			throw new IllegalArgumentException();
+
 		
 		// Кажется будет перевод строки после заголовка
 		
