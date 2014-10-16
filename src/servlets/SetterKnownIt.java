@@ -19,6 +19,8 @@ import servlets.protocols.WordDataValue;
 
 import com.google.gson.Gson;
 
+
+// FIXME: не работает на gae
 @NotThreadSafe
 public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
