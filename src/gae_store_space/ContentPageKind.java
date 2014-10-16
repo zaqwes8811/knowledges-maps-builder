@@ -137,7 +137,7 @@ public class ContentPageKind {
 		for (ContentItemKind e: contentKinds)
 		  content.add(e.getSentence());
 		
-		return Optional.of(new WordDataValue(wordKind.getWord(), content));
+		return Optional.of(new WordDataValue(wordKind.getWord(), content, pointPosition));
   }
   
   // FIXME: а логика разрешает Отсутствующее значение?

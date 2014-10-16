@@ -1,10 +1,13 @@
 package servlets;
 
+import gae_store_space.ContentPageKind;
+import gae_store_space.fakes.BuilderOneFakePage;
+import gae_store_space.fakes.FakeAppWrapper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,12 +15,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.checkthread.annotations.NotThreadSafe;
 
 import servlets.protocols.PathValue;
+import servlets.protocols.WordDataValue;
 
 import com.google.gson.Gson;
 
 @NotThreadSafe
 public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
+  
+  private FakeAppWrapper w = FakeAppWrapper.getInstance();
 
   @Override
   public void doPut(HttpServletRequest request, HttpServletResponse response) {
@@ -29,8 +35,11 @@ public class SetterKnownIt extends HttpServlet {
 	  	
 	  	PathValue p = new Gson().fromJson(data, PathValue.class);
 	  	
-	  	System.out.println(p);
+	  	w.disablePoint(p);
 	  	
+	  	// response
+	  	response.setContentType("text/html");
+	    response.setStatus(HttpServletResponse.SC_OK); 	
 	    // name is null
   	} catch (IOException e) {
   		throw new IllegalStateException(e);
