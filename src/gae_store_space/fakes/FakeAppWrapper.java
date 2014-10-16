@@ -2,9 +2,9 @@ package gae_store_space.fakes;
 
 import static gae_store_space.OfyService.ofy;
 import gae_store_space.ActiveDistributionGenKind;
-import gae_store_space.OnePageProcessor;
 import gae_store_space.ContentPageKind;
 import gae_store_space.WordKind;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import java.util.ArrayList;
 import java.util.List;

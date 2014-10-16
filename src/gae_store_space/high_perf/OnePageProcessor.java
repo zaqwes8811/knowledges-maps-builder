@@ -1,4 +1,4 @@
-package gae_store_space;
+package gae_store_space.high_perf;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
@@ -13,6 +13,9 @@ import core.text_extractors.SubtitlesParser;
 
 import org.apache.tika.parser.Parser;
 import org.xml.sax.ContentHandler;
+
+import gae_store_space.ContentItemKind;
+import gae_store_space.ContentPageKind;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

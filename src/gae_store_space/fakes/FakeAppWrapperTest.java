@@ -1,6 +1,6 @@
 package gae_store_space.fakes;
 
-import gae_store_space.OnePageProcessor;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import org.junit.After;
 import org.junit.Before;
