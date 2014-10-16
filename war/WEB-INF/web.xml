@@ -37,7 +37,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>KnowIt</servlet-name>
-		<servlet-class>servlets.GetterUserInformation</servlet-class>
+		<servlet-class>servlets.SetterKnownIt</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>KnowIt</servlet-name>

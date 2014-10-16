@@ -1,6 +1,8 @@
 package servlets;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,5 +33,22 @@ public class SetterKnownIt extends HttpServlet {
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(jsonResponse);
+  }
+  
+  // FIXME: Update
+  @Override
+  public void doPut(HttpServletRequest request, HttpServletResponse response) {
+  	try {
+	  	BufferedReader br = 
+	  			new BufferedReader(new InputStreamReader(request.getInputStream()));
+	
+	  	String data = br.readLine();
+	  	
+	  	System.out.println(data);
+	  	
+	    // name is null
+  	} catch (IOException e) {
+  		throw new IllegalStateException(e);
+  	}
   }
 }
