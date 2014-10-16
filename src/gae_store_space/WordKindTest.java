@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Created by zaqwes on 5/12/14.
  */
-public class WordItemKindTest {
+public class WordKindTest {
   @Test
   public void testCompare() throws Exception {
     WordKind o1 = new WordKind("hello");
