@@ -23,11 +23,11 @@ import static org.junit.Assert.*;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class ContentPageKindTest {
+public class PageKindTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
-  public ContentPageKind buildContentPage(String pageName) {
+  public PageKind buildContentPage(String pageName) {
     return new OnePageProcessor().buildContentPage(pageName);
   }
 
@@ -41,7 +41,7 @@ public class ContentPageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    ContentPageKind page = buildContentPage(OnePageProcessor.defailtPageName);
+    PageKind page = buildContentPage(OnePageProcessor.defailtPageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
@@ -53,8 +53,8 @@ public class ContentPageKindTest {
     ofy().save().entity(buildContentPage(OnePageProcessor.defailtPageName)).now();
     
     // Очень медленно!!
-    ContentPageKind page =
-    		ofy().load().type(ContentPageKind.class)
+    PageKind page =
+    		ofy().load().type(PageKind.class)
     			.filter("name =", OnePageProcessor.defailtPageName)
     			.limit(1).first().now();
 
@@ -72,15 +72,15 @@ public class ContentPageKindTest {
     // TODO: Delete full page
   }
   
-  private ContentPageKind putPagesInStore() {
+  private PageKind putPagesInStore() {
   	// Check store
     String activePageName = OnePageProcessor.defailtPageName;
-    ContentPageKind loadedPage =
-      ofy().load().type(ContentPageKind.class).filter("name = ", activePageName).first().now();
+    PageKind loadedPage =
+      ofy().load().type(PageKind.class).filter("name = ", activePageName).first().now();
     assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
 
     // Create new page
-    ContentPageKind page = buildContentPage(activePageName);
+    PageKind page = buildContentPage(activePageName);
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
@@ -109,7 +109,7 @@ public class ContentPageKindTest {
     // TODO: Может лучше сделать ссылкой-ключом?
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
-  	ContentPageKind page = putPagesInStore();
+  	PageKind page = putPagesInStore();
 
     // queries
     Integer pointPosition = page.getGenerator(OnePageProcessor.defaultGenName).getPosition();
@@ -140,7 +140,7 @@ public class ContentPageKindTest {
   
   @Test 
   public void testGetPackedWordData() {
-  	ContentPageKind page = putPagesInStore();
+  	PageKind page = putPagesInStore();
   	Optional<WordDataValue> v = page.getWordData(OnePageProcessor.defaultGenName);
   	assertTrue(v.isPresent());
   } 

@@ -21,7 +21,7 @@ import org.apache.tika.parser.Parser;
 import org.xml.sax.ContentHandler;
 
 import gae_store_space.ContentItemKind;
-import gae_store_space.ContentPageKind;
+import gae_store_space.PageKind;
 import gae_store_space.WordKind;
 
 import java.io.ByteArrayInputStream;
@@ -76,7 +76,7 @@ public class OnePageProcessor {
   	return convertSubtitlesToPlainText(rawText);  	
   }
 
-  public ContentPageKind buildContentPage(String pageName) {
+  public PageKind buildContentPage(String pageName) {
     String filename = getTestFileName();
     
     // Phase I
@@ -114,7 +114,7 @@ public class OnePageProcessor {
     return "./test_data/korra/data.srt";
   }
   
-  public ContentPageKind build(String name, ArrayList<ContentItemKind> contentElements) {
+  public PageKind build(String name, ArrayList<ContentItemKind> contentElements) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	
     // TODO: BAD! В страницу собрана обработка
@@ -156,6 +156,6 @@ public class OnePageProcessor {
     }
 
     // Слова сортированы
-    return new ContentPageKind(name, contentElements, words);
+    return new PageKind(name, contentElements, words);
   }
 }
