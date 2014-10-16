@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import servlets.protocols.PathValue;
 import net.jcip.annotations.NotThreadSafe;
 
+import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
 @NotThreadSafe
@@ -22,6 +23,10 @@ public class FileAccepter extends HttpServlet {
   private static final long serialVersionUID = -8709394805924640800L;
   
 	private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+	
+	private ImmutableList<String> process(ArrayList<String> in) {
+		return ImmutableList.copyOf(in);
+	}
 
 	// http://commons.apache.org/proper/commons-fileupload/using.html
 	@Override
