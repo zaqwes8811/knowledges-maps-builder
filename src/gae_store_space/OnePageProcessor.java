@@ -20,7 +20,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OnePageBuilder {
+public class OnePageProcessor {
 	public static final String defailtPageName = "Korra";
 	public static final String defaultGenName = "Gen";
 	public static final String defaultUserId = "user";

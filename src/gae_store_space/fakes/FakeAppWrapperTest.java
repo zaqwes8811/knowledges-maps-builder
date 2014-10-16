@@ -1,6 +1,6 @@
 package gae_store_space.fakes;
 
-import gae_store_space.OnePageBuilder;
+import gae_store_space.OnePageProcessor;
 
 import org.junit.After;
 import org.junit.Before;
@@ -25,7 +25,7 @@ public class FakeAppWrapperTest {
 	@Test
 	public void testGetUserInformation() {
 		FakeAppWrapper a = FakeAppWrapper.getInstance();
-		new Gson().toJson(a.getUserInformation(OnePageBuilder.defaultUserId));
+		new Gson().toJson(a.getUserInformation(OnePageProcessor.defaultUserId));
 	}
 
 }
