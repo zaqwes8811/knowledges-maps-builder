@@ -3,9 +3,9 @@ package servlets;
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.gson.Gson;
 
-import gae_store_space.OnePageProcessor;
 import gae_store_space.ContentPageKind;
 import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

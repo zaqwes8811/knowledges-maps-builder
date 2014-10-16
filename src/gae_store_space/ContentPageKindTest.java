@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import servlets.protocols.WordDataValue;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.IOException;
 import java.util.ArrayList;

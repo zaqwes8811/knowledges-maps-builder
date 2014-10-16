@@ -1,10 +1,16 @@
-package gae_store_space;
+package gae_store_space.high_perf;
 
 import core.mapreduce.CountReducer;
 import core.mapreduce.CounterMapper;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+
+import gae_store_space.ContentItemKind;
+import gae_store_space.ContentPageKind;
+import gae_store_space.WordKind;
+import gae_store_space.WordKind.WordValue;
+import gae_store_space.WordKind.WordValueFrequencyComparator;
 
 import java.util.ArrayList;
 import java.util.Collection;
