@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +30,11 @@ public class FileAccepter extends HttpServlet {
 		if (in.size() < 3)
 			throw new IllegalArgumentException();
 		
+		List<String> workSpace = in.subList(1, in.size()-1);
+		for(String line: workSpace)
+			common.Tools.print(line);
+
+		String contentDisposition = workSpace.get(0);
 		// выделяем заголовок
 		// name
 		// filename
@@ -53,10 +59,10 @@ public class FileAccepter extends HttpServlet {
 	  	String line;
 	    while ((line = reader.readLine()) != null) {
 	    	lines.add(line);
-	    	System.out.println(line);
 	    }
 	    
 	    // purge from headers and bottoms
+	    process(lines);
 	  	
 	  	// response
 	  	response.setContentType("text/html");
