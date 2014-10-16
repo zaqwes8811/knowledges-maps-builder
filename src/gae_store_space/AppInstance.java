@@ -20,14 +20,14 @@ public class AppInstance {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
 		//
-  	ofy().delete().keys(ofy().load().type(ContentPageKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(ActiveDistributionGenKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
   	
   	{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
-	  	ContentPageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName);
+	  	PageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName);
 	  	ofy().save().entity(p0).now();
 	  	
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -40,7 +40,7 @@ public class AppInstance {
   	}
   	
   	{
-  		ContentPageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName+"_fake");
+  		PageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName+"_fake");
     	ofy().save().entity(p0).now();
     	
     	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -55,7 +55,7 @@ public class AppInstance {
   	// Try read
   	///*
   	// Скрыл, но должно работать!!
-  	List<ContentPageKind> pages = ofy().load().type(ContentPageKind.class).filter("name = ", defaultPageName).list();
+  	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", defaultPageName).list();
   	
   	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
   	if (pages.isEmpty()) 
@@ -68,10 +68,10 @@ public class AppInstance {
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public 
 	//synchronized  // не в этом дело 
-	ContentPageKind getPage(String name) {
+	PageKind getPage(String name) {
 		
-		List<ContentPageKind> pages = 
-    		ofy().load().type(ContentPageKind.class).filter("name = ", name).list();
+		List<PageKind> pages = 
+    		ofy().load().type(PageKind.class).filter("name = ", name).list();
     
     if (pages.size() != 1)
   		throw new IllegalStateException();
@@ -96,11 +96,11 @@ public class AppInstance {
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: пока без фильтра пользователя
-		List<ContentPageKind> pages = 
-    		ofy().load().type(ContentPageKind.class).list();
+		List<PageKind> pages = 
+    		ofy().load().type(PageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
-		for (ContentPageKind page: pages) {
+		for (PageKind page: pages) {
 			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
 		}
 		
@@ -108,7 +108,7 @@ public class AppInstance {
 	}
 	
 	public void disablePoint(PathValue p) {
-		ContentPageKind page = getPage(p.pageName);
+		PageKind page = getPage(p.pageName);
 		ActiveDistributionGenKind g = page.getGenerator(p.genName);
 		g.disablePoint(p.pointPos);
 		

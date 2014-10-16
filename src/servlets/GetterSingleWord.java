@@ -3,7 +3,7 @@ package servlets;
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.gson.Gson;
 
-import gae_store_space.ContentPageKind;
+import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
@@ -32,7 +32,7 @@ public class GetterSingleWord extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    ContentPageKind p = app.getPage(OnePageProcessor.defailtPageName);
+    PageKind p = app.getPage(OnePageProcessor.defailtPageName);
     WordDataValue v = p.getWordData(OnePageProcessor.defaultGenName).get();
     String jsonResponse = new Gson().toJson(v);
 
