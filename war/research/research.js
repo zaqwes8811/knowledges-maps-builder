@@ -329,6 +329,7 @@ $(function() {
   gPlotView.reset();
 
 
+  // http://hayageek.com/ajax-file-upload-jquery/
   var options = { 
     beforeSend: function() {
         $("#progress").show();
