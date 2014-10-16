@@ -86,7 +86,8 @@ function View(dal) {
 
 View.prototype.uploadFile = function () {
   // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
-  // Вроде бы трудно на голом jQ and Ajax
+  // Вроде бы трудно на голом jQ and Ajax - "Doing this kind of uploading hacks is not an enjoyable experience"
+  // http://malsup.com/jquery/form/#ajaxForm
 }
 
 View.prototype.getCurrentPageName = function () {
