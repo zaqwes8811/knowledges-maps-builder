@@ -116,11 +116,11 @@ public class WordKind {
   }
 
   public static class WordValue {
-    final Integer frequency;
-    final String word;
-    final Collection<ContentItemKind> items;
+    public final Integer frequency;
+    public final String word;
+    public final Collection<ContentItemKind> items;
 
-    WordValue(String word, Integer frequency, Collection<ContentItemKind> c) {
+    public WordValue(String word, Integer frequency, Collection<ContentItemKind> c) {
       this.word = word;
       this.frequency = frequency;
       this.items = c;
