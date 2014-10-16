@@ -11,31 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.checkthread.annotations.NotThreadSafe;
 
+import servlets.protocols.PathValue;
+
 import com.google.gson.Gson;
 
 @NotThreadSafe
 public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
-  
-  @Override
-  public void doGet(
-  		HttpServletRequest request,
-  		HttpServletResponse response) throws ServletException, IOException
-  	{
 
-    response.setContentType("text/html");
-    response.setStatus(HttpServletResponse.SC_OK);
-
-    // TODO: Сделать декоратор для класса
-    // TODO: Это хардкод!
-    Integer idxNode = 0;
-    String jsonResponse = new Gson().toJson(idxNode);
-
-    response.setCharacterEncoding("UTF-8");
-    response.getWriter().println(jsonResponse);
-  }
-  
-  // FIXME: Update
   @Override
   public void doPut(HttpServletRequest request, HttpServletResponse response) {
   	try {
@@ -44,7 +27,9 @@ public class SetterKnownIt extends HttpServlet {
 	
 	  	String data = br.readLine();
 	  	
-	  	System.out.println(data);
+	  	PathValue p = new Gson().fromJson(data, PathValue.class);
+	  	
+	  	System.out.println(p);
 	  	
 	    // name is null
   	} catch (IOException e) {
