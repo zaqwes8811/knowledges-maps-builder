@@ -112,5 +112,8 @@ public class FakeAppWrapper {
 	public void disablePoint(PathValue p) {
 		ContentPageKind page = getPage(p.pageName);
 		ActiveDistributionGenKind g = page.getGenerator(p.genName);
+		g.disablePoint(p.pointPos);
+		
+		ofy().save().entity(g).now();
 	} 
 }
