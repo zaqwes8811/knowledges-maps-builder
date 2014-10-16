@@ -10,30 +10,7 @@ import java.util.regex.Pattern;
 import org.javatuples.Pair;
 import org.junit.Test;
 
-public class JavaRegexTest {
-	
-	public Pair<String, String> getNameAndFilename(String value) {
-		Pattern pattern = Pattern.compile("\".*?\"");
-		Matcher matcher = pattern.matcher(value);
-		
-		boolean found = false;
-		ArrayList<String> r = new ArrayList<String>();
-    while (matcher.find()) {
-			int beg = matcher.start();
-			int end = matcher.end();
-			found = true;
-			  
-			if ((end - beg) > 2)
-				r.add(value.substring(matcher.start()+1, matcher.end()-1));
-    }
-    
-    if(found) {
-    	return Pair.fromCollection(r);
-    } else {
-    	return Pair.with("",  "");
-    }
-	}
-	
+public class ParserPOSTFileTest {
 	@Test
 	public void testParsePOSTFile() {
 		// http://docs.oracle.com/javase/tutorial/essential/regex/test_harness.html
@@ -65,8 +42,9 @@ public class JavaRegexTest {
 	
 	@Test
 	public void testFolded() {
+		ParserPOSTFile p = new ParserPOSTFile();
 		String value = "Content-Disposition: form-data; name=\"myfile\"; filename=\"2_data.srt\"";
-		Pair<String, String> r = this.getNameAndFilename(value);
+		Pair<String, String> r = p.getNameAndFilename(value);
 		assertFalse(r.getValue0().isEmpty());
 		assertFalse(r.getValue1().isEmpty());
 	}
