@@ -1,9 +1,6 @@
-package gae_store_space.fakes;
+package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
-import gae_store_space.ActiveDistributionGenKind;
-import gae_store_space.ContentPageKind;
-import gae_store_space.WordKind;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import java.util.ArrayList;
@@ -15,11 +12,11 @@ import servlets.protocols.PathValue;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 
-public class FakeAppWrapper {
+public class AppInstance {
 	public static final String defaultPageName = "Korra";
 	public static final String defaultGenName = "No";
 	
-	public FakeAppWrapper() {
+	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
 		//
@@ -82,16 +79,16 @@ public class FakeAppWrapper {
     return pages.get(0);  // 1 item
 	}
 
-	private static FakeAppWrapper w = null;
+	private static AppInstance w = null;
 	static {
-		w = new FakeAppWrapper(); 
+		w = new AppInstance(); 
 	}
 	
 	private static class Holder {
-		static final FakeAppWrapper w = new FakeAppWrapper();
+		static final AppInstance w = new AppInstance();
 	}
 	
-	public static FakeAppWrapper getInstance() {
+	public static AppInstance getInstance() {
 		return w;
 	}
 	
