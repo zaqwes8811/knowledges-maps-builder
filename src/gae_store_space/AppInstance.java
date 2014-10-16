@@ -13,8 +13,8 @@ import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 
 public class AppInstance {
-	public static final String defaultPageName = "Korra";
-	public static final String defaultGenName = "No";
+	//public static final String defaultPageName = "Korra";
+	//public static final String defaultGenName = "No";
 	
 	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
@@ -27,7 +27,7 @@ public class AppInstance {
   	{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
-	  	PageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName);
+	  	PageKind p0 = new OnePageProcessor().buildContentPage(OnePageProcessor.defaultPageName);
 	  	ofy().save().entity(p0).now();
 	  	
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -40,7 +40,7 @@ public class AppInstance {
   	}
   	
   	{
-  		PageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName+"_fake");
+  		PageKind p0 = new OnePageProcessor().buildContentPage(OnePageProcessor.defaultPageName+"_fake");
     	ofy().save().entity(p0).now();
     	
     	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -55,7 +55,7 @@ public class AppInstance {
   	// Try read
   	///*
   	// Скрыл, но должно работать!!
-  	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", defaultPageName).list();
+  	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", OnePageProcessor.defaultPageName).list();
   	
   	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
   	if (pages.isEmpty()) 
