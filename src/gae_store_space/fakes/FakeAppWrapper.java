@@ -2,7 +2,7 @@ package gae_store_space.fakes;
 
 import static gae_store_space.OfyService.ofy;
 import gae_store_space.ActiveDistributionGenKind;
-import gae_store_space.OnePageBuilder;
+import gae_store_space.OnePageProcessor;
 import gae_store_space.ContentPageKind;
 import gae_store_space.WordKind;
 
@@ -30,7 +30,7 @@ public class FakeAppWrapper {
   	{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
-	  	ContentPageKind p0 = new OnePageBuilder().buildContentPage(defaultPageName);
+	  	ContentPageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName);
 	  	ofy().save().entity(p0).now();
 	  	
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -43,7 +43,7 @@ public class FakeAppWrapper {
   	}
   	
   	{
-  		ContentPageKind p0 = new OnePageBuilder().buildContentPage(defaultPageName+"_fake");
+  		ContentPageKind p0 = new OnePageProcessor().buildContentPage(defaultPageName+"_fake");
     	ofy().save().entity(p0).now();
     	
     	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!

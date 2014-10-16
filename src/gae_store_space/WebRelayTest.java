@@ -97,7 +97,7 @@ public class WebRelayTest {
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
     // store page
-    ContentPageKind page = new OnePageBuilder().buildContentPage("Korra");
+    ContentPageKind page = new OnePageProcessor().buildContentPage("Korra");
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
