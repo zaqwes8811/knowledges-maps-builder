@@ -91,7 +91,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
     this.distribution = distribution;
     reloadGenerator(distribution);
-    name = OnePageBuilder.defaultGenName;
+    name = OnePageProcessor.defaultGenName;
   }
 
   public void disablePoint(Integer idx) {
@@ -111,7 +111,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
 
   
   private ActiveDistributionGenKind() { 
-  	name = OnePageBuilder.defaultGenName;
+  	name = OnePageProcessor.defaultGenName;
   }
   
   // похоже при восстановлении вызывается он
