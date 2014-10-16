@@ -350,10 +350,11 @@ $(function() {
     },
     complete: function(response) {
         $("#message").html("<font color='green'>"+response.responseText+"</font>");
+
+        // FIXME: обновить бы данные страницы - списки страниц и генераторов
     },
     error: function() {
         $("#message").html("<font color='red'> ERROR: unable to upload files</font>");
- 
     }
   }; 
  
