@@ -110,29 +110,22 @@ View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
-View.prototype._markIsKnowIt = function(context) {
-  if (this.currentWordData.isActive()) {
-    // this represents the checkbox that was checked
-    // do something with it
-    var $this = context;
-    if ($this.is(':checked')) {
-      // думается лучше выполнить синхронно, хотя если здесь, то все равно
-      // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-      var page = this.getCurrentPageName();
-      if (!page)
-        return;
+View.prototype._markIsKnowIt = function() {
+  // думается лучше выполнить синхронно, хотя если здесь, то все равно
+  // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+  var page = this.getCurrentPageName();
+  if (!page)
+    return;
 
-      var gen = this.getCurrentGenName();
-      if (!gen)
-        return;
+  var gen = this.getCurrentGenName();
+  if (!gen)
+    return;
 
-      var pointPos = this.currentWordData.getPos();
+  var pointPos = this.currentWordData.getPos();
 
-      var point = new protocols.PathValue(page, gen, pointPos);
+  var point = new protocols.PathValue(page, gen, pointPos);
 
-      this.dal.markIsDone(point);
-    }
-  }
+  this.dal.markIsDone(point);
 }
 
 // Actions
@@ -147,13 +140,20 @@ View.prototype.reload = function() {
 
   // FIXME: don't work in constructor
   $('#know_it').change(function() {
-    self._markIsKnowIt($(this));
+    if (self.currentWordData.isActive()) {
+      var $this = $(this);
+      if ($this.is(':checked')) {
+        self._markIsKnowIt();
+      }
+    }
   });
 }
 
 View.prototype.onGetWordPackage = function () { 
   // Нужны еще данные - страница и имя генератора
   var self = this;
+
+  //this._markIsKnowIt();  // FAKE
 
   // делаем запрос
   this.dal.getWordPkgAsync(function(data) {
@@ -190,7 +190,9 @@ PlotView.prototype.plot = function (distribution) {
   _.each(distribution, function(e, index) {
     var elem = new protocols.DistributionElem(e);  // FIXME: bad - можно и напрямую пользоваться
     self.store[index] = 'Position : ' + index;
-    allPoints.push([index, elem.frequency]);
+
+    //if (elem.enabled)  // FAKE
+      allPoints.push([index, elem.frequency]);
 
     if (!elem.enabled)
       disabledPoints.push([index, elem.frequency]);
