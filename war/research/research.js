@@ -49,7 +49,7 @@ CurrentWordData.prototype.set = function (data) {
 }
 
 CurrentWordData.prototype.getPos = function () {
-  return this.data.PointValuePos;
+  return this.data.pointPos;
 }
 
 CurrentWordData.prototype.isActive = function () {
@@ -129,6 +129,7 @@ View.prototype._markIsKnowIt = function(context) {
       var pointPos = this.currentWordData.getPos();
 
       var point = new protocols.PathValue(page, gen, pointPos);
+
       this.dal.markIsDone(point);
     }
   }
@@ -262,10 +263,18 @@ DataAccessLayer.prototype.onError = function (message) {
 DataAccessLayer.prototype.markIsDone = function (point) {
   var self = this;
   var uri = '/know_it';
-  var args = point;
-  $.get(uri, args)
-    .error(function(data) { self.onError(data); });
+  
+  //$.get(uri, args)
+  //  .error(function(data) { self.onError(data); });
   // FIXME: better sync()
+
+  $.ajax({
+    type: "PUT",
+    url: uri,
+    data : JSON.stringify(point)
+  }).error(function(data) { self.onError(data); });;
+
+
 }
 
 DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
