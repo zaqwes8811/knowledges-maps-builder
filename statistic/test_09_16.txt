@@ -27,5 +27,8 @@ http://stackoverflow.com/questions/2664738/using-java-executor-on-appengine-caus
 Много считать нельзя - зак. cpu квота
 Потоки можно, но по особому запускать и не больее 50 на запрос
 
+Cloud
+https://cloud.google.com/appengine/docs/java/?csw=1#threads
+
 Solutions may be:
   кеширование запросов к базе данных

@@ -2,7 +2,7 @@ package servlets.research;
 
 import gae_store_space.ActiveDistributionGenKind;
 import gae_store_space.ContentPageKind;
-import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.IOException;
@@ -28,7 +28,7 @@ import static gae_store_space.OfyService.ofy;
 public class GetDistribution extends HttpServlet {
   private static final long serialVersionUID = 4122657047047348423L;
   
-  private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+  private AppInstance app = AppInstance.getInstance(); 
   
 	@Override
   public void doGet(
@@ -37,8 +37,8 @@ public class GetDistribution extends HttpServlet {
   {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-		ContentPageKind page = app.getPage(FakeAppWrapper.defaultPageName);  // FIXME: страница тоже может быть не найдена
-  	ActiveDistributionGenKind gen = page.getGenerator(FakeAppWrapper.defaultGenName);
+		ContentPageKind page = app.getPage(AppInstance.defaultPageName);  // FIXME: страница тоже может быть не найдена
+  	ActiveDistributionGenKind gen = page.getGenerator(AppInstance.defaultGenName);
   	
   	String r = "";
   	response.setContentType("text/html");

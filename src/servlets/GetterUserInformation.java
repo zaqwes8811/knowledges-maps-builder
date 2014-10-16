@@ -1,6 +1,6 @@
 package servlets;
 
-import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class GetterUserInformation extends HttpServlet {
 	 */
   private static final long serialVersionUID = 5249671566813631715L;
   
-	private FakeAppWrapper app = FakeAppWrapper.getInstance(); 
+	private AppInstance app = AppInstance.getInstance(); 
 
 	@Override
   public void doGet(

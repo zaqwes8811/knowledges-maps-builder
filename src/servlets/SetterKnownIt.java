@@ -1,7 +1,7 @@
 package servlets;
 
 import gae_store_space.ContentPageKind;
-import gae_store_space.fakes.FakeAppWrapper;
+import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.BufferedReader;
@@ -25,7 +25,7 @@ import com.google.gson.Gson;
 public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
   
-  private FakeAppWrapper w = FakeAppWrapper.getInstance();
+  private AppInstance w = AppInstance.getInstance();
 
   @Override
   public void doPut(HttpServletRequest request, HttpServletResponse response) {
