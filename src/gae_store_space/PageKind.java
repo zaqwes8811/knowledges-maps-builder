@@ -37,8 +37,8 @@ import core.math.DistributionElement;
 
 @NotThreadSafe
 @Entity
-public class ContentPageKind {
-  private ContentPageKind() { }
+public class PageKind {
+  private PageKind() { }
   
   public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
 
@@ -92,7 +92,7 @@ public class ContentPageKind {
     g = Key.create(gen);
   }
 
-  public ContentPageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordKind> words) {
+  public PageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordKind> words) {
     this.name = Optional.of(name).get();
     for (WordKind word: words) this.wordKeys.add(Key.create(word));
     for (ContentItemKind item: items) this.contentItems.add(Key.create(item));

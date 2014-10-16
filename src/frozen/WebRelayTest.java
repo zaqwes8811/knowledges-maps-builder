@@ -13,7 +13,7 @@ import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
 import gae_store_space.ActiveDistributionGenKind;
-import gae_store_space.ContentPageKind;
+import gae_store_space.PageKind;
 import gae_store_space.high_perf.OnePageProcessor;
 
 import org.eclipse.jetty.server.Handler;
@@ -100,7 +100,7 @@ public class WebRelayTest {
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
     // store page
-    ContentPageKind page = new OnePageProcessor().buildContentPage("Korra");
+    PageKind page = new OnePageProcessor().buildContentPage("Korra");
     ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);

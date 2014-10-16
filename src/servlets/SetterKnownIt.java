@@ -1,6 +1,6 @@
 package servlets;
 
-import gae_store_space.ContentPageKind;
+import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 

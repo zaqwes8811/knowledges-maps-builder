@@ -1,7 +1,7 @@
 package servlets.research;
 
 import gae_store_space.ActiveDistributionGenKind;
-import gae_store_space.ContentPageKind;
+import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
 import gae_store_space.high_perf.OnePageProcessor;
 
@@ -37,7 +37,7 @@ public class GetDistribution extends HttpServlet {
   {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-		ContentPageKind page = app.getPage(AppInstance.defaultPageName);  // FIXME: страница тоже может быть не найдена
+		PageKind page = app.getPage(AppInstance.defaultPageName);  // FIXME: страница тоже может быть не найдена
   	ActiveDistributionGenKind gen = page.getGenerator(AppInstance.defaultGenName);
   	
   	String r = "";
