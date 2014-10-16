@@ -84,6 +84,11 @@ function View(dal) {
   this.userSummary = new UserSummary([]);
 }
 
+View.prototype.uploadFile = function () {
+  // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
+  // Вроде бы трудно на голом jQ and Ajax
+}
+
 View.prototype.getCurrentPageName = function () {
   return $('#pages > option:selected').text();
 }
