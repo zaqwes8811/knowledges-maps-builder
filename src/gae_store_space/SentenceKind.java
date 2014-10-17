@@ -7,8 +7,9 @@ import com.googlecode.objectify.annotation.Id;
 public class SentenceKind {
   // ctor/...
   private SentenceKind() {}
-  public SentenceKind(String item) {
-    this.sentence = item;
+  
+  public SentenceKind(String sentence) {
+    this.sentence = sentence;
   }
 
   @Id
