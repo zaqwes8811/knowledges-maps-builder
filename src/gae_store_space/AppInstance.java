@@ -6,10 +6,39 @@ import gae_store_space.high_perf.OnePageProcessor;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.base.Optional;
+
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
 
 public class AppInstance {
+	private final OnePageProcessor processor = new OnePageProcessor();
+	
+	public PageKind createPageIfNotExist(String name, String text, String type) {
+		// FIXME: add user info
+		Optional<List<PageKind>> pages = 
+				Optional.fromNullable(ofy().load().type(PageKind.class).filter("name = ", name).list());
+		
+		if (!pages.isPresent()) {
+	  	// Own tables
+	  	// FIXME: GAE can't read file.
+	  	PageKind p0 = processor.buildPageKind(OnePageProcessor.defaultPageName, processor.getTestFileName());
+	  	ofy().save().entity(p0).now();
+	  	
+	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
+	  	
+	  	// add generator
+	  	GeneratorKind g = GeneratorKind.create(p0.getRawDistribution());
+	  	ofy().save().entity(g).now();
+	  	p0.setGenerator(g);
+	  	ofy().save().entity(p0).now();
+			
+			return p0;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
+	
 	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
@@ -21,7 +50,7 @@ public class AppInstance {
   	{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
-	  	PageKind p0 = new OnePageProcessor().buildContentPage(OnePageProcessor.defaultPageName);
+	  	PageKind p0 = processor.buildPageKind(OnePageProcessor.defaultPageName, processor.getTestFileName());
 	  	ofy().save().entity(p0).now();
 	  	
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -34,7 +63,7 @@ public class AppInstance {
   	}
   	
   	{
-  		PageKind p0 = new OnePageProcessor().buildContentPage(OnePageProcessor.defaultPageName+"_fake");
+  		PageKind p0 = processor.buildPageKind(OnePageProcessor.defaultPageName+"_fake", processor.getTestFileName());
     	ofy().save().entity(p0).now();
     	
     	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
@@ -89,8 +118,7 @@ public class AppInstance {
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: пока без фильтра пользователя
-		List<PageKind> pages = 
-    		ofy().load().type(PageKind.class).list();
+		List<PageKind> pages = ofy().load().type(PageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) {
