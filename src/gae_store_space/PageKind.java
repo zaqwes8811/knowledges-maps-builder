@@ -80,7 +80,7 @@ public class PageKind {
   	return gen.get(0);
   }
   
-  public List<String> getGenNames() {
+  public List<String> getGenNames_fake() {
   	GeneratorKind g = getGenerator(null);
   	List<String> r = new ArrayList<String>();
   	r.add(g.name); 	
@@ -98,8 +98,11 @@ public class PageKind {
 
   public PageKind(String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words) {
     this.name = Optional.of(name).get();
-    for (WordKind word: words) this.wordKeys.add(Key.create(word));
-    for (SentenceKind item: items) this.contentItems.add(Key.create(item));
+    for (WordKind word: words) 
+    	this.wordKeys.add(Key.create(word));
+    
+    for (SentenceKind item: items) 
+    	this.contentItems.add(Key.create(item));
   }
 
   // About: Возвращать частоты, сортированные по убыванию.

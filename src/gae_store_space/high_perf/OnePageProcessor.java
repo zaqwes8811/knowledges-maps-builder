@@ -57,18 +57,8 @@ public class OnePageProcessor {
     // Phase I
     String plainText = getGetPlainTextFromFile(filename);
     // Last - Persist page
-    return buildPageKindFromPlainText(pageName, plainText);
+    return build(pageName, plainText);
   }
-  
-  public PageKind buildPageKindFromPlainText(String pageName, String plainText) {  
-    // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-    ArrayList<SentenceKind> contentElements = getContentElements(plainText);
-
-    // Last - Persist page
-    return build(pageName, contentElements);
-  }
-  
-  //public PageKind buildContentPageFromPlainText() { }
 
   private ArrayList<SentenceKind> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
@@ -86,8 +76,9 @@ public class OnePageProcessor {
   }
   
   // FIXME: to expensive
-  private PageKind build(String name, ArrayList<SentenceKind> contentElements) {
+  private PageKind build(String name, String plainText) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
+  	ArrayList<SentenceKind> contentElements = getContentElements(plainText);
   	
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
@@ -110,21 +101,11 @@ public class OnePageProcessor {
 
     ArrayList<WordKind> words = new ArrayList<WordKind>();
     {
-      // WARNING: Порядок важен! Важно сохранить елементы до того как присоединять
-      //   к словам.
-      //
-      // Persist content contentItems
-      // TODO: как вынести в транзакцию?
-      ofy().save().entities(contentElements).now();
-
       for (int i = 0; i < value.size(); i++) {
         WordKind.WordValue v = value.get(i);
-        words.add(WordKind.create(v.word, v.items, v.frequency));
+        words.add(WordKind.create(v.word, v.sentences, v.frequency));
         words.get(i).setPointPos(i);
       }
-
-      // TODO: вынести все операции с базой данных сюда
-      ofy().save().entities(words).now();
     }
 
     // Слова сортированы
