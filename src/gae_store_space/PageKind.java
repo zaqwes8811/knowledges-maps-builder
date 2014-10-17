@@ -17,6 +17,7 @@
 package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,8 +50,8 @@ public class PageKind {
 
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  @Ignore private ArrayList<WordKind> words = new ArrayList<WordKind>();
-  @Ignore private List<SentenceKind> sentences = new ArrayList<SentenceKind>();
+  @Ignore private ArrayList<WordKind> wordKinds = new ArrayList<WordKind>();
+  @Ignore private List<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
@@ -59,6 +60,35 @@ public class PageKind {
   private List<Key<GeneratorKind>> generators;  // FIXME: вообще это проблема!!
   
   public String getName() { return name; }
+  
+  public static Optional<PageKind> restore(String pageName) {
+  	List<PageKind> pages = 
+    		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
+    
+    if (pages.size() != 1)
+  		throw new IllegalStateException();
+    
+    return Optional.fromNullable(pages.get(0));  // 1 item
+  }
+   
+  public static PageKind createPageIfNotExist(String name, String text) {
+		// FIXME: add user info
+		List<PageKind> pages = 
+				ofy().load().type(PageKind.class).filter("name = ", name).list();
+		
+		if (pages.isEmpty()) {
+			OnePageProcessor processor = new OnePageProcessor();
+	  	PageKind page = processor.build(name, text);
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
+	  	ofy().save().entity(defaultGenerator).now();
+	  	
+	  	page.setGenerator(defaultGenerator);
+	  	ofy().save().entity(page).now();
+			return page;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
   
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
@@ -90,21 +120,18 @@ public class PageKind {
     generators.add(Key.create(gen));
   }
 
+  // Это при создании с нуля
   public PageKind(
   		String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words, String rawSource) 
   	{
     this.name = Optional.of(name).get();
-   	this.words = words;
-   	this.sentences = items;    
+   	this.wordKinds = words;
+   	this.sentencesKinds = items;    
     this.rawSource = rawSource;
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
   public ArrayList<DistributionElement> getRawDistribution() {
-    // TODO: Отосортировать при выборке если можно
-    // TODO: может при запросе можно отсортировать?
-    List<WordKind> wordKinds = ofy().load().type(WordKind.class).filterKey("in", this.words).list();
-
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(wordKinds, WordKind.createFrequencyComparator());
     Collections.reverse(wordKinds);
@@ -136,12 +163,12 @@ public class PageKind {
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
   private WordKind getWordKind(Integer pos) {
-  	if (!(pos < this.words.size()))
+  	if (!(pos < this.wordKinds.size()))
   		throw new IllegalArgumentException();
   	
   	List<WordKind> kinds = 
 				ofy().load().type(WordKind.class)
-		    .filterKey("in", words).filter("pointPos =", pos)
+		    .filterKey("in", wordKinds).filter("pointPos =", pos)
 		    .list();
   	
   	// FIXME: over pro. It's illegal state checking - не должно быть такого

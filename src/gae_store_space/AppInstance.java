@@ -16,41 +16,17 @@ import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
 
 public class AppInstance {
-	private final OnePageProcessor processor = new OnePageProcessor();
+	
+	private final OnePageProcessor processor = new OnePageProcessor();	
 	
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
 			.maximumSize(1)
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
 						public Optional<PageKind> load(String key) {
-							System.out.println("reload");
-							List<PageKind> pages = 
-					    		ofy().load().type(PageKind.class).filter("name = ", key).list();
-					    
-					    if (pages.size() != 1)
-					  		throw new IllegalStateException();
-					    
-					    return Optional.fromNullable(pages.get(0));  // 1 item
+							return PageKind.restore(key);
 						}
 					});
-	
-	public PageKind createPageIfNotExist(String name, String text) {//, String type) {
-		// FIXME: add user info
-		List<PageKind> pages = 
-				ofy().load().type(PageKind.class).filter("name = ", name).list();
-		
-		if (pages.isEmpty()) {
-	  	PageKind page = processor.build(name, text);
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
-	  	ofy().save().entity(defaultGenerator).now();
-	  	
-	  	page.setGenerator(defaultGenerator);
-	  	ofy().save().entity(page).now();
-			return page;
-		} else {
-			throw new IllegalArgumentException();
-		}
-	}
 	
 	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
@@ -64,14 +40,15 @@ public class AppInstance {
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
   		String name = OnePageProcessor.defaultPageName;
+  		
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
-  		createPageIfNotExist(name, text);
+  		PageKind.createPageIfNotExist(name, text);
 	 	}
   	
   	{
   		String name = OnePageProcessor.defaultPageName+"_fake";
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
-  		createPageIfNotExist(name, text);
+  		PageKind.createPageIfNotExist(name, text);
   	}
   	
   	{
