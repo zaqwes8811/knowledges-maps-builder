@@ -6,6 +6,7 @@ import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
@@ -14,7 +15,8 @@ import java.util.*;
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class WordKind {
-	 public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
+	private WordKind() { }
+	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
 	 
   @Override
   public String toString() {
@@ -29,14 +31,16 @@ public class WordKind {
   private String word;
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
-  @Index
-  private Integer rawFrequency;  // Сколько раз встретилось слово.
+  // Сколько раз встретилось слово.
+  @Index private Integer rawFrequency;  
 
   // TODO: Как откешировать? Какой допустимый период между запросами?
   // https://developers.google.com/appengine/pricing
   // Вроде бы нет ограничения между запросами.
-  @Load
-  private Set<Key<SentenceKind>> sentences = new HashSet<Key<SentenceKind>>();
+  //@Load private Set<Key<SentenceKind>> sentences = new HashSet<Key<SentenceKind>>();
+  //
+  // May be make final
+  @Ignore private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
@@ -49,13 +53,13 @@ public class WordKind {
   	return word;
   }
 
-  private WordKind() { }
-
   public Integer getRawFrequency() {
     return rawFrequency;
   }
 
-  public static WordKind create(String wordValue, Collection<SentenceKind> sentencess, int rawFrequency) {
+  public static WordKind create(
+  		String wordValue, Collection<SentenceKind> sentencess, int rawFrequency) 
+  	{
     return new WordKind(wordValue, sentencess, rawFrequency);
   }
 
@@ -63,14 +67,11 @@ public class WordKind {
     pointPos = value;
   }
 
- 
   public ImmutableList<SentenceKind> getContendKinds() {
   	// берем часть
   	// FIXME: делать выборки с перемешиванием
   	return ImmutableList.copyOf(
-  			ofy().load().type(SentenceKind.class)
-  			.filterKey("in", sentences)
-  			.limit(MAX_CONTENT_ITEMS_IN_PACK).list());
+  			ofy().load().type(SentenceKind.class).filterKey("in", sentences).limit(MAX_CONTENT_ITEMS_IN_PACK).list());
   }
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
@@ -88,10 +89,7 @@ public class WordKind {
     this.rawFrequency = rawFrequency;
 
     // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
-    Set<SentenceKind> sentencesSet = new HashSet<SentenceKind>();
-    sentencesSet.addAll(sentencess);
-    for (SentenceKind value: sentencesSet)
-      sentences.add(Key.create(value));
+    sentences.addAll(sentencess);
   }
 
   private static class WordFreqComparator implements Comparator<WordKind> {
@@ -111,12 +109,12 @@ public class WordKind {
   public static class WordValue {
     public final Integer frequency;
     public final String word;
-    public final Collection<SentenceKind> items;
+    public final Collection<SentenceKind> sentences;
 
     public WordValue(String word, Integer frequency, Collection<SentenceKind> c) {
       this.word = word;
       this.frequency = frequency;
-      this.items = c;
+      this.sentences = c;
     }
   }
 
