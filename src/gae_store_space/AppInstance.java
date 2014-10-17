@@ -5,12 +5,34 @@ import gae_store_space.high_perf.OnePageProcessor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+
+import com.google.common.base.Optional;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
 
 public class AppInstance {
 	private final OnePageProcessor processor = new OnePageProcessor();
+	
+	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
+			.maximumSize(1)
+			.build(
+					new CacheLoader<String, Optional<PageKind>>() {
+						public Optional<PageKind> load(String key) {
+							System.out.println("reload");
+							List<PageKind> pages = 
+					    		ofy().load().type(PageKind.class).filter("name = ", key).list();
+					    
+					    if (pages.size() != 1)
+					  		throw new IllegalStateException();
+					    
+					    return Optional.fromNullable(pages.get(0));  // 1 item
+						}
+					});
 	
 	public PageKind createPageIfNotExist(String name, String text) {//, String type) {
 		// FIXME: add user info
@@ -59,7 +81,6 @@ public class AppInstance {
   	
   	{
 	  	// Try read
-	  	///*
 	  	// Скрыл, так как падало, но должно работать!!
 	  	List<PageKind> pages = 
 	  			ofy().load().type(PageKind.class).filter("name = ", OnePageProcessor.defaultPageName).list();
@@ -74,16 +95,12 @@ public class AppInstance {
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-	//synchronized  // не в этом дело 
-	public PageKind getPage(String nameName) {
-		
-		List<PageKind> pages = 
-    		ofy().load().type(PageKind.class).filter("name = ", nameName).list();
-    
-    if (pages.size() != 1)
-  		throw new IllegalStateException();
-    
-    return pages.get(0);  // 1 item
+	public PageKind getPage(String namePage) {
+		try {
+			return pagesCache.get(namePage).get();
+    } catch (ExecutionException e) {
+    	throw new RuntimeException(e);
+    }
 	}
 
 	private static class Holder {
