@@ -1,36 +1,23 @@
 package gae_store_space.high_perf;
 
-import static gae_store_space.OfyService.ofy;
+import gae_store_space.PageKind;
+import gae_store_space.SentenceKind;
+import gae_store_space.WordKind;
 
-import com.google.common.base.Charsets;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
-import com.google.common.io.Closer;
-
 import common.Tools;
+
 import core.mapreduce.CountReducer;
 import core.mapreduce.CounterMapper;
 import core.nlp.PlainTextTokenizer;
-import core.text_extractors.SpecialSymbols;
-import core.text_extractors.SubtitlesContentHandler;
-import core.text_extractors.SubtitlesParser;
-
-import org.apache.tika.parser.Parser;
-import org.xml.sax.ContentHandler;
-
-import gae_store_space.SentenceKind;
-import gae_store_space.PageKind;
-import gae_store_space.WordKind;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 public class OnePageProcessor {
 	public static final String defaultPageName = "Korra";
@@ -38,6 +25,10 @@ public class OnePageProcessor {
 	public static final String defaultUserId = "User";
 	
 	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
+	
+	public String getTestFileName() {
+    return "./test_data/korra/data.srt";
+  }
 	
   public String getGetPlainTextFromFile(String filename) {
   	try {
@@ -54,9 +45,7 @@ public class OnePageProcessor {
   }
  
   public PageKind buildPageKind(String pageName, String filename) {  
-    // Phase I
     String plainText = getGetPlainTextFromFile(filename);
-    // Last - Persist page
     return build(pageName, plainText);
   }
 
@@ -70,13 +59,10 @@ public class OnePageProcessor {
 
     return contentElements;
   }
-
-  public String getTestFileName() {
-    return "./test_data/korra/data.srt";
-  }
   
-  // FIXME: to expensive
-  private PageKind build(String name, String plainText) {
+  // FIXME: DevDanger: operation must be idempotent!!!
+  // Now no store operations
+  public PageKind build(String name, String plainText) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	ArrayList<SentenceKind> contentElements = getContentElements(plainText);
   	
@@ -99,13 +85,12 @@ public class OnePageProcessor {
     Collections.sort(value, new WordKind.WordValueFrequencyComparator());
     Collections.reverse(value);
 
+    // Элементы отсортированы - это важно!!
     ArrayList<WordKind> words = new ArrayList<WordKind>();
-    {
-      for (int i = 0; i < value.size(); i++) {
-        WordKind.WordValue v = value.get(i);
-        words.add(WordKind.create(v.word, v.sentences, v.frequency));
-        words.get(i).setPointPos(i);
-      }
+    for (int i = 0; i < value.size(); i++) {
+      WordKind.WordValue v = value.get(i);
+      words.add(WordKind.create(v.word, v.sentences, v.frequency));
+      words.get(i).setPointPos(i);
     }
 
     // Слова сортированы
