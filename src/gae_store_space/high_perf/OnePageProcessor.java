@@ -34,12 +34,12 @@ import java.util.List;
 
 public class OnePageProcessor {
 	public static final String defaultPageName = "Korra";
-	public static final String defaultGenName = "default";
-	public static final String defaultUserId = "user";
+	public static final String defaultGenName = "Default";
+	public static final String defaultUserId = "User";
 	
 	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
 	
-  private String getGetPlainTextFromSubtitlesFile(String filename) {
+  public String getGetPlainTextFromFile(String filename) {
   	try {
   		ArrayList<String> lines = new ArrayList<String>(Tools.fileToList(filename).asList());
   		return convertToPlainText(lines);
@@ -52,16 +52,15 @@ public class OnePageProcessor {
   	String rawText = Joiner.on('\n').join(lines);
   	return convertor.convert(rawText);  	
   }
-
-  private PageKind buildPageKind(String pageName) {
-    String filename = getTestFileName();
-    return buildPageKind(pageName, filename);
-  }
-  
+ 
   public PageKind buildPageKind(String pageName, String filename) {  
     // Phase I
-    String plainText = getGetPlainTextFromSubtitlesFile(filename);
-
+    String plainText = getGetPlainTextFromFile(filename);
+    // Last - Persist page
+    return buildPageKindFromPlainText(pageName, plainText);
+  }
+  
+  public PageKind buildPageKindFromPlainText(String pageName, String plainText) {  
     // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
     ArrayList<SentenceKind> contentElements = getContentElements(plainText);
 
@@ -82,20 +81,11 @@ public class OnePageProcessor {
     return contentElements;
   }
 
-  private String getPlainText() {
-    return
-      "Born of cold and Winter air And mountain rain combining, This icy force" +
-        "both foul and fair Has a frozen heart worth mining. Cut through the heart, Cold and Clear. Strike for love And" +
-        "Strike for fear. See the beauty Sharp and Sheer.  Split the ice apart" +
-        "And break the frozen heart. Hup! Ho! Watch your step! Let it go! Hup! Ho! " +
-        "Watch your step! Let it go! Beautiful! Powerful! Dangerous! Cold!";
-  }
-
   public String getTestFileName() {
-  	// FIXME: troubles on GAE
     return "./test_data/korra/data.srt";
   }
   
+  // FIXME: to expensive
   private PageKind build(String name, ArrayList<SentenceKind> contentElements) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	

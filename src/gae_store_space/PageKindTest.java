@@ -28,7 +28,8 @@ public class PageKindTest {
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
   public PageKind buildContentPage(String pageName) {
-    return new OnePageProcessor().buildContentPage(pageName);
+  	OnePageProcessor processor = new OnePageProcessor();
+    return processor.buildPageKind(pageName, processor.getTestFileName());
   }
 
   @Before

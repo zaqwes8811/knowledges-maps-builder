@@ -17,6 +17,7 @@ import org.javatuples.Pair;
 
 import net.jcip.annotations.NotThreadSafe;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
@@ -50,10 +51,9 @@ public class FileAccepter extends HttpServlet {
 			throw new IllegalArgumentException();
 		
 		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
-
-		
-		// Кажется будет перевод строки после заголовка
-		
+		app.createPageIfNotExist(
+				filename, 
+				Joiner.on('\n').join(workSpace.subList(2, workSpace.size()-1)));	
 		return ImmutableList.copyOf(in);
 	}
 
