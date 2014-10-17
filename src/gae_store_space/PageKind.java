@@ -60,10 +60,6 @@ public class PageKind {
   
   public String getName() { return name; }
   
-  public List<Key<WordKind>> getWordKeys() {
-  	return this.wordKeys;
-  }
-
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов

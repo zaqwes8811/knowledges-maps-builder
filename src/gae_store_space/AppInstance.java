@@ -41,16 +41,11 @@ public class AppInstance {
 		
 		if (pages.isEmpty()) {
 	  	PageKind page = processor.buildPageKindFromPlainText(name, text);
-	  	ofy().save().entity(page).now();
-	  	
-	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
-	  	
-	  	// add default generator
 	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
 	  	ofy().save().entity(defaultGenerator).now();
+	  	
 	  	page.setGenerator(defaultGenerator);
 	  	ofy().save().entity(page).now();
-			
 			return page;
 		} else {
 			throw new IllegalArgumentException();

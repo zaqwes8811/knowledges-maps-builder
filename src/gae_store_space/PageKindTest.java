@@ -94,6 +94,7 @@ public class PageKindTest {
     return page;
   }
 
+  @Deprecated
   @Test
   public void testGetWordData() {
     // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
@@ -115,6 +116,7 @@ public class PageKindTest {
     // queries
     Integer pointPosition = page.getGenerator(OnePageProcessor.defaultGenName).getPosition();
 
+    /*
     // слово одно, но если страниц много, то получим для всех
     List<WordKind> words = ofy().load()
         .type(WordKind.class)
@@ -137,6 +139,7 @@ public class PageKindTest {
       assertTrue(in);
     }
     // запрещаем точку
+    */
   }
   
   @Test 
