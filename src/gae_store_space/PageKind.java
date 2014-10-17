@@ -54,8 +54,7 @@ public class PageKind {
 
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
-  // все равно может упасть
-  // с единичным ключем фигня какая-то
+  // все равно может упасть. с единичным ключем фигня какая-то
   @Load  
   private List<Key<GeneratorKind>> generators;  // FIXME: вообще это проблема!!
   
@@ -67,7 +66,10 @@ public class PageKind {
   //     вводится только при создании, потом они только читаются.
   public GeneratorKind getGenerator(String name) {  
   	List<GeneratorKind> gen = 
-  			ofy().load().type(GeneratorKind.class).filterKey("in", generators).filter("name = ", name).list();
+  			ofy().load().type(GeneratorKind.class)
+	  			.filterKey("in", generators)
+	  			.filter("name = ", name)
+	  			.list();
   	
   	if (gen.isEmpty() || gen.size() != 1)
   		throw new IllegalStateException();
@@ -83,23 +85,18 @@ public class PageKind {
   	r.add(g.name); 	
   	return r;
   }
-  
-  // Пока поиска по словам нет, удаляем по позиции
-  public void markDone(Integer pos) {
-  	throw new UnsupportedOperationException();
-  }
 
   public void setGenerator(GeneratorKind gen) {
     generators.add(Key.create(gen));
   }
 
-  public PageKind(String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words) {
+  public PageKind(
+  		String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words, String rawSource) 
+  	{
     this.name = Optional.of(name).get();
-    for (WordKind word: words) 
-    	this.words.add(word);
-    
-    for (SentenceKind item: items) 
-    	this.sentences.add(item);
+   	this.words = words;
+   	this.sentences = items;    
+    this.rawSource = rawSource;
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
