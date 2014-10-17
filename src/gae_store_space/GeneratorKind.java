@@ -48,7 +48,7 @@ import gae_store_space.high_perf.OnePageProcessor;
 //
 @NotThreadSafe
 @Entity
-public class ActiveDistributionGenKind //implements DistributionGen  // no way
+public class GeneratorKind
 {
   @Id
   public Long id;
@@ -78,8 +78,8 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
 
   // Любой список с числами
   // @throws: GeneratorDistributionException
-  public static ActiveDistributionGenKind create(ArrayList<DistributionElement> distribution) {
-    return new ActiveDistributionGenKind(distribution);
+  public static GeneratorKind create(ArrayList<DistributionElement> distribution) {
+    return new GeneratorKind(distribution);
   }
 
   public Integer getPosition() {
@@ -90,7 +90,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
     gen = GeneratorAnyDistribution.create(distribution);
   }
 
-  private ActiveDistributionGenKind(ArrayList<DistributionElement> distribution) {
+  private GeneratorKind(ArrayList<DistributionElement> distribution) {
     this.distribution = distribution;
     reloadGenerator(distribution);
     name = OnePageProcessor.defaultGenName;
@@ -112,7 +112,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
   }
 
   
-  private ActiveDistributionGenKind() { 
+  private GeneratorKind() { 
   	name = OnePageProcessor.defaultGenName;
   }
   
@@ -136,7 +136,7 @@ public class ActiveDistributionGenKind //implements DistributionGen  // no way
     reloadGenerator(distribution);
   }
 
-  ActiveDistributionGenKind cloneGenerator() {
+  GeneratorKind cloneGenerator() {
     // Возможно еще придется что-то добавить
     return create(this.distribution);
   }

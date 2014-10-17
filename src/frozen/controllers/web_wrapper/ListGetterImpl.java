@@ -4,7 +4,7 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
-import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.GeneratorKind;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @Deprecated
 public class ListGetterImpl implements ListGetter {
   private final ImmutableNodeAccessor ACCESSOR_;
-  private final Optional<ActiveDistributionGenKind> GENERATOR_;
+  private final Optional<GeneratorKind> GENERATOR_;
   public ListGetterImpl(ImmutableNodeAccessor accessor) {
     ACCESSOR_ = accessor;
     ArrayList<Integer> distribution = ACCESSOR_.getDistribution();

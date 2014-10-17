@@ -20,7 +20,7 @@ import core.text_extractors.SubtitlesParser;
 import org.apache.tika.parser.Parser;
 import org.xml.sax.ContentHandler;
 
-import gae_store_space.ContentItemKind;
+import gae_store_space.SentenceKind;
 import gae_store_space.PageKind;
 import gae_store_space.WordKind;
 
@@ -83,19 +83,19 @@ public class OnePageProcessor {
     String plainText = getGetPlainTextFromSubtitlesFile(filename);
 
     // Phase II не всегда они разделены, но с случае с субтитрами точно разделены.
-    ArrayList<ContentItemKind> contentElements = getContentElements(plainText);
+    ArrayList<SentenceKind> contentElements = getContentElements(plainText);
 
     // Last - Persist page
     return build(pageName, contentElements);
   }
 
-  private ArrayList<ContentItemKind> getContentElements(String text) {
+  private ArrayList<SentenceKind> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
 
     // Пакуем
-    ArrayList<ContentItemKind> contentElements = new ArrayList<ContentItemKind>();
+    ArrayList<SentenceKind> contentElements = new ArrayList<SentenceKind>();
     for (String sentence: sentences)
-      contentElements.add(new ContentItemKind(sentence));
+      contentElements.add(new SentenceKind(sentence));
 
     return contentElements;
   }
@@ -114,11 +114,11 @@ public class OnePageProcessor {
     return "./test_data/korra/data.srt";
   }
   
-  public PageKind build(String name, ArrayList<ContentItemKind> contentElements) {
+  public PageKind build(String name, ArrayList<SentenceKind> contentElements) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	
     // TODO: BAD! В страницу собрана обработка
-    Multimap<String, ContentItemKind> wordHistogramSink = HashMultimap.create();
+    Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
     CountReducer reducer = new CountReducer(wordHistogramSink);
     CounterMapper mapper = new CounterMapper(reducer);
 
@@ -127,7 +127,7 @@ public class OnePageProcessor {
 
     ArrayList<WordKind.WordValue> value = new ArrayList<WordKind.WordValue>();
     for (String word: wordHistogramSink.keySet()) {
-      Collection<ContentItemKind> content = wordHistogramSink.get(word);
+      Collection<SentenceKind> content = wordHistogramSink.get(word);
       int rawFrequency = content.size();
       value.add(new WordKind.WordValue(word, rawFrequency, content));
     }

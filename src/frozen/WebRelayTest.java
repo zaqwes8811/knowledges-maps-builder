@@ -12,7 +12,7 @@ import frozen.crosscuttings.configurator.GlobalConfigurator;
 import frozen.crosscuttings.configurator.NoFoundConfigurationFile;
 import frozen.dal.accessors_text_file_storage.FabricImmutableNodeControllersImpl;
 import frozen.dal.accessors_text_file_storage.ImmutableNodeAccessor;
-import gae_store_space.ActiveDistributionGenKind;
+import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
 import gae_store_space.high_perf.OnePageProcessor;
 
@@ -101,7 +101,7 @@ public class WebRelayTest {
 
     // store page
     PageKind page = new OnePageProcessor().buildContentPage("Korra");
-    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
     ofy().save().entity(page).now();

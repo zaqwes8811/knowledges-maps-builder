@@ -26,24 +26,24 @@ public class WordKind {
 
   // TODO: может хранится стем или пара-тройка слов.
   //@Index  // пока не нему не ищем
-  String word;
+  private String word;
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   @Index
-  Integer rawFrequency;  // Сколько раз встретилось слово.
+  private Integer rawFrequency;  // Сколько раз встретилось слово.
 
   // TODO: Как откешировать? Какой допустимый период между запросами?
   // https://developers.google.com/appengine/pricing
   // Вроде бы нет ограничения между запросами.
   @Load
-  private Set<Key<ContentItemKind>> items = new HashSet<Key<ContentItemKind>>();
+  private Set<Key<SentenceKind>> sentences = new HashSet<Key<SentenceKind>>();
 
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
   @Index
-  Integer pointPos;
+  private Integer pointPos;
   
   public String getWord() {
   	return word;
@@ -51,51 +51,25 @@ public class WordKind {
 
   private WordKind() { }
 
-  public void setRawFrequency(Integer value) {
-    rawFrequency = value;
-  }
-
   public Integer getRawFrequency() {
     return rawFrequency;
   }
 
-  public static WordKind create(String wordValue, Collection<ContentItemKind> items, int rawFrequency) {
-    WordKind word = new WordKind(wordValue);
-
-    // Частоту берем из списка ссылок.
-    word.setRawFrequency(rawFrequency);
-
-    // Ссылки должны быть уникальными
-    Set<ContentItemKind> itemSet = new HashSet<ContentItemKind>();
-    itemSet.addAll(items);
-    word.setContentItems(itemSet);
-    return word;
-  }
-
-  public static WordKind create(String wordValue, int rawFrequency) {
-    WordKind word = new WordKind(wordValue);
-
-    // Частоту берем из списка ссылок.
-    word.setRawFrequency(rawFrequency);
-    return word;
+  public static WordKind create(String wordValue, Collection<SentenceKind> sentencess, int rawFrequency) {
+    return new WordKind(wordValue, sentencess, rawFrequency);
   }
 
   public void setPointPos(Integer value) {
     pointPos = value;
   }
 
-  // List coupled content contentItems.
-  public void setContentItems(Set<ContentItemKind> item) {
-    for (ContentItemKind value: item)
-      items.add(Key.create(value));
-  }
  
-  public ImmutableList<ContentItemKind> getContendKinds() {
+  public ImmutableList<SentenceKind> getContendKinds() {
   	// берем часть
   	// FIXME: делать выборки с перемешиванием
   	return ImmutableList.copyOf(
-  			ofy().load().type(ContentItemKind.class)
-  			.filterKey("in", items)
+  			ofy().load().type(SentenceKind.class)
+  			.filterKey("in", sentences)
   			.limit(MAX_CONTENT_ITEMS_IN_PACK).list());
   }
 
@@ -106,9 +80,18 @@ public class WordKind {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  public WordKind(String word) {
+  public WordKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
     this.word = word;
     pointPos = -1;
+
+    // Частоту берем из списка ссылок.
+    this.rawFrequency = rawFrequency;
+
+    // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
+    Set<SentenceKind> sentencesSet = new HashSet<SentenceKind>();
+    sentencesSet.addAll(sentencess);
+    for (SentenceKind value: sentencesSet)
+      sentences.add(Key.create(value));
   }
 
   private static class WordFreqComparator implements Comparator<WordKind> {
@@ -128,9 +111,9 @@ public class WordKind {
   public static class WordValue {
     public final Integer frequency;
     public final String word;
-    public final Collection<ContentItemKind> items;
+    public final Collection<SentenceKind> items;
 
-    public WordValue(String word, Integer frequency, Collection<ContentItemKind> c) {
+    public WordValue(String word, Integer frequency, Collection<SentenceKind> c) {
       this.word = word;
       this.frequency = frequency;
       this.items = c;
