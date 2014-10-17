@@ -122,14 +122,15 @@ public class PageKind {
   	GeneratorKind go = getGenerator(genName);
     
 		Integer pointPosition = go.getPosition();
-		WordKind wordKind =  getWordKind(pointPosition);
-		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
+		//WordKind wordKind =  getWordKind(pointPosition);
+		String word = "hello";//wordKind.getWord();
+		//ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
-		for (SentenceKind e: contentKinds)
-		  content.add(e.getSentence());
+		//for (SentenceKind e: contentKinds)
+		  //content.add(e.getSentence());
 		
-		return Optional.of(new WordDataValue(wordKind.getWord(), content, pointPosition));
+		return Optional.of(new WordDataValue(word, content, pointPosition));
   }
   
   // FIXME: а логика разрешает Отсутствующее значение?
