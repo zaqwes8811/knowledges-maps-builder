@@ -4,7 +4,7 @@ import core.nlp.SentenceTokenizer;
 
 import org.checkthread.annotations.NotThreadSafe;
 
-import gae_store_space.ContentItemKind;
+import gae_store_space.SentenceKind;
 
 import java.util.List;
 
@@ -20,13 +20,13 @@ public class CounterMapper {
     reducer_ = reducer;
   }
 
-  private void emit(String key, ContentItemKind value) {
+  private void emit(String key, SentenceKind value) {
     reducer_.reduce(key, value);
   }
 
-  public void map(List<ContentItemKind> contentItemKinds) {
+  public void map(List<SentenceKind> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
-    for (ContentItemKind item : contentItemKinds) {
+    for (SentenceKind item : contentItemKinds) {
       List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words)
       	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.

@@ -46,7 +46,7 @@ public class PageKind {
 
   // Формированием не управляет, но остальным управляет.
   private List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
-  private List<Key<ContentItemKind>> contentItems = new ArrayList<Key<ContentItemKind>>();
+  private List<Key<SentenceKind>> contentItems = new ArrayList<Key<SentenceKind>>();
   
   public List<Key<WordKind>> getWordKeys() {
   	return this.wordKeys;
@@ -55,7 +55,7 @@ public class PageKind {
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
   @Load  // все равно может упасть
-  Key<ActiveDistributionGenKind> g;  // FIXME: вообще это проблема!!
+  Key<GeneratorKind> g;  // FIXME: вообще это проблема!!
   
   public String getName() { return name; }
 
@@ -63,12 +63,12 @@ public class PageKind {
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
-  public ActiveDistributionGenKind getGenerator(String name) {  
+  public GeneratorKind getGenerator(String name) {  
   	if (g == null) {
   		throw new IllegalStateException();
   	}
   	
-  	ActiveDistributionGenKind gen = ofy().load().key(g).now();
+  	GeneratorKind gen = ofy().load().key(g).now();
   	
   	if (gen == null)
   		throw new IllegalStateException();
@@ -79,7 +79,7 @@ public class PageKind {
   }
   
   public List<String> getGenNames() {
-  	ActiveDistributionGenKind g = getGenerator(null);
+  	GeneratorKind g = getGenerator(null);
   	List<String> r = new ArrayList<String>();
   	r.add(g.name); 	
   	return r;
@@ -90,14 +90,14 @@ public class PageKind {
   	throw new UnsupportedOperationException();
   }
 
-  public void setGenerator(ActiveDistributionGenKind gen) {
+  public void setGenerator(GeneratorKind gen) {
     g = Key.create(gen);
   }
 
-  public PageKind(String name, ArrayList<ContentItemKind> items, ArrayList<WordKind> words) {
+  public PageKind(String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words) {
     this.name = Optional.of(name).get();
     for (WordKind word: words) this.wordKeys.add(Key.create(word));
-    for (ContentItemKind item: items) this.contentItems.add(Key.create(item));
+    for (SentenceKind item: items) this.contentItems.add(Key.create(item));
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
@@ -119,14 +119,14 @@ public class PageKind {
   }
    
   public Optional<WordDataValue> getWordData(String genName) {
-  	ActiveDistributionGenKind go = getGenerator(genName);
+  	GeneratorKind go = getGenerator(genName);
     
 		Integer pointPosition = go.getPosition();
 		WordKind wordKind =  getWordKind(pointPosition);
-		ImmutableList<ContentItemKind> contentKinds = wordKind.getContendKinds();
+		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
-		for (ContentItemKind e: contentKinds)
+		for (SentenceKind e: contentKinds)
 		  content.add(e.getSentence());
 		
 		return Optional.of(new WordDataValue(wordKind.getWord(), content, pointPosition));

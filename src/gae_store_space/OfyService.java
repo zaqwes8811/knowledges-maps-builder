@@ -8,12 +8,12 @@ import com.googlecode.objectify.ObjectifyService;
 
 public class OfyService {
   static {
-    factory().register(ContentItemKind.class);
+    factory().register(SentenceKind.class);
     factory().register(PageKind.class);
     factory().register(WordKind.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
-    factory().register(ActiveDistributionGenKind.class);
+    factory().register(GeneratorKind.class);
     //...etc
     
     factory().register(EasyKind.class);
