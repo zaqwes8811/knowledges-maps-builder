@@ -79,7 +79,11 @@ public class GeneratorKind
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static GeneratorKind create(ArrayList<DistributionElement> distribution) {
-    return new GeneratorKind(distribution);
+    return new GeneratorKind(distribution, OnePageProcessor.defaultGenName);
+  }
+  
+  public static GeneratorKind create(ArrayList<DistributionElement> distribution, String name) {
+  	return new GeneratorKind(distribution, name);
   }
 
   public Integer getPosition() {
@@ -90,10 +94,11 @@ public class GeneratorKind
     gen = GeneratorAnyDistribution.create(distribution);
   }
 
-  private GeneratorKind(ArrayList<DistributionElement> distribution) {
+  private GeneratorKind(ArrayList<DistributionElement> distribution, String name) {
     this.distribution = distribution;
+    this.name = name;
+    
     reloadGenerator(distribution);
-    name = OnePageProcessor.defaultGenName;
   }
 
   public void disablePoint(Integer idx) {
@@ -112,9 +117,7 @@ public class GeneratorKind
   }
 
   
-  private GeneratorKind() { 
-  	name = OnePageProcessor.defaultGenName;
-  }
+  private GeneratorKind() { }
   
   // похоже при восстановлении вызывается он
   // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
@@ -130,14 +133,8 @@ public class GeneratorKind
     reloadGenerator(distribution);
   }
 
-
   public void enablePoint(Integer idx) {
     getElem(idx).enabled = true;
     reloadGenerator(distribution);
-  }
-
-  GeneratorKind cloneGenerator() {
-    // Возможно еще придется что-то добавить
-    return create(this.distribution);
   }
 }
