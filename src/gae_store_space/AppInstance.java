@@ -40,7 +40,7 @@ public class AppInstance {
 				ofy().load().type(PageKind.class).filter("name = ", name).list();
 		
 		if (pages.isEmpty()) {
-	  	PageKind page = processor.buildPageKindFromPlainText(name, text);
+	  	PageKind page = processor.build(name, text);
 	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
 	  	ofy().save().entity(defaultGenerator).now();
 	  	
@@ -114,7 +114,7 @@ public class AppInstance {
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) {
-			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
+			r.add(PageSummaryValue.create(page.getName(), page.getGenNames_fake()));
 		}
 		
 		return r;
