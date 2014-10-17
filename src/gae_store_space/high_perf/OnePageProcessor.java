@@ -94,6 +94,6 @@ public class OnePageProcessor {
     }
 
     // Слова сортированы
-    return new PageKind(name, contentElements, words);
+    return new PageKind(name, contentElements, words, plainText);
   }
 }
