@@ -34,51 +34,31 @@ import java.util.List;
 
 public class OnePageProcessor {
 	public static final String defaultPageName = "Korra";
-	public static final String defaultGenName = "Gen";
+	public static final String defaultGenName = "default";
 	public static final String defaultUserId = "user";
+	
+	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
 	
   private String getGetPlainTextFromSubtitlesFile(String filename) {
   	try {
   		ArrayList<String> lines = new ArrayList<String>(Tools.fileToList(filename).asList());
-  		return convertSubtitlesToPlainText(lines);
+  		return convertToPlainText(lines);
   	} catch(IOException e) {
   		throw new RuntimeException(e);
   	}
   }
-  
-  private String convertSubtitlesToPlainText(String lines) {
-  	try {
-      // Пока файл строго юникод - UTF-8
-  	    Closer closer = Closer.create();
-  	    try {
-  	      // http://stackoverflow.com/questions/247161/how-do-i-turn-a-string-into-a-stream-in-java
-  	      InputStream in = closer.register(new ByteArrayInputStream(lines.getBytes(Charsets.UTF_8)));
-  	      Parser parser = new SubtitlesParser();
-  	      List<String> sink = new ArrayList<String>();
-  	      ContentHandler handler = new SubtitlesContentHandler(sink);
-  	      parser.parse(in, handler, null, null);
-  	
-  	      // Получили список строк.
-  	      SpecialSymbols symbols = new SpecialSymbols();
-  	      return Joiner.on(symbols.WHITESPACE_STRING).join(sink);
-  	    } catch (Throwable e) {
-  	      throw closer.rethrow(e);
-  	    } finally {
-  	      closer.close();
-  	    }
-    	} catch(IOException e) {
-    		throw new RuntimeException(e);
-    	}
-  }
-  
-  private String convertSubtitlesToPlainText(ArrayList<String> lines) {
+
+  private String convertToPlainText(ArrayList<String> lines) {
   	String rawText = Joiner.on('\n').join(lines);
-  	return convertSubtitlesToPlainText(rawText);  	
+  	return convertor.convert(rawText);  	
   }
 
-  public PageKind buildContentPage(String pageName) {
+  private PageKind buildPageKind(String pageName) {
     String filename = getTestFileName();
-    
+    return buildPageKind(pageName, filename);
+  }
+  
+  public PageKind buildPageKind(String pageName, String filename) {  
     // Phase I
     String plainText = getGetPlainTextFromSubtitlesFile(filename);
 
@@ -88,6 +68,8 @@ public class OnePageProcessor {
     // Last - Persist page
     return build(pageName, contentElements);
   }
+  
+  //public PageKind buildContentPageFromPlainText() { }
 
   private ArrayList<SentenceKind> getContentElements(String text) {
     ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
@@ -109,12 +91,12 @@ public class OnePageProcessor {
         "Watch your step! Let it go! Beautiful! Powerful! Dangerous! Cold!";
   }
 
-  private String getTestFileName() {
+  public String getTestFileName() {
   	// FIXME: troubles on GAE
     return "./test_data/korra/data.srt";
   }
   
-  public PageKind build(String name, ArrayList<SentenceKind> contentElements) {
+  private PageKind build(String name, ArrayList<SentenceKind> contentElements) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	
     // TODO: BAD! В страницу собрана обработка
