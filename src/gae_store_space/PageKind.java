@@ -45,18 +45,19 @@ public class PageKind {
 
   @Index String name;
   
-  @Ignore String rawSource;  // для обновленной версии
+  String rawSource;  // для обновленной версии
 
   // Формированием не управляет, но остальным управляет.
-  private List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
-  private List<Key<SentenceKind>> contentItems = new ArrayList<Key<SentenceKind>>();
+  // Обязательно отсортировано
+  @Ignore private ArrayList<WordKind> words = new ArrayList<WordKind>();
+  @Ignore private List<SentenceKind> sentences = new ArrayList<SentenceKind>();
 
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
   // все равно может упасть
   // с единичным ключем фигня какая-то
   @Load  
-  private List<Key<GeneratorKind>> g;  // FIXME: вообще это проблема!!
+  private List<Key<GeneratorKind>> generators;  // FIXME: вообще это проблема!!
   
   public String getName() { return name; }
   
@@ -65,12 +66,8 @@ public class PageKind {
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
   public GeneratorKind getGenerator(String name) {  
-  	if (g == null) {
-  		throw new IllegalStateException();
-  	}
-  	
-  	// FIXME: overhead - only on design stage - remove after
-  	List<GeneratorKind> gen = ofy().load().type(GeneratorKind.class).filter("name = ", name).list();
+  	List<GeneratorKind> gen = 
+  			ofy().load().type(GeneratorKind.class).filterKey("in", generators).filter("name = ", name).list();
   	
   	if (gen.isEmpty() || gen.size() != 1)
   		throw new IllegalStateException();
@@ -93,23 +90,23 @@ public class PageKind {
   }
 
   public void setGenerator(GeneratorKind gen) {
-    g.add(Key.create(gen));
+    generators.add(Key.create(gen));
   }
 
   public PageKind(String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words) {
     this.name = Optional.of(name).get();
     for (WordKind word: words) 
-    	this.wordKeys.add(Key.create(word));
+    	this.words.add(word);
     
     for (SentenceKind item: items) 
-    	this.contentItems.add(Key.create(item));
+    	this.sentences.add(item);
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
   public ArrayList<DistributionElement> getRawDistribution() {
     // TODO: Отосортировать при выборке если можно
     // TODO: может при запросе можно отсортировать?
-    List<WordKind> wordKinds = ofy().load().type(WordKind.class).filterKey("in", this.wordKeys).list();
+    List<WordKind> wordKinds = ofy().load().type(WordKind.class).filterKey("in", this.words).list();
 
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(wordKinds, WordKind.createFrequencyComparator());
@@ -142,12 +139,12 @@ public class PageKind {
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
   private WordKind getWordKind(Integer pos) {
-  	if (!(pos < this.wordKeys.size()))
+  	if (!(pos < this.words.size()))
   		throw new IllegalArgumentException();
   	
   	List<WordKind> kinds = 
 				ofy().load().type(WordKind.class)
-		    .filterKey("in", wordKeys).filter("pointPos =", pos)
+		    .filterKey("in", words).filter("pointPos =", pos)
 		    .list();
   	
   	// FIXME: over pro. It's illegal state checking - не должно быть такого
