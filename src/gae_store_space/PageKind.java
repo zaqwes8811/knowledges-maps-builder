@@ -30,6 +30,7 @@ import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
@@ -43,6 +44,8 @@ public class PageKind {
   @Id Long id;
 
   @Index String name;
+  
+  @Ignore String rawSource;  // для обновленной версии
 
   // Формированием не управляет, но остальным управляет.
   private List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
@@ -51,6 +54,7 @@ public class PageKind {
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
   // все равно может упасть
+  // с единичным ключем фигня какая-то
   @Load  
   private List<Key<GeneratorKind>> g;  // FIXME: вообще это проблема!!
   
@@ -72,10 +76,7 @@ public class PageKind {
   	// FIXME: overhead - only on design stage - remove after
   	List<GeneratorKind> gen = ofy().load().type(GeneratorKind.class).filter("name = ", name).list();
   	
-  	if (gen.isEmpty())
-  		throw new IllegalStateException();
-  	
-  	if (gen.size() != 1)
+  	if (gen.isEmpty() || gen.size() != 1)
   		throw new IllegalStateException();
   	
   	gen.get(0).reset();
