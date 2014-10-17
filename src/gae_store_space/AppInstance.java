@@ -46,9 +46,9 @@ public class AppInstance {
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
 	  	
 	  	// add default generator
-	  	GeneratorKind g = GeneratorKind.create(page.getRawDistribution());
-	  	ofy().save().entity(g).now();
-	  	page.setGenerator(g);
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
+	  	ofy().save().entity(defaultGenerator).now();
+	  	page.setGenerator(defaultGenerator);
 	  	ofy().save().entity(page).now();
 			
 			return page;
