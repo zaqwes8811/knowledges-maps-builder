@@ -47,17 +47,18 @@ public class PageKind {
   // Формированием не управляет, но остальным управляет.
   private List<Key<WordKind>> wordKeys = new ArrayList<Key<WordKind>>();
   private List<Key<SentenceKind>> contentItems = new ArrayList<Key<SentenceKind>>();
+
+  // FIXME: почему отношение не работает?
+  // Попытка сделать так чтобы g не стал нулевым указателем
+  // все равно может упасть
+  @Load  
+  private List<Key<GeneratorKind>> g;  // FIXME: вообще это проблема!!
+  
+  public String getName() { return name; }
   
   public List<Key<WordKind>> getWordKeys() {
   	return this.wordKeys;
   }
-  
-  // FIXME: почему отношение не работает?
-  // Попытка сделать так чтобы g не стал нулевым указателем
-  @Load  // все равно может упасть
-  Key<GeneratorKind> g;  // FIXME: вообще это проблема!!
-  
-  public String getName() { return name; }
 
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
@@ -68,14 +69,18 @@ public class PageKind {
   		throw new IllegalStateException();
   	}
   	
-  	GeneratorKind gen = ofy().load().key(g).now();
+  	// FIXME: overhead - only on design stage - remove after
+  	List<GeneratorKind> gen = ofy().load().type(GeneratorKind.class).filter("name = ", name).list();
   	
-  	if (gen == null)
+  	if (gen.isEmpty())
   		throw new IllegalStateException();
   	
-  	gen.reset();
+  	if (gen.size() != 1)
+  		throw new IllegalStateException();
   	
-  	return gen;
+  	gen.get(0).reset();
+  	
+  	return gen.get(0);
   }
   
   public List<String> getGenNames() {
@@ -91,7 +96,7 @@ public class PageKind {
   }
 
   public void setGenerator(GeneratorKind gen) {
-    g = Key.create(gen);
+    g.add(Key.create(gen));
   }
 
   public PageKind(String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words) {
@@ -122,13 +127,13 @@ public class PageKind {
   	GeneratorKind go = getGenerator(genName);
     
 		Integer pointPosition = go.getPosition();
-		//WordKind wordKind =  getWordKind(pointPosition);
-		String word = "hello";//wordKind.getWord();
-		//ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
+		WordKind wordKind =  getWordKind(pointPosition);
+		String word = wordKind.getWord();
+		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
-		//for (SentenceKind e: contentKinds)
-		  //content.add(e.getSentence());
+		for (SentenceKind e: contentKinds)
+		  content.add(e.getSentence());
 		
 		return Optional.of(new WordDataValue(word, content, pointPosition));
   }
@@ -150,7 +155,7 @@ public class PageKind {
   	// Optional затрудняет поиск ситуаций - низкое разрешение по типам ошибок.
   	//
   	// It's IO - DbC wrong here.
-  	if (kinds == null)
+  	if (kinds.isEmpty())
   		throw new IllegalStateException();
   	
   	// не прошли не свои страницы
