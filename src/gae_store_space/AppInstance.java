@@ -15,7 +15,7 @@ public class AppInstance {
 		//   конфликтов.
 		//
   	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(ActiveDistributionGenKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
   	
   	{
@@ -27,7 +27,7 @@ public class AppInstance {
 	  	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
 	  	
 	  	// add generator
-	  	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+	  	GeneratorKind g = GeneratorKind.create(p0.getRawDistribution());
 	  	ofy().save().entity(g).now();
 	  	p0.setGenerator(g);
 	  	ofy().save().entity(p0).now();
@@ -40,7 +40,7 @@ public class AppInstance {
     	// TODO: А если здесь проверить сохранена ли, то иногда будет несохранена!
     	
     	// add generator
-    	ActiveDistributionGenKind g = ActiveDistributionGenKind.create(p0.getRawDistribution());
+    	GeneratorKind g = GeneratorKind.create(p0.getRawDistribution());
     	ofy().save().entity(g).now();
     	p0.setGenerator(g);
     	ofy().save().entity(p0).now();
@@ -102,7 +102,7 @@ public class AppInstance {
 	
 	public void disablePoint(PathValue p) {
 		PageKind page = getPage(p.pageName);
-		ActiveDistributionGenKind g = page.getGenerator(p.genName);
+		GeneratorKind g = page.getGenerator(p.genName);
 		g.disablePoint(p.pointPos);
 		
 		ofy().save().entity(g).now();

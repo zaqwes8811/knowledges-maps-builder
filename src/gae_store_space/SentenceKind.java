@@ -4,10 +4,10 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
 @Entity
-public class ContentItemKind {
+public class SentenceKind {
   // ctor/...
-  private ContentItemKind() {}
-  public ContentItemKind(String item) {
+  private SentenceKind() {}
+  public SentenceKind(String item) {
     this.sentence = item;
   }
 

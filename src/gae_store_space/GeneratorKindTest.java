@@ -18,7 +18,7 @@ import static gae_store_space.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
-public class ActiveDistributionGenKindTest {
+public class GeneratorKindTest {
   private static final LocalServiceTestHelper helper =
     new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
@@ -30,7 +30,7 @@ public class ActiveDistributionGenKindTest {
     helper.tearDown();
   }
 
-  ActiveDistributionGenKind build(ArrayList<Integer> distribution) {
+  GeneratorKind build(ArrayList<Integer> distribution) {
 
     ArrayList<DistributionElement> real = new ArrayList<DistributionElement>();
 
@@ -38,14 +38,14 @@ public class ActiveDistributionGenKindTest {
       real.add(new DistributionElement(value, true));
     }
     
-    return ActiveDistributionGenKind.create(real);
+    return GeneratorKind.create(real);
   }
 
   @Test
   public void testCreate() throws GeneratorDistributionException {
     ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
 
-    ActiveDistributionGenKind g = build(distribution);
+    GeneratorKind g = build(distribution);
     
     assertNotNull(g);  // иногда падает
 
@@ -61,7 +61,7 @@ public class ActiveDistributionGenKindTest {
   public void testPersist() {
     {
       ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
-      ActiveDistributionGenKind d = build(distribution);
+      GeneratorKind d = build(distribution);
 
       ofy().save().entity(d).now();
 
@@ -72,7 +72,7 @@ public class ActiveDistributionGenKindTest {
 
     // try load
     {
-      ActiveDistributionGenKind page = ofy().load().type(ActiveDistributionGenKind.class).id(1).now();
+      GeneratorKind page = ofy().load().type(GeneratorKind.class).id(1).now();
       Integer action = page.codeAction;
     }
   }

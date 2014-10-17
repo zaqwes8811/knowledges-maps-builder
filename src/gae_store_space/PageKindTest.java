@@ -42,7 +42,7 @@ public class PageKindTest {
   @Test
   public void testCreateAndPersist() throws Exception {
     PageKind page = buildContentPage(OnePageProcessor.defaultPageName);
-    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
     ofy().save().entity(page).now();
@@ -81,7 +81,7 @@ public class PageKindTest {
 
     // Create new page
     PageKind page = buildContentPage(activePageName);
-    ActiveDistributionGenKind gen = ActiveDistributionGenKind.create(page.getRawDistribution());
+    GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.setGenerator(gen);
     ofy().save().entity(page).now();
@@ -125,14 +125,14 @@ public class PageKindTest {
     
     WordKind word = words.get(0);
     
-    List<ContentItemKind> content = word.getContendKinds();
+    List<SentenceKind> content = word.getContendKinds();
 
-    for (ContentItemKind e: content) {
+    for (SentenceKind e: content) {
       String v = e.getSentence();
 
       // TODO: пока будет работать. Сейчас используется только стеммер
       // http://stackoverflow.com/questions/2275004/in-java-how-to-check-if-a-string-contains-a-substring-ignoring-the-case
-      boolean in = v.toLowerCase().contains(word.word.toLowerCase());
+      boolean in = v.toLowerCase().contains(word.getWord().toLowerCase());
       assertTrue(in);
     }
     // запрещаем точку
