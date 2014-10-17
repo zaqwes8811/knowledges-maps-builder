@@ -29,7 +29,8 @@ public class GetterSingleWord extends HttpServlet {
     HttpServletResponse response) throws ServletException, IOException
   {
 
-    response.setContentType("text/html");
+    // path
+		response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
     PageKind p = app.getPage(OnePageProcessor.defaultPageName);

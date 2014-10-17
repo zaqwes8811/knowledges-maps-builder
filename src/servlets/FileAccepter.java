@@ -36,8 +36,6 @@ public class FileAccepter extends HttpServlet {
 		
 		// http://stackoverflow.com/questions/24769832/uploaded-file-only-contains-webkitformboundary
 		List<String> workSpace = in.subList(1, in.size()-1);
-		for(String line: workSpace)
-			common.Tools.print(line);
 
 		String contentDisposition = workSpace.get(0);
 		

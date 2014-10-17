@@ -34,9 +34,9 @@ public class GetterUserInformation extends HttpServlet {
     response.setStatus(HttpServletResponse.SC_OK);
     
     List<PageSummaryValue> v = app.getUserInformation(OnePageProcessor.defaultUserId);
-    String jsonResponse = new Gson().toJson(v);
+    String json = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");
-    response.getWriter().println(jsonResponse);
+    response.getWriter().println(json);
   }
 }

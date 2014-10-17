@@ -25,7 +25,7 @@ import com.google.gson.Gson;
 public class SetterKnownIt extends HttpServlet {
   private static final long serialVersionUID = -409988761783328978L;
   
-  private AppInstance w = AppInstance.getInstance();
+  private AppInstance app = AppInstance.getInstance();
 
   @Override
   public void doPut(HttpServletRequest request, HttpServletResponse response) {
@@ -37,7 +37,7 @@ public class SetterKnownIt extends HttpServlet {
 	  	
 	  	PathValue p = new Gson().fromJson(data, PathValue.class);
 	  	
-	  	w.disablePoint(p);
+	  	app.disablePoint(p);
 	  	
 	  	// response
 	  	response.setContentType("text/html");
