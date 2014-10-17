@@ -68,7 +68,23 @@ public class PageKind {
     if (pages.size() != 1)
   		throw new IllegalStateException();
     
-    return Optional.fromNullable(pages.get(0));  // 1 item
+    PageKind barePage = pages.get(0);
+    
+    String rawSource = barePage.rawSource;
+    //barePage.assign(barePage);
+    
+    OnePageProcessor p = new OnePageProcessor();
+    PageKind page = p.build(barePage.name, rawSource);
+    
+    // теперь нужно запустить процесс обработки,
+    barePage.assign(page);
+    
+    return Optional.fromNullable(barePage);  // 1 item
+  }
+  
+  private void assign(PageKind rhs) {
+  	wordKinds = rhs.wordKinds;
+  	sentencesKinds = rhs.sentencesKinds;
   }
    
   public static PageKind createPageIfNotExist(String name, String text) {
