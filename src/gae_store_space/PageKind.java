@@ -71,8 +71,8 @@ public class PageKind {
     PageKind barePage = pages.get(0);
     
     String rawSource = barePage.rawSource;
-    //barePage.assign(barePage);
     
+    // обрабатываем
     OnePageProcessor p = new OnePageProcessor();
     PageKind page = p.build(barePage.name, rawSource);
     
@@ -86,26 +86,11 @@ public class PageKind {
   	wordKinds = rhs.wordKinds;
   	sentencesKinds = rhs.sentencesKinds;
   }
-   
-  public static PageKind createPageIfNotExist(String name, String text) {
-		// FIXME: add user info
-		List<PageKind> pages = 
-				ofy().load().type(PageKind.class).filter("name = ", name).list();
-		
-		if (pages.isEmpty()) {
-			OnePageProcessor processor = new OnePageProcessor();
-	  	PageKind page = processor.build(name, text);
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
-	  	ofy().save().entity(defaultGenerator).now();
-	  	
-	  	page.setGenerator(defaultGenerator);
-	  	ofy().save().entity(page).now();
-			return page;
-		} else {
-			throw new IllegalArgumentException();
-		}
-	}
   
+  public void persist() {//PageKind p) {
+  	ofy().save().entity(this).now();
+  }
+
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
