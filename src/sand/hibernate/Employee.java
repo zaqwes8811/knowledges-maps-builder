@@ -1,3 +1,4 @@
+package sand.hibernate;
 public class Employee {
    private int id;
    private String firstName; 

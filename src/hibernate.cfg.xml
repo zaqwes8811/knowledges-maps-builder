@@ -11,7 +11,7 @@
       com.mysql.jdbc.Driver
    </property>
 
-   <!-- Assume test is the database name -->
+   <!-- Assume "test" is the database name, not user as in tut -->
    <property name="hibernate.connection.url">
       jdbc:mysql://localhost/test
    </property>
