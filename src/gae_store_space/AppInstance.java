@@ -28,6 +28,25 @@ public class AppInstance {
 						}
 					});
 	
+	public PageKind createPageIfNotExist(String name, String text) {
+		// FIXME: add user info
+		List<PageKind> pages = 
+				ofy().load().type(PageKind.class).filter("name = ", name).list();
+		
+		if (pages.isEmpty()) {
+			OnePageProcessor processor = new OnePageProcessor();
+	  	PageKind page = processor.build(name, text);
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
+	  	ofy().save().entity(defaultGenerator).now();
+	  	
+	  	page.setGenerator(defaultGenerator);
+	  	page.persist();
+			return page;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
+	
 	public AppInstance() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
@@ -42,13 +61,13 @@ public class AppInstance {
   		String name = OnePageProcessor.defaultPageName;
   		
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
-  		PageKind.createPageIfNotExist(name, text);
+  		createPageIfNotExist(name, text);
 	 	}
   	
   	{
   		String name = OnePageProcessor.defaultPageName+"_fake";
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
-  		PageKind.createPageIfNotExist(name, text);
+  		createPageIfNotExist(name, text);
   	}
   	
   	{
