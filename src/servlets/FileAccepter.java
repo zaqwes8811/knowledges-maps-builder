@@ -1,6 +1,7 @@
 package servlets;
 
 import gae_store_space.AppInstance;
+import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,9 +51,11 @@ public class FileAccepter extends HttpServlet {
 		
 		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
 		// FIXME: ошибки парсинга
-		app.createPageIfNotExist(
-				filename, 
-				Joiner.on('\n').join(workSpace.subList(2, workSpace.size()-1)));	
+		OnePageProcessor processor = new OnePageProcessor();
+		
+		String text = processor.convertToPlainText(new ArrayList<String>(workSpace.subList(2, workSpace.size()-1)));
+		app.createPageIfNotExist(filename, text);
+		
 		return ImmutableList.copyOf(in);
 	}
 
