@@ -123,17 +123,16 @@ View.prototype.drawWordValue = function (word) {
 View.prototype._markIsKnowIt = function() {
   // думается лучше выполнить синхронно, хотя если здесь, то все равно
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-  var page = this.getCurrentPageName();
-  if (!page)
-    return;
-
-  var gen = this.getCurrentGenName();
-  if (!gen)
-    return;
-
-  var pointPos = this.currentWordData.getPos();
-  var point = new protocols.PathValue(page, gen, pointPos);
+  
+  var point = this._makePoint();
   this.dal.markIsDone(point);
+}
+
+View.prototype._makePoint = function () {
+  var page = this.getCurrentPageName();
+  var gen = this.getCurrentGenName();
+  var pointPos = this.currentWordData.getPos();
+  return new protocols.PathValue(page, gen, pointPos);
 }
 
 // Actions
@@ -162,11 +161,12 @@ View.prototype.reload = function() {
   })
 }
 
+
 View.prototype.onGetWordPackage = function () { 
-  // Нужны еще данные - страница и имя генератора
   var self = this;
 
-  //this._markIsKnowIt();  // FAKE
+  // Нужны еще данные - страница и имя генератора
+  var point = this._makePoint();
 
   // делаем запрос
   this.dal.getWordPkgAsync(function(data) {
@@ -176,7 +176,7 @@ View.prototype.onGetWordPackage = function () {
 
       // сбрасываем флаг "i know"
       $('#know_it').prop('checked', false);
-    });
+    }, point);
 }
 
 // Class
@@ -296,11 +296,11 @@ DataAccessLayer.prototype.markIsDone = function (point) {
 }
 
 // FIXME: нужны параметры
-DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
+DataAccessLayer.prototype.getWordPkgAsync = function (callback, arg0) {
   // делаем запрос
   var self = this;
-  var uri = '/pkg';
-  var args = {'name':'get_axis'};
+  var uri = '/pkg';  // FIXME: looks like shit
+  var args = {'arg0': JSON.stringify(arg0)};
   var _ = $.get(uri, args)
     .success(callback)
     .error(function(data) { self.onError(data); });
