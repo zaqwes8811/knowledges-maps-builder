@@ -1,16 +1,15 @@
 package gae_store_space;
 
-import static gae_store_space.OfyService.ofy;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.google.common.collect.ImmutableList;
-import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
-import com.googlecode.objectify.annotation.Load;
-
-import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
