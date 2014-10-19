@@ -37,7 +37,7 @@ public class GetterSingleWord extends HttpServlet {
     WordDataValue v = p.getWordData(OnePageProcessor.defaultGenName).get();
     
     String json = new Gson().toJson(v);
-
+ 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(json);
   }
