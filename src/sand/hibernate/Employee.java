@@ -1,4 +1,6 @@
 package sand.hibernate;
+
+// FIXME: можно пользоваться и аннотациями - >= java5
 public class Employee {
    private int id;
    private String firstName; 
