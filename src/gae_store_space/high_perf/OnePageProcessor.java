@@ -39,7 +39,7 @@ public class OnePageProcessor {
   	}
   }
 
-  private String convertToPlainText(ArrayList<String> lines) {
+  public String convertToPlainText(ArrayList<String> lines) {
   	String rawText = Joiner.on('\n').join(lines);
   	return convertor.convert(rawText);  	
   }
