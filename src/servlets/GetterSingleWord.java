@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import servlets.protocols.PathValue;
 import servlets.protocols.WordDataValue;
 import net.jcip.annotations.NotThreadSafe;
 
@@ -29,12 +30,16 @@ public class GetterSingleWord extends HttpServlet {
     HttpServletResponse response) throws ServletException, IOException
   {
 
+		String value = request.getParameter("arg0");
+		
+		PathValue path = new Gson().fromJson(value, PathValue.class);
+		
     // path
 		response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    PageKind p = app.getPage(OnePageProcessor.defaultPageName);
-    WordDataValue v = p.getWordData(OnePageProcessor.defaultGenName).get();
+    PageKind p = app.getPage(path.pageName);
+    WordDataValue v = p.getWordData(path.genName).get();
     
     String json = new Gson().toJson(v);
  
