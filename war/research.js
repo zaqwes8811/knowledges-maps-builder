@@ -80,6 +80,7 @@ UserSummary.prototype.getPageNames = function () {
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
 function View(dal) {
+  var self = this;
   this.dal = dal;
   this.currentWordData = new CurrentWordData();
   this.userSummary = new UserSummary([]);
@@ -102,15 +103,17 @@ View.prototype.getCurrentGenName = function() {
 View.prototype.resetPagesOptions = function(newNames) {
   var pageSelect = $('#pages');
   pageSelect.empty();
-
-  var pageGens = $('#pageGenerators');
-  pageGens.empty();
-  
   _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
   
+  this.resetGenNames();
+}
+
+View.prototype.resetGenNames = function() {
   var currentPageName = this.getCurrentPageName();
   var genNames = this.userSummary.getGenNames(currentPageName);
-  _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); }); 
+  var pageGens = $('#pageGenerators');
+  pageGens.empty();
+  _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); });  
 }
 
 View.prototype.drawWordValue = function (word) {
@@ -129,9 +132,7 @@ View.prototype._markIsKnowIt = function() {
     return;
 
   var pointPos = this.currentWordData.getPos();
-
   var point = new protocols.PathValue(page, gen, pointPos);
-
   this.dal.markIsDone(point);
 }
 
@@ -145,7 +146,7 @@ View.prototype.reload = function() {
       self.resetPagesOptions(pages);
     });
 
-  // FIXME: don't work in constructor
+  // don't work in constructor
   $('#know_it').change(function() {
     if (self.currentWordData.isActive()) {
       var $this = $(this);
@@ -154,6 +155,11 @@ View.prototype.reload = function() {
       }
     }
   });
+
+  // don't work in constructor
+  $('#pages').change(function() {
+    self.resetGenNames();
+  })
 }
 
 View.prototype.onGetWordPackage = function () { 
@@ -289,6 +295,7 @@ DataAccessLayer.prototype.markIsDone = function (point) {
 
 }
 
+// FIXME: нужны параметры
 DataAccessLayer.prototype.getWordPkgAsync = function (callback) {
   // делаем запрос
   var self = this;
