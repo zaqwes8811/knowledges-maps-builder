@@ -100,7 +100,7 @@ public class AppInstance {
 	
 	public static AppInstance getInstance() {
 		return Holder.w;
-	}
+	} 
 	
 	// пока не ясно, что за идентификация будет для пользователя
 	// данных может и не быть, так что 
