@@ -104,7 +104,7 @@ public class WebRelayTest {
     PageKind page = processor.buildPageKind("Korra", processor.getTestFileName());
     GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
-    page.setGenerator(gen);
+    page.addGenerator(gen);
     ofy().save().entity(page).now();
 
     // run server

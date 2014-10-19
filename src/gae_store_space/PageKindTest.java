@@ -45,7 +45,7 @@ public class PageKindTest {
     PageKind page = buildContentPage(OnePageProcessor.defaultPageName);
     GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
-    page.setGenerator(gen);
+    page.addGenerator(gen);
     ofy().save().entity(page).now();
   }
 
@@ -84,7 +84,7 @@ public class PageKindTest {
     PageKind page = buildContentPage(activePageName);
     GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
-    page.setGenerator(gen);
+    page.addGenerator(gen);
     ofy().save().entity(page).now();
     
     // создаем две страницы, важно для проверки разделения запросов.

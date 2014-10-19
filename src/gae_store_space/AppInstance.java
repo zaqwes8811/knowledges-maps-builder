@@ -36,10 +36,17 @@ public class AppInstance {
 		if (pages.isEmpty()) {
 			OnePageProcessor processor = new OnePageProcessor();
 	  	PageKind page = processor.build(name, text);
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
-	  	ofy().save().entity(defaultGenerator).now();
+	  	page.persist();
 	  	
-	  	page.setGenerator(defaultGenerator);
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
+	  	
+	  	Optional.of(defaultGenerator).get();
+	  	
+	  	ofy().save().entity(defaultGenerator).now();
+	  	Optional.of(defaultGenerator).get();
+	  	
+	  	page.addGenerator(defaultGenerator);
+	  	
 	  	page.persist();
 			return page;
 		} else {
@@ -94,7 +101,7 @@ public class AppInstance {
     }
 	}
 
-	private static class Holder {
+	public static class Holder {
 		static final AppInstance w = new AppInstance();
 	}
 	
@@ -110,7 +117,7 @@ public class AppInstance {
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) {
-			r.add(PageSummaryValue.create(page.getName(), page.getGenNames_fake()));
+			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
 		}
 		
 		return r;
