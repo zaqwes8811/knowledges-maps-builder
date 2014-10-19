@@ -176,23 +176,6 @@ public class PageKind {
   	if (!(pos < this.wordKinds.size()))
   		throw new IllegalArgumentException();
   	
-  	List<WordKind> kinds = 
-				ofy().load().type(WordKind.class)
-		    .filterKey("in", wordKinds).filter("pointPos =", pos)
-		    .list();
-  	
-  	// FIXME: over pro. It's illegal state checking - не должно быть такого
-  	//  Исключения лепить не хочется, но хотя исключения для искл ситуаций.
-  	// Optional затрудняет поиск ситуаций - низкое разрешение по типам ошибок.
-  	//
-  	// It's IO - DbC wrong here.
-  	if (kinds.isEmpty())
-  		throw new IllegalStateException();
-  	
-  	// не прошли не свои страницы
-  	if (kinds.size() != 1) 
-  		throw new IllegalStateException();
-  	
-		return kinds.get(0);
+		return wordKinds.get(pos);
   }
 }
