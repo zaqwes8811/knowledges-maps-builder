@@ -1,16 +1,11 @@
 package gae_store_space;
 
+import static gae_store_space.OfyService.ofy;
+
 import java.util.ArrayList;
 
 import net.jcip.annotations.NotThreadSafe;
 
-
-
-
-
-
-
-//import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
@@ -116,6 +111,10 @@ public class GeneratorKind
 
     // хотя наверное и так бросит
     return distribution.get(idx);
+  }
+  
+  public void persist() {
+  	ofy().save().entity(this).now();
   }
 
   

@@ -36,17 +36,10 @@ public class AppInstance {
 		if (pages.isEmpty()) {
 			OnePageProcessor processor = new OnePageProcessor();
 	  	PageKind page = processor.build(name, text);
-	  	page.persist();
-	  	
 	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
-	  	
-	  	Optional.of(defaultGenerator).get();
-	  	
-	  	ofy().save().entity(defaultGenerator).now();
-	  	Optional.of(defaultGenerator).get();
+	  	defaultGenerator.persist();  	
 	  	
 	  	page.addGenerator(defaultGenerator);
-	  	
 	  	page.persist();
 			return page;
 		} else {
