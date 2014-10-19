@@ -54,7 +54,9 @@ public class GeneratorKind
   public Long id;
   
   @Index
-  String name;
+  private String name;
+  
+  public String getName() { return this.name; }
   
   // Индексируется as embedded- это состояние генератора
   // FIXME: какая лажа с порядком загрузки
