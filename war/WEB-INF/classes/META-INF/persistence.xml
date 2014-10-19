@@ -28,8 +28,8 @@
     </persistence-unit>
 
     <persistence-unit name="words_test" transaction-type="RESOURCE_LOCAL">
-        <class>hided.dal.jpa.eclipselink.Sentences</class>
-        <class>hided.dal.jpa.eclipselink.Words</class>
+        <class>frozen.dal.jpa.eclipselink.Sentences</class>
+        <class>frozen.dal.jpa.eclipselink.Words</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
