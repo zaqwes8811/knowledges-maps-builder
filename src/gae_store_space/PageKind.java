@@ -61,6 +61,7 @@ public class PageKind {
   
   public String getName() { return name; }
   
+  // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> restore(String pageName) {
   	List<PageKind> pages = 
     		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
@@ -87,10 +88,12 @@ public class PageKind {
   	sentencesKinds = rhs.sentencesKinds;
   }
   
-  public void persist() {//PageKind p) {
+  public void persist() {
   	ofy().save().entity(this).now();
   }
 
+  // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
+  //
   // throws: 
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
@@ -124,8 +127,6 @@ public class PageKind {
   }
 
   public void addGenerator(GeneratorKind gen) {
-  	if (gen == null)
-  		throw new IllegalStateException();
   	Key<GeneratorKind> k = Key.create(gen);
     generators.add(k);
   }
@@ -134,7 +135,7 @@ public class PageKind {
   public PageKind(
   		String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words, String rawSource) 
   	{
-    this.name = Optional.of(name).get();
+    this.name = name;
    	this.wordKinds = words;
    	this.sentencesKinds = items;    
     this.rawSource = rawSource;
@@ -173,7 +174,7 @@ public class PageKind {
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
   private WordKind getWordKind(Integer pos) {
-  	if (!(pos < this.wordKinds.size()))
+  	if (! (pos < this.wordKinds.size()))
   		throw new IllegalArgumentException();
   	
 		return wordKinds.get(pos);
