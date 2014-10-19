@@ -57,7 +57,7 @@ public class PageKind {
   // Попытка сделать так чтобы g не стал нулевым указателем
   // все равно может упасть. с единичным ключем фигня какая-то
   @Load  
-  private List<Key<GeneratorKind>> generators;  // FIXME: вообще это проблема!!
+  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>();  // FIXME: вообще это проблема!!
   
   public String getName() { return name; }
   
@@ -110,15 +110,24 @@ public class PageKind {
   	return gen.get(0);
   }
   
-  public List<String> getGenNames_fake() {
-  	GeneratorKind g = getGenerator(null);
+  public List<String> getGenNames() {
+  	List<GeneratorKind> gen = 
+  			ofy().load().type(GeneratorKind.class)
+	  			.filterKey("in", generators)
+	  			.list();
+  	
   	List<String> r = new ArrayList<String>();
-  	r.add(g.name); 	
+  	for (GeneratorKind g: gen) {
+  		r.add(g.getName()); 
+  	}	
   	return r;
   }
 
-  public void setGenerator(GeneratorKind gen) {
-    generators.add(Key.create(gen));
+  public void addGenerator(GeneratorKind gen) {
+  	if (gen == null)
+  		throw new IllegalStateException();
+  	Key<GeneratorKind> k = Key.create(gen);
+    generators.add(k);
   }
 
   // Это при создании с нуля
