@@ -32,6 +32,9 @@ public class GetterSingleWord extends HttpServlet {
 
 		String value = request.getParameter("arg0");
 		
+		if (value == null) 
+			throw new IllegalArgumentException();
+		
 		PathValue path = new Gson().fromJson(value, PathValue.class);
 		
     // path

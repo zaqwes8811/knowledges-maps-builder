@@ -188,9 +188,13 @@ function PlotView(dal) {
 
 PlotView.prototype.onGetData = function () {
   var self = this;
+
+  // тоже нужно сделать точку
+  var point = gView._makePoint();
+
   this.dal.getDistributionAsync(function(data) { 
     self.plot( $.parseJSON(data)); 
-  });
+  }, point);
 }
 
 PlotView.prototype.plot = function (distribution) {
@@ -291,8 +295,6 @@ DataAccessLayer.prototype.markIsDone = function (point) {
     url: uri,
     data : JSON.stringify(point)
   }).error(function(data) { self.onError(data); });;
-
-
 }
 
 // FIXME: нужны параметры
@@ -301,16 +303,16 @@ DataAccessLayer.prototype.getWordPkgAsync = function (callback, arg0) {
   var self = this;
   var uri = '/pkg';  // FIXME: looks like shit
   var args = {'arg0': JSON.stringify(arg0)};
-  var _ = $.get(uri, args)
+  $.get(uri, args)
     .success(callback)
     .error(function(data) { self.onError(data); });
 }
 
-DataAccessLayer.prototype.getDistributionAsync = function (callback) {
+DataAccessLayer.prototype.getDistributionAsync = function (callback, arg0) {
   var self = this;
-  var request_processor = '/research/get_distribution';
-  var response_branch = {'name':'get_axis'};
-  var jqxhr = $.get(request_processor, response_branch)
+  var uri = '/research/get_distribution';
+  var args = {'arg0': JSON.stringify(arg0)};
+  $.get(uri, args)
     .success(callback)
     .error(function(data) { self.onError(data); });
 }
@@ -320,7 +322,7 @@ DataAccessLayer.prototype.getUserSummary = function (callback) {
   // Get user data
   // Нужно по имени страницы получать список генераторов
   var uri = '/user_summary';
-  var jqxhr = $.get(uri)
+  $.get(uri)
     .success(callback)
     .error(function(data) { self.onError(data); });
 }

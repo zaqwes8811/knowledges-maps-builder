@@ -49,6 +49,7 @@ public class FileAccepter extends HttpServlet {
 			throw new IllegalArgumentException();
 		
 		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
+		// FIXME: ошибки парсинга
 		app.createPageIfNotExist(
 				filename, 
 				Joiner.on('\n').join(workSpace.subList(2, workSpace.size()-1)));	
