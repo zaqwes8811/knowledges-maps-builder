@@ -19,6 +19,8 @@ public class AppInstance {
 	
 	private final OnePageProcessor processor = new OnePageProcessor();	
 	
+	Integer fakeState = new Integer(0);
+	
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
 			.maximumSize(1)
 			.build(
@@ -36,7 +38,9 @@ public class AppInstance {
 		if (pages.isEmpty()) {
 			OnePageProcessor processor = new OnePageProcessor();
 	  	PageKind page = processor.build(name, text);
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution());
+	  	
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), fakeState.toString());
+	  	fakeState++;
 	  	defaultGenerator.persist();  	
 	  	
 	  	page.addGenerator(defaultGenerator);
