@@ -70,8 +70,7 @@ public class WordKind {
   public ImmutableList<SentenceKind> getContendKinds() {
   	// берем часть
   	// FIXME: делать выборки с перемешиванием
-  	return ImmutableList.copyOf(
-  			ofy().load().type(SentenceKind.class).filterKey("in", sentences).limit(MAX_CONTENT_ITEMS_IN_PACK).list());
+  	return ImmutableList.copyOf(sentences);
   }
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.

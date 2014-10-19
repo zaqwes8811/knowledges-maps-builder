@@ -1,4 +1,5 @@
-// TODO:  try AtomJS
+// TODO: try AtomJS
+// TODO: think try CoffeeScript
 var protocols = {
 
   // On server-side exist Java class
