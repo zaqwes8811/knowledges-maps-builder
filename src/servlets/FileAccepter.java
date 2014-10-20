@@ -14,11 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.javatuples.Pair;
-
 import net.jcip.annotations.NotThreadSafe;
 
-import com.google.common.base.Joiner;
+import org.javatuples.Pair;
+
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
@@ -53,7 +52,8 @@ public class FileAccepter extends HttpServlet {
 		// FIXME: ошибки парсинга
 		OnePageProcessor processor = new OnePageProcessor();
 		
-		String text = processor.convertToPlainText(new ArrayList<String>(workSpace.subList(2, workSpace.size()-1)));
+		ArrayList<String> sentences = new ArrayList<String>(workSpace.subList(2, workSpace.size()-1));
+		String text = processor.convertToPlainText(sentences);
 		app.createPageIfNotExist(filename, text);
 		
 		return ImmutableList.copyOf(in);
