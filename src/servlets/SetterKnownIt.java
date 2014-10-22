@@ -1,8 +1,6 @@
 package servlets;
 
-import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.checkthread.annotations.NotThreadSafe;
 
 import servlets.protocols.PathValue;
-import servlets.protocols.WordDataValue;
 
 import com.google.gson.Gson;
 

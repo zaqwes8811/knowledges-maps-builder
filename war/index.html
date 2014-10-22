@@ -32,13 +32,16 @@
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
 
+<input type="button" class="btn btn-primary" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"></input>
 <form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
   <input type="file" size="60" name="myfile">
-  <input type="submit" value="Process file">
+  <input type="submit" value="Process file  (now only subtitles)">
 </form>
 
 <div id="progress"><div id="bar"></div><div id="percent">0%</div ></div>
 <div id="message"></div>
+
+<hr/>
 
 <select id="pages"></select><br/>
 <select id="pageGenerators"></select>
