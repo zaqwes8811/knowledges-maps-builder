@@ -1,8 +1,11 @@
 package gae_store_space;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 import com.google.common.collect.ImmutableList;
@@ -15,7 +18,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 public class WordKind {
 	private WordKind() { }
-	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 10;
+	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 7;
 	 
   @Override
   public String toString() {
@@ -68,8 +71,13 @@ public class WordKind {
 
   public ImmutableList<SentenceKind> getContendKinds() {
   	// берем часть
-  	// FIXME: делать выборки с перемешиванием
-  	return ImmutableList.copyOf(sentences);
+  	// FIXME: делать выборки с перемешиванием 	
+  	ArrayList<SentenceKind> tmp = new ArrayList<SentenceKind>(sentences);
+  	
+  	long seed = System.nanoTime();
+  	Collections.shuffle(tmp, new Random(seed));
+  	
+  	return ImmutableList.copyOf(tmp.subList(0, MAX_CONTENT_ITEMS_IN_PACK));
   }
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.

@@ -89,7 +89,6 @@ public class OnePageProcessor {
     ArrayList<WordKind> words = new ArrayList<WordKind>();
     for (int i = 0; i < value.size(); i++) {
       WordKind.WordValue v = value.get(i);
-      System.out.println(v.word);
       words.add(WordKind.create(v.word, v.sentences, v.frequency));
       words.get(i).setPointPos(i);
     }

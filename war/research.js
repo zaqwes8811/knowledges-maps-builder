@@ -327,6 +327,15 @@ DataAccessLayer.prototype.getUserSummary = function (callback) {
     .error(function(data) { self.onError(data); });
 }
 
+DataAccessLayer.prototype.resetFullStore =  function () {
+  var self = this;
+  // Get user data
+  // Нужно по имени страницы получать список генераторов
+  var uri = '/reset_storage';
+  $.get(uri)
+    .error(function(data) { self.onError(data); });
+}
+
 // State
 // создаются до загрузки DOM?
 var gDataAccessLayer = new DataAccessLayer();
