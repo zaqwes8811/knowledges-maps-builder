@@ -16,19 +16,34 @@ import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
 
 public class AppInstance {
+	private static final Integer CACHE_SIZE = 5;
 	
 	private final OnePageProcessor processor = new OnePageProcessor();	
 	
 	Integer fakeState = new Integer(0);
 	
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
-			.maximumSize(1)
+			.maximumSize(CACHE_SIZE)
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
 						public Optional<PageKind> load(String key) {
 							return PageKind.restore(key);
 						}
 					});
+	
+	public void resetFullStore() {
+		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
+		//   конфликтов.
+		//
+  	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
+  	
+  	// clear cache
+  	pagesCache.cleanUp();
+  	
+  	createDefaultPages();  // нельзя это в конструктор
+	}
 	
 	public PageKind createPageIfNotExist(String name, String text) {
 		// FIXME: add user info
@@ -51,15 +66,8 @@ public class AppInstance {
 		}
 	}
 	
-	public AppInstance() {
-		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
-		//   конфликтов.
-		//
-  	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(WordKind.class).keys()).now();
-  	
-  	{
+	private void createDefaultPages() {
+		{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
   		String name = OnePageProcessor.defaultPageName;
@@ -69,7 +77,7 @@ public class AppInstance {
 	 	}
   	
   	{
-  		String name = OnePageProcessor.defaultPageName+"_fake";
+  		String name = OnePageProcessor.defaultPageName+"Copy";
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
   		createPageIfNotExist(name, text);
   	}
@@ -87,6 +95,10 @@ public class AppInstance {
 	  	if (pages.size() > 1) 
 	  		throw new IllegalStateException();
   	}
+	}
+	
+	public AppInstance() {
+		
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
