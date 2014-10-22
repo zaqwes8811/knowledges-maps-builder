@@ -18,7 +18,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 public class WordKind {
 	private WordKind() { }
-	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 7;
+	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	 
   @Override
   public String toString() {
@@ -77,7 +77,17 @@ public class WordKind {
   	long seed = System.nanoTime();
   	Collections.shuffle(tmp, new Random(seed));
   	
-  	return ImmutableList.copyOf(tmp.subList(0, MAX_CONTENT_ITEMS_IN_PACK));
+  	if (tmp.isEmpty())
+  		throw new IllegalStateException();
+  	
+  	Integer toIndex = MAX_CONTENT_ITEMS_IN_PACK;
+  	if (tmp.size() < MAX_CONTENT_ITEMS_IN_PACK)
+  		toIndex = tmp.size();
+  	
+  	if (tmp.isEmpty())
+  		toIndex = 0;
+  	
+  	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
   // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
