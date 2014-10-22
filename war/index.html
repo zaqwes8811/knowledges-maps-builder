@@ -32,6 +32,17 @@
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
 
+<select id="pages"></select><br/>
+<select id="pageGenerators"></select>
+<hr/>
+
+<input type="checkbox" id="know_it" value="Bike">I know it</input> 
+<input type="button" class="btn btn-primary" value="Get" onclick="gView.onGetWordPackage()"></input>
+<span id="word_holder_id"></span><br/>
+<ul id="sentences">
+</ul>
+<hr/>
+
 <input type="button" class="btn btn-primary" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"></input>
 <form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
   <input type="file" size="60" name="myfile">
@@ -41,15 +52,6 @@
 <div id="progress"><div id="bar"></div><div id="percent">0%</div ></div>
 <div id="message"></div>
 
-<hr/>
-
-<select id="pages"></select><br/>
-<select id="pageGenerators"></select>
-<hr/>
-
-<input type="checkbox" id="know_it" value="Bike">I know it</input> 
-<input type="button" class="btn btn-primary" value="Get" onclick="gView.onGetWordPackage()"></input>
-<span id="word_holder_id"></span><br/>
 <hr/>
 
 <input type="button" class="btn btn-success" value="Get generator info" onclick="gPlotView.onGetData()"/>

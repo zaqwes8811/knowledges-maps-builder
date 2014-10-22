@@ -120,6 +120,12 @@ View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
+View.prototype.redrawSentences = function (sentences) {
+  var dom = $('#sentences');
+  dom.empty();
+  _.each(sentences, function(e) { dom.append('<li>'+ e + '</li>')});
+}
+
 View.prototype._markIsKnowIt = function() {
   // думается лучше выполнить синхронно, хотя если здесь, то все равно
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
@@ -173,6 +179,7 @@ View.prototype.onGetWordPackage = function () {
       var v = JSON.parse(data);
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
+      self.redrawSentences(v.sentences);
 
       // сбрасываем флаг "i know"
       $('#know_it').prop('checked', false);
