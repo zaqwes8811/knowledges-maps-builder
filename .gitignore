@@ -2,6 +2,7 @@
 *.class
 out
 *.py[cod]
+*~
 
 web-pages/closure-library
 
