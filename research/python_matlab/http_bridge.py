@@ -4,7 +4,7 @@
 #
 # http://scikit-learn.org/stable/index.html
 
-# 3rdparty
+# 3rd party
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
@@ -24,23 +24,18 @@ class PathValue(object):
         self.genName = obj['genName']
         self.pointPos = obj['pointPos']
 
-        # def __init__(self, obj):
-        #  self.assign_deserealized(obj)
-
 
 class UserInfoValue(object):
-    def __init__(self, page, gens, pos):
-        self.pageName = page
-        self.genNames = gens
-        self.pointPos = pos
+    def __init__(self, obj):
+        self.pageName = None
+        self.genNames = None
+        self.pointPos = None
+        self.assign_deserialized(obj)
 
     def assign_deserialized(self, obj):
         self.pageName = obj['pageName']
         self.genNames = obj['genNames']
         # self.pointPos = obj['pointPos']  # no exist. was bug coupled with it
-
-    def __init__(self, obj):
-        self.assign_deserialized(obj)
 
 
 class DistributionElem(object):
@@ -77,7 +72,7 @@ class ResearchAjax(object):
 
     def get_distribution_sync(self, arg0):
         uri = '/research/get_distribution'
-        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)};
+        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
         r = requests.get(self._build_url(uri), params=payload)
         r.raise_for_status()
 
@@ -91,7 +86,7 @@ class ResearchAjax(object):
 def main():
     # Http part
     server = 'http://1-dot-arched-glow-381.appspot.com'
-    port = 80#80
+    port = 80  # 80
     ajax = AppAjax(server, port)
     user_info = ajax.get_user_summary_sync()
 
@@ -110,19 +105,27 @@ def main():
     x_disabled = []
     all_points = []
     x_all_points = []
+    active = []
+    x_active = np.array([], dtype=np.uint32)
     for i, elem in enumerate(distribution):
         all_points.append(elem.frequency)
         x_all_points.append(i)
+
         if not elem.enabled:
             disabled.append(elem.frequency)
             x_disabled.append(i)
+        else:
+            active.append(elem.frequency)
+            x_active = np.append(x_active, i)  # FIXME: bad!
 
-    # processing
+    # Processing
     plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
+    plt.plot(-1 * x_active, active)
     plt.grid(True)
     plt.show()
 
-    # clustering
+    # Clustering - Lloyd
+    pass
 
 
 if __name__ == '__main__':
