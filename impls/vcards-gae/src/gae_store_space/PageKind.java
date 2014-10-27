@@ -34,6 +34,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
+import common.Tools;
 
 import core.math.DistributionElement;
 
@@ -98,7 +99,10 @@ public class PageKind {
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
-  public GeneratorKind getGenerator(String name) {  
+  public GeneratorKind getGenerator(String name) { 
+  	if (name == null)
+  		throw new IllegalArgumentException();
+  	
   	List<GeneratorKind> gen = 
   			ofy().load().type(GeneratorKind.class)
 	  			.filterKey("in", generators)
@@ -106,7 +110,7 @@ public class PageKind {
 	  			.list();
   	
   	if (gen.isEmpty() || gen.size() != 1)
-  		throw new IllegalStateException();
+  		throw new IllegalStateException(name);
   	
   	gen.get(0).reset();
   	
