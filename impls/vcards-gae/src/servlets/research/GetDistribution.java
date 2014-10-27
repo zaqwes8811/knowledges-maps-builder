@@ -1,27 +1,19 @@
 package servlets.research;
 
+import gae_store_space.AppInstance;
 import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
-import gae_store_space.AppInstance;
-import gae_store_space.high_perf.OnePageProcessor;
 
 import java.io.IOException;
-import java.util.List;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import sand.third_party_tests.gae.EasyKind;
 import servlets.protocols.PathValue;
 
-import com.google.common.base.Optional;
 import com.google.gson.Gson;
-import com.googlecode.objectify.Key;
-
-import static gae_store_space.OfyService.ofy;
 
 
 // CASE: на вебе есть список генераторов страницы, берем имя генератора, и для него возврящаем 
