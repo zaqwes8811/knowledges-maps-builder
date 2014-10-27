@@ -17,7 +17,7 @@ import com.googlecode.objectify.annotation.Unindex;
 
 import core.math.DistributionElement;
 import core.math.GeneratorAnyDistribution;
-import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
+//import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 import gae_store_space.high_perf.OnePageProcessor;
 
 // About:
@@ -107,7 +107,7 @@ public class GeneratorKind
 
   private DistributionElement getElem(Integer idx) {
     if (idx >= distribution.size() || idx < 0)
-      throw new OutOfRangeOnAccess("On get element");  // сообщения безсмысленны, тип важнее
+      throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
 
     // хотя наверное и так бросит
     return distribution.get(idx);
