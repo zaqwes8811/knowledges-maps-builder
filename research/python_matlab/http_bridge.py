@@ -11,6 +11,20 @@ import requests
 import json
 
 class PathValue(object):
+    def __init__(self, page, gen, pos):
+        self.pageName = page
+        self.genName = gen
+        self.pointPos = pos
+
+    def assign_deserealized(self, obj):
+      self.pageName = obj['pageName']
+      self.genName = obj['genName']
+      self.pointPos = obj['pointPos']
+
+    #def __init__(self, obj):
+    #  self.assign_deserealized(obj)
+
+class UserInfoValue(object):
     def __init__(self, page, gens, pos):
         self.pageName = page
         self.genNames = gens
@@ -19,10 +33,15 @@ class PathValue(object):
     def assign_deserealized(self, obj):
       self.pageName = obj['pageName']
       self.genNames = obj['genNames']
-      #self.pointPos = obj['pointPos']
+      #self.pointPos = obj['pointPos']  # no exist. was bug coupled with it
 
     def __init__(self, obj):
       self.assign_deserealized(obj)
+
+class DistributionElem(object): 
+  def __init__(self, elem):
+    self.frequency = elem.frequency;
+    self.enabled = elem.enabled;
 
 
 class AppAjax(object):
@@ -40,7 +59,7 @@ class AppAjax(object):
     
     result = []
     for val in tmp:
-      result.append(PathValue(val))
+      result.append(UserInfoValue(val))
 
     return result
 
@@ -53,12 +72,14 @@ class ResearchAjax(object):
     return self.server + uri
 
   def get_distribution_sync(self, arg0):
-    uri = '/pkg'
-    payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True, indent=4)};
+    uri = '/research/get_distribution'
+    payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)};
     print payload
     r = requests.get(self._build_url(uri), params=payload)
     r.raise_for_status()
-    #$.get(uri, args)
+
+    return r.json()
+
 
 
 def main():
@@ -70,7 +91,9 @@ def main():
 
   # get distribution
   rajax = ResearchAjax(server, port)
-  rajax.get_distribution_sync(user_info[0])
+  work_path = user_info[0];
+  arg0 = PathValue(work_path.pageName, work_path.genNames[0], 0)
+  rajax.get_distribution_sync(arg0)
 
 
 if __name__ == '__main__':
