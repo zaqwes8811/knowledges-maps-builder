@@ -4,7 +4,11 @@
 #
 # http://scikit-learn.org/stable/index.html
 
+# 3rdparty
 import requests
+
+# sys
+import json
 
 class PathValue(object):
     def __init__(self, page, gens, pos):
@@ -25,9 +29,12 @@ class AppAjax(object):
   def __init__(self, url, port):
     self.server = url + ":" + str(port)
 
+  def _build_url(self, uri):
+    return self.server + uri
+
   def get_user_summary_sync(self):
     uri = '/user_summary'
-    r = requests.get(self.server + uri)
+    r = requests.get(self._build_url(uri))
     r.raise_for_status()
     tmp = r.json()
     
@@ -42,12 +49,28 @@ class ResearchAjax(object):
   def __init__(self, url, port):
     self.server = url + ":" + str(port)
 
+  def _build_url(self, uri):
+    return self.server + uri
+
+  def get_distribution_sync(self, arg0):
+    uri = '/pkg'
+    payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True, indent=4)};
+    print payload
+    r = requests.get(self._build_url(uri), params=payload)
+    r.raise_for_status()
+    #$.get(uri, args)
+
 
 def main():
   server = 'http://localhost'
   port = 8080
   ajax = AppAjax(server, port)
-  ajax.get_user_summary_sync()
+  user_info = ajax.get_user_summary_sync()
+  print user_info
+
+  # get distribution
+  rajax = ResearchAjax(server, port)
+  rajax.get_distribution_sync(user_info[0])
 
 
 if __name__ == '__main__':
