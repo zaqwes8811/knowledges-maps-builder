@@ -3,8 +3,6 @@ package gae_store_space.high_perf;
 import gae_store_space.PageKind;
 import gae_store_space.SentenceKind;
 import gae_store_space.WordKind;
-import gae_store_space.values.WordValue;
-import gae_store_space.values.WordValueFrequencyComparator;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -43,8 +41,8 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<WordValue> sort(ArrayList<WordValue> value) {
-  	Collections.sort(value, new WordValueFrequencyComparator());
+  private ArrayList<WordKind> sort(ArrayList<WordKind> value) {
+  	Collections.sort(value, WordKind.createFrequencyComparator());
     Collections.reverse(value);
     return value;
   }
@@ -61,21 +59,20 @@ public class TextPipeline {
     return wordHistogramSink;
   }
   
-  private ArrayList<WordValue> unpackHisto(Multimap<String, SentenceKind> wordHistogramSink) {
-  	ArrayList<WordValue> value = new ArrayList<WordValue>();
+  private ArrayList<WordKind> unpackHisto(Multimap<String, SentenceKind> wordHistogramSink) {
+  	ArrayList<WordKind> value = new ArrayList<WordKind>();
     for (String word: wordHistogramSink.keySet()) {
       Collection<SentenceKind> content = wordHistogramSink.get(word);
       int rawFrequency = content.size();
-      value.add(new WordValue(word, rawFrequency, content));
+      WordKind k = WordKind.create(word, content, rawFrequency);
+      value.add(k);
     }
     return value;
   }
   
-  private ArrayList<WordKind> buildWorkKinds(ArrayList<WordValue> values) {
+  private ArrayList<WordKind> buildWorkKinds(ArrayList<WordKind> values) {
   	ArrayList<WordKind> words = new ArrayList<WordKind>();
     for (int i = 0; i < values.size(); i++) {
-      WordValue v = values.get(i);
-      words.add(WordKind.create(v.word, v.sentences, v.frequency));
       words.get(i).setPointPos(i);
     }
     return words;
@@ -92,7 +89,7 @@ public class TextPipeline {
     // Assemble statistic
     Multimap<String, SentenceKind> wordHistogramSink = buildHisto(contentElements);
 
-    ArrayList<WordValue> values = unpackHisto(wordHistogramSink);
+    ArrayList<WordKind> values = unpackHisto(wordHistogramSink);
 
     // Sort words by frequency
     values = sort(values);
