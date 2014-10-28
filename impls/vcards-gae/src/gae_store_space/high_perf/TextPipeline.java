@@ -91,10 +91,8 @@ public class TextPipeline {
     // Sort words by frequency
     wordKinds = sort(wordKinds);
 
-    // Элементы отсортированы и это важно
     wordKinds = assignIndexes(wordKinds);
 
-    // Слова сортированы
     return new PageKind(name, items, wordKinds, text);
   }
 }
