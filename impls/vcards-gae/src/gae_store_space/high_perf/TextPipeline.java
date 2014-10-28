@@ -41,22 +41,22 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<WordKind> sort(ArrayList<WordKind> value) {
-  	Collections.sort(value, WordKind.createFrequencyComparator());
-    Collections.reverse(value);
-    return value;
+  private ArrayList<WordKind> sort(ArrayList<WordKind> kinds) {
+  	Collections.sort(kinds, WordKind.createFrequencyComparator());
+    Collections.reverse(kinds);
+    return kinds;
   }
   
-  private Multimap<String, SentenceKind> buildHisto(ArrayList<SentenceKind> contentElements) {
-  	Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
+  private Multimap<String, SentenceKind> buildHisto(ArrayList<SentenceKind> items) {
+  	Multimap<String, SentenceKind> histo = HashMultimap.create();
     
-    CountReducer reducer = new CountReducerImpl(wordHistogramSink);
+    CountReducer reducer = new CountReducerImpl(histo);
     CounterMapper mapper = new CounterMapperImpl(reducer);
 
     // Split
-    mapper.map(contentElements);
+    mapper.map(items);
     
-    return wordHistogramSink;
+    return histo;
   }
   
   private ArrayList<WordKind> unpackHisto(Multimap<String, SentenceKind> wordHistogramSink) {
