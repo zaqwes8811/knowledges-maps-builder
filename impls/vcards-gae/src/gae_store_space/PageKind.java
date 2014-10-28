@@ -23,8 +23,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import servlets.protocols.WordDataValue;
 import net.jcip.annotations.NotThreadSafe;
+import servlets.protocols.WordDataValue;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -34,7 +34,6 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
-import common.Tools;
 
 import core.math.DistributionElement;
 

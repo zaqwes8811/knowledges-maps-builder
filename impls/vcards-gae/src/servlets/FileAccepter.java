@@ -1,7 +1,6 @@
 package servlets;
 
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.TextPipeline;
 
 import java.io.BufferedReader;
 import java.io.IOException;

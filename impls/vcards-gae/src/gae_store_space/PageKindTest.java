@@ -1,5 +1,20 @@
 package gae_store_space;
 
+import static gae_store_space.OfyService.ofy;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import gae_store_space.high_perf.TextPipeline;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import servlets.protocols.WordDataValue;
+
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
@@ -7,20 +22,6 @@ import com.google.common.collect.Ordering;
 import common.Tools;
 
 import core.math.DistributionElement;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import servlets.protocols.WordDataValue;
-import gae_store_space.high_perf.TextPipeline;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import static gae_store_space.OfyService.ofy;
-import static org.junit.Assert.*;
 
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
