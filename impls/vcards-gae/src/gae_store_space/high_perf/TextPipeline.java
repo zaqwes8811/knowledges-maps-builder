@@ -28,12 +28,6 @@ public class TextPipeline {
 	//private CountReducer reducer = new CountReducer(wordHistogramSink);
   //private CounterMapper mapper = new CounterMapper(reducer);
 	
-	public String getTestFileName() {
-    return "./test_data/korra/etalon.srt";
-  }
-	
-
-
   private String removeFormatting(String rawText) {
   	return convertor.convert(rawText);  	
   }
