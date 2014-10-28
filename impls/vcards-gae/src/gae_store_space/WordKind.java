@@ -1,7 +1,5 @@
 package gae_store_space;
 
-import gae_store_space.values.WordValue;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
