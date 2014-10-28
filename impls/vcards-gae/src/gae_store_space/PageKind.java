@@ -17,7 +17,7 @@
 package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -75,8 +75,8 @@ public class PageKind {
     String rawSource = barePage.rawSource;
     
     // обрабатываем
-    OnePageProcessor p = new OnePageProcessor();
-    PageKind page = p.build(barePage.name, rawSource);
+    TextPipeline p = new TextPipeline();
+    PageKind page = p.pass(barePage.name, rawSource);
     
     // теперь нужно запустить процесс обработки,
     barePage.assign(page);

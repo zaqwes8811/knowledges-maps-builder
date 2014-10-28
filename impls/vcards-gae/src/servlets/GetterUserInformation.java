@@ -1,7 +1,7 @@
 package servlets;
 
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import java.io.IOException;
 import java.util.List;
@@ -33,7 +33,7 @@ public class GetterUserInformation extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    List<PageSummaryValue> v = app.getUserInformation(OnePageProcessor.defaultUserId);
+    List<PageSummaryValue> v = app.getUserInformation(TextPipeline.defaultUserId);
     String json = new Gson().toJson(v);
 
     response.setCharacterEncoding("UTF-8");
