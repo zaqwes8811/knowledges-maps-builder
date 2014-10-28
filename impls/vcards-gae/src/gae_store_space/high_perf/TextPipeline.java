@@ -32,23 +32,10 @@ public class TextPipeline {
     return "./test_data/korra/etalon.srt";
   }
 	
-  public String getGetPlainTextFromFile(String filename) {
-  	try {
-  		ArrayList<String> lines = new ArrayList<String>(Tools.fileToList(filename).asList());
-  		return convertToPlainText(lines);
-  	} catch(IOException e) {
-  		throw new RuntimeException(e);
-  	}
-  }
 
-  private String convertToPlainText(ArrayList<String> lines) {
-  	String rawText = Joiner.on('\n').join(lines);
+
+  private String removeFormatting(String rawText) {
   	return convertor.convert(rawText);  	
-  }
- 
-  public PageKind buildPageKind(String pageName, String filename) {  
-    String plainText = getGetPlainTextFromFile(filename);
-    return pass(pageName, plainText);
   }
 
   private ArrayList<SentenceKind> getContentElements(String text) {
@@ -62,11 +49,13 @@ public class TextPipeline {
     return contentElements;
   }
   
-  // FIXME: DevDanger: operation must be idempotent!!!
   // Now no store operations
   public PageKind pass(String name, String plainText) {
+  	// Remove formatting
+  	String s = removeFormatting(plainText);
+  	
   	// FIXME: убрать отсюда весь доступ к хранилищу
-  	ArrayList<SentenceKind> contentElements = getContentElements(plainText);
+  	ArrayList<SentenceKind> contentElements = getContentElements(s);
   	
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
@@ -88,7 +77,7 @@ public class TextPipeline {
     Collections.sort(value, new WordKind.WordValueFrequencyComparator());
     Collections.reverse(value);
 
-    // Элементы отсортированы - это важно!!
+    // Элементы отсортированы и это важно
     ArrayList<WordKind> words = new ArrayList<WordKind>();
     for (int i = 0; i < value.size(); i++) {
       WordKind.WordValue v = value.get(i);

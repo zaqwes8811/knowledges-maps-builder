@@ -11,6 +11,7 @@ import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import common.Tools;
 
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
@@ -72,13 +73,13 @@ public class AppInstance {
 	  	// FIXME: GAE can't read file.
   		String name = TextPipeline.defaultPageName;
   		
-  		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
+  		String text = Tools.getGetPlainTextFromFile(processor.getTestFileName());
   		createPageIfNotExist(name, text);
 	 	}
   	
   	{
   		String name = TextPipeline.defaultPageName+"Copy";
-  		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
+  		String text = Tools.getGetPlainTextFromFile(processor.getTestFileName());
   		createPageIfNotExist(name, text);
   	}
   	

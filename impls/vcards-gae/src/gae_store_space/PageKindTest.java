@@ -4,6 +4,7 @@ import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestC
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
 import com.google.common.collect.Ordering;
+import common.Tools;
 
 import core.math.DistributionElement;
 
@@ -29,7 +30,8 @@ public class PageKindTest {
 
   public PageKind buildContentPage(String pageName) {
   	TextPipeline processor = new TextPipeline();
-    return processor.buildPageKind(pageName, processor.getTestFileName());
+  	String plainText = Tools.getGetPlainTextFromFile(processor.getTestFileName());
+    return processor.pass(pageName, plainText);
   }
 
   @Before

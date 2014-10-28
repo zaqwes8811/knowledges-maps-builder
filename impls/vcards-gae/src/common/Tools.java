@@ -1,6 +1,6 @@
 package common;
 
-import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
+//import com.google.appengine.repackaged.org.apache.http.annotation.Immutable;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import net.jcip.annotations.Immutable;
 
 @Immutable
 final public class Tools {
@@ -98,6 +100,15 @@ final public class Tools {
       closer.close();
     }
     return Optional.absent();
+  }
+  
+  public static String getGetPlainTextFromFile(String filename) {
+  	try {
+  		ArrayList<String> lines = new ArrayList<String>(Tools.fileToList(filename).asList());
+  		return Joiner.on('\n').join(lines);
+  	} catch(IOException e) {
+  		throw new RuntimeException(e);
+  	}
   }
 
   static public ImmutableList<String> fileToList(String filename) throws IOException {
