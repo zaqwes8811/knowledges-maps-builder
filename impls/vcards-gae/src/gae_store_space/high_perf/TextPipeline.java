@@ -15,6 +15,7 @@ import com.google.common.collect.Multimap;
 import core.mapreduce.CountReducer;
 import core.mapreduce.CounterMapper;
 import core.nlp.PlainTextTokenizer;
+import core.nlp.SubtitlesToPlainText;
 
 public class TextPipeline {
 	public static final String defaultPageName = "Korra";
