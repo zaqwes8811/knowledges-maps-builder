@@ -70,10 +70,9 @@ public class TextPipeline {
     return value;
   }
   
-  private ArrayList<WordKind> assignIndexes(ArrayList<WordKind> values) {
-  	ArrayList<WordKind> words = new ArrayList<WordKind>();
-    for (int i = 0; i < values.size(); i++) {
-      words.get(i).setPointPos(i);
+  private ArrayList<WordKind> assignIndexes(ArrayList<WordKind> words) {
+    for (int i = 0; i < words.size(); i++) {
+    	words.get(i).setPointPos(i);
     }
     return words;
   }
@@ -89,13 +88,13 @@ public class TextPipeline {
     // Assemble statistic
     Multimap<String, SentenceKind> histo = buildHisto(contentElements);
 
-    ArrayList<WordKind> values = unpackHisto(histo);
+    ArrayList<WordKind> words = unpackHisto(histo);
 
     // Sort words by frequency
-    values = sort(values);
+    words = sort(words);
 
     // Элементы отсортированы и это важно
-    ArrayList<WordKind> words = assignIndexes(values);
+    words = assignIndexes(words);
 
     // Слова сортированы
     return new PageKind(name, contentElements, words, text);
