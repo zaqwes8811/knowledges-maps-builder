@@ -27,29 +27,29 @@ public class TextPipeline {
 	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
 	//private CountReducer reducer = new CountReducer(wordHistogramSink);
   //private CounterMapper mapper = new CounterMapper(reducer);
+	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
 	
   private String removeFormatting(String rawText) {
   	return convertor.convert(rawText);  	
   }
 
-  private ArrayList<SentenceKind> getContentElements(String text) {
-    ImmutableList<String> sentences = new PlainTextTokenizer().getSentences(text);
-
-    // Пакуем
+  private ArrayList<SentenceKind> getContentElements(ImmutableList<String> sentences) {
     ArrayList<SentenceKind> contentElements = new ArrayList<SentenceKind>();
     for (String sentence: sentences)
       contentElements.add(new SentenceKind(sentence));
-
     return contentElements;
   }
   
   // Now no store operations
-  public PageKind pass(String name, String plainText) {
+  public PageKind pass(String name, String text) {
   	// Remove formatting
-  	String s = removeFormatting(plainText);
+  	String pureText = removeFormatting(text);
+  	
+  	// Tokenise
+  	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
   	// FIXME: убрать отсюда весь доступ к хранилищу
-  	ArrayList<SentenceKind> contentElements = getContentElements(s);
+  	ArrayList<SentenceKind> contentElements = getContentElements(sentences);
   	
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
@@ -58,7 +58,7 @@ public class TextPipeline {
     CounterMapper mapper = new CounterMapper(reducer);
 
     // Split
-    mapper.map(contentElements);  // TODO: implicit, but be so
+    mapper.map(contentElements);
 
     ArrayList<WordKind.WordValue> value = new ArrayList<WordKind.WordValue>();
     for (String word: wordHistogramSink.keySet()) {
@@ -80,6 +80,6 @@ public class TextPipeline {
     }
 
     // Слова сортированы
-    return new PageKind(name, contentElements, words, plainText);
+    return new PageKind(name, contentElements, words, text);
   }
 }
