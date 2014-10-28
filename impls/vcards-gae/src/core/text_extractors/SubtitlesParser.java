@@ -22,7 +22,9 @@ import java.util.List;
 import java.util.Set;
 
 public class SubtitlesParser implements org.apache.tika.parser.Parser {
-  @Override
+  private static final long serialVersionUID = -4009566128194090587L;
+
+	@Override
   public Set<MediaType> getSupportedTypes(ParseContext parseContext) {
     return null;
   }
@@ -44,7 +46,6 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
         Charsets.UTF_8
       ));
 
-    List<String> items = new ArrayList<String>();
     handler.startDocument();
     while (true) {
       String buffer;
