@@ -22,7 +22,7 @@ public final class GeneratorAnyDistribution {
   private final Integer countPoints_;
   private final Integer maxValue_;
   private final ImmutableList<ImmutableList<Integer>> codeBook_;
-  private final Integer INTERVAL_POS_ = 1;
+  //private final Integer INTERVAL_POS_ = 1;
   private final Integer IDX_POSITION_ = 2;
   private final ArrayList<DistributionElement> d;
   
