@@ -72,8 +72,7 @@ public class GeneratorKindTest {
 
     // try load
     {
-      GeneratorKind page = ofy().load().type(GeneratorKind.class).id(1).now();
-      Integer action = page.codeAction;
+      ofy().load().type(GeneratorKind.class).id(1).now();
     }
   }
 }
