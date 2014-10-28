@@ -1,22 +1,21 @@
 package servlets;
 
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
-import com.google.gson.Gson;
-
-import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.TextPipeline;
+import gae_store_space.PageKind;
+
+import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.jcip.annotations.NotThreadSafe;
 import servlets.protocols.PathValue;
 import servlets.protocols.WordDataValue;
-import net.jcip.annotations.NotThreadSafe;
 
-import java.io.IOException;
+import com.google.gson.Gson;
 
 @NotThreadSafe
 public class GetterSingleWord extends HttpServlet {
