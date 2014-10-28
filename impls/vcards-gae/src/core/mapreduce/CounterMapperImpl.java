@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 @NotThreadSafe
-public class CounterMapperImpl {
-  private final CountReducerImpl reducer_;
-  public CounterMapperImpl(CountReducerImpl reducer) {
+public class CounterMapperImpl implements CounterMapper {
+  private final CountReducer reducer_;
+  public CounterMapperImpl(CountReducer reducer) {
     reducer_ = reducer;
   }
 
@@ -25,6 +25,7 @@ public class CounterMapperImpl {
     reducer_.reduce(key, value);
   }
 
+  @Override
   public void map(List<SentenceKind> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (SentenceKind item : contentItemKinds) {
