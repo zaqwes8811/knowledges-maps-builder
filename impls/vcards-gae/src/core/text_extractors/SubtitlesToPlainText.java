@@ -1,4 +1,4 @@
-package core.nlp;
+package core.text_extractors;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -13,9 +13,6 @@ import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 
-import core.text_extractors.SpecialSymbols;
-import core.text_extractors.SubtitlesContentHandler;
-import core.text_extractors.SubtitlesParser;
 
 public class SubtitlesToPlainText {
 	//FIXME: make strategy
