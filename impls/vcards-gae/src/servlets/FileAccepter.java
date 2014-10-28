@@ -18,6 +18,7 @@ import net.jcip.annotations.NotThreadSafe;
 
 import org.javatuples.Pair;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
@@ -50,10 +51,8 @@ public class FileAccepter extends HttpServlet {
 		
 		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
 		// FIXME: ошибки парсинга
-		TextPipeline processor = new TextPipeline();
-		
 		ArrayList<String> sentences = new ArrayList<String>(workSpace.subList(2, workSpace.size()-1));
-		String text = processor.convertToPlainText(sentences);
+		String text = Joiner.on('\n').join(sentences);
 		app.createPageIfNotExist(filename, text);
 		
 		return ImmutableList.copyOf(in);
