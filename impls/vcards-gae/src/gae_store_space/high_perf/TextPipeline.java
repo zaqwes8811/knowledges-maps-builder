@@ -19,7 +19,7 @@ import core.mapreduce.CountReducer;
 import core.mapreduce.CounterMapper;
 import core.nlp.PlainTextTokenizer;
 
-public class OnePageProcessor {
+public class TextPipeline {
 	public static final String defaultPageName = "Korra";
 	public static final String defaultGenName = "Default";
 	public static final String defaultUserId = "User";
@@ -46,7 +46,7 @@ public class OnePageProcessor {
  
   public PageKind buildPageKind(String pageName, String filename) {  
     String plainText = getGetPlainTextFromFile(filename);
-    return build(pageName, plainText);
+    return pass(pageName, plainText);
   }
 
   private ArrayList<SentenceKind> getContentElements(String text) {
@@ -62,7 +62,7 @@ public class OnePageProcessor {
   
   // FIXME: DevDanger: operation must be idempotent!!!
   // Now no store operations
-  public PageKind build(String name, String plainText) {
+  public PageKind pass(String name, String plainText) {
   	// FIXME: убрать отсюда весь доступ к хранилищу
   	ArrayList<SentenceKind> contentElements = getContentElements(plainText);
   	

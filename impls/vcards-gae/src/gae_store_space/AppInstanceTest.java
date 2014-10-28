@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import org.junit.After;
 import org.junit.Before;
@@ -25,7 +25,7 @@ public class AppInstanceTest {
 	@Test
 	public void testGetUserInformation() {
 		AppInstance a = AppInstance.getInstance();
-		new Gson().toJson(a.getUserInformation(OnePageProcessor.defaultUserId));
+		new Gson().toJson(a.getUserInformation(TextPipeline.defaultUserId));
 	}
 
 }

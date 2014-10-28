@@ -18,7 +18,7 @@ import com.googlecode.objectify.annotation.Unindex;
 import core.math.DistributionElement;
 import core.math.GeneratorAnyDistribution;
 //import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -76,7 +76,7 @@ public class GeneratorKind
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static GeneratorKind create(ArrayList<DistributionElement> distribution) {
-    return new GeneratorKind(distribution, OnePageProcessor.defaultGenName);
+    return new GeneratorKind(distribution, TextPipeline.defaultGenName);
   }
   
   public static GeneratorKind create(ArrayList<DistributionElement> distribution, String name) {
