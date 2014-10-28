@@ -3,6 +3,8 @@ package gae_store_space.high_perf;
 import gae_store_space.PageKind;
 import gae_store_space.SentenceKind;
 import gae_store_space.WordKind;
+import gae_store_space.values.WordValue;
+import gae_store_space.values.WordValueFrequencyComparator;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,9 +14,12 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
+import core.mapreduce.CountReducer;
 import core.mapreduce.CountReducerImpl;
+import core.mapreduce.CounterMapper;
 import core.mapreduce.CounterMapperImpl;
 import core.nlp.PlainTextTokenizer;
+import core.text_extractors.Convertor;
 import core.text_extractors.SubtitlesToPlainText;
 
 public class TextPipeline {
@@ -22,7 +27,7 @@ public class TextPipeline {
 	public static final String defaultGenName = "Default";
 	public static final String defaultUserId = "User";
 	
-	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
+	private Convertor convertor = new SubtitlesToPlainText();
 	//private CountReducer reducer = new CountReducer(wordHistogramSink);
   //private CounterMapper mapper = new CounterMapper(reducer);
 	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
@@ -31,51 +36,69 @@ public class TextPipeline {
   	return convertor.convert(rawText);  	
   }
 
-  private ArrayList<SentenceKind> getContentElements(ImmutableList<String> sentences) {
-    ArrayList<SentenceKind> contentElements = new ArrayList<SentenceKind>();
+  private ArrayList<SentenceKind> packSentences(ImmutableList<String> sentences) {
+    ArrayList<SentenceKind> r = new ArrayList<SentenceKind>();
     for (String sentence: sentences)
-      contentElements.add(new SentenceKind(sentence));
-    return contentElements;
+      r.add(new SentenceKind(sentence));
+    return r;
+  }
+  
+  private ArrayList<WordValue> sort(ArrayList<WordValue> value) {
+  	Collections.sort(value, new WordValueFrequencyComparator());
+    Collections.reverse(value);
+    return value;
+  }
+  
+  private Multimap<String, SentenceKind> buildHisto(ArrayList<SentenceKind> contentElements) {
+  	Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
+    
+    CountReducer reducer = new CountReducerImpl(wordHistogramSink);
+    CounterMapper mapper = new CounterMapperImpl(reducer);
+
+    // Split
+    mapper.map(contentElements);
+    
+    return wordHistogramSink;
+  }
+  
+  private ArrayList<WordValue> unpackHisto(Multimap<String, SentenceKind> wordHistogramSink) {
+  	ArrayList<WordValue> value = new ArrayList<WordValue>();
+    for (String word: wordHistogramSink.keySet()) {
+      Collection<SentenceKind> content = wordHistogramSink.get(word);
+      int rawFrequency = content.size();
+      value.add(new WordValue(word, rawFrequency, content));
+    }
+    return value;
+  }
+  
+  private ArrayList<WordKind> buildWorkKinds(ArrayList<WordValue> values) {
+  	ArrayList<WordKind> words = new ArrayList<WordKind>();
+    for (int i = 0; i < values.size(); i++) {
+      WordValue v = values.get(i);
+      words.add(WordKind.create(v.word, v.sentences, v.frequency));
+      words.get(i).setPointPos(i);
+    }
+    return words;
   }
   
   // Now no store operations
   public PageKind pass(String name, String text) {
-  	// Remove formatting
   	String pureText = removeFormatting(text);
   	
-  	// Tokenise
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
-  	// FIXME: убрать отсюда весь доступ к хранилищу
-  	ArrayList<SentenceKind> contentElements = getContentElements(sentences);
+  	ArrayList<SentenceKind> contentElements = packSentences(sentences);
   	
-    // TODO: BAD! В страницу собрана обработка
-    Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
-    
-    CountReducerImpl reducer = new CountReducerImpl(wordHistogramSink);
-    CounterMapperImpl mapper = new CounterMapperImpl(reducer);
+    // Assemble statistic
+    Multimap<String, SentenceKind> wordHistogramSink = buildHisto(contentElements);
 
-    // Split
-    mapper.map(contentElements);
+    ArrayList<WordValue> values = unpackHisto(wordHistogramSink);
 
-    ArrayList<WordKind.WordValue> value = new ArrayList<WordKind.WordValue>();
-    for (String word: wordHistogramSink.keySet()) {
-      Collection<SentenceKind> content = wordHistogramSink.get(word);
-      int rawFrequency = content.size();
-      value.add(new WordKind.WordValue(word, rawFrequency, content));
-    }
-
-    // Sort words by frequency and assign idx
-    Collections.sort(value, new WordKind.WordValueFrequencyComparator());
-    Collections.reverse(value);
+    // Sort words by frequency
+    values = sort(values);
 
     // Элементы отсортированы и это важно
-    ArrayList<WordKind> words = new ArrayList<WordKind>();
-    for (int i = 0; i < value.size(); i++) {
-      WordKind.WordValue v = value.get(i);
-      words.add(WordKind.create(v.word, v.sentences, v.frequency));
-      words.get(i).setPointPos(i);
-    }
+    ArrayList<WordKind> words = buildWorkKinds(values);
 
     // Слова сортированы
     return new PageKind(name, contentElements, words, text);

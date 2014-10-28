@@ -14,8 +14,9 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 
 
-public class SubtitlesToPlainText {
+public class SubtitlesToPlainText implements Convertor {
 	//FIXME: make strategy
+	@Override
 	public String convert(String content) {
 		try {
 			// Пока файл строго юникод - UTF-8
