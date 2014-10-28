@@ -1,0 +1,8 @@
+Python:  
+http://www.cbinsights.com/blog/python-tools-machine-learning/ - пакеты разбросаны
+
+Octave
+- это не матлаб с его пакетами
+
+R
+- сам язык плох
