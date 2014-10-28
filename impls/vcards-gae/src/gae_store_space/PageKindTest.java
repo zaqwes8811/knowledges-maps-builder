@@ -30,7 +30,7 @@ public class PageKindTest {
 
   public PageKind buildContentPage(String pageName) {
   	TextPipeline processor = new TextPipeline();
-  	String plainText = Tools.getGetPlainTextFromFile(processor.getTestFileName());
+  	String plainText = Tools.getGetPlainTextFromFile(AppInstance.getTestFileName());
     return processor.pass(pageName, plainText);
   }
 

@@ -19,7 +19,9 @@ import servlets.protocols.PathValue;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
 	
-	private final TextPipeline processor = new TextPipeline();	
+	static public String getTestFileName() {
+    return "./test_data/korra/etalon.srt";
+  }
 	
 	Integer fakeState = new Integer(0);
 	
@@ -73,13 +75,13 @@ public class AppInstance {
 	  	// FIXME: GAE can't read file.
   		String name = TextPipeline.defaultPageName;
   		
-  		String text = Tools.getGetPlainTextFromFile(processor.getTestFileName());
+  		String text = Tools.getGetPlainTextFromFile(getTestFileName());
   		createPageIfNotExist(name, text);
 	 	}
   	
   	{
   		String name = TextPipeline.defaultPageName+"Copy";
-  		String text = Tools.getGetPlainTextFromFile(processor.getTestFileName());
+  		String text = Tools.getGetPlainTextFromFile(getTestFileName());
   		createPageIfNotExist(name, text);
   	}
   	
