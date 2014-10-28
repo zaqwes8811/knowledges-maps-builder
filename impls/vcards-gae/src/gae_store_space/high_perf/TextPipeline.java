@@ -25,6 +25,8 @@ public class TextPipeline {
 	public static final String defaultUserId = "User";
 	
 	private SubtitlesToPlainText convertor = new SubtitlesToPlainText();
+	//private CountReducer reducer = new CountReducer(wordHistogramSink);
+  //private CounterMapper mapper = new CounterMapper(reducer);
 	
 	public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -39,7 +41,7 @@ public class TextPipeline {
   	}
   }
 
-  public String convertToPlainText(ArrayList<String> lines) {
+  private String convertToPlainText(ArrayList<String> lines) {
   	String rawText = Joiner.on('\n').join(lines);
   	return convertor.convert(rawText);  	
   }
@@ -68,6 +70,7 @@ public class TextPipeline {
   	
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
+    
     CountReducer reducer = new CountReducer(wordHistogramSink);
     CounterMapper mapper = new CounterMapper(reducer);
 
