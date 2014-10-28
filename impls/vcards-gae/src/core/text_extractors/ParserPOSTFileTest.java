@@ -1,9 +1,7 @@
 package core.text_extractors;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
 
-import java.io.Console;
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
