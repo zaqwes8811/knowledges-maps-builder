@@ -56,8 +56,9 @@ public class PageKind {
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
   // все равно может упасть. с единичным ключем фигня какая-то
+  // FIXME: вообще это проблема
   @Load  
-  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>();  // FIXME: вообще это проблема!!
+  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>();  
   
   public String getName() { return name; }
   

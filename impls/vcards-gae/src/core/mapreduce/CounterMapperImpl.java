@@ -13,10 +13,11 @@ import java.util.List;
 
  Fake MapReduce - try make similar
  */
+
 @NotThreadSafe
-public class CounterMapper {
-  private final CountReducer reducer_;
-  public CounterMapper(CountReducer reducer) {
+public class CounterMapperImpl {
+  private final CountReducerImpl reducer_;
+  public CounterMapperImpl(CountReducerImpl reducer) {
     reducer_ = reducer;
   }
 
@@ -30,8 +31,8 @@ public class CounterMapper {
       List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words)
       	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
-      	
-        emit(word.toLowerCase(), item);
+      	// .toLowerCase()
+        emit(word, item);
     }
   }
 }
