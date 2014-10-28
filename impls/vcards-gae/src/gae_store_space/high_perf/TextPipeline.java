@@ -12,8 +12,8 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
-import core.mapreduce.CountReducer;
-import core.mapreduce.CounterMapper;
+import core.mapreduce.CountReducerImpl;
+import core.mapreduce.CounterMapperImpl;
 import core.nlp.PlainTextTokenizer;
 import core.text_extractors.SubtitlesToPlainText;
 
@@ -52,8 +52,8 @@ public class TextPipeline {
     // TODO: BAD! В страницу собрана обработка
     Multimap<String, SentenceKind> wordHistogramSink = HashMultimap.create();
     
-    CountReducer reducer = new CountReducer(wordHistogramSink);
-    CounterMapper mapper = new CounterMapper(reducer);
+    CountReducerImpl reducer = new CountReducerImpl(wordHistogramSink);
+    CounterMapperImpl mapper = new CounterMapperImpl(reducer);
 
     // Split
     mapper.map(contentElements);

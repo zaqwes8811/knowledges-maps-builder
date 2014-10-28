@@ -7,9 +7,9 @@ import com.google.common.collect.Multimap;
 import org.checkthread.annotations.NotThreadSafe;
 
 @NotThreadSafe
-public class CountReducer {
+public class CountReducerImpl {
   private final Multimap<String, SentenceKind> wordHistogram_;
-  public CountReducer(Multimap<String, SentenceKind> wordHistogram) {
+  public CountReducerImpl(Multimap<String, SentenceKind> wordHistogram) {
     wordHistogram_ = wordHistogram;
   }
 
