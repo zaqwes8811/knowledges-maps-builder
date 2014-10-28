@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import servlets.protocols.WordDataValue;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class PageKindTest {
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
   public PageKind buildContentPage(String pageName) {
-  	OnePageProcessor processor = new OnePageProcessor();
+  	TextPipeline processor = new TextPipeline();
     return processor.buildPageKind(pageName, processor.getTestFileName());
   }
 
@@ -42,7 +42,7 @@ public class PageKindTest {
 
   @Test
   public void testCreateAndPersist() throws Exception {
-    PageKind page = buildContentPage(OnePageProcessor.defaultPageName);
+    PageKind page = buildContentPage(TextPipeline.defaultPageName);
     GeneratorKind gen = GeneratorKind.create(page.getRawDistribution());
     ofy().save().entity(gen).now();
     page.addGenerator(gen);
@@ -51,12 +51,12 @@ public class PageKindTest {
 
   @Test
   public void testGetDistribution() throws IOException {
-    ofy().save().entity(buildContentPage(OnePageProcessor.defaultPageName)).now();
+    ofy().save().entity(buildContentPage(TextPipeline.defaultPageName)).now();
     
     // Очень медленно!!
     PageKind page =
     		ofy().load().type(PageKind.class)
-    			.filter("name =", OnePageProcessor.defaultPageName)
+    			.filter("name =", TextPipeline.defaultPageName)
     			.limit(1).first().now();
 
     /// Queries
@@ -75,7 +75,7 @@ public class PageKindTest {
   
   private PageKind putPagesInStore() {
   	// Check store
-    String activePageName = OnePageProcessor.defaultPageName;
+    String activePageName = TextPipeline.defaultPageName;
     PageKind loadedPage =
       ofy().load().type(PageKind.class).filter("name = ", activePageName).first().now();
     assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
@@ -114,7 +114,7 @@ public class PageKindTest {
   	PageKind page = putPagesInStore();
 
     // queries
-    Integer pointPosition = page.getGenerator(OnePageProcessor.defaultGenName).getPosition();
+    Integer pointPosition = page.getGenerator(TextPipeline.defaultGenName).getPosition();
 
     /*
     // слово одно, но если страниц много, то получим для всех
@@ -145,7 +145,7 @@ public class PageKindTest {
   @Test 
   public void testGetPackedWordData() {
   	PageKind page = putPagesInStore();
-  	Optional<WordDataValue> v = page.getWordData(OnePageProcessor.defaultGenName);
+  	Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGenName);
   	assertTrue(v.isPresent());
   } 
 }

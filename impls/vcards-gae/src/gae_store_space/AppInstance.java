@@ -1,7 +1,7 @@
 package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import servlets.protocols.PathValue;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
 	
-	private final OnePageProcessor processor = new OnePageProcessor();	
+	private final TextPipeline processor = new TextPipeline();	
 	
 	Integer fakeState = new Integer(0);
 	
@@ -51,8 +51,8 @@ public class AppInstance {
 				ofy().load().type(PageKind.class).filter("name = ", name).list();
 		
 		if (pages.isEmpty()) {
-			OnePageProcessor processor = new OnePageProcessor();
-	  	PageKind page = processor.build(name, text);
+			TextPipeline processor = new TextPipeline();
+	  	PageKind page = processor.pass(name, text);
 	  	
 	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), fakeState.toString());
 	  	fakeState++;
@@ -70,14 +70,14 @@ public class AppInstance {
 		{
 	  	// Own tables
 	  	// FIXME: GAE can't read file.
-  		String name = OnePageProcessor.defaultPageName;
+  		String name = TextPipeline.defaultPageName;
   		
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
   		createPageIfNotExist(name, text);
 	 	}
   	
   	{
-  		String name = OnePageProcessor.defaultPageName+"Copy";
+  		String name = TextPipeline.defaultPageName+"Copy";
   		String text = processor.getGetPlainTextFromFile(processor.getTestFileName());
   		createPageIfNotExist(name, text);
   	}
@@ -86,7 +86,7 @@ public class AppInstance {
 	  	// Try read
 	  	// Скрыл, так как падало, но должно работать!!
 	  	List<PageKind> pages = 
-	  			ofy().load().type(PageKind.class).filter("name = ", OnePageProcessor.defaultPageName).list();
+	  			ofy().load().type(PageKind.class).filter("name = ", TextPipeline.defaultPageName).list();
 	  	
 	  	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
 	  	if (pages.isEmpty()) 

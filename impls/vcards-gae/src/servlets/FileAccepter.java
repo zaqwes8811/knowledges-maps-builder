@@ -1,7 +1,7 @@
 package servlets;
 
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,7 +50,7 @@ public class FileAccepter extends HttpServlet {
 		
 		// Где-то тут нужно перейти на нижний уроветь - спрятать его будет нужно
 		// FIXME: ошибки парсинга
-		OnePageProcessor processor = new OnePageProcessor();
+		TextPipeline processor = new TextPipeline();
 		
 		ArrayList<String> sentences = new ArrayList<String>(workSpace.subList(2, workSpace.size()-1));
 		String text = processor.convertToPlainText(sentences);

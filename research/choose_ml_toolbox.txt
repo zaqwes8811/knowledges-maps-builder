@@ -1,8 +1,22 @@
-Python:  
+Python - tech users
 http://www.cbinsights.com/blog/python-tools-machine-learning/ - пакеты разбросаны
 
 Octave
 - это не матлаб с его пакетами
 
-R
+http://julialang.org/
+
+R - business user
 - сам язык плох
+- h2o имеет туториал для R
+- похожы вытаскивать данные из сервиса одна морока, возможно
+
+Advices:
+http://datascience.stackexchange.com/questions/326/python-vs-r-machine-learning
+http://www.reddit.com/r/MachineLearning/comments/1rg8o4/r_vs_python/
+https://www.kaggle.com/forums/t/5243/pros-and-cons-of-r-vs-python-sci-kit-learn
+https://www.packtpub.com/books/content/war-data-science-python-versus-r
+
+Things
+  а нужно ли ООП в этих моделях?
+  h2o - не те объемы данных - очень медленно - не сейчас! пусть пока обычные питоновские либы

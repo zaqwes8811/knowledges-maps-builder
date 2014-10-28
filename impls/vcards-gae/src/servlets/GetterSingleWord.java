@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 
 import gae_store_space.PageKind;
 import gae_store_space.AppInstance;
-import gae_store_space.high_perf.OnePageProcessor;
+import gae_store_space.high_perf.TextPipeline;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
