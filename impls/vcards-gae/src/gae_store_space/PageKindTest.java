@@ -114,10 +114,10 @@ public class PageKindTest {
     // TODO: Может лучше сделать ссылкой-ключом?
     // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
     //   можно использовать кэши, но как быть с обновлением данных?
-  	PageKind page = putPagesInStore();
+  	//PageKind page = putPagesInStore();
 
     // queries
-    Integer pointPosition = page.getGenerator(TextPipeline.defaultGenName).getPosition();
+    //Integer pointPosition = page.getGenerator(TextPipeline.defaultGenName).getPosition();
 
     /*
     // слово одно, но если страниц много, то получим для всех
