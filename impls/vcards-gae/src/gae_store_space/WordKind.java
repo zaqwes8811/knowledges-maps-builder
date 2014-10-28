@@ -1,5 +1,7 @@
 package gae_store_space;
 
+import gae_store_space.values.WordValue;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -120,24 +122,5 @@ public class WordKind {
 
   public static Comparator<WordKind> createFrequencyComparator() {
     return new WordFreqComparator();
-  }
-
-  public static class WordValue {
-    public final Integer frequency;
-    public final String word;
-    public final Collection<SentenceKind> sentences;
-
-    public WordValue(String word, Integer frequency, Collection<SentenceKind> c) {
-      this.word = word;
-      this.frequency = frequency;
-      this.sentences = c;
-    }
-  }
-
-  public static class WordValueFrequencyComparator implements Comparator<WordValue> {
-    @Override
-    public int compare(WordValue o1, WordValue o2) {
-      return o1.frequency.compareTo(o2.frequency);
-    }
   }
 }
