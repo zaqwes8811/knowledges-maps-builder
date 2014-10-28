@@ -9,6 +9,7 @@ public class PathValue {
 	public String genName;
 	public Integer pointPos;
 	
+	// для сереализации
 	private PathValue() {}
 	
 	public PathValue(String p, String g, Integer pos) {
