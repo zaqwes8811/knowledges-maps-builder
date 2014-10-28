@@ -53,27 +53,25 @@ public class TextPipeline {
     CountReducer reducer = new CountReducerImpl(histo);
     CounterMapper mapper = new CounterMapperImpl(reducer);
 
-    // Split
     mapper.map(items);
     
     return histo;
   }
   
-  private ArrayList<WordKind> unpackHisto(Multimap<String, SentenceKind> wordHistogramSink) {
-  	ArrayList<WordKind> value = new ArrayList<WordKind>();
-    for (String word: wordHistogramSink.keySet()) {
-      Collection<SentenceKind> content = wordHistogramSink.get(word);
+  private ArrayList<WordKind> unpackHisto(Multimap<String, SentenceKind> histo) {
+  	ArrayList<WordKind> kinds = new ArrayList<WordKind>();
+    for (String word: histo.keySet()) {
+      Collection<SentenceKind> content = histo.get(word);
       int rawFrequency = content.size();
-      WordKind k = WordKind.create(word, content, rawFrequency);
-      value.add(k);
+      kinds.add(WordKind.create(word, content, rawFrequency));
     }
-    return value;
+    return kinds;
   }
   
   private ArrayList<WordKind> assignIndexes(ArrayList<WordKind> words) {
-    for (int i = 0; i < words.size(); i++) {
+    for (int i = 0; i < words.size(); i++) 
     	words.get(i).setPointPos(i);
-    }
+    
     return words;
   }
   
