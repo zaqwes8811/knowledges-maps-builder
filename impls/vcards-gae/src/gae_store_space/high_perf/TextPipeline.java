@@ -83,20 +83,20 @@ public class TextPipeline {
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
-  	ArrayList<SentenceKind> contentElements = packSentences(sentences);
+  	ArrayList<SentenceKind> items = packSentences(sentences);
   	
     // Assemble statistic
-    Multimap<String, SentenceKind> histo = buildHisto(contentElements);
+    Multimap<String, SentenceKind> histo = buildHisto(items);
 
-    ArrayList<WordKind> words = unpackHisto(histo);
+    ArrayList<WordKind> wordKinds = unpackHisto(histo);
 
     // Sort words by frequency
-    words = sort(words);
+    wordKinds = sort(wordKinds);
 
     // Элементы отсортированы и это важно
-    words = assignIndexes(words);
+    wordKinds = assignIndexes(wordKinds);
 
     // Слова сортированы
-    return new PageKind(name, contentElements, words, text);
+    return new PageKind(name, items, wordKinds, text);
   }
 }
