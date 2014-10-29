@@ -22,7 +22,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
 import com.google.common.collect.Ordering;
 
-import cross_cuttings_layer.Tools;
+import cross_cuttings_layer.CrossIO;
 
 
 
@@ -33,7 +33,7 @@ public class PageKindTest {
 
   public PageKind buildContentPage(String pageName) {
   	TextPipeline processor = new TextPipeline();
-  	String plainText = Tools.getGetPlainTextFromFile(AppInstance.getTestFileName());
+  	String plainText = CrossIO.getGetPlainTextFromFile(AppInstance.getTestFileName());
     return processor.pass(pageName, plainText);
   }
 
