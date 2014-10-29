@@ -17,11 +17,13 @@
 package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
-import gae_store_space.high_perf.TextPipeline;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import pipeline.TextPipeline;
+import pipeline.math.DistributionElement;
 
 import net.jcip.annotations.NotThreadSafe;
 import servlets.protocols.WordDataValue;
@@ -35,7 +37,6 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
-import core.math.DistributionElement;
 
 @NotThreadSafe
 @Entity
