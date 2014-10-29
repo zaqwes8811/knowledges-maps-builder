@@ -11,7 +11,7 @@ import org.tartarus.snowball.ext.russianStemmer;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
-import cross_cuttings_layer.Tools;
+import cross_cuttings_layer.CrossIO;
 
 
 public class WordFilters {
@@ -483,7 +483,7 @@ public class WordFilters {
           key,
           test.get(key)));
     } */
-    Tools.print(compressed);
+    CrossIO.print(compressed);
 
   }
 }
