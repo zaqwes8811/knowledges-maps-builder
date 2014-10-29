@@ -1,4 +1,4 @@
-package sandbox.tutorials.book.interfaces;
+package sandbox.jvm_langs.tutorials.book.interfaces;
 /**
  * Created with IntelliJ IDEA.
  * User: кей

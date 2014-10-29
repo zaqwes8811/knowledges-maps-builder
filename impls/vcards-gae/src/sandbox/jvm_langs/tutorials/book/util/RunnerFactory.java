@@ -1,6 +1,6 @@
-package sandbox.tutorials.book.util;
+package sandbox.jvm_langs.tutorials.book.util;
 
-import sandbox.tutorials.book.interfaces.BuildingType;
+import sandbox.jvm_langs.tutorials.book.interfaces.BuildingType;
 
 public class RunnerFactory {
 

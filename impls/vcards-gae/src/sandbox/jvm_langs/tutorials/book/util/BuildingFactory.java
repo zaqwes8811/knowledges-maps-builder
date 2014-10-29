@@ -3,9 +3,9 @@
  * Object Factory that is used to coerce python module into a
  * Java class
  */
-package sandbox.tutorials.book.util;
+package sandbox.jvm_langs.tutorials.book.util;
 
-import sandbox.tutorials.book.interfaces.BuildingType;
+import sandbox.jvm_langs.tutorials.book.interfaces.BuildingType;
 
 import org.python.core.PyObject;
 import org.python.core.PyString;
