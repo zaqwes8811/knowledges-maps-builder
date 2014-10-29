@@ -17,4 +17,10 @@ public class UseGsonTest {
 		String json = gson.toJson(ints);
 		System.out.println(json);
 	}
+  
+  // FIXME: run it
+  @Test
+  public void testWithOptionalValue() {
+  	
+  }
 }
