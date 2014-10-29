@@ -4,6 +4,10 @@ import static gae_store_space.OfyService.ofy;
 
 import java.util.ArrayList;
 
+import pipeline.TextPipeline;
+import pipeline.math.DistributionElement;
+import pipeline.math.GeneratorAnyDistribution;
+
 import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.base.Optional;
@@ -15,10 +19,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
 import com.googlecode.objectify.annotation.Unindex;
 
-import core.math.DistributionElement;
-import core.math.GeneratorAnyDistribution;
 //import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
-import gae_store_space.high_perf.TextPipeline;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения

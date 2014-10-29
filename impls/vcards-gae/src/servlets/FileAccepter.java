@@ -17,11 +17,12 @@ import net.jcip.annotations.NotThreadSafe;
 
 import org.javatuples.Pair;
 
+import pipeline.text_extractors.ParserPOSTFile;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
-import core.text_extractors.ParserPOSTFile;
 
 @NotThreadSafe
 public class FileAccepter extends HttpServlet {

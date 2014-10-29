@@ -1,17 +1,19 @@
 package gae_store_space;
 
 import static gae_store_space.OfyService.ofy;
-import gae_store_space.high_perf.TextPipeline;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import pipeline.TextPipeline;
+
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import common.Tools;
+
+import cross_cuttings_layer.Tools;
 
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
