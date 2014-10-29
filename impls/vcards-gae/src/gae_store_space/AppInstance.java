@@ -13,7 +13,7 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
-import cross_cuttings_layer.Tools;
+import cross_cuttings_layer.CrossIO;
 
 import servlets.protocols.PageSummaryValue;
 import servlets.protocols.PathValue;
@@ -77,13 +77,13 @@ public class AppInstance {
 	  	// FIXME: GAE can't read file.
   		String name = TextPipeline.defaultPageName;
   		
-  		String text = Tools.getGetPlainTextFromFile(getTestFileName());
+  		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
   		createPageIfNotExist(name, text);
 	 	}
   	
   	{
   		String name = TextPipeline.defaultPageName+"Copy";
-  		String text = Tools.getGetPlainTextFromFile(getTestFileName());
+  		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
   		createPageIfNotExist(name, text);
   	}
   	

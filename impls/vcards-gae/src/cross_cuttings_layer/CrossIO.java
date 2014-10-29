@@ -15,8 +15,8 @@ import java.util.regex.Pattern;
 import net.jcip.annotations.Immutable;
 
 @Immutable
-final public class Tools {
-  private Tools() {}
+final public class CrossIO {
+  private CrossIO() {}
 
   static public void list2file(List<String> list, String filename) throws IOException {
     Closer closer = Closer.create();
@@ -104,7 +104,7 @@ final public class Tools {
   
   public static String getGetPlainTextFromFile(String filename) {
   	try {
-  		ArrayList<String> lines = new ArrayList<String>(Tools.fileToList(filename).asList());
+  		ArrayList<String> lines = new ArrayList<String>(CrossIO.fileToList(filename).asList());
   		return Joiner.on('\n').join(lines);
   	} catch(IOException e) {
   		throw new RuntimeException(e);

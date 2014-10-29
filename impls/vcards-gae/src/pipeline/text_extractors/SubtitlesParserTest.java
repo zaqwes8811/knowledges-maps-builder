@@ -6,7 +6,7 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closer;
 
-import cross_cuttings_layer.Tools;
+import cross_cuttings_layer.CrossIO;
 
 import org.apache.tika.parser.Parser;
 import org.junit.Test;
@@ -27,7 +27,7 @@ public class SubtitlesParserTest {
   public void testSrtChainOnGAE() throws IOException {
     String filename = "/home/zaqwes/work/statistic/the.legend.of.korra.a.new.spiritual.age.(2013).eng.1cd.(5474296)/" +
       "The Legend of Korra - 02x10 - A New Spiritual Age.WEB-DL.BS.English.HI.C.orig.Addic7ed.com.srt";
-    String rawText = Joiner.on('\n').join(Tools.fileToList(filename));
+    String rawText = Joiner.on('\n').join(CrossIO.fileToList(filename));
     //InputStream in = closer.register(new FileInputStream(new File(filename)));  // No in GAE
 
     // Пока файл строго юникод - UTF-8
