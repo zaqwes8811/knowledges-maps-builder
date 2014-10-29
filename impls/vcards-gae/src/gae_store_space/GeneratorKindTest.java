@@ -1,7 +1,5 @@
 package gae_store_space;
 
-import core.math.DistributionElement;
-import core.math.GeneratorDistributionException;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -9,6 +7,9 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import pipeline.math.DistributionElement;
+import pipeline.math.GeneratorDistributionException;
 
 import java.util.ArrayList;
 import java.util.Arrays;

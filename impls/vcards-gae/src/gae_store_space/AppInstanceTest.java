@@ -1,10 +1,11 @@
 package gae_store_space;
 
-import gae_store_space.high_perf.TextPipeline;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import pipeline.TextPipeline;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
