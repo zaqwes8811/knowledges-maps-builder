@@ -76,8 +76,8 @@ public class PageKind {
     String rawSource = barePage.rawSource;
     
     // обрабатываем
-    TextPipeline p = new TextPipeline();
-    PageKind page = p.pass(barePage.name, rawSource);
+    TextPipeline pipeline = new TextPipeline();
+    PageKind page = pipeline.pass(barePage.name, rawSource);
     
     // теперь нужно запустить процесс обработки,
     barePage.assign(page);
