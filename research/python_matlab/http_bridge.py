@@ -85,9 +85,14 @@ class ResearchAjax(object):
     def store_file(self):
         # Просто через post
         test_file = '../test_data/etalon.srt'
-        #url =
-        #payload = {'name': 'test', }
+        url = '/research/accept_text'
 
+        payload = {'name': 'test', 'text': "asdfasdfasdfsdaf"}
+        r = requests.post(self._build_url(url), params=payload)
+        r.raise_for_status()
+
+    def remove_file(self):
+        pass
 
 def main():
     # Http part
