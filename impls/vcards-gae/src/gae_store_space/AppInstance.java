@@ -88,8 +88,9 @@ public class AppInstance {
 		try {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent()) {
-				page.get().deleteGenerators();  // FIXME: BAD!! need make work
-				ofy().delete().type(PageKind.class).id(page.get().id).now();
+				page.get().deleteGenerators();
+				//ofy().delete().type(PageKind.class).id(page.get().id).now();  // non delete!
+				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 			}
 		} catch (UncheckedExecutionException e) {
 			// удаляем все лишние

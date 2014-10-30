@@ -111,13 +111,19 @@ public class PageKind {
   	if (name == null)
   		throw new IllegalArgumentException();
   	
+  	if (generators.isEmpty())
+  		throw new IllegalStateException();
+  	
   	List<GeneratorKind> gen = 
   			ofy().load().type(GeneratorKind.class)
 	  			.filterKey("in", generators)
 	  			.filter("name = ", name)
 	  			.list();
   	
-  	if (gen.isEmpty() || gen.size() != 1)
+  	if (gen.isEmpty())
+  		throw new IllegalStateException(name);
+  		
+  	if (gen.size() > 1)
   		throw new IllegalStateException(name);
   	
   	gen.get(0).reset();
