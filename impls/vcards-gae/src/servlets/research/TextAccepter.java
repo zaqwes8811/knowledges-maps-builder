@@ -10,8 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=VhHKUeuMVFK
 public class TextAccepter extends HttpServlet {
   private static final long serialVersionUID = -432680049858395942L;
+  
+  //pub
 
   @Override
   public void doPost(
@@ -27,6 +30,7 @@ public class TextAccepter extends HttpServlet {
 	  	String line;
 	    while ((line = reader.readLine()) != null) {
 	    	lines.add(line);
+	    	System.out.println(line);
 	    }
 	    
 	    // purge from headers and bottoms
