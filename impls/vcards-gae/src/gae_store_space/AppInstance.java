@@ -7,11 +7,13 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import pipeline.TextPipeline;
+import pipeline.math.DistributionElement;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import com.google.common.collect.ImmutableList;
 
 import cross_cuttings_layer.CrossIO;
 
@@ -27,6 +29,7 @@ public class AppInstance {
 	
 	Integer fakeState = new Integer(0);
 	
+	
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
 			.maximumSize(CACHE_SIZE)
 			.build(
@@ -35,6 +38,15 @@ public class AppInstance {
 							return PageKind.restore(key);
 						}
 					});
+	
+	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
+		// Срабатывает только один раз
+		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
+		// FIXME: страница тоже может быть не найдена
+  	PageKind page = getPage(path.pageName);  
+  	GeneratorKind gen = page.getGenerator(path.genName);
+  	return gen.getDistribution();
+  }
 	
 	public void resetFullStore() {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 

@@ -26,12 +26,6 @@ public class GetDistribution extends HttpServlet {
   
   private AppInstance app = AppInstance.getInstance(); 
   
-  private ImmutableList<DistributionElement> getDistribution(PathValue path) {
-  	PageKind page = app.getPage(path.pageName);  
-  	GeneratorKind gen = page.getGenerator(path.genName);
-  	return gen.getDistribution();
-  }
-  
 	@Override
   public void doGet(
     HttpServletRequest request,
@@ -44,15 +38,11 @@ public class GetDistribution extends HttpServlet {
 			throw new IllegalArgumentException();
 		
 		PathValue path = new Gson().fromJson(value, PathValue.class);
-		
-		// Срабатывает только один раз
-		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
-		// FIXME: страница тоже может быть не найдена
 
   	response.setContentType("text/html");
   	response.setStatus(HttpServletResponse.SC_OK);
 
-  	String r = new Gson().toJson(getDistribution(path));
+  	String r = new Gson().toJson(app.getDistribution(path));
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(r);
