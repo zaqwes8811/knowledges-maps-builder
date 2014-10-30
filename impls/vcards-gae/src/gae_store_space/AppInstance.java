@@ -27,9 +27,6 @@ public class AppInstance {
     return "./test_data/korra/etalon.srt";
   }
 	
-	Integer fakeState = new Integer(0);
-	
-	
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
 			.maximumSize(CACHE_SIZE)
 			.build(
@@ -74,8 +71,7 @@ public class AppInstance {
 			TextPipeline processor = new TextPipeline();
 	  	PageKind page = processor.pass(name, text);
 	  	
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), fakeState.toString());
-	  	fakeState++;
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
 	  	defaultGenerator.persist();  	
 	  	
 	  	page.addGenerator(defaultGenerator);
