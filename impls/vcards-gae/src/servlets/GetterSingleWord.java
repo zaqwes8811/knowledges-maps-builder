@@ -40,7 +40,7 @@ public class GetterSingleWord extends HttpServlet {
 		response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    PageKind p = app.getPage(path.pageName);
+    PageKind p = app.getPage(path.pageName).get();
     WordDataValue v = p.getWordData(path.genName).get();
     
     String json = new Gson().toJson(v);
