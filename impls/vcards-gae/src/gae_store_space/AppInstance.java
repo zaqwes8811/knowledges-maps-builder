@@ -34,7 +34,7 @@ public class AppInstance {
 	// Но как обрабатываются ошибки?
 	// now не всегда работает
 	static int TIME_STEP_MS = 200;
-	static int COUNT_TRIES = 20;  
+	static int COUNT_TRIES = 10;  
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -65,6 +65,8 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		
+		//pagesCache.cleanUp();
+		
 		int i = 0;
 		while (true) {
 			if (i > COUNT_TRIES)
@@ -82,23 +84,28 @@ public class AppInstance {
 				i++;
 			}
 		}
+		
+		//pagesCache.cleanUp();
 	}
 	
 	private void fullDeletePage(String name) {
 		try {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent()) {
-				page.get().deleteGenerators();
+				page.get().deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
 				//ofy().delete().type(PageKind.class).id(page.get().id).now();  // non delete!
 				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+				
+				pagesCache.invalidate(page);
+			} else {
+				CrossIO.print("page is new");
 			}
 		} catch (UncheckedExecutionException e) {
 			// удаляем все лишние
-			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+			// FIXME: leak in store - active generators
 			CrossIO.print("doubles finded");
+			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 		}
-		
-		pagesCache.cleanUp();
 	}
 
 	public PageKind createPageIfNotExist(String name, String text) {
@@ -116,6 +123,7 @@ public class AppInstance {
 	  	
 	  	page.addGenerator(defaultGenerator);
 	  	page.persist();
+	  	CrossIO.print("id new page " + page.id);
 			return page;
 		} else {
 			throw new IllegalArgumentException();
@@ -186,12 +194,14 @@ public class AppInstance {
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-	public Optional<PageKind> getPage(String namePage) {
-		try {
-			return pagesCache.get(namePage);
-    } catch (ExecutionException e) {
+	public Optional<PageKind> getPage(String pageName) {
+		//try {
+			return PageKind.restore(pageName);
+			//return pagesCache.get(pageName);
+    
+		/*} catch (ExecutionException e) {
     	throw new RuntimeException(e);
-    }
+    }*/
 	}
 
 	public static class Holder {
