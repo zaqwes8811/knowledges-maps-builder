@@ -10,11 +10,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.python.google.common.base.Joiner;
+
+import servlets.protocols.PathValue;
+
+import com.google.common.base.Optional;
+import com.google.gson.Gson;
+
 // http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=VhHKUeuMVFK
 public class TextAccepter extends HttpServlet {
   private static final long serialVersionUID = -432680049858395942L;
   
-  //pub
+  private class TextPackage {
+  	TextPackage() {}
+  	
+  	String text;
+  	String name;
+  	
+  	public Optional<String> getText() {
+  		return Optional.fromNullable(text);
+  	}
+  	
+  	public Optional<String> getName() {
+  		return Optional.fromNullable(name);
+  	}
+  }
 
   @Override
   public void doPost(
@@ -30,8 +50,10 @@ public class TextAccepter extends HttpServlet {
 	  	String line;
 	    while ((line = reader.readLine()) != null) {
 	    	lines.add(line);
-	    	System.out.println(line);
 	    }
+	    
+	    String data = Joiner.on("").join(lines);
+	    TextAccepter p = new Gson().fromJson(data, TextAccepter.class);
 	    
 	    // purge from headers and bottoms
 	    //process(lines);

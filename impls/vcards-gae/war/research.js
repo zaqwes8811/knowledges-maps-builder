@@ -1,4 +1,9 @@
 // TODO: try AtomJS
+
+//document.getElementById("uploadBtn").onchange = function () {
+//    document.getElementById("uploadFile").value = this.value;
+//};
+
 // TODO: think try CoffeeScript
 var protocols = {
 
