@@ -99,18 +99,23 @@ class ResearchAjax(object):
 
 
 def main():
+    server = 'http://localhost'
+    port = 8080
+    research_ajax = ResearchAjax(server, port)
+    research_ajax.store_file()
+
     # Http part
-    server = 'http://1-dot-arched-glow-381.appspot.com'
-    port = 80  # 80
-    ajax = AppAjax(server, port)
-    user_info = ajax.get_user_summary_sync()
+    #server = 'http://1-dot-arched-glow-381.appspot.com'
+    #port = 80  # 80
+    #ajax = AppAjax(server, port)
+    #user_info = ajax.get_user_summary_sync()
 
     # get distribution
     research_ajax = ResearchAjax(server, port)
 
-    work_path = user_info[1]  # FIXME: hard code
-    print work_path.genNames[0], work_path.pageName
-    arg0 = PathValue(work_path.pageName, work_path.genNames[0], 0)
+    #work_path = user_info[1]  # FIXME: hard code
+    #print work_path.genNames[0], work_path.pageName
+    arg0 = PathValue('research_page', "Default", 0)
 
     # Read
     distribution = research_ajax.get_distribution_sync(arg0)
@@ -145,8 +150,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    server = 'http://localhost'
-    port = 8080
-    research_ajax = ResearchAjax(server, port)
-    research_ajax.store_file()
+    main()

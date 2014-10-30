@@ -67,8 +67,8 @@ public class TextAccepter extends HttpServlet {
 	    }
   	} catch (IOException e) {
 	    response.setStatus(HttpServletResponse.SC_NO_CONTENT);
-  	} catch (IllegalStateException e) {
-  		response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+  	//} catch (IllegalStateException e) {
+  		//response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
   	} catch (IllegalArgumentException e) {
 	    response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
   	}

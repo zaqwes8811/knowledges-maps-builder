@@ -31,9 +31,10 @@ public class AppInstance {
 	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ
 	// FIXME: куча проблем с удалением и консистентностью
 	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-gae
+	// Но как обрабатываются ошибки?
 	// now не всегда работает
 	static int TIME_STEP_MS = 200;
-	static int COUNT_TRIES = 10;  
+	static int COUNT_TRIES = 20;  
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -88,11 +89,12 @@ public class AppInstance {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent()) {
 				page.get().deleteGenerators();  // FIXME: BAD!! need make work
-				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+				ofy().delete().type(PageKind.class).id(page.get().id).now();
 			}
 		} catch (UncheckedExecutionException e) {
 			// удаляем все лишние
 			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+			CrossIO.print("doubles finded");
 		}
 		
 		pagesCache.cleanUp();
