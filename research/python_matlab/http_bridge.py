@@ -107,7 +107,8 @@ def main():
     research_ajax.store_file()
         #time.sleep(0.01)
 
-    return
+    #return
+    time.sleep(1)
 
     # Http part
     #server = 'http://1-dot-arched-glow-381.appspot.com'
@@ -143,6 +144,8 @@ def main():
             active.append(elem.frequency)
             x_active = np.append(x_active, i)  # FIXME: bad!
 
+    return
+
     # Processing
     plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
     plt.plot(-1 * x_active, active)
@@ -155,4 +158,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    for i in range(10):
+        main()
