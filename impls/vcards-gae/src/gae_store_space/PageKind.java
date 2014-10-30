@@ -81,7 +81,7 @@ public class PageKind {
 				throw new IllegalStateException();
 			pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
 			
-			if (pages.size() > 1) {
+			if (pages.size() > 1 || pages.size() == 0) {
 				try {
 					Thread.sleep(GAESpecific.TIME_STEP_MS);
 				} catch (InterruptedException e1) {

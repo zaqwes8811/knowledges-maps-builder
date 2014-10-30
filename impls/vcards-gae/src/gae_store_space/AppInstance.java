@@ -96,14 +96,16 @@ public class AppInstance {
 	  	page.addGenerator(defaultGenerator);
 	  	page.persist();
 
-	  	int i = 0;
+	  	int j = 0;
 			while (true) {
-				if (i > GAESpecific.COUNT_TRIES)
+				if (j > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
+				
+				CrossIO.print(j);
 				
 				Optional<PageKind> page_readed = getPage(name); 
 		  	if (!page_readed.isPresent()) {
-		  		i++;
+		  		j++;
 		  		try {
 		        Thread.sleep(GAESpecific.TIME_STEP_MS);
 	        } catch (InterruptedException e1) {
@@ -115,7 +117,7 @@ public class AppInstance {
 			}
 			
 			// убеждаемся что генератор тоже сохранен
-			i = 0;
+			int i = 0;
 			while (true) {
 				if (i > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
@@ -175,10 +177,10 @@ public class AppInstance {
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
-	  return PageKind.restore(pageName);
+	  //return PageKind.restore(pageName);
 		
 	  // падает почти всегда - очень часто
-	  /*
+	  ///*
 	  try {
 			
 			return pagesCache.get(pageName);
