@@ -82,6 +82,12 @@ class ResearchAjax(object):
             result.append(DistributionElem(val))
         return result
 
+    def store_file(self):
+        # Просто через post
+        test_file = '../test_data/etalon.srt'
+        #url =
+        #payload = {'name': 'test', }
+
 
 def main():
     # Http part
@@ -130,4 +136,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    #main()
+    server = 'http://localhost'
+    port = 8080
+    research_ajax = ResearchAjax(server, port)
+    research_ajax.store_file()
