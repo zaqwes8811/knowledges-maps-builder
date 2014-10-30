@@ -15,9 +15,10 @@
 
   <script type="text/javascript" src="/research.js"></script>
 
-  <link rel="stylesheet" href="/css/app_carcass.css"/>
-  <!--link rel="stylesheet" href="/3rdparty/bootstrap.min.css"/  очень косо стало все-->
+  
+  <link rel="stylesheet" href="/3rdparty/css/bootstrap.min.css"/>
 
+	<link rel="stylesheet" href="/css/app_carcass.css"/>
   <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script-->
   <!--script src="http://malsup.github.com/jquery.form.js"></script-->
 
@@ -31,28 +32,40 @@
 </head>
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
+<br/>
+
 
 <select id="pages"></select><br/>
 <select id="pageGenerators"></select>
 <hr/>
 
 <input type="checkbox" id="know_it" value="Bike">I know it</input> 
-<input type="button" class="btn btn-primary" value="Get" onclick="gView.onGetWordPackage()"></input>
+<input type="button" class="btn btn-primary btn-sm" value="Get" onclick="gView.onGetWordPackage()"></input>
 <span id="word_holder_id"></span><br/>
 <ul id="sentences">
 </ul>
 <hr/>
 
-<input type="button" class="btn btn-primary" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"></input>
-<form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
-  <input type="file" size="60" name="myfile">
-  <input type="submit" value="Process file  (now only subtitles)">
-</form>
+<!--input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+<div class="fileUpload btn btn-primary">
+    <span>Upload</span>
+    <input id="uploadBtn" type="file" class="upload" />
+</div-->
 
-<div id="progress"><div id="bar"></div><div id="percent">0%</div ></div>
+
+<form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
+  <input type="file"  size="60" name="myfile">
+  <br/>
+  <input type="submit" class="btn btn-primary btn-sm" value="Process file  (now only subtitles)">
+  <br/>
+  <br/>
+  <div id="progress"><div id="bar"></div><div id="percent">0%</div ></div>
+</form>
 <div id="message"></div>
+<input type="button" class="btn btn-danger" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"></input>
 
 <hr/>
+
 
 </body>
 </html>
