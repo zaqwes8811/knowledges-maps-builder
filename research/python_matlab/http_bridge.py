@@ -11,6 +11,7 @@ import numpy as np
 
 # sys
 import json
+import time
 
 
 class PathValue(object):
@@ -102,7 +103,11 @@ def main():
     server = 'http://localhost'
     port = 8080
     research_ajax = ResearchAjax(server, port)
+    #for i in range():
     research_ajax.store_file()
+        #time.sleep(0.01)
+
+    return
 
     # Http part
     #server = 'http://1-dot-arched-glow-381.appspot.com'
