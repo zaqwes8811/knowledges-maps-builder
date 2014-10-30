@@ -60,6 +60,7 @@ public class AppInstance {
 		fullDeletePage(name);
 		pagesCache.invalidate(name);
 		createPageIfNotExist_sync(name, text);
+		pagesCache.invalidate(name);
 	}
 	
 	private void fullDeletePage(String name) {
