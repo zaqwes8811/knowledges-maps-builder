@@ -106,6 +106,7 @@ def main():
     #for i in range():
     research_ajax.store_file()
         #time.sleep(0.01)
+    return
 
     #return
     time.sleep(1)
