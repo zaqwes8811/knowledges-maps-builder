@@ -8,6 +8,8 @@ import java.util.concurrent.ExecutionException;
 
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
+import servlets.protocols.PageSummaryValue;
+import servlets.protocols.PathValue;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -15,13 +17,8 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.UncheckedExecutionException;
-import com.google.common.util.concurrent.UncheckedTimeoutException;
-import com.googlecode.objectify.Key;
 
 import cross_cuttings_layer.CrossIO;
-
-import servlets.protocols.PageSummaryValue;
-import servlets.protocols.PathValue;
 
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
@@ -103,19 +100,17 @@ public class AppInstance {
 				if (i > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
 				
-				try {
-					Optional<PageKind> page_readed = getPage(name); 
-			  	if (!page_readed.isPresent())
-			  		continue;
-					break;
-				} catch (IllegalArgumentException e) {
-					try {
+				Optional<PageKind> page_readed = getPage(name); 
+		  	if (!page_readed.isPresent()) {
+		  		i++;
+		  		try {
 		        Thread.sleep(GAESpecific.TIME_STEP_MS);
 	        } catch (InterruptedException e1) {
 		        throw new RuntimeException(e1);
 	        }
-					i++;
-				}
+		  		continue;
+		  	}
+				break;
 			}
 			
 			// убеждаемся что генератор тоже сохранен
@@ -124,19 +119,17 @@ public class AppInstance {
 				if (i > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
 				
-				try {
-					Optional<GeneratorKind> g = page.getGenerator(TextPipeline.defaultGenName);
-					if (!g.isPresent())
-			  		continue;
-					break;
-				} catch (IllegalArgumentException e) {
+				Optional<GeneratorKind> g = page.getGenerator(TextPipeline.defaultGenName);
+				if (!g.isPresent()) {
+					i++;
 					try {
 		        Thread.sleep(GAESpecific.TIME_STEP_MS);
 	        } catch (InterruptedException e1) {
 		        throw new RuntimeException(e1);
 	        }
-					i++;
-				}
+		  		continue;
+		  	}
+				break;
 			}
 
 			return page;
@@ -181,9 +174,9 @@ public class AppInstance {
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
-	  //return PageKind.restore(pageName);
+	  return PageKind.restore(pageName);
 		
-	  ///*
+	  /*
 	  try {
 			
 			return pagesCache.get(pageName);

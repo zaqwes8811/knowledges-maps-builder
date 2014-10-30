@@ -79,23 +79,21 @@ public class PageKind {
 		while (true) {
 			if (i > GAESpecific.COUNT_TRIES)
 				throw new IllegalStateException();
+			pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
 			
-			try {
-				pages = 
-		    		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
-				if (pages.size() > 1)
-		  		continue;
-				break;
-			} catch (IllegalArgumentException e) {
+			if (pages.size() > 1) {
 				try {
-	        Thread.sleep(GAESpecific.TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
+					Thread.sleep(GAESpecific.TIME_STEP_MS);
+				} catch (InterruptedException e1) {
+					throw new RuntimeException(e1);
+				}
 				i++;
-			}
+				continue;
+		  }
+			break;
 		}
-  	
+		CrossIO.print("begin restore " + pages.size());
+		
     if (pages.size() == 0)
     	return Optional.absent();
     
