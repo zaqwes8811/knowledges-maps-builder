@@ -1,5 +1,6 @@
 package sandbox.tests_3rdparty.gson;
 
+import com.google.common.base.Optional;
 import com.google.gson.Gson;
 import org.junit.Test;
 
@@ -18,9 +19,21 @@ public class UseGsonTest {
 		System.out.println(json);
 	}
   
+  private static class Val {
+  	public Optional<Integer> oi = Optional.absent();
+  	public Optional<Integer> oi_ref = Optional.of(8);  // не сереализуется
+  };
+  
   // FIXME: run it
   @Test
   public void testWithOptionalValue() {
+  	Optional<Integer> oi = Optional.absent();
+  	System.out.println(new Gson().toJson(oi));
+  	oi = Optional.of(8);
+  	System.out.println(new Gson().toJson(oi));
   	
+  	Val v = new Val();
+  	v.oi_ref = Optional.of(8);
+  	System.out.println(new Gson().toJson(v));
   }
 }
