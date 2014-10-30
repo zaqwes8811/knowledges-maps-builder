@@ -26,8 +26,8 @@
       <file leaf-file-name="http_bridge.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_bridge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1280277" vertical-offset="1976" max-vertical-offset="2520">
-              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.53287196" vertical-offset="2231" max-vertical-offset="2520">
+              <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
               <folding>
                 <element signature="e#208#223#0" expanded="true" />
               </folding>
@@ -50,8 +50,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1537" />
-    <option name="y" value="57" />
+    <option name="x" value="1756" />
+    <option name="y" value="82" />
     <option name="width" value="789" />
     <option name="height" value="744" />
   </component>
@@ -278,8 +278,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1537" y="57" width="789" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="1756" y="82" width="789" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1468988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -395,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/http_bridge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1280277" vertical-offset="1976" max-vertical-offset="2520">
-          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.53287196" vertical-offset="2231" max-vertical-offset="2520">
+          <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
           <folding>
             <element signature="e#208#223#0" expanded="true" />
           </folding>

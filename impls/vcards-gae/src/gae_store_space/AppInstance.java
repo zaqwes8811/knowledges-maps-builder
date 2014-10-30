@@ -26,19 +26,6 @@ import servlets.protocols.PathValue;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
 	
-	// На локальной машине, либо с первого раза, либо никогда - on GAE - хз
-	// срабатывает либо быстро, либо очень долго, так что ждем немного
-	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ
-	// FIXME: куча проблем с удалением и консистентностью
-	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-gae
-	// Но как обрабатываются ошибки?
-	// now не всегда работает
-	//
-	// eventually consistent:
-	//   http://habrahabr.ru/post/100891/
-	//
-	static int TIME_STEP_MS = 200;
-	static int COUNT_TRIES = 10;  
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -69,29 +56,13 @@ public class AppInstance {
   	return gen.getDistribution();
   }
 	
-	// скорее исследовательский метод	
+	// скорее исследовательский метод
+	// https://code.google.com/p/objectify-appengine/wiki/Transactions
+	// FIXME: вот тут важна транзактивность
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
-		
 		pagesCache.invalidate(name);
-		
-		int i = 0;
-		while (true) {
-			if (i > COUNT_TRIES)
-				throw new IllegalStateException();
-			
-			try {
-				createPageIfNotExist(name, text);
-				break;
-			} catch (IllegalArgumentException e) {
-				try {
-	        Thread.sleep(TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
-				i++;
-			}
-		}
+		createPageIfNotExist_sync(name, text);
 	}
 	
 	private void fullDeletePage(String name) {
@@ -103,21 +74,22 @@ public class AppInstance {
 				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 			}
 		} catch (UncheckedExecutionException e) {
-			// удаляем все лишние
-			// FIXME: leak in store - active generators
-			CrossIO.print("doubles finded");
+			// FIXME: удаляем все лишние - leak in store - active generators
 			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 		}
 	}
 
-	public PageKind createPageIfNotExist(String name, String text) {
+	// FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
+	//   Иначе будут гонки. А может быть есть транзации на GAE?
+	public PageKind createPageIfNotExist_sync(String name, String text) {
 		// FIXME: add user info
 		List<PageKind> pages = 
 			ofy().load().type(PageKind.class).filter("name = ", name).list();
 		
 		if (pages.isEmpty()) {
 			TextPipeline processor = new TextPipeline();
-	  	PageKind page = processor.pass(name, text);
+			
+	  	PageKind page = processor.pass(name, text);  // по сути нужно только для создание генератора
 	  	
 	  	GeneratorKind defaultGenerator = 
 	  			GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
@@ -128,7 +100,7 @@ public class AppInstance {
 
 	  	int i = 0;
 			while (true) {
-				if (i > COUNT_TRIES)
+				if (i > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
 				
 				try {
@@ -138,7 +110,7 @@ public class AppInstance {
 					break;
 				} catch (IllegalArgumentException e) {
 					try {
-		        Thread.sleep(TIME_STEP_MS);
+		        Thread.sleep(GAESpecific.TIME_STEP_MS);
 	        } catch (InterruptedException e1) {
 		        throw new RuntimeException(e1);
 	        }
@@ -149,7 +121,7 @@ public class AppInstance {
 			// убеждаемся что генератор тоже сохранен
 			i = 0;
 			while (true) {
-				if (i > COUNT_TRIES)
+				if (i > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
 				
 				try {
@@ -159,7 +131,7 @@ public class AppInstance {
 					break;
 				} catch (IllegalArgumentException e) {
 					try {
-		        Thread.sleep(TIME_STEP_MS);
+		        Thread.sleep(GAESpecific.TIME_STEP_MS);
 	        } catch (InterruptedException e1) {
 		        throw new RuntimeException(e1);
 	        }
@@ -191,44 +163,15 @@ public class AppInstance {
 	
 	private void createDefaultPages() {
 		{
-	  	// Own tables
-	  	// FIXME: GAE can't read file.
   		String name = TextPipeline.defaultPageName;
-  		
   		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-  		createPageIfNotExist(name, text);
+  		createPageIfNotExist_sync(name, text);
 	 	}
   	
   	{
   		String name = TextPipeline.defaultPageName+"Copy";
   		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-  		createPageIfNotExist(name, text);
-  	}
-  	
-  	int i = 0;
-  	while (true) {
-  		// Остались ли попытки
-  		if (i > COUNT_TRIES)
-  			throw new IllegalStateException();
-  		
-	  	// Try read
-	  	// Скрыл, так как падало, но должно работать!!
-	  	List<PageKind> pages = 
-	  			ofy().load().type(PageKind.class).filter("name = ", TextPipeline.defaultPageName).list();
-	  	
-	  	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
-	  	if (pages.isEmpty()) {
-	  		try {
-	        Thread.sleep(TIME_STEP_MS);
-        } catch (InterruptedException e) {
-	        throw new RuntimeException(e);
-        }
-	  		i++;
-	  		continue;
-	  	}
-	  	
-	  	if (pages.size() > 1) 
-	  		throw new IllegalStateException();
+  		createPageIfNotExist_sync(name, text);
   	}
 	}
 	
@@ -238,9 +181,9 @@ public class AppInstance {
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
-	  return PageKind.restore(pageName);
+	  //return PageKind.restore(pageName);
 		
-	  /*
+	  ///*
 	  try {
 			
 			return pagesCache.get(pageName);

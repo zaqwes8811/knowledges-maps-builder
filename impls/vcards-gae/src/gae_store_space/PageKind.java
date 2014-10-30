@@ -75,11 +75,29 @@ public class PageKind {
   	List<PageKind> pages = 
     		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
     
-  	if (pages.size() > 1)
-  		throw new IllegalStateException();
+  	int i = 0;
+		while (true) {
+			if (i > GAESpecific.COUNT_TRIES)
+				throw new IllegalStateException();
+			
+			try {
+				pages = 
+		    		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
+				if (pages.size() > 1)
+		  		continue;
+				break;
+			} catch (IllegalArgumentException e) {
+				try {
+	        Thread.sleep(GAESpecific.TIME_STEP_MS);
+        } catch (InterruptedException e1) {
+	        throw new RuntimeException(e1);
+        }
+				i++;
+			}
+		}
   	
     if (pages.size() == 0)
-    	return Optional.fromNullable(null);
+    	return Optional.absent();
     
     PageKind barePage = pages.get(0);
     
