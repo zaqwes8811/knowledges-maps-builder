@@ -1,8 +1,6 @@
 package servlets.research;
 
 import gae_store_space.AppInstance;
-import gae_store_space.GeneratorKind;
-import gae_store_space.PageKind;
 
 import java.io.IOException;
 
@@ -11,11 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pipeline.math.DistributionElement;
-
 import servlets.protocols.PathValue;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.base.Optional;
 import com.google.gson.Gson;
 
 
@@ -31,20 +27,18 @@ public class GetDistribution extends HttpServlet {
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-		
-		String value = request.getParameter("arg0");
-		
-		if (value == null) 
-			throw new IllegalArgumentException();
-		
-		PathValue path = new Gson().fromJson(value, PathValue.class);
-
-  	response.setContentType("text/html");
-  	response.setStatus(HttpServletResponse.SC_OK);
-
-  	String r = new Gson().toJson(app.getDistribution(path));
-
-    response.setCharacterEncoding("UTF-8");
-    response.getWriter().println(r);
+		Optional<String> v = Optional.fromNullable(request.getParameter("arg0"));
+		if (v.isPresent()) {
+			PathValue path = new Gson().fromJson(v.get(), PathValue.class);
+	  	String r = new Gson().toJson(app.getDistribution(path));
+	  	
+	  	response.setContentType("text/html");
+	  	response.setStatus(HttpServletResponse.SC_OK);
+	    response.setCharacterEncoding("UTF-8");
+	    response.getWriter().println(r);
+    } else {
+    	response.setContentType("text/html");
+	  	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+    }
   }
 }
