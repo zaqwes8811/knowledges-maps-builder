@@ -40,6 +40,9 @@ public class AppInstance {
 					});
 	
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
+		if (!(path.getPageName().isPresent() && path.getGenName().isPresent())) 
+			throw new IllegalArgumentException();
+			
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
