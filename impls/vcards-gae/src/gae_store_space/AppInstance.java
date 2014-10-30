@@ -177,6 +177,7 @@ public class AppInstance {
 	public Optional<PageKind> getPage(String pageName) {
 	  return PageKind.restore(pageName);
 		
+	  // падает почти всегда - очень часто
 	  /*
 	  try {
 			
