@@ -56,6 +56,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>TextAccepter</servlet-name>
+		<servlet-class>servlets.research.TextAccepter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TextAccepter</servlet-name>
+		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
+		<url-pattern>/research/accept_text</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>ResetStorage</servlet-name>
 		<servlet-class>servlets.ResetStorage</servlet-class>
 	</servlet>
