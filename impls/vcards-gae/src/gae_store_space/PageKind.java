@@ -37,6 +37,8 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
+import cross_cuttings_layer.CrossIO;
+
 
 @NotThreadSafe
 @Entity
@@ -64,6 +66,7 @@ public class PageKind {
   public String getName() { return name; }
   
   public void deleteGenerators() {
+  	CrossIO.print("generator deleted " + id);
   	ofy().delete().keys(generators).now();
   }
   
@@ -120,6 +123,7 @@ public class PageKind {
 	  			.filter("name = ", name)
 	  			.list();
   	
+  	CrossIO.print("gen loaded " + id);
   	if (gen.isEmpty())
   		throw new IllegalStateException(name);
   		
