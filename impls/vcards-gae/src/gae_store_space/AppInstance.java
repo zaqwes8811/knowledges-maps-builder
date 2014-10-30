@@ -14,6 +14,9 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
+import com.google.common.util.concurrent.UncheckedExecutionException;
+import com.google.common.util.concurrent.UncheckedTimeoutException;
+import com.googlecode.objectify.Key;
 
 import cross_cuttings_layer.CrossIO;
 
@@ -22,6 +25,15 @@ import servlets.protocols.PathValue;
 
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
+	
+	// На локальной машине, либо с первого раза, либо никогда - on GAE - хз
+	// срабатывает либо быстро, либо очень долго, так что ждем немного
+	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ
+	// FIXME: куча проблем с удалением и консистентностью
+	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-gae
+	// now не всегда работает
+	static int TIME_STEP_MS = 200;
+	static int COUNT_TRIES = 10;  
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -43,12 +55,73 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-  	PageKind page = getPage(path.pageName);  
+  	PageKind page = getPage(path.pageName).get();  
   	GeneratorKind gen = page.getGenerator(path.genName);
   	return gen.getDistribution();
   }
 	
+	// скорее исследовательский метод	
+	public void createOrRecreatePage(String name, String text) {	
+		fullDeletePage(name);
+		
+		int i = 0;
+		while (true) {
+			if (i > COUNT_TRIES)
+				throw new IllegalStateException();
+			
+			try {
+				createPageIfNotExist(name, text);
+				break;
+			} catch (IllegalArgumentException e) {
+				try {
+	        Thread.sleep(TIME_STEP_MS);
+        } catch (InterruptedException e1) {
+	        throw new RuntimeException(e1);
+        }
+				i++;
+			}
+		}
+	}
+	
+	private void fullDeletePage(String name) {
+		try {
+			Optional<PageKind> page = getPage(name);
+			if (page.isPresent()) {
+				page.get().deleteGenerators();  // FIXME: BAD!! need make work
+				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+			}
+		} catch (UncheckedExecutionException e) {
+			// удаляем все лишние
+			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+		}
+		
+		pagesCache.cleanUp();
+	}
+
+	public PageKind createPageIfNotExist(String name, String text) {
+		// FIXME: add user info
+		List<PageKind> pages = 
+			ofy().load().type(PageKind.class).filter("name = ", name).list();
+		
+		if (pages.isEmpty()) {
+			TextPipeline processor = new TextPipeline();
+	  	PageKind page = processor.pass(name, text);
+	  	
+	  	GeneratorKind defaultGenerator = 
+	  			GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
+	  	defaultGenerator.persist();  	
+	  	
+	  	page.addGenerator(defaultGenerator);
+	  	page.persist();
+			return page;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
+	
 	public void resetFullStore() {
+		// Call in case change store schema 
+		//
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
 		//
@@ -60,26 +133,6 @@ public class AppInstance {
   	pagesCache.cleanUp();
   	
   	createDefaultPages();  // нельзя это в конструктор
-	}
-	
-	public PageKind createPageIfNotExist(String name, String text) {
-		// FIXME: add user info
-		List<PageKind> pages = 
-				ofy().load().type(PageKind.class).filter("name = ", name).list();
-		
-		if (pages.isEmpty()) {
-			TextPipeline processor = new TextPipeline();
-	  	PageKind page = processor.pass(name, text);
-	  	
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
-	  	defaultGenerator.persist();  	
-	  	
-	  	page.addGenerator(defaultGenerator);
-	  	page.persist();
-			return page;
-		} else {
-			throw new IllegalArgumentException();
-		}
 	}
 	
 	private void createDefaultPages() {
@@ -98,15 +151,27 @@ public class AppInstance {
   		createPageIfNotExist(name, text);
   	}
   	
-  	{
+  	int i = 0;
+  	while (true) {
+  		// Остались ли попытки
+  		if (i > COUNT_TRIES)
+  			throw new IllegalStateException();
+  		
 	  	// Try read
 	  	// Скрыл, так как падало, но должно работать!!
 	  	List<PageKind> pages = 
 	  			ofy().load().type(PageKind.class).filter("name = ", TextPipeline.defaultPageName).list();
 	  	
 	  	// FIXME: иногда страбатывает - почему - не ясно - список пуст, все вроде бы синхронно
-	  	if (pages.isEmpty()) 
-	  		throw new IllegalStateException();
+	  	if (pages.isEmpty()) {
+	  		try {
+	        Thread.sleep(TIME_STEP_MS);
+        } catch (InterruptedException e) {
+	        throw new RuntimeException(e);
+        }
+	  		i++;
+	  		continue;
+	  	}
 	  	
 	  	if (pages.size() > 1) 
 	  		throw new IllegalStateException();
@@ -118,9 +183,9 @@ public class AppInstance {
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-	public PageKind getPage(String namePage) {
+	public Optional<PageKind> getPage(String namePage) {
 		try {
-			return pagesCache.get(namePage).get();
+			return pagesCache.get(namePage);
     } catch (ExecutionException e) {
     	throw new RuntimeException(e);
     }
@@ -149,7 +214,7 @@ public class AppInstance {
 	}
 	
 	public void disablePoint(PathValue p) {
-		PageKind page = getPage(p.pageName);
+		PageKind page = getPage(p.pageName).get();
 		GeneratorKind g = page.getGenerator(p.genName);
 		g.disablePoint(p.pointPos);
 		

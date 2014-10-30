@@ -1,5 +1,7 @@
 package servlets.research;
 
+import gae_store_space.AppInstance;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,10 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.python.google.common.base.Joiner;
-
-import servlets.protocols.PathValue;
-
+import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.gson.Gson;
 
@@ -21,8 +20,10 @@ import com.google.gson.Gson;
 public class TextAccepter extends HttpServlet {
   private static final long serialVersionUID = -432680049858395942L;
   
-  private class TextPackage {
-  	TextPackage() {}
+  private AppInstance app = AppInstance.getInstance();
+  
+  private static class TextPackage {
+  	public TextPackage() {}
   	
   	String text;
   	String name;
@@ -41,7 +42,7 @@ public class TextAccepter extends HttpServlet {
     HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException
   {
-
+  	response.setContentType("text/html");
 		try {
 	  	BufferedReader reader = 
 	  			new BufferedReader(new InputStreamReader(request.getInputStream()));
@@ -53,16 +54,23 @@ public class TextAccepter extends HttpServlet {
 	    }
 	    
 	    String data = Joiner.on("").join(lines);
-	    TextAccepter p = new Gson().fromJson(data, TextAccepter.class);
+	    TextPackage p = new Gson().fromJson(data, TextPackage.class);
 	    
 	    // purge from headers and bottoms
-	    //process(lines);
+	    if (p.getText().isPresent() && p.getName().isPresent()) {
+	    	app.createOrRecreatePage(p.getName().get(), p.getText().get());
 	  	
-	  	// response
-	  	response.setContentType("text/html");
-	    response.setStatus(HttpServletResponse.SC_OK); 
+		  	// response
+		    response.setStatus(HttpServletResponse.SC_OK); 
+	    } else { 
+	    	throw new IllegalArgumentException();
+	    }
   	} catch (IOException e) {
-  		throw new IllegalStateException(e);
+	    response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+  	} catch (IllegalStateException e) {
+  		response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+  	} catch (IllegalArgumentException e) {
+	    response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
   	}
   }
 }

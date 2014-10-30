@@ -43,7 +43,7 @@ import com.googlecode.objectify.annotation.Load;
 public class PageKind {
   private PageKind() { }
 
-  @Id Long id;
+  public @Id Long id;
 
   @Index String name;
   
@@ -63,13 +63,20 @@ public class PageKind {
   
   public String getName() { return name; }
   
+  public void deleteGenerators() {
+  	ofy().delete().keys(generators).now();
+  }
+  
   // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> restore(String pageName) {
   	List<PageKind> pages = 
     		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
     
-    if (pages.size() != 1)
+  	if (pages.size() > 1)
   		throw new IllegalStateException();
+  	
+    if (pages.size() == 0)
+    	return Optional.fromNullable(null);
     
     PageKind barePage = pages.get(0);
     

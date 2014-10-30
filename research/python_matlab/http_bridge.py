@@ -90,12 +90,12 @@ class ResearchAjax(object):
 
         url = '/research/accept_text'
 
-        payload = {'name': 'test', 'text': data}
+        payload = {'name': 'research_page', 'text': data}
         r = requests.post(self._build_url(url), data=json.dumps(payload))
         r.raise_for_status()
 
-    def remove_file(self):
-        pass
+    #def remove_file(self):
+    #    pass
 
 
 def main():
