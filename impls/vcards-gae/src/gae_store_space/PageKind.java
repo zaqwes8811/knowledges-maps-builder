@@ -66,7 +66,7 @@ public class PageKind {
   public String getName() { return name; }
   
   public void deleteGenerators() {
-  	CrossIO.print("generator deleted " + id);
+  	CrossIO.print(id + " generator deleted");
   	ofy().delete().keys(generators).now();
   }
   
@@ -92,6 +92,8 @@ public class PageKind {
     // теперь нужно запустить процесс обработки,
     barePage.assign(page);
     
+    CrossIO.print(barePage.id + " restore");
+    
     return Optional.fromNullable(barePage);  // 1 item
   }
   
@@ -102,6 +104,7 @@ public class PageKind {
   
   public void persist() {
   	ofy().save().entity(this).now();
+  	CrossIO.print(id + " id new page");
   }
 
   // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
@@ -110,7 +113,7 @@ public class PageKind {
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
-  public GeneratorKind getGenerator(String name) { 
+  public Optional<GeneratorKind> getGenerator(String name) { 
   	if (name == null)
   		throw new IllegalArgumentException();
   	
@@ -122,17 +125,16 @@ public class PageKind {
 	  			.filterKey("in", generators)
 	  			.filter("name = ", name)
 	  			.list();
-  	
-  	CrossIO.print("gen loaded " + id);
+
   	if (gen.isEmpty())
-  		throw new IllegalStateException(name);
+  		return Optional.absent();
   		
   	if (gen.size() > 1)
   		throw new IllegalStateException(name);
   	
   	gen.get(0).reset();
   	
-  	return gen.get(0);
+  	return Optional.fromNullable(gen.get(0));
   }
   
   public List<String> getGenNames() {
@@ -178,7 +180,7 @@ public class PageKind {
   }
    
   public Optional<WordDataValue> getWordData(String genName) {
-  	GeneratorKind go = getGenerator(genName);
+  	GeneratorKind go = getGenerator(genName).get();
     
 		Integer pointPosition = go.getPosition();
 		WordKind wordKind =  getWordKind(pointPosition);

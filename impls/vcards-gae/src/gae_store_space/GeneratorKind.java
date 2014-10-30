@@ -116,6 +116,9 @@ public class GeneratorKind
   
   public void persist() {
   	ofy().save().entity(this).now();
+  	//GeneratorKind g = ofy().load().type(GeneratorKind.class).id(id).now();
+  	//Optional<GeneratorKind> g_readed = Optional.fromNullable(g);
+  	//g_readed.get();
   }
 
   

@@ -33,6 +33,10 @@ public class AppInstance {
 	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-gae
 	// Но как обрабатываются ошибки?
 	// now не всегда работает
+	//
+	// eventually consistent:
+	//   http://habrahabr.ru/post/100891/
+	//
 	static int TIME_STEP_MS = 200;
 	static int COUNT_TRIES = 10;  
 	
@@ -40,6 +44,7 @@ public class AppInstance {
     return "./test_data/korra/etalon.srt";
   }
 	
+	// FIXME: если кеш убрать работает много стабильнее
 	LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
 			.maximumSize(CACHE_SIZE)
 			.build(
@@ -56,8 +61,11 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-  	PageKind page = getPage(path.pageName).get();  
-  	GeneratorKind gen = page.getGenerator(path.genName);
+  	Optional<PageKind> page = getPage(path.pageName); 
+  	if (!page.isPresent())
+  		throw new IllegalStateException();
+  	
+  	GeneratorKind gen = page.get().getGenerator(path.genName).get();
   	return gen.getDistribution();
   }
 	
@@ -65,7 +73,7 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		
-		//pagesCache.cleanUp();
+		pagesCache.invalidate(name);
 		
 		int i = 0;
 		while (true) {
@@ -84,8 +92,6 @@ public class AppInstance {
 				i++;
 			}
 		}
-		
-		//pagesCache.cleanUp();
 	}
 	
 	private void fullDeletePage(String name) {
@@ -95,10 +101,6 @@ public class AppInstance {
 				page.get().deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
 				//ofy().delete().type(PageKind.class).id(page.get().id).now();  // non delete!
 				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
-				
-				pagesCache.invalidate(page);
-			} else {
-				CrossIO.print("page is new");
 			}
 		} catch (UncheckedExecutionException e) {
 			// удаляем все лишние
@@ -123,7 +125,48 @@ public class AppInstance {
 	  	
 	  	page.addGenerator(defaultGenerator);
 	  	page.persist();
-	  	CrossIO.print("id new page " + page.id);
+
+	  	int i = 0;
+			while (true) {
+				if (i > COUNT_TRIES)
+					throw new IllegalStateException();
+				
+				try {
+					Optional<PageKind> page_readed = getPage(name); 
+			  	if (!page_readed.isPresent())
+			  		continue;
+					break;
+				} catch (IllegalArgumentException e) {
+					try {
+		        Thread.sleep(TIME_STEP_MS);
+	        } catch (InterruptedException e1) {
+		        throw new RuntimeException(e1);
+	        }
+					i++;
+				}
+			}
+			
+			// убеждаемся что генератор тоже сохранен
+			i = 0;
+			while (true) {
+				if (i > COUNT_TRIES)
+					throw new IllegalStateException();
+				
+				try {
+					Optional<GeneratorKind> g = page.getGenerator(TextPipeline.defaultGenName);
+					if (!g.isPresent())
+			  		continue;
+					break;
+				} catch (IllegalArgumentException e) {
+					try {
+		        Thread.sleep(TIME_STEP_MS);
+	        } catch (InterruptedException e1) {
+		        throw new RuntimeException(e1);
+	        }
+					i++;
+				}
+			}
+
 			return page;
 		} else {
 			throw new IllegalArgumentException();
@@ -195,13 +238,17 @@ public class AppInstance {
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
-		//try {
-			return PageKind.restore(pageName);
-			//return pagesCache.get(pageName);
+	  return PageKind.restore(pageName);
+		
+	  /*
+	  try {
+			
+			return pagesCache.get(pageName);
     
-		/*} catch (ExecutionException e) {
+		} catch (ExecutionException e) {
     	throw new RuntimeException(e);
-    }*/
+    }
+    //*/
 	}
 
 	public static class Holder {
@@ -228,7 +275,7 @@ public class AppInstance {
 	
 	public void disablePoint(PathValue p) {
 		PageKind page = getPage(p.pageName).get();
-		GeneratorKind g = page.getGenerator(p.genName);
+		GeneratorKind g = page.getGenerator(p.genName).get();
 		g.disablePoint(p.pointPos);
 		
 		ofy().save().entity(g).now();
