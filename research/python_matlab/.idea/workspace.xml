@@ -26,8 +26,8 @@
       <file leaf-file-name="http_bridge.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_bridge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53287196" vertical-offset="1466" max-vertical-offset="2535">
-              <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.48096886" vertical-offset="1466" max-vertical-offset="2535">
+              <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
               <folding>
                 <element signature="e#208#223#0" expanded="true" />
               </folding>
@@ -50,8 +50,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="172" />
-    <option name="y" value="27" />
+    <option name="x" value="1552" />
+    <option name="y" value="90" />
     <option name="width" value="789" />
     <option name="height" value="744" />
   </component>
@@ -278,7 +278,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="172" y="27" width="789" height="744" extended-state="0" />
+    <frame x="1552" y="90" width="789" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -395,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/http_bridge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53287196" vertical-offset="1466" max-vertical-offset="2535">
-          <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.48096886" vertical-offset="1466" max-vertical-offset="2535">
+          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
           <folding>
             <element signature="e#208#223#0" expanded="true" />
           </folding>
