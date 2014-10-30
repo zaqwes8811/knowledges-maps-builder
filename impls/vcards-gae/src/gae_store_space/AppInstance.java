@@ -154,21 +154,13 @@ public class AppInstance {
   	// clear cache
   	pagesCache.cleanUp();
   	
-  	createDefaultPages();  // нельзя это в конструктор
+  	createDefaultPage();  // нельзя это в конструктор
 	}
 	
-	private void createDefaultPages() {
-		{
-  		String name = TextPipeline.defaultPageName;
-  		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-  		createPageIfNotExist_sync(name, text);
-	 	}
-  	
-  	{
-  		String name = TextPipeline.defaultPageName+"Copy";
-  		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-  		createPageIfNotExist_sync(name, text);
-  	}
+	private void createDefaultPage() {
+		String name = TextPipeline.defaultPageName;
+		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
+		createPageIfNotExist_sync(name, text);
 	}
 	
 	public AppInstance() {
@@ -177,18 +169,11 @@ public class AppInstance {
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
-	  //return PageKind.restore(pageName);
-		
-	  // падает почти всегда - очень часто
-	  ///*
 	  try {
-			
 			return pagesCache.get(pageName);
-    
 		} catch (ExecutionException e) {
     	throw new RuntimeException(e);
     }
-    //*/
 	}
 
 	public static class Holder {
