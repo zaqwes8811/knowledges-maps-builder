@@ -124,7 +124,8 @@ def main():
     plt.grid(True)
     plt.show()
 
-    # Clustering - Lloyd
+    # Clustering - kMean
+    # нужно размазать данные
     pass
 
 
