@@ -15,6 +15,7 @@ import net.jcip.annotations.NotThreadSafe;
 import servlets.protocols.PathValue;
 import servlets.protocols.WordDataValue;
 
+import com.google.common.base.Optional;
 import com.google.gson.Gson;
 
 @NotThreadSafe
@@ -40,8 +41,11 @@ public class GetterSingleWord extends HttpServlet {
 		response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    PageKind p = app.getPage(path.pageName).get();
-    WordDataValue v = p.getWordData(path.genName).get();
+    Optional<PageKind> p = app.getPage(path.pageName);
+    if (!p.isPresent())
+    	throw new IllegalStateException();
+    
+    WordDataValue v = p.get().getWordData(path.genName).get();
     
     String json = new Gson().toJson(v);
  
