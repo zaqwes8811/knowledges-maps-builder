@@ -12,6 +12,7 @@ import numpy as np
 # sys
 import json
 import time
+import random
 
 
 class PathValue(object):
@@ -83,7 +84,7 @@ class ResearchAjax(object):
             result.append(DistributionElem(val))
         return result
 
-    def store_file(self):
+    def create_or_replace_page(self):
         # Просто через post
         test_file = '../test_data/etalon.srt'
         with open(test_file, "r") as file_handle:
@@ -91,42 +92,16 @@ class ResearchAjax(object):
 
         url = '/research/accept_text'
 
-        payload = {'name': 'research_page', 'text': data}
+        payload = {'name': self.get_research_page_name(), 'text': data}
         r = requests.post(self._build_url(url), data=json.dumps(payload))
         r.raise_for_status()
 
-    #def remove_file(self):
-    #    pass
+    @staticmethod
+    def get_research_page_name():
+        return 'research_page'
 
 
-def main():
-    server = 'http://localhost'
-    port = 8080
-    research_ajax = ResearchAjax(server, port)
-    #for i in range():
-    research_ajax.store_file()
-        #time.sleep(0.01)
-    return
-
-    #return
-    time.sleep(1)
-
-    # Http part
-    #server = 'http://1-dot-arched-glow-381.appspot.com'
-    #port = 80  # 80
-    #ajax = AppAjax(server, port)
-    #user_info = ajax.get_user_summary_sync()
-
-    # get distribution
-    research_ajax = ResearchAjax(server, port)
-
-    #work_path = user_info[1]  # FIXME: hard code
-    #print work_path.genNames[0], work_path.pageName
-    arg0 = PathValue('research_page', "Default", 0)
-
-    # Read
-    distribution = research_ajax.get_distribution_sync(arg0)
-
+def plot_distribution(d):
     # to NumPy arrays
     disabled = []
     x_disabled = []
@@ -134,7 +109,7 @@ def main():
     x_all_points = []
     active = []
     x_active = np.array([], dtype=np.uint32)
-    for i, elem in enumerate(distribution):
+    for i, elem in enumerate(d):
         all_points.append(elem.frequency)
         x_all_points.append(i)
 
@@ -145,19 +120,43 @@ def main():
             active.append(elem.frequency)
             x_active = np.append(x_active, i)  # FIXME: bad!
 
-    return
-
     # Processing
-    plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
-    plt.plot(-1 * x_active, active)
-    plt.grid(True)
-    plt.show()
+    if False:
+        plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
+        plt.plot(-1 * x_active, active)
+        plt.grid(True)
+        plt.show()
+
+
+def main():
+    # Http part
+    server = 'http://localhost'
+    port = 8080
+    research_ajax = ResearchAjax(server, port)
+    #research_ajax.create_or_replace_page()
+
+    # get distribution
+    research_ajax = ResearchAjax(server, port)
+    arg0 = PathValue(research_ajax.get_research_page_name(), "Default", 0)
+
+    # Read
+    distribution = research_ajax.get_distribution_sync(arg0)
+    #plot_distribution(distribution)
 
     # Clustering - kMean
-    # нужно размазать данные
-    pass
+    # Expand data for training
+    X = []
+    Y = []
+    for i, elem in enumerate(distribution):
+        freq = elem.frequency
+        for j in range(freq):
+            X.append(i + 1 + random.gauss(1, 1))
+            Y.append(random.gauss(1, 1))
+
+    plt.plot(X, Y, 'o')
+    plt.show()
+
 
 
 if __name__ == '__main__':
-    for i in range(50):
-        main()
+    main()
