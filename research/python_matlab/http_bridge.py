@@ -7,7 +7,7 @@ import json
 
 
 class PathValue(object):
-    def __init__(self, page, gen, pos):
+    def __init__(self, page, gen='Default', pos=0):
         self.pageName = page
         self.genName = gen
         self.pointPos = pos
