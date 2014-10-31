@@ -86,6 +86,10 @@ class ResearchAjax(object):
             result.append(DistributionElem(val))
         return result
 
+    def get_pure_distribution(self, arg0):
+        d = self.get_distribution_sync(arg0)
+
+
     def create_or_replace_page(self):
         # Просто через post
         test_file = '../test_data/etalon.srt'
@@ -130,6 +134,16 @@ def plot_distribution(d):
         plt.show()
 
 
+def unroll_distribution(d):
+    X = []
+    Y = []
+    for i, elem in enumerate(d):
+        freq = elem.frequency
+        for j in range(freq):
+            X.append([i + 1])
+            Y.append(random.gauss(0, 0.1))
+    return X, Y
+
 def main():
     # Http part
     server = 'http://localhost'
@@ -147,15 +161,9 @@ def main():
 
     # Clustering - kMean
     # Expand data for training
-    X = []
-    Y = []
-    for i, elem in enumerate(distribution):
-        freq = elem.frequency
-        for j in range(freq):
-            X.append([i + 1])
-            Y.append(random.gauss(0, 0.1))
+    X, Y = unroll_distribution(distribution)
 
-    plt.plot(X, Y, 'o')
+    #plt.plot(X, Y, 'o')
     plt.grid(True)
 
     # http://www.slideshare.net/SarahGuido/estimator-clustering-with-scikitlearn
@@ -163,24 +171,24 @@ def main():
     # что-то не то, в отображении
     n_clusters = 3
     estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
-    x_active = np.array(X, dtype=np.int)
+    x_active = np.array(X, dtype=np.uint64)  # positions
+
     np.random.shuffle(x_active)
+
     assignments = estimator.fit_predict(x_active)
 
     for j in range(n_clusters):
-        X_0 = []
-        Y_0 = []
-        for i, elem in enumerate(assignments):
-            if elem == j:
-                Y_0.append(Y[x_active[i]-1])
-                X_0.append(X[x_active[i]-1])
+        z = np.where(assignments == j)
+        tmp = x_active[z].ravel()
+        x_0 = np.array(X)[tmp].ravel()
+        print x_0
 
-        plt.plot(X_0, Y_0, 'v')
+        #plt.plot(x_0, y_0, 'o')'''
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
     # Nearest Neighbors version
-    plt.show()
+    #plt.show()
 
 
 if __name__ == '__main__':
