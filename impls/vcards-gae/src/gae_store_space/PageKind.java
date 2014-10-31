@@ -53,7 +53,7 @@ public class PageKind {
 
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  @Ignore private ArrayList<WordKind> wordKinds = new ArrayList<WordKind>();
+  @Ignore private ArrayList<NGramKind> wordKinds = new ArrayList<NGramKind>();
   @Ignore private List<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
   // FIXME: почему отношение не работает?
@@ -168,7 +168,7 @@ public class PageKind {
 
   // Это при создании с нуля
   public PageKind(
-  		String name, ArrayList<SentenceKind> items, ArrayList<WordKind> words, String rawSource) 
+  		String name, ArrayList<SentenceKind> items, ArrayList<NGramKind> words, String rawSource) 
   	{
     this.name = name;
    	this.wordKinds = words;
@@ -179,12 +179,12 @@ public class PageKind {
   // About: Возвращать частоты, сортированные по убыванию.
   public ArrayList<DistributionElement> getRawDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(wordKinds, WordKind.createFrequencyComparator());
+    Collections.sort(wordKinds, NGramKind.createFrequencyComparator());
     Collections.reverse(wordKinds);
 
     // Form result
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
-    for (WordKind word : wordKinds)
+    for (NGramKind word : wordKinds)
       distribution.add(new DistributionElement(word.getRawFrequency()));
 
     return distribution;
@@ -194,7 +194,7 @@ public class PageKind {
   	GeneratorKind go = getGenerator(genName).get();
     
 		Integer pointPosition = go.getPosition();
-		WordKind wordKind =  getWordKind(pointPosition);
+		NGramKind wordKind =  getWordKind(pointPosition);
 		String word = wordKind.getWord();
 		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
 
@@ -208,7 +208,7 @@ public class PageKind {
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
-  private WordKind getWordKind(Integer pos) {
+  private NGramKind getWordKind(Integer pos) {
   	if (! (pos < this.wordKinds.size()))
   		throw new IllegalArgumentException();
   	
