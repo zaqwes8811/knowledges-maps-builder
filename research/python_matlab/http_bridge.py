@@ -88,7 +88,11 @@ class ResearchAjax(object):
 
     def get_pure_distribution(self, arg0):
         d = self.get_distribution_sync(arg0)
-
+        frequencies = []
+        for i, elem in enumerate(d):
+            freq = elem.frequency
+            frequencies.append(freq)
+        return frequencies
 
     def create_or_replace_page(self):
         # Просто через post
@@ -138,11 +142,11 @@ def unroll_distribution(d):
     X = []
     Y = []
     for i, elem in enumerate(d):
-        freq = elem.frequency
-        for j in range(freq):
-            X.append([i + 1])
+        for j in range(elem):
+            X.append([i])
             Y.append(random.gauss(0, 0.1))
     return X, Y
+
 
 def main():
     # Http part
@@ -151,17 +155,17 @@ def main():
     research_ajax = ResearchAjax(server, port)
     # research_ajax.create_or_replace_page()
 
-    # get distribution
+    # get d
     research_ajax = ResearchAjax(server, port)
     arg0 = PathValue(research_ajax.get_research_page_name(), "Default", 0)
 
     # Read
-    distribution = research_ajax.get_distribution_sync(arg0)
-    #plot_distribution(distribution)
+    d = research_ajax.get_pure_distribution(arg0)
+    #plot_distribution(d)
 
     # Clustering - kMean
     # Expand data for training
-    X, Y = unroll_distribution(distribution)
+    X, Y = unroll_distribution(d)
 
     #plt.plot(X, Y, 'o')
     plt.grid(True)
@@ -173,22 +177,24 @@ def main():
     estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
     x_active = np.array(X, dtype=np.uint64)  # positions
 
-    np.random.shuffle(x_active)
+    #np.random.shuffle(x_active)
 
     assignments = estimator.fit_predict(x_active)
 
     for j in range(n_clusters):
         z = np.where(assignments == j)
-        tmp = x_active[z].ravel()
-        x_0 = np.array(X)[tmp].ravel()
-        print x_0
+        x = np.unique(x_active[z].ravel())
+        y = np.array(d)[x].ravel()
 
-        #plt.plot(x_0, y_0, 'o')'''
+        xx, yy = unroll_distribution(y)
+        print xx
+
+        plt.plot(xx, yy, 'o')
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
     # Nearest Neighbors version
-    #plt.show()
+    plt.show()
 
 
 if __name__ == '__main__':
