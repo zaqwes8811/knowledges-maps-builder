@@ -8,6 +8,9 @@
 # FIXME: глобальные проблемы. Нужно ужать распределение, но лучше без стемминга.
 #   Можно например кластеризовать на 3. И из второго и третьего кластера брать только слова, кот. составляют триграммы
 #   с первым.
+#
+# Conf: субтитры/без предобработки/с глобальным фильтром - много реальнее!
+# FIXME: могут остаться только единицы и двойки - ооочень это вероятно
 
 # app
 import http_bridge
@@ -96,7 +99,7 @@ def cluster_kmeans(d):
         z = np.where(assignments == j)
         x = x_active[z].ravel()
         y = (np.ones(x.shape) + np.random.laplace(size=x.shape)).ravel()
-        plt.plot(x, y, 'o')
+        plt.plot(x, y, 'o')  # FIXME: bad!
 
 
 def main():
@@ -107,7 +110,7 @@ def main():
     # research_ajax.create_or_replace_page()
 
     research_ajax = http_bridge.ResearchAjax(server, port)
-    arg0 = http_bridge.PathValue(research_ajax.get_research_page_name(), "Default", 0)
+    arg0 = http_bridge.PathValue(research_ajax.get_research_page_name())
 
     # Read
     d = research_ajax.get_pure_distribution(arg0)
