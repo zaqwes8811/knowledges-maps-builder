@@ -145,7 +145,7 @@ def unroll_distribution(d):
         for j in range(elem):
             X.append([i])
             Y.append(random.gauss(0, 0.1))
-    return X, Y
+    return np.array(X), np.array(Y)
 
 
 def main():
@@ -177,19 +177,16 @@ def main():
     estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
     x_active = np.array(X, dtype=np.uint64)  # positions
 
-    #np.random.shuffle(x_active)
+    np.random.shuffle(x_active)
 
+    # FIXME: имена кластеров перемешаны!
     assignments = estimator.fit_predict(x_active)
 
     for j in range(n_clusters):
         z = np.where(assignments == j)
-        x = np.unique(x_active[z].ravel())
-        y = np.array(d)[x].ravel()
-
-        xx, yy = unroll_distribution(y)
-        print xx
-
-        plt.plot(xx, yy, 'o')
+        x = x_active[z].ravel()
+        y = (np.ones(x.shape) + np.random.laplace(size=x.shape)).ravel()
+        plt.plot(x, y, 'o')
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
