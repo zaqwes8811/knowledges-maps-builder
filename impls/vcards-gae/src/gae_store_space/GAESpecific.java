@@ -14,7 +14,7 @@ public class GAESpecific {
 	//   https://www.udacity.com/course/viewer#!/c-ud859/l-1219418587/m-1497718612
 	//
 	public static int TIME_STEP_MS = 200;
-	public static int COUNT_TRIES = 10; 
+	public static int COUNT_TRIES = 7; 
 	
 	// FIXME: вообще, то что читаю в цикле мало что значит в многопользовательском режиме
 	//   для исследования возможно так и нужно, но вообще нет.

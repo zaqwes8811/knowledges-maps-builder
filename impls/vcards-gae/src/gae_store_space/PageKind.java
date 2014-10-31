@@ -66,7 +66,6 @@ public class PageKind {
   public String getName() { return name; }
   
   public void deleteGenerators() {
-  	CrossIO.print(id + " generator deleted");
   	ofy().delete().keys(generators).now();
   }
   
@@ -92,7 +91,6 @@ public class PageKind {
 		  }
 			break;
 		}
-		CrossIO.print("begin restore " + pages.size());
 		
     if (pages.size() == 0)
     	return Optional.absent();
@@ -108,8 +106,6 @@ public class PageKind {
     // теперь нужно запустить процесс обработки,
     barePage.assign(page);
     
-    CrossIO.print(barePage.id + " restore");
-    
     return Optional.fromNullable(barePage);  // 1 item
   }
   
@@ -120,7 +116,6 @@ public class PageKind {
   
   public void persist() {
   	ofy().save().entity(this).now();
-  	CrossIO.print(id + " id new page");
   }
 
   // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
