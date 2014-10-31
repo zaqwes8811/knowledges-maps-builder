@@ -8,6 +8,7 @@
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
+import numpy.random
 import sklearn.cluster
 
 # sys
@@ -134,7 +135,7 @@ def main():
     server = 'http://localhost'
     port = 8080
     research_ajax = ResearchAjax(server, port)
-    #research_ajax.create_or_replace_page()
+    # research_ajax.create_or_replace_page()
 
     # get distribution
     research_ajax = ResearchAjax(server, port)
@@ -157,20 +158,20 @@ def main():
     plt.plot(X, Y, 'o')
     plt.grid(True)
 
-
-    # http://www.slideshare.net/SarahGuido/kmeans-clustering-with-scikitlearn
+    # http://www.slideshare.net/SarahGuido/estimator-clustering-with-scikitlearn
     n_clusters = 3
-    kmeans = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
-    x_active = np.array(X, dtype=np.float)
-    assignments = kmeans.fit_predict(x_active)
+    estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=1000)
+    x_active = np.array(X, dtype=np.int)
+    np.random.shuffle(x_active)
+    assignments = estimator.fit_predict(x_active)
 
     for j in range(n_clusters):
         X_0 = []
         Y_0 = []
         for i, elem in enumerate(assignments):
             if elem == j:
-                Y_0.append(Y[i])
-                X_0.append(X[i])
+                Y_0.append(Y[x_active[i]-1])
+                X_0.append(X[x_active[i]-1])
 
         plt.plot(X_0, Y_0, 'o')
 
