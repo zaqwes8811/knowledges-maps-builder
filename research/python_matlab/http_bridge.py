@@ -157,18 +157,27 @@ def main():
 
     plt.plot(X, Y, 'o')
     plt.grid(True)
-    #plt.show()
+
 
     # http://www.slideshare.net/SarahGuido/kmeans-clustering-with-scikitlearn
     kmeans = sklearn.cluster.KMeans(k=3)
     x_active = np.array(X, dtype=np.float)
     print x_active.shape
-    print kmeans.fit_predict(x_active)
+    assignments = kmeans.fit_predict(x_active)
+
+    X_0 = []
+    Y_0 = []
+    for i, elem in enumerate(assignments):
+        if elem == 1:
+            Y_0.append(Y[i])
+            X_0.append(X[i])
+
+    plt.plot(X_0, Y_0, 'v')
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
-    # Nearest Neighbors
-
+    # Nearest Neighbors version
+    plt.show()
 
 
 if __name__ == '__main__':
