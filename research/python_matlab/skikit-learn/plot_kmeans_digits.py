@@ -40,7 +40,9 @@ from sklearn.preprocessing import scale
 np.random.seed(42)
 
 digits = load_digits()
+
 data = scale(digits.data)
+print data
 
 n_samples, n_features = data.shape
 n_digits = len(np.unique(digits.target))
@@ -56,6 +58,7 @@ print(79 * '_')
 print('% 9s' % 'init'
       '    time  inertia    homo   compl  v-meas     ARI AMI  silhouette')
 
+print data.shape
 
 def bench_k_means(estimator, name, data):
     t0 = time()
