@@ -152,7 +152,6 @@ def main():
         freq = elem.frequency
         for j in range(freq):
             X.append([i + 1])
-            # + random.gauss(1, 1))
             Y.append(random.gauss(0, 0.1))
 
     plt.plot(X, Y, 'o')
@@ -160,19 +159,20 @@ def main():
 
 
     # http://www.slideshare.net/SarahGuido/kmeans-clustering-with-scikitlearn
-    kmeans = sklearn.cluster.KMeans(k=3)
+    n_clusters = 3
+    kmeans = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
     x_active = np.array(X, dtype=np.float)
-    print x_active.shape
     assignments = kmeans.fit_predict(x_active)
 
-    X_0 = []
-    Y_0 = []
-    for i, elem in enumerate(assignments):
-        if elem == 1:
-            Y_0.append(Y[i])
-            X_0.append(X[i])
+    for j in range(n_clusters):
+        X_0 = []
+        Y_0 = []
+        for i, elem in enumerate(assignments):
+            if elem == j:
+                Y_0.append(Y[i])
+                X_0.append(X[i])
 
-    plt.plot(X_0, Y_0, 'v')
+        plt.plot(X_0, Y_0, 'o')
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
