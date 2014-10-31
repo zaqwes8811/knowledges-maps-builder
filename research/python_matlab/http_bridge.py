@@ -159,8 +159,10 @@ def main():
     plt.grid(True)
 
     # http://www.slideshare.net/SarahGuido/estimator-clustering-with-scikitlearn
+    # Если 3 то первые да кластера очень узкие, так что разделять их нет смысла
+    # что-то не то, в отображении
     n_clusters = 3
-    estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=1000)
+    estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
     x_active = np.array(X, dtype=np.int)
     np.random.shuffle(x_active)
     assignments = estimator.fit_predict(x_active)
@@ -173,7 +175,7 @@ def main():
                 Y_0.append(Y[x_active[i]-1])
                 X_0.append(X[x_active[i]-1])
 
-        plt.plot(X_0, Y_0, 'o')
+        plt.plot(X_0, Y_0, 'v')
 
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
