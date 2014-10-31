@@ -16,8 +16,8 @@ import com.googlecode.objectify.annotation.Index;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
-public class WordKind {
-	private WordKind() { }
+public class NGramKind {
+	private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	 
   @Override
@@ -59,10 +59,10 @@ public class WordKind {
     return rawFrequency;
   }
 
-  public static WordKind create(
+  public static NGramKind create(
   		String wordValue, Collection<SentenceKind> sentencess, int rawFrequency) 
   	{
-    return new WordKind(wordValue, sentencess, rawFrequency);
+    return new NGramKind(wordValue, sentencess, rawFrequency);
   }
 
   public void setPointPos(Integer value) {
@@ -97,7 +97,7 @@ public class WordKind {
   // TODO: Stop it!
   // equals()
   // hashCode() - need it?
-  public WordKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
+  public NGramKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
     this.nGram = word;
     importancePosition = -1;
 
@@ -108,17 +108,17 @@ public class WordKind {
     sentences.addAll(sentencess);
   }
 
-  private static class ImportanceComparator implements Comparator<WordKind> {
+  private static class ImportanceComparator implements Comparator<NGramKind> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(WordKind o1, WordKind o2) {
+    public int compare(NGramKind o1, NGramKind o2) {
       return o1.getRawFrequency().compareTo(o2.getRawFrequency());
     }
   }
 
-  public static Comparator<WordKind> createFrequencyComparator() {
+  public static Comparator<NGramKind> createFrequencyComparator() {
     return new ImportanceComparator();
   }
 }
