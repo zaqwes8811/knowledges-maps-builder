@@ -71,16 +71,16 @@ def bench_k_means(estimator, name, data):
                                       metric='euclidean',
                                       sample_size=sample_size)))
 
-bench_k_means(KMeans(init='k-means++', n_clusters=n_digits, n_init=10),
+bench_k_means(KMeans(init='k-means++', k=n_digits, n_init=10),
               name="k-means++", data=data)
 
-bench_k_means(KMeans(init='random', n_clusters=n_digits, n_init=10),
+bench_k_means(KMeans(init='random', k=n_digits, n_init=10),
               name="random", data=data)
 
 # in this case the seeding of the centers is deterministic, hence we run the
 # kmeans algorithm only once with n_init=1
 pca = PCA(n_components=n_digits).fit(data)
-bench_k_means(KMeans(init=pca.components_, n_clusters=n_digits, n_init=1),
+bench_k_means(KMeans(init=pca.components_, k=n_digits, n_init=1),
               name="PCA-based",
               data=data)
 print(79 * '_')
@@ -89,7 +89,7 @@ print(79 * '_')
 # Visualize the results on PCA-reduced data
 
 reduced_data = PCA(n_components=2).fit_transform(data)
-kmeans = KMeans(init='k-means++', n_clusters=n_digits, n_init=10)
+kmeans = KMeans(init='k-means++', k=n_digits, n_init=10)
 kmeans.fit(reduced_data)
 
 # Step size of the mesh. Decrease to increase the quality of the VQ.
