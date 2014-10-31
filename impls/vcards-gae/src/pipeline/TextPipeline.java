@@ -2,7 +2,7 @@ package pipeline;
 
 import gae_store_space.PageKind;
 import gae_store_space.SentenceKind;
-import gae_store_space.WordKind;
+import gae_store_space.NGramKind;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,8 +42,8 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<WordKind> sortByImportance(ArrayList<WordKind> kinds) {
-  	Collections.sort(kinds, WordKind.createFrequencyComparator());
+  private ArrayList<NGramKind> sortByImportance(ArrayList<NGramKind> kinds) {
+  	Collections.sort(kinds, NGramKind.createFrequencyComparator());
     Collections.reverse(kinds);
     return kinds;
   }
@@ -59,17 +59,17 @@ public class TextPipeline {
     return histo;
   }
   
-  private ArrayList<WordKind> unpackHisto(Multimap<String, SentenceKind> histo) {
-  	ArrayList<WordKind> kinds = new ArrayList<WordKind>();
+  private ArrayList<NGramKind> unpackHisto(Multimap<String, SentenceKind> histo) {
+  	ArrayList<NGramKind> kinds = new ArrayList<NGramKind>();
     for (String word: histo.keySet()) {
       Collection<SentenceKind> content = histo.get(word);
       int rawFrequency = content.size();
-      kinds.add(WordKind.create(word, content, rawFrequency));
+      kinds.add(NGramKind.create(word, content, rawFrequency));
     }
     return kinds;
   }
   
-  private ArrayList<WordKind> assignIndexes(ArrayList<WordKind> words) {
+  private ArrayList<NGramKind> assignIndexes(ArrayList<NGramKind> words) {
     for (int i = 0; i < words.size(); i++) 
     	words.get(i).setPointPos(i);
     
@@ -87,7 +87,7 @@ public class TextPipeline {
     // Assemble statistic
     Multimap<String, SentenceKind> histo = buildHisto(items);
 
-    ArrayList<WordKind> wordKinds = unpackHisto(histo);
+    ArrayList<NGramKind> wordKinds = unpackHisto(histo);
 
     // Sort words by frequency
     wordKinds = sortByImportance(wordKinds);

@@ -8,9 +8,9 @@ import org.junit.Test;
 public class WordKindTest {
   @Test
   public void testCompare() throws Exception {
-    WordKind o1 = WordKind.create("hello", null, 1);
-    WordKind o2 = WordKind.create("dfasdf", null, 1);
+    NGramKind o1 = NGramKind.create("hello", null, 1);
+    NGramKind o2 = NGramKind.create("dfasdf", null, 1);
 
-    assert 0 == WordKind.createFrequencyComparator().compare(o1, o2);
+    assert 0 == NGramKind.createFrequencyComparator().compare(o1, o2);
   }
 }

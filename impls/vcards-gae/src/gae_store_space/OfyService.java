@@ -10,7 +10,7 @@ public class OfyService {
   static {
     factory().register(SentenceKind.class);
     factory().register(PageKind.class);
-    factory().register(WordKind.class);
+    factory().register(NGramKind.class);
 
     //factory().register(DistributionGen.class);  // интерфейс не регистрируется
     factory().register(GeneratorKind.class);
