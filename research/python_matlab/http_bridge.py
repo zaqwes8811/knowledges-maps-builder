@@ -155,7 +155,6 @@ def main():
     research_ajax = ResearchAjax(server, port)
     # research_ajax.create_or_replace_page()
 
-    # get d
     research_ajax = ResearchAjax(server, port)
     arg0 = PathValue(research_ajax.get_research_page_name(), "Default", 0)
 
@@ -165,19 +164,17 @@ def main():
 
     # Clustering - kMean
     # Expand data for training
+    # FIXME: а может расщеплять не нужно, а так скромить кластеризатору?
     X, Y = unroll_distribution(d)
 
-    #plt.plot(X, Y, 'o')
-    plt.grid(True)
-
     # http://www.slideshare.net/SarahGuido/estimator-clustering-with-scikitlearn
-    # Если 3 то первые да кластера очень узкие, так что разделять их нет смысла
-    # что-то не то, в отображении
+    # распределят почти равномерно - сложное распределение - похоже кластеризатор считает его почти равномерным
+    # да, пик есть, но это мало меняет, он узкий и не может сильно сузить кластер
     n_clusters = 3
     estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
     x_active = np.array(X, dtype=np.uint64)  # positions
 
-    np.random.shuffle(x_active)
+    np.random.shuffle(x_active)  # для кластеризации похоже не важно
 
     # FIXME: имена кластеров перемешаны!
     assignments = estimator.fit_predict(x_active)
@@ -191,6 +188,7 @@ def main():
     # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
 
     # Nearest Neighbors version
+    plt.grid(True)
     plt.show()
 
 
