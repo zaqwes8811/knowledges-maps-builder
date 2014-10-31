@@ -54,9 +54,9 @@ def plot_distribution(d):
 def unroll_distribution(d):
     X = []
     Y = []
-    for i, elem in enumerate(d):
-        for j in range(elem):
-            X.append([i])
+    for f, importance in enumerate(d):
+        for j in range(importance):
+            X.append([f])
             Y.append(random.gauss(0, 0.1))
     return np.array(X), np.array(Y)
 

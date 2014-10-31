@@ -22,7 +22,7 @@ public class WordKind {
 	 
   @Override
   public String toString() {
-    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ importance.toString()+")";
+    return "("+nGram+", fr: "+ rawFrequency.toString()+", pos: "+ importancePosition.toString()+")";
   }
 
   @Id
@@ -30,11 +30,11 @@ public class WordKind {
 
   // TODO: может хранится стем или пара-тройка слов.
   //@Index  // пока не нему не ищем
-  private String word;
+  private String nGram;
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   // Сколько раз встретилось слово.
-  @Index private Integer rawFrequency;  
+  @Index private Integer rawFrequency;  // это и есть важность, но пока это частота  
 
   // TODO: Как откешировать? Какой допустимый период между запросами?
   // https://developers.google.com/appengine/pricing
@@ -49,10 +49,10 @@ public class WordKind {
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
   @Index
-  private Integer importance;
+  private Integer importancePosition;
   
   public String getWord() {
-  	return word;
+  	return nGram;
   }
 
   public Integer getRawFrequency() {
@@ -66,7 +66,7 @@ public class WordKind {
   }
 
   public void setPointPos(Integer value) {
-    importance = value;
+    importancePosition = value;
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
@@ -98,8 +98,8 @@ public class WordKind {
   // equals()
   // hashCode() - need it?
   public WordKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
-    this.word = word;
-    importance = -1;
+    this.nGram = word;
+    importancePosition = -1;
 
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
