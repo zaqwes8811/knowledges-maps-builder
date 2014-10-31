@@ -1,20 +1,9 @@
-# encoding: utf-8
-# Можно делать реальные запросы и обрабатывать реальные данные
-# http://docs.scipy.org/doc/scipy-0.14.0/reference/tutorial/io.html
-#
-# http://scikit-learn.org/stable/index.html
+# coding: utf-8
 
-# 3rd party
 import requests
-import matplotlib.pyplot as plt
-import numpy as np
-import numpy.random
-import sklearn.cluster
 
 # sys
 import json
-import time
-import random
 
 
 class PathValue(object):
@@ -109,88 +98,3 @@ class ResearchAjax(object):
     @staticmethod
     def get_research_page_name():
         return 'research_page'
-
-
-def plot_distribution(d):
-    # to NumPy arrays
-    disabled = []
-    x_disabled = []
-    all_points = []
-    x_all_points = []
-    active = []
-    x_active = np.array([], dtype=np.uint32)
-    for i, elem in enumerate(d):
-        all_points.append(elem.frequency)
-        x_all_points.append(i)
-
-        if not elem.enabled:
-            disabled.append(elem.frequency)
-            x_disabled.append(i)
-        else:
-            active.append(elem.frequency)
-            x_active = np.append(x_active, i)  # FIXME: bad!
-
-    # Processing
-    if False:
-        plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
-        plt.plot(-1 * x_active, active)
-        plt.grid(True)
-        plt.show()
-
-
-def unroll_distribution(d):
-    X = []
-    Y = []
-    for i, elem in enumerate(d):
-        for j in range(elem):
-            X.append([i])
-            Y.append(random.gauss(0, 0.1))
-    return np.array(X), np.array(Y)
-
-
-def main():
-    # Http part
-    server = 'http://localhost'
-    port = 8080
-    research_ajax = ResearchAjax(server, port)
-    # research_ajax.create_or_replace_page()
-
-    research_ajax = ResearchAjax(server, port)
-    arg0 = PathValue(research_ajax.get_research_page_name(), "Default", 0)
-
-    # Read
-    d = research_ajax.get_pure_distribution(arg0)
-    #plot_distribution(d)
-
-    # Clustering - kMean
-    # Expand data for training
-    # FIXME: а может расщеплять не нужно, а так скромить кластеризатору?
-    X, Y = unroll_distribution(d)
-
-    # http://www.slideshare.net/SarahGuido/estimator-clustering-with-scikitlearn
-    # распределят почти равномерно - сложное распределение - похоже кластеризатор считает его почти равномерным
-    # да, пик есть, но это мало меняет, он узкий и не может сильно сузить кластер
-    n_clusters = 3
-    estimator = sklearn.cluster.KMeans(k=n_clusters, max_iter=300)
-    x_active = np.array(X, dtype=np.uint64)  # positions
-
-    np.random.shuffle(x_active)  # для кластеризации похоже не важно
-
-    # FIXME: имена кластеров перемешаны!
-    assignments = estimator.fit_predict(x_active)
-
-    for j in range(n_clusters):
-        z = np.where(assignments == j)
-        x = x_active[z].ravel()
-        y = (np.ones(x.shape) + np.random.laplace(size=x.shape)).ravel()
-        plt.plot(x, y, 'o')
-
-    # Lloyd - это алгоритмы решения, а не алгоритм обучения, похоже
-
-    # Nearest Neighbors version
-    plt.grid(True)
-    plt.show()
-
-
-if __name__ == '__main__':
-    main()
