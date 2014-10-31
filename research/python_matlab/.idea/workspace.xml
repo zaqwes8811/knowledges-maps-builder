@@ -38,8 +38,18 @@
       <file leaf-file-name="plot_kmeans_digits.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skikit-learn/plot_kmeans_digits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43589744" vertical-offset="720" max-vertical-offset="1875">
-              <caret line="73" column="54" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5641026" vertical-offset="720" max-vertical-offset="1875">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="k_means_.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/lib/pymodules/python2.7/sklearn/cluster/k_means_.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9510" max-vertical-offset="17850">
+              <caret line="677" column="8" selection-start-line="677" selection-start-column="8" selection-end-line="677" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -56,6 +66,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/http_bridge.py" />
+        <option value="$PROJECT_DIR$/skikit-learn/plot_kmeans_digits.py" />
       </list>
     </option>
   </component>
@@ -451,10 +462,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/pymodules/python2.7/sklearn/cluster/k_means_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9510" max-vertical-offset="17850">
+          <caret line="677" column="8" selection-start-line="677" selection-start-column="8" selection-end-line="677" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/skikit-learn/plot_kmeans_digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43589744" vertical-offset="720" max-vertical-offset="1875">
-          <caret line="73" column="54" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5641026" vertical-offset="720" max-vertical-offset="1875">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
