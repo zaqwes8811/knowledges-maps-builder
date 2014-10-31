@@ -22,7 +22,7 @@ public class WordKind {
 	 
   @Override
   public String toString() {
-    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ pointPos.toString()+")";
+    return "("+word+", fr: "+ rawFrequency.toString()+", pos: "+ importance.toString()+")";
   }
 
   @Id
@@ -49,7 +49,7 @@ public class WordKind {
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
   @Index
-  private Integer pointPos;
+  private Integer importance;
   
   public String getWord() {
   	return word;
@@ -66,7 +66,7 @@ public class WordKind {
   }
 
   public void setPointPos(Integer value) {
-    pointPos = value;
+    importance = value;
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
@@ -99,7 +99,7 @@ public class WordKind {
   // hashCode() - need it?
   public WordKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
     this.word = word;
-    pointPos = -1;
+    importance = -1;
 
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
@@ -108,7 +108,7 @@ public class WordKind {
     sentences.addAll(sentencess);
   }
 
-  private static class WordFreqComparator implements Comparator<WordKind> {
+  private static class ImportanceComparator implements Comparator<WordKind> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
@@ -119,6 +119,6 @@ public class WordKind {
   }
 
   public static Comparator<WordKind> createFrequencyComparator() {
-    return new WordFreqComparator();
+    return new ImportanceComparator();
   }
 }

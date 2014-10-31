@@ -42,7 +42,7 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<WordKind> sort(ArrayList<WordKind> kinds) {
+  private ArrayList<WordKind> sortByImportance(ArrayList<WordKind> kinds) {
   	Collections.sort(kinds, WordKind.createFrequencyComparator());
     Collections.reverse(kinds);
     return kinds;
@@ -90,7 +90,7 @@ public class TextPipeline {
     ArrayList<WordKind> wordKinds = unpackHisto(histo);
 
     // Sort words by frequency
-    wordKinds = sort(wordKinds);
+    wordKinds = sortByImportance(wordKinds);
 
     wordKinds = assignIndexes(wordKinds);
 
