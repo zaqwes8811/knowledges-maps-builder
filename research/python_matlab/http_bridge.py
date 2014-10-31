@@ -8,6 +8,7 @@
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
+import sklearn.cluster
 
 # sys
 import json
@@ -150,11 +151,20 @@ def main():
     for i, elem in enumerate(distribution):
         freq = elem.frequency
         for j in range(freq):
-            X.append(i + 1 + random.gauss(1, 1))
-            Y.append(random.gauss(1, 1))
+            X.append(i + 1)# + random.gauss(1, 1))
+            Y.append(random.gauss(0, 0.1))
 
     plt.plot(X, Y, 'o')
-    plt.show()
+    plt.grid(True)
+    #plt.show()
+
+    # http://www.slideshare.net/SarahGuido/kmeans-clustering-with-scikitlearn
+    kmeans = sklearn.cluster.KMeans()
+    kmeans.fit(X)
+
+    # Lloyd
+
+    # Nearest Neighbors
 
 
 
