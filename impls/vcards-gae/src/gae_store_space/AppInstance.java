@@ -101,8 +101,6 @@ public class AppInstance {
 				if (j > GAESpecific.COUNT_TRIES)
 					throw new IllegalStateException();
 				
-				CrossIO.print(j);
-				
 				Optional<PageKind> page_readed = getPage(name); 
 		  	if (!page_readed.isPresent()) {
 		  		j++;
