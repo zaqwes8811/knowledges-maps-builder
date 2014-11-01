@@ -76,6 +76,10 @@ public class TextPipeline {
     return words;
   }
   
+  private ArrayList<NGramKind> calcImportancies(ArrayList<NGramKind> kinds) {
+  	return kinds;
+  }
+  
   // Now no store operations
   public PageKind pass(String name, String text) {
   	String pureText = removeFormatting(text);
@@ -89,7 +93,7 @@ public class TextPipeline {
 
     ArrayList<NGramKind> wordKinds = unpackHisto(histo);
     
-    // FIXME: calc importancies!!
+    wordKinds = calcImportancies(wordKinds);
 
     // Sort words by frequency
     wordKinds = sortByImportance(wordKinds);

@@ -1,9 +1,10 @@
 # coding: utf-8
-
 import requests
 
 # sys
 import json
+
+# FIXME: запрос длины предложений - статистика длин
 
 
 class PathValue(object):
