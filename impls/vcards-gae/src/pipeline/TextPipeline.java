@@ -88,6 +88,8 @@ public class TextPipeline {
     Multimap<String, SentenceKind> histo = buildHisto(items);
 
     ArrayList<NGramKind> wordKinds = unpackHisto(histo);
+    
+    // FIXME: calc importancies!!
 
     // Sort words by frequency
     wordKinds = sortByImportance(wordKinds);
