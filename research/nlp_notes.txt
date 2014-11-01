@@ -16,3 +16,10 @@ perplexity - average branch factor
 uni -> bi - perplexity fall very high
 
 "n-grams only work well for word pred. if the test corpus looks like train corpus"
+
+Есть какая-то интерполяция
+
+pruning - обрезка
+- слов вносить малый вес в вероятность
+
+Nc = frequenc of freq c
