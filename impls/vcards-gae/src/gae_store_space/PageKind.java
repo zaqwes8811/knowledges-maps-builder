@@ -140,7 +140,7 @@ public class PageKind {
   	if (gen.size() > 1)
   		throw new IllegalStateException(name);
   	
-  	gen.get(0).reset();
+  	gen.get(0).restore();
   	
   	return Optional.fromNullable(gen.get(0));
   }

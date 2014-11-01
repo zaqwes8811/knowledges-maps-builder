@@ -116,9 +116,6 @@ public class GeneratorKind
   
   public void persist() {
   	ofy().save().entity(this).now();
-  	//GeneratorKind g = ofy().load().type(GeneratorKind.class).id(id).now();
-  	//Optional<GeneratorKind> g_readed = Optional.fromNullable(g);
-  	//g_readed.get();
   }
 
   
@@ -129,7 +126,7 @@ public class GeneratorKind
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
-  public void reset() {
+  public void restore() {
   	if (distribution == null)
   		throw new IllegalStateException();
   		
