@@ -7,3 +7,12 @@ http://en.wikipedia.org/wiki/N-gram
 "because language has long-distance dependencies"
 
 FIXME: Categorical distribution
+
+вероятности хранят в логарифмах - но как сделать генератор?
+есть корпуса и модели тренируются
+
+perplexity - average branch factor
+
+uni -> bi - perplexity fall very high
+
+"n-grams only work well for word pred. if the test corpus looks like train corpus"

@@ -29,13 +29,20 @@ public class NGramKind {
   Long id;
 
   // TODO: может хранится стем или пара-тройка слов.
-  //@Index  // пока не нему не ищем
   private String nGram;
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   // Сколько раз встретилось слово.
   @Index private Integer rawFrequency;  // это и есть важность, но пока это частота  
-
+  
+  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
+  // Нужно для генератора распределения
+  // 0-N в порядке возрастания по rawFrequency
+  // По нему будет делаться выборка
+  @Index
+  private Integer importancePosition;
+  @Ignore Integer importance;  // важно
+  
   // TODO: Как откешировать? Какой допустимый период между запросами?
   // https://developers.google.com/appengine/pricing
   // Вроде бы нет ограничения между запросами.
@@ -44,12 +51,7 @@ public class NGramKind {
   // May be make final
   @Ignore private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
-  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
-  // Нужно для генератора распределения
-  // 0-N в порядке возрастания по rawFrequency
-  // По нему будет делаться выборка
-  @Index
-  private Integer importancePosition;
+  
   
   public String getWord() {
   	return nGram;
