@@ -1,8 +1,9 @@
-http://en.wikipedia.org/wiki/N-gram 
-критикуют и похоже используются так - кажется
-
 Есть разные модели, например пробалистическая
 
 Марковская модель и марковские цепи
 
-Categorical distribution
+http://en.wikipedia.org/wiki/N-gram 
+критикуют и похоже используются так - кажется
+"because language has long-distance dependencies"
+
+FIXME: Categorical distribution
