@@ -91,15 +91,15 @@ public class TextPipeline {
     // Assemble statistic
     Multimap<String, SentenceKind> histo = buildHisto(items);
 
-    ArrayList<NGramKind> wordKinds = unpackHisto(histo);
+    ArrayList<NGramKind> ngramKinds = unpackHisto(histo);
     
-    wordKinds = calcImportancies(wordKinds);
+    ngramKinds = calcImportancies(ngramKinds);
 
     // Sort words by frequency
-    wordKinds = sortByImportance(wordKinds);
+    ngramKinds = sortByImportance(ngramKinds);
 
-    wordKinds = assignIndexes(wordKinds);
+    ngramKinds = assignIndexes(ngramKinds);
 
-    return new PageKind(name, items, wordKinds, text);
+    return new PageKind(name, items, ngramKinds, text);
   }
 }
