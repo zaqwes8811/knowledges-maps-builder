@@ -67,7 +67,7 @@ public class TextPipeline {
   	ArrayList<SentenceKind> items = packSentences(sentences);
   	
     // Assemble statistic
-    Multimap<String, SentenceKind> histo = statisticCollector.buildHisto(items);
+    Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(items);
 
     ArrayList<NGramKind> ngramKinds = unpackHisto(histo);
     
