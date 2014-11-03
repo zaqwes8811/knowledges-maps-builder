@@ -118,15 +118,13 @@ def main():
     port = 8080
     research_ajax = http_bridge.ResearchAjax(server, port)
     #research_ajax.create_or_replace_page()
-
-    research_ajax = http_bridge.ResearchAjax(server, port)
     arg0 = http_bridge.PathValue(research_ajax.get_research_page_name())
 
     # Read
     d = research_ajax.get_pure_distribution(arg0)
     #plt.plot(d)
     ls = research_ajax.get_lengths_sentences(arg0)
-    print ls
+    ls.sort()
     plt.plot(ls)
 
     # K-means
