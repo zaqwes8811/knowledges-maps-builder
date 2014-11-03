@@ -50,8 +50,11 @@ public class PageKind {
 
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  @Ignore private ArrayList<NGramKind> unigramKinds = new ArrayList<NGramKind>();
-  @Ignore private List<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
+  @Ignore 
+  private ArrayList<NGramKind> unigramKinds = new ArrayList<NGramKind>();
+  
+  @Ignore 
+  private List<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
@@ -180,32 +183,32 @@ public class PageKind {
     Collections.reverse(unigramKinds);
 
     // Form result
-    ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
+    ArrayList<DistributionElement> r = new ArrayList<DistributionElement>();
     for (NGramKind word : unigramKinds)
-      distribution.add(new DistributionElement(word.getImportance()));
+      r.add(new DistributionElement(word.getImportance()));
 
-    return distribution;
+    return r;
   }
    
   public Optional<WordDataValue> getWordData(String genName) {
   	GeneratorKind go = getGenerator(genName).get();
     
 		Integer pointPosition = go.getPosition();
-		NGramKind wordKind =  getWordKind(pointPosition);
-		String word = wordKind.getNGram();
-		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
+		NGramKind ngramKind =  getNGram(pointPosition);
+		String value = ngramKind.getValue();
+		ImmutableList<SentenceKind> sentenceKinds = ngramKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
-		for (SentenceKind e: contentKinds)
-		  content.add(e.getSentence());
+		for (SentenceKind k: sentenceKinds)
+		  content.add(k.getSentence());
 		
-		return Optional.of(new WordDataValue(word, content, pointPosition));
+		return Optional.of(new WordDataValue(value, content, pointPosition));
   }
   
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
-  private NGramKind getWordKind(Integer pos) {
+  private NGramKind getNGram(Integer pos) {
   	if (! (pos < this.unigramKinds.size()))
   		throw new IllegalArgumentException();
   	
