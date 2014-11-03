@@ -20,6 +20,9 @@ public class NGramKind {
 	private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	
+	// FIXME: inject it?
+	private ImportanceProcessor estimator = new ImportanceProcessor();
+	
   @Id
   Long id;
 
@@ -44,8 +47,7 @@ public class NGramKind {
   }
   
   public void calcImportance() {
-  	importance = 
-  			new ImportanceProcessor().process(rawFrequency, sentences);
+  	importance = estimator.process(rawFrequency, sentences);
   }
 
   public static NGramKind create(String ngramValue, Collection<SentenceKind> sentences, int rawFrequency)	{
@@ -73,8 +75,8 @@ public class NGramKind {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  public NGramKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
-    this.nGram = word;
+  public NGramKind(String nGram, Collection<SentenceKind> sentencess, int rawFrequency) {
+    this.nGram = nGram;
     
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
