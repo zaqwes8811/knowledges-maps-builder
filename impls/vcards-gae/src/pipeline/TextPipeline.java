@@ -13,6 +13,7 @@ import pipeline.mapreduce.CountReducerImpl;
 import pipeline.mapreduce.CounterMapper;
 import pipeline.mapreduce.CounterMapperImpl;
 import pipeline.nlp.PlainTextTokenizer;
+import pipeline.statistics_collectors.StatisticCollector;
 import pipeline.text_extractors.Convertor;
 import pipeline.text_extractors.SubtitlesToPlainText;
 
@@ -21,18 +22,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
 
-class HistoBuilder {
-	public Multimap<String, SentenceKind> build(ArrayList<SentenceKind> items) {
-  	Multimap<String, SentenceKind> histo = HashMultimap.create();
-    
-    CountReducer reducer = new CountReducerImpl(histo);
-    CounterMapper mapper = new CounterMapperImpl(reducer);
 
-    mapper.map(items);
-    
-    return histo;
-  }
-}
 
 public class TextPipeline {
 	public static final String defaultPageName = "Korra";
@@ -41,7 +31,7 @@ public class TextPipeline {
 	
 	private Convertor convertor = new SubtitlesToPlainText();
 	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
-	private HistoBuilder histoBuiler = new HistoBuilder();
+	private StatisticCollector statisticCollector = new StatisticCollector();
 	
   private String removeFormatting(String rawText) {
   	return convertor.convert(rawText);  	
@@ -85,7 +75,7 @@ public class TextPipeline {
   	ArrayList<SentenceKind> items = packSentences(sentences);
   	
     // Assemble statistic
-    Multimap<String, SentenceKind> histo = histoBuiler.build(items);
+    Multimap<String, SentenceKind> histo = statisticCollector.buildHisto(items);
 
     ArrayList<NGramKind> ngramKinds = unpackHisto(histo);
     
