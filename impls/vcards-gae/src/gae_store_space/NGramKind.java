@@ -9,6 +9,7 @@ import java.util.Random;
 import java.util.Set;
 
 import pipeline.estimators.ImportanceProcessor;
+import pipeline.estimators.SimpleImportanceProcessor;
 
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
@@ -21,7 +22,7 @@ public class NGramKind {
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	
 	// FIXME: inject it?
-	private ImportanceProcessor estimator = new ImportanceProcessor();
+	private ImportanceProcessor estimator = new SimpleImportanceProcessor();
 	
   @Id
   Long id;
