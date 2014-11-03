@@ -11,8 +11,6 @@ import java.util.Set;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Ignore;
-import com.googlecode.objectify.annotation.Index;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
@@ -34,14 +32,14 @@ public class NGramKind {
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   // Сколько раз встретилось слово.
-  private Integer rawFrequency;  // это и есть важность, но пока это частота  
+  private Integer rawFrequency = 0;  // это и есть важность, но пока это частота  
   
   private Integer importance = 0;
   
   // May be make final
   private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
-  public String getNGram() {
+  public String getValue() {
   	return nGram;
   }
 
@@ -54,10 +52,8 @@ public class NGramKind {
   			new ImportanceProcessor().process(rawFrequency, sentences);
   }
 
-  public static NGramKind create(
-  		String wordValue, Collection<SentenceKind> sentences, int rawFrequency) 
-  	{
-    return new NGramKind(wordValue, sentences, rawFrequency);
+  public static NGramKind create(String ngramValue, Collection<SentenceKind> sentences, int rawFrequency)	{
+    return new NGramKind(ngramValue, sentences, rawFrequency);
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
