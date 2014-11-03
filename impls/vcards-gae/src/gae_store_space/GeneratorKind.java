@@ -57,7 +57,7 @@ public class GeneratorKind
   // Индексируется as embedded- это состояние генератора
   // FIXME: какая лажа с порядком загрузки
   @Serialize ArrayList<DistributionElement> distribution;  // порядок важен
-  @Serialize ArrayList<Integer> equalizeMask;  // same size as distr.
+  //@Serialize ArrayList<Integer> equalizeMask;  // same size as distr.
   
   // Можно и не индексировать - пока алгоритм одни
   // придется хранить отдельно
