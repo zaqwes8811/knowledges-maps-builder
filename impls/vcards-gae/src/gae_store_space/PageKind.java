@@ -191,7 +191,7 @@ public class PageKind {
   }
    
   public Optional<WordDataValue> getWordData(String genName) {
-  	GeneratorKind go = getGenerator(genName).get();
+  	GeneratorKind go = getGenerator(genName).get();  // FIXME: нужно нормально обработать
     
 		Integer pointPosition = go.getPosition();
 		NGramKind ngramKind =  getNGram(pointPosition);
