@@ -69,13 +69,6 @@ public class TextPipeline {
     return kinds;
   }
   
-  private ArrayList<NGramKind> assignIndexes(ArrayList<NGramKind> words) {
-    for (int i = 0; i < words.size(); i++) 
-    	words.get(i).setPointPos(i);
-    
-    return words;
-  }
-  
   private ArrayList<NGramKind> calcImportancies(ArrayList<NGramKind> kinds) {
   	for (NGramKind k: kinds)
   		k.calcImportance();
@@ -100,8 +93,6 @@ public class TextPipeline {
 
     // Sort words by frequency
     ngramKinds = sortByImportance(ngramKinds);
-
-    ngramKinds = assignIndexes(ngramKinds);
 
     return new PageKind(name, items, ngramKinds, text);
   }

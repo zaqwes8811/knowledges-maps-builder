@@ -19,6 +19,12 @@ import com.googlecode.objectify.annotation.Index;
 public class NGramKind {
 	private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
+	
+	private static class ImportanceProcessor {
+		public Integer process(Integer freq, Set<SentenceKind> s) {
+			return freq;
+		}
+	};
 
   @Id
   Long id;
@@ -30,17 +36,10 @@ public class NGramKind {
   // Сколько раз встретилось слово.
   private Integer rawFrequency;  // это и есть важность, но пока это частота  
   
-  // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
-  // Нужно для генератора распределения
-  // 0-N в порядке возрастания по rawFrequency
-  // По нему будет делаться выборка
-  private Integer importancePosition;
-  
-  Integer importance = 0;  // важно
+  private Integer importance = 0;
   
   // May be make final
   private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
-
 
   public String getNGram() {
   	return nGram;
@@ -51,17 +50,14 @@ public class NGramKind {
   }
   
   public void calcImportance() {
-  	importance = rawFrequency;
+  	importance = 
+  			new ImportanceProcessor().process(rawFrequency, sentences);
   }
 
   public static NGramKind create(
   		String wordValue, Collection<SentenceKind> sentences, int rawFrequency) 
   	{
     return new NGramKind(wordValue, sentences, rawFrequency);
-  }
-
-  public void setPointPos(Integer value) {
-    importancePosition = value;
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
@@ -94,8 +90,7 @@ public class NGramKind {
   // hashCode() - need it?
   public NGramKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
     this.nGram = word;
-    importancePosition = -1;
-
+    
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
 
