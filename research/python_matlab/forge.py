@@ -124,9 +124,13 @@ def main():
 
     # Read
     d = research_ajax.get_pure_distribution(arg0)
+    #plt.plot(d)
+    ls = research_ajax.get_lengths_sentences(arg0)
+    print ls
+    plt.plot(ls)
 
     # K-means
-    cluster_kmeans(d)
+    #cluster_kmeans(d)
 
     # Nearest Neighbors version
 
