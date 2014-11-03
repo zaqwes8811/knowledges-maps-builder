@@ -73,13 +73,6 @@ public class NGramKind {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  // TODO: Хорошо бы сохранять их, а не просто слова. Почитать Effective java.
-  // Идея на этапе mapreduce передавать в качестве ключей объекты слов, и пользоваться
-  // ими как ключами. Но слова имеют ссылки, то сразу большие проблемы с эквивалетностью!
-  // На этапе формирования индекса может все не так просто, но потом метод equals будет работать очень странно.
-  // TODO: Stop it!
-  // equals()
-  // hashCode() - need it?
   public NGramKind(String word, Collection<SentenceKind> sentencess, int rawFrequency) {
     this.nGram = word;
     
