@@ -21,15 +21,27 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
 
+class HistoBuilder {
+	public Multimap<String, SentenceKind> build(ArrayList<SentenceKind> items) {
+  	Multimap<String, SentenceKind> histo = HashMultimap.create();
+    
+    CountReducer reducer = new CountReducerImpl(histo);
+    CounterMapper mapper = new CounterMapperImpl(reducer);
+
+    mapper.map(items);
+    
+    return histo;
+  }
+}
+
 public class TextPipeline {
 	public static final String defaultPageName = "Korra";
 	public static final String defaultGenName = "Default";
 	public static final String defaultUserId = "User";
 	
 	private Convertor convertor = new SubtitlesToPlainText();
-	//private CountReducer reducer = new CountReducer(wordHistogramSink);
-  //private CounterMapper mapper = new CounterMapper(reducer);
 	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
+	private HistoBuilder histoBuiler = new HistoBuilder();
 	
   private String removeFormatting(String rawText) {
   	return convertor.convert(rawText);  	
@@ -47,18 +59,7 @@ public class TextPipeline {
     Collections.reverse(kinds);
     return kinds;
   }
-  
-  private Multimap<String, SentenceKind> buildHisto(ArrayList<SentenceKind> items) {
-  	Multimap<String, SentenceKind> histo = HashMultimap.create();
-    
-    CountReducer reducer = new CountReducerImpl(histo);
-    CounterMapper mapper = new CounterMapperImpl(reducer);
 
-    mapper.map(items);
-    
-    return histo;
-  }
-  
   private ArrayList<NGramKind> unpackHisto(Multimap<String, SentenceKind> histo) {
   	ArrayList<NGramKind> kinds = new ArrayList<NGramKind>();
     for (String word: histo.keySet()) {
@@ -72,7 +73,6 @@ public class TextPipeline {
   private ArrayList<NGramKind> calcImportancies(ArrayList<NGramKind> kinds) {
   	for (NGramKind k: kinds)
   		k.calcImportance();
-  	
   	return kinds;
   }
   
@@ -85,7 +85,7 @@ public class TextPipeline {
   	ArrayList<SentenceKind> items = packSentences(sentences);
   	
     // Assemble statistic
-    Multimap<String, SentenceKind> histo = buildHisto(items);
+    Multimap<String, SentenceKind> histo = histoBuiler.build(items);
 
     ArrayList<NGramKind> ngramKinds = unpackHisto(histo);
     
