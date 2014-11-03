@@ -59,17 +59,17 @@ public class TextPipeline {
   }
   
   // Now no store operations
-  public PageKind pass(String name, String text) {
-  	String pureText = removeFormatting(text);
+  public PageKind pass(String pageName, String rawText) {
+  	String pureText = removeFormatting(rawText);
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
   	// Не очень логично, но важно соединить слова с контекстом, так что на обработку
   	//  передаем не чисто предложения, а недообработанные
-  	ArrayList<SentenceKind> items = packSentences(sentences);
+  	ArrayList<SentenceKind> sentencesKinds = packSentences(sentences);
   	
     // Assemble statistic
-    Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(items);
+    Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(sentencesKinds);
 
     ArrayList<NGramKind> nGramKinds = unpackHisto(histo);
     
@@ -78,6 +78,6 @@ public class TextPipeline {
     // Sort words by frequency
     nGramKinds = sortByImportance(nGramKinds);
 
-    return new PageKind(name, items, nGramKinds, text);
+    return new PageKind(pageName, sentencesKinds, nGramKinds, rawText);
   }
 }
