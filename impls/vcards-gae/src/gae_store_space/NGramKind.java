@@ -8,6 +8,8 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import pipeline.estimators.ImportanceProcessor;
+
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -18,12 +20,6 @@ public class NGramKind {
 	private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	
-	private static class ImportanceProcessor {
-		public Integer process(Integer freq, Set<SentenceKind> s) {
-			return freq;
-		}
-	};
-
   @Id
   Long id;
 
