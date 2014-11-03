@@ -19,11 +19,6 @@ import com.googlecode.objectify.annotation.Index;
 public class NGramKind {
 	private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
-	 
-  @Override
-  public String toString() {
-    return "("+nGram+", fr: "+ rawFrequency.toString()+", pos: "+ importancePosition.toString()+")";
-  }
 
   @Id
   Long id;
@@ -33,39 +28,36 @@ public class NGramKind {
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   // Сколько раз встретилось слово.
-  //@Index  // non store 
   private Integer rawFrequency;  // это и есть важность, но пока это частота  
   
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
-  //@Index
   private Integer importancePosition;
-  // @Ignore 
-  Integer importance;  // важно
   
-  // TODO: Как откешировать? Какой допустимый период между запросами?
-  // https://developers.google.com/appengine/pricing
-  // Вроде бы нет ограничения между запросами.
-  //@Load private Set<Key<SentenceKind>> sentences = new HashSet<Key<SentenceKind>>();
-  //
+  Integer importance = 0;  // важно
+  
   // May be make final
-  @Ignore private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
+  private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
 
-  public String getWord() {
+  public String getNGram() {
   	return nGram;
   }
 
   public Integer getImportance() {
-    return rawFrequency;
+    return importance;
+  }
+  
+  public void calcImportance() {
+  	importance = rawFrequency;
   }
 
   public static NGramKind create(
-  		String wordValue, Collection<SentenceKind> sentencess, int rawFrequency) 
+  		String wordValue, Collection<SentenceKind> sentences, int rawFrequency) 
   	{
-    return new NGramKind(wordValue, sentencess, rawFrequency);
+    return new NGramKind(wordValue, sentences, rawFrequency);
   }
 
   public void setPointPos(Integer value) {
