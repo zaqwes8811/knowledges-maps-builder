@@ -77,6 +77,9 @@ public class TextPipeline {
   }
   
   private ArrayList<NGramKind> calcImportancies(ArrayList<NGramKind> kinds) {
+  	for (NGramKind k: kinds)
+  		k.calcImportance();
+  	
   	return kinds;
   }
   

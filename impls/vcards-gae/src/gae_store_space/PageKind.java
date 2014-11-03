@@ -192,7 +192,7 @@ public class PageKind {
     
 		Integer pointPosition = go.getPosition();
 		NGramKind wordKind =  getWordKind(pointPosition);
-		String word = wordKind.getWord();
+		String word = wordKind.getNGram();
 		ImmutableList<SentenceKind> contentKinds = wordKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
