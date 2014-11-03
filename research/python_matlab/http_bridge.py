@@ -4,7 +4,7 @@ import requests
 # sys
 import json
 
-# FIXME: запрос длины предложений - статистика длин
+
 
 
 class PathValue(object):
@@ -61,13 +61,22 @@ class ResearchAjax(object):
     def __init__(self, url, port):
         self.server = url + ":" + str(port)
 
+    def get_lengths_sentences(self, arg0):
+        # FIXME: запрос длины предложений - статистика длин
+        url = '/get_lengths_sentences'
+        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
+        r = requests.get(self._build_url(url), params=payload)
+        r.raise_for_status()
+
+        return r.json()
+
     def _build_url(self, uri):
         return self.server + uri
 
     def get_distribution_sync(self, arg0):
-        uri = '/research/get_distribution'
+        url = '/research/get_distribution'
         payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
-        r = requests.get(self._build_url(uri), params=payload)
+        r = requests.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
         tmp = r.json()
