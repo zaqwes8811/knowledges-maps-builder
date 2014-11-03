@@ -69,6 +69,13 @@ public class PageKind {
   	ofy().delete().keys(generators).now();
   }
   
+  public ArrayList<Integer> getLengthsSentences() {
+  	ArrayList<Integer> r = new ArrayList<Integer>();
+  	for (SentenceKind k : this.sentencesKinds)
+  		r.add(k.getCountWords());
+  	return r;
+  }
+  
   // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> restore(String pageName) {
   	List<PageKind> pages = 

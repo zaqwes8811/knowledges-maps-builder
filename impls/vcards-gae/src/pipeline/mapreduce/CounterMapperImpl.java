@@ -31,10 +31,15 @@ public class CounterMapperImpl implements CounterMapper {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (SentenceKind item : contentItemKinds) {
       List<String> words = tokenizer.getWords(item.getSentence());
-      for (String word: words)
+      for (String word: words) {
       	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
       	// .toLowerCase()
+      	// FIXME: возможно фильтрация - но думаю в другом классе
         emit(word, item);
+      }
+      
+      // Устанавливаем длину предложения
+      item.setCountWords(words.size());
     }
   }
 }
