@@ -64,6 +64,8 @@ public class TextPipeline {
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
+  	// Не очень логично, но важно соединить слова с контекстом, так что на обработку
+  	//  передаем не чисто предложения, а недообработанные
   	ArrayList<SentenceKind> items = packSentences(sentences);
   	
     // Assemble statistic
