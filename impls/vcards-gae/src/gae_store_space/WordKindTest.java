@@ -11,6 +11,6 @@ public class WordKindTest {
     NGramKind o1 = NGramKind.create("hello", null, 1);
     NGramKind o2 = NGramKind.create("dfasdf", null, 1);
 
-    assert 0 == NGramKind.createFrequencyComparator().compare(o1, o2);
+    assert 0 == NGramKind.createImportanceComparator().compare(o1, o2);
   }
 }
