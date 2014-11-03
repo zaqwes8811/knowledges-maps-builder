@@ -12,7 +12,8 @@ import pipeline.mapreduce.CounterMapperImpl;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-// не очень хорошо - трудно будет параметризовать
+// Не очень хорошо - трудно будет параметризовать
+// Это не обязательно будет через MapReduce
 public class StatisticCollector {
 	public Multimap<String, SentenceKind> buildHisto(ArrayList<SentenceKind> items) {
   	Multimap<String, SentenceKind> histo = HashMultimap.create();
