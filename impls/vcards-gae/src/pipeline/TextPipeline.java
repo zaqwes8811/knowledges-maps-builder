@@ -43,7 +43,7 @@ public class TextPipeline {
   }
   
   private ArrayList<NGramKind> sortByImportance(ArrayList<NGramKind> kinds) {
-  	Collections.sort(kinds, NGramKind.createFrequencyComparator());
+  	Collections.sort(kinds, NGramKind.createImportanceComparator());
     Collections.reverse(kinds);
     return kinds;
   }

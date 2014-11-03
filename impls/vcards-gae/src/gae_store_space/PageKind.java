@@ -176,13 +176,13 @@ public class PageKind {
   // About: Возвращать частоты, сортированные по убыванию.
   public ArrayList<DistributionElement> getRawDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(unigramKinds, NGramKind.createFrequencyComparator());
+    Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
 
     // Form result
     ArrayList<DistributionElement> distribution = new ArrayList<DistributionElement>();
     for (NGramKind word : unigramKinds)
-      distribution.add(new DistributionElement(word.getRawFrequency()));
+      distribution.add(new DistributionElement(word.getImportance()));
 
     return distribution;
   }

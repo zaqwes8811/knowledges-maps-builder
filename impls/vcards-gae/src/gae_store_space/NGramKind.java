@@ -33,15 +33,17 @@ public class NGramKind {
 
   // TODO: возможно лучше хранить логарифм от нормированной частоты
   // Сколько раз встретилось слово.
-  @Index private Integer rawFrequency;  // это и есть важность, но пока это частота  
+  //@Index  // non store 
+  private Integer rawFrequency;  // это и есть важность, но пока это частота  
   
   // Можно и не сортировать, можно при выборке получать отсорт., но это доп. время.
   // Нужно для генератора распределения
   // 0-N в порядке возрастания по rawFrequency
   // По нему будет делаться выборка
-  @Index
+  //@Index
   private Integer importancePosition;
-  @Ignore Integer importance;  // важно
+  // @Ignore 
+  Integer importance;  // важно
   
   // TODO: Как откешировать? Какой допустимый период между запросами?
   // https://developers.google.com/appengine/pricing
@@ -51,13 +53,12 @@ public class NGramKind {
   // May be make final
   @Ignore private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
-  
-  
+
   public String getWord() {
   	return nGram;
   }
 
-  public Integer getRawFrequency() {
+  public Integer getImportance() {
     return rawFrequency;
   }
 
@@ -116,11 +117,11 @@ public class NGramKind {
     // In "Effective Java"
     @Override
     public int compare(NGramKind o1, NGramKind o2) {
-      return o1.getRawFrequency().compareTo(o2.getRawFrequency());
+      return o1.getImportance().compareTo(o2.getImportance());
     }
   }
 
-  public static Comparator<NGramKind> createFrequencyComparator() {
+  public static Comparator<NGramKind> createImportanceComparator() {
     return new ImportanceComparator();
   }
 }
