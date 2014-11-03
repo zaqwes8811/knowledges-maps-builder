@@ -78,13 +78,14 @@ public class PageKind {
   
   // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> restore(String pageName) {
-  	List<PageKind> pages = 
-    		ofy().load().type(PageKind.class).filter("name = ", pageName).list();
+  	// FIXME: можно прочитать только ключи, а потом делать выборки
+  	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
     
   	int i = 0;
 		while (true) {
 			if (i > GAESpecific.COUNT_TRIES)
 				throw new IllegalStateException();
+			
 			pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
 			
 			if (pages.size() > 1 || pages.size() == 0) {
