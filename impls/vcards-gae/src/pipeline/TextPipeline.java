@@ -1,28 +1,20 @@
 package pipeline;
 
+import gae_store_space.NGramKind;
 import gae_store_space.PageKind;
 import gae_store_space.SentenceKind;
-import gae_store_space.NGramKind;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-import pipeline.mapreduce.CountReducer;
-import pipeline.mapreduce.CountReducerImpl;
-import pipeline.mapreduce.CounterMapper;
-import pipeline.mapreduce.CounterMapperImpl;
 import pipeline.nlp.PlainTextTokenizer;
 import pipeline.statistics_collectors.StatisticCollector;
 import pipeline.text_extractors.Convertor;
 import pipeline.text_extractors.SubtitlesToPlainText;
 
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
-
-
-
 
 public class TextPipeline {
 	public static final String defaultPageName = "Korra";
