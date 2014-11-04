@@ -122,6 +122,8 @@ public class GeneratorKind
   public void syncCreateInStore() {
   	ofy().save().entity(this).now();
   	
+  	// FIXME: Почему иногда все равно по запросу генератора еще нет?
+  	
 		// убеждаемся что генератор тоже сохранен
 		// это нельзя сделать в этом методе! Мы не проверим если не создаем
 		int i = 0;
