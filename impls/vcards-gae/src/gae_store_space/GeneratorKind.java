@@ -117,6 +117,33 @@ public class GeneratorKind
   public void persist() {
   	ofy().save().entity(this).now();
   }
+	
+  // 
+  public void syncCreateInStore() {
+  	ofy().save().entity(this).now();
+  	
+		// убеждаемся что генератор тоже сохранен
+		// это нельзя сделать в этом методе! Мы не проверим если не создаем
+		int i = 0;
+		while (true) {
+			if (i > GAESpecific.COUNT_TRIES)
+				throw new IllegalStateException();
+			
+			Optional<GeneratorKind> g = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(id).now());
+			if (!g.isPresent()) {
+				i++;
+				try {
+	        Thread.sleep(GAESpecific.TIME_STEP_MS);
+        } catch (InterruptedException e1) {
+	        throw new RuntimeException(e1);
+        }
+	  		continue;
+	  	}
+			break;
+		}
+  }
+  
+
 
   
   private GeneratorKind() { }
