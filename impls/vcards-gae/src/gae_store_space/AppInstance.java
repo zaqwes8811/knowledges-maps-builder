@@ -59,7 +59,7 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		pagesCache.invalidate(name);
-		createPageIfNotExist_sync(name, text);
+		syncCreatePageIfNotExist(name, text);
 		pagesCache.invalidate(name);
 	}
 	
@@ -79,19 +79,17 @@ public class AppInstance {
 
 	// FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public PageKind createPageIfNotExist_sync(String name, String text) {
+	public PageKind syncCreatePageIfNotExist(String name, String text) {
 		// FIXME: add user info
 		List<PageKind> pages = 
 			ofy().load().type(PageKind.class).filter("name = ", name).list();
 		
 		if (pages.isEmpty()) {
 			TextPipeline processor = new TextPipeline();
-			
-	  	PageKind page = processor.pass(name, text);  // по сути нужно только для создание генератора
+	  	PageKind page = processor.pass(name, text);  
 	  	
-	  	GeneratorKind defaultGenerator = 
-	  			GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
-	  	defaultGenerator.syncCreateInStore();  	
+	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
+	  	defaultGenerator.syncCreateInStore(); 
 	  	
 	  	page.addGenerator(defaultGenerator);
 	  	page.syncCreateInStore();
@@ -118,7 +116,7 @@ public class AppInstance {
 	private void createDefaultPage() {
 		String name = TextPipeline.defaultPageName;
 		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-		createPageIfNotExist_sync(name, text);
+		syncCreatePageIfNotExist(name, text);
 	}
 	
 	public AppInstance() {
