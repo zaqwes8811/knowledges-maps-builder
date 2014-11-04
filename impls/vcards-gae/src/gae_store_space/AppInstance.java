@@ -82,7 +82,7 @@ public class AppInstance {
 			TextPipeline processor = new TextPipeline();
 	  	PageKind page = processor.pass(name, text);  
 	  	
-	  	GeneratorKind g = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
+	  	GeneratorKind g = GeneratorKind.create(page.getImportanceDistribution(), TextPipeline.defaultGenName);
 	  	g.syncCreateInStore(); 
 	  	
 	  	page.addGenerator(g);
