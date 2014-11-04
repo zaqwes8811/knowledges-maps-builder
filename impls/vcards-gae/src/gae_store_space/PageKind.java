@@ -25,6 +25,7 @@ import java.util.List;
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
+import servlets.protocols.PathValue;
 import servlets.protocols.WordDataValue;
 
 import com.google.common.base.Optional;
@@ -35,6 +36,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
+import com.googlecode.objectify.cmd.Query;
 
 
 @NotThreadSafe
@@ -71,7 +73,9 @@ public class PageKind {
     return new TextPipeline();
   }
   
-  public String getName() { return name; }
+  public String getName() { 
+  	return name; 
+  }
   
   public void deleteGenerators() {
   	ofy().delete().keys(generators).now();
@@ -88,17 +92,43 @@ public class PageKind {
   	return r;
   }
   
+  public void syncCreateInStore() {
+  	persist();
+  	
+  	int j = 0;
+		while (true) {
+			if (j > GAESpecific.COUNT_TRIES)
+				throw new IllegalStateException();
+			
+			Optional<PageKind> page_readed = Optional.of(ofy().load().type(PageKind.class).id(id).now()); 
+	  	if (!page_readed.isPresent()) {
+	  		j++;
+	  		try {
+	        Thread.sleep(GAESpecific.TIME_STEP_MS);
+        } catch (InterruptedException e1) {
+	        throw new RuntimeException(e1);
+        }
+	  		continue;
+	  	}
+			break;
+		}
+  }
+  
   // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> restore(String pageName) {
   	// FIXME: можно прочитать только ключи, а потом делать выборки
   	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
-    
+  	
+  	
   	int i = 0;
 		while (true) {
 			if (i > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
+				if (pages.size() != 0)
+					throw new IllegalStateException();
 			
-			pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
+			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
+			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", pageName);
+			pages = q.list();
 			
 			if (pages.size() > 1 || pages.size() == 0) {
 				try {
@@ -235,5 +265,19 @@ public class PageKind {
   		throw new IllegalArgumentException();
   	
 		return unigramKinds.get(pos);
+  }
+  
+  public void disablePoint(PathValue p) {
+  	GeneratorKind g = getGenerator(p.genName).get();
+		g.disablePoint(p.pointPos);
+		
+		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
+		
+		ofy().save().entity(g).now();
+  }
+  
+  public Optional<ImmutableList<DistributionElement>>  getDistribution(String genName) {
+  	GeneratorKind gen = getGenerator(genName).get();
+  	return Optional.of(gen.getDistribution());
   }
 }
