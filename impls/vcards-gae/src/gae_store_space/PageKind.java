@@ -202,9 +202,11 @@ public class PageKind {
   	if (gen.size() > 1)
   		throw new IllegalStateException(name);
   	
-  	gen.get(0).restore();
+  	GeneratorKind g = gen.get(0);
   	
-  	return Optional.fromNullable(gen.get(0));
+  	g.restore();
+  	
+  	return Optional.fromNullable(g);
   }
   
   public List<String> getGenNames() {
