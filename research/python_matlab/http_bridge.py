@@ -5,8 +5,6 @@ import requests
 import json
 
 
-
-
 class PathValue(object):
     def __init__(self, page, gen='Default', pos=0):
         self.pageName = page
@@ -36,6 +34,7 @@ class DistributionElem(object):
     def __init__(self, elem):
         self.frequency = elem['frequency']
         self.enabled = elem['enabled']
+        self.inBoundary = elem['inBoundary']
 
 
 class AppAjax(object):
