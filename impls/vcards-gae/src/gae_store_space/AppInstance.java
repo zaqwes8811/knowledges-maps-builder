@@ -49,9 +49,8 @@ public class AppInstance {
   	Optional<PageKind> page = getPage(path.pageName); 
   	if (!page.isPresent())
   		throw new IllegalStateException();
-  	
-  	GeneratorKind gen = page.get().getGenerator(path.genName).get();
-  	return gen.getDistribution();
+
+  	return page.get().getDistribution(path.genName).get();
   }
 	
 	// скорее исследовательский метод
@@ -92,48 +91,10 @@ public class AppInstance {
 	  	
 	  	GeneratorKind defaultGenerator = 
 	  			GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
-	  	defaultGenerator.persist();  	
+	  	defaultGenerator.syncCreateInStore();  	
 	  	
 	  	page.addGenerator(defaultGenerator);
-	  	page.persist();
-
-	  	int j = 0;
-			while (true) {
-				if (j > GAESpecific.COUNT_TRIES)
-					throw new IllegalStateException();
-				
-				Optional<PageKind> page_readed = getPage(name); 
-		  	if (!page_readed.isPresent()) {
-		  		j++;
-		  		try {
-		        Thread.sleep(GAESpecific.TIME_STEP_MS);
-	        } catch (InterruptedException e1) {
-		        throw new RuntimeException(e1);
-	        }
-		  		continue;
-		  	}
-				break;
-			}
-			
-			// убеждаемся что генератор тоже сохранен
-			int i = 0;
-			while (true) {
-				if (i > GAESpecific.COUNT_TRIES)
-					throw new IllegalStateException();
-				
-				Optional<GeneratorKind> g = page.getGenerator(TextPipeline.defaultGenName);
-				if (!g.isPresent()) {
-					i++;
-					try {
-		        Thread.sleep(GAESpecific.TIME_STEP_MS);
-	        } catch (InterruptedException e1) {
-		        throw new RuntimeException(e1);
-	        }
-		  		continue;
-		  	}
-				break;
-			}
-
+	  	page.syncCreateInStore();
 			return page;
 		} else {
 			throw new IllegalArgumentException();
@@ -146,9 +107,7 @@ public class AppInstance {
 		// пока создаем один раз и удаляем. классы могут менятся, лучше так, чтобы не было 
 		//   конфликтов.
 		//
-  	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
-  	//ofy().delete().keys(ofy().load().type(NGramKind.class).keys()).now();
+		OfyService.clearStore();
   	
   	// clear cache
   	pagesCache.cleanUp();
@@ -200,11 +159,6 @@ public class AppInstance {
 	public void disablePoint(PathValue p) {
 		// FIXME: как добавить окно?
 		PageKind page = getPage(p.pageName).get();
-		GeneratorKind g = page.getGenerator(p.genName).get();
-		g.disablePoint(p.pointPos);
-		
-		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
-		
-		ofy().save().entity(g).now();
+		page.disablePoint(p);		
 	} 
 }
