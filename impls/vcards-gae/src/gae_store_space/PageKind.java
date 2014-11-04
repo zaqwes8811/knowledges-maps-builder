@@ -119,49 +119,53 @@ public class PageKind {
 		}
   }
   
-  // FIXME: если появится пользователи, то одного имени будет мало
-  public static Optional<PageKind> restore(String pageName) {
+  private static Optional<PageKind> syncGetPage(String name) {
   	// FIXME: можно прочитать только ключи, а потом делать выборки
-  	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", pageName).list();
+   	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
+   	
+   	int i = 0;
+ 		while (true) {
+ 			if (i > GAESpecific.COUNT_TRIES)
+ 				if (pages.size() != 0)
+ 					throw new IllegalStateException();
+ 			
+ 			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
+ 			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", name);
+ 			pages = q.list();
+ 			
+ 			if (pages.size() > 1 || pages.size() == 0) {
+ 				try {
+ 					Thread.sleep(GAESpecific.TIME_STEP_MS);
+ 				} catch (InterruptedException e1) {
+ 					throw new RuntimeException(e1);
+ 				}
+ 				i++;
+ 				continue;
+ 		  }
+ 			break;
+ 		}
+ 		
+		 if (pages.size() == 0)
+		 	return Optional.absent();
+		 
+		 return Optional.of(pages.get(0));
+  }
+  
+  // FIXME: если появится пользователи, то одного имени будет мало
+  public static Optional<PageKind> syncRestore(String pageName) {
+  	Optional<PageKind> page = PageKind.syncGetPage(pageName);
   	
-  	
-  	int i = 0;
-		while (true) {
-			if (i > GAESpecific.COUNT_TRIES)
-				if (pages.size() != 0)
-					throw new IllegalStateException();
-			
-			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
-			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", pageName);
-			pages = q.list();
-			
-			if (pages.size() > 1 || pages.size() == 0) {
-				try {
-					Thread.sleep(GAESpecific.TIME_STEP_MS);
-				} catch (InterruptedException e1) {
-					throw new RuntimeException(e1);
-				}
-				i++;
-				continue;
-		  }
-			break;
-		}
-		
-    if (pages.size() == 0)
-    	return Optional.absent();
+  	if (page.isPresent()) {
+	    String rawSource = page.get().rawSource;
+	    
+	    // обрабатываем
+	    PageKind tmpPage = buildPipeline().pass(page.get().name, rawSource);
+	    
+	    // теперь нужно запустить процесс обработки,
+	    page.get().assign(tmpPage);
+    }
     
-    PageKind barePage = pages.get(0);
-    
-    String rawSource = barePage.rawSource;
-    
-    // обрабатываем
-    
-    PageKind page = buildPipeline().pass(barePage.name, rawSource);
-    
-    // теперь нужно запустить процесс обработки,
-    barePage.assign(page);
-    
-    return Optional.fromNullable(barePage);  // 1 item
+    return page;  // 1 item
   }
   
   private void assign(PageKind rhs) {
@@ -204,15 +208,14 @@ public class PageKind {
   }
   
   public List<String> getGenNames() {
-  	List<GeneratorKind> gen = 
+  	List<GeneratorKind> gs = 
   			ofy().load().type(GeneratorKind.class)
-	  			.filterKey("in", generators)
-	  			.list();
+	  			.filterKey("in", generators).list();
   	
   	List<String> r = new ArrayList<String>();
-  	for (GeneratorKind g: gen) {
+  	for (GeneratorKind g: gs) 
   		r.add(g.getName()); 
-  	}	
+
   	return r;
   }
 
@@ -286,7 +289,7 @@ public class PageKind {
   	return Optional.of(gen.getDistribution());
   }
   
-  public void deleteFromStore() {
+  public void asyncDeleteFromStore() {
   	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
 		ofy().delete().type(PageKind.class).id(id).now();
   }
