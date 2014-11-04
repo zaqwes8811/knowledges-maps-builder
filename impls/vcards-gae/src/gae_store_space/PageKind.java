@@ -21,6 +21,9 @@ import static gae_store_space.OfyService.ofy;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+
+import org.apache.commons.collections4.CollectionUtils;
 
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
@@ -51,8 +54,6 @@ public class PageKind {
   @Index String name;
   
   String rawSource;  // для обновленной версии
-  
-  Integer boundaryPtr;  // указатель на текующю границу
 
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
@@ -72,6 +73,7 @@ public class PageKind {
   
   @Ignore
 	private static final Integer STEP_WINDOW_SIZE = 20;  // по столько будем шагать 
+  private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -145,10 +147,10 @@ public class PageKind {
  			break;
  		}
  		
-		 if (pages.size() == 0)
+		if (pages.size() == 0)
 		 	return Optional.absent();
 		 
-		 return Optional.of(pages.get(0));
+		return Optional.of(pages.get(0));
   }
   
   // FIXME: если появится пользователи, то одного имени будет мало
@@ -235,9 +237,26 @@ public class PageKind {
    	this.sentencesKinds = items;    
     this.rawSource = rawSource;
   }
+  
+  private Set<String> getNGramms() {
+  	Integer end = sentencesKinds.size();
+  	
+  	if (sentencesKinds.size() > boundaryPtr)
+  		end = boundaryPtr;
+  	
+  	// [.., end)
+  	ArrayList<SentenceKind> kinds = new ArrayList<SentenceKind>(sentencesKinds.subList(0, end));
+  	
+  	return buildPipeline().getNGrams(kinds);
+  }
+  
+  private Integer getUnigramIndex(String ngram) {
+  	NGramKind k = CollectionUtils.find();
+  	return 0;
+  }
 
   // About: Возвращать частоты, сортированные по убыванию.
-  public ArrayList<DistributionElement> getRawDistribution() {
+  public ArrayList<DistributionElement> getImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
@@ -248,6 +267,13 @@ public class PageKind {
     ArrayList<DistributionElement> r = new ArrayList<DistributionElement>();
     for (NGramKind word : unigramKinds)
       r.add(new DistributionElement(word.getImportance()));
+    
+    // Get word befor boundary
+    Set<String> ngramms = getNGramms();
+    for (String ngram: ngramms) {
+    	Integer index = getUnigramIndex(ngram);
+    	r.get(index).inBoundary = true;
+    }
 
     return r;
   }
