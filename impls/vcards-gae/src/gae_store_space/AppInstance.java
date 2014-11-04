@@ -147,7 +147,7 @@ public class AppInstance {
 		//
   	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(NGramKind.class).keys()).now();
+  	//ofy().delete().keys(ofy().load().type(NGramKind.class).keys()).now();
   	
   	// clear cache
   	pagesCache.cleanUp();
