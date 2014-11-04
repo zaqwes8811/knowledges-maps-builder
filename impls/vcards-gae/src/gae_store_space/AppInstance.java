@@ -21,9 +21,7 @@ import com.google.common.util.concurrent.UncheckedExecutionException;
 import cross_cuttings_layer.CrossIO;
 
 public class AppInstance {
-	private static final Integer CACHE_SIZE = 5;
-	private static final Integer STEP_WINDOW_SIZE = 20;  // по столько будем шагать 
-	
+	private static final Integer CACHE_SIZE = 5;	
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -34,9 +32,8 @@ public class AppInstance {
 			.maximumSize(CACHE_SIZE)
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
-						public Optional<PageKind> load(String key) {
-							return PageKind.restore(key);
-						}
+						@Override
+						public Optional<PageKind> load(String key) { return PageKind.restore(key);	}	
 					});
 	
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
@@ -66,13 +63,11 @@ public class AppInstance {
 	private void fullDeletePage(String name) {
 		try {
 			Optional<PageKind> page = getPage(name);
-			if (page.isPresent()) {
-				page.get().deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
-				//ofy().delete().type(PageKind.class).id(page.get().id).now();  // non delete!
-				ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
-			}
+			if (page.isPresent())
+				page.get().deleteFromStore();
 		} catch (UncheckedExecutionException e) {
-			// FIXME: удаляем все лишние - leak in store - active generators
+			// FIXME: удаляем все копии
+			// FIXME: leak in store - active generators
 			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 		}
 	}
@@ -119,9 +114,7 @@ public class AppInstance {
 		syncCreatePageIfNotExist(name, text);
 	}
 	
-	public AppInstance() {
-		
-	}
+	public AppInstance() { }
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
