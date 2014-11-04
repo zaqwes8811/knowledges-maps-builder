@@ -7,6 +7,7 @@ import gae_store_space.SentenceKind;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Set;
 
 import pipeline.nlp.PlainTextTokenizer;
 import pipeline.statistics_collectors.StatisticCollector;
@@ -56,6 +57,11 @@ public class TextPipeline {
   	for (NGramKind k: kinds)
   		k.calcImportance();
   	return kinds;
+  }
+  
+  public Set<String> getNGrams(ArrayList<SentenceKind> kinds) {
+  	Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(kinds);
+  	return histo.keySet();
   }
   
   // Now no store operations

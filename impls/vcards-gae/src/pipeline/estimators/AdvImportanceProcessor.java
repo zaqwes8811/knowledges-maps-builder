@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableSet;
 public class AdvImportanceProcessor implements ImportanceProcessor {
 	private static Integer MAX_SENT_LENGTH_EST = 20;  // может и превысит
 	private static Integer SCALE_FACTOR = 10;
-	private static Integer MAX_FOR_LOW_FREQ = 8;
+	private static Integer MAX_FOR_LOW_FREQ = 5;
 	private static Integer PROCESS_THRESH = 1;
 	
 	private Integer getLocalMaxSentenceLength(ImmutableSet<SentenceKind> s) {

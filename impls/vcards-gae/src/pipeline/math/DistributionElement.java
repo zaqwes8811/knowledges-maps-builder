@@ -9,10 +9,16 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   
 	// FIXME: make get/set
 	public Integer frequency;
-  public Boolean enabled;
+  public Boolean enabled = true;
+  public Boolean inBoundary = false;
   
-  // FIXME: for persist
-  //DistributionElement() { }
+  public void setBoundary(Boolean value) {
+  	inBoundary = value;
+  }
+  
+  public Boolean isActive() {
+  	return enabled; // && isBoundary;
+  }
   
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
@@ -20,7 +26,6 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   }
   
   public  DistributionElement(Integer freq) {
-    enabled = true;
     frequency = freq;
   }
 
