@@ -41,7 +41,7 @@ import sklearn.cluster
 
 # sys
 import random
-
+import unittest
 
 def plot_distribution(d):
     # to NumPy arrays
@@ -55,7 +55,7 @@ def plot_distribution(d):
         all_points.append(elem.frequency)
         x_all_points.append(i)
 
-        if not elem.enabled:
+        if not elem.inBoundary:
             disabled.append(elem.frequency)
             x_disabled.append(i)
         else:
@@ -63,11 +63,10 @@ def plot_distribution(d):
             x_active = np.append(x_active, i)  # FIXME: bad!
 
     # Processing
-    if False:
-        plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
-        plt.plot(-1 * x_active, active)
-        plt.grid(True)
-        plt.show()
+    plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
+    #plt.plot(-1 * x_active, active)
+    plt.grid(True)
+    plt.show()
 
 
 def unroll_distribution(d):
@@ -121,32 +120,39 @@ def cluster_kmeans(d):
         plt.plot(x, y, 'o')  # FIXME: bad!
 
 
-def main():
-    # Http part
-    server = 'http://localhost'
-    port = 8080
-    research_ajax = http_bridge.ResearchAjax(server, port)
-    #research_ajax.create_or_replace_page()
-    arg0 = http_bridge.PathValue(research_ajax.get_research_page_name())
+class TestSequenceFunctions(unittest.TestCase):
 
-    # Read
-    d = research_ajax.get_pure_distribution(arg0)
-    plt.plot(d)
-    ls = research_ajax.get_lengths_sentences(arg0)
-    ls.sort()
-    #plt.plot(ls)
+    def setUp(self):
+        # Http part
+        server = 'http://localhost'
+        port = 8080
+        self.ajax = http_bridge.ResearchAjax(server, port)
+        self.ajax.create_or_replace_page()
+        self.arg0 = http_bridge.PathValue(self.ajax.get_research_page_name())
 
-    # K-means
-    #cluster_kmeans(d)
+    def test_base(self):
+        d = self.ajax.get_distribution_sync(self.arg0)
+        plot_distribution(d)
 
-    # Nearest Neighbors version
+    def test_clustering(self):
+        d = self.ajax.get_pure_distribution(self.arg0)
 
-    # Visuality
-    plt.grid(True)
-    plt.show()
+        # K-means
+        cluster_kmeans(d)
 
-    #cluster_only_by_freq(d, estimator, n_clusters)
+        # Nearest Neighbors version
+
+        # Visuality
+        #plt.grid(True)
+        #plt.show()
+
+        #cluster_only_by_freq(d, estimator, n_clusters)
+
+    def test_extract_sent_length(self):
+        ls = self.ajax.get_lengths_sentences(self.arg0)
+        ls.sort()
+        #plt.plot(ls)
 
 
 if __name__ == '__main__':
-    main()
+    pass

@@ -190,6 +190,8 @@ public class PageKind {
   //   IllegalStateException - генератор не найден. Система замкнута, если 
   //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
   //     вводится только при создании, потом они только читаются.
+  //
+  // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
   public Optional<GeneratorKind> getGenerator(String name) { 
   	if (name == null)
   		throw new IllegalArgumentException();
