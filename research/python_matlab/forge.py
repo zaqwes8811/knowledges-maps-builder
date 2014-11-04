@@ -24,6 +24,12 @@
 #
 # Похоже лучше сделат окно скользящее по контексту, пока субтиты еще ничего, но дальше...
 # Или лушче расширяющееся окно. как сам читал. Сразу много загружать нет смысла
+# Сохраняем частоты всего текста, просто фильтруем
+#
+# FIXME: MAIN TROUBLE: очень плохое распределение.
+# - добавить инфы для искажения малых - мало что изменилось
+# - эквалайзинг - как-то не совсем ясно как
+# - перемещающаяся граница - пока кажется лучшее решение
 
 # app
 import http_bridge
@@ -125,13 +131,13 @@ def main():
 
     # Read
     d = research_ajax.get_pure_distribution(arg0)
-    #plt.plot(d)
+    plt.plot(d)
     ls = research_ajax.get_lengths_sentences(arg0)
     ls.sort()
     #plt.plot(ls)
 
     # K-means
-    cluster_kmeans(d)
+    #cluster_kmeans(d)
 
     # Nearest Neighbors version
 

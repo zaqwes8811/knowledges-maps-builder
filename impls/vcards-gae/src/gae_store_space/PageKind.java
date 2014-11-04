@@ -47,14 +47,17 @@ public class PageKind {
   @Index String name;
   
   String rawSource;  // для обновленной версии
+  
+  Integer boundaryPtr;  // указатель на текующю границу
 
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
   @Ignore 
   private ArrayList<NGramKind> unigramKinds = new ArrayList<NGramKind>();
   
+  // Хранить строго как в исходном контексте 
   @Ignore 
-  private List<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
+  private ArrayList<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
@@ -63,10 +66,19 @@ public class PageKind {
   @Load  
   private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>();  
   
+  //@Ignore
+  private static TextPipeline buildPipeline() {
+    return new TextPipeline();
+  }
+  
   public String getName() { return name; }
   
   public void deleteGenerators() {
   	ofy().delete().keys(generators).now();
+  }
+  
+  private void moveBoundary() {
+  	// FIXME: 
   }
   
   public ArrayList<Integer> getLengthsSentences() {
@@ -108,8 +120,8 @@ public class PageKind {
     String rawSource = barePage.rawSource;
     
     // обрабатываем
-    TextPipeline pipeline = new TextPipeline();
-    PageKind page = pipeline.pass(barePage.name, rawSource);
+    
+    PageKind page = buildPipeline().pass(barePage.name, rawSource);
     
     // теперь нужно запустить процесс обработки,
     barePage.assign(page);
@@ -189,6 +201,8 @@ public class PageKind {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
+    
+    // Как быть с окном?
 
     // Form result
     ArrayList<DistributionElement> r = new ArrayList<DistributionElement>();

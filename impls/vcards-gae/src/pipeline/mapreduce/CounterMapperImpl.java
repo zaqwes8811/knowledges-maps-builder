@@ -35,7 +35,7 @@ public class CounterMapperImpl implements CounterMapper {
       	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
       	// .toLowerCase()
       	// FIXME: возможно фильтрация - но думаю в другом классе
-        emit(word.toLowerCase(), item);
+        emit(word, item);
       }
       
       // Устанавливаем длину предложения
