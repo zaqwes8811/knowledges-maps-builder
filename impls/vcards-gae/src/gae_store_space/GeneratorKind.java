@@ -143,9 +143,6 @@ public class GeneratorKind
 		}
   }
   
-
-
-  
   private GeneratorKind() { }
   
   // похоже при восстановлении вызывается он

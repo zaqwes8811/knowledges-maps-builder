@@ -158,5 +158,6 @@
 	<classpathentry kind="lib" path="/home/zaqwes/opt/hibernate-release-4.3.6.Final/lib/required/javassist-3.18.1-GA.jar"/>
 	<classpathentry kind="lib" path="/home/zaqwes/opt/hibernate-release-4.3.6.Final/lib/required/jboss-logging-annotations-1.2.0.Beta1.jar"/>
 	<classpathentry kind="lib" path="/home/zaqwes/opt/hibernate-release-4.3.6.Final/lib/required/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcards-gae/war/WEB-INF/lib/commons-collections4-4.0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
