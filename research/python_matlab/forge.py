@@ -117,7 +117,7 @@ def main():
     server = 'http://localhost'
     port = 8080
     research_ajax = http_bridge.ResearchAjax(server, port)
-    #research_ajax.create_or_replace_page()
+    research_ajax.create_or_replace_page()
     arg0 = http_bridge.PathValue(research_ajax.get_research_page_name())
 
     # Read
@@ -125,10 +125,10 @@ def main():
     #plt.plot(d)
     ls = research_ajax.get_lengths_sentences(arg0)
     ls.sort()
-    plt.plot(ls)
+    #plt.plot(ls)
 
     # K-means
-    #cluster_kmeans(d)
+    cluster_kmeans(d)
 
     # Nearest Neighbors version
 

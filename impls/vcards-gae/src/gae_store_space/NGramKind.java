@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
 import pipeline.estimators.SimpleImportanceProcessor;
 
@@ -22,7 +23,8 @@ public class NGramKind {
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
 	
 	// FIXME: inject it?
-	private ImportanceProcessor estimator = new SimpleImportanceProcessor();
+	private ImportanceProcessor estimator = new AdvImportanceProcessor();
+	//SimpleImportanceProcessor();
 	
   @Id
   Long id;
