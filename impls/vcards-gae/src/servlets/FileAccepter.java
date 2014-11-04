@@ -53,7 +53,7 @@ public class FileAccepter extends HttpServlet {
 		// FIXME: ошибки парсинга
 		ArrayList<String> sentences = new ArrayList<String>(workSpace.subList(2, workSpace.size()-1));
 		String text = Joiner.on('\n').join(sentences);
-		app.createPageIfNotExist_sync(filename, text);
+		app.syncCreatePageIfNotExist(filename, text);
 		
 		return ImmutableList.copyOf(in);
 	}
