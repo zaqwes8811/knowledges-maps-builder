@@ -2,7 +2,6 @@ package pipeline.estimators;
 
 import gae_store_space.SentenceKind;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Set;
@@ -10,7 +9,7 @@ import java.util.Set;
 import com.google.common.collect.ImmutableSet;
 
 public class AdvImportanceProcessor implements ImportanceProcessor {
-	private Integer getMaxLength(ImmutableSet<SentenceKind> s) {
+	private Integer getLocalMaxSentenceLength(ImmutableSet<SentenceKind> s) {
 		SentenceKind elem = Collections.max(s, 
 				new Comparator<SentenceKind>() {
 					@Override
