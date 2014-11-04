@@ -33,7 +33,7 @@ public class AppInstance {
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
 						@Override
-						public Optional<PageKind> load(String key) { return PageKind.restore(key);	}	
+						public Optional<PageKind> load(String key) { return PageKind.restore(key); }	
 					});
 	
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
@@ -43,7 +43,7 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-  	Optional<PageKind> page = getPage(path.pageName); 
+  	Optional<PageKind> page = getPage(path.getPageName().get()); 
   	if (!page.isPresent())
   		throw new IllegalStateException();
 
@@ -76,17 +76,16 @@ public class AppInstance {
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
 	public PageKind syncCreatePageIfNotExist(String name, String text) {
 		// FIXME: add user info
-		List<PageKind> pages = 
-			ofy().load().type(PageKind.class).filter("name = ", name).list();
+		List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
 		
 		if (pages.isEmpty()) {
 			TextPipeline processor = new TextPipeline();
 	  	PageKind page = processor.pass(name, text);  
 	  	
-	  	GeneratorKind defaultGenerator = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
-	  	defaultGenerator.syncCreateInStore(); 
+	  	GeneratorKind g = GeneratorKind.create(page.getRawDistribution(), TextPipeline.defaultGenName);
+	  	g.syncCreateInStore(); 
 	  	
-	  	page.addGenerator(defaultGenerator);
+	  	page.addGenerator(g);
 	  	page.syncCreateInStore();
 			return page;
 		} else {
@@ -140,16 +139,15 @@ public class AppInstance {
 		List<PageKind> pages = ofy().load().type(PageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
-		for (PageKind page: pages) {
+		for (PageKind page: pages) 
 			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
-		}
 		
 		return r;
 	}
 	
 	public void disablePoint(PathValue p) {
 		// FIXME: как добавить окно?
-		PageKind page = getPage(p.pageName).get();
+		PageKind page = getPage(p.getPageName().get()).get();
 		page.disablePoint(p);		
 	} 
 }

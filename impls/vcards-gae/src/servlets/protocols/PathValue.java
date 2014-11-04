@@ -8,7 +8,7 @@ import com.google.common.base.Optional;
 public class PathValue {
 	//public final UserId
 	// FIXME: final is removed, need getters
-	public String pageName;
+	private String pageName;
 	public String genName;
 	public Integer pointPos;
 	

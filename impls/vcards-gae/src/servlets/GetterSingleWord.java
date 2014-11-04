@@ -41,7 +41,7 @@ public class GetterSingleWord extends HttpServlet {
 		response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     
-    Optional<PageKind> p = app.getPage(path.pageName);
+    Optional<PageKind> p = app.getPage(path.getPageName().get());
     if (!p.isPresent())
     	throw new IllegalStateException();
     
