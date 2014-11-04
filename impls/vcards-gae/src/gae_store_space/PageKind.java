@@ -133,7 +133,7 @@ public class PageKind {
    	int i = 0;
  		while (true) {
  			if (i > GAESpecific.COUNT_TRIES)
- 				//if (pages.size() != 0)
+ 				//if (pages.size() != 0)  // зависает но почему?
  					throw new IllegalStateException();
  			
  			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
@@ -197,23 +197,38 @@ public class PageKind {
   	if (generators.isEmpty())
   		throw new IllegalStateException();
   	
-  	List<GeneratorKind> gen = 
-  			ofy().load().type(GeneratorKind.class)
-	  			.filterKey("in", generators)
-	  			.filter("name = ", name)
-	  			.list();
-
-  	if (gen.isEmpty())
-  		return Optional.absent();
-  		
-  	if (gen.size() > 1)
-  		throw new IllegalStateException(name);
+  	Optional<GeneratorKind> g = Optional.absent();
   	
-  	GeneratorKind g = gen.get(0);
+  	int i = 0;
+ 		while (true) {
+ 			if (i > GAESpecific.COUNT_TRIES)
+				throw new IllegalStateException();
+ 			
+ 			List<GeneratorKind> gen = 
+	  			ofy().load().type(GeneratorKind.class)
+		  			.filterKey("in", generators)
+		  			.filter("name = ", name)
+		  			.list();
+	
+	  	if (!gen.isEmpty()) {
+	  		if (gen.size() > 1)
+	    		throw new IllegalStateException(name);
+	    	
+	    	g = Optional.of(gen.get(0));
+	    	g.get().restore();
+	  	} else {
+ 				try {
+ 					Thread.sleep(GAESpecific.TIME_STEP_MS);
+ 				} catch (InterruptedException e1) {
+ 					throw new RuntimeException(e1);
+ 				}
+ 				i++;
+ 				continue;
+ 		  }
+ 			break;
+ 		}
   	
-  	g.restore();
-  	
-  	return Optional.fromNullable(g);
+  	return g;
   }
   
   public List<String> getGenNames() {
@@ -293,7 +308,7 @@ public class PageKind {
     
     // Get word befor boundary
     Set<String> ngramms = getNGramms();
-    /*for (String ngram: ngramms) {
+    for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
     	
     	// Проверка! Тестов как таковых нет, так что пока так
@@ -302,7 +317,6 @@ public class PageKind {
     	
     	r.get(index).inBoundary = true;
     }
-    */
 
     return r;
   }

@@ -129,6 +129,7 @@ public class GeneratorKind
 			if (i > GAESpecific.COUNT_TRIES)
 				throw new IllegalStateException();
 			
+			// FIXME: что-то не то. похоже запросы нужно делать по полному пути!
 			Optional<GeneratorKind> g = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(id).now());
 			if (!g.isPresent()) {
 				i++;
