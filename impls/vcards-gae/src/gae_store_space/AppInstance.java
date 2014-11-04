@@ -33,7 +33,7 @@ public class AppInstance {
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
 						@Override
-						public Optional<PageKind> load(String key) { return PageKind.restore(key); }	
+						public Optional<PageKind> load(String key) { return PageKind.syncRestore(key); }	
 					});
 	
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
@@ -64,7 +64,7 @@ public class AppInstance {
 		try {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent())
-				page.get().deleteFromStore();
+				page.get().asyncDeleteFromStore();
 		} catch (UncheckedExecutionException e) {
 			// FIXME: удаляем все копии
 			// FIXME: leak in store - active generators
@@ -136,6 +136,7 @@ public class AppInstance {
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: add user info
+		
 		List<PageKind> pages = ofy().load().type(PageKind.class).list();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
