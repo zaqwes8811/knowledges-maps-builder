@@ -22,6 +22,7 @@ import cross_cuttings_layer.CrossIO;
 
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;
+	private static final Integer STEP_WINDOW_SIZE = 20;  // по столько будем шагать 
 	
 	
 	static public String getTestFileName() {
@@ -197,9 +198,12 @@ public class AppInstance {
 	}
 	
 	public void disablePoint(PathValue p) {
+		// FIXME: как добавить окно?
 		PageKind page = getPage(p.pageName).get();
 		GeneratorKind g = page.getGenerator(p.genName).get();
 		g.disablePoint(p.pointPos);
+		
+		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
 		
 		ofy().save().entity(g).now();
 	} 
