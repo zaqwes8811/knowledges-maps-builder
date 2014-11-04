@@ -43,6 +43,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import com.googlecode.objectify.cmd.Query;
 
+import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
 
 
@@ -132,7 +133,7 @@ public class PageKind {
    	int i = 0;
  		while (true) {
  			if (i > GAESpecific.COUNT_TRIES)
- 				if (pages.size() != 0)
+ 				//if (pages.size() != 0)
  					throw new IllegalStateException();
  			
  			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
@@ -292,13 +293,16 @@ public class PageKind {
     
     // Get word befor boundary
     Set<String> ngramms = getNGramms();
-    for (String ngram: ngramms) {
+    /*for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
     	
     	// Проверка! Тестов как таковых нет, так что пока так
+    	if (!unigramKinds.get(index).getValue().equals(ngram))
+    		throw new AssertException();
     	
     	r.get(index).inBoundary = true;
     }
+    */
 
     return r;
   }
