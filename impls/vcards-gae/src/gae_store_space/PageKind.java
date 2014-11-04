@@ -42,6 +42,8 @@ import com.googlecode.objectify.cmd.Query;
 @NotThreadSafe
 @Entity
 public class PageKind {
+	
+	
   private PageKind() { }
 
   public @Id Long id;
@@ -66,7 +68,10 @@ public class PageKind {
   // все равно может упасть. с единичным ключем фигня какая-то
   // FIXME: вообще это проблема
   @Load  
-  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>();  
+  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>(); 
+  
+  @Ignore
+	private static final Integer STEP_WINDOW_SIZE = 20;  // по столько будем шагать 
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -77,7 +82,7 @@ public class PageKind {
   	return name; 
   }
   
-  public void deleteGenerators() {
+  private void deleteGenerators() {
   	ofy().delete().keys(generators).now();
   }
   
@@ -279,5 +284,10 @@ public class PageKind {
   public Optional<ImmutableList<DistributionElement>>  getDistribution(String genName) {
   	GeneratorKind gen = getGenerator(genName).get();
   	return Optional.of(gen.getDistribution());
+  }
+  
+  public void deleteFromStore() {
+  	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
+		ofy().delete().type(PageKind.class).id(id).now();
   }
 }
