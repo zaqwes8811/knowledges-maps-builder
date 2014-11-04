@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.Predicate;
+import org.javatuples.Pair;
 
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
@@ -40,6 +42,8 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import com.googlecode.objectify.cmd.Query;
+
+import cross_cuttings_layer.OwnCollections;
 
 
 @NotThreadSafe
@@ -251,8 +255,26 @@ public class PageKind {
   }
   
   private Integer getUnigramIndex(String ngram) {
-  	NGramKind k = CollectionUtils.find();
-  	return 0;
+  	 class Tmp implements Predicate<NGramKind> {
+  		// FIXME: test() ?
+  		@Override
+  		public boolean evaluate(NGramKind o) {
+  			return o.getValue().equals(ngram);
+  		}
+  		
+  		String ngram;
+  		public Tmp(String value) {
+  			ngram = value;
+  		}
+  	};
+  	
+  	Tmp p = new Tmp(ngram);
+  	
+  	Pair<NGramKind, Integer> k = OwnCollections.find(unigramKinds, p);
+  	if (k.getValue1().equals(-1))
+  		throw new IllegalStateException();
+  	
+  	return k.getValue1();
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
@@ -272,6 +294,9 @@ public class PageKind {
     Set<String> ngramms = getNGramms();
     for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
+    	
+    	// Проверка! Тестов как таковых нет, так что пока так
+    	
     	r.get(index).inBoundary = true;
     }
 
