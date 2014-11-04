@@ -63,7 +63,7 @@ def plot_distribution(d):
             x_active = np.append(x_active, i)  # FIXME: bad!
 
     # Processing
-    plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'v')
+    plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'o')
     #plt.plot(-1 * x_active, active)
     plt.grid(True)
     plt.show()
@@ -151,8 +151,4 @@ class TestSequenceFunctions(unittest.TestCase):
     def test_extract_sent_length(self):
         ls = self.ajax.get_lengths_sentences(self.arg0)
         ls.sort()
-        #plt.plot(ls)
 
-
-if __name__ == '__main__':
-    pass

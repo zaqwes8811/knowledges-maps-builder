@@ -77,7 +77,7 @@ public class PageKind {
   private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>(); 
   
   @Ignore
-	private static final Integer STEP_WINDOW_SIZE = 20;  // по столько будем шагать 
+	private static final Integer STEP_WINDOW_SIZE = 1;  // по столько будем шагать 
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   
   //@Ignore
