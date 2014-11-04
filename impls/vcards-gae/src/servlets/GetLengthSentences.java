@@ -34,7 +34,7 @@ public class GetLengthSentences extends HttpServlet {
 			PathValue path = new Gson().fromJson(value.get(), PathValue.class);
 			Optional<String> pageName = path.getPageName();
 			if (pageName.isPresent()) {
-		    Optional<PageKind> p = app.getPage(path.pageName);
+		    Optional<PageKind> p = app.getPage(path.getPageName().get());
 		    if (p.isPresent()) {
 			    ArrayList<Integer> v = p.get().getLengthsSentences();
 			    
