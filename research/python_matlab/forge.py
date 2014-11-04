@@ -43,6 +43,7 @@ import sklearn.cluster
 import random
 import unittest
 
+
 def plot_distribution(d):
     # to NumPy arrays
     disabled = []
@@ -51,20 +52,22 @@ def plot_distribution(d):
     x_all_points = []
     active = []
     x_active = np.array([], dtype=np.uint32)
+    j = 0
     for i, elem in enumerate(d):
         all_points.append(elem.frequency)
         x_all_points.append(i)
 
-        if not elem.inBoundary:
+        if elem.inBoundary:
             disabled.append(elem.frequency)
             x_disabled.append(i)
-        else:
+        #else:
             active.append(elem.frequency)
-            x_active = np.append(x_active, i)  # FIXME: bad!
+            x_active = np.append(x_active, j)  # FIXME: bad!
+            j += 1
 
     # Processing
     plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'o')
-    #plt.plot(-1 * x_active, active)
+    plt.plot(-1 * x_active, active)
     plt.grid(True)
     plt.show()
 
