@@ -99,7 +99,8 @@ public class PageKind {
   }
   
   private void deleteGenerators() {
-  	gae.asyncDeleteGenerators(accessGen().get());
+  	if (accessGen().isPresent())
+  		gae.asyncDeleteGenerators(accessGen().get());
   }
   
   public ArrayList<Integer> getLengthsSentences() {
@@ -161,7 +162,7 @@ public class PageKind {
   	return gae.getGenNames(accessGen().get());
   }
 
-  public void addGenerator(GeneratorKind gen) {
+  public void setGenerator(GeneratorKind gen) {
   	Key<GeneratorKind> k = Key.create(gen);
     generator = k;
   }
@@ -212,12 +213,10 @@ public class PageKind {
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
-  public ArrayList<DistributionElement> getImportanceDistribution() {
+  public ArrayList<DistributionElement> buildImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
-    
-    // Как быть с окном?
 
     // Form result
     ArrayList<DistributionElement> r = new ArrayList<DistributionElement>();
@@ -235,6 +234,8 @@ public class PageKind {
     	
     	r.get(index).markInBoundary();
     }
+    
+    // Создаем объем
 
     return r;
   }

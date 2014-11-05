@@ -46,9 +46,9 @@ public class PageKindTest {
   @Test
   public void testCreateAndPersist() throws Exception {
     PageKind page = buildContentPage(TextPipeline.defaultPageName);
-    GeneratorKind gen = GeneratorKind.create(page.getImportanceDistribution());
+    GeneratorKind gen = GeneratorKind.create(page.buildImportanceDistribution());
     ofy().save().entity(gen).now();
-    page.addGenerator(gen);
+    page.setGenerator(gen);
     ofy().save().entity(page).now();
   }
 
@@ -63,7 +63,7 @@ public class PageKindTest {
     			.limit(1).first().now();
 
     /// Queries
-    ArrayList<DistributionElement> distribution = page.getImportanceDistribution();
+    ArrayList<DistributionElement> distribution = page.buildImportanceDistribution();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
@@ -85,9 +85,9 @@ public class PageKindTest {
 
     // Create new page
     PageKind page = buildContentPage(activePageName);
-    GeneratorKind gen = GeneratorKind.create(page.getImportanceDistribution());
+    GeneratorKind gen = GeneratorKind.create(page.buildImportanceDistribution());
     ofy().save().entity(gen).now();
-    page.addGenerator(gen);
+    page.setGenerator(gen);
     ofy().save().entity(page).now();
     
     // создаем две страницы, важно для проверки разделения запросов.
