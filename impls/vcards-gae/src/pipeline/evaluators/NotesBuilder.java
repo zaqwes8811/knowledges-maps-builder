@@ -23,11 +23,12 @@ public class NotesBuilder {
   static public final String NOTE_N80_COUNT = "w80";
 
   static public String json_get_notes_for_node(String node) {
-    return new Gson().toJson(get_notes_for_node(node));
+    return new Gson().toJson(getDistributionNotes(node));
   }
 
-  static public Map<String, String> get_notes_for_node(String node) {
-    HashMap<String, HashMap<String, String>> metadataStaticNotes = ImmutableIdxGetters.getStaticNotes();  // TODO(): bad!
+  static public Map<String, String> getDistributionNotes(String node) {
+  	// TODO(): bad!
+  	HashMap<String, HashMap<String, String>> metadataStaticNotes = ImmutableIdxGetters.getStaticNotes();  
 
     // Получаем статические данные по сложности
     // Статические оценки
@@ -40,7 +41,9 @@ public class NotesBuilder {
     HashMap<String, Integer> sorted_freq_idx = ImmutableIdxGetters.get_freq_idx(node);
 
     Integer total_amount = 0;
-    for (String word: sorted_full_idx) total_amount += sorted_freq_idx.get(word);
+    for (String word: sorted_full_idx) 
+    	total_amount += sorted_freq_idx.get(word);
+    
     Double threshold = total_amount*0.8;
 
     // Оценка - 20% слов

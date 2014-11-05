@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by zaqwes on 5/17/14.
- */
 public class NotesBuilderTest {
   // Launcher
   @Test
