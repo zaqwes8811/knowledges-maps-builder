@@ -39,6 +39,12 @@ class AppAjax(object):
 
         return pro.NGramData(r.json())
 
+    def mark_known(self, arg0):
+        url = '/know_it'
+        #payload = self.pack_arg0(arg0)
+        r = requests.put(self._build_url(url), data=json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True))
+        r.raise_for_status()
+
 
 class ResearchAjax(object):
     def __init__(self, url, port):
