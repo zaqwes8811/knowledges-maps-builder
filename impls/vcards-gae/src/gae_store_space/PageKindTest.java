@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_store_space.queries.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;

@@ -1,14 +1,13 @@
 package gae_store_space;
 
-import static gae_store_space.OfyService.ofy;
+import gae_store_space.queries.GAESpecific;
 
 import java.util.ArrayList;
 
+import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorAnyDistribution;
-
-import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -17,7 +16,6 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
-import com.googlecode.objectify.annotation.Unindex;
 
 //import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
 
@@ -49,10 +47,12 @@ public class GeneratorKind
   @Id
   public Long id;
   
+  public Long getId()  { return id; }
+  
   @Index
   private String name;
   
-  public String getName() { return this.name; }
+  public String getName() { return name; }
   
   // Индексируется as embedded- это состояние генератора
   // FIXME: какая лажа с порядком загрузки
@@ -65,10 +65,11 @@ public class GeneratorKind
   // FIXME: вообще нужно быть внимательным, порядок иниц. может все сломать
   // Наверное можно было бы сереализовать его, но из-за эквалайзинга,
   //   сохраняю исходные распределения отдельно
-  @Ignore GeneratorAnyDistribution gen;
-
-  @Unindex
-  Integer codeAction;  // возможность подкл. алгоритма при создании
+  @Ignore 
+  GeneratorAnyDistribution gen;
+  
+  @Ignore
+  GAESpecific gae = new GAESpecific();
 
   public ImmutableList<DistributionElement> getDistribution() {
     return ImmutableList.copyOf(distribution);
@@ -115,35 +116,11 @@ public class GeneratorKind
   }
   
   public void persist() {
-  	ofy().save().entity(this).now();
+  	gae.persist(this);
   }
 	
-  // 
   public void syncCreateInStore() {
-  	ofy().save().entity(this).now();
-  	
-  	// FIXME: Почему иногда все равно по запросу генератора еще нет?
-  	
-		// убеждаемся что генератор тоже сохранен
-		// это нельзя сделать в этом методе! Мы не проверим если не создаем
-		int i = 0;
-		while (true) {
-			if (i > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
-			
-			// FIXME: что-то не то. похоже запросы нужно делать по полному пути!
-			Optional<GeneratorKind> g = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(id).now());
-			if (!g.isPresent()) {
-				i++;
-				try {
-	        Thread.sleep(GAESpecific.TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
-	  		continue;
-	  	}
-			break;
-		}
+  	gae.syncCreateInStore(this);
   }
   
   private GeneratorKind() { }
