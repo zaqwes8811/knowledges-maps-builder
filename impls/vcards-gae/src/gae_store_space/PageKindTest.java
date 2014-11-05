@@ -24,8 +24,6 @@ import com.google.common.collect.Ordering;
 
 import cross_cuttings_layer.CrossIO;
 
-
-
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class PageKindTest {
   private static final LocalServiceTestHelper helper =

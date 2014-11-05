@@ -33,23 +33,25 @@ public final class GAESpecific {
 	
 	// FIXME: make синхронизирующий вызов
 	
-	public void persist(PageKind kind) {
+	public void asyncPersist(PageKind kind) {
 		ofy().save().entity(kind).now();
 	}
 	
-	public void persist(GeneratorKind kind) {
+	public void asyncPersist(GeneratorKind kind) {
 		ofy().save().entity(kind).now();
 	}
 	
-	public void deleteGenerators(List<Key<GeneratorKind>> generators) {
+	public void asyncDeleteGenerators(List<Key<GeneratorKind>> generators) {
 		ofy().delete().keys(generators).now();
 	}
 	
-	public void deletePage(PageKind p) {
+	public void asyncDeletePage(PageKind p) {
 		ofy().delete().type(PageKind.class).id(p.getId()).now();
 	}
 	
-	public Optional<GeneratorKind> getGenerator(List<Key<GeneratorKind>> generators, String name) {
+	// FIXME: Bad design!
+	public Optional<GeneratorKind> getGeneratorWaitConvergence(
+			List<Key<GeneratorKind>> generators, String name) {
 		if (name == null)
   		throw new IllegalArgumentException();
   	
@@ -91,7 +93,7 @@ public final class GAESpecific {
 	}
 	
 	public void syncCreateInStore(GeneratorKind kind) {
-		persist(kind);
+		asyncPersist(kind);
   	
   	// FIXME: Почему иногда все равно по запросу генератора еще нет?
   	
@@ -103,7 +105,8 @@ public final class GAESpecific {
 				throw new IllegalStateException();
 			
 			// FIXME: что-то не то. похоже запросы нужно делать по полному пути!
-			Optional<GeneratorKind> g = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(kind.getId()).now());
+			Optional<GeneratorKind> g = 
+					Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(kind.getId()).now());
 			if (!g.isPresent()) {
 				i++;
 				try {
@@ -118,14 +121,15 @@ public final class GAESpecific {
 	}
 	
 	public void syncCreateInStore(PageKind kind) {
-		persist(kind);
+		asyncPersist(kind);
   	
   	int j = 0;
 		while (true) {
 			if (j > GAESpecific.COUNT_TRIES)
 				throw new IllegalStateException();
 			
-			Optional<PageKind> page_readed = Optional.of(ofy().load().type(PageKind.class).id(kind.getId()).now()); 
+			Optional<PageKind> page_readed = 
+					Optional.of(ofy().load().type(PageKind.class).id(kind.getId()).now()); 
 	  	if (!page_readed.isPresent()) {
 	  		j++;
 	  		try {
@@ -139,8 +143,10 @@ public final class GAESpecific {
 		}
 	}
 	
-	public Optional<PageKind> getPage(String name) {
 	// FIXME: можно прочитать только ключи, а потом делать выборки
+	// FIXME: bad design
+	public Optional<PageKind> getPageWaitConvergence(String name) {
+	
    	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
    	
    	int i = 0;
@@ -153,6 +159,7 @@ public final class GAESpecific {
  			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", name);
  			pages = q.list();
  			
+ 			// Тут проблема. Если в системе было несколько страниц, с одним именем, то что возвращать то?
  			if (pages.size() > 1 || pages.size() == 0) {
  				try {
  					Thread.sleep(GAESpecific.TIME_STEP_MS);
@@ -165,6 +172,7 @@ public final class GAESpecific {
  			break;
  		}
  		
+ 		// FIXME: проверка нелепая. До сюда может и не дойти, хотя...
 		if (pages.size() == 0)
 		 	return Optional.absent();
 		 
@@ -183,11 +191,17 @@ public final class GAESpecific {
   	return r;
   }
 	
-	public List<PageKind> getPages() {
+	public List<PageKind> getPagesMaybeOutdated() {
 		return ofy().load().type(PageKind.class).list();
 	}
 	
-	public List<PageKind> getPages(String name) {
+	public List<PageKind> getPagesMaybeOutdated(String name) {
 		return ofy().load().type(PageKind.class).filter("name = ", name).list();
+	}
+	
+	public void asyncDeletePages(String name) {
+		// FIXME: удаляем все копии
+		// FIXME: leak in store - active generators
+		ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 	}
 }
