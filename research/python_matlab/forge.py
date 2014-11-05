@@ -134,25 +134,43 @@ class TestSequenceFunctions(unittest.TestCase):
         self.ajax.create_or_replace_page()
         self.arg0 = pro.PathValue(self.ajax.get_research_page_name())
 
-    def test_base(self):
+        self.app_ajax = http_bridge.AppAjax(server, port)
+
+    def plot_distribution(self):
         d = self.ajax.get_distribution_sync(self.arg0)
         plot_distribution(d)
+
+    def test_base(self):
+        self.plot_distribution()
 
     def test_clustering(self):
         d = self.ajax.get_pure_distribution(self.arg0)
 
         # K-means
         cluster_kmeans(d)
-
-        # Nearest Neighbors version
-
         # Visuality
         #plt.grid(True)
         #plt.show()
 
+    def test_nn_clustering(self):
+        # Nearest Neighbors version
+        pass
+
+
+    def test_pure_clustering(self):
+        pass
         #cluster_only_by_freq(d, estimator, n_clusters)
 
     def test_extract_sent_length(self):
         ls = self.ajax.get_lengths_sentences(self.arg0)
         ls.sort()
+
+    def test_accept_word_data(self):
+        r = self.app_ajax.get_item(self.arg0)
+        self.assertIsNotNone(r)
+
+        new_arg0 = self.arg0.clone()
+        new_arg0.set_position(r.get_position())
+
+        print r
 

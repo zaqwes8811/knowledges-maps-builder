@@ -53,6 +53,13 @@ public final class GAESpecific {
 		ofy().delete().type(PageKind.class).id(p.getId()).now();
 	}
 	
+	public Optional<GeneratorKind> asyncGetGenerator(Key<GeneratorKind> g) {
+		Optional<GeneratorKind> r = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(g.getId()).now());
+		if (r.isPresent())
+			r.get().restore();
+		return r;
+	}
+	
 	// FIXME: Bad design!
 	public Optional<GeneratorKind> getGeneratorWaitConvergence(
 			List<Key<GeneratorKind>> generators, String name) {

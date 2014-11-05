@@ -2,12 +2,10 @@ package pipeline.math;
 
 import java.io.Serializable;
 
-//http://stackoverflow.com/questions/5560176/is-integer-immutable
-// сохраняется в базе!
+//http://stackoverflow.com/questions/5560176/is-integer-immutable - сохраняется в базе!
 public class DistributionElement implements Comparable<DistributionElement>, Serializable {
   private static final long serialVersionUID = -3004460083142639254L;
-  
-	// FIXME: make get/set
+
 	private Integer frequency;
   private Boolean unknown = true;
   private Boolean inBoundary = false;
@@ -38,7 +36,7 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
     unknown = ena;
   }
   
-  public  DistributionElement(Integer freq) {
+  public DistributionElement(Integer freq) {
     frequency = freq;
   }
 
