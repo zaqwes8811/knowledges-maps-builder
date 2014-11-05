@@ -50,11 +50,11 @@ import cross_cuttings_layer.OwnCollections;
 @NotThreadSafe
 @Entity
 public class PageKind {
-	
-	
   private PageKind() { }
 
   public @Id Long id;
+  
+  public Long getId() { return id; }
 
   @Index String name;
   
@@ -78,7 +78,11 @@ public class PageKind {
   
   @Ignore
 	private static final Integer STEP_WINDOW_SIZE = 10;  // по столько будем шагать 
+  
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
+  
+  @Ignore
+  GAESpecific gae = new GAESpecific();
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -90,72 +94,22 @@ public class PageKind {
   }
   
   private void deleteGenerators() {
-  	ofy().delete().keys(generators).now();
-  }
-  
-  private void moveBoundary() {
-  	// FIXME: 
+  	gae.deleteGenerators(generators);
   }
   
   public ArrayList<Integer> getLengthsSentences() {
   	ArrayList<Integer> r = new ArrayList<Integer>();
-  	for (SentenceKind k : this.sentencesKinds)
+  	for (SentenceKind k : sentencesKinds)
   		r.add(k.getCountWords());
   	return r;
   }
   
   public void syncCreateInStore() {
-  	persist();
-  	
-  	int j = 0;
-		while (true) {
-			if (j > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
-			
-			Optional<PageKind> page_readed = Optional.of(ofy().load().type(PageKind.class).id(id).now()); 
-	  	if (!page_readed.isPresent()) {
-	  		j++;
-	  		try {
-	        Thread.sleep(GAESpecific.TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
-	  		continue;
-	  	}
-			break;
-		}
+  	gae.syncCreateInStore(this);
   }
   
   private static Optional<PageKind> syncGetPage(String name) {
-  	// FIXME: можно прочитать только ключи, а потом делать выборки
-   	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
-   	
-   	int i = 0;
- 		while (true) {
- 			if (i > GAESpecific.COUNT_TRIES)
- 				//if (pages.size() != 0)  // зависает но почему?
- 					throw new IllegalStateException();
- 			
- 			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
- 			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", name);
- 			pages = q.list();
- 			
- 			if (pages.size() > 1 || pages.size() == 0) {
- 				try {
- 					Thread.sleep(GAESpecific.TIME_STEP_MS);
- 				} catch (InterruptedException e1) {
- 					throw new RuntimeException(e1);
- 				}
- 				i++;
- 				continue;
- 		  }
- 			break;
- 		}
- 		
-		if (pages.size() == 0)
-		 	return Optional.absent();
-		 
-		return Optional.of(pages.get(0));
+  	return new GAESpecific().getPage(name);
   }
   
   // FIXME: если появится пользователи, то одного имени будет мало
@@ -181,7 +135,7 @@ public class PageKind {
   }
   
   public void persist() {
-  	ofy().save().entity(this).now();
+  	gae.persist(this);
   }
 
   // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
