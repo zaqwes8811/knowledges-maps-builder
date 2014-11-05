@@ -1,6 +1,8 @@
-package gae_store_space;
+package gae_store_space.queries;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_store_space.queries.OfyService.ofy;
+import gae_store_space.GeneratorKind;
+import gae_store_space.PageKind;
 
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
