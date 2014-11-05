@@ -1,7 +1,5 @@
 package gae_store_space;
 
-//import static gae_store_space.queries.OfyService.ofy;
-
 import gae_store_space.queries.GAESpecific;
 import gae_store_space.queries.OfyService;
 
@@ -71,9 +69,7 @@ public class AppInstance {
 			if (page.isPresent())
 				page.get().asyncDeleteFromStore();
 		} catch (UncheckedExecutionException e) {
-			// FIXME: удаляем все копии
-			// FIXME: leak in store - active generators
-			ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
+			gae.asyncDeletePages(name);
 		}
 	}
 
@@ -81,7 +77,7 @@ public class AppInstance {
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
 	public PageKind syncCreatePageIfNotExist(String name, String text) {
 		// FIXME: add user info
-		List<PageKind> pages = gae.getPages(name);
+		List<PageKind> pages = gae.getPagesMaybeOutdated(name);
 		
 		if (pages.isEmpty()) {
 			TextPipeline processor = new TextPipeline();
@@ -142,7 +138,7 @@ public class AppInstance {
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: add user info
 		
-		List<PageKind> pages = gae.getPages();
+		List<PageKind> pages = gae.getPagesMaybeOutdated();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) 
