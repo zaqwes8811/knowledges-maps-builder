@@ -25,15 +25,22 @@ public final class GeneratorAnyDistribution {
   private final Integer IDX_POSITION_ = 2;
   private final ArrayList<DistributionElement> d;
   
-  // Любой список с числами
-  // @throws: GeneratorDistributionException
   public static GeneratorAnyDistribution create(ArrayList<DistributionElement> distribution) {
   	if (distribution == null)
   		throw new IllegalArgumentException();
   	
     if (distribution.isEmpty())
-      throw new GeneratorDistributionException("Input list must be no empty.");
+    	throw new IllegalArgumentException();
+    
     return new GeneratorAnyDistribution(distribution);
+  }
+  
+  public Integer getActiveVolume() {
+  	Integer r = 0;
+  	for (DistributionElement e: d)
+  		if (e.isActive())
+  			r += e.getImportancy();
+  	return r;
   }
 
   private GeneratorAnyDistribution(ArrayList<DistributionElement> distribution) {
