@@ -1,0 +1,30 @@
+class PathValue(object):
+    def __init__(self, page, gen='Default', pos=0):
+        self.pageName = page
+        self.genName = gen
+        self.pointPos = pos
+
+    def assign_deserialized(self, obj):
+        self.pageName = obj['pageName']
+        self.genName = obj['genName']
+        self.pointPos = obj['pointPos']
+
+
+class UserInfoValue(object):
+    def __init__(self, obj):
+        self.pageName = None
+        self.genNames = None
+        self.pointPos = None
+        self.assign_deserialized(obj)
+
+    def assign_deserialized(self, obj):
+        self.pageName = obj['pageName']
+        self.genNames = obj['genNames']
+        # self.pointPos = obj['pointPos']  # no exist. was bug coupled with it
+
+
+class DistributionElem(object):
+    def __init__(self, elem):
+        self.frequency = elem['frequency']
+        self.unknown = elem['unknown']
+        self.inBoundary = elem['inBoundary']
