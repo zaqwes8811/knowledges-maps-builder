@@ -33,7 +33,7 @@ class UserInfoValue(object):
 class DistributionElem(object):
     def __init__(self, elem):
         self.frequency = elem['frequency']
-        self.enabled = elem['enabled']
+        self.unknown = elem['unknown']
         self.inBoundary = elem['inBoundary']
 
 
