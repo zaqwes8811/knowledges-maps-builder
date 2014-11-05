@@ -10,7 +10,6 @@ import java.util.Set;
 
 import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
-import pipeline.estimators.SimpleImportanceProcessor;
 
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;

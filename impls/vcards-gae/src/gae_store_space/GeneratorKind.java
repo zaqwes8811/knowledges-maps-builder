@@ -116,7 +116,7 @@ public class GeneratorKind
   }
   
   public void persist() {
-  	gae.persist(this);
+  	gae.asyncPersist(this);
   }
 	
   public void syncCreateInStore() {

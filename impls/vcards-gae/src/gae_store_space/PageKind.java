@@ -16,7 +16,6 @@
 
 package gae_store_space;
 
-//import static gae_store_space.OfyService.ofy;
 
 import gae_store_space.queries.GAESpecific;
 
@@ -95,7 +94,7 @@ public class PageKind {
   }
   
   private void deleteGenerators() {
-  	gae.deleteGenerators(generators);
+  	gae.asyncDeleteGenerators(generators);
   }
   
   public ArrayList<Integer> getLengthsSentences() {
@@ -110,7 +109,7 @@ public class PageKind {
   }
   
   private static Optional<PageKind> syncGetPage(String name) {
-  	return new GAESpecific().getPage(name);
+  	return new GAESpecific().getPageWaitConvergence(name);
   }
   
   // FIXME: если появится пользователи, то одного имени будет мало
@@ -136,7 +135,7 @@ public class PageKind {
   }
   
   public void persist() {
-  	gae.persist(this);
+  	gae.asyncPersist(this);
   }
 
   // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
@@ -148,7 +147,7 @@ public class PageKind {
   //
   // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
   public Optional<GeneratorKind> getGenerator(String name) { 
-  	return gae.getGenerator(generators, name);
+  	return gae.getGeneratorWaitConvergence(generators, name);
   }
   
   public List<String> getGenNames() {
@@ -263,7 +262,7 @@ public class PageKind {
 		g.disablePoint(p.pointPos);
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
-		gae.persist(g);
+		gae.asyncPersist(g);
   }
   
   public Optional<ImmutableList<DistributionElement>>  getDistribution(String genName) {
@@ -273,6 +272,6 @@ public class PageKind {
   
   public void asyncDeleteFromStore() {
   	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
-		gae.deletePage(this);
+		gae.asyncDeletePage(this);
   }
 }
