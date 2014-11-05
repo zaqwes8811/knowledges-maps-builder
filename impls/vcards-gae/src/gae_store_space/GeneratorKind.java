@@ -17,8 +17,6 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
 
-//import frozen.dal.accessors_text_file_storage.OutOfRangeOnAccess;
-
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
 //   Возвращает индекс массива исходного распределения.
@@ -66,13 +64,17 @@ public class GeneratorKind
   // Наверное можно было бы сереализовать его, но из-за эквалайзинга,
   //   сохраняю исходные распределения отдельно
   @Ignore 
-  GeneratorAnyDistribution gen;
+  Optional<GeneratorAnyDistribution> gen = Optional.absent();
   
   @Ignore
   GAESpecific gae = new GAESpecific();
 
   public ImmutableList<DistributionElement> getDistribution() {
     return ImmutableList.copyOf(distribution);
+  }
+  
+  public Integer getActiveVolume() {
+  	return gen.get().getActiveVolume();
   }
 
   // Любой список с числами
@@ -86,11 +88,11 @@ public class GeneratorKind
   }
 
   public Integer getPosition() {
-    return Optional.of(gen).get().getPosition();
+    return gen.get().getPosition();
   }
 
-  private void reloadGenerator(ArrayList<DistributionElement> distribution) {
-    gen = GeneratorAnyDistribution.create(distribution);
+  public void reloadGenerator(ArrayList<DistributionElement> distribution) {
+    gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
   private GeneratorKind(ArrayList<DistributionElement> distribution, String name) {

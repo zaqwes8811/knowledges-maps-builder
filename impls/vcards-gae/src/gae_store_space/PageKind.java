@@ -82,6 +82,8 @@ public class PageKind {
   
   @Ignore
 	private static final Integer STEP_WINDOW_SIZE = 10;  // по столько будем шагать 
+  @Ignore
+  private static final Double SWITCH_THRESHOLD = 0.2;
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   private Integer etalonVolume = 0;
@@ -213,6 +215,7 @@ public class PageKind {
   }
 
   // About: Возвращать частоты, сортированные по убыванию.
+  // Это должен быть getter
   public ArrayList<DistributionElement> buildImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
@@ -234,9 +237,6 @@ public class PageKind {
     	
     	r.get(index).markInBoundary();
     }
-    
-    // Создаем объем
-
     return r;
   }
    
@@ -255,6 +255,14 @@ public class PageKind {
 		return Optional.of(new WordDataValue(value, content, pointPosition));
   }
   
+  private Optional<GeneratorKind> getGenerator() {
+  	Optional<GeneratorKind> r = Optional.absent();
+  	if (accessGen().isPresent()) {
+  		r = gae.asyncGetGenerator(accessGen().get());
+  	}
+  	return r;
+  }
+   
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
@@ -265,7 +273,39 @@ public class PageKind {
 		return unigramKinds.get(pos);
   }
   
+  private void IncBoundary() {
+  	boundaryPtr += STEP_WINDOW_SIZE;
+  	if (boundaryPtr > sentencesKinds.size())
+  		boundaryPtr = sentencesKinds.size();
+  }
+  
+  private void moveBoundary() {
+  	Integer _currentVolume = getGenerator().get().getActiveVolume();
+  	if (etalonVolume.equals(0)) {
+  		// создаем первый объем
+  		etalonVolume = _currentVolume;
+  		gae.asyncPersist(this);
+  	}
+  	
+  	if (_currentVolume < SWITCH_THRESHOLD * etalonVolume) {
+  		// FIXME: no exception safe
+  		// перезагружаем генератор
+  		Integer currBoundary = boundaryPtr;
+  		IncBoundary(); 
+  		
+  		if (!currBoundary.equals(boundaryPtr)) {
+  			// есть еще контекст
+  			ArrayList<DistributionElement> d = buildImportanceDistribution();
+  			getGenerator().get().reloadGenerator(d);
+  		}
+  		
+  		gae.asyncPersist(this);
+  	}
+  }
+  
   public void disablePoint(PathValue p) {
+  	moveBoundary();
+
   	GeneratorKind g = getGenerator(p.genName).get();
 		g.disablePoint(p.pointPos);
 		
