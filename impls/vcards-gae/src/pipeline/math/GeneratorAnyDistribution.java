@@ -43,7 +43,7 @@ public final class GeneratorAnyDistribution {
     ArrayList<Integer> transposed = new ArrayList<Integer>();
     for (DistributionElement elem: distribution)
       if (elem.isActive())
-        transposed.add(elem.frequency);
+        transposed.add(elem.getImportancy());
       else {
         transposed.add(0);  // просто обнуляем частоту, она не появится
       }
