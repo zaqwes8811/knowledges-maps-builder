@@ -1,6 +1,9 @@
 package gae_store_space;
 
-import static gae_store_space.OfyService.ofy;
+//import static gae_store_space.queries.OfyService.ofy;
+
+import gae_store_space.queries.GAESpecific;
+import gae_store_space.queries.OfyService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,8 @@ import cross_cuttings_layer.CrossIO;
 
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;	
+	
+	GAESpecific gae = new GAESpecific();
 	
 	static public String getTestFileName() {
     return "./test_data/korra/etalon.srt";
@@ -76,7 +81,7 @@ public class AppInstance {
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
 	public PageKind syncCreatePageIfNotExist(String name, String text) {
 		// FIXME: add user info
-		List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
+		List<PageKind> pages = gae.getPages(name);
 		
 		if (pages.isEmpty()) {
 			TextPipeline processor = new TextPipeline();
@@ -137,7 +142,7 @@ public class AppInstance {
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: add user info
 		
-		List<PageKind> pages = ofy().load().type(PageKind.class).list();
+		List<PageKind> pages = gae.getPages();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) 

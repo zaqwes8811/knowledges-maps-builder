@@ -16,18 +16,20 @@
 
 package gae_store_space;
 
-import static gae_store_space.OfyService.ofy;
+//import static gae_store_space.OfyService.ofy;
+
+import gae_store_space.queries.GAESpecific;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.collections4.CollectionUtils;
+import net.jcip.annotations.NotThreadSafe;
+
 import org.apache.commons.collections4.Predicate;
 import org.javatuples.Pair;
 
-import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import servlets.protocols.PathValue;
@@ -41,7 +43,6 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
-import com.googlecode.objectify.cmd.Query;
 
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
@@ -147,56 +148,11 @@ public class PageKind {
   //
   // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
   public Optional<GeneratorKind> getGenerator(String name) { 
-  	if (name == null)
-  		throw new IllegalArgumentException();
-  	
-  	if (generators.isEmpty())
-  		throw new IllegalStateException();
-  	
-  	Optional<GeneratorKind> g = Optional.absent();
-  	
-  	int i = 0;
- 		while (true) {
- 			if (i > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
- 			
- 			List<GeneratorKind> gen = 
-	  			ofy().load().type(GeneratorKind.class)
-		  			.filterKey("in", generators)
-		  			.filter("name = ", name)
-		  			.list();
-	
-	  	if (!gen.isEmpty()) {
-	  		if (gen.size() > 1)
-	    		throw new IllegalStateException(name);
-	    	
-	    	g = Optional.of(gen.get(0));
-	    	g.get().restore();
-	  	} else {
- 				try {
- 					Thread.sleep(GAESpecific.TIME_STEP_MS);
- 				} catch (InterruptedException e1) {
- 					throw new RuntimeException(e1);
- 				}
- 				i++;
- 				continue;
- 		  }
- 			break;
- 		}
-  	
-  	return g;
+  	return gae.getGenerator(generators, name);
   }
   
   public List<String> getGenNames() {
-  	List<GeneratorKind> gs = 
-  			ofy().load().type(GeneratorKind.class)
-	  			.filterKey("in", generators).list();
-  	
-  	List<String> r = new ArrayList<String>();
-  	for (GeneratorKind g: gs) 
-  		r.add(g.getName()); 
-
-  	return r;
+  	return gae.getGenNames(generators);
   }
 
   public void addGenerator(GeneratorKind gen) {
@@ -307,8 +263,7 @@ public class PageKind {
 		g.disablePoint(p.pointPos);
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
-		
-		ofy().save().entity(g).now();
+		gae.persist(g);
   }
   
   public Optional<ImmutableList<DistributionElement>>  getDistribution(String genName) {
@@ -318,6 +273,6 @@ public class PageKind {
   
   public void asyncDeleteFromStore() {
   	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
-		ofy().delete().type(PageKind.class).id(id).now();
+		gae.deletePage(this);
   }
 }
