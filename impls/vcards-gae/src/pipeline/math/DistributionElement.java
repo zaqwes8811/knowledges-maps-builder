@@ -30,7 +30,7 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   }
   
   public Boolean isActive() {
-  	return enabled; // && isBoundary;
+  	return enabled && inBoundary;
   }
   
   public DistributionElement(Integer freq, Boolean ena) {
