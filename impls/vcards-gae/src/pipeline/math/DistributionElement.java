@@ -9,8 +9,12 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   
 	// FIXME: make get/set
 	public Integer frequency;
-  public Boolean enabled = true;
+  private Boolean enabled = true;
   public Boolean inBoundary = false;
+  
+  public void markKnown() {
+  	enabled = false;
+  }
   
   public void setBoundary(Boolean value) {
   	inBoundary = value;

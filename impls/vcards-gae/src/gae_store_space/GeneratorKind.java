@@ -103,7 +103,7 @@ public class GeneratorKind
   public void disablePoint(Integer idx) {
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-    getElem(idx).enabled = false;
+    getElem(idx).markKnown();
     reloadGenerator(distribution);
   }
 
@@ -136,11 +136,6 @@ public class GeneratorKind
   		
     // похоже при восстановлении вызывается он
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
-    reloadGenerator(distribution);
-  }
-
-  public void enablePoint(Integer idx) {
-    getElem(idx).enabled = true;
     reloadGenerator(distribution);
   }
 }
