@@ -47,8 +47,8 @@ import unittest
 
 def plot_distribution(d):
     # to NumPy arrays
-    disabled = []
-    x_disabled = []
+    in_boundary = []
+    x_in_boundary = []
     all_points = []
     x_all_points = []
     active = []
@@ -59,19 +59,20 @@ def plot_distribution(d):
         x_all_points.append(i)
 
         if elem.inBoundary:
-            disabled.append(elem.frequency)
-            x_disabled.append(i)
-        #else:
+            in_boundary.append(elem.frequency)
+            x_in_boundary.append(i)
             active.append(elem.frequency)
             x_active = np.append(x_active, j)  # FIXME: bad!
             j += 1
 
+        if not elem.unknown:
+            pass
+
     # Processing
-    plt.plot(x_all_points, all_points, '-', x_disabled, disabled, 'o')
+    plt.plot(x_all_points, all_points, '-')
+    plt.plot(x_in_boundary, in_boundary, 'o')
     plt.plot(-1 * x_active, active)
     plt.grid(True)
-    plt.show()
-
 
 def unroll_distribution(d):
     X = []
@@ -140,6 +141,15 @@ class TestSequenceFunctions(unittest.TestCase):
         d = self.ajax.get_distribution_sync(self.arg0)
         plot_distribution(d)
 
+    def accept_ngram_data(self):
+        r = self.app_ajax.get_item(self.arg0)
+        #self.assertIsNotNone(r)
+
+        new_arg0 = self.arg0.clone()
+        new_arg0.set_position(r.get_position())
+        return new_arg0
+
+    # TESTs
     def test_base(self):
         self.plot_distribution()
 
@@ -156,7 +166,6 @@ class TestSequenceFunctions(unittest.TestCase):
         # Nearest Neighbors version
         pass
 
-
     def test_pure_clustering(self):
         pass
         #cluster_only_by_freq(d, estimator, n_clusters)
@@ -166,11 +175,16 @@ class TestSequenceFunctions(unittest.TestCase):
         ls.sort()
 
     def test_accept_word_data(self):
-        r = self.app_ajax.get_item(self.arg0)
-        self.assertIsNotNone(r)
+        self.accept_ngram_data()
 
-        new_arg0 = self.arg0.clone()
-        new_arg0.set_position(r.get_position())
+    def test_boundary_expand(self):
+        self.plot_distribution()
+        for i in range(100):
+            arg0 = self.accept_ngram_data()
+            self.app_ajax.mark_known(arg0)
 
-        print r
+        self.plot_distribution()
+        plt.show()
+
+
 

@@ -67,6 +67,8 @@ public final class GeneratorAnyDistribution {
     // Используется рекурсивная реализация на базе бинарного поиска.
     // На модели она показала наилучшую масштабирумость и скорость работы.
     Float value = new Random().nextFloat()* maxValue_;
+    
+    // FIXME: тут однажды упало
     ImmutableList<Integer> result =  split(codeBook_, countPoints_, value).getValue1().get();
     Integer r = result.get(IDX_POSITION_);
     
