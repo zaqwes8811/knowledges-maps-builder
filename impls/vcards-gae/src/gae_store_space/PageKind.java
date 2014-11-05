@@ -226,7 +226,7 @@ public class PageKind {
     	if (!unigramKinds.get(index).getValue().equals(ngram))
     		throw new AssertException();
     	
-    	r.get(index).inBoundary = true;
+    	r.get(index).markInBoundary();
     }
 
     return r;

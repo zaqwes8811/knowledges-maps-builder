@@ -8,9 +8,18 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   private static final long serialVersionUID = -3004460083142639254L;
   
 	// FIXME: make get/set
-	public Integer frequency;
+	private Integer frequency;
   private Boolean enabled = true;
-  public Boolean inBoundary = false;
+  private Boolean inBoundary = false;
+  
+  public Integer getImportancy()
+  {
+  	return frequency;
+  }
+  
+  public void markInBoundary() {
+  	inBoundary = true;
+  }
   
   public void markKnown() {
   	enabled = false;
