@@ -13,6 +13,10 @@ class AppAjax(object):
     def __init__(self, url, port):
         self.server = url + ":" + str(port)
 
+    def pack_arg0(self, arg0):
+        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
+        return payload
+
     def _build_url(self, uri):
         return self.server + uri
 
@@ -27,15 +31,27 @@ class AppAjax(object):
             result.append(pro.UserInfoValue(val))
         return result
 
+    def get_item(self, arg0):
+        url = '/pkg'
+        payload = self.pack_arg0(arg0)
+        r = requests.get(self._build_url(url), params=payload)
+        r.raise_for_status()
+
+        return pro.NGramData(r.json())
+
 
 class ResearchAjax(object):
     def __init__(self, url, port):
         self.server = url + ":" + str(port)
 
+    def pack_arg0(self, arg0):
+        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
+        return payload
+
     def get_lengths_sentences(self, arg0):
         # FIXME: запрос длины предложений - статистика длин
         url = '/get_lengths_sentences'
-        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
+        payload = self.pack_arg0(arg0)
         r = requests.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
@@ -46,7 +62,7 @@ class ResearchAjax(object):
 
     def get_distribution_sync(self, arg0):
         url = '/research/get_distribution'
-        payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
+        payload = self.pack_arg0(arg0)
         r = requests.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
