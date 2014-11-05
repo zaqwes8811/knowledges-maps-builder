@@ -16,6 +16,8 @@ import servlets.protocols.PathValue;
 
 import com.google.gson.Gson;
 
+import cross_cuttings_layer.CrossIO;
+
 
 // FIXME: не работает на gae
 @NotThreadSafe
@@ -31,6 +33,8 @@ public class SetterKnownIt extends HttpServlet {
 	  			new BufferedReader(new InputStreamReader(request.getInputStream()));
 	
 	  	String data = br.readLine();
+	  	
+	  	CrossIO.print(data);
 	  	
 	  	PathValue p = new Gson().fromJson(data, PathValue.class);
 	  	
