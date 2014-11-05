@@ -22,7 +22,6 @@ public final class GeneratorAnyDistribution {
   private final Integer countPoints_;
   private final Integer maxValue_;
   private final ImmutableList<ImmutableList<Integer>> codeBook_;
-  //private final Integer INTERVAL_POS_ = 1;
   private final Integer IDX_POSITION_ = 2;
   private final ArrayList<DistributionElement> d;
   
@@ -43,7 +42,7 @@ public final class GeneratorAnyDistribution {
     // Transpose
     ArrayList<Integer> transposed = new ArrayList<Integer>();
     for (DistributionElement elem: distribution)
-      if (elem.enabled)
+      if (elem.isActive())
         transposed.add(elem.frequency);
       else {
         transposed.add(0);  // просто обнуляем частоту, она не появится
@@ -64,7 +63,7 @@ public final class GeneratorAnyDistribution {
     ImmutableList<Integer> result =  split(codeBook_, countPoints_, value).getValue1().get();
     Integer r = result.get(IDX_POSITION_);
     
-    if (!d.get(r).enabled)
+    if (!d.get(r).isActive())
     	throw new IllegalStateException();
     
     return r;
