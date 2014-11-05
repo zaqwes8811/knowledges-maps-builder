@@ -18,6 +18,7 @@ class PathValue(object):
     def set_position(self, pos):
         self.pointPos = pos
 
+
 class UserInfoValue(object):
     def __init__(self, obj):
         self.pageName = None
