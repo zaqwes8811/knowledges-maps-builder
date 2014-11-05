@@ -44,6 +44,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
 import cross_cuttings_layer.AssertException;
+import cross_cuttings_layer.CrossIO;
 import cross_cuttings_layer.OwnCollections;
 
 
@@ -81,7 +82,7 @@ public class PageKind {
   }
   
   @Ignore
-	private static final Integer STEP_WINDOW_SIZE = 10;  // по столько будем шагать 
+	private static final Integer STEP_WINDOW_SIZE = 5;  // по столько будем шагать 
   @Ignore
   private static final Double SWITCH_THRESHOLD = 0.2;
   
@@ -280,6 +281,8 @@ public class PageKind {
   }
   
   private void moveBoundary() {
+  	CrossIO.print("know");
+  	
   	Integer _currentVolume = getGenerator().get().getActiveVolume();
   	if (etalonVolume.equals(0)) {
   		// создаем первый объем
@@ -297,6 +300,8 @@ public class PageKind {
   			// есть еще контекст
   			ArrayList<DistributionElement> d = buildImportanceDistribution();
   			getGenerator().get().reloadGenerator(d);
+  			
+  			CrossIO.print("boundary moved");
   		}
   		
   		gae.asyncPersist(this);
