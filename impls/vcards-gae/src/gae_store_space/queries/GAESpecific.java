@@ -45,6 +45,10 @@ public final class GAESpecific {
 		ofy().delete().keys(generators).now();
 	}
 	
+	public void asyncDeleteGenerators(Key<GeneratorKind> generators) {
+		ofy().delete().keys(generators).now();
+	}
+	
 	public void asyncDeletePage(PageKind p) {
 		ofy().delete().type(PageKind.class).id(p.getId()).now();
 	}
@@ -189,6 +193,12 @@ public final class GAESpecific {
   		r.add(g.getName()); 
 
   	return r;
+  }
+	
+	public List<String> getGenNames(Key<GeneratorKind> generators) {
+		ArrayList<Key<GeneratorKind>> a = new ArrayList<Key<GeneratorKind>>();
+		a.add(generators);
+		return getGenNames(a);
   }
 	
 	public List<PageKind> getPagesMaybeOutdated() {

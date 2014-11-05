@@ -9,7 +9,7 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   
 	// FIXME: make get/set
 	private Integer frequency;
-  private Boolean enabled = true;
+  private Boolean unknown = true;
   private Boolean inBoundary = false;
   
   public Integer getImportancy()
@@ -22,7 +22,7 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   }
   
   public void markKnown() {
-  	enabled = false;
+  	unknown = false;
   }
   
   public void setBoundary(Boolean value) {
@@ -30,12 +30,12 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   }
   
   public Boolean isActive() {
-  	return enabled && inBoundary;
+  	return unknown && inBoundary;
   }
   
   public DistributionElement(Integer freq, Boolean ena) {
     frequency = freq;
-    enabled = ena;
+    unknown = ena;
   }
   
   public  DistributionElement(Integer freq) {

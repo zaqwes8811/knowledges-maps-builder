@@ -74,12 +74,17 @@ public class PageKind {
   // все равно может упасть. с единичным ключем фигня какая-то
   // FIXME: вообще это проблема
   @Load  
-  private List<Key<GeneratorKind>> generators = new ArrayList<Key<GeneratorKind>>(); 
+  private Key<GeneratorKind> generator = null;
+  
+  private Optional<Key<GeneratorKind>> accessGen() {
+  	return Optional.fromNullable(generator);
+  }
   
   @Ignore
 	private static final Integer STEP_WINDOW_SIZE = 10;  // по столько будем шагать 
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
+  private Integer etalonVolume = 0;
   
   @Ignore
   GAESpecific gae = new GAESpecific();
@@ -94,7 +99,7 @@ public class PageKind {
   }
   
   private void deleteGenerators() {
-  	gae.asyncDeleteGenerators(generators);
+  	gae.asyncDeleteGenerators(accessGen().get());
   }
   
   public ArrayList<Integer> getLengthsSentences() {
@@ -147,16 +152,18 @@ public class PageKind {
   //
   // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
   public Optional<GeneratorKind> getGenerator(String name) { 
-  	return gae.getGeneratorWaitConvergence(generators, name);
+  	ArrayList<Key<GeneratorKind>> a = new ArrayList<Key<GeneratorKind>>();
+		a.add(accessGen().get());
+  	return gae.getGeneratorWaitConvergence(a, name);
   }
   
   public List<String> getGenNames() {
-  	return gae.getGenNames(generators);
+  	return gae.getGenNames(accessGen().get());
   }
 
   public void addGenerator(GeneratorKind gen) {
   	Key<GeneratorKind> k = Key.create(gen);
-    generators.add(k);
+    generator = k;
   }
 
   // Это при создании с нуля
@@ -169,11 +176,11 @@ public class PageKind {
     this.rawSource = rawSource;
   }
   
-  private Set<String> getNGramms() {
+  private Set<String> getNGramms(Integer boundary) {
   	Integer end = sentencesKinds.size();
   	
-  	if (sentencesKinds.size() > boundaryPtr)
-  		end = boundaryPtr;
+  	if (sentencesKinds.size() > boundary)
+  		end = boundary;
   	
   	// [.., end)
   	ArrayList<SentenceKind> kinds = new ArrayList<SentenceKind>(sentencesKinds.subList(0, end));
@@ -218,7 +225,7 @@ public class PageKind {
       r.add(new DistributionElement(word.getImportance()));
     
     // Get word befor boundary
-    Set<String> ngramms = getNGramms();
+    Set<String> ngramms = getNGramms(boundaryPtr);
     for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
     	
