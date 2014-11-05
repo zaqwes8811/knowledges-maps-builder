@@ -33,6 +33,7 @@
 
 # app
 import http_bridge
+import protocol as pro
 
 # 3rd party
 import matplotlib.pyplot as plt
@@ -131,7 +132,7 @@ class TestSequenceFunctions(unittest.TestCase):
         port = 8080
         self.ajax = http_bridge.ResearchAjax(server, port)
         self.ajax.create_or_replace_page()
-        self.arg0 = http_bridge.PathValue(self.ajax.get_research_page_name())
+        self.arg0 = pro.PathValue(self.ajax.get_research_page_name())
 
     def test_base(self):
         d = self.ajax.get_distribution_sync(self.arg0)
