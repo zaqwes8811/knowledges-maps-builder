@@ -193,33 +193,55 @@ public class PageKind {
   	return buildPipeline().getNGrams(kinds);
   }
   
+  private static class Tmp implements Predicate<NGramKind> {
+		@Override
+		public boolean evaluate(NGramKind o) {
+			return o.getValue().equals(ngram);
+		}
+		
+		String ngram;
+		public Tmp(String value) {
+			ngram = value;
+		}
+	};
+  
   private Integer getUnigramIndex(String ngram) {
-  	 class Tmp implements Predicate<NGramKind> {
-  		// FIXME: test() ?
-  		@Override
-  		public boolean evaluate(NGramKind o) {
-  			return o.getValue().equals(ngram);
-  		}
-  		
-  		String ngram;
-  		public Tmp(String value) {
-  			ngram = value;
-  		}
-  	};
-  	
   	Tmp p = new Tmp(ngram);
   	
   	Pair<NGramKind, Integer> k = OwnCollections.find(unigramKinds, p);
   	if (k.getValue1().equals(-1))
   		throw new IllegalStateException();
   	
-  	return k.getValue1();
+  	Integer r = k.getValue1();
+  	checkAccessIndex(r);
+  	
+  	return r;
+  }
+  
+  private void checkAccessIndex(Integer idx) {
+  	if (!(idx < unigramKinds.size())) {
+  		throw new IllegalArgumentException();
+  	}
   }
 
   // Получаем текущее распределение.
-  public Optional<ArrayList<DistributionElement>>  getDistribution(String genName) {
+  public ArrayList<DistributionElement>  getDistribution(String genName) {
   	GeneratorKind gen = getGenerator(genName).get();
-  	return Optional.of(gen.getCurrentDistribution());
+  	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
+  	checkDistributionInvariant(r);
+  	return r;
+  }
+  
+  public ArrayList<DistributionElement>  getDistribution() {
+  	GeneratorKind gen = getGenerator().get();
+  	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
+  	checkDistributionInvariant(r);
+  	return r;
+  }
+  
+  private void checkDistributionInvariant(ArrayList<DistributionElement> d) {
+  	if (d.size() != unigramKinds.size())
+  		throw new IllegalStateException();
   }
   
   // About: Возвращать частоты, сортированные по убыванию.
@@ -242,17 +264,17 @@ public class PageKind {
   }
   
   private ArrayList<DistributionElement> applyBoundary(ArrayList<DistributionElement> d) {
+  	checkDistributionInvariant(d);
+  	
   	// Get word befor boundary
     Set<String> ngramms = getNGramms(boundaryPtr);
     
     for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
+    	checkAccessIndex(index);
     	
     	// Проверка! Тестов как таковых нет, так что пока так
     	if (!unigramKinds.get(index).getValue().equals(ngram))
-    		throw new AssertException();
-    	
-    	if (d.size() != this.unigramKinds.size())
     		throw new AssertException();
     	
     	d.get(index).markInBoundary();
@@ -291,9 +313,7 @@ public class PageKind {
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
   private NGramKind getNGram(Integer pos) {
-  	if (! (pos < this.unigramKinds.size()))
-  		throw new IllegalArgumentException();
-  	
+  	checkAccessIndex(pos);
 		return unigramKinds.get(pos);
   }
   
@@ -305,11 +325,7 @@ public class PageKind {
   
   private Integer getCurrentVolume() {
   	Integer r = getGenerator().get().getActiveVolume();
-  	/*CrossIO.print(
-  			  "know; Among = " + r 
-  			+ "; et = " + this.etalonVolume
-  			+ "; boundary = " + this.boundaryPtr);
-  			*/
+  	/*CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);*/
   	return r;
   }
   
@@ -317,15 +333,16 @@ public class PageKind {
   	etalonVolume = val;
   }
   
+  private void setDistribution(ArrayList<DistributionElement> d) {
+  	checkDistributionInvariant(d);
+  	getGenerator().get().reloadGenerator(d);
+  }
+  
   private void move() {
-  	// есть еще контекст
-		ArrayList<DistributionElement> d = getGenerator().get().getCurrentDistribution();
-		
+		ArrayList<DistributionElement> d = getDistribution();
 		d = applyBoundary(d);
 		
-		getGenerator().get().reloadGenerator(d);
-		
-		// а не стирает ли известные?
+		setDistribution(d);
 		setVolume(getCurrentVolume());
   }
   
@@ -357,13 +374,16 @@ public class PageKind {
      		throw new IllegalStateException();
      	
    		// создаем первый объем
-   		this.setVolume(getCurrentVolume());
+   		setVolume(getCurrentVolume());
    		gae.asyncPersist(this);
   	}
   	
   	moveBoundary();
 
   	GeneratorKind g = getGenerator(p.genName).get();
+  	
+  	checkAccessIndex(p.pointPos);
+  	
 		g.disablePoint(p.pointPos);
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.

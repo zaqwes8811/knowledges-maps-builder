@@ -147,6 +147,7 @@ View.prototype._markIsKnowIt = function() {
   
   var point = this._makePoint();
   this.dal.markIsDone(point);
+  gPlotView.onGetData();
 }
 
 View.prototype._makePoint = function () {
