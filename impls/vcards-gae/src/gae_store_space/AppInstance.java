@@ -50,7 +50,7 @@ public class AppInstance {
   	if (!page.isPresent())
   		throw new IllegalStateException();
 
-  	return ImmutableList.copyOf(page.get().getDistribution(path.genName).get());
+  	return ImmutableList.copyOf(page.get().getDistribution(path.genName));
   }
 	
 	// скорее исследовательский метод
