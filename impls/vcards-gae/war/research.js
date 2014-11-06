@@ -17,7 +17,7 @@ var protocols = {
 
   DistributionElem: function(elem) {
     this.frequency = elem.frequency;
-    this.enabled = elem.enabled;
+    this.enabled = elem.unknown;
   }
 };
 
@@ -52,6 +52,10 @@ function CurrentWordData() {
 
 CurrentWordData.prototype.set = function (data) {
   this.data = data;
+}
+
+CurrentWordData.prototype.getImportance = function () {
+  return this.data.importance;
 }
 
 CurrentWordData.prototype.getPos = function () {
@@ -125,6 +129,10 @@ View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
+View.prototype.draNGramStatistic = function (imp) {
+  $("#count_occurance").text(imp);
+}
+
 View.prototype.redrawSentences = function (sentences) {
   var dom = $('#sentences');
   dom.empty();
@@ -185,6 +193,7 @@ View.prototype.onGetWordPackage = function () {
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
       self.redrawSentences(v.sentences);
+      self.draNGramStatistic(v.importance);
 
       // сбрасываем флаг "i know"
       $('#know_it').prop('checked', false);
@@ -256,12 +265,12 @@ DataAccessLayer.prototype.resetFullStore =  function () {
 // создаются до загрузки DOM?
 var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
-//var gPlotView = new PlotView(gDataAccessLayer);
+var gPlotView = new PlotView(gDataAccessLayer);
 
 $(function() {
   // Handler for .ready() called.
   gView.reload();
-  //gPlotView.reset();
+  gPlotView.reset();
 
 
   // http://hayageek.com/ajax-file-upload-jquery/

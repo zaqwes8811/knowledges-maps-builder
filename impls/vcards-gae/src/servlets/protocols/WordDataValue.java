@@ -11,6 +11,11 @@ public class WordDataValue {
 	public final String word;  // хорошо бы Optional, но скорее всего не сереализуется
 	public final ArrayList<String> sentences;
 	public final Integer pointPos;
+	public Integer importance = 0;
+	
+	public void setImportance(Integer val) {
+		this.importance = val;
+	}
 	
 	// cluster range name - важность слова - три или 4 группы
 }
