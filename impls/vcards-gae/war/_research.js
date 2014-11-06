@@ -22,6 +22,7 @@ PlotView.prototype.plot = function (distribution) {
   var self = this;
   var allPoints = [];
   var disabledPoints = [];
+  var now_points = [];
   var numPoints = distribution.length;
 
   _.each(distribution, function(e, index) {
@@ -33,12 +34,16 @@ PlotView.prototype.plot = function (distribution) {
 
     if (!elem.enabled)
       disabledPoints.push([index, elem.frequency]);
+
+    if (elem.enabled && elem.inBoundary)
+      now_points.push([index, elem.frequency + 5000]);
   });
 
   // Функция рисования
   $.plot("#placeholder", [
-    { data: allPoints, label: "frequency(x)"}, 
-    { data: disabledPoints, label: "disabled", points: { show:true }, lines: {show: false}} ], 
+    { data: allPoints, label: "importancies"}, 
+    { data: disabledPoints, label: "known", points: { show:true }, lines: {show: false}} , 
+    { data: now_points, label: "now active", points: { show:true }, lines: {show: false}} ], 
 
     {
     series: {
