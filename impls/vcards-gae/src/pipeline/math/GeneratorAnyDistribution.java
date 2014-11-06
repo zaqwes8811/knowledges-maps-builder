@@ -38,8 +38,10 @@ public final class GeneratorAnyDistribution {
   public Integer getActiveVolume() {
   	Integer r = 0;
   	for (DistributionElement e: d)
-  		if (e.isActive())
-  			r += e.getImportancy();
+  		if (e.isActive()) {
+  			//r += e.getImportancy();  // по объему, но пока по штукам
+  			r++;
+  		}
   	return r;
   }
 
@@ -48,12 +50,17 @@ public final class GeneratorAnyDistribution {
   	
     // Transpose
     ArrayList<Integer> transposed = new ArrayList<Integer>();
+    int countActive = 0;
     for (DistributionElement elem: distribution)
-      if (elem.isActive())
+      if (elem.isActive()) {
         transposed.add(elem.getImportancy());
-      else {
+    		countActive++;
+      } else {
         transposed.add(0);  // просто обнуляем частоту, она не появится
       }
+    
+    if (countActive < 2)
+    	throw new IllegalArgumentException("No active points");
 
     Triplet<ArrayList<Integer>, Integer, Integer> tupleFx = makeFx(transposed);
     ArrayList<Integer> Fx = tupleFx.getValue0();
@@ -68,8 +75,13 @@ public final class GeneratorAnyDistribution {
     // На модели она показала наилучшую масштабирумость и скорость работы.
     Float value = new Random().nextFloat()* maxValue_;
     
+    Pair<Boolean, Optional<ImmutableList<Integer>>> s = split(codeBook_, countPoints_, value);
+    
+    if (!s.getValue1().isPresent())
+    	throw new RuntimeException("No finded");
+    
     // FIXME: тут однажды упало
-    ImmutableList<Integer> result =  split(codeBook_, countPoints_, value).getValue1().get();
+    ImmutableList<Integer> result =  s.getValue1().get();
     Integer r = result.get(IDX_POSITION_);
     
     if (!d.get(r).isActive())
