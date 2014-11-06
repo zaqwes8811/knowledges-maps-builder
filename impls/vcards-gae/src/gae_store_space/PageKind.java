@@ -44,7 +44,6 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
 import cross_cuttings_layer.AssertException;
-import cross_cuttings_layer.CrossIO;
 import cross_cuttings_layer.OwnCollections;
 
 
@@ -246,13 +245,14 @@ public class PageKind {
   	// Get word befor boundary
     Set<String> ngramms = getNGramms(boundaryPtr);
     
-    CrossIO.print(ngramms.size());
-    
     for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
     	
     	// Проверка! Тестов как таковых нет, так что пока так
     	if (!unigramKinds.get(index).getValue().equals(ngram))
+    		throw new AssertException();
+    	
+    	if (d.size() != this.unigramKinds.size())
     		throw new AssertException();
     	
     	d.get(index).markInBoundary();
@@ -305,10 +305,11 @@ public class PageKind {
   
   private Integer getCurrentVolume() {
   	Integer r = getGenerator().get().getActiveVolume();
-  	CrossIO.print(
+  	/*CrossIO.print(
   			  "know; Among = " + r 
   			+ "; et = " + this.etalonVolume
   			+ "; boundary = " + this.boundaryPtr);
+  			*/
   	return r;
   }
   
@@ -326,8 +327,6 @@ public class PageKind {
 		
 		// а не стирает ли известные?
 		setVolume(getCurrentVolume());
-		
-		CrossIO.print("boundary moved");
   }
   
   private void moveBoundary() {

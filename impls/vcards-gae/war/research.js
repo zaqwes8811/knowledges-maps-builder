@@ -17,7 +17,8 @@ var protocols = {
 
   DistributionElem: function(elem) {
     this.frequency = elem.frequency;
-    this.enabled = elem.unknown;
+    this.enabled = elem.unknown;  // плохо - может быть unknown
+    this.inBoundary = elem.inBoundary;
   }
 };
 
@@ -135,8 +136,9 @@ View.prototype.draNGramStatistic = function (imp) {
 
 View.prototype.redrawSentences = function (sentences) {
   var dom = $('#sentences');
+  var sent = [sentences[0]];
   dom.empty();
-  _.each(sentences, function(e) { dom.append('<li>'+ e + '</li>')});
+  _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
 }
 
 View.prototype._markIsKnowIt = function() {
