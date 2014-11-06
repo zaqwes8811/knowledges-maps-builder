@@ -54,6 +54,11 @@ def plot_distribution(d):
     active = []
     x_active = np.array([], dtype=np.uint32)
     j = 0
+
+    unknown = []
+    x_unknown = []
+    k = 0
+
     for i, elem in enumerate(d):
         all_points.append(elem.frequency)
         x_all_points.append(i)
@@ -65,12 +70,15 @@ def plot_distribution(d):
             x_active = np.append(x_active, j)  # FIXME: bad!
             j += 1
 
-        if not elem.unknown:
-            pass
+        if elem.unknown:
+            unknown.append(elem.frequency)
+            x_unknown.append(k)
+            k += 1
 
     # Processing
-    plt.plot(x_all_points, all_points, '-')
-    plt.plot(x_in_boundary, in_boundary, 'o')
+    #plt.plot(x_all_points, all_points, '-')
+    #plt.plot(x_in_boundary, in_boundary, 'o')
+    plt.plot(x_unknown, unknown, '-')
     plt.plot(-1 * x_active, active)
     plt.grid(True)
 
@@ -179,11 +187,12 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_boundary_expand(self):
         self.plot_distribution()
-        for i in range(100):
-            arg0 = self.accept_ngram_data()
-            self.app_ajax.mark_known(arg0)
+        for j in range(10):
+            for i in range(50):
+                arg0 = self.accept_ngram_data()
+                self.app_ajax.mark_known(arg0)
 
-        self.plot_distribution()
+            self.plot_distribution()
         plt.show()
 
 

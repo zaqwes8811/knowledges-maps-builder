@@ -69,8 +69,8 @@ public class GeneratorKind
   @Ignore
   GAESpecific gae = new GAESpecific();
 
-  public ImmutableList<DistributionElement> getDistribution() {
-    return ImmutableList.copyOf(distribution);
+  public ArrayList<DistributionElement> getCurrentDistribution() {
+    return distribution;
   }
   
   public Integer getActiveVolume() {
@@ -92,6 +92,7 @@ public class GeneratorKind
   }
 
   public void reloadGenerator(ArrayList<DistributionElement> distribution) {
+  	this.distribution = distribution;
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
