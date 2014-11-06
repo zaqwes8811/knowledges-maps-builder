@@ -81,8 +81,10 @@ public class PageKind {
   	return Optional.fromNullable(generator);
   }
   
+  // по столько будем шагать
+  // По малу шагать плохо тем что распределение может снова стать равном.
   @Ignore
-	private static final Integer STEP_WINDOW_SIZE = 5;  // по столько будем шагать 
+	private static final Integer STEP_WINDOW_SIZE = 20;  
   @Ignore
   private static final Double SWITCH_THRESHOLD = 0.2;
   
@@ -215,9 +217,16 @@ public class PageKind {
   	return k.getValue1();
   }
 
+  // Получаем текущее распределение.
+  public Optional<ArrayList<DistributionElement>>  getDistribution(String genName) {
+  	GeneratorKind gen = getGenerator(genName).get();
+  	return Optional.of(gen.getCurrentDistribution());
+  }
+  
   // About: Возвращать частоты, сортированные по убыванию.
   // Это должен быть getter
-  public ArrayList<DistributionElement> buildImportanceDistribution() {
+  // Все известные слова обнуляет!!
+  public ArrayList<DistributionElement> buildSourceImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
@@ -227,8 +236,18 @@ public class PageKind {
     for (NGramKind word : unigramKinds)
       r.add(new DistributionElement(word.getImportance()));
     
-    // Get word befor boundary
+    r = applyBoundary(r);
+    
+    // генератора еще нету   		
+    return r;
+  }
+  
+  private ArrayList<DistributionElement> applyBoundary(ArrayList<DistributionElement> d) {
+  	// Get word befor boundary
     Set<String> ngramms = getNGramms(boundaryPtr);
+    
+    CrossIO.print(ngramms.size());
+    
     for (String ngram: ngramms) {
     	Integer index = getUnigramIndex(ngram);
     	
@@ -236,9 +255,9 @@ public class PageKind {
     	if (!unigramKinds.get(index).getValue().equals(ngram))
     		throw new AssertException();
     	
-    	r.get(index).markInBoundary();
+    	d.get(index).markInBoundary();
     }
-    return r;
+    return d;
   }
    
   public Optional<WordDataValue> getWordData(String genName) {
@@ -280,30 +299,48 @@ public class PageKind {
   		boundaryPtr = sentencesKinds.size();
   }
   
+  private Integer getCurrentVolume() {
+  	Integer r = getGenerator().get().getActiveVolume();
+  	CrossIO.print(
+  			  "know; Among = " + r 
+  			+ "; et = " + this.etalonVolume
+  			+ "; boundary = " + this.boundaryPtr);
+  	return r;
+  }
+  
+  private void setVolume(Integer val) {
+  	etalonVolume = val;
+  }
+  
+  private void move() {
+  	// есть еще контекст
+		ArrayList<DistributionElement> d = getGenerator().get().getCurrentDistribution();
+		
+		d = applyBoundary(d);
+		
+		getGenerator().get().reloadGenerator(d);
+		
+		// а не стирает ли известные?
+		setVolume(getCurrentVolume());
+		
+		CrossIO.print("boundary moved");
+  }
+  
   private void moveBoundary() {
-  	Integer _currentVolume = getGenerator().get().getActiveVolume();
-  	CrossIO.print("know; Among = " + _currentVolume + "; et = " + this.etalonVolume);
+  	Integer currentVolume = getCurrentVolume();
   	
-  	if (etalonVolume.equals(0)) {
-  		// создаем первый объем
-  		etalonVolume = _currentVolume;
-  		gae.asyncPersist(this);
-  	}
-  	
-  	if (_currentVolume < SWITCH_THRESHOLD * etalonVolume) {
+  	if (currentVolume < SWITCH_THRESHOLD * etalonVolume) {
   		// FIXME: no exception safe
   		// перезагружаем генератор
   		Integer currBoundary = boundaryPtr;
   		IncBoundary(); 
   		
+  		if (getCurrentVolume() < 2) 
+  			IncBoundary();  // пока один раз
+  		
+  		// подошли к концу
   		if (!currBoundary.equals(boundaryPtr)) {
-  			// есть еще контекст
-  			ArrayList<DistributionElement> d = buildImportanceDistribution();
-  			getGenerator().get().reloadGenerator(d);
-  			
-  			etalonVolume = _currentVolume;
-  			
-  			CrossIO.print("boundary moved");
+  			move();
   		}
   		
   		gae.asyncPersist(this);
@@ -311,6 +348,16 @@ public class PageKind {
   }
   
   public void disablePoint(PathValue p) {
+  	// лучше здесь
+  	if (etalonVolume.equals(0)) {
+     	if (getCurrentVolume() < 2)
+     		throw new IllegalStateException();
+     	
+   		// создаем первый объем
+   		this.setVolume(getCurrentVolume());
+   		gae.asyncPersist(this);
+  	}
+  	
   	moveBoundary();
 
   	GeneratorKind g = getGenerator(p.genName).get();
@@ -319,11 +366,7 @@ public class PageKind {
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
 		gae.asyncPersist(g);
   }
-  
-  public Optional<ImmutableList<DistributionElement>>  getDistribution(String genName) {
-  	GeneratorKind gen = getGenerator(genName).get();
-  	return Optional.of(gen.getDistribution());
-  }
+
   
   public void asyncDeleteFromStore() {
   	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы

@@ -50,7 +50,7 @@ public class AppInstance {
   	if (!page.isPresent())
   		throw new IllegalStateException();
 
-  	return page.get().getDistribution(path.genName).get();
+  	return ImmutableList.copyOf(page.get().getDistribution(path.genName).get());
   }
 	
 	// скорее исследовательский метод
@@ -83,7 +83,7 @@ public class AppInstance {
 			TextPipeline processor = new TextPipeline();
 	  	PageKind page = processor.pass(name, text);  
 	  	
-	  	GeneratorKind g = GeneratorKind.create(page.buildImportanceDistribution(), TextPipeline.defaultGenName);
+	  	GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution(), TextPipeline.defaultGenName);
 	  	g.syncCreateInStore();
 	  	
 	  	page.setGenerator(g);
