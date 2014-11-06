@@ -86,7 +86,7 @@ public class PageKind {
   @Ignore
 	private static final Integer STEP_WINDOW_SIZE = 8;  
   @Ignore
-  private static final Double SWITCH_THRESHOLD = 0.4;
+  private static final Double SWITCH_THRESHOLD = 0.2;
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   private Integer etalonVolume = 0;
