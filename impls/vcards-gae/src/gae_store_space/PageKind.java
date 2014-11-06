@@ -82,10 +82,11 @@ public class PageKind {
   
   // по столько будем шагать
   // По малу шагать плохо тем что распределение может снова стать равном.
+  // 10 * 20 = 200 слов, почти уникальных, лучше меньше
   @Ignore
-	private static final Integer STEP_WINDOW_SIZE = 20;  
+	private static final Integer STEP_WINDOW_SIZE = 8;  
   @Ignore
-  private static final Double SWITCH_THRESHOLD = 0.2;
+  private static final Double SWITCH_THRESHOLD = 0.4;
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   private Integer etalonVolume = 0;
