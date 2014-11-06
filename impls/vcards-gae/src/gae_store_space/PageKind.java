@@ -281,9 +281,9 @@ public class PageKind {
   }
   
   private void moveBoundary() {
-  	CrossIO.print("know");
-  	
   	Integer _currentVolume = getGenerator().get().getActiveVolume();
+  	CrossIO.print("know; Among = " + _currentVolume + "; et = " + this.etalonVolume);
+  	
   	if (etalonVolume.equals(0)) {
   		// создаем первый объем
   		etalonVolume = _currentVolume;
@@ -300,6 +300,8 @@ public class PageKind {
   			// есть еще контекст
   			ArrayList<DistributionElement> d = buildImportanceDistribution();
   			getGenerator().get().reloadGenerator(d);
+  			
+  			etalonVolume = _currentVolume;
   			
   			CrossIO.print("boundary moved");
   		}
