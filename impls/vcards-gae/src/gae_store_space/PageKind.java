@@ -272,7 +272,11 @@ public class PageKind {
 		for (SentenceKind k: sentenceKinds)
 		  content.add(k.getSentence());
 		
-		return Optional.of(new WordDataValue(value, content, pointPosition));
+		WordDataValue r = new WordDataValue(value, content, pointPosition);
+		
+		r.setImportance(ngramKind.getImportance());
+		
+		return Optional.of(r);
   }
   
   private Optional<GeneratorKind> getGenerator() {

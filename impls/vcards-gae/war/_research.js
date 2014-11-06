@@ -1,5 +1,4 @@
-// <input type="button" class="btn btn-success" value="Get generator info" onclick="gPlotView.onGetData()"/>
-// <div id="placeholder" style="width:500px; height:300px"></div>
+
 // Class
 function PlotView(dal) { 
   this.dal = dal;
