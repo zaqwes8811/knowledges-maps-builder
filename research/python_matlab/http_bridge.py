@@ -88,7 +88,7 @@ class ResearchAjax(object):
 
     def create_or_replace_page(self):
         # Просто через post
-        test_file = '../test_data/etalon.srt'
+        test_file ='../test_data/lor.txt' #'../test_data/etalon.srt'
         with open(test_file, "r") as file_handle:
             data = file_handle.read()
 
