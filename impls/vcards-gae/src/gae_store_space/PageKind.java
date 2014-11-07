@@ -69,6 +69,7 @@ public class PageKind {
   @Ignore 
   private ArrayList<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
+  // Теперь страница полностью управляет временем жизни
   // FIXME: почему отношение не работает?
   // Попытка сделать так чтобы g не стал нулевым указателем
   // все равно может упасть. с единичным ключем фигня какая-то
@@ -103,11 +104,6 @@ public class PageKind {
   	return name; 
   }
   
-  private void deleteGenerators() {
-  	if (accessGen().isPresent())
-  		gae.asyncDeleteGenerators(accessGen().get());
-  }
-  
   public ArrayList<Integer> getLengthsSentences() {
   	ArrayList<Integer> r = new ArrayList<Integer>();
   	for (SentenceKind k : sentencesKinds)
@@ -115,11 +111,8 @@ public class PageKind {
   	return r;
   }
   
-  public void syncCreateInStore() {
-  	gae.syncCreateInStore(this);
-  }
-  
   private static Optional<PageKind> syncGetPage(String name) {
+  	// нужно восстановить и генератор тоже
   	return new GAESpecific().getPageWaitConvergence(name);
   }
   
@@ -157,7 +150,7 @@ public class PageKind {
   //     вводится только при создании, потом они только читаются.
   //
   // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
-  public Optional<GeneratorKind> getGenerator(String name) { 
+  private Optional<GeneratorKind> getGenerator(String name) { 
   	ArrayList<Key<GeneratorKind>> a = new ArrayList<Key<GeneratorKind>>();
 		a.add(accessGen().get());
   	return gae.getGeneratorWaitConvergence(a, name);
@@ -167,7 +160,7 @@ public class PageKind {
   	return gae.getGenNames(accessGen().get());
   }
 
-  public void setGenerator(GeneratorKind gen) {
+  private void setGenerator(GeneratorKind gen) {
   	Key<GeneratorKind> k = Key.create(gen);
     generator = k;
   }
@@ -181,6 +174,28 @@ public class PageKind {
    	this.sentencesKinds = items;    
     this.rawSource = rawSource;
   }
+
+  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
+	//   Иначе будут гонки. А может быть есть транзации на GAE?
+	public static PageKind syncCreatePageIfNotExist(String name, String text) {
+		// FIXME: add user info
+		List<PageKind> pages = new GAESpecific().getPagesMaybeOutdated(name);
+		
+		if (pages.isEmpty()) {
+			TextPipeline processor = new TextPipeline();
+	  	PageKind page = processor.pass(name, text);  
+	  	
+	  	GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution(), TextPipeline.defaultGenName);
+	  	g.syncCreateInStore();
+	  	
+	  	page.setGenerator(g);
+	  	
+	  	new GAESpecific().syncCreateInStore(page);
+			return page;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
   
   private Set<String> getNGramms(Integer boundary) {
   	Integer end = sentencesKinds.size();
@@ -223,14 +238,6 @@ public class PageKind {
   	if (!(idx < unigramKinds.size())) {
   		throw new IllegalArgumentException();
   	}
-  }
-
-  // Получаем текущее распределение.
-  public ArrayList<DistributionElement>  getDistribution(String genName) {
-  	GeneratorKind gen = getGenerator(genName).get();
-  	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
-  	checkDistributionInvariant(r);
-  	return r;
   }
   
   public ArrayList<DistributionElement>  getDistribution() {
@@ -392,8 +399,10 @@ public class PageKind {
   }
 
   
-  public void asyncDeleteFromStore() {
-  	deleteGenerators();  // это нужно вызвать, но при этом удаляется генератор новой страницы
+  public void asyncDeleteFromStore() { 	
+  	if (accessGen().isPresent())
+  		gae.asyncDeleteGenerators(accessGen().get());
+  	
 		gae.asyncDeletePage(this);
   }
 }
