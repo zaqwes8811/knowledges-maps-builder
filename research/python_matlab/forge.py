@@ -189,11 +189,10 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_boundary_expand(self):
         self.plot_distribution()
-        for j in range(10):
-            for i in range(5):
+        for j in range(3):
+            for i in range(50):
                 arg0 = self.accept_ngram_data()
                 self.app_ajax.mark_known(arg0)
-                print i
 
             self.plot_distribution()
         plt.show()
