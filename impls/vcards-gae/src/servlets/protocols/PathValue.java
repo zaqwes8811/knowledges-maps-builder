@@ -9,7 +9,10 @@ public class PathValue {
 	//public final UserId
 	// FIXME: final is removed, need getters
 	private String pageName;
+	
+	@Deprecated
 	public String genName;
+	
 	public Integer pointPos;
 	
 	public Optional<String> getPageName() {
