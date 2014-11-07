@@ -114,7 +114,7 @@ public class PageKind {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   public static Optional<PageKind> syncRestore(final String pageName) { 	
-  	Optional<PageKind> page = new GAESpecific().restorePageByName(pageName);
+  	Optional<PageKind> page = new GAESpecific().restorePageByName_evCons(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
@@ -158,8 +158,9 @@ public class PageKind {
 
   // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public static PageKind syncCreatePageIfNotExist(final String name, String text) {
+	public static PageKind createPageIfNotExist_strongCons_maybe(final String name, String text) {
 		// local work
+		final GAESpecific store = new GAESpecific();
 		TextPipeline processor = new TextPipeline();
   	final PageKind page = processor.pass(name, text); 
   	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
@@ -167,8 +168,7 @@ public class PageKind {
   	// transaction boundary
   	PageKind r = ofy().transact(new Work<PageKind>() {
 	    public PageKind run() {
-	    	List<PageKind> pages = 
-	    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
+	    	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
 
 	    	if (!pages.isEmpty()) 
 	  			throw new IllegalArgumentException();	 
@@ -297,7 +297,7 @@ public class PageKind {
   
   private Optional<GeneratorKind> restoreGenerator() {
   	Optional<GeneratorKind> r = Optional.absent();
-  	r = store.restoreGenerator(generator);
+  	r = store.restoreGenerator_evCons(generator);
 		if (r.isPresent())
 			r.get().reload();
   	return r;
