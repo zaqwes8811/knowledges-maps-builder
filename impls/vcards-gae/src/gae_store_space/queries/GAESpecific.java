@@ -31,6 +31,12 @@ public final class GAESpecific {
 	// Это бесполезно. Тут должно конечное приложение обеспечивать.
 	//private static int TIME_STEP_MS = 200;
 	//private static int COUNT_TRIES = 12; 
+	//
+	// Nontransactional (non-ancestor) queries - 
+	//
+	// Strong consistency:
+	//   https://cloud.google.com/appengine/docs/java/datastore/structuring_for_strong_consistency
+	//   Queries inside transactions must include ancestor filters
 	
 	// FIXME: вообще, то что читаю в цикле мало что значит в многопользовательском режиме
 	//   для исследования возможно так и нужно, но вообще нет.
@@ -49,7 +55,7 @@ public final class GAESpecific {
 		ofy().delete().keys(generators).now();
 	}
 	
-	public Optional<GeneratorKind> restoreGenerator(Key<GeneratorKind> g) {
+	public Optional<GeneratorKind> restoreGenerator_evCons(Key<GeneratorKind> g) {
 		Optional<GeneratorKind> r = 
 				Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(g.getId()).now());
 		return r;
@@ -57,7 +63,7 @@ public final class GAESpecific {
 	
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
-	public Optional<PageKind> restorePageByName(String name) {
+	public Optional<PageKind> restorePageByName_evCons(String name) {
 	
    	List<PageKind> pages = 
    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
@@ -71,7 +77,11 @@ public final class GAESpecific {
 		return Optional.of(pages.get(0));
 	}
 	
-	public List<PageKind> getAllPages() {
+	public List<PageKind> getPagesByName_evCons(String name) {
+		return ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
+	}
+	
+	public List<PageKind> getAllPages_evCons() {
 		return ofy().load().type(PageKind.class).list();
 	}
 }
