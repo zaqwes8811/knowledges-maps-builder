@@ -27,7 +27,7 @@ public class AppInstance {
 	GAESpecific gae = new GAESpecific();
 	
 	static public String getTestFileName() {
-    return "./test_data/korra/etalon.srt";
+    return "./fake/lor.txt";
   }
 	
 	// FIXME: если кеш убрать работает много стабильнее
@@ -50,7 +50,7 @@ public class AppInstance {
   	if (!page.isPresent())
   		throw new IllegalStateException();
 
-  	return ImmutableList.copyOf(page.get().getDistribution(path.genName));
+  	return ImmutableList.copyOf(page.get().getDistribution());
   }
 	
 	// скорее исследовательский метод
@@ -59,8 +59,12 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		pagesCache.invalidate(name);
-		syncCreatePageIfNotExist(name, text);
+		PageKind.syncCreatePageIfNotExist(name, text);
 		pagesCache.invalidate(name);
+	}
+	
+	public PageKind syncCreatePageIfNotExist(String name, String text) {
+		return PageKind.syncCreatePageIfNotExist(name, text);
 	}
 	
 	private void fullDeletePage(String name) {
@@ -70,27 +74,6 @@ public class AppInstance {
 				page.get().asyncDeleteFromStore();
 		} catch (UncheckedExecutionException e) {
 			gae.asyncDeletePages(name);
-		}
-	}
-
-	// FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
-	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public PageKind syncCreatePageIfNotExist(String name, String text) {
-		// FIXME: add user info
-		List<PageKind> pages = gae.getPagesMaybeOutdated(name);
-		
-		if (pages.isEmpty()) {
-			TextPipeline processor = new TextPipeline();
-	  	PageKind page = processor.pass(name, text);  
-	  	
-	  	GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution(), TextPipeline.defaultGenName);
-	  	g.syncCreateInStore();
-	  	
-	  	page.setGenerator(g);
-	  	page.syncCreateInStore();
-			return page;
-		} else {
-			throw new IllegalArgumentException();
 		}
 	}
 	
@@ -111,7 +94,7 @@ public class AppInstance {
 	private void createDefaultPage() {
 		String name = TextPipeline.defaultPageName;
 		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-		syncCreatePageIfNotExist(name, text);
+		PageKind.syncCreatePageIfNotExist(name, text);
 	}
 	
 	public AppInstance() { }

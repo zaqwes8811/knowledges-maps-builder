@@ -43,13 +43,14 @@ public class PageKindTest {
     helper.tearDown();
   }
 
+  @Deprecated
   @Test
   public void testCreateAndPersist() throws Exception {
     PageKind page = buildContentPage(TextPipeline.defaultPageName);
     GeneratorKind gen = GeneratorKind.create(page.buildSourceImportanceDistribution());
     ofy().save().entity(gen).now();
-    page.setGenerator(gen);
-    ofy().save().entity(page).now();
+    //page.setGenerator(gen);
+    //ofy().save().entity(page).now();
   }
 
   @Test
@@ -74,27 +75,6 @@ public class PageKindTest {
   @Test
   public void testDeletePage() {
     // TODO: Delete full page
-  }
-  
-  private PageKind putPagesInStore() {
-  	// Check store
-    String activePageName = TextPipeline.defaultPageName;
-    PageKind loadedPage =
-      ofy().load().type(PageKind.class).filter("name = ", activePageName).first().now();
-    assertNull(loadedPage);  // с одним именем могуть быть, id будут разными
-
-    // Create new page
-    PageKind page = buildContentPage(activePageName);
-    GeneratorKind gen = GeneratorKind.create(page.buildSourceImportanceDistribution());
-    ofy().save().entity(gen).now();
-    page.setGenerator(gen);
-    ofy().save().entity(page).now();
-    
-    // создаем две страницы, важно для проверки разделения запросов.
-    // Add noise page
-    ofy().save().entity(buildContentPage(activePageName+"_noise")).now();
-    
-    return page;
   }
 
   @Deprecated
@@ -145,10 +125,11 @@ public class PageKindTest {
     */
   }
   
+  @Deprecated
   @Test 
   public void testGetPackedWordData() {
-  	PageKind page = putPagesInStore();
-  	Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGenName);
-  	assertTrue(v.isPresent());
+  	//PageKind page = putDefaultPagesInStore();
+  	//Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGenName);
+  	//assertTrue(v.isPresent());
   } 
 }
