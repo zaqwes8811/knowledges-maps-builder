@@ -100,18 +100,17 @@ public class GeneratorKind
   }
 
   public void disablePoint(Integer idx) {
+  	checkIndex(idx);
+  	
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-    getElem(idx).markKnown();
+  	distribution.get(idx).markKnown();
     reloadGenerator(distribution);
   }
 
-  private DistributionElement getElem(Integer idx) {
+  private void checkIndex(Integer idx) {
     if (idx >= distribution.size() || idx < 0)
       throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
-
-    // хотя наверное и так бросит
-    return distribution.get(idx);
   }
 
   
