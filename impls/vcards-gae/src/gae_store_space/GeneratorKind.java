@@ -92,7 +92,7 @@ public class GeneratorKind
   }
 
   public void reloadGenerator(ArrayList<DistributionElement> distribution) {
-  	this.distribution = distribution;
+  	distribution = distribution;
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 

@@ -46,7 +46,7 @@ import com.googlecode.objectify.annotation.Load;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
 
-
+//@ItIsAggregate
 @NotThreadSafe
 @Entity
 public class PageKind {
