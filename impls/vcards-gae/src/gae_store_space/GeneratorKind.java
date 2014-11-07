@@ -98,9 +98,16 @@ public class GeneratorKind
     
     reloadGenerator(distribution);
   }
+  
+  private void checkUnknown(Integer idx) {
+  	checkIndex(idx);
+  	if (!distribution.get(idx).isUnknown())
+  		throw new IllegalStateException();
+  }
 
   public void disablePoint(Integer idx) {
   	checkIndex(idx);
+  	checkUnknown(idx);
   	
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
