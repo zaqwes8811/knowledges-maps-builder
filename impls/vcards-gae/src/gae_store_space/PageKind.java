@@ -110,15 +110,10 @@ public class PageKind {
   		r.add(k.getCountWords());
   	return r;
   }
-  
-  private static Optional<PageKind> syncGetPage(String name) {
-  	// нужно восстановить и генератор тоже
-  	return new GAESpecific().getPageWaitConvergence(name);
-  }
-  
+   
   // FIXME: если появится пользователи, то одного имени будет мало
   public static Optional<PageKind> syncRestore(String pageName) {
-  	Optional<PageKind> page = PageKind.syncGetPage(pageName);
+  	Optional<PageKind> page = new GAESpecific().getPageWaitConvergence(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
