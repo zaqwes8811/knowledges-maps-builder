@@ -91,9 +91,7 @@ public class PageKind {
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
   private Integer etalonVolume = 0;
-  
-  @Ignore
-  private static int COUNT_REPEATS = 3;
+
   
   @Ignore
   GAESpecific store = new GAESpecific();
@@ -144,6 +142,7 @@ public class PageKind {
   	return r;
   }
 
+  // Пришлось раскрыть
   private void setGenerator(GeneratorKind gen) {
   	Key<GeneratorKind> k = Key.create(gen);
     generator = k;
@@ -169,7 +168,7 @@ public class PageKind {
   	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
 
   	// transaction boundary
-  	PageKind r = ofy().transactNew(COUNT_REPEATS, new Work<PageKind>() {
+  	Work<PageKind> work = new Work<PageKind>() {
 	    public PageKind run() {
 	    	ofy().save().entity(g).now();
 	    	
@@ -179,10 +178,12 @@ public class PageKind {
 	    	ofy().save().entity(page).now();
 	      return page;
 	    }
-		});
+		};
+		
+		PageKind r = store.firstPersist(work);   
   	
   	// FIXME: база данный в каком состоянии будет тут? согласованном?
-  	// https://cloud.google.com/appengine/docs/java/datastore/transactions - Isolation
+  	// https://cloud.google.com/appengine/articles/transaction_isolation - Isolation
   	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
 
   	if (pages.size() > 1) {
@@ -388,7 +389,9 @@ public class PageKind {
 
   private void persist() {
   	final PageKind p = this;
-  	ofy().transact(new VoidWork() {
+  	
+  	// execution on dal - можно транслировать ошибку нижнего слоя
+  	store.transact(new VoidWork() {
 	    public void vrun() {
 	    	ofy().save().entity(p.restoreGenerator().get()).now();
 	    	ofy().save().entity(p).now();
@@ -398,7 +401,7 @@ public class PageKind {
   
   public void asyncDeleteFromStore() { 
   	final PageKind p = this;
-  	ofy().transact(new VoidWork() {
+  	store.transact(new VoidWork() {
 	    public void vrun() {
 	    	ofy().delete().key(generator).now();
 	    	ofy().delete().entity(p).now();
