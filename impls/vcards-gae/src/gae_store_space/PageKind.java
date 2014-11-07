@@ -367,6 +367,12 @@ public class PageKind {
   	}
   }
   
+  private void checkDecrease(Integer befor) {
+  	Integer current = getCurrentVolume();
+  	if (!(current < befor)) 
+  		throw new AssertException();
+  }
+  
   public void disablePoint(PathValue p) {
   	Integer pos = p.pointPos;
   	// лучше здесь
@@ -377,7 +383,7 @@ public class PageKind {
    		// создаем первый объем
    		setVolume(getCurrentVolume());
   	}
-  	
+  	Integer current = getCurrentVolume();
   	moveBoundary();
 
   	GeneratorKind g = restoreGenerator().get();
@@ -388,6 +394,8 @@ public class PageKind {
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
 		persist();
+		
+		checkDecrease(current);
   }
 
   private void persist() {
