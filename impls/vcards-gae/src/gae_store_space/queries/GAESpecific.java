@@ -8,6 +8,12 @@ import java.util.List;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
+import com.googlecode.objectify.VoidWork;
+import com.googlecode.objectify.Work;
+
+class StoreException {
+	
+}
 
 public final class GAESpecific {
 //На локальной машине, либо с первого раза, либо никогда - on GAE - хз
@@ -47,6 +53,7 @@ public final class GAESpecific {
 	// limits changes to the guestbook to no more than 1 write per second (the supported limit for entity groups)." 
 	//
 	// Вобщем если что-то включить в EG то писать можно будет только раз в секунду - сохранять например.
+  private static int COUNT_REPEATS = 3;
 	
 	public void asyncPersist(PageKind kind) {
 		ofy().save().entity(kind).now();
@@ -88,5 +95,15 @@ public final class GAESpecific {
 	
 	public List<PageKind> getAllPages_evCons() {
 		return ofy().load().type(PageKind.class).list();
+	}
+	
+	
+	public PageKind firstPersist(Work<PageKind> work) {
+  	PageKind r = ofy().transactNew(COUNT_REPEATS, work);
+  	return r;
+	}
+	
+	public void transact(VoidWork work) {
+		ofy().transactNew(COUNT_REPEATS, work);
 	}
 }
