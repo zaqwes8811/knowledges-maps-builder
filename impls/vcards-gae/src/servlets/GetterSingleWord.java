@@ -45,7 +45,7 @@ public class GetterSingleWord extends HttpServlet {
     if (!p.isPresent())
     	throw new IllegalStateException();
     
-    WordDataValue v = p.get().getWordData(path.genName).get();
+    WordDataValue v = p.get().getWordData().get();
     
     String json = new Gson().toJson(v);
  
