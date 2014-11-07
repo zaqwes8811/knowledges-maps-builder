@@ -132,25 +132,7 @@ public class PageKind {
   	unigramKinds = rhs.unigramKinds;
   	sentencesKinds = rhs.sentencesKinds;
   }
-  
-  public void persist() {
-  	gae.asyncPersist(this);
-  }
-
-  // TODO: перенести бы в класс генератора, но!! это затрудняет выборку, т.к. имя не уникально 
-  //
-  // throws: 
-  //   IllegalStateException - генератор не найден. Система замкнута, если 
-  //     по имение не нашли генератора - это нарушение консистентности. Имена генереторов
-  //     вводится только при создании, потом они только читаются.
-  //
-  // FIXME: и все равно падает иногда, хотя запросы создания синхоронные (test_server)
-  private Optional<GeneratorKind> getGenerator(String name) { 
-  	ArrayList<Key<GeneratorKind>> a = new ArrayList<Key<GeneratorKind>>();
-		a.add(accessGen().get());
-  	return gae.getGeneratorWaitConvergence(a, name);
-  }
-  
+ 
   public List<String> getGenNames() {
   	return gae.getGenNames(accessGen().get());
   }
@@ -235,7 +217,7 @@ public class PageKind {
   	}
   }
   
-  public ArrayList<DistributionElement>  getDistribution() {
+  public ArrayList<DistributionElement> getDistribution() {
   	GeneratorKind gen = getGenerator().get();
   	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
   	checkDistributionInvariant(r);
@@ -285,8 +267,8 @@ public class PageKind {
     return d;
   }
    
-  public Optional<WordDataValue> getWordData(String genName) {
-  	GeneratorKind go = getGenerator(genName).get();  // FIXME: нужно нормально обработать
+  public Optional<WordDataValue> getWordData() {
+  	GeneratorKind go = getGenerator().get();  // FIXME: нужно нормально обработать
     
 		Integer pointPosition = go.getPosition();
 		NGramKind ngramKind =  getNGram(pointPosition);
@@ -340,15 +322,7 @@ public class PageKind {
   	checkDistributionInvariant(d);
   	getGenerator().get().reloadGenerator(d);
   }
-  
-  private void move() {
-		ArrayList<DistributionElement> d = getDistribution();
-		d = applyBoundary(d);
-		
-		setDistribution(d);
-		setVolume(getCurrentVolume());
-  }
-  
+   
   private void moveBoundary() {
   	Integer currentVolume = getCurrentVolume();
   	
@@ -363,10 +337,12 @@ public class PageKind {
   		
   		// подошли к концу
   		if (!currBoundary.equals(boundaryPtr)) {
-  			move();
+  			ArrayList<DistributionElement> d = getDistribution();
+  			d = applyBoundary(d);
+  			
+  			setDistribution(d);
+  			setVolume(getCurrentVolume());
   		}
-  		
-  		gae.asyncPersist(this);
   	}
   }
   
@@ -383,13 +359,14 @@ public class PageKind {
   	
   	moveBoundary();
 
-  	GeneratorKind g = getGenerator(p.genName).get();
+  	GeneratorKind g = getGenerator().get();
   	
   	checkAccessIndex(p.pointPos);
   	
 		g.disablePoint(p.pointPos);
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
+		gae.asyncPersist(this);
 		gae.asyncPersist(g);
   }
 
