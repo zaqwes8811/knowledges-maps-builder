@@ -43,6 +43,7 @@ import sklearn.cluster
 # sys
 import random
 import unittest
+import time
 
 
 def plot_distribution(d):
@@ -141,6 +142,7 @@ class TestSequenceFunctions(unittest.TestCase):
         port = 8080
         self.ajax = http_bridge.ResearchAjax(server, port)
         self.ajax.create_or_replace_page()
+        time.sleep(2)
         self.arg0 = pro.PathValue(self.ajax.get_research_page_name())
 
         self.app_ajax = http_bridge.AppAjax(server, port)
@@ -187,10 +189,11 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_boundary_expand(self):
         self.plot_distribution()
-        for j in range(5):
-            for i in range(50):
+        for j in range(10):
+            for i in range(5):
                 arg0 = self.accept_ngram_data()
                 self.app_ajax.mark_known(arg0)
+                print i
 
             self.plot_distribution()
         plt.show()

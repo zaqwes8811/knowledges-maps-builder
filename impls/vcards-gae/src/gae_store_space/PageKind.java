@@ -24,6 +24,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+import static gae_store_space.queries.OfyService.ofy;
+
 import net.jcip.annotations.NotThreadSafe;
 
 import org.apache.commons.collections4.Predicate;
@@ -37,6 +39,8 @@ import servlets.protocols.WordDataValue;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
+import com.googlecode.objectify.VoidWork;
+import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
@@ -75,12 +79,8 @@ public class PageKind {
   // все равно может упасть. с единичным ключем фигня какая-то
   // FIXME: вообще это проблема
   @Load  
-  private Key<GeneratorKind> generator = null;
-  
-  private Optional<Key<GeneratorKind>> accessGen() {
-  	return Optional.fromNullable(generator);
-  }
-  
+  private Key<GeneratorKind> generator;
+   
   // по столько будем шагать
   // По малу шагать плохо тем что распределение может снова стать равном.
   // 10 * 20 = 200 слов, почти уникальных, лучше меньше
@@ -93,7 +93,7 @@ public class PageKind {
   private Integer etalonVolume = 0;
   
   @Ignore
-  GAESpecific gae = new GAESpecific();
+  GAESpecific store = new GAESpecific();
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -111,9 +111,10 @@ public class PageKind {
   	return r;
   }
    
-  // FIXME: если появится пользователи, то одного имени будет мало
-  public static Optional<PageKind> syncRestore(String pageName) {
-  	Optional<PageKind> page = new GAESpecific().getPageWaitConvergence(pageName);
+  // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
+  // Да кажется можно, просто не ясно зачем
+  public static Optional<PageKind> syncRestore(final String pageName) { 	
+  	Optional<PageKind> page = new GAESpecific().restorePageByName(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
@@ -123,6 +124,7 @@ public class PageKind {
 	    
 	    // теперь нужно запустить процесс обработки,
 	    page.get().assign(tmpPage);
+	    page.get().restoreGenerator();
     }
     
     return page;  // 1 item
@@ -134,7 +136,9 @@ public class PageKind {
   }
  
   public List<String> getGenNames() {
-  	return gae.getGenNames(accessGen().get());
+  	ArrayList<String> r = new ArrayList<String>();
+  	r.add(TextPipeline.defaultGenName);
+  	return r;
   }
 
   private void setGenerator(GeneratorKind gen) {
@@ -154,25 +158,31 @@ public class PageKind {
 
   // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public static PageKind syncCreatePageIfNotExist(String name, String text) {
-		// FIXME: add user info
-		List<PageKind> pages = new GAESpecific().getPagesMaybeOutdated(name);
-		
-		if (pages.isEmpty()) {
-			TextPipeline processor = new TextPipeline();
-	  	PageKind page = processor.pass(name, text);  
-	  	
-	  	GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution(), TextPipeline.defaultGenName);
-	  	
-	  	new GAESpecific().syncCreateInStore(g);
-	  	
-	  	page.setGenerator(g);
-	  	
-	  	new GAESpecific().syncCreateInStore(page);
-			return page;
-		} else {
-			throw new IllegalArgumentException();
-		}
+	public static PageKind syncCreatePageIfNotExist(final String name, String text) {
+		// local work
+		TextPipeline processor = new TextPipeline();
+  	final PageKind page = processor.pass(name, text); 
+  	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
+
+  	// transaction boundary
+  	PageKind r = ofy().transact(new Work<PageKind>() {
+	    public PageKind run() {
+	    	List<PageKind> pages = 
+	    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
+
+	    	if (!pages.isEmpty()) 
+	  			throw new IllegalArgumentException();	 
+	    	
+	    	ofy().save().entity(g).now();
+	    	
+	    	page.setGenerator(g);  // нельзя не сохраненны присоединять
+	 
+	    	ofy().save().entity(page).now();
+	      return page;
+	    }
+		});
+  	
+		return r;
 	}
   
   private Set<String> getNGramms(Integer boundary) {
@@ -219,7 +229,7 @@ public class PageKind {
   }
   
   public ArrayList<DistributionElement> getDistribution() {
-  	GeneratorKind gen = getGenerator().get();
+  	GeneratorKind gen = restoreGenerator().get();
   	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
   	checkDistributionInvariant(r);
   	return r;
@@ -230,9 +240,7 @@ public class PageKind {
   		throw new IllegalStateException();
   }
   
-  // About: Возвращать частоты, сортированные по убыванию.
-  // Это должен быть getter
-  // Все известные слова обнуляет!!
+  // About: Возвращать пустое распределение
   private ArrayList<DistributionElement> buildSourceImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
@@ -269,7 +277,7 @@ public class PageKind {
   }
    
   public Optional<WordDataValue> getWordData() {
-  	GeneratorKind go = getGenerator().get();  // FIXME: нужно нормально обработать
+  	GeneratorKind go = restoreGenerator().get();  // FIXME: нужно нормально обработать
     
 		Integer pointPosition = go.getPosition();
 		NGramKind ngramKind =  getNGram(pointPosition);
@@ -287,11 +295,11 @@ public class PageKind {
 		return Optional.of(r);
   }
   
-  private Optional<GeneratorKind> getGenerator() {
+  private Optional<GeneratorKind> restoreGenerator() {
   	Optional<GeneratorKind> r = Optional.absent();
-  	if (accessGen().isPresent()) {
-  		r = gae.asyncGetGenerator(accessGen().get());
-  	}
+  	r = store.restoreGenerator(generator);
+		if (r.isPresent())
+			r.get().reload();
   	return r;
   }
    
@@ -310,7 +318,7 @@ public class PageKind {
   }
   
   private Integer getCurrentVolume() {
-  	Integer r = getGenerator().get().getActiveCount();
+  	Integer r = restoreGenerator().get().getActiveCount();
   	/*CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);*/
   	return r;
   }
@@ -321,7 +329,7 @@ public class PageKind {
   
   private void setDistribution(ArrayList<DistributionElement> d) {
   	checkDistributionInvariant(d);
-  	getGenerator().get().reloadGenerator(d);
+  	restoreGenerator().get().reloadGenerator(d);
   }
    
   private void moveBoundary() {
@@ -348,6 +356,7 @@ public class PageKind {
   }
   
   public void disablePoint(PathValue p) {
+  	Integer pos = p.pointPos;
   	// лучше здесь
   	if (etalonVolume.equals(0)) {
      	if (getCurrentVolume() < 2)
@@ -355,27 +364,37 @@ public class PageKind {
      	
    		// создаем первый объем
    		setVolume(getCurrentVolume());
-   		gae.asyncPersist(this);
   	}
   	
   	moveBoundary();
 
-  	GeneratorKind g = getGenerator().get();
+  	GeneratorKind g = restoreGenerator().get();
   	
-  	checkAccessIndex(p.pointPos);
+  	checkAccessIndex(pos);
   	
-		g.disablePoint(p.pointPos);
+		g.disablePoint(pos);
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
-		gae.asyncPersist(this);
-		gae.asyncPersist(g);
+		persist();
   }
 
+  private void persist() {
+  	final PageKind p = this;
+  	ofy().transact(new VoidWork() {
+	    public void vrun() {
+	    	ofy().save().entity(p.restoreGenerator().get()).now();
+	    	ofy().save().entity(p).now();
+	    }
+		});
+  }
   
-  public void asyncDeleteFromStore() { 	
-  	if (accessGen().isPresent())
-  		gae.asyncDeleteGenerators(accessGen().get());
-  	
-		gae.asyncDeletePage(this);
+  public void asyncDeleteFromStore() { 
+  	final PageKind p = this;
+  	ofy().transact(new VoidWork() {
+	    public void vrun() {
+	    	ofy().delete().key(generator).now();
+	    	ofy().delete().entity(p).now();
+	    }
+		});
   }
 }
