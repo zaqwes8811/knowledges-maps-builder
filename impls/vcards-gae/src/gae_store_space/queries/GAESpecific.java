@@ -1,16 +1,13 @@
 package gae_store_space.queries;
 
+import static gae_store_space.queries.OfyService.ofy;
 import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
-import com.googlecode.objectify.cmd.Query;
-
-import static gae_store_space.queries.OfyService.ofy;
 
 public final class GAESpecific {
 //На локальной машине, либо с первого раза, либо никогда - on GAE - хз
@@ -25,8 +22,15 @@ public final class GAESpecific {
 	//   http://habrahabr.ru/post/100891/
 	//   https://www.udacity.com/course/viewer#!/c-ud859/l-1219418587/m-1497718612
 	//
-	public static int TIME_STEP_MS = 200;
-	public static int COUNT_TRIES = 12; 
+	// Transactions
+	//   http://stackoverflow.com/questions/14730601/how-to-enable-objectify-xa-transaction
+	//   https://code.google.com/p/objectify-appengine/wiki/Transactions
+	//   https://groups.google.com/forum/#!topic/objectify-appengine/UqxDRRXJMJ8
+	// xg on eclipse http://stackoverflow.com/questions/10453035/google-app-engine-hrd-not-working-in-eclipse-development-environment
+	//
+	// Это бесполезно. Тут должно конечное приложение обеспечивать.
+	//private static int TIME_STEP_MS = 200;
+	//private static int COUNT_TRIES = 12; 
 	
 	// FIXME: вообще, то что читаю в цикле мало что значит в многопользовательском режиме
 	//   для исследования возможно так и нужно, но вообще нет.
@@ -45,180 +49,29 @@ public final class GAESpecific {
 		ofy().delete().keys(generators).now();
 	}
 	
-	public void asyncDeleteGenerators(Key<GeneratorKind> generators) {
-		ofy().delete().keys(generators).now();
-	}
-	
-	public void asyncDeletePage(PageKind p) {
-		ofy().delete().type(PageKind.class).id(p.getId()).now();
-	}
-	
-	public Optional<GeneratorKind> asyncGetGenerator(Key<GeneratorKind> g) {
-		Optional<GeneratorKind> r = Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(g.getId()).now());
-		if (r.isPresent())
-			r.get().restore();
+	public Optional<GeneratorKind> restoreGenerator(Key<GeneratorKind> g) {
+		Optional<GeneratorKind> r = 
+				Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(g.getId()).now());
 		return r;
-	}
-	
-	// FIXME: Bad design!
-	public Optional<GeneratorKind> getGeneratorWaitConvergence(
-			List<Key<GeneratorKind>> generators, String name) {
-		if (name == null)
-  		throw new IllegalArgumentException();
-  	
-  	if (generators.isEmpty())
-  		throw new IllegalStateException();
-  	
-  	Optional<GeneratorKind> g = Optional.absent();
-  	
-  	int i = 0;
- 		while (true) {
- 			if (i > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
- 			
- 			List<GeneratorKind> gen = 
-	  			ofy().load().type(GeneratorKind.class)
-		  			.filterKey("in", generators)
-		  			.filter("name = ", name)
-		  			.list();
-	
-	  	if (!gen.isEmpty()) {
-	  		if (gen.size() > 1)
-	    		throw new IllegalStateException(name);
-	    	
-	    	g = Optional.of(gen.get(0));
-	    	g.get().restore();
-	  	} else {
- 				try {
- 					Thread.sleep(GAESpecific.TIME_STEP_MS);
- 				} catch (InterruptedException e1) {
- 					throw new RuntimeException(e1);
- 				}
- 				i++;
- 				continue;
- 		  }
- 			break;
- 		}
-  	
-  	return g;
-	}
-	
-	public void syncCreateInStore(GeneratorKind kind) {
-		asyncPersist(kind);
-  	
-  	// FIXME: Почему иногда все равно по запросу генератора еще нет?
-  	
-		// убеждаемся что генератор тоже сохранен
-		// это нельзя сделать в этом методе! Мы не проверим если не создаем
-		int i = 0;
-		while (true) {
-			if (i > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
-			
-			// FIXME: что-то не то. похоже запросы нужно делать по полному пути!
-			Optional<GeneratorKind> g = 
-					Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(kind.getId()).now());
-			if (!g.isPresent()) {
-				i++;
-				try {
-	        Thread.sleep(GAESpecific.TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
-	  		continue;
-	  	}
-			break;
-		}
-	}
-	
-	public void syncCreateInStore(PageKind kind) {
-		asyncPersist(kind);
-  	
-  	int j = 0;
-		while (true) {
-			if (j > GAESpecific.COUNT_TRIES)
-				throw new IllegalStateException();
-			
-			Optional<PageKind> page_readed = 
-					Optional.of(ofy().load().type(PageKind.class).id(kind.getId()).now()); 
-	  	if (!page_readed.isPresent()) {
-	  		j++;
-	  		try {
-	        Thread.sleep(GAESpecific.TIME_STEP_MS);
-        } catch (InterruptedException e1) {
-	        throw new RuntimeException(e1);
-        }
-	  		continue;
-	  	}
-			break;
-		}
 	}
 	
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
-	public Optional<PageKind> getPageWaitConvergence(String name) {
+	public Optional<PageKind> restorePageByName(String name) {
 	
-   	List<PageKind> pages = ofy().load().type(PageKind.class).filter("name = ", name).list();
-   	
-   	int i = 0;
- 		while (true) {
- 			if (i > GAESpecific.COUNT_TRIES)
- 				//if (pages.size() != 0)  // зависает но почему?
- 					throw new IllegalStateException();
- 			
- 			// FIXME: не ясно нужно ли создавать каждый раз или можно реюзать
- 			Query<PageKind> q = ofy().load().type(PageKind.class).filter("name = ", name);
- 			pages = q.list();
- 			
- 			// Тут проблема. Если в системе было несколько страниц, с одним именем, то что возвращать то?
- 			if (pages.size() > 1 || pages.size() == 0) {
- 				try {
- 					Thread.sleep(GAESpecific.TIME_STEP_MS);
- 				} catch (InterruptedException e1) {
- 					throw new RuntimeException(e1);
- 				}
- 				i++;
- 				continue;
- 		  }
- 			break;
- 		}
+   	List<PageKind> pages = 
+   			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
  		
- 		// FIXME: проверка нелепая. До сюда может и не дойти, хотя...
+ 		if (pages.size() > 1)
+ 			throw new IllegalStateException();
+ 		
 		if (pages.size() == 0)
 		 	return Optional.absent();
 		 
 		return Optional.of(pages.get(0));
 	}
 	
-	public List<String> getGenNames(List<Key<GeneratorKind>> generators) {
-  	List<GeneratorKind> gs = 
-  			ofy().load().type(GeneratorKind.class)
-	  			.filterKey("in", generators).list();
-  	
-  	List<String> r = new ArrayList<String>();
-  	for (GeneratorKind g: gs) 
-  		r.add(g.getName()); 
-
-  	return r;
-  }
-	
-	public List<String> getGenNames(Key<GeneratorKind> generators) {
-		ArrayList<Key<GeneratorKind>> a = new ArrayList<Key<GeneratorKind>>();
-		a.add(generators);
-		return getGenNames(a);
-  }
-	
-	public List<PageKind> getPagesMaybeOutdated() {
+	public List<PageKind> getAllPages() {
 		return ofy().load().type(PageKind.class).list();
-	}
-	
-	public List<PageKind> getPagesMaybeOutdated(String name) {
-		return ofy().load().type(PageKind.class).filter("name = ", name).list();
-	}
-	
-	public void asyncDeletePages(String name) {
-		// FIXME: удаляем все копии
-		// FIXME: leak in store - active generators
-		ofy().delete().keys(ofy().load().type(PageKind.class).filter("name = ", name).keys()).now();
 	}
 }
