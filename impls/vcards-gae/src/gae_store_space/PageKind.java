@@ -93,6 +93,9 @@ public class PageKind {
   private Integer etalonVolume = 0;
   
   @Ignore
+  private static int COUNT_REPEATS = 3;
+  
+  @Ignore
   GAESpecific store = new GAESpecific();
   
   //@Ignore
@@ -166,21 +169,24 @@ public class PageKind {
   	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
 
   	// transaction boundary
-  	PageKind r = ofy().transact(new Work<PageKind>() {
+  	PageKind r = ofy().transactNew(COUNT_REPEATS, new Work<PageKind>() {
 	    public PageKind run() {
-	    	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
-
-	    	if (!pages.isEmpty()) 
-	  			throw new IllegalArgumentException();	 
-	    	
 	    	ofy().save().entity(g).now();
 	    	
-	    	page.setGenerator(g);  // нельзя не сохраненны присоединять
+	    	// нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
+	    	page.setGenerator(g);  
 	 
 	    	ofy().save().entity(page).now();
 	      return page;
 	    }
 		});
+  	
+  	// FIXME: база данный в каком состоянии будет тут? согласованном?
+  	// https://cloud.google.com/appengine/docs/java/datastore/transactions - Isolation
+  	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
+
+  	if (pages.size() > 1) 
+			throw new IllegalArgumentException();	
   	
 		return r;
 	}

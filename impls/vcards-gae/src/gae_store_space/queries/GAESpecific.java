@@ -36,12 +36,17 @@ public final class GAESpecific {
 	//
 	// Strong consistency:
 	//   https://cloud.google.com/appengine/docs/java/datastore/structuring_for_strong_consistency
-	//   Queries inside transactions must include ancestor filters
+	//   "Queries inside transactions must include ancestor filters"
 	
 	// FIXME: вообще, то что читаю в цикле мало что значит в многопользовательском режиме
 	//   для исследования возможно так и нужно, но вообще нет.
 	
 	// FIXME: make синхронизирующий вызов
+	//
+	// "This approach achieves strong consistency by writing to a single entity group per guestbook, but it also 
+	// limits changes to the guestbook to no more than 1 write per second (the supported limit for entity groups)." 
+	//
+	// Вобщем если что-то включить в EG то писать можно будет только раз в секунду - сохранять например.
 	
 	public void asyncPersist(PageKind kind) {
 		ofy().save().entity(kind).now();
