@@ -59,12 +59,12 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		pagesCache.invalidate(name);
-		PageKind.syncCreatePageIfNotExist(name, text);
+		PageKind.createPageIfNotExist_strongCons_maybe(name, text);
 		pagesCache.invalidate(name);
 	}
 	
 	public PageKind syncCreatePageIfNotExist(String name, String text) {
-		return PageKind.syncCreatePageIfNotExist(name, text);
+		return PageKind.createPageIfNotExist_strongCons_maybe(name, text);
 	}
 	
 	private void fullDeletePage(String name) {
@@ -94,7 +94,7 @@ public class AppInstance {
 	private void createDefaultPage() {
 		String name = TextPipeline.defaultPageName;
 		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
-		PageKind.syncCreatePageIfNotExist(name, text);
+		PageKind.createPageIfNotExist_strongCons_maybe(name, text);
 	}
 	
 	public AppInstance() { }
@@ -121,7 +121,7 @@ public class AppInstance {
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: add user info
 		
-		List<PageKind> pages = store.getAllPages();
+		List<PageKind> pages = store.getAllPages_evCons();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) 
