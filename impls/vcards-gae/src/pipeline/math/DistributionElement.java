@@ -2,6 +2,8 @@ package pipeline.math;
 
 import java.io.Serializable;
 
+import cross_cuttings_layer.CrossIO;
+
 //http://stackoverflow.com/questions/5560176/is-integer-immutable - сохраняется в базе!
 public class DistributionElement implements Comparable<DistributionElement>, Serializable {
   private static final long serialVersionUID = -3004460083142639254L;
@@ -21,6 +23,10 @@ public class DistributionElement implements Comparable<DistributionElement>, Ser
   
   public void markKnown() {
   	unknown = false;
+  }
+  
+  public Boolean isUnknown() {
+  	return unknown;
   }
   
   public void setBoundary(Boolean value) {

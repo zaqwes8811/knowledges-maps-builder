@@ -4,6 +4,8 @@ package pipeline.math;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import cross_cuttings_layer.CrossIO;
+
 import net.jcip.annotations.Immutable;
 
 import org.javatuples.Pair;
@@ -42,10 +44,12 @@ public final class GeneratorAnyDistribution {
   			//r += e.getImportancy();  // по объему, но пока по штукам
   			r++;
   		}
+
   	return r;
   }
 
   private GeneratorAnyDistribution(ArrayList<DistributionElement> distribution) {
+  	CrossIO.print("reload");
   	d = distribution;
   	
     // Transpose

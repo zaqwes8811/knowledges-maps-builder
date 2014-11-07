@@ -75,12 +75,13 @@ public class PageKind {
   private ArrayList<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
 
   // Теперь страница полностью управляет временем жизни
-  // FIXME: почему отношение не работает?
-  // Попытка сделать так чтобы g не стал нулевым указателем
-  // все равно может упасть. с единичным ключем фигня какая-то
-  // FIXME: вообще это проблема
+  // удобен разве что для запроса
+  // Можно загружать по нему при загрузке страницы, а потом пользоваться кешем
   @Load  
-  private Key<GeneratorKind> generator;
+  private Key<GeneratorKind> generator;  
+  
+  @Ignore
+  private GeneratorKind genCache;
    
   // по столько будем шагать
   // По малу шагать плохо тем что распределение может снова стать равном.
@@ -116,7 +117,8 @@ public class PageKind {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   public static Optional<PageKind> syncRestore(final String pageName) { 	
-  	Optional<PageKind> page = new GAESpecific().restorePageByName_evCons(pageName);
+  	GAESpecific store = new GAESpecific();
+  	Optional<PageKind> page = store.restorePageByName_evCons(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
@@ -126,10 +128,17 @@ public class PageKind {
 	    
 	    // теперь нужно запустить процесс обработки,
 	    page.get().assign(tmpPage);
-	    page.get().restoreGenerator();
+	    // загружается только при восстановлении
+	    page.get().genCache = store.restoreGenerator_evCons(page.get().generator).get();
+	    page.get().genCache.reload();
     }
-    
     return page;  // 1 item
+  }
+  
+  private GeneratorKind getGeneratorCache() {
+  	if (!Optional.of(genCache).isPresent())
+  		throw new IllegalStateException();
+  	return genCache;
   }
   
   private void assign(PageKind rhs) {
@@ -239,7 +248,7 @@ public class PageKind {
   }
   
   public ArrayList<DistributionElement> getDistribution() {
-  	GeneratorKind gen = restoreGenerator().get();
+  	GeneratorKind gen = getGeneratorCache();
   	ArrayList<DistributionElement> r = gen.getCurrentDistribution();
   	checkDistributionInvariant(r);
   	return r;
@@ -287,7 +296,7 @@ public class PageKind {
   }
    
   public Optional<WordDataValue> getWordData() {
-  	GeneratorKind go = restoreGenerator().get();  // FIXME: нужно нормально обработать
+  	GeneratorKind go = getGeneratorCache();  // FIXME: нужно нормально обработать
     
 		Integer pointPosition = go.getPosition();
 		NGramKind ngramKind =  getNGram(pointPosition);
@@ -303,14 +312,6 @@ public class PageKind {
 		r.setImportance(ngramKind.getImportance());
 		
 		return Optional.of(r);
-  }
-  
-  private Optional<GeneratorKind> restoreGenerator() {
-  	Optional<GeneratorKind> r = Optional.absent();
-  	r = store.restoreGenerator_evCons(generator);
-		if (r.isPresent())
-			r.get().reload();
-  	return r;
   }
    
   // FIXME: а логика разрешает Отсутствующее значение?
@@ -328,7 +329,7 @@ public class PageKind {
   }
   
   private Integer getCurrentVolume() {
-  	Integer r = restoreGenerator().get().getActiveCount();
+  	Integer r = getGeneratorCache().getActiveCount();
   	CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);
   	return r;
   }
@@ -339,7 +340,7 @@ public class PageKind {
   
   private void setDistribution(ArrayList<DistributionElement> d) {
   	checkDistributionInvariant(d);
-  	restoreGenerator().get().reloadGenerator(d);
+  	getGeneratorCache().reloadGenerator(d);
   }
    
   private void moveBoundary() {
@@ -364,6 +365,9 @@ public class PageKind {
   			
   			CrossIO.print("boundary move");
   		}
+  		
+  		// state change
+  		persist(); 
   	}
   }
   
@@ -386,7 +390,8 @@ public class PageKind {
   	Integer current = getCurrentVolume();
   	moveBoundary();
 
-  	GeneratorKind g = restoreGenerator().get();
+  	// Читаем заново
+  	GeneratorKind g = getGeneratorCache();
   	
   	checkAccessIndex(pos);
   	
@@ -395,7 +400,7 @@ public class PageKind {
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
 		persist();
 		
-		checkDecrease(current);
+		//checkDecrease(current);
   }
 
   private void persist() {
@@ -404,7 +409,7 @@ public class PageKind {
   	// execution on dal - можно транслировать ошибку нижнего слоя
   	store.transact(new VoidWork() {
 	    public void vrun() {
-	    	ofy().save().entity(p.restoreGenerator().get()).now();
+	    	ofy().save().entity(p.getGeneratorCache()).now();
 	    	ofy().save().entity(p).now();
 	    }
 		});
@@ -414,7 +419,7 @@ public class PageKind {
   	final PageKind p = this;
   	store.transact(new VoidWork() {
 	    public void vrun() {
-	    	ofy().delete().key(generator).now();
+	    	ofy().delete().entity(p.getGeneratorCache()).now();
 	    	ofy().delete().entity(p).now();
 	    }
 		});
