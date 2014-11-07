@@ -163,7 +163,8 @@ public class PageKind {
 	  	PageKind page = processor.pass(name, text);  
 	  	
 	  	GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution(), TextPipeline.defaultGenName);
-	  	g.syncCreateInStore();
+	  	
+	  	new GAESpecific().syncCreateInStore(g);
 	  	
 	  	page.setGenerator(g);
 	  	
@@ -232,7 +233,7 @@ public class PageKind {
   // About: Возвращать частоты, сортированные по убыванию.
   // Это должен быть getter
   // Все известные слова обнуляет!!
-  public ArrayList<DistributionElement> buildSourceImportanceDistribution() {
+  private ArrayList<DistributionElement> buildSourceImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
@@ -309,7 +310,7 @@ public class PageKind {
   }
   
   private Integer getCurrentVolume() {
-  	Integer r = getGenerator().get().getActiveVolume();
+  	Integer r = getGenerator().get().getActiveCount();
   	/*CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);*/
   	return r;
   }

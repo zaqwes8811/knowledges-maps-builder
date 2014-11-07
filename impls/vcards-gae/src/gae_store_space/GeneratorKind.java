@@ -73,7 +73,7 @@ public class GeneratorKind
     return distribution;
   }
   
-  public Integer getActiveVolume() {
+  public Integer getActiveCount() {
   	return gen.get().getActiveVolume();
   }
 
@@ -117,14 +117,7 @@ public class GeneratorKind
     // хотя наверное и так бросит
     return distribution.get(idx);
   }
-  
-  public void persist() {
-  	gae.asyncPersist(this);
-  }
-	
-  public void syncCreateInStore() {
-  	gae.syncCreateInStore(this);
-  }
+
   
   private GeneratorKind() { }
   

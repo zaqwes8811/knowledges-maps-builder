@@ -47,8 +47,8 @@ public class PageKindTest {
   @Test
   public void testCreateAndPersist() throws Exception {
     PageKind page = buildContentPage(TextPipeline.defaultPageName);
-    GeneratorKind gen = GeneratorKind.create(page.buildSourceImportanceDistribution());
-    ofy().save().entity(gen).now();
+    //GeneratorKind gen = GeneratorKind.create(page.buildSourceImportanceDistribution());
+    //ofy().save().entity(gen).now();
     //page.setGenerator(gen);
     //ofy().save().entity(page).now();
   }
@@ -64,7 +64,7 @@ public class PageKindTest {
     			.limit(1).first().now();
 
     /// Queries
-    ArrayList<DistributionElement> distribution = page.buildSourceImportanceDistribution();
+    ArrayList<DistributionElement> distribution = page.getDistribution();
     assertFalse(distribution.isEmpty());
 
     // TODO: how do that?
