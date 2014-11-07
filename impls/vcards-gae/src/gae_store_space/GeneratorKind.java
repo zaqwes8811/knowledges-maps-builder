@@ -82,17 +82,13 @@ public class GeneratorKind
   public static GeneratorKind create(ArrayList<DistributionElement> distribution) {
     return new GeneratorKind(distribution, TextPipeline.defaultGenName);
   }
-  
-  public static GeneratorKind create(ArrayList<DistributionElement> distribution, String name) {
-  	return new GeneratorKind(distribution, name);
-  }
 
   public Integer getPosition() {
     return gen.get().getPosition();
   }
 
-  public void reloadGenerator(ArrayList<DistributionElement> distribution) {
-  	distribution = distribution;
+  public void reloadGenerator(ArrayList<DistributionElement> d) {
+  	distribution = d;
     gen = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
@@ -126,7 +122,7 @@ public class GeneratorKind
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
-  public void restore() {
+  public void reload() {
   	if (distribution == null)
   		throw new IllegalStateException();
   		

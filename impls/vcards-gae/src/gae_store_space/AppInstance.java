@@ -24,7 +24,7 @@ import cross_cuttings_layer.CrossIO;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;	
 	
-	GAESpecific gae = new GAESpecific();
+	GAESpecific store = new GAESpecific();
 	
 	static public String getTestFileName() {
     return "./fake/lor.txt";
@@ -73,7 +73,7 @@ public class AppInstance {
 			if (page.isPresent())
 				page.get().asyncDeleteFromStore();
 		} catch (UncheckedExecutionException e) {
-			gae.asyncDeletePages(name);
+			throw new IllegalStateException();
 		}
 	}
 	
@@ -121,7 +121,7 @@ public class AppInstance {
 	public List<PageSummaryValue> getUserInformation(String userId) {
 		// FIXME: add user info
 		
-		List<PageKind> pages = gae.getPagesMaybeOutdated();
+		List<PageKind> pages = store.getAllPages();
 		
 		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
 		for (PageKind page: pages) 
@@ -131,7 +131,6 @@ public class AppInstance {
 	}
 	
 	public void disablePoint(PathValue p) {
-		// FIXME: как добавить окно?
 		PageKind page = getPage(p.getPageName().get()).get();
 		page.disablePoint(p);		
 	} 
