@@ -48,6 +48,7 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
 import cross_cuttings_layer.AssertException;
+import cross_cuttings_layer.CrossIO;
 import cross_cuttings_layer.OwnCollections;
 
 //@ItIsAggregate
@@ -328,7 +329,7 @@ public class PageKind {
   
   private Integer getCurrentVolume() {
   	Integer r = restoreGenerator().get().getActiveCount();
-  	/*CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);*/
+  	CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);
   	return r;
   }
   
@@ -352,7 +353,7 @@ public class PageKind {
   		
   		if (getCurrentVolume() < 2) 
   			IncBoundary();  // пока один раз
-  		
+  		 
   		// подошли к концу
   		if (!currBoundary.equals(boundaryPtr)) {
   			ArrayList<DistributionElement> d = getDistribution();
@@ -360,6 +361,8 @@ public class PageKind {
   			
   			setDistribution(d);
   			setVolume(getCurrentVolume());
+  			
+  			CrossIO.print("boundary move");
   		}
   	}
   }
