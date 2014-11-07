@@ -185,8 +185,10 @@ public class PageKind {
   	// https://cloud.google.com/appengine/docs/java/datastore/transactions - Isolation
   	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
 
-  	if (pages.size() > 1) 
-			throw new IllegalArgumentException();	
+  	if (pages.size() > 1) {
+			// FIXME: и что делать то?
+  		throw new IllegalArgumentException();
+		}	
   	
 		return r;
 	}
