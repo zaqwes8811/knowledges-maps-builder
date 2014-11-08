@@ -17,7 +17,6 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
-import com.google.common.util.concurrent.UncheckedExecutionException;
 
 import cross_cuttings_layer.CrossIO;
 
@@ -27,7 +26,7 @@ public class AppInstance {
 	ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
 	
 	static public String getTestFileName() {
-    return "./fake/lor.txt";
+    return "./fakes/lor.txt";
   }
 	
 	// FIXME: если кеш убрать работает много стабильнее
@@ -68,13 +67,14 @@ public class AppInstance {
 	}
 	
 	private void fullDeletePage(String name) {
-		try {
+		//try {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent())
 				page.get().asyncDeleteFromStore();
-		} catch (UncheckedExecutionException e) {
-			throw new IllegalStateException();
-		}
+		//} 
+		//catch (UncheckedExecutionException e) {
+		//	throw new IllegalStateException();
+		//}
 	}
 	
 	public void resetFullStore() {
