@@ -98,6 +98,9 @@ class ResearchAjax(object):
         r = requests.post(self._build_url(url), data=json.dumps(payload))
         r.raise_for_status()
 
+    def dev_equalizer(self):
+        pass
+
     @staticmethod
     def get_research_page_name():
         return 'research_page'
