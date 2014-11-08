@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import gae_store_space.queries.GAESpecific;
+import gae_store_space.queries.ExecuteLayerGAEStore;
 
 import java.util.ArrayList;
 
@@ -54,8 +54,8 @@ public class GeneratorKind
   
   // Индексируется as embedded- это состояние генератора
   // FIXME: какая лажа с порядком загрузки
-  @Serialize ArrayList<DistributionElement> distribution;  // порядок важен
-  //@Serialize ArrayList<Integer> equalizeMask;  // same size as distr.
+  @Serialize ArrayList<DistributionElement> d_;  // порядок важен
+  @Serialize ArrayList<Integer> equalizeMask_;  // same size as distr.
   
   // Можно и не индексировать - пока алгоритм одни
   // придется хранить отдельно
@@ -67,14 +67,21 @@ public class GeneratorKind
   Optional<GeneratorAnyDistribution> gen = Optional.absent();
   
   @Ignore
-  GAESpecific gae = new GAESpecific();
+  ExecuteLayerGAEStore gae = new ExecuteLayerGAEStore();
 
   public ArrayList<DistributionElement> getCurrentDistribution() {
-    return distribution;
+    return d_;
   }
-  
+   
   public Integer getActiveCount() {
-  	return gen.get().getActiveVolume();
+  	Integer r = 0;
+  	for (DistributionElement e: d_)
+  		if (e.isActive()) {
+  			//r += e.getImportancy();  // по объему, но пока по штукам
+  			r++;
+  		}
+
+  	return r;
   }
 
   // Любой список с числами
@@ -88,12 +95,12 @@ public class GeneratorKind
   }
 
   public void reloadGenerator(ArrayList<DistributionElement> d) {
-  	distribution = d;
-    gen = Optional.of(GeneratorAnyDistribution.create(distribution));
+  	d_ = d;
+    gen = Optional.of(GeneratorAnyDistribution.create(d_));
   }
 
   private GeneratorKind(ArrayList<DistributionElement> distribution, String name) {
-    this.distribution = distribution;
+    this.d_ = distribution;
     this.name = name;
     
     reloadGenerator(distribution);
@@ -101,7 +108,7 @@ public class GeneratorKind
   
   private void checkUnknown(Integer idx) {
   	checkIndex(idx);
-  	if (!distribution.get(idx).isUnknown())
+  	if (!d_.get(idx).isUnknown())
   		throw new IllegalStateException();
   }
 
@@ -111,12 +118,12 @@ public class GeneratorKind
   	
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-  	distribution.get(idx).markKnown();
-    reloadGenerator(distribution);
+  	d_.get(idx).markKnown();
+    reloadGenerator(d_);
   }
 
   private void checkIndex(Integer idx) {
-    if (idx >= distribution.size() || idx < 0)
+    if (idx >= d_.size() || idx < 0)
       throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
   }
 
@@ -129,11 +136,11 @@ public class GeneratorKind
   //   http://www.quizful.net/post/java-fields-initialization
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
   public void reload() {
-  	if (distribution == null)
+  	if (d_ == null)
   		throw new IllegalStateException();
   		
     // похоже при восстановлении вызывается он
     // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
-    reloadGenerator(distribution);
+    reloadGenerator(d_);
   }
 }

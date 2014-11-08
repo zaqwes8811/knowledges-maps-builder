@@ -1,4 +1,4 @@
-package servlets;
+package web_relays;
 
 import gae_store_space.AppInstance;
 import gae_store_space.PageKind;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlets.protocols.PathValue;
+import web_relays.protocols.PathValue;
 
 import com.google.common.base.Optional;
 import com.google.gson.Gson;

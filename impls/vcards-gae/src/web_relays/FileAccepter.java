@@ -1,4 +1,4 @@
-package servlets;
+package web_relays;
 
 import gae_store_space.AppInstance;
 

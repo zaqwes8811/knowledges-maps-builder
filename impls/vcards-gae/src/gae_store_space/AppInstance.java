@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import gae_store_space.queries.GAESpecific;
+import gae_store_space.queries.ExecuteLayerGAEStore;
 import gae_store_space.queries.OfyService;
 
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import java.util.concurrent.ExecutionException;
 
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
-import servlets.protocols.PageSummaryValue;
-import servlets.protocols.PathValue;
+import web_relays.protocols.PageSummaryValue;
+import web_relays.protocols.PathValue;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -24,7 +24,7 @@ import cross_cuttings_layer.CrossIO;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;	
 	
-	GAESpecific store = new GAESpecific();
+	ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
 	
 	static public String getTestFileName() {
     return "./fake/lor.txt";

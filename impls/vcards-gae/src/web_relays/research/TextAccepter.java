@@ -1,4 +1,4 @@
-package servlets.research;
+package web_relays.research;
 
 import gae_store_space.AppInstance;
 
