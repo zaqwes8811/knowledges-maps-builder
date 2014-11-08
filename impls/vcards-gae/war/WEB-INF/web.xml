@@ -7,7 +7,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<servlet>
 		<servlet-name>PageLifeControl</servlet-name>
-		<servlet-class>servlets.research.GetDistribution</servlet-class>
+		<servlet-class>web_relays.research.GetDistribution</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>PageLifeControl</servlet-name>
@@ -17,7 +17,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>Top</servlet-name>
-		<servlet-class>servlets.GetterSingleWord</servlet-class>
+		<servlet-class>web_relays.GetterSingleWord</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Top</servlet-name>
@@ -27,7 +27,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>UserSummary</servlet-name>
-		<servlet-class>servlets.GetterUserInformation</servlet-class>
+		<servlet-class>web_relays.GetterUserInformation</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UserSummary</servlet-name>
@@ -37,7 +37,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>KnowIt</servlet-name>
-		<servlet-class>servlets.SetterKnownIt</servlet-class>
+		<servlet-class>web_relays.SetterKnownIt</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>KnowIt</servlet-name>
@@ -47,7 +47,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>FileAccepter</servlet-name>
-		<servlet-class>servlets.FileAccepter</servlet-class>
+		<servlet-class>web_relays.FileAccepter</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FileAccepter</servlet-name>
@@ -57,7 +57,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>TextAccepter</servlet-name>
-		<servlet-class>servlets.research.TextAccepter</servlet-class>
+		<servlet-class>web_relays.research.TextAccepter</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>TextAccepter</servlet-name>
@@ -67,7 +67,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>ResetStorage</servlet-name>
-		<servlet-class>servlets.ResetStorage</servlet-class>
+		<servlet-class>web_relays.ResetStorage</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ResetStorage</servlet-name>
@@ -78,7 +78,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>GetLengthSentences</servlet-name>
-		<servlet-class>servlets.GetLengthSentences</servlet-class>
+		<servlet-class>web_relays.GetLengthSentences</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>GetLengthSentences</servlet-name>
@@ -99,4 +99,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
         <filter-name>ObjectifyFilter</filter-name>
         <url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- Tut 2 - а то что 2 контроллера ничего? -->
+	<servlet>
+	    <servlet-name>rest</servlet-name>
+	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	  </servlet>
+	 
+	  <servlet-mapping>
+	    <servlet-name>rest</servlet-name>
+	    <url-pattern>/rest/*</url-pattern>
+	  </servlet-mapping>
 </web-app>

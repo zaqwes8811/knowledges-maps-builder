@@ -1,4 +1,4 @@
-package servlets.protocols;
+package web_relays.protocols;
 
 import com.google.common.base.Optional;
 

@@ -17,7 +17,7 @@
 package gae_store_space;
 
 
-import gae_store_space.queries.GAESpecific;
+import gae_store_space.queries.ExecuteLayerGAEStore;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,8 +33,8 @@ import org.javatuples.Pair;
 
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
-import servlets.protocols.PathValue;
-import servlets.protocols.WordDataValue;
+import web_relays.protocols.PathValue;
+import web_relays.protocols.WordDataValue;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -96,7 +96,7 @@ public class PageKind {
 
   
   @Ignore
-  GAESpecific store = new GAESpecific();
+  ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -117,7 +117,7 @@ public class PageKind {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   public static Optional<PageKind> syncRestore(final String pageName) { 	
-  	GAESpecific store = new GAESpecific();
+  	ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
   	Optional<PageKind> page = store.restorePageByName_evCons(pageName);
   	
   	if (page.isPresent()) {
@@ -172,7 +172,7 @@ public class PageKind {
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
 	public static PageKind createPageIfNotExist_strongCons_maybe(final String name, String text) {
 		// local work
-		final GAESpecific store = new GAESpecific();
+		final ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
 		TextPipeline processor = new TextPipeline();
   	final PageKind page = processor.pass(name, text); 
   	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
@@ -328,9 +328,9 @@ public class PageKind {
   		boundaryPtr = sentencesKinds.size();
   }
   
-  private Integer getCurrentVolume() {
+  private Integer getAmongCurrentActivePoints() {
   	Integer r = getGeneratorCache().getActiveCount();
-  	CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);
+  	//CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);
   	return r;
   }
   
@@ -344,7 +344,7 @@ public class PageKind {
   }
    
   private void moveBoundary() {
-  	Integer currentVolume = getCurrentVolume();
+  	Integer currentVolume = getAmongCurrentActivePoints();
   	
   	if (currentVolume < SWITCH_THRESHOLD * etalonVolume) {
   		// FIXME: no exception safe
@@ -352,7 +352,7 @@ public class PageKind {
   		Integer currBoundary = boundaryPtr;
   		IncBoundary(); 
   		
-  		if (getCurrentVolume() < 2) 
+  		if (getAmongCurrentActivePoints() < 2) 
   			IncBoundary();  // пока один раз
   		 
   		// подошли к концу
@@ -361,7 +361,7 @@ public class PageKind {
   			d = applyBoundary(d);
   			
   			setDistribution(d);
-  			setVolume(getCurrentVolume());
+  			setVolume(getAmongCurrentActivePoints());
   			
   			CrossIO.print("boundary move");
   		}
@@ -371,23 +371,16 @@ public class PageKind {
   	}
   }
   
-  private void checkDecrease(Integer befor) {
-  	Integer current = getCurrentVolume();
-  	if (!(current < befor)) 
-  		throw new AssertException();
-  }
-  
   public void disablePoint(PathValue p) {
   	Integer pos = p.pointPos;
   	// лучше здесь
   	if (etalonVolume.equals(0)) {
-     	if (getCurrentVolume() < 2)
+     	if (getAmongCurrentActivePoints() < 2)
      		throw new IllegalStateException();
      	
    		// создаем первый объем
-   		setVolume(getCurrentVolume());
+   		setVolume(getAmongCurrentActivePoints());
   	}
-  	Integer current = getCurrentVolume();
   	moveBoundary();
 
   	// Читаем заново
@@ -399,8 +392,6 @@ public class PageKind {
 		
 		// Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
 		persist();
-		
-		//checkDecrease(current);
   }
 
   private void persist() {
