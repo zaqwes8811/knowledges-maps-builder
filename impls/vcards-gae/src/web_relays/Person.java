@@ -1,4 +1,4 @@
-package spring_bridge;
+package web_relays;
 
 import java.io.Serializable;
 
