@@ -99,7 +99,10 @@ class ResearchAjax(object):
         r.raise_for_status()
 
     def dev_equalizer(self):
-        pass
+        url = '/rest/cont/plot'
+        r = requests.get(self._build_url(url))
+        r.raise_for_status()
+        return r.json()
 
     @staticmethod
     def get_research_page_name():
