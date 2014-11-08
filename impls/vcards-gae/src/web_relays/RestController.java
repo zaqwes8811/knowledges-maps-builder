@@ -1,4 +1,4 @@
-package spring_bridge;
+package web_relays;
 
 //http://hmkcode.com/spring-mvc-json-json-to-java/
 //
@@ -7,6 +7,8 @@ package spring_bridge;
 //
 //http://habrahabr.ru/post/86433/
 //
+
+import gae_store_space.AppInstance;
 
 import java.util.Map;
 
@@ -19,9 +21,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 @Controller
 @RequestMapping("/cont")
 public class RestController {
+	
+	private AppInstance app = AppInstance.getInstance();
 
 public RestController(){
    System.out.println("init RestController");
