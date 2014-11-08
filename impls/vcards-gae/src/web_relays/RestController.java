@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/cont")
 public class RestController {	
-	private AppInstance app = AppInstance.getInstance();
+	//private AppInstance app = AppInstance.getInstance();
 	
 	public RestController(){
 	   System.out.println("init RestController");
@@ -28,7 +28,7 @@ public class RestController {
 	//this method responses to GET request http://localhost/spring-mvc-json/rest/cont
 	// return Person object as json
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value="plot", method = RequestMethod.GET)
 	public @ResponseBody List<Integer> get(HttpServletRequest request, HttpServletResponse res) {
 		 /*Map<String, String[]> parameters = request.getParameterMap();
 		

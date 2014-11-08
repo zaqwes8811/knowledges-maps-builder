@@ -45,7 +45,6 @@ import time
 
 
 class TestSequenceFunctions(unittest.TestCase):
-
     def setUp(self):
         # Http part
         server = 'http://localhost'
@@ -108,7 +107,8 @@ class TestSequenceFunctions(unittest.TestCase):
         plt.show()
 
     def test_equalizer(self):
-        self.research_ajax.dev_equalizer()
+        r = self.research_ajax.dev_equalizer()
+        print r
 
 
 
