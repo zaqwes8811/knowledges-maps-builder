@@ -1,4 +1,4 @@
-package servlets;
+package web_relays;
 
 import gae_store_space.AppInstance;
 
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import pipeline.TextPipeline;
 
-import servlets.protocols.PageSummaryValue;
+import web_relays.protocols.PageSummaryValue;
 
 import com.google.gson.Gson;
 

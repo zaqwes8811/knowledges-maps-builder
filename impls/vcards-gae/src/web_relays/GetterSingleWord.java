@@ -1,4 +1,4 @@
-package servlets;
+package web_relays;
 
 //import com.google.appengine.repackaged.org.apache.http.annotation.NotThreadSafe;
 import gae_store_space.AppInstance;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.jcip.annotations.NotThreadSafe;
-import servlets.protocols.PathValue;
-import servlets.protocols.WordDataValue;
+import web_relays.protocols.PathValue;
+import web_relays.protocols.WordDataValue;
 
 import com.google.common.base.Optional;
 import com.google.gson.Gson;

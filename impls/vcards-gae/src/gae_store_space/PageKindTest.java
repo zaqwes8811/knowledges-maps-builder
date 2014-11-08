@@ -15,7 +15,7 @@ import org.junit.Test;
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 
-import servlets.protocols.WordDataValue;
+import web_relays.protocols.WordDataValue;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;

@@ -1,18 +1,16 @@
 package pipeline.math;
 
 
-import com.google.common.base.Optional;
-import com.google.common.collect.ImmutableList;
-
-import cross_cuttings_layer.CrossIO;
+import java.util.ArrayList;
+import java.util.Random;
 
 import net.jcip.annotations.Immutable;
 
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
-import java.util.ArrayList;
-import java.util.Random;
+import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 
 // TODO: Вещь довольно законченная, пока расширять не хочу.
 // TODO: Проблема!! Похоже нужно обнулять частоты. Иначе индексы собъются.
@@ -36,20 +34,8 @@ public final class GeneratorAnyDistribution {
     
     return new GeneratorAnyDistribution(distribution);
   }
-  
-  public Integer getActiveVolume() {
-  	Integer r = 0;
-  	for (DistributionElement e: d)
-  		if (e.isActive()) {
-  			//r += e.getImportancy();  // по объему, но пока по штукам
-  			r++;
-  		}
-
-  	return r;
-  }
 
   private GeneratorAnyDistribution(ArrayList<DistributionElement> distribution) {
-  	CrossIO.print("reload");
   	d = distribution;
   	
     // Transpose
