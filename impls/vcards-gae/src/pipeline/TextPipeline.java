@@ -7,6 +7,7 @@ import gae_store_space.SentenceKind;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 import pipeline.nlp.PlainTextTokenizer;
@@ -43,12 +44,19 @@ public class TextPipeline {
     return kinds;
   }
 
-  private ArrayList<NGramKind> unpackHisto(Multimap<String, SentenceKind> histo) {
+  private ArrayList<NGramKind> unpackHisto(
+  		Multimap<String, SentenceKind> histo,
+  		Multimap<String, String> sourcesHist) {
   	ArrayList<NGramKind> kinds = new ArrayList<NGramKind>();
-    for (String word: histo.keySet()) {
-      Collection<SentenceKind> content = histo.get(word);
+  	
+    for (String stem: histo.keySet()) {
+    	Set<String> s = new HashSet<String>(sourcesHist.get(stem));
+    	
+      Collection<SentenceKind> content = histo.get(stem);
       int rawFrequency = content.size();
-      kinds.add(NGramKind.create(word, content, rawFrequency));
+      NGramKind kind = NGramKind.create(stem, content, rawFrequency, s);
+      
+      kinds.add(kind);
     }
     return kinds;
   }
@@ -76,8 +84,9 @@ public class TextPipeline {
   	
     // Assemble statistic
     Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(sentencesKinds);
+    Multimap<String, String> sources = statisticCollector.buildStemSourceHisto(sentencesKinds);
 
-    ArrayList<NGramKind> nGramKinds = unpackHisto(histo);
+    ArrayList<NGramKind> nGramKinds = unpackHisto(histo, sources);
     
     nGramKinds = calcImportancies(nGramKinds);
 
