@@ -17,7 +17,7 @@
 package gae_store_space;
 
 
-import gae_store_space.queries.ExecuteLayerGAEStore;
+import gae_store_space.queries.GAEStoreAccessManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -96,7 +96,7 @@ public class PageKind {
 
   
   @Ignore
-  ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
+  GAEStoreAccessManager store = new GAEStoreAccessManager();
   
   //@Ignore
   private static TextPipeline buildPipeline() {
@@ -117,7 +117,7 @@ public class PageKind {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   public static Optional<PageKind> syncRestore(final String pageName) { 	
-  	ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
+  	GAEStoreAccessManager store = new GAEStoreAccessManager();
   	Optional<PageKind> page = store.restorePageByName_evCons(pageName);
   	
   	if (page.isPresent()) {
@@ -172,7 +172,7 @@ public class PageKind {
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
 	public static PageKind createPageIfNotExist_strongCons_maybe(final String name, String text) {
 		// local work
-		final ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
+		final GAEStoreAccessManager store = new GAEStoreAccessManager();
 		TextPipeline processor = new TextPipeline();
   	final PageKind page = processor.pass(name, text); 
   	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());

@@ -2,6 +2,7 @@ package pipeline.mapreduce;
 
 
 import org.checkthread.annotations.NotThreadSafe;
+import org.tartarus.snowball.ext.englishStemmer;
 
 import pipeline.nlp.SentenceTokenizer;
 
@@ -25,17 +26,25 @@ public class CounterMapperImpl implements CounterMapper {
   private void emit(String key, SentenceKind value) {
     reducer_.reduce(key, value);
   }
-
+  
+  englishStemmer stemmer = new englishStemmer();
+  
   @Override
   public void map(List<SentenceKind> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (SentenceKind item : contentItemKinds) {
       List<String> words = tokenizer.getWords(item.getSentence());
       for (String word: words) {
-      	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
-      	// .toLowerCase()
-      	// FIXME: возможно фильтрация - но думаю в другом классе
-        emit(word, item);
+      	String lowWord = word.toLowerCase();
+      	stemmer.setCurrent(lowWord);
+        if (stemmer.stem()){
+            emit(stemmer.getCurrent(), item);
+        } else {
+        	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
+        	// .toLowerCase()
+        	// FIXME: возможно фильтрация - но думаю в другом классе
+          emit(word, item);
+        }
       }
       
       // Устанавливаем длину предложения
