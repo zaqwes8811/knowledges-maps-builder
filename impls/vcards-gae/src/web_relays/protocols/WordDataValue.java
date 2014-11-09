@@ -17,5 +17,11 @@ public class WordDataValue {
 		this.importance = val;
 	}
 	
+	private Integer maxImportance = 0;
+	
+	public void setMaxImportance(Integer val) {
+		this.maxImportance = val;
+	}
+	
 	// cluster range name - важность слова - три или 4 группы
 }

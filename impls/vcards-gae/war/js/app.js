@@ -196,7 +196,7 @@ View.prototype.onGetWordPackage = function () {
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
       self.redrawSentences(v.sentences);
-      self.draNGramStatistic(v.importance);
+      self.draNGramStatistic(v.importance + " from " + v.maxImportance);
 
       // сбрасываем флаг "i know"
       $('#know_it').prop('checked', false);
