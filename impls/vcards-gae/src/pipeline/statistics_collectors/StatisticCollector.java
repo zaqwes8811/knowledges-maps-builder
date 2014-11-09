@@ -10,6 +10,7 @@ import pipeline.mapreduce.CountReducer;
 import pipeline.mapreduce.CountReducerImpl;
 import pipeline.mapreduce.CounterMapper;
 import pipeline.mapreduce.CounterMapperImpl;
+import pipeline.mapreduce.SourceMapper;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -33,7 +34,8 @@ public class StatisticCollector {
 	public Multimap<String, String> buildStemSourceHisto(ArrayList<SentenceKind> items) {
 		Multimap<String, String> sources = HashMultimap.create();
 		CountReducer<String> r = new CountReducerImpl<String>(sources);
-		
+		CounterMapper m = new SourceMapper(r);
+		m.map(items);
 		return sources;
 	}
 }

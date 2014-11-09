@@ -11,6 +11,7 @@ import java.util.Set;
 import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -18,13 +19,16 @@ import com.googlecode.objectify.annotation.Id;
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class NGramKind {
-	private NGramKind() { }
-	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 5;
+	//private NGramKind() { }
+	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 2;
 	
 	// FIXME: inject it?
-	private ImportanceProcessor estimator = new AdvImportanceProcessor();
+	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
 	//SimpleImportanceProcessor();
 	
+	private final Set<String> sources;
+	
+	@Deprecated
   @Id
   Long id;
 
@@ -41,7 +45,11 @@ public class NGramKind {
   private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
   public String getValue() {
-  	return nGram;
+  	ArrayList<String> tmp = new ArrayList<String>(sources);
+  	Collections.shuffle(tmp);
+  	String r = Joiner.on(" ").join(tmp);
+  	//return nGram;
+  	return r;
   }
 
   public Integer getImportance() {
@@ -52,8 +60,12 @@ public class NGramKind {
   	importance = estimator.process(rawFrequency, sentences);
   }
 
-  public static NGramKind create(String ngramValue, Collection<SentenceKind> sentences, int rawFrequency)	{
-    return new NGramKind(ngramValue, sentences, rawFrequency);
+  public static NGramKind create(
+  		String ngramValue, 
+  		Collection<SentenceKind> sentences, 
+  		int rawFrequency,
+  		Set<String> s) {
+    return new NGramKind(ngramValue, sentences, rawFrequency, s);
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
@@ -77,11 +89,17 @@ public class NGramKind {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  public NGramKind(String nGram, Collection<SentenceKind> sentencess, int rawFrequency) {
+  public NGramKind(
+  		String nGram, 
+  		Collection<SentenceKind> sentencess, 
+  		int rawFrequency,
+  		Set<String> sources) {
     this.nGram = nGram;
     
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
+    
+    this.sources = sources;
 
     // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
     sentences.addAll(sentencess);
