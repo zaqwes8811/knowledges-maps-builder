@@ -146,7 +146,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.equalizer">
+  <component name="RunManager" selected="Python tests.test_boundary_expand">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
