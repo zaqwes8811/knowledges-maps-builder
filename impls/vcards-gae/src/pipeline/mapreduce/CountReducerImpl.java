@@ -1,21 +1,19 @@
 package pipeline.mapreduce;
 
-import gae_store_space.SentenceKind;
+import org.checkthread.annotations.NotThreadSafe;
 
 import com.google.common.collect.Multimap;
 
-import org.checkthread.annotations.NotThreadSafe;
-
 @NotThreadSafe
-public class CountReducerImpl implements CountReducer {
-  private final Multimap<String, SentenceKind> wordHistogram_;
-  public CountReducerImpl(Multimap<String, SentenceKind> wordHistogram) {
+public class CountReducerImpl<T> implements CountReducer<T> {
+  private final Multimap<String, T> wordHistogram_;
+  public CountReducerImpl(Multimap<String, T> wordHistogram) {
     wordHistogram_ = wordHistogram;
   }
 
   // @param value inv. index key - index sentence - или лучше хеш.
   @Override
-  public void reduce(String key, SentenceKind value) {
+  public void reduce(String key, T value) {
     wordHistogram_.put(key, value);
   }
 }

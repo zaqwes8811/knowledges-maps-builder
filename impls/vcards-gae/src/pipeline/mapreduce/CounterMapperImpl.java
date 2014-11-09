@@ -18,8 +18,8 @@ import java.util.List;
 
 @NotThreadSafe
 public class CounterMapperImpl implements CounterMapper {
-  private final CountReducer reducer_;
-  public CounterMapperImpl(CountReducer reducer) {
+  private final CountReducer<SentenceKind> reducer_;
+  public CounterMapperImpl(CountReducer<SentenceKind> reducer) {
     reducer_ = reducer;
   }
 
@@ -29,26 +29,28 @@ public class CounterMapperImpl implements CounterMapper {
   
   englishStemmer stemmer = new englishStemmer();
   
+  private Word getWord(String value) {
+  	String lowWord = value.toLowerCase();
+  	stemmer.setCurrent(lowWord);
+    if (stemmer.stem()) {
+      return new Word(stemmer.getCurrent(), value);  
+    } else {
+      return new Word(value, value); 
+    }
+  }
+  
   @Override
   public void map(List<SentenceKind> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
     for (SentenceKind item : contentItemKinds) {
-      List<String> words = tokenizer.getWords(item.getSentence());
-      for (String word: words) {
-      	String lowWord = word.toLowerCase();
-      	stemmer.setCurrent(lowWord);
-        if (stemmer.stem()){
-            emit(stemmer.getCurrent(), item);
-        } else {
-        	// FIXME: нужна компрессия. Пока что все перевел в нижний регистр.
-        	// .toLowerCase()
-        	// FIXME: возможно фильтрация - но думаю в другом классе
-          emit(word, item);
-        }
+      List<String> tokens = tokenizer.getWords(item.getSentence());
+      for (String token: tokens) {
+        Word w = getWord(token);
+        emit(w.stem, item);
       }
       
       // Устанавливаем длину предложения
-      item.setCountWords(words.size());
+      item.setCountWords(tokens.size());
     }
   }
 }
