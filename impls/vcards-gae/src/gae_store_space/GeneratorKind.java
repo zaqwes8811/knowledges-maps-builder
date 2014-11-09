@@ -127,6 +127,9 @@ public class GeneratorKind
       throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
   }
 
+  public Integer getMaxImportance() {
+  	return d_.get(0).getImportancy();
+  }
   
   private GeneratorKind() { }
   

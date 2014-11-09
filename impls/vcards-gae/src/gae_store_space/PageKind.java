@@ -294,13 +294,17 @@ public class PageKind {
     }
     return d;
   }
+  
+  private Integer getMaxImportancy() {
+  	return this.genCache.getMaxImportance();
+  }
    
   public Optional<WordDataValue> getWordData() {
   	GeneratorKind go = getGeneratorCache();  // FIXME: нужно нормально обработать
     
 		Integer pointPosition = go.getPosition();
 		NGramKind ngramKind =  getNGram(pointPosition);
-		String value = ngramKind.getValue();
+		String value = ngramKind.pack();
 		ImmutableList<SentenceKind> sentenceKinds = ngramKind.getContendKinds();
 
 		ArrayList<String> content = new ArrayList<String>(); 
@@ -309,7 +313,10 @@ public class PageKind {
 		
 		WordDataValue r = new WordDataValue(value, content, pointPosition);
 		
+		// 
 		r.setImportance(ngramKind.getImportance());
+		// max import
+		r.setMaxImportance(getMaxImportancy());
 		
 		return Optional.of(r);
   }
@@ -362,8 +369,6 @@ public class PageKind {
   			
   			setDistribution(d);
   			setVolume(getAmongCurrentActivePoints());
-  			
-  			CrossIO.print("boundary move");
   		}
   		
   		// state change

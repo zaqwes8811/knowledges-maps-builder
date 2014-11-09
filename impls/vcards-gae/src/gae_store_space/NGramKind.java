@@ -45,9 +45,13 @@ public class NGramKind {
   private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
 
   public String getValue() {
+  	return nGram;
+  }
+  
+  public String pack() {
   	ArrayList<String> tmp = new ArrayList<String>(sources);
   	Collections.shuffle(tmp);
-  	String r = Joiner.on(" ").join(tmp);
+  	String r = Joiner.on(" / ").join(tmp);
   	//return nGram;
   	return r;
   }
