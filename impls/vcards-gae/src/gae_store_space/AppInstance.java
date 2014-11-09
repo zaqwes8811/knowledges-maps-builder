@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import gae_store_space.queries.ExecuteLayerGAEStore;
+import gae_store_space.queries.GAEStoreAccessManager;
 import gae_store_space.queries.OfyService;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ import cross_cuttings_layer.CrossIO;
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;	
 	
-	ExecuteLayerGAEStore store = new ExecuteLayerGAEStore();
+	GAEStoreAccessManager store = new GAEStoreAccessManager();
 	
 	static public String getTestFileName() {
     return "./fakes/lor.txt";

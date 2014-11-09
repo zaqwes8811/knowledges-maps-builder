@@ -15,7 +15,7 @@ class StoreException {
 	
 }
 
-public final class ExecuteLayerGAEStore {
+public final class GAEStoreAccessManager {
 //На локальной машине, либо с первого раза, либо никогда - on GAE - хз
 	// срабатывает либо быстро, либо очень долго, так что ждем немного
 	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ

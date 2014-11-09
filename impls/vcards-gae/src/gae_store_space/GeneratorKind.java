@@ -1,6 +1,6 @@
 package gae_store_space;
 
-import gae_store_space.queries.ExecuteLayerGAEStore;
+import gae_store_space.queries.GAEStoreAccessManager;
 
 import java.util.ArrayList;
 
@@ -67,7 +67,7 @@ public class GeneratorKind
   Optional<GeneratorAnyDistribution> gen = Optional.absent();
   
   @Ignore
-  ExecuteLayerGAEStore gae = new ExecuteLayerGAEStore();
+  GAEStoreAccessManager gae = new GAEStoreAccessManager();
 
   public ArrayList<DistributionElement> getCurrentDistribution() {
     return d_;
