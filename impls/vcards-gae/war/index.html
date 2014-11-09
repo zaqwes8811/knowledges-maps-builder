@@ -39,11 +39,18 @@
 <select id="pageGenerators"></select>
 <hr/>
 
+<!-- horizontal backspace; adjust the amount of space by changing 4px -->
+<style type="text/css">span.backspace{margin-left: 4px}</style>
+<!-- The above sets up a "backspace command" in html in the style css-->
+<!-- which can be placed any where after, and will output
+this isa test
+-->
+
 <input type="checkbox" id="know_it" value="Bike">I know it</input> 
 <input type="button" class="btn btn-primary btn-sm" value="Get" onclick="gView.onGetWordPackage()"></input>
 <span id="word_holder_id"></span><br/>
 <ul id="sentences"></ul>
-<span id="count_occurance"></span><br/>
+Importance note:<span class="backspace"></span><b><span id="count_occurance"></span></b><br/>
 <hr/>
 
 <input type="button" class="btn btn-success" value="Get generator info" onclick="gPlotView.onGetData()"/>
