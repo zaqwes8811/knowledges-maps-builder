@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.checkthread.annotations.NotThreadSafe;
-
+import net.jcip.annotations.NotThreadSafe;
 import web_relays.protocols.PathValue;
 
 import com.google.gson.Gson;

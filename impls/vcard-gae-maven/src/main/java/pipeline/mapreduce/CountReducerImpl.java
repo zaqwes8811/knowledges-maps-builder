@@ -1,6 +1,6 @@
 package pipeline.mapreduce;
 
-import org.checkthread.annotations.NotThreadSafe;
+import net.jcip.annotations.NotThreadSafe;
 
 import com.google.common.collect.Multimap;
 
