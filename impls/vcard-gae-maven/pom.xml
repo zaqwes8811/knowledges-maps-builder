@@ -17,51 +17,39 @@
         <maven>3.1.0</maven>
     </prerequisites>
     
-    <parent>
+    <!-- parent>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>1.1.8.RELEASE</version>
-	</parent>
-
+	</parent-->
     <dependencies>
-    	<dependency>
+    
+    <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>4.2.16.Final</version>
+	</dependency>
+    
+    	<!-- dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-web</artifactId>
-	    </dependency>
+	    </dependency-->
 	    
-        <!-- Compile/runtime dependencies -->
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>1.9.10</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
+	    <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-web</artifactId>
+	<version>3.1.1.RELEASE</version>
+</dependency>
+	    
+	    	    
+	    <dependency>
+			<groupId>org.eclipse.jetty.aggregate</groupId>
+			<artifactId>jetty-all-server</artifactId>
+			<version>8.0.0.M0</version>
+		</dependency>
 
-        <!-- Test Dependencies -->
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-testing</artifactId>
-            <version>1.9.10</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-stubs</artifactId>
-            <version>1.9.10</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
+		
+		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>14.0.1</version>
@@ -97,11 +85,13 @@
 			<version>4.0</version>
 		</dependency>
 		
+		<!-- https://code.google.com/p/cofoja/issues/detail?id=11 -->
 		<dependency>
 			<groupId>com.google.java.contract</groupId>
 			<artifactId>cofoja</artifactId>
 			<version>1.1-r150</version>
 		</dependency>
+
 				
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -125,7 +115,49 @@
 			<groupId>org.python</groupId>
 			<artifactId>jython</artifactId>
 			<version>2.5.3</version>
-		</dependency>		      
+		</dependency>	
+	    
+	    
+        <!-- Compile/runtime dependencies -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>1.9.10</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-testing</artifactId>
+            <version>1.9.10</version>
+            <!-- scope>test</scope-->
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>1.9.10</version>
+            <!-- scope>test</scope-->
+        </dependency>
+        
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-labs</artifactId>
+            <version>1.9.10</version>
+            <!-- scope>test</scope-->
+        </dependency>
+        
+        	      
     </dependencies>
 
     <build>
@@ -189,10 +221,10 @@
                 </configuration>
             </plugin>
             
-            <plugin>
+            <!-- plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            </plugin-->
         </plugins>
     </build>
     
