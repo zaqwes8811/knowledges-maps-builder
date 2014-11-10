@@ -3,6 +3,7 @@
 out
 *.py[cod]
 *~
+*.war
 
 web-pages/closure-library
 
