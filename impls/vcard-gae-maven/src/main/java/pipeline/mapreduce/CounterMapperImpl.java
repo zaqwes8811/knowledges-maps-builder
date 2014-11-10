@@ -5,7 +5,7 @@ import gae_store_space.SentenceKind;
 
 import java.util.List;
 
-import org.checkthread.annotations.NotThreadSafe;
+import net.jcip.annotations.NotThreadSafe;
 
 import pipeline.nlp.SentenceTokenizer;
 
