@@ -8,3 +8,4 @@ https://www.youtube.com/watch?v=bvp7CuBWVgA
 http://www.youtube.com/watch?v=vm-RdH_eWK4
 http://googleappengine.blogspot.ru/2010/03/easy-performance-profiling-with.html
 https://developers.google.com/web-toolkit/speedtracer/server-side-tracing
+http://code.google.com/a/eclipselabs.org/p/jvmmonitor/
