@@ -27,5 +27,10 @@
     stale session data. For details, see
     http://code.google.com/appengine/docs/java/config/appconfig.html#Enabling_Sessions
   -->
+  
+  <!-- Prof -->
+  <!--admin-console>
+ 		<page name="Appstats" url="/appstats" />
+	</admin-console-->
 
 </appengine-web-app>

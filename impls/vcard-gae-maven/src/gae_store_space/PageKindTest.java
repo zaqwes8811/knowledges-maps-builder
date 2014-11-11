@@ -1,28 +1,43 @@
 package gae_store_space;
 
-import static gae_store_space.queries.OfyService.ofy;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
+import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.common.collect.Ordering;
+import cross_cuttings_layer.CrossIO;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import pipeline.TextPipeline;
+import pipeline.math.DistributionElement;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static gae_store_space.queries.OfyService.ofy;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import pipeline.TextPipeline;
-import pipeline.math.DistributionElement;
+/*
+class ObjectifyFilter_ extends AsyncCacheFilter
+{
+  @Override
+  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    try {
+      super.doFilter(request, response, chain);
+    } finally {
+      ObjectifyService.reset();
+    }
+  }
 
-import web_relays.protocols.WordDataValue;
-
-import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
-import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.google.common.base.Optional;
-import com.google.common.collect.Ordering;
-
-import cross_cuttings_layer.CrossIO;
+  /**
+   * Perform the actions that are performed upon normal completion of a request.
+   * /
+  public static void complete() {
+    AsyncCacheFilter.complete();
+    ObjectifyService.reset();
+  }
+}
+*/
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class PageKindTest {
@@ -40,6 +55,7 @@ public class PageKindTest {
 
   @After
   public void tearDown() {
+    //ObjectifyFilter;
     helper.tearDown();
   }
 
