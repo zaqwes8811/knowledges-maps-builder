@@ -1,15 +1,15 @@
 package gae_store_space.queries;
 
-import static gae_store_space.queries.OfyService.ofy;
+import com.google.common.base.Optional;
+import com.googlecode.objectify.Key;
+import com.googlecode.objectify.VoidWork;
+import com.googlecode.objectify.Work;
 import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
 
 import java.util.List;
 
-import com.google.common.base.Optional;
-import com.googlecode.objectify.Key;
-import com.googlecode.objectify.VoidWork;
-import com.googlecode.objectify.Work;
+import static gae_store_space.queries.OfyService.ofy;
 
 class StoreException {
 	
@@ -76,7 +76,6 @@ public final class GAEStoreAccessManager {
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
 	public Optional<PageKind> restorePageByName_evCons(String name) {
-	
    	List<PageKind> pages = 
    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
  		
