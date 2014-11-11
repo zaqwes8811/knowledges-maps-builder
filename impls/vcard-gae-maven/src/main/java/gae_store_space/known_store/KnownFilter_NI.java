@@ -4,6 +4,6 @@ package gae_store_space.known_store;
 //
 // а на новые нужно ставить, может еще какую-то статистику собирать
 
-public class NotImplemented {
+public class KnownFilter_NI {
 
 }
