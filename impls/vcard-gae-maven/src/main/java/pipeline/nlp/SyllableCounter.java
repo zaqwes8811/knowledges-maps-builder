@@ -3,12 +3,20 @@ package pipeline.nlp;
 
 //import com.sun.xml.internal.ws.util.StringUtils;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 public class SyllableCounter {
   private static final String RUSSIAN_VOWEL[] = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"};
 
-  // English
+  private static int countMatches(String line, String value) {
+    // Not work on GAE
+    // StringUtils.countMatches(workCopy, RUSSIAN_VOWEL[i]);
+    
+    // http://stackoverflow.com/questions/275944/how-do-i-count-the-number-of-occurrences-of-a-char-in-a-string
+    int count = line.length() - line.replace(value, "").length();
+    return count;
+  }
+   // English
   //
   //Guava : anyOf(CharSequence)	 Specify all the characters you wish matched. For example, CharMatcher.anyOf("aeiou") matches lowercase English vowels.
   private static final String ENGLISH_VOWEL[] = {"a", "e", "i", "o", "u", "y"};
@@ -18,13 +26,13 @@ public class SyllableCounter {
     if (lang.equals("ru")) {
       int count = 0;
       for (int i = 0; i < RUSSIAN_VOWEL.length; ++i) {
-        count += StringUtils.countMatches(workCopy, RUSSIAN_VOWEL[i]);
+        count += countMatches(workCopy, RUSSIAN_VOWEL[i]);
       }
       return count;
     } else if (lang.equals("en")) {
       int count = 0;
       for (int i = 0; i < ENGLISH_VOWEL.length; ++i) {
-        count += StringUtils.countMatches(workCopy, ENGLISH_VOWEL[i]);
+        count += countMatches(workCopy, ENGLISH_VOWEL[i]);
 
       }
 
@@ -36,7 +44,7 @@ public class SyllableCounter {
       // Некоторые парные буквы пары слогов не образуют
       // НО ИНОГДА ЭТО ДВА ЗВУКА!
       for (int i = 0; i < ENGLISH_VOWEL_PAIRS.length; ++i) {
-        count -= StringUtils.countMatches(workCopy, ENGLISH_VOWEL_PAIRS[i]);
+        count -= countMatches(workCopy, ENGLISH_VOWEL_PAIRS[i]);
       }
 
       //ImmutableAppUtils.print(count+" "+workCopy);

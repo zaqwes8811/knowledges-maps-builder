@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.mime.MediaType;
@@ -31,6 +31,12 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
   // TODO: it's weak. 00:31:19,764 --> 00:31:22,823. Усилить бы регулярным выражением
   private static final String TIME_TICKET_SIGN_ = "-->";
   private static final String CONST_0_ = "- ";
+  
+  // http://stackoverflow.com/questions/407929/how-do-i-change-eclipse-to-use-spaces-instead-of-tabs
+  // StringUtils.isNumeric(line) - on gae throw exception
+  public boolean isNumeric(String s) {  
+    return s.matches("[-+]?\\d*\\.?\\d+");  
+	}
 
   // Передать любой handler нельзя.
   @Override
@@ -63,7 +69,7 @@ public class SubtitlesParser implements org.apache.tika.parser.Parser {
       String line = Joiner.on(symbols.EMPTY_STRING).join(list);
 
       if (!list.isEmpty()
-          && !(list.size() == 1 && StringUtils.isNumeric(line))
+          && !(list.size() == 1 && isNumeric(line))
           && !buffer.contains(TIME_TICKET_SIGN_))
         {
         // Некоторые замены исходя из статистики
