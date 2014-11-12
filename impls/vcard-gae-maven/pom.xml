@@ -22,14 +22,14 @@
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>1.1.8.RELEASE</version>
 	</parent-->
-    <dependencies>
-    
-		    <dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-core</artifactId>
-				<version>4.2.16.Final</version>
-			</dependency>
-    
+ <dependencies>
+ 
+<!--dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-core</artifactId>
+	<version>4.2.16.Final</version>
+</dependency-->
+  
 <!-- Spring -->
 <dependency>
    <groupId>org.springframework</groupId>
@@ -101,8 +101,6 @@
 	<version>1.9.13</version>
 </dependency>
 
-
-
 <!-- Other -->
 <dependency>
 	<groupId>com.github.rholder</groupId>
@@ -131,11 +129,11 @@
 			<version>1.0</version>
 		</dependency>
 		
-		<dependency>
+		<!--dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.2.3</version>
-		</dependency> 
+		</dependency--> 
 		
 		<dependency>
 	      <groupId>com.googlecode.objectify</groupId>

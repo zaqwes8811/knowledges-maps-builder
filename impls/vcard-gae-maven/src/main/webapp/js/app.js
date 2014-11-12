@@ -4,6 +4,11 @@
 //    document.getElementById("uploadFile").value = this.value;
 //};
 
+function UserException(message) {
+   this.message = message;
+   this.name = "UserException";
+}
+
 // TODO: think try CoffeeScript
 var protocols = {
 
@@ -16,12 +21,17 @@ var protocols = {
   },
 
   DistributionElem: function(elem) {
-    this.frequency = elem.frequency;
+	// http://stackoverflow.com/questions/135448/how-do-i-check-to-see-if-an-object-has-a-property-in-javascript
+	//if (!_.has(elem, 'importancy')) {
+	//	throw new UserException("No such property" + 'importancy');
+	//}
+    this.frequency = elem.importance;
     this.enabled = elem.unknown;  // плохо - может быть unknown
     this.inBoundary = elem.inBoundary;
   }
 };
 
+// FIXME: в jQuery есть похоже такая функция
 // Speed up calls to hasOwnProperty
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 

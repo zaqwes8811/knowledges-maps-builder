@@ -9,10 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import web_relays.protocols.PathValue;
 
 import com.google.common.base.Optional;
-import com.google.gson.Gson;
 
 
 // CASE: на вебе есть список генераторов страницы, берем имя генератора, и для него возврящаем 
@@ -29,8 +30,8 @@ public class GetDistribution extends HttpServlet {
   {
 		Optional<String> v = Optional.fromNullable(request.getParameter("arg0"));
 		if (v.isPresent()) {
-			PathValue path = new Gson().fromJson(v.get(), PathValue.class);
-	  	String r = new Gson().toJson(app.getDistribution(path));
+			PathValue path = new ObjectMapper().readValue(v.get(), PathValue.class);
+	  	String r = new ObjectMapper().writeValueAsString(app.getDistribution(path));
 	  	
 	  	response.setContentType("text/html");
 	  	response.setStatus(HttpServletResponse.SC_OK);

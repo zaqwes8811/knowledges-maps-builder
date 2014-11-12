@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import pipeline.TextPipeline;
 
 import web_relays.protocols.PageSummaryValue;
-
-import com.google.gson.Gson;
-
 // 
 public class GetterUserInformation extends HttpServlet {
 	/**
@@ -35,7 +34,7 @@ public class GetterUserInformation extends HttpServlet {
     response.setStatus(HttpServletResponse.SC_OK);
     
     List<PageSummaryValue> v = app.getUserInformation(TextPipeline.defaultUserId);
-    String json = new Gson().toJson(v);
+    String json = new ObjectMapper().writeValueAsString(v);
 
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(json);

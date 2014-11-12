@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import net.jcip.annotations.NotThreadSafe;
 import web_relays.protocols.PathValue;
-
-import com.google.gson.Gson;
-
 
 // FIXME: не работает на gae
 @NotThreadSafe
@@ -31,7 +30,7 @@ public class SetterKnownIt extends HttpServlet {
 	
 	  	String data = br.readLine();
 	  	
-	  	PathValue p = new Gson().fromJson(data, PathValue.class);
+	  	PathValue p = new ObjectMapper().readValue(data, PathValue.class);
 	  	
 	  	app.disablePoint(p);
 	  	

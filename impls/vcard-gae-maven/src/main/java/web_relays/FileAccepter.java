@@ -21,7 +21,6 @@ import pipeline.text_extractors.ParserPOSTFile;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
-import com.google.gson.Gson;
 
 @NotThreadSafe
 public class FileAccepter extends HttpServlet {
@@ -80,12 +79,9 @@ public class FileAccepter extends HttpServlet {
 	  	// response
 	  	response.setContentType("text/html");
 	    response.setStatus(HttpServletResponse.SC_OK); 
-	    
-	    //ObjectMapper mapper = new ObjectMapper();  // пока не время
-	    String jsonResponse = new Gson().toJson(0);
 
 	    response.setCharacterEncoding("UTF-8");
-	    response.getWriter().println(jsonResponse);
+	    response.getWriter().println("");
   	} catch (IOException e) {
   		throw new IllegalStateException(e);
   	}
