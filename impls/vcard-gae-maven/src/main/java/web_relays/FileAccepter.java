@@ -23,7 +23,6 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 
-
 @NotThreadSafe
 public class FileAccepter extends HttpServlet {
   private static final long serialVersionUID = -8709394805924640800L;
@@ -82,7 +81,8 @@ public class FileAccepter extends HttpServlet {
 	  	response.setContentType("text/html");
 	    response.setStatus(HttpServletResponse.SC_OK); 
 	    
-	    String jsonResponse = new Gson().toJson(9);
+	    //ObjectMapper mapper = new ObjectMapper();  // пока не время
+	    String jsonResponse = new Gson().toJson(0);
 
 	    response.setCharacterEncoding("UTF-8");
 	    response.getWriter().println(jsonResponse);
