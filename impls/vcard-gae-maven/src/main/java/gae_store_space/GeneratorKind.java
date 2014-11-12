@@ -10,7 +10,6 @@ import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorAnyDistribution;
 
 import com.google.common.base.Optional;
-import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
@@ -77,7 +76,7 @@ public class GeneratorKind
   	Integer r = 0;
   	for (DistributionElement e: d_)
   		if (e.isActive()) {
-  			//r += e.getImportancy();  // по объему, но пока по штукам
+  			//r += e.getImportance();  // по объему, но пока по штукам
   			r++;
   		}
 
@@ -128,7 +127,7 @@ public class GeneratorKind
   }
 
   public Integer getMaxImportance() {
-  	return d_.get(0).getImportancy();
+  	return d_.get(0).getImportance();
   }
   
   private GeneratorKind() { }

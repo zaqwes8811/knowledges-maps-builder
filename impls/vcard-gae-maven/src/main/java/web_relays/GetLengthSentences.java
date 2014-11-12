@@ -11,10 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import web_relays.protocols.PathValue;
 
 import com.google.common.base.Optional;
-import com.google.gson.Gson;
 
 public class GetLengthSentences extends HttpServlet {
 
@@ -31,14 +32,14 @@ public class GetLengthSentences extends HttpServlet {
 		Optional<String> value = Optional.fromNullable(request.getParameter("arg0"));
 		
 		if (value.isPresent()) {
-			PathValue path = new Gson().fromJson(value.get(), PathValue.class);
+			PathValue path = new ObjectMapper().readValue(value.get(), PathValue.class);
 			Optional<String> pageName = path.getPageName();
 			if (pageName.isPresent()) {
 		    Optional<PageKind> p = app.getPage(path.getPageName().get());
 		    if (p.isPresent()) {
 			    ArrayList<Integer> v = p.get().getLengthsSentences();
 			    
-			    String json = new Gson().toJson(v);
+			    String json = new ObjectMapper().writeValueAsString(v);
 			 
 			    response.setContentType("text/html");
 			    response.setStatus(HttpServletResponse.SC_OK);

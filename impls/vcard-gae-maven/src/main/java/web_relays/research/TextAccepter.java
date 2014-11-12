@@ -12,9 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
-import com.google.gson.Gson;
 
 // http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=VhHKUeuMVFK
 public class TextAccepter extends HttpServlet {
@@ -54,7 +55,7 @@ public class TextAccepter extends HttpServlet {
 	    }
 	    
 	    String data = Joiner.on("").join(lines);
-	    TextPackage p = new Gson().fromJson(data, TextPackage.class);
+	    TextPackage p = new ObjectMapper().readValue(data, TextPackage.class);
 	    
 	    // purge from headers and bottoms
 	    if (p.getText().isPresent() && p.getName().isPresent()) {
