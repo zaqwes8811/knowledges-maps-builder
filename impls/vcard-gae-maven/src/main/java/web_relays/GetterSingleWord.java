@@ -11,12 +11,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import net.jcip.annotations.NotThreadSafe;
 import web_relays.protocols.PathValue;
 import web_relays.protocols.WordDataValue;
 
 import com.google.common.base.Optional;
-import com.google.gson.Gson;
 
 @NotThreadSafe
 public class GetterSingleWord extends HttpServlet {
@@ -35,7 +36,8 @@ public class GetterSingleWord extends HttpServlet {
 		if (value == null) 
 			throw new IllegalArgumentException();
 		
-		PathValue path = new Gson().fromJson(value, PathValue.class);
+		PathValue path = new ObjectMapper().readValue(value, PathValue.class);
+		    //new Gson().fromJson(value, );
 		
     // path
 		response.setContentType("text/html");
@@ -47,7 +49,7 @@ public class GetterSingleWord extends HttpServlet {
     
     WordDataValue v = p.get().getWordData().get();
     
-    String json = new Gson().toJson(v);
+    String json = new ObjectMapper().writeValueAsString(v);
  
     response.setCharacterEncoding("UTF-8");
     response.getWriter().println(json);
