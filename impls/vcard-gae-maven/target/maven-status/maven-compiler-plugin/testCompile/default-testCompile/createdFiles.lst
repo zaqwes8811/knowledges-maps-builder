@@ -1,0 +1,6 @@
+pipeline/nlp/PlainTextTokenizerTest.class
+pipeline/text_extractors/ParserPOSTFileTest.class
+pipeline/evaluators/NotesBuilderTest.class
+pipeline/text_extractors/SubtitlesParserTest.class
+pipeline/nlp/SentenceTokenizerTest.class
+pipeline/PipelineBuilderTest.class
