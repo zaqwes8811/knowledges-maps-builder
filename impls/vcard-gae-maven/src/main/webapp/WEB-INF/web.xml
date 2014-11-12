@@ -86,7 +86,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/reset_storage</url-pattern>
 	</servlet-mapping>
 	
-	
 	<servlet>
 		<servlet-name>GetLengthSentences</servlet-name>
 		<servlet-class>web_relays.GetLengthSentences</servlet-class>
@@ -112,7 +111,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</filter-mapping>
 	
 	<!-- Profiling. RPC only? -->
-	<filter>
+	<!--filter>
        <filter-name>appstats</filter-name>
        <filter-class>com.google.appengine.tools.appstats.AppstatsFilter</filter-class>
        <init-param>
@@ -154,9 +153,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     <web-resource-name>appstats</web-resource-name>
     <url-pattern>/appstats/*</url-pattern>
   </web-resource-collection>
-  <!--auth-constraint>
+  <auth-constraint>
     <role-name>admin</role-name>
-  </auth-constraint-->
-</security-constraint>
+  </auth-constraint>
+</security-constraint-->
 
 </web-app>
