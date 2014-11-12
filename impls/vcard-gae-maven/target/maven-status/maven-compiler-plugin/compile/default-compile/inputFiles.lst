@@ -43,7 +43,6 @@
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/cross_cuttings_layer/AssertException.java
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/web_relays/protocols/PageSummaryValue.java
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/web_relays/SetterKnownIt.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/pipeline/text_extractors/SubtitlesContentHandlerTest.java
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/pipeline/text_extractors/Convertor.java
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/pipeline/text_extractors/SubtitlesContentHandler.java
 /home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/main/java/pipeline/text_extractors/ParserPOSTFile.java
