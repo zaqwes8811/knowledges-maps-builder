@@ -15,18 +15,19 @@ public class ManageEmployeeTest {
 
    // FIXME: если ничего не настроено исключений не выозникает!!
    // Тест не запустился - неправильное было имя файла
-   //
-   // http://www.coderanch.com/t/487173/ORM/databases/hibernate-sequence-exist
-   // FIXME: отличия в инкрементации - few notes about a MySQL-to-PostgreSQL migration
-   //
-   // http://ivanbabanin.wordpress.com/2010/08/08/hibernate-postgresql/
    @Test
    public void testMain() {
       System.out.println("Working Directory = " + System.getProperty("user.dir"));
       try{
          // "/resources/hibernate.cfg.xml"
          // http://stackoverflow.com/questions/18736594/location-of-hibernate-cfg-xml-in-project
-         factory = new Configuration().configure().buildSessionFactory();
+         //
+         // With annotation
+         //   http://www.tutorialspoint.com/hibernate/hibernate_annotations.htm
+         factory = new Configuration()
+                  .configure()
+                 .addAnnotatedClass(Employee.class).buildSessionFactory();
+
       }catch (Throwable ex) { 
          System.err.println("Failed to create sessionFactory object." + ex);
          throw new ExceptionInInitializerError(ex); 
