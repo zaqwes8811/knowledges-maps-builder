@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="" />
+    <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\Employee.hbm.out.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\Employee.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\hibernate.cfg.out.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\hibernate.cfg.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\page_employee.sql" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\ManageEmployee.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\ads\Notes.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\ArrayListStack.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\ArrayListStackTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\Stack.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\hibernate\Employee.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\CallJythonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\ImmutableRGB.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\SortMapOnValueExample.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\StringCodingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\object_methods\TODOObjectMethods.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\interfaces\Building.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\interfaces\BuildingType.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\util\BuildingFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\util\RunnerFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Car.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarOneToOne.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarOneToOneTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\EasyKind.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Engine.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\LocalDatastoreTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\OfyService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Person.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\OfyService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\PersonRel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\PersonRelTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gson\UseGsonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\guava\GuavaHashingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\guava\SetGuavaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jpa\Todo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jpa\TodoTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\Beach.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\IJythonTestInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\IndexContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\JavaImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalFile.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalFileTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalScript.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\JSRException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\PyCaller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\PyCallerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\ScriptTestJython.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\SimpleEmbedded.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\TPKFilterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\Trash.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\HelloServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\HelloWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\MinimalServlets.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\OneServletContext.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\tika\UseTikaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.classpath" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\description.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\libraries\junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.settings\org.eclipse.core.resources.prefs" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\CommandLine.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\css\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\hided\index_graph_variants.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\hided\index_hided.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\index_aj.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\SimpleTask.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\TPK.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\TestScript.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\for_test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\codecs.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\copy_reg.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\re.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_compile.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_constants.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_parse.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\types.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\AppContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\FromToJson.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\TestCallJy.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\app-jy.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\app-wrapping-jyja.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\HelloServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\HelloWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\MinimalServlets.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\OneServletContext.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\EvalFile.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\EvalScript.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\JSRException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\PyCaller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\ScriptTestJython.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\SimpleEmbedded.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\Trash.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\Beach.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\IJythonTestInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\JavaImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\EvalFileTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\PyCallerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\TPKFilterTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.SentenceTokenizerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.SentenceTokenizerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/vcard-gae-maven-0.0.1-SNAPSHOT/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/target/vcard-gae-maven-0.0.1-SNAPSHOT/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.PipelineBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.PipelineBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.evaluators.NotesBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.evaluators.NotesBuilderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.ParserPOSTFileTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.ParserPOSTFileTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesContentHandlerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesContentHandlerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesParserTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesParserTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vcard-gae-maven.iml" afterPath="$PROJECT_DIR$/vcard-gae-maven.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,95 +167,23 @@
     <favorites_list name="vcard-gae-maven" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RestfulController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="research.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/research.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1590">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4890">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistributionElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/DistributionElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6826923" vertical-offset="0" max-vertical-offset="4305">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/gae_store_space/queries/GAEStoreAccessManager.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pipeline/math/DistributionElement.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/app.js" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1365" />
-    <option name="y" value="-1" />
-    <option name="width" value="1282" />
-    <option name="height" value="1027" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -137,6 +210,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,204 +260,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_relays" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_relays" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protocols" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pipeline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pipeline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text_extractors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pipeline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae_store_space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -409,7 +285,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +294,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="File.Encoding" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -438,57 +313,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Maven.run">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="compile" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -497,61 +321,8 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -589,6 +360,113 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="deploy" type="MavenRunConfiguration" factoryName="Maven">
@@ -688,37 +566,39 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="" />
       <created>1415643303923</created>
+      <option name="number" value="Default" />
       <updated>1415643303923</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="-1" width="1282" height="1027" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39308175" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31171876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39328277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2882353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6525157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -739,6 +619,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -747,9 +628,43 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="357">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/research.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1802">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="5542">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/DistributionElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="4879">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2145">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990">
           <caret line="235" column="14" selection-start-line="235" selection-start-column="14" selection-end-line="235" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
           <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2145">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1883" max-vertical-offset="2520">
           <caret line="127" column="3" selection-start-line="127" selection-start-column="3" selection-end-line="127" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="630">
           <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2145">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1770">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1890">
           <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,31 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.0262663" vertical-offset="622" max-vertical-offset="2505">
           <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/research.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1590">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4890">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,18 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11257035" vertical-offset="0" max-vertical-offset="533">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/DistributionElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,17 +805,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3816047" vertical-offset="0" max-vertical-offset="511">
           <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6826923" vertical-offset="0" max-vertical-offset="4305">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.6165803" vertical-offset="3009" max-vertical-offset="4879">
+          <caret line="191" column="53" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/DistributionElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4890">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/research.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1590">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web_relays/RestfulController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63909775" vertical-offset="0" max-vertical-offset="399">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1041,4 +932,3 @@
     </states>
   </component>
 </project>
-
