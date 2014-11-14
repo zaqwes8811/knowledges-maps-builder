@@ -22,11 +22,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="vcard-gae-maven" />
+        <module name="sandbox-app" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="vcard-gae-maven" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/vcard-gae-maven.iml" filepath="$PROJECT_DIR$/vcard-gae-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sandbox-app.iml" filepath="$PROJECT_DIR$/sandbox-app.iml" />
     </modules>
   </component>
 </project>
