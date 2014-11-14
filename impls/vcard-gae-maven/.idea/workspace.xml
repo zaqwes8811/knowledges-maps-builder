@@ -2,122 +2,234 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\Employee.hbm.out.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\Employee.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\hibernate.cfg.out.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\hib\page_employee.sql" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\ManageEmployee.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\ads\Notes.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\ArrayListStack.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\ArrayListStackTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\dbc\Stack.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\hibernate\Employee.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\CallJythonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\ImmutableRGB.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\SortMapOnValueExample.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\StringCodingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\object_methods\TODOObjectMethods.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\interfaces\Building.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\interfaces\BuildingType.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\util\BuildingFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\jvm_langs\tutorials\book\util\RunnerFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Car.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarOneToOne.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarOneToOneTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\CarTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\EasyKind.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Engine.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\LocalDatastoreTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\OfyService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\Person.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\OfyService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\PersonRel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gae\relationships\PersonRelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\gson\UseGsonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\guava\GuavaHashingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\guava\SetGuavaTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jpa\Todo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jpa\TodoTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\Beach.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\IJythonTestInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\IndexContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\JavaImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalFile.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\EvalScript.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\JSRException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\PyCaller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\PyCallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\ScriptTestJython.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\SimpleEmbedded.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\TPKFilterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\jython_callers\jsr\Trash.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\HelloServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\HelloWorld.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\MinimalServlets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\servlets\OneServletContext.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox-maven\sandbox\tests_3rdparty\tika\UseTikaTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.classpath" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\ant.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\description.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\libraries\junit_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\.settings\org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\CommandLine.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\bat.bat" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\css\examples.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\hided\index_graph_variants.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\hided\index_hided.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\index_aj.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\js\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\SimpleTask.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\TPK.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\TestScript.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\for_test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\codecs.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\copy_reg.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\re.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_compile.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_constants.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\sre_parse.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\pkgs\types.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\scripts\test_caller.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\AppContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\FromToJson.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\TestCallJy.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\app-jy.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\app-wrapping-jyja.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\HelloServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\HelloWorld.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\MinimalServlets.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jetty_examples\OneServletContext.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\EvalFile.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\EvalScript.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\JSRException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\PyCaller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\ScriptTestJython.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\SimpleEmbedded.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\jsr\Trash.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\Beach.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\IJythonTestInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\src\test_call_jy\JavaImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\EvalFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\PyCallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\templates\web-template\test\jsr\TPKFilterTest.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\ads\Notes.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\dbc\ArrayListStack.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\dbc\ArrayListStackTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\dbc\Stack.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\CallJythonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\ImmutableRGB.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\SortMapOnValueExample.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\StringCodingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\object_methods\TODOObjectMethods.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\tutorials\book\interfaces\Building.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\tutorials\book\interfaces\BuildingType.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\tutorials\book\util\BuildingFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\jvm_langs\tutorials\book\util\RunnerFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\Car.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\CarOneToOne.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\CarOneToOneTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\CarTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\EasyKind.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\Engine.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\LocalDatastoreTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\OfyService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\Person.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\relationships\OfyService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\relationships\PersonRel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gae\relationships\PersonRelTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\gson\UseGsonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\guava\GuavaHashingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\guava\SetGuavaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jpa\Todo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jpa\TodoTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\Beach.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\IJythonTestInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\IndexContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\JavaImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\EvalFile.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\EvalFileTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\EvalScript.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\JSRException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\PyCaller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\PyCallerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\ScriptTestJython.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\SimpleEmbedded.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\TPKFilterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\jython_callers\jsr\Trash.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\servlets\HelloServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\servlets\HelloWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\servlets\MinimalServlets.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\servlets\OneServletContext.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\java-sandbox\tests_3rdparty\tika\UseTikaTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\bootstrap-3.1.1-dist.zip" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\css\hided\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\font-awesome-4.1.0.zip" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\home.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\index-routes-no-it.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\icons.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\larger.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\list.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\path.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\script.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\scss\font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\server.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\learn-angularjs\sh.sh" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\run-dev-svr.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\test_app_engine\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\test_app_engine\helloworld\app.yaml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\test_app_engine\helloworld\helloworld.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\test_app_engine\helloworld\helloworld_old.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\ABOUT" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\cron\crontab" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\cron\crontab.example" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\sql.log" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\databases\storage.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\errors\127.0.0.1.2013-02-18.20-52-08.ce9dc7d5-598c-4c98-90ee-191c083fb241" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\errors\127.0.0.1.2013-02-18.20-53-03.e9901c86-1aec-4123-8013-d6261b8035b6" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\errors\127.0.0.1.2013-02-18.20-53-22.e55ea2d8-53fe-416a-9097-839499af70ce" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\cs.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\default.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\es.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\fr-ca.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\fr.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\hi.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\hu.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\it.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\nl.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\pl.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\plural-en.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\plural-ru.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\plural-uk.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\pt-br.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\pt.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\ro.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\ru.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\sk.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\uk.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\languages\zh.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\modules\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\progress.log" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\routes.example.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\tmp\test.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\platforms-and-companents\web2py_apps\tmp\test.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\sandbox.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.classpath" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\description.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\libraries\junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\.settings\org.eclipse.core.resources.prefs" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\CommandLine.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\css\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\hided\index_graph_variants.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\hided\index_hided.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\index_aj.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\SimpleTask.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\TPK.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\TestScript.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\for_test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\codecs.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\copy_reg.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\re.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\sre_compile.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\sre_constants.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\sre_parse.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\pkgs\types.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\scripts\test_caller.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\AppContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\FromToJson.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\TestCallJy.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\app-jy.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\app-wrapping-jyja.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jetty_examples\HelloServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jetty_examples\HelloWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jetty_examples\MinimalServlets.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jetty_examples\OneServletContext.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\EvalFile.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\EvalScript.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\JSRException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\PyCaller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\ScriptTestJython.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\SimpleEmbedded.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\jsr\Trash.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\test_call_jy\Beach.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\test_call_jy\IJythonTestInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\src\test_call_jy\JavaImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\test\jsr\EvalFileTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\test\jsr\PyCallerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\sandbox\web-template\test\jsr\TPKFilterTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\gae_store_space\AppInstanceTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\gae_store_space\GeneratorKindTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\gae_store_space\PageKindTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\gae_store_space\WordKindTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/queries/OfyService.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/queries/OfyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" />
@@ -125,24 +237,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/vcard-gae-maven-0.0.1-SNAPSHOT/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/target/vcard-gae-maven-0.0.1-SNAPSHOT/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.PipelineBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.PipelineBuilderTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.evaluators.NotesBuilderTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.evaluators.NotesBuilderTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.ParserPOSTFileTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.ParserPOSTFileTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesContentHandlerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesContentHandlerTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesParserTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.text_extractors.SubtitlesParserTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vcard-gae-maven.iml" afterPath="$PROJECT_DIR$/vcard-gae-maven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
@@ -167,7 +270,114 @@
     <favorites_list name="vcard-gae-maven" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AppInstance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/AppInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1533" max-vertical-offset="2006">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppInstanceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/AppInstanceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="697">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneratorKindTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1360">
+              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+              <folding>
+                <element signature="e#1597#1618#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneratorKind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/GeneratorKind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2278">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneratorAnyDistribution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/GeneratorAnyDistribution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2142">
+              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageKindTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="2482">
+              <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordKindTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4317549" vertical-offset="134" max-vertical-offset="544">
+              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentenceKind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/SentenceKind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NGramKind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/NGramKind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1819">
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractCollection.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_71/src.zip!/java/util/AbstractCollection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5202" max-vertical-offset="7548">
+              <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -177,10 +387,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/gae_store_space/queries/OfyService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/AppInstanceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -209,8 +437,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -240,6 +466,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gae_store_space" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,6 +545,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,7 +574,7 @@
       <recent name="pipeline.text_extractors" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.run">
+  <component name="RunManager" selected="Maven.test">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -383,6 +645,22 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -424,6 +702,11 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -521,6 +804,32 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="test" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="build" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -548,10 +857,11 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Maven.deploy" />
       <item index="1" class="java.lang.String" itemvalue="Maven.run" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.build" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.test" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.build" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -572,8 +882,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -584,21 +894,21 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39150944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2882353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2877013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6525157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -738,13 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/AppInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1770">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
@@ -752,31 +1055,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/GeneratorAnyDistribution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1890">
-          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/objectify/objectify/5.1.1/objectify-5.1.1.jar!/com/googlecode/objectify/ObjectifyService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8293963" vertical-offset="74" max-vertical-offset="480">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/objectify/objectify/5.1.1/objectify-5.1.1.jar!/com/googlecode/objectify/ObjectifyFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20661157" vertical-offset="0" max-vertical-offset="363">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/queries/GAEStoreAccessManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1425">
-          <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -840,6 +1122,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63909775" vertical-offset="0" max-vertical-offset="399">
           <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/objectify/objectify/5.1.1/objectify-5.1.1.jar!/com/googlecode/objectify/ObjectifyService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1551247" vertical-offset="93" max-vertical-offset="1411">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/queries/OfyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="748">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/queries/GAEStoreAccessManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1232" max-vertical-offset="1649">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#3550#3551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/AppInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1533" max-vertical-offset="2006">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/AppInstanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="697">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="2482">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/GeneratorKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2278">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/math/GeneratorAnyDistribution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2142">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1360">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding>
+            <element signature="e#1597#1618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_71/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5221" max-vertical-offset="7548">
+          <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/NGramKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1819">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/SentenceKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4317549" vertical-offset="134" max-vertical-offset="544">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

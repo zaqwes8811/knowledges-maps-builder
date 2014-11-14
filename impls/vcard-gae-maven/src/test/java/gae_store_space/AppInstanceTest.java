@@ -1,6 +1,8 @@
 package gae_store_space;
 
 
+import com.googlecode.objectify.ObjectifyService;
+import com.googlecode.objectify.util.Closeable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +28,10 @@ public class AppInstanceTest {
 	@Test
 	public void testGetUserInformation() {
 		AppInstance a = AppInstance.getInstance();
-		new Gson().toJson(a.getUserInformation(TextPipeline.defaultUserId));
+		try (Closeable c = ObjectifyService.begin()) {
+			// do your work.
+			new Gson().toJson(a.getUserInformation(TextPipeline.defaultUserId));
+		}
 	}
 
 }
