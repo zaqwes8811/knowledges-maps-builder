@@ -4,10 +4,14 @@ package gae_store_space;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
+import com.google.gson.Gson;
+import com.googlecode.objectify.ObjectifyService;
+import com.googlecode.objectify.util.Closeable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorDistributionException;
 
@@ -45,7 +49,9 @@ public class GeneratorKindTest {
     ArrayList<DistributionElement> real = new ArrayList<DistributionElement>();
 
     for (Integer value: distribution) {
-      real.add(new DistributionElement(value, true));
+      DistributionElement d = new DistributionElement(value, true);
+      d.setBoundary(true);
+      real.add(d);
     }
     
     return GeneratorKind.create(real);
@@ -69,20 +75,22 @@ public class GeneratorKindTest {
 
   @Test
   public void testPersist() {
-    {
-      ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
-      GeneratorKind d = build(distribution);
+    try (Closeable c = ObjectifyService.begin()) {
+      {
+        ArrayList<Integer> distribution = new ArrayList<Integer>(Arrays.asList(1, 6, 0, 14, 5, 7));
+        GeneratorKind d = build(distribution);
 
-      ofy().save().entity(d).now();
+        ofy().save().entity(d).now();
 
-      d.disablePoint(0);
+        d.disablePoint(0);
 
-      ofy().save().entity(d).now();
-    }
+        ofy().save().entity(d).now();
+      }
 
-    // try load
-    {
-      ofy().load().type(GeneratorKind.class).id(1).now();
+      // try load
+      {
+        ofy().load().type(GeneratorKind.class).id(1).now();
+      }
     }
   }
 }
