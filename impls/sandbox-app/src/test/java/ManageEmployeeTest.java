@@ -19,8 +19,9 @@ public class ManageEmployeeTest {
    public void testMain() {
       System.out.println("Working Directory = " + System.getProperty("user.dir"));
       try{
+         // "/resources/hibernate.cfg.xml"
          // http://stackoverflow.com/questions/18736594/location-of-hibernate-cfg-xml-in-project
-         factory = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+         factory = new Configuration().configure().buildSessionFactory();
       }catch (Throwable ex) { 
          System.err.println("Failed to create sessionFactory object." + ex);
          throw new ExceptionInInitializerError(ex); 
