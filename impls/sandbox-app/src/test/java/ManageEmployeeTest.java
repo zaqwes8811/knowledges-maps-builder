@@ -13,8 +13,13 @@ import org.hibernate.cfg.Configuration;
 public class ManageEmployeeTest {
    private static SessionFactory factory;
 
-   // Note: если ничего не настроено исключений не выозникает!!
-   // Тест не запустился
+   // FIXME: если ничего не настроено исключений не выозникает!!
+   // Тест не запустился - неправильное было имя файла
+   //
+   // http://www.coderanch.com/t/487173/ORM/databases/hibernate-sequence-exist
+   // FIXME: отличия в инкрементации - few notes about a MySQL-to-PostgreSQL migration
+   //
+   // http://ivanbabanin.wordpress.com/2010/08/08/hibernate-postgresql/
    @Test
    public void testMain() {
       System.out.println("Working Directory = " + System.getProperty("user.dir"));
