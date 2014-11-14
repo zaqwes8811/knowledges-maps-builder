@@ -12,7 +12,7 @@
    <property name="hbm2ddl.auto">update</property>
 
    <!-- List of XML mapping files -->
-   <mapping resource="Employee.hbm.xml"/>
+   <!--mapping resource="Employee.hbm.xml"/-->
 
 </session-factory>
 </hibernate-configuration>
