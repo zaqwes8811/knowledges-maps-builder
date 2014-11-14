@@ -10,10 +10,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import sandbox.hibernate.Employee;
+public class ManageEmployeeTest {
+   private static SessionFactory factory;
 
-public class ManageEmployee {
-   private static SessionFactory factory; 
+   // Note: если ничего не настроено исключений не выозникает!!
+   // Тест не запустился
    @Test
    public void testMain() {
       try{
@@ -22,7 +23,7 @@ public class ManageEmployee {
          System.err.println("Failed to create sessionFactory object." + ex);
          throw new ExceptionInInitializerError(ex); 
       }
-      ManageEmployee ME = new ManageEmployee();
+      ManageEmployeeTest ME = new ManageEmployeeTest();
 
       /* Add few employee records in database */
       Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
