@@ -1,7 +1,7 @@
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/text_extractors/SubtitlesContentHandlerTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/text_extractors/SubtitlesParserTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/nlp/SentenceTokenizerTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/evaluators/NotesBuilderTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/PipelineBuilderTest.java
-/home/zaqwes/work/apps/smart-vocabulary-cards/impls/vcard-gae-maven/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\text_extractors\ParserPOSTFileTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\text_extractors\SubtitlesContentHandlerTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\PipelineBuilderTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\nlp\PlainTextTokenizerTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\nlp\SentenceTokenizerTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\evaluators\NotesBuilderTest.java
+D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\text_extractors\SubtitlesParserTest.java
