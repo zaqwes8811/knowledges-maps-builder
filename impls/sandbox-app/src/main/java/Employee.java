@@ -1,8 +1,28 @@
 // FIXME: можно пользоваться и аннотациями - >= java5
+
+
+import javax.persistence.*;
+
+//
+// http://www.coderanch.com/t/487173/ORM/databases/hibernate-sequence-exist
+// FIXME: отличия в инкрементации - few notes about a MySQL-to-PostgreSQL migration
+//
+// http://ivanbabanin.wordpress.com/2010/08/08/hibernate-postgresql/
+@Entity
+@Table(name = "EMPLOYEE")
 public class Employee {
+   @Id
+   @GeneratedValue  // FIXME: Внимание! могут быть проблемы
+   @Column(name = "id")
    private int id;
-   private String firstName; 
-   private String lastName;   
+
+   @Column(name = "first_name")
+   private String firstName;
+
+   @Column(name = "last_name")
+   private String lastName;
+
+   @Column(name = "salary")
    private int salary;  
 
    public Employee() {}
