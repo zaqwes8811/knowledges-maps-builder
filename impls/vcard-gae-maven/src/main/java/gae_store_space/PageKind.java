@@ -48,7 +48,6 @@ import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 
 import cross_cuttings_layer.AssertException;
-import cross_cuttings_layer.CrossIO;
 import cross_cuttings_layer.OwnCollections;
 
 //@ItIsAggregate
@@ -136,7 +135,7 @@ public class PageKind {
   }
   
   private GeneratorKind getGeneratorCache() {
-  	if (!Optional.of(genCache).isPresent())
+  	if (!Optional.fromNullable(genCache).isPresent())
   		throw new IllegalStateException();
   	return genCache;
   }

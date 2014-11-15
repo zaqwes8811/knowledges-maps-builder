@@ -2,10 +2,11 @@ package gae_store_space;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.common.base.Optional;
 import com.google.common.collect.Ordering;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import cross_cuttings_layer.CrossIO;
+import cross_cuttings_layer.GlobalIO;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,42 +16,22 @@ import pipeline.math.DistributionElement;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static gae_store_space.queries.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-/*
-class ObjectifyFilter_ extends AsyncCacheFilter
-{
-  @Override
-  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-    try {
-      super.doFilter(request, response, chain);
-    } finally {
-      ObjectifyService.reset();
-    }
-  }
-
-  /**
-   * Perform the actions that are performed upon normal completion of a request.
-   * /
-  public static void complete() {
-    AsyncCacheFilter.complete();
-    ObjectifyService.reset();
-  }
-}
-*/
-
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class PageKindTest {
+  private AppInstance app = AppInstance.getInstance();
+
   private final String testFilePath = "src/test/resources/fakes/lor.txt";
+
+  // https://cloud.google.com/appengine/docs/java/tools/localunittesting
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
 
-  public PageKind buildContentPage(String pageName) {
-  	TextPipeline processor = new TextPipeline();
-  	String plainText = CrossIO.getGetPlainTextFromFile(testFilePath);
-    return processor.pass(pageName, plainText);
+  public void buildContentPage(String pageName) {
+  	String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
+    app.createOrRecreatePage(pageName, plainText);
   }
 
   @Before
@@ -58,7 +39,6 @@ public class PageKindTest {
 
   @After
   public void tearDown() {
-    //ObjectifyFilter;
     helper.tearDown();
   }
 
@@ -66,32 +46,27 @@ public class PageKindTest {
   @Test
   public void testCreateAndPersist() throws Exception {
     try (Closeable c = ObjectifyService.begin()) {
-      PageKind page = buildContentPage(TextPipeline.defaultPageName);
+      buildContentPage(TextPipeline.defaultPageName);
     }
-    //GeneratorKind gen = GeneratorKind.create(page.buildSourceImportanceDistribution());
-    //ofy().save().entity(gen).now();
-    //page.setGenerator(gen);
-    //ofy().save().entity(page).now();
   }
 
   @Test
   public void testGetDistribution() throws IOException {
     try (Closeable c = ObjectifyService.begin()) {
-      ofy().save().entity(buildContentPage(TextPipeline.defaultPageName)).now();
+
+      buildContentPage(TextPipeline.defaultPageName);
 
       // Очень медленно!!
-      PageKind page =
-              ofy().load().type(PageKind.class)
-                      .filter("name =", TextPipeline.defaultPageName)
-                      .limit(1).first().now();
+      Optional<PageKind> page = PageKind.syncRestore(TextPipeline.defaultPageName);
+      assertTrue(page.isPresent());
 
       /// Queries
-      //ArrayList<DistributionElement> distribution = page.getDistribution();
-      //assertFalse(distribution.isEmpty());
+      ArrayList<DistributionElement> distribution = page.get().getDistribution();
+      assertFalse(distribution.isEmpty());
 
       // TODO: how do that?
-      //boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
-      //assertTrue(sorted);
+      boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
+      assertTrue(sorted);
     }
   }
 

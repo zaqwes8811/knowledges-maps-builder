@@ -2,7 +2,7 @@ package pipeline.nlp;
 
 import com.google.common.base.Splitter;
 
-import cross_cuttings_layer.CrossIO;
+import cross_cuttings_layer.GlobalIO;
 
 import org.junit.Test;
 
@@ -30,7 +30,7 @@ public class SentenceTokenizerTest {
       .omitEmptyStrings()
       .split(sent);
     for (String item: result) {
-      CrossIO.print(item);
+      GlobalIO.print(item);
     }
 
   }
