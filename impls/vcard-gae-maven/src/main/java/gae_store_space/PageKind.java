@@ -115,9 +115,9 @@ public class PageKind {
    
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
-  public static Optional<PageKind> syncRestore(final String pageName) { 	
+  public static Optional<PageKind> restore(final String pageName) {
   	GAEStoreAccessManager store = new GAEStoreAccessManager();
-  	Optional<PageKind> page = store.restorePageByName_evCons(pageName);
+  	Optional<PageKind> page = store.restorePageByName_ec(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;

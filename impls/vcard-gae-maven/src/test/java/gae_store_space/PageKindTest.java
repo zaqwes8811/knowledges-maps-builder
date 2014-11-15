@@ -27,9 +27,10 @@ public class PageKindTest {
 
   // https://cloud.google.com/appengine/docs/java/tools/localunittesting
   private static final LocalServiceTestHelper helper =
-      new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
+      new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
+              .setDefaultHighRepJobPolicyUnappliedJobPercentage(50));
 
-  public void buildContentPage(String pageName) {
+  public void buildAndStoreContentPage(String pageName) {
   	String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
     app.createOrRecreatePage(pageName, plainText);
   }
@@ -42,25 +43,37 @@ public class PageKindTest {
     helper.tearDown();
   }
 
-  @Deprecated
   @Test
   public void testCreateAndPersist() throws Exception {
     try (Closeable c = ObjectifyService.begin()) {
-      buildContentPage(TextPipeline.defaultPageName);
+      buildAndStoreContentPage(TextPipeline.defaultPageName);
+
+      Optional<PageKind> page = Optional.absent();
+      // FIXME: просто греем процессор - bad!
+      // ! Мы знаем точно что страница там есть! Это важно!
+      // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
+      int countTries = 100;  // random
+      while (!page.isPresent()) {
+        page = PageKind.restore(TextPipeline.defaultPageName);
+        if (countTries < 0)
+          assertTrue(false);
+        countTries--;
+      }
     }
   }
 
   @Test
   public void testGetDistribution() throws IOException {
     try (Closeable c = ObjectifyService.begin()) {
+      buildAndStoreContentPage(TextPipeline.defaultPageName);
 
-      buildContentPage(TextPipeline.defaultPageName);
+      Optional<PageKind> page = Optional.absent();
+      // FIXME: просто греем процессор - bad!
+      while (!page.isPresent()) {
+        page = PageKind.restore(TextPipeline.defaultPageName);
+      }
 
-      // Очень медленно!!
-      Optional<PageKind> page = PageKind.syncRestore(TextPipeline.defaultPageName);
-      assertTrue(page.isPresent());
-
-      /// Queries
+      // Queries
       ArrayList<DistributionElement> distribution = page.get().getDistribution();
       assertFalse(distribution.isEmpty());
 
@@ -68,11 +81,6 @@ public class PageKindTest {
       boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
       assertTrue(sorted);
     }
-  }
-
-  @Test
-  public void testDeletePage() {
-    // TODO: Delete full page
   }
 
   @Deprecated
@@ -121,11 +129,7 @@ public class PageKindTest {
     }
     // запрещаем точку
     */
-  }
-  
-  @Deprecated
-  @Test 
-  public void testGetPackedWordData() {
+
   	//PageKind page = putDefaultPagesInStore();
   	//Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGenName);
   	//assertTrue(v.isPresent());

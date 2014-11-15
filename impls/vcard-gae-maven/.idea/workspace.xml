@@ -2,13 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\test\java\pipeline\PipelineBuilderTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/AppInstance.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/AppInstance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/queries/GAEStoreAccessManager.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/queries/GAEStoreAccessManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java" afterPath="$PROJECT_DIR$/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java" afterPath="$PROJECT_DIR$/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pipeline/nlp/SentenceTokenizerTest.java" afterPath="$PROJECT_DIR$/src/test/java/pipeline/nlp/SentenceTokenizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pipeline/text_extractors/SubtitlesParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/pipeline/text_extractors/SubtitlesParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/nlp/WordFilters.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/nlp/WordFilters.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcard-gae-maven\src\main\java\cross_cuttings_layer\CrossIO.java" afterPath="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.AppInstanceTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.AppInstanceTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.GeneratorKindTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.GeneratorKindTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.PageKindTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.PageKindTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.WordKindTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-gae_store_space.WordKindTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.PipelineBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.evaluators.NotesBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.PlainTextTokenizerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.SentenceTokenizerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.nlp.SentenceTokenizerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.ParserPOSTFileTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesContentHandlerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pipeline.text_extractors.SubtitlesParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.AppInstanceTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.AppInstanceTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.GeneratorKindTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.GeneratorKindTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.PageKindTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.PageKindTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.WordKindTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/gae_store_space.WordKindTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.PlainTextTokenizerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pipeline.nlp.SentenceTokenizerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +58,8 @@
       <file leaf-file-name="PageKind.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="6205">
-              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1075" max-vertical-offset="6205">
+              <caret line="124" column="23" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -59,21 +81,43 @@
       <file leaf-file-name="PageKindTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="2074">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="2431">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="42" />
               <folding>
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
+                <element signature="e#1459#1460#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalIO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java">
+      <file leaf-file-name="PlainTextTokenizerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2895377" vertical-offset="0" max-vertical-offset="2482">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentenceTokenizerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/nlp/SentenceTokenizerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="646">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParserPOSTFileTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12878788" vertical-offset="408" max-vertical-offset="867">
+              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -116,10 +160,13 @@
         <option value="$PROJECT_DIR$/src/test/java/gae_store_space/AppInstanceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
-        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/CrossIO.java" />
         <option value="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
+        <option value="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pipeline/nlp/SentenceTokenizerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java" />
       </list>
     </option>
   </component>
@@ -223,6 +270,62 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="text_extractors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vcard-gae-maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -261,58 +364,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae_store_space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cross_cuttings_layer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -673,7 +724,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43134716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4507772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1043,29 +1094,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="2074">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6618005" vertical-offset="0" max-vertical-offset="2482">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="6205">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1075" max-vertical-offset="6205">
+          <caret line="124" column="23" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2895377" vertical-offset="0" max-vertical-offset="2482">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="2431">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/nlp/PlainTextTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/nlp/SentenceTokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="646">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pipeline/text_extractors/ParserPOSTFileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12878788" vertical-offset="408" max-vertical-offset="867">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
           <folding />
         </state>
       </provider>
