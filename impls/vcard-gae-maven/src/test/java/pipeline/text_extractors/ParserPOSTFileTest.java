@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 import org.javatuples.Pair;
 import org.junit.Test;
 
+@Deprecated
 public class ParserPOSTFileTest {
 	@Test
 	public void testParsePOSTFile() {
@@ -21,16 +22,16 @@ public class ParserPOSTFileTest {
     while (matcher.find()) {
     	int beg = matcher.start();
     	int end = matcher.end();
-        System.out.format("I found the text" +
+        /*System.out.format("I found the text" +
             " \"%s\" starting at " +
             "index %d and ending at index %d.%n",
             matcher.group(),
             beg,
-            end);
+            end);*/
         found = true;
-        
-        if ((end - beg) > 2)
-        	System.out.println(value.substring(matcher.start()+1, matcher.end()-1));
+
+        //if ((end - beg) > 2)
+        //	System.out.println(value.substring(matcher.start()+1, matcher.end()-1));
     }
     if(!found){
         //console.format("No match found.%n");

@@ -6,13 +6,8 @@ import cross_cuttings_layer.GlobalIO;
 
 import org.junit.Test;
 
-/**
- * Created with IntelliJ IDEA.
- * User: кей
- * Date: 10.05.13
- * Time: 20:28
- * To change this template use File | Settings | File Templates.
- */
+import static org.junit.Assert.*;
+
 public class SentenceTokenizerTest {
   @Test
   public void testDevelop() {
@@ -29,9 +24,9 @@ public class SentenceTokenizerTest {
       .trimResults()
       .omitEmptyStrings()
       .split(sent);
-    for (String item: result) {
-      GlobalIO.print(item);
-    }
 
+    for (String item: result) {
+      assertFalse(item.isEmpty());
+    }
   }
 }

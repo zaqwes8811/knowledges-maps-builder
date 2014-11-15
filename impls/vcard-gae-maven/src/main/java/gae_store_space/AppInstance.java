@@ -35,7 +35,7 @@ public class AppInstance {
 			.build(
 					new CacheLoader<String, Optional<PageKind>>() {
 						@Override
-						public Optional<PageKind> load(String key) { return PageKind.syncRestore(key); }	
+						public Optional<PageKind> load(String key) { return PageKind.restore(key); }
 					});
 	
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
