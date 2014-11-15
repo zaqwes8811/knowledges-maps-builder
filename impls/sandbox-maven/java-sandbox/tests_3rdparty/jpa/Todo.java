@@ -1,4 +1,5 @@
 package sandbox.tests_3rdparty.jpa;
+// http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
