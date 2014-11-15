@@ -1,6 +1,5 @@
 gae_store_space\PageKindTest.class
 gae_store_space\GeneratorKindTest.class
-pipeline\PipelineBuilderTest.class
 gae_store_space\WordKindTest.class
 pipeline\text_extractors\ParserPOSTFileTest.class
 pipeline\text_extractors\SubtitlesContentHandlerTest.class

@@ -75,7 +75,7 @@ public final class GAEStoreAccessManager {
 	
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
-	public Optional<PageKind> restorePageByName_evCons(String name) {
+	public Optional<PageKind> restorePageByName_ec(String name) {
    	List<PageKind> pages = 
    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
  		

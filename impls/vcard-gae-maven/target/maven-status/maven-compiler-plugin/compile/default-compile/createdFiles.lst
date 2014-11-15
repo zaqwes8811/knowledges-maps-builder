@@ -8,6 +8,7 @@ gae_store_space\GeneratorKind.class
 pipeline\mapreduce\CountReducer.class
 web_relays\protocols\PathValue.class
 pipeline\math\SummatorLists.class
+cross_cuttings_layer\GlobalIO.class
 pipeline\mapreduce\CounterMapper.class
 pipeline\text_extractors\SubtitlesContentHandler.class
 gae_store_space\AppInstance.class
@@ -29,6 +30,7 @@ pipeline\estimators\SimpleImportanceProcessor.class
 pipeline\nlp\SyllableCounter.class
 cross_cuttings_layer\OwnCollections.class
 pipeline\estimators\AdvImportanceProcessor$1.class
+cross_cuttings_layer\GlobalIO$DirFilter.class
 web_relays\SetterKnownIt.class
 pipeline\text_extractors\Convertor.class
 gae_store_space\SentenceKind.class
@@ -42,12 +44,10 @@ web_relays\research\GetDistribution.class
 web_relays\protocols\WordDataValue.class
 pipeline\text_extractors\ParserPOSTFile.class
 gae_store_space\AppInstance$Holder.class
-cross_cuttings_layer\CrossIO.class
 web_relays\protocols\PageSummaryValue.class
 pipeline\text_extractors\SubtitlesToPlainText.class
 web_relays\GetLengthSentences.class
 pipeline\evaluators\NotesBuilder.class
-cross_cuttings_layer\CrossIO$DirFilter.class
 pipeline\estimators\AdvImportanceProcessor.class
 gae_store_space\ResearchInstance.class
 pipeline\math\GeneratorAnyDistribution.class
