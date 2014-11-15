@@ -18,7 +18,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 
-import cross_cuttings_layer.CrossIO;
+import cross_cuttings_layer.GlobalIO;
 
 public class AppInstance {
 	private static final Integer CACHE_SIZE = 5;	
@@ -93,7 +93,7 @@ public class AppInstance {
 	
 	private void createDefaultPage() {
 		String name = TextPipeline.defaultPageName;
-		String text = CrossIO.getGetPlainTextFromFile(getTestFileName());
+		String text = GlobalIO.getGetPlainTextFromFile(getTestFileName());
 		PageKind.createPageIfNotExist_strongCons_maybe(name, text);
 	}
 	

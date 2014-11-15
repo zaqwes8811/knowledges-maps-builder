@@ -1,24 +1,9 @@
 package pipeline.text_extractors;
 
 
-import com.google.common.base.Charsets;
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
-import com.google.common.io.Closer;
-
-import cross_cuttings_layer.CrossIO;
-
-import org.apache.tika.parser.Parser;
 import org.junit.Test;
-import org.xml.sax.ContentHandler;
 
-import pipeline.nlp.PlainTextTokenizer;
-
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 
