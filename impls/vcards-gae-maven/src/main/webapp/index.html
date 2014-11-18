@@ -30,10 +30,15 @@
 </head>
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
-<h1>Text File Reader</h1>
 <div>
   Select a text file: 
+  <br/>
   <input type="file" id="fileInput">
+  <br/>
+  <button 
+    class="btn btn-primary btn-sm" 
+    value="" 
+    onclick="gView.onUploadTextFile()">Process file  (only subtitles and plain text files)</button>
 </div>
 
 
