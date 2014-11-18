@@ -30,18 +30,6 @@
 </head>
 <!-- don't work - body onload="gView.onCreate()"-->
 <body>
-<div>
-  Select a text file: 
-  <br/>
-  <input type="file" id="fileInput">
-  <br/>
-  <button 
-    class="btn btn-primary btn-sm" 
-    value="" 
-    onclick="gView.onUploadTextFile()">Process file  (only subtitles and plain text files)</button>
-</div>
-
-
 <br/>
 <div class="alert alert-warning" role="alert"><b>Warning:</b> Project under development. One user for everyone.
 All data can be removed in any time.</div>
@@ -50,6 +38,12 @@ All data can be removed in any time.</div>
 
 <select id="pages"></select>
 <select id="pageGenerators"></select>
+
+<button>Delete page</button>
+
+<!-- -->
+<select id="availabeFilters"></select>
+<button>Delete dictonary</button>
 <hr/>
 
 <!-- horizontal backspace; adjust the amount of space by changing 4px -->
@@ -69,6 +63,19 @@ Importance note:<span class="backspace"></span><b><span id="count_occurance"></s
 <input type="button" class="btn btn-success" value="Get generator info" onclick="gPlotView.onGetData()"/>
 <div id="placeholder" style="width:500px; height:300px"></div>
 <hr/>
+
+<form>
+<div>
+  <br/>
+  <input type="file" id="fileInput">
+  <br/>
+  <button 
+    class="btn btn-primary btn-sm" 
+    value="" 
+    onclick="gView.onUploadTextFile()">Process file  (only subtitles and plain text files)</button>
+</div>
+</form>
+
 
 <form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
   <input type="file"  size="60" name="myfile">
