@@ -33,6 +33,21 @@ View.prototype.setCurrentTextFilename = function (/*value*/) {
 View.prototype.sendPage = function(page) {
   var self = this;
 
+  /*var errorHandler = function(e) {
+    try {
+      alert(JSON.parse(e));
+    } catch (ex) {
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+      //if (e if e instanceof RangeError)
+
+    }
+  };
+
+  var successHandler = function(data) {
+
+  };*/
+
+  this.dal.putPage(page);//, successHandler, errorHandler);
 }
 
 View.prototype.onUploadTextFile = function () {
@@ -63,7 +78,9 @@ View.prototype.onUploadTextFile = function () {
     var text = reader.result;
     var page = new protocols.TextPackage(pageName, text);
     self.sendPage(page);
-  }
+  };
+
+  // FIXME: page is reload here
 
   reader.readAsText(file);
 }

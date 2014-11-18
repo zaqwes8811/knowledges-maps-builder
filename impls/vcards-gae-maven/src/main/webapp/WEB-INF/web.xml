@@ -57,16 +57,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>FileAccepter</servlet-name>
-		<servlet-class>web_relays.FileAccepter</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>FileAccepter</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/accept</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>TextAccepter</servlet-name>
 		<servlet-class>web_relays.research.TextAccepter</servlet-class>
 	</servlet>

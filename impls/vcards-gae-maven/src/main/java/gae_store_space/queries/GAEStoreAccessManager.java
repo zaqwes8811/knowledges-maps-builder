@@ -11,9 +11,10 @@ import java.util.List;
 
 import static gae_store_space.queries.OfyService.ofy;
 
-class StoreException {
-	
-}
+// FIXME:
+//class StoreException {
+//
+//}
 
 public final class GAEStoreAccessManager {
 //На локальной машине, либо с первого раза, либо никогда - on GAE - хз
@@ -54,6 +55,12 @@ public final class GAEStoreAccessManager {
 	//
 	// Вобщем если что-то включить в EG то писать можно будет только раз в секунду - сохранять например.
   private static int COUNT_REPEATS = 3;
+
+	// r/w limit 1Mb? Or?
+	// http://stackoverflow.com/questions/9127982/avoiding-memcache-1m-limit-of-values
+	// http://stackoverflow.com/questions/5522804/1mb-quota-limit-for-a-blobstore-object-in-google-app-engine
+	// FIXME: may store in blob store but how access to it?
+	public static long LIMIT_DATA_STORE_SIZE = 1000000;  // bytes
 	
 	public void asyncPersist(PageKind kind) {
 		ofy().save().entity(kind).now();
@@ -88,7 +95,7 @@ public final class GAEStoreAccessManager {
 		return Optional.of(pages.get(0));
 	}
 	
-	public List<PageKind> getPagesByName_evCons(String name) {
+	public List<PageKind> getPagesByName_eventually(String name) {
 		return ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
 	}
 	
