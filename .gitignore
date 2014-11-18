@@ -4,6 +4,7 @@ out
 *.py[cod]
 *~
 *.war
+*target*
 
 web-pages/closure-library
 
