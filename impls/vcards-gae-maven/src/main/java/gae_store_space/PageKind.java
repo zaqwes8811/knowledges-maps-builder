@@ -57,6 +57,15 @@ public class PageKind {
   private PageKind() { }
 
   public @Id Long id;
+
+	// Assumption: raw source >> sum(other fields)
+	public long getPageByteSize() {
+		// it's trouble
+		// http://stackoverflow.com/questions/9368764/calculate-size-of-object-in-java
+		// http://stackoverflow.com/questions/52353/in-java-what-is-the-best-way-to-determine-the-size-of-an-object
+		//
+		return rawSource.length();
+	}
   
   public Long getId() { return id; }
 
@@ -169,38 +178,48 @@ public class PageKind {
 
   // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public static PageKind createPageIfNotExist_strongCons_maybe(final String name, String text) {
+	public static PageKind createPageIfNotExist_eventually(final String name, String text) {
+		if (text.length() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+			throw new IllegalArgumentException();
+
 		// local work
 		final GAEStoreAccessManager store = new GAEStoreAccessManager();
 		TextPipeline processor = new TextPipeline();
-  	final PageKind page = processor.pass(name, text); 
-  	final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
+		final PageKind page = processor.pass(name, text);
 
-  	// transaction boundary
-  	Work<PageKind> work = new Work<PageKind>() {
-	    public PageKind run() {
-	    	ofy().save().entity(g).now();
-	    	
-	    	// нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
-	    	page.setGenerator(g);  
-	 
-	    	ofy().save().entity(page).now();
-	      return page;
-	    }
-		};
-		
-		PageKind r = store.firstPersist(work);   
-  	
-  	// FIXME: база данный в каком состоянии будет тут? согласованном?
-  	// https://cloud.google.com/appengine/articles/transaction_isolation - Isolation
-  	List<PageKind> pages = store.getPagesByName_evCons(name);	    			
+		// FIXME: how to know object size - need todo it!
+		if (page.getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+			throw new IllegalArgumentException();
 
-  	if (pages.size() > 1) {
-			// FIXME: и что делать то?
-  		throw new IllegalArgumentException();
-		}	
-  	
-		return r;
+		final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
+
+		// check-then-act/read-modify-write
+		// FIXME: Looks like imposable without races.
+		// Doesn't help really
+		{
+			// https://cloud.google.com/appengine/articles/transaction_isolation - Isolation
+			List<PageKind> pages = store.getPagesByName_eventually(name);
+			if (pages.size() >= 1) {
+				throw new IllegalArgumentException();
+			}
+
+			// transaction boundary
+			Work<PageKind> work = new Work<PageKind>() {
+				public PageKind run() {
+					ofy().save().entity(g).now();
+
+					// нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
+					page.setGenerator(g);
+
+					ofy().save().entity(page).now();
+					return page;
+				}
+			};
+			// FIXME: база данный в каком состоянии будет тут? согласованном?
+			// check here, but what can do?
+
+			return store.firstPersist(work);
+		}
 	}
   
   private Set<String> getNGramms(Integer boundary) {

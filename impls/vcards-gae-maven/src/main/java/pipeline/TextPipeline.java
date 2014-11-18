@@ -73,6 +73,8 @@ public class TextPipeline {
   }
   
   // Now no store operations
+  // Performance:
+  //   text size around 1 Mb calc near 16 sec. - 4/2 1.6 GHz
   public PageKind pass(String pageName, String rawText) {
   	String pureText = removeFormatting(rawText);
   	

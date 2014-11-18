@@ -58,12 +58,12 @@ public class AppInstance {
 	public void createOrRecreatePage(String name, String text) {	
 		fullDeletePage(name);
 		pagesCache.invalidate(name);
-		PageKind.createPageIfNotExist_strongCons_maybe(name, text);
+		PageKind.createPageIfNotExist_eventually(name, text);
 		pagesCache.invalidate(name);
 	}
 	
 	public PageKind syncCreatePageIfNotExist(String name, String text) {
-		return PageKind.createPageIfNotExist_strongCons_maybe(name, text);
+		return PageKind.createPageIfNotExist_eventually(name, text);
 	}
 	
 	private void fullDeletePage(String name) {
@@ -94,7 +94,7 @@ public class AppInstance {
 	private void createDefaultPage() {
 		String name = TextPipeline.defaultPageName;
 		String text = GlobalIO.getGetPlainTextFromFile(getTestFileName());
-		PageKind.createPageIfNotExist_strongCons_maybe(name, text);
+		PageKind.createPageIfNotExist_eventually(name, text);
 	}
 	
 	public AppInstance() { }

@@ -10,13 +10,13 @@ D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipelin
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\web_relays\GetterUserInformation.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\SentenceKind.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\mapreduce\CounterMapper.java
-D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\web_relays\FileAccepter.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\evaluators\KMeans_NI.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\mapreduce\CounterMapperImpl.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\web_relays\SetterKnownIt.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\queries\OfyService.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\mapreduce\CountReducerImpl.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\text_extractors\SubtitlesParser.java
+D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\web_relays\protocols\TextPackage.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\mapreduce\SourceMapper.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\math\DistributionElement.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\AppInstance.java
@@ -44,7 +44,6 @@ D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipelin
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\math\GeneratorDistributionException.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\queries\GAEStoreAccessManager.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\cross_cuttings_layer\GlobalIO.java
-D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\text_extractors\ParserPOSTFile.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\text_extractors\Convertor.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\known_store\KnownFilter_NI.java
 D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\NGramKind.java

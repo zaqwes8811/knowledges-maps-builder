@@ -1,5 +1,6 @@
 package web_relays.research;
 
+import cross_cuttings_layer.GlobalIO;
 import gae_store_space.AppInstance;
 
 import java.io.BufferedReader;
@@ -16,27 +17,13 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
+import web_relays.protocols.TextPackage;
 
 // http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=VhHKUeuMVFK
 public class TextAccepter extends HttpServlet {
   private static final long serialVersionUID = -432680049858395942L;
   
   private AppInstance app = AppInstance.getInstance();
-  
-  private static class TextPackage {
-  	public TextPackage() {}
-  	
-  	String text;
-  	String name;
-  	
-  	public Optional<String> getText() {
-  		return Optional.fromNullable(text);
-  	}
-  	
-  	public Optional<String> getName() {
-  		return Optional.fromNullable(name);
-  	}
-  }
 
   @Override
   public void doPost(
@@ -53,14 +40,14 @@ public class TextAccepter extends HttpServlet {
 	    while ((line = reader.readLine()) != null) {
 	    	lines.add(line);
 	    }
-	    
+
 	    String data = Joiner.on("").join(lines);
 	    TextPackage p = new ObjectMapper().readValue(data, TextPackage.class);
 	    
 	    // purge from headers and bottoms
 	    if (p.getText().isPresent() && p.getName().isPresent()) {
 	    	app.createOrRecreatePage(p.getName().get(), p.getText().get());
-	  	
+
 		  	// response
 		    response.setStatus(HttpServletResponse.SC_OK); 
 	    } else { 
