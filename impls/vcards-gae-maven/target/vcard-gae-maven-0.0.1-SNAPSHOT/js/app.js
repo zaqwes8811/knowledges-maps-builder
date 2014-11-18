@@ -30,8 +30,26 @@ View.prototype.setCurrentTextFilename = function (/*value*/) {
   this.currentTextFilename = file;
 }
 
+View.prototype.sendPage = function(page) {
+  var self = this;
+
+}
+
 View.prototype.onUploadTextFile = function () {
   var self = this;
+  var file = this.currentTextFilename;
+  var pageName = file.name;  // FIXME: не очень, но пока так
+  if (!file) {
+    return;    
+  }
+
+  // FIXME:
+  // if not match
+  if (false) {
+
+  }
+
+  
   // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
   // Вроде бы трудно на голом jQ and Ajax - "Doing this kind of uploading hacks is not an enjoyable experience"
   // http://malsup.com/jquery/form/#ajaxForm
@@ -42,17 +60,12 @@ View.prototype.onUploadTextFile = function () {
   var reader = new FileReader();
 
   reader.onload = function(e) {
-    var innerText = reader.result;
-    alert(innerText.length);
+    var text = reader.result;
+    var page = new protocols.TextPackage(pageName, text);
+    self.sendPage(page);
   }
 
-  var file = this.currentTextFilename;
-  if (file) {
-    reader.readAsText(file);
-
-    // match
-  }
-  
+  reader.readAsText(file);
 }
 
 View.prototype.onUploadFilterFile = function() {
