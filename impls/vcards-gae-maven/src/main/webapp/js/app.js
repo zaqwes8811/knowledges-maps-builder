@@ -25,7 +25,7 @@ function View(dal) {
 
 View.prototype.setCurrentTextFilename = function (/*value*/) {
   var fileInput = $("#fileInput");
-  var file = fileInput.files[0];
+  var file = fileInput[0].files[0];
 
   this.currentTextFilename = file;
 }
@@ -42,7 +42,8 @@ View.prototype.onUploadTextFile = function () {
   var reader = new FileReader();
 
   reader.onload = function(e) {
-    //fileDisplayArea.innerText = reader.result;
+    var innerText = reader.result;
+    alert(innerText.length);
   }
 
   var file = this.currentTextFilename;
