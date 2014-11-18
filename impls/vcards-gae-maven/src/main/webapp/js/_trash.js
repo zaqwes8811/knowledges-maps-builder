@@ -29,3 +29,14 @@
   }; 
  
   $("#myForm").ajaxForm(options);
+
+  
+<form id="myForm" action="/accept" method="post" enctype="multipart/form-data">
+  <input type="file"  size="60" name="myfile">
+  <br/>
+  <input type="submit" class="btn btn-primary btn-sm" value="Process file  (now only subtitles)">
+  <br/>
+  <br/>
+  <div id="progress"><div id="bar"></div><div id="percent">0%</div ></div>
+</form>
+<div id="message"></div>

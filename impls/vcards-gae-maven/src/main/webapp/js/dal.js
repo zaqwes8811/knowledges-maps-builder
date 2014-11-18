@@ -40,7 +40,19 @@ DataAccessLayer.prototype.markIsDone = function (point) {
     type: "PUT",
     url: uri,
     data : JSON.stringify(point)
-  }).error(function(data) { self.onError(data); });;
+  }).error(function(data) { self.onError(data); });
+}
+
+DataAccessLayer.prototype.putPage = function (page, done, error) {
+  var self = this;
+  var uri = '/research/accept_text';
+  $.ajax({
+    type: "POST",
+    url: uri,
+    data : JSON.stringify(page)
+  })
+  //.success(done)
+  //.error(error);
 }
 
 // FIXME: нужны параметры
