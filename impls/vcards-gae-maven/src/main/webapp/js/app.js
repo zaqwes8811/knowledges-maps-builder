@@ -1,99 +1,14 @@
-// TODO: try AtomJS
-
-//document.getElementById("uploadBtn").onchange = function () {
-//    document.getElementById("uploadFile").value = this.value;
-//};
-
 function UserException(message) {
    this.message = message;
    this.name = "UserException";
 }
 
-// TODO: think try CoffeeScript
-var protocols = {
+function Logger() {
 
-  // On server-side exist Java class
-  PathValue: function (page, gen, pos) {
-    //this.user
-    this.pageName = page;
-    this.genName = gen;
-    this.pointPos = pos;
-  },
-
-  DistributionElem: function(elem) {
-	// http://stackoverflow.com/questions/135448/how-do-i-check-to-see-if-an-object-has-a-property-in-javascript
-	//if (!_.has(elem, 'importancy')) {
-	//	throw new UserException("No such property" + 'importancy');
-	//}
-    this.frequency = elem.importance;
-    this.enabled = elem.unknown;  // плохо - может быть unknown
-    this.inBoundary = elem.inBoundary;
-  }
-};
-
-// FIXME: в jQuery есть похоже такая функция
-// Speed up calls to hasOwnProperty
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-function isEmpty(obj) {
-
-    // null and undefined are "empty"
-    if (obj == null) return true;
-
-    // Assume if it has a length property with a non-zero value
-    // that that property is correct.
-    if (obj.length > 0)    return false;
-    if (obj.length === 0)  return true;
-
-    // Otherwise, does it have any properties of its own?
-    // Note that this doesn't handle
-    // toString and valueOf enumeration bugs in IE < 9
-    for (var key in obj) {
-        if (hasOwnProperty.call(obj, key)) return false;
-    }
-
-    return true;
 }
 
-// Class
-// http://stackoverflow.com/questions/4994201/is-object-empty
-function CurrentWordData() {
-  this.data = {};
-}
+Logger.prototype.putWarning = function(message) {
 
-CurrentWordData.prototype.set = function (data) {
-  this.data = data;
-}
-
-CurrentWordData.prototype.getImportance = function () {
-  return this.data.importance;
-}
-
-CurrentWordData.prototype.getPos = function () {
-  return this.data.pointPos;
-}
-
-CurrentWordData.prototype.isActive = function () {
-  return !isEmpty(this.data);
-}
-
-// Class
-function UserSummary(listPagesSum) {
-  this.raw = listPagesSum;
-}
-
-UserSummary.prototype.reset = function (listPagesSum) {
-  this.raw = listPagesSum;
-}
-
-UserSummary.prototype.getGenNames = function (_pageName) {
-  // ищем по списку
-  var r = _.findWhere(this.raw, {pageName: _pageName});
-  return r.genNames;
-}
-
-UserSummary.prototype.getPageNames = function () {
-  return _.pluck(this.raw, 'pageName');
 }
 
 // Class
@@ -104,12 +19,43 @@ function View(dal) {
   this.dal = dal;
   this.currentWordData = new CurrentWordData();
   this.userSummary = new UserSummary([]);
+  this.currentTextFilename = "";
+
 }
 
-View.prototype.uploadFile = function () {
+View.prototype.setCurrentTextFilename = function (/*value*/) {
+  var fileInput = $("#fileInput");
+  var file = fileInput.files[0];
+
+  this.currentTextFilename = file;
+}
+
+View.prototype.onUploadTextFile = function () {
+  var self = this;
   // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
   // Вроде бы трудно на голом jQ and Ajax - "Doing this kind of uploading hacks is not an enjoyable experience"
   // http://malsup.com/jquery/form/#ajaxForm
+
+  // FIXME: to html5 
+  // http://www.matlus.com/html5-file-upload-with-progress/
+  // http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    //fileDisplayArea.innerText = reader.result;
+  }
+
+  var file = this.currentTextFilename;
+  if (file) {
+    reader.readAsText(file);
+
+    // match
+  }
+  
+}
+
+View.prototype.onUploadFilterFile = function() {
+  // FIXME: 
 }
 
 View.prototype.getCurrentPageName = function () {
@@ -193,7 +139,6 @@ View.prototype.reload = function() {
   })
 }
 
-
 View.prototype.onGetWordPackage = function () { 
   var self = this;
 
@@ -213,67 +158,6 @@ View.prototype.onGetWordPackage = function () {
     }, point);
 }
 
-// Ajax wrapper
-function DataAccessLayer() { }
-
-DataAccessLayer.prototype.onError = function (message) {
-  alert(message);
-}
-
-DataAccessLayer.prototype.markIsDone = function (point) {
-  var self = this;
-  var uri = '/know_it';
-  
-  //$.get(uri, args)
-  //  .error(function(data) { self.onError(data); });
-  // FIXME: better sync()
-
-  $.ajax({
-    type: "PUT",
-    url: uri,
-    data : JSON.stringify(point)
-  }).error(function(data) { self.onError(data); });;
-}
-
-// FIXME: нужны параметры
-DataAccessLayer.prototype.getWordPkgAsync = function (callback, arg0) {
-  // делаем запрос
-  var self = this;
-  var uri = '/pkg';  // FIXME: looks like shit
-  var args = {'arg0': JSON.stringify(arg0)};
-  $.get(uri, args)
-    .success(callback)
-    .error(function(data) { self.onError(data); });
-}
-
-DataAccessLayer.prototype.getDistributionAsync = function (callback, arg0) {
-  var self = this;
-  var uri = '/research/get_distribution';
-  var args = {'arg0': JSON.stringify(arg0)};
-  $.get(uri, args)
-    .success(callback)
-    .error(function(data) { self.onError(data); });
-}
-
-DataAccessLayer.prototype.getUserSummary = function (callback) {
-  var self = this;
-  // Get user data
-  // Нужно по имени страницы получать список генераторов
-  var uri = '/user_summary';
-  $.get(uri)
-    .success(callback)
-    .error(function(data) { self.onError(data); });
-}
-
-DataAccessLayer.prototype.resetFullStore =  function () {
-  var self = this;
-  // Get user data
-  // Нужно по имени страницы получать список генераторов
-  var uri = '/reset_storage';
-  $.get(uri)
-    .error(function(data) { self.onError(data); });
-}
-
 // State
 // создаются до загрузки DOM?
 var gDataAccessLayer = new DataAccessLayer();
@@ -285,37 +169,8 @@ $(function() {
   gView.reload();
   gPlotView.reset();
 
-
-  // http://hayageek.com/ajax-file-upload-jquery/
-  // https://github.com/blueimp/jQuery-File-Upload/wiki/Basic-plugin - еще вариант
-  var options = { 
-    beforeSend: function() {
-        $("#progress").show();
-        //clear everything
-        $("#bar").width('0%');
-        $("#message").html("");
-        $("#percent").html("0%");
-    },
-    uploadProgress: function(event, position, total, percentComplete) {
-        $("#bar").width(percentComplete+'%');
-        $("#percent").html(percentComplete+'%');
-    },
-    success: function() {
-        $("#bar").width('100%');
-        $("#percent").html('100%');
- 
-    },
-    complete: function(response) {
-        // FIXME: можно же в принципе ничего не выводить?
-        //$("#message").html("<font color='green'>"+response.responseText+"</font>");
-
-        // FIXME: обновить бы данные страницы - списки страниц и генераторов
-    },
-    error: function() {
-        $("#message").html("<font color='red'> ERROR: unable to upload files</font>");
-    }
-  }; 
- 
-  $("#myForm").ajaxForm(options);
+  $("#fileInput").change(function(e) {
+    gView.setCurrentTextFilename();
+  })
 
 });
