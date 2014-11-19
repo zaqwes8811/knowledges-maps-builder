@@ -81,7 +81,7 @@ public class GeneratorKind
   }
 
   private void recreateGenerator(ArrayList<DistributionElement> d) {
-    generator = Optional.of(GeneratorAnyDistribution.create(distribution));
+    generator = Optional.of(GeneratorAnyDistribution.create(d));
   }
 
   private GeneratorKind(ArrayList<DistributionElement> distribution, String name) {
@@ -97,12 +97,12 @@ public class GeneratorKind
   		throw new IllegalStateException();
   }
 
+  // TODO: Проверка границ - это явно ошибка
+  // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
   public void disablePoint(Integer idx) {
   	checkIndex(idx);
   	checkUnknown(idx);
-  	
-    // TODO: Проверка границ - это явно ошибка
-    // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
+
   	distribution.get(idx).markKnown();
     resetDistribution(distribution);
   }
@@ -123,18 +123,17 @@ public class GeneratorKind
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
   private GeneratorKind() { }
 
+  // похоже при восстановлении вызывается он
+  // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
   public static Optional<GeneratorKind> restoreById(Long id) {
     LoadResult<GeneratorKind> q = ofy().load().type(GeneratorKind.class).id(id);
     Optional<GeneratorKind> g = Optional.fromNullable(q.now());
     if (g.isPresent()) {
       if (!Optional.fromNullable(g.get().distribution).isPresent())
         throw new IllegalStateException();
-
-      // похоже при восстановлении вызывается он
-      // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
       g.get().resetDistribution(g.get().distribution);
     }
 
-    return Optional.fromNullable(q.now());
+    return g;
   }
 }
