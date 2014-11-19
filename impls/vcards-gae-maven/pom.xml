@@ -156,6 +156,13 @@
 
     <!-- Test Dependencies -->
     <dependency>
+        <groupId>org.jsefa</groupId>
+        <artifactId>jsefa</artifactId>
+        <version>0.9.3.RELEASE</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-csv</artifactId>
         <version>1.0</version>
