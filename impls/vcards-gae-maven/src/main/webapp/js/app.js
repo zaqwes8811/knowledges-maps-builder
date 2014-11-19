@@ -178,7 +178,7 @@ View.prototype.onGetWordPackage = function () {
 
   // делаем запрос
   this.dal.getWordPkgAsync(function(data) {
-      var v = JSON.parse(data);
+      var v = data;
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
       self.redrawSentences(v.sentences);
