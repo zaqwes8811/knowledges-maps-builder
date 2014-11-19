@@ -13,7 +13,7 @@ PlotView.prototype.onGetData = function () {
   var point = gView._makePoint();
 
   this.dal.getDistributionAsync(function(data) { 
-    self.plot( $.parseJSON(data)); 
+    self.plot(data); 
   }, point);
 }
 
