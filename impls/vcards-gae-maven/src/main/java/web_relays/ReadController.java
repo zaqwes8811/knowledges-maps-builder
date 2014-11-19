@@ -16,7 +16,6 @@ import web_relays.protocols.WordDataValue;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 // 406 trouble
@@ -36,11 +35,10 @@ public class ReadController {
 	public @ResponseBody
 	WordDataValue getterSingleWord(HttpServletRequest request, HttpServletResponse res) {
 		String value = request.getParameter("arg0");
-
-		if (value == null)
-			throw new IllegalArgumentException();
-
 		try {
+			if (value == null)
+				throw new IllegalArgumentException();
+
 			PathValue path = new ObjectMapper().readValue(value, PathValue.class);
 
 			Optional<PageKind> p = app.getPage(path.getPageName().get());

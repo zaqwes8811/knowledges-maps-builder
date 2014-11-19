@@ -1,4 +1,4 @@
-package sandbox.gae;
+package third_party.gae;
 
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;

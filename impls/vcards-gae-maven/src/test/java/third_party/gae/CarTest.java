@@ -6,7 +6,7 @@
 // Try v5
 
 
-package sandbox.gae;
+package third_party.gae;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -23,7 +23,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static sandbox.gae.OfyService.ofy;
+import static third_party.gae.OfyService.ofy;
 
 //import static com.googlecode.objectify.ObjectifyService;
 //import static com.googlecode.objectify.ObjectifyService.ofy;

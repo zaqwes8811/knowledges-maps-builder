@@ -1,4 +1,4 @@
-package sandbox.gae.relationships;
+package third_party.gae.relationships;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;

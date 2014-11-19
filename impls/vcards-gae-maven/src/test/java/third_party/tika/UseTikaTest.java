@@ -1,4 +1,4 @@
-package sandbox.tika;
+package third_party.tika;
 
 import org.junit.Test;
 
