@@ -2,6 +2,7 @@ package gae_store_space;
 
 import java.util.ArrayList;
 
+import com.googlecode.objectify.LoadResult;
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
@@ -13,6 +14,8 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
+
+import static gae_store_space.OfyService.ofy;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -39,44 +42,25 @@ import com.googlecode.objectify.annotation.Serialize;
 @Entity
 public class GeneratorKind
 {
-  @Id
-  public Long id;
-  
+  @Id public Long id;
+  @Index private String name;
+  @Serialize private ArrayList<DistributionElement> distribution;  // порядок элементов важен
+  @Serialize private ArrayList<Integer> equalizeMask_;  // same size as distribution
+
+  @Ignore private Optional<GeneratorAnyDistribution> generator = Optional.absent();
+
   public Long getId()  { return id; }
-  
-  @Index
-  private String name;
-  
   public String getName() { return name; }
-  
-  // Индексируется as embedded- это состояние генератора
-  // FIXME: какая лажа с порядком загрузки
-  @Serialize ArrayList<DistributionElement> d_;  // порядок важен
-  @Serialize ArrayList<Integer> equalizeMask_;  // same size as distr.
-  
-  // Можно и не индексировать - пока алгоритм одни
-  // придется хранить отдельно
-  // все-таки на объект накладываются ограничения!!
-  // FIXME: вообще нужно быть внимательным, порядок иниц. может все сломать
-  // Наверное можно было бы сереализовать его, но из-за эквалайзинга,
-  //   сохраняю исходные распределения отдельно
-  @Ignore 
-  Optional<GeneratorAnyDistribution> gen = Optional.absent();
-  
-  @Ignore
-  GAEStoreAccessManager gae = new GAEStoreAccessManager();
 
   public ArrayList<DistributionElement> getCurrentDistribution() {
-    return d_;
+    return distribution;
   }
    
   public Integer getActiveCount() {
   	Integer r = 0;
-  	for (DistributionElement e: d_)
-  		if (e.isActive()) {
-  			//r += e.getImportance();  // по объему, но пока по штукам
-  			r++;
-  		}
+    //r += e.getImportance();  // по объему, но пока по штукам
+  	for (DistributionElement e: distribution)
+  		if (e.isActive())	r++;
 
   	return r;
   }
@@ -88,24 +72,28 @@ public class GeneratorKind
   }
 
   public Integer getPosition() {
-    return gen.get().getPosition();
+    return generator.get().getPosition();
   }
 
-  public void reloadGenerator(ArrayList<DistributionElement> d) {
-  	d_ = d;
-    gen = Optional.of(GeneratorAnyDistribution.create(d_));
+  public void resetDistribution(ArrayList<DistributionElement> d) {
+  	distribution = d;
+    recreateGenerator(distribution);
+  }
+
+  private void recreateGenerator(ArrayList<DistributionElement> d) {
+    generator = Optional.of(GeneratorAnyDistribution.create(distribution));
   }
 
   private GeneratorKind(ArrayList<DistributionElement> distribution, String name) {
-    this.d_ = distribution;
+    this.distribution = distribution;
     this.name = name;
     
-    reloadGenerator(distribution);
+    resetDistribution(distribution);
   }
   
   private void checkUnknown(Integer idx) {
   	checkIndex(idx);
-  	if (!d_.get(idx).isUnknown())
+  	if (!distribution.get(idx).isUnknown())
   		throw new IllegalStateException();
   }
 
@@ -115,32 +103,38 @@ public class GeneratorKind
   	
     // TODO: Проверка границ - это явно ошибка
     // TODO: Похоже нужна non-XG - транзакция. Кажется может возникнуть исключение.
-  	d_.get(idx).markKnown();
-    reloadGenerator(d_);
+  	distribution.get(idx).markKnown();
+    resetDistribution(distribution);
   }
 
   private void checkIndex(Integer idx) {
-    if (idx >= d_.size() || idx < 0)
+    if (idx >= distribution.size() || idx < 0)
       throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
   }
 
   public Integer getMaxImportance() {
-  	return d_.get(0).getImportance();
+  	return distribution.get(0).getImportance();
   }
-  
-  private GeneratorKind() { }
-  
+
   // похоже при восстановлении вызывается он
   // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
   // DANGER:
   //   http://www.quizful.net/post/java-fields-initialization
   // Обязательно вызывать после восстановления из хранилища! конструктором по умолчанию воспользоваться нельзя!
-  public void reload() {
-  	if (d_ == null)
-  		throw new IllegalStateException();
-  		
-    // похоже при восстановлении вызывается он
-    // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
-    reloadGenerator(d_);
+  private GeneratorKind() { }
+
+  public static Optional<GeneratorKind> restoreById(Long id) {
+    LoadResult<GeneratorKind> q = ofy().load().type(GeneratorKind.class).id(id);
+    Optional<GeneratorKind> g = Optional.fromNullable(q.now());
+    if (g.isPresent()) {
+      if (!Optional.fromNullable(g.get().distribution).isPresent())
+        throw new IllegalStateException();
+
+      // похоже при восстановлении вызывается он
+      // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
+      g.get().resetDistribution(g.get().distribution);
+    }
+
+    return Optional.fromNullable(q.now());
   }
 }

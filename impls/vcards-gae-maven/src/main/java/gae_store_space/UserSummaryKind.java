@@ -14,7 +14,7 @@ import java.util.Set;
 @Entity
 public class UserSummaryKind {
   private UserSummaryKind() {
-    if (!Optional.of(pagesNames).isPresent())
+    if (!Optional.fromNullable(pagesNames).isPresent())
       pagesNames = new HashSet<>();
   }
 
