@@ -102,7 +102,7 @@ public class PageKindTest {
     //   можно использовать кэши, но как быть с обновлением данных?
   	//PageKind page = putPagesInStore();
 
-    // queries
+    // store_specific
     //Integer pointPosition = page.getGenerator(TextPipeline.defaultGenName).getPosition();
 
     /*

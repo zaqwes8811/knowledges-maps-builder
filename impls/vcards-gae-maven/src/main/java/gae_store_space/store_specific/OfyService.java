@@ -1,9 +1,8 @@
-package gae_store_space.queries;
+package gae_store_space.store_specific;
 
 // Run outside 'normal'
 // https://groups.google.com/forum/#!topic/objectify-appengine/fZltoWFwbrs
 
-import static gae_store_space.queries.OfyService.ofy;
 import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
 

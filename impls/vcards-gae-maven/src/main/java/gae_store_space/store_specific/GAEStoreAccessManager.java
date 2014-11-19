@@ -1,4 +1,4 @@
-package gae_store_space.queries;
+package gae_store_space.store_specific;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
@@ -9,7 +9,7 @@ import gae_store_space.PageKind;
 
 import java.util.List;
 
-import static gae_store_space.queries.OfyService.ofy;
+import static gae_store_space.store_specific.OfyService.ofy;
 
 // FIXME:
 //class StoreException {
@@ -39,7 +39,7 @@ public final class GAEStoreAccessManager {
 	//private static int TIME_STEP_MS = 200;
 	//private static int COUNT_TRIES = 12; 
 	//
-	// Nontransactional (non-ancestor) queries - 
+	// Nontransactional (non-ancestor) store_specific -
 	//
 	// Strong consistency:
 	//   https://cloud.google.com/appengine/docs/java/datastore/structuring_for_strong_consistency
