@@ -1,4 +1,4 @@
-package sandbox.gae;
+package third_party.gae;
 
 import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.*;

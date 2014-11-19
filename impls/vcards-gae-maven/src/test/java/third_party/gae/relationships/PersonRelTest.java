@@ -1,4 +1,4 @@
-package sandbox.gae.relationships;
+package third_party.gae.relationships;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
-import static sandbox.gae.relationships.OfyService.ofy;
+import static third_party.gae.relationships.OfyService.ofy;
 
 /**
  * Created by zaqwes on 5/9/14.
