@@ -17,16 +17,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>Top</servlet-name>
-		<servlet-class>web_relays.GetterSingleWord</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Top</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/pkg</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
 		<servlet-name>KnowIt</servlet-name>
 		<servlet-class>web_relays.SetterKnownIt</servlet-class>
 	</servlet>
