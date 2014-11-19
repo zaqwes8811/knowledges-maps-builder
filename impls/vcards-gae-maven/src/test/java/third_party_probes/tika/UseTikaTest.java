@@ -1,4 +1,4 @@
-package third_party.tika;
+package third_party_probes.tika;
 
 import org.junit.Test;
 

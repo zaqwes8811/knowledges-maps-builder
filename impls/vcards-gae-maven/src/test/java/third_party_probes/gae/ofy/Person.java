@@ -1,4 +1,4 @@
-package third_party.gae;
+package third_party_probes.gae.ofy;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
