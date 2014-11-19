@@ -1,7 +1,8 @@
-package gae_store_space;
+package instances;
 
-import gae_store_space.store_specific.GAEStoreAccessManager;
-import gae_store_space.store_specific.OfyService;
+import gae_store_space.PageKind;
+import gae_store_space.GAEStoreAccessManager;
+import gae_store_space.OfyService;
 
 import java.util.ArrayList;
 import java.util.List;

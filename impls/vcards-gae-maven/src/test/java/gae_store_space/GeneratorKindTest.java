@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static gae_store_space.store_specific.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 

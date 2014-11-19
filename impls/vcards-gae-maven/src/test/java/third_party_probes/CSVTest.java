@@ -56,7 +56,7 @@ public class CSVTest {
       // Format looks valid but failed on more then one field
       List<Person> persons = csvPersonReader.readAll();  // Failed
       for (Person p : persons) {
-        out.println(p.translate);
+        //out.println(p.translate);
       }
     } catch (Throwable e) {
       closer.rethrow(e);
