@@ -51,8 +51,8 @@ DataAccessLayer.prototype.putPage = function (page, done, error) {
     url: uri,
     data : JSON.stringify(page)
   })
-  //.success(done)
-  //.error(error);
+  .success(done)
+  .error(error);
 }
 
 // FIXME: нужны параметры

@@ -33,7 +33,7 @@ View.prototype.setCurrentTextFilename = function (/*value*/) {
 View.prototype.sendPage = function(page) {
   var self = this;
 
-  /*var errorHandler = function(e) {
+  var errorHandler = function(e) {
     try {
       alert(JSON.parse(e));
     } catch (ex) {
@@ -45,7 +45,7 @@ View.prototype.sendPage = function(page) {
 
   var successHandler = function(data) {
 
-  };*/
+  };
 
   this.dal.putPage(page);//, successHandler, errorHandler);
 }
@@ -149,7 +149,7 @@ View.prototype.reload = function() {
   // Get user data
   var self = this;
   this.dal.getUserSummary(function(data) {
-      self.userSummary.reset(JSON.parse(data));
+      self.userSummary.reset(data);
       var pages = self.userSummary.getPageNames();
       self.resetPagesOptions(pages);
     });

@@ -13,19 +13,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet-mapping>
 	  <servlet-name>rest</servlet-name>
-	  <url-pattern>/rest/*</url-pattern>
+	  <url-pattern>/*</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>PageLifeControl</servlet-name>
-		<servlet-class>web_relays.research.GetDistribution</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PageLifeControl</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/research/get_distribution</url-pattern>
-	</servlet-mapping>
-	
 	<servlet>
 		<servlet-name>Top</servlet-name>
 		<servlet-class>web_relays.GetterSingleWord</servlet-class>
@@ -35,17 +25,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
 		<url-pattern>/pkg</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>UserSummary</servlet-name>
-		<servlet-class>web_relays.GetterUserInformation</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UserSummary</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/user_summary</url-pattern>
-	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>KnowIt</servlet-name>
 		<servlet-class>web_relays.SetterKnownIt</servlet-class>
@@ -55,17 +35,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
 		<url-pattern>/know_it</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>TextAccepter</servlet-name>
-		<servlet-class>web_relays.research.TextAccepter</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>TextAccepter</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/research/accept_text</url-pattern>
-	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>ResetStorage</servlet-name>
 		<servlet-class>web_relays.ResetStorage</servlet-class>
@@ -74,16 +44,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>ResetStorage</servlet-name>
 		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
 		<url-pattern>/reset_storage</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>GetLengthSentences</servlet-name>
-		<servlet-class>web_relays.GetLengthSentences</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GetLengthSentences</servlet-name>
-		<!-- TODO: Может /pages/* http://www.restapitutorial.com/lessons/restfulresourcenaming.html -->
-		<url-pattern>/get_lengths_sentences</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
