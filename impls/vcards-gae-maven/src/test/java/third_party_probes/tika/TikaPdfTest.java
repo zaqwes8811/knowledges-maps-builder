@@ -2,7 +2,7 @@ package third_party_probes.tika;
 
 import org.junit.Test;
 
-public class UseTikaTest {
+public class TikaPdfTest {
 
   @Test
   public void testMain(){
