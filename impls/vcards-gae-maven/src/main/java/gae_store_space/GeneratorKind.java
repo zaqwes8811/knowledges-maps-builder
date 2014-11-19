@@ -1,7 +1,5 @@
 package gae_store_space;
 
-import gae_store_space.store_specific.GAEStoreAccessManager;
-
 import java.util.ArrayList;
 
 import net.jcip.annotations.NotThreadSafe;

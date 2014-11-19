@@ -1,4 +1,4 @@
-package gae_store_space;
+package instances;
 
 // FIXME: а нужно ли? возможно просто понадобятся несколько кешей и конвееров?
 public class ResearchInstance {
