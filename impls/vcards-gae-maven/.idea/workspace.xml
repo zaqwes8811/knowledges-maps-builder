@@ -2,7 +2,167 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\test\java\third_party_probes\tika\UseTikaTest.java" afterPath="$PROJECT_DIR$/src/test/java/third_party_probes/tika/TikaPdfTest.java" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\.attach_pid27675" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\_index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\css\aj.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\content.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\descriptions.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\filters\bec-dictionary.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\filters\sorted.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\frequences.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\bec-node\ptrs-to-sentences.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\default-node\frequences.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\default-node\sentences.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\app-folder\default-node\sorted.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\bat.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\cfgs\app_cfg.yaml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\crawler-app.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\run-jar.bat" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\scriber-app.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\targets\spider_extractor_target_onto.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\app_carcass.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\app.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\app_liq.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\bottom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\examples.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\print.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\summary.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\web2py.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\web2py_bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\web2py_bootstrap_nojs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\hided\website.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\css\journal.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bg-scrollbar-thumb-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bg-scrollbar-track-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bg-scrollbar-trackend-y.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bg_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bullet.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bullet_m.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\bullet_p.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\button_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\button_left_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\button_right_xon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\del.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\ed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\footerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\go.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\gplus-32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\headerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\led_alm.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\led_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\led_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\logo.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\logo_new.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\logo_new1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\logo_new2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon_b.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon_b1.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon_b2.bmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\phon_big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\rel.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\sw_of.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\sw_on.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\tableft.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\tabright.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\temp1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\temp2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\img\twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\index_.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\left-nspace.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\new_journal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\qunit-1.10.0.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\qunit-1.10.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\settings-checkers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\settings-crosscuts.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\share.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\stat-html-save.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\statistic-to-call.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\statistic-to-names.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\statistic.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\statistic.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\summator-info.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\sys-settings-engine.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\thinks.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\tvct-lib-1.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\used-regex.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\web2py.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\hided\web2py_bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\jquery-1.8.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\jquery.tinyscrollbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\no_w2p.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\apps\web_view\subs\sys-settings-new.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\card.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\inner-reuse.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\layers.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\leafs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\css\sliders.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\index_legacy.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\js\cards.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\js\fakes.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\js\reuse.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\panel.htm" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\crawler_schedule.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\crawler_schedule_per_docs.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\crawler_schedule_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\spider_extractor_target.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\spider_extractor_target.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\spider_extractor_target_onto.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\old_version\targets\spider_extractor_target_onto.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\own-app.yaml" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\research\code_thresh.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\research\flot_samples.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\controllers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\cross-browser-print.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\dd_belatedpng.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\js_hided_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\trash\trash\share.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +230,8 @@
       <file leaf-file-name="TikaPdfTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/third_party_probes/tika/TikaPdfTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.286" vertical-offset="10" max-vertical-offset="867">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.388" vertical-offset="10" max-vertical-offset="867">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,16 +272,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EasyKind.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/EasyKind.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -281,234 +431,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven-0.0.1-SNAPSHOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_probes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_probes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tika" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_probes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="third_party_probes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -862,7 +784,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1168" height="880" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -873,7 +795,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25086805" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -917,13 +839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/objectify/objectify/5.1.1/objectify-5.1.1.jar!/com/googlecode/objectify/ObjectifyFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20661157" vertical-offset="0" max-vertical-offset="363">
@@ -1151,7 +1066,7 @@
         <state vertical-scroll-proportion="0.9801193" vertical-offset="0" max-vertical-offset="765">
           <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1161,7 +1076,7 @@
         <state vertical-scroll-proportion="1.3180914" vertical-offset="0" max-vertical-offset="1020">
           <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1299,10 +1214,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/troubles.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="487">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/third_party_probes/tika/TikaPdfTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.286" vertical-offset="10" max-vertical-offset="867">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.388" vertical-offset="10" max-vertical-offset="867">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
