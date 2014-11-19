@@ -1,15 +1,13 @@
-package gae_store_space.store_specific;
+package gae_store_space;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.Work;
-import gae_store_space.GeneratorKind;
-import gae_store_space.PageKind;
 
 import java.util.List;
 
-import static gae_store_space.store_specific.OfyService.ofy;
+import static gae_store_space.OfyService.ofy;
 
 // FIXME:
 //class StoreException {

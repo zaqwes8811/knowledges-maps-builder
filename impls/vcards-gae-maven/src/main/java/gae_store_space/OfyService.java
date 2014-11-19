@@ -1,4 +1,4 @@
-package gae_store_space.store_specific;
+package gae_store_space;
 
 // Run outside 'normal'
 // https://groups.google.com/forum/#!topic/objectify-appengine/fZltoWFwbrs
