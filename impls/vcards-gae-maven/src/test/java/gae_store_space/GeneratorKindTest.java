@@ -4,14 +4,12 @@ package gae_store_space;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
-import com.google.gson.Gson;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorDistributionException;
 
@@ -19,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static gae_store_space.queries.OfyService.ofy;
+import static gae_store_space.store_specific.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 

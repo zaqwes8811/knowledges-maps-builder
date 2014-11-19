@@ -17,14 +17,14 @@
 package gae_store_space;
 
 
-import gae_store_space.queries.GAEStoreAccessManager;
+import gae_store_space.store_specific.GAEStoreAccessManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import static gae_store_space.queries.OfyService.ofy;
+import static gae_store_space.store_specific.OfyService.ofy;
 
 import net.jcip.annotations.NotThreadSafe;
 

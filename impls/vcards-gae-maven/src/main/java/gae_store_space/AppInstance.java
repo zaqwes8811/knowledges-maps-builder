@@ -1,7 +1,7 @@
 package gae_store_space;
 
-import gae_store_space.queries.GAEStoreAccessManager;
-import gae_store_space.queries.OfyService;
+import gae_store_space.store_specific.GAEStoreAccessManager;
+import gae_store_space.store_specific.OfyService;
 
 import java.util.ArrayList;
 import java.util.List;
