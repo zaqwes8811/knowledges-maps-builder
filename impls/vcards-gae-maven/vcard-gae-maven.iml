@@ -72,6 +72,8 @@
     <orderEntry type="library" name="Maven: com.google.appengine:appengine-api-1.0-sdk:1.9.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-csv:1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.googlecode.jcsv:jcsv:1.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.appengine:appengine-testing:1.9.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.appengine:appengine-api-stubs:1.9.10" level="project" />
