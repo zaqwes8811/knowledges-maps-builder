@@ -1,4 +1,4 @@
-package gae_store_space;
+package instances;
 
 
 import com.googlecode.objectify.ObjectifyService;
