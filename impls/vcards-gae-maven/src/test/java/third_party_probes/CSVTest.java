@@ -1,5 +1,6 @@
 package third_party_probes;
 
+import com.google.common.io.Closer;
 import org.junit.Test;
 
 import java.io.FileReader;
@@ -10,7 +11,18 @@ import java.io.Reader;
 public class CSVTest {
 
   @Test
-  void testJCSVReader() throws IOException {
-    Reader reader = new FileReader("persons.csv");
+  public void testJCSVReader() throws IOException {
+    // jdk6
+    // jdk7 have try-with-resources block
+    Closer closer = Closer.create();
+    try {
+      Reader reader = new FileReader("src/test/resources/Phrasebook - Sheet 1.csv");
+      closer.register(reader);
+
+    } catch (Throwable e) {
+      closer.rethrow(e);
+    } finally {
+      closer.close();
+    }
   }
 }
