@@ -1,4 +1,4 @@
-package sandbox.gae;
+package third_party.gae;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static sandbox.gae.OfyService.ofy;
+import static third_party.gae.OfyService.ofy;
 
 /**
  * Created by zaqwes on 5/7/14.

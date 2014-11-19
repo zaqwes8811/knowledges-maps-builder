@@ -1,4 +1,4 @@
-package sandbox.gae.relationships;
+package third_party.gae.relationships;
 
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;

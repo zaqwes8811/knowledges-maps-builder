@@ -1,4 +1,4 @@
-package sandbox.guava;
+package third_party.guava;
 
 import com.google.common.base.Charsets;
 import com.google.common.hash.HashCode;
