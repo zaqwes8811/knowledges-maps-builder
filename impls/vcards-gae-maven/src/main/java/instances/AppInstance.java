@@ -71,7 +71,7 @@ public class AppInstance {
 		//try {
 			Optional<PageKind> page = getPage(name);
 			if (page.isPresent())
-				page.get().asyncDeleteFromStore();
+				page.get().deleteFromStore_strong();
 		//} 
 		//catch (UncheckedExecutionException e) {
 		//	throw new IllegalStateException();

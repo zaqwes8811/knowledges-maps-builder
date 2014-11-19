@@ -2,8 +2,10 @@ package gae_store_space;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
+import com.googlecode.objectify.LoadResult;
 import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.Work;
+import com.googlecode.objectify.cmd.Query;
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public final class GAEStoreAccessManager {
 	// срабатывает либо быстро, либо очень долго, так что ждем немного
 	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ
 	// FIXME: куча проблем с удалением и консистентностью
-	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-gae
+	// http://stackoverflow.com/questions/14651998/objects-not-saving-using-objectify-and-storeAccessManager
 	// Но как обрабатываются ошибки?
 	// now не всегда работает
 	//
@@ -72,15 +74,13 @@ public final class GAEStoreAccessManager {
 		ofy().delete().keys(generators).now();
 	}
 	
-	public Optional<GeneratorKind> restoreGenerator_evCons(Key<GeneratorKind> g) {
-		Optional<GeneratorKind> r = 
-				Optional.fromNullable(ofy().load().type(GeneratorKind.class).id(g.getId()).now());
-		return r;
+	public Optional<GeneratorKind> restoreGenerator_eventually(Key<GeneratorKind> g) {
+		return GeneratorKind.restoreById(g.getId());
 	}
 	
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
-	public Optional<PageKind> restorePageByName_ec(String name) {
+	public Optional<PageKind> restorePageByName_eventually(String name) {
    	List<PageKind> pages = 
    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
  		
