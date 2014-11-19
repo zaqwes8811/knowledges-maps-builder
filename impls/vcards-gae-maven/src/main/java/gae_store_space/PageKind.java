@@ -124,7 +124,7 @@ public class PageKind {
   // Да кажется можно, просто не ясно зачем
   public static Optional<PageKind> restore(final String pageName) {
   	GAEStoreAccessManager store = new GAEStoreAccessManager();
-  	Optional<PageKind> page = store.restorePageByName_ec(pageName);
+  	Optional<PageKind> page = store.restorePageByName_eventually(pageName);
   	
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
@@ -135,8 +135,7 @@ public class PageKind {
 	    // теперь нужно запустить процесс обработки,
 	    page.get().assign(tmpPage);
 	    // загружается только при восстановлении
-	    page.get().genCache = store.restoreGenerator_evCons(page.get().generator).get();
-	    page.get().genCache.reload();
+	    page.get().genCache = store.restoreGenerator_eventually(page.get().generator).get();
     }
     return page;  // 1 item
   }
@@ -363,7 +362,7 @@ public class PageKind {
   
   private void setDistribution(ArrayList<DistributionElement> d) {
   	checkDistributionInvariant(d);
-  	getGeneratorCache().reloadGenerator(d);
+  	getGeneratorCache().resetDistribution(d);
   }
    
   private void moveBoundary() {
@@ -427,7 +426,7 @@ public class PageKind {
 		});
   }
   
-  public void asyncDeleteFromStore() { 
+  public void deleteFromStore_strong() {
   	final PageKind p = this;
   	store.transact(new VoidWork() {
 	    public void vrun() {
