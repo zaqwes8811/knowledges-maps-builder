@@ -18,20 +18,6 @@ import net.jcip.annotations.Immutable;
 final public class GlobalIO {
   private GlobalIO() {}
 
-  static public void list2file(List<String> list, String filename) throws IOException {
-    Closer closer = Closer.create();
-    try {
-      closer.register(
-        new BufferedWriter(
-          new FileWriter(filename)))
-        .write(Joiner.on("\n").join(list));
-    } catch (Throwable e) {
-      closer.rethrow(e);
-    } finally {
-      closer.close();
-    }
-  }
-
   static public String file2string(String filename) {
     try {
       Closer closer = Closer.create();
