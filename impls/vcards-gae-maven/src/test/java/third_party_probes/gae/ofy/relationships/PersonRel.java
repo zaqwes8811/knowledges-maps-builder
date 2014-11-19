@@ -1,4 +1,4 @@
-package third_party.gae.relationships;
+package third_party_probes.gae.ofy.relationships;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;

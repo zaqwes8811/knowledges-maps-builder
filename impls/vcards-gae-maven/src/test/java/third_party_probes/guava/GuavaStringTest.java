@@ -1,4 +1,4 @@
-package third_party.guava;
+package third_party_probes.guava;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
@@ -6,10 +6,9 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
-//import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
-public class SetGuavaTest {
+public class GuavaStringTest {
 
   @Test
   public void testSplit() {
@@ -18,7 +17,6 @@ public class SetGuavaTest {
           .trimResults()
           .split("a,  l b,   c asfddf, d, d, d");
       Multiset<String> wordsMultiset = HashMultiset.create(result);
-      //System.out.print(wordsMultiset);
   }
 
   @Test
