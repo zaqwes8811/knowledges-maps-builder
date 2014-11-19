@@ -3,6 +3,7 @@ package web_relays;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+import com.google.common.io.Closer;
 import gae_store_space.AppInstance;
 import gae_store_space.PageKind;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -16,9 +17,7 @@ import web_relays.protocols.TextPackage;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 
 @Controller
@@ -42,11 +41,16 @@ public class ResearchController {
     return empty;
   }
 
-  @RequestMapping(value="/accept_text", method = RequestMethod.POST, headers="Accept=application/json")
-  public void putPage(HttpServletRequest request, HttpServletResponse res) {
-    try {
+  public String getData(HttpServletRequest request) throws IOException {
+    // http://stackoverflow.com/questions/1829784/should-i-close-the-servlet-outputstream
+    // not need it
+    //Closer closer = Closer.create();
+    //String r = "";
+    //try {
       BufferedReader reader =
         new BufferedReader(new InputStreamReader(request.getInputStream()));
+
+      //closer.register(reader);
 
       ArrayList<String> lines = new ArrayList<String>();
       String line;
@@ -54,10 +58,18 @@ public class ResearchController {
         lines.add(line);
       }
 
-      String data = Joiner.on("").join(lines);
-      TextPackage p = new ObjectMapper().readValue(data, TextPackage.class);
+    //} catch (Throwable e) {
+    //  closer.rethrow(e);
+    //} finally {
+    //  closer.close();  // нужно ли его вообще закрывать?
+    //}
+    return Joiner.on("").join(lines);
+  }
 
-      // purge from headers and bottoms
+  @RequestMapping(value="/accept_text", method = RequestMethod.POST, headers="Accept=application/json")
+  public void createOrRecreatePage(HttpServletRequest request, HttpServletResponse res) {
+    try {
+      TextPackage p = new ObjectMapper().readValue(getData(request), TextPackage.class);
       if (p.getText().isPresent() && p.getName().isPresent()) {
         app.createOrRecreatePage(p.getName().get(), p.getText().get());
       } else {
@@ -65,10 +77,6 @@ public class ResearchController {
       }
     } catch (IOException e) {
       res.setStatus(HttpServletResponse.SC_NO_CONTENT);
-      //} catch (IllegalStateException e) {
-      //response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-      //} catch (IllegalArgumentException e) {
-      //  response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
     }
   }
 
