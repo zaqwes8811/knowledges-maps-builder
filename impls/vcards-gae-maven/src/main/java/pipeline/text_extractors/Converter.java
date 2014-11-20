@@ -1,5 +1,5 @@
 package pipeline.text_extractors;
 
-public interface Convertor {
+public interface Converter {
 	public String convert(String in);
 }

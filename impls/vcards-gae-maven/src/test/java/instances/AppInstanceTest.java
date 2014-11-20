@@ -3,12 +3,9 @@ package instances;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import instances.AppInstance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import pipeline.TextPipeline;
 
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -31,7 +28,7 @@ public class AppInstanceTest {
 		AppInstance a = AppInstance.getInstance();
 		try (Closeable c = ObjectifyService.begin()) {
 			// do your work.
-			new Gson().toJson(a.getUserInformation(TextPipeline.defaultUserId));
+			new Gson().toJson(a.getUserInformation(AppInstance.defaultUserId));
 		}
 	}
 

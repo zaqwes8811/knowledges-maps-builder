@@ -12,23 +12,19 @@ import java.util.Set;
 
 import pipeline.nlp.PlainTextTokenizer;
 import pipeline.statistics_collectors.StatisticCollector;
-import pipeline.text_extractors.Convertor;
+import pipeline.text_extractors.Converter;
 import pipeline.text_extractors.SubtitlesToPlainText;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
 public class TextPipeline {
-	public static final String defaultPageName = "Korra";
-	public static final String defaultGenName = "Default";
-	public static final String defaultUserId = "User";
-	
-	private Convertor convertor = new SubtitlesToPlainText();
+  private Converter converter = new SubtitlesToPlainText();
 	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
 	private StatisticCollector statisticCollector = new StatisticCollector();
 	
   private String removeFormatting(String rawText) {
-  	return convertor.convert(rawText);  	
+  	return converter.convert(rawText);
   }
 
   private ArrayList<SentenceKind> packSentences(ImmutableList<String> sentences) {
@@ -61,7 +57,7 @@ public class TextPipeline {
     return kinds;
   }
   
-  private ArrayList<NGramKind> calcImportancies(ArrayList<NGramKind> kinds) {
+  private ArrayList<NGramKind> calcImportances(ArrayList<NGramKind> kinds) {
   	for (NGramKind k: kinds)
   		k.calcImportance();
   	return kinds;
@@ -90,7 +86,7 @@ public class TextPipeline {
 
     ArrayList<NGramKind> nGramKinds = unpackHisto(histo, sources);
     
-    nGramKinds = calcImportancies(nGramKinds);
+    nGramKinds = calcImportances(nGramKinds);
 
     // Sort words by frequency
     nGramKinds = sortByImportance(nGramKinds);

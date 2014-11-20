@@ -14,7 +14,7 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Closer;
 
 
-public class SubtitlesToPlainText implements Convertor {
+public class SubtitlesToPlainText implements Converter {
 	//FIXME: make strategy
 	@Override
 	public String convert(String content) {

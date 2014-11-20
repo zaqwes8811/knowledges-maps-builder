@@ -24,6 +24,7 @@ import java.util.Set;
 
 import static gae_store_space.OfyService.ofy;
 
+import instances.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
 
 import org.apache.commons.collections4.Predicate;
@@ -151,7 +152,7 @@ public class PageKind {
  
   public List<String> getGenNames() {
   	ArrayList<String> r = new ArrayList<>();
-  	r.add(TextPipeline.defaultGenName);
+  	r.add(AppInstance.defaultGeneratorName);
   	return r;
   }
 

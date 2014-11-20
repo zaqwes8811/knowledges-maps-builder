@@ -11,7 +11,6 @@ import instances.AppInstance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 
 import java.io.IOException;
@@ -47,7 +46,7 @@ public class PageKindTest {
   @Test
   public void testCreateAndPersist() throws Exception {
     try (Closeable c = ObjectifyService.begin()) {
-      buildAndStoreContentPage(TextPipeline.defaultPageName);
+      buildAndStoreContentPage(AppInstance.defaultPageName);
 
       Optional<PageKind> page = Optional.absent();
       // FIXME: просто греем процессор - bad!
@@ -55,7 +54,7 @@ public class PageKindTest {
       // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
       int countTries = 100;  // random
       while (!page.isPresent()) {
-        page = PageKind.restore(TextPipeline.defaultPageName);
+        page = PageKind.restore(AppInstance.defaultPageName);
         if (countTries < 0)
           assertTrue(false);
         countTries--;
@@ -66,12 +65,12 @@ public class PageKindTest {
   @Test
   public void testGetDistribution() throws IOException {
     try (Closeable c = ObjectifyService.begin()) {
-      buildAndStoreContentPage(TextPipeline.defaultPageName);
+      buildAndStoreContentPage(AppInstance.defaultPageName);
 
       Optional<PageKind> page = Optional.absent();
       // FIXME: просто греем процессор - bad!
       while (!page.isPresent()) {
-        page = PageKind.restore(TextPipeline.defaultPageName);
+        page = PageKind.restore(AppInstance.defaultPageName);
       }
 
       // Queries
@@ -104,7 +103,7 @@ public class PageKindTest {
   	//PageKind page = putPagesInStore();
 
     // store_specific
-    //Integer pointPosition = page.getGenerator(TextPipeline.defaultGenName).getPosition();
+    //Integer pointPosition = page.getGenerator(TextPipeline.defaultGeneratorName).getPosition();
 
     /*
     // слово одно, но если страниц много, то получим для всех
@@ -132,7 +131,7 @@ public class PageKindTest {
     */
 
   	//PageKind page = putDefaultPagesInStore();
-  	//Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGenName);
+  	//Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGeneratorName);
   	//assertTrue(v.isPresent());
   } 
 }

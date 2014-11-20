@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import pipeline.TextPipeline;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
 import web_relays.protocols.WordDataValue;
@@ -28,7 +27,7 @@ public class ReadController {
 	@RequestMapping(value="/user_summary", method = RequestMethod.GET, headers="Accept=application/json")
 	public @ResponseBody
 	List<PageSummaryValue> get(HttpServletRequest request, HttpServletResponse res) {
-		return app.getUserInformation(TextPipeline.defaultUserId);
+		return app.getUserInformation(AppInstance.defaultUserId);
 	}
 
 	@RequestMapping(value="/pkg", method = RequestMethod.GET, headers="Accept=application/json")
