@@ -46,7 +46,7 @@ class NGramData(object):
 
 class DistributionElem(object):
     def __init__(self, elem):
-        self.frequency = elem['frequency']
+        self.frequency = elem['importance']
         self.unknown = elem['unknown']
         self.inBoundary = elem['inBoundary']
 

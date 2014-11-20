@@ -11,7 +11,7 @@ import java.util.List;
 
 import static gae_store_space.OfyService.ofy;
 
-public final class GAEStoreAccessManager {
+public class GAEStoreAccessManager {
 	/*
 	// FIXME: Dev server
    You're right, as usual. My current
@@ -113,14 +113,13 @@ public final class GAEStoreAccessManager {
 		return ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
 	}
 	
-	public List<PageKind> getAllPages_evCons() {
+	public List<PageKind> getAllPages_eventually() {
 		return ofy().load().type(PageKind.class).list();
 	}
 	
 	
 	public PageKind firstPersist(Work<PageKind> work) {
-  	PageKind r = ofy().transactNew(COUNT_REPEATS, work);
-  	return r;
+		return ofy().transactNew(COUNT_REPEATS, work);
 	}
 	
 	public void transact(VoidWork work) {
