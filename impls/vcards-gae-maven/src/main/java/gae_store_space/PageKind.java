@@ -74,7 +74,7 @@ public class PageKind {
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
   @Ignore 
-  private ArrayList<NGramKind> unigramKinds = new ArrayList<NGramKind>();
+  private ArrayList<NGramKind> unigramKinds = new ArrayList<>();
   
   // Хранить строго как в исходном контексте 
   @Ignore 
@@ -87,7 +87,7 @@ public class PageKind {
   private Key<GeneratorKind> generator;  
   
   @Ignore
-  private GeneratorKind genCache;
+  private GeneratorKind generatorCache;
    
   // по столько будем шагать
   // По малу шагать плохо тем что распределение может снова стать равном.
@@ -98,7 +98,7 @@ public class PageKind {
   private static final Double SWITCH_THRESHOLD = 0.2;
   
   private Integer boundaryPtr = STEP_WINDOW_SIZE;  // указатель на текущyю границу
-  private Integer etalonVolume = 0;
+  private Integer referenceVolume = 0;
 
   
   @Ignore
@@ -114,7 +114,7 @@ public class PageKind {
   }
   
   public ArrayList<Integer> getLengthsSentences() {
-  	ArrayList<Integer> r = new ArrayList<Integer>();
+  	ArrayList<Integer> r = new ArrayList<>();
   	for (SentenceKind k : sentencesKinds)
   		r.add(k.getCountWords());
   	return r;
@@ -129,21 +129,19 @@ public class PageKind {
   	if (page.isPresent()) {
 	    String rawSource = page.get().rawSource;
 	    
-	    // обрабатываем
 	    PageKind tmpPage = buildPipeline().pass(page.get().name, rawSource);
-	    
-	    // теперь нужно запустить процесс обработки,
+
 	    page.get().assign(tmpPage);
 	    // загружается только при восстановлении
-	    page.get().genCache = store.restoreGenerator_eventually(page.get().generator).get();
+	    page.get().generatorCache = store.restoreGenerator_eventually(page.get().generator).get();
     }
     return page;  // 1 item
   }
   
   private GeneratorKind getGeneratorCache() {
-  	if (!Optional.fromNullable(genCache).isPresent())
+  	if (!Optional.fromNullable(generatorCache).isPresent())
   		throw new IllegalStateException();
-  	return genCache;
+  	return generatorCache;
   }
   
   private void assign(PageKind rhs) {
@@ -152,7 +150,7 @@ public class PageKind {
   }
  
   public List<String> getGenNames() {
-  	ArrayList<String> r = new ArrayList<String>();
+  	ArrayList<String> r = new ArrayList<>();
   	r.add(TextPipeline.defaultGenName);
   	return r;
   }
@@ -225,7 +223,7 @@ public class PageKind {
   		end = boundary;
   	
   	// [.., end)
-  	ArrayList<SentenceKind> kinds = new ArrayList<SentenceKind>(sentencesKinds.subList(0, end));
+  	ArrayList<SentenceKind> kinds = new ArrayList<>(sentencesKinds.subList(0, end));
   	
   	return buildPipeline().getNGrams(kinds);
   }
@@ -240,7 +238,7 @@ public class PageKind {
 		public Tmp(String value) {
 			ngram = value;
 		}
-	};
+	}
   
   private Integer getUnigramIndex(String ngram) {
   	Tmp p = new Tmp(ngram);
@@ -282,7 +280,7 @@ public class PageKind {
     Collections.reverse(unigramKinds);
 
     // Form result
-    ArrayList<DistributionElement> r = new ArrayList<DistributionElement>();
+    ArrayList<DistributionElement> r = new ArrayList<>();
     for (NGramKind word : unigramKinds)
       r.add(new DistributionElement(word.getImportance()));
     
@@ -312,7 +310,7 @@ public class PageKind {
   }
   
   private Integer getMaxImportancy() {
-  	return this.genCache.getMaxImportance();
+  	return this.generatorCache.getMaxImportance();
   }
    
   public Optional<WordDataValue> getWordData() {
@@ -323,7 +321,7 @@ public class PageKind {
 		String value = ngramKind.pack();
 		ImmutableList<SentenceKind> sentenceKinds = ngramKind.getContendKinds();
 
-		ArrayList<String> content = new ArrayList<String>(); 
+		ArrayList<String> content = new ArrayList<>();
 		for (SentenceKind k: sentenceKinds)
 		  content.add(k.getSentence());
 		
@@ -352,13 +350,11 @@ public class PageKind {
   }
   
   private Integer getAmongCurrentActivePoints() {
-  	Integer r = getGeneratorCache().getActiveCount();
-  	//CrossIO.print("know; Among = " + r + "; et = " + this.etalonVolume+ "; boundary = " + this.boundaryPtr);
-  	return r;
+  	return getGeneratorCache().getActiveCount();
   }
   
   private void setVolume(Integer val) {
-  	etalonVolume = val;
+  	referenceVolume = val;
   }
   
   private void setDistribution(ArrayList<DistributionElement> d) {
@@ -369,7 +365,7 @@ public class PageKind {
   private void moveBoundary() {
   	Integer currentVolume = getAmongCurrentActivePoints();
   	
-  	if (currentVolume < SWITCH_THRESHOLD * etalonVolume) {
+  	if (currentVolume < SWITCH_THRESHOLD * referenceVolume) {
   		// FIXME: no exception safe
   		// перезагружаем генератор
   		Integer currBoundary = boundaryPtr;
@@ -395,7 +391,7 @@ public class PageKind {
   public void disablePoint(PathValue p) {
   	Integer pos = p.pointPos;
   	// лучше здесь
-  	if (etalonVolume.equals(0)) {
+  	if (referenceVolume.equals(0)) {
      	if (getAmongCurrentActivePoints() < 2)
      		throw new IllegalStateException();
      	

@@ -94,7 +94,9 @@ public class AppInstance {
 		PageKind.createPageIfNotExist_eventually(name, text);
 	}
 	
-	public AppInstance() { }
+	public AppInstance() {
+
+	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
 	public Optional<PageKind> getPage(String pageName) {
