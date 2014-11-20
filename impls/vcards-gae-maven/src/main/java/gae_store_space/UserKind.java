@@ -5,6 +5,7 @@ import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Serialize;
+import org.apache.log4j.Logger;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,6 +16,7 @@ import static gae_store_space.OfyService.ofy;
 // Очень важен - попробую им гарантировать согласованность
 @Entity
 public class UserKind {
+  private static Logger log = Logger.getLogger(UserKind.class.getName());
 
   // FIXME: external lock
   // http://stackoverflow.com/questions/13197756/synchronized-method-calls-itself-recursively-is-this-broken
@@ -22,6 +24,10 @@ public class UserKind {
   // user is unique! can't do that with pages!
   @Id private String id;
   @Serialize private Set<String> pagesNames;
+
+  public String getId() {
+    return id;
+  }
 
   private void checkPersisted() {
     if (id == null)
