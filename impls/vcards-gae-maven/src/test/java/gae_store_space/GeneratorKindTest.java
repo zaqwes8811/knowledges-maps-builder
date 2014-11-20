@@ -25,14 +25,6 @@ public class GeneratorKindTest {
   private static final LocalServiceTestHelper helper =
     new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
   
-  /*
-   You're right, as usual. My current 
-   Test Case says INFO: Local Datastore initialized: Type: 
-   Master/Slave Storage: In-memory if i change the configuration with 
-   LocalDatastoreServiceTestConfig config = 
-   new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercenta‌​ge(100); says INFO: 
-   Local Datastore initialized: Type: High Replication Storage: In-memory But all test fails :( –  Fuzzo Feb 7 '13 at 14:31 
-   * */
 
   @Before
   public void setUp() { helper.setUp(); }

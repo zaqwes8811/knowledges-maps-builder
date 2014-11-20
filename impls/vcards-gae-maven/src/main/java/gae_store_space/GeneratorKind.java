@@ -3,8 +3,8 @@ package gae_store_space;
 import java.util.ArrayList;
 
 import com.googlecode.objectify.LoadResult;
+import instances.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
-import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorAnyDistribution;
 
@@ -68,7 +68,7 @@ public class GeneratorKind
   // Любой список с числами
   // @throws: GeneratorDistributionException
   public static GeneratorKind create(ArrayList<DistributionElement> distribution) {
-    return new GeneratorKind(distribution, TextPipeline.defaultGenName);
+    return new GeneratorKind(distribution, AppInstance.defaultGeneratorName);
   }
 
   public Integer getPosition() {

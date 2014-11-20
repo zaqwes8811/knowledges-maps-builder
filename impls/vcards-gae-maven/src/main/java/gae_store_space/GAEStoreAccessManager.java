@@ -11,13 +11,29 @@ import java.util.List;
 
 import static gae_store_space.OfyService.ofy;
 
-// FIXME:
-//class StoreException {
-//
-//}
-
 public final class GAEStoreAccessManager {
-//На локальной машине, либо с первого раза, либо никогда - on GAE - хз
+	/*
+	// FIXME: Dev server
+   You're right, as usual. My current
+   Test Case says INFO: Local Datastore initialized: Type:
+   Master/Slave Storage: In-memory if i change the configuration with
+   LocalDatastoreServiceTestConfig config =
+   new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercenta‌​ge(100); says INFO:
+   Local Datastore initialized: Type: High Replication Storage: In-memory But all test fails :( –  Fuzzo Feb 7 '13 at 14:31
+   * */
+
+
+	// FIXME: create-if-not-exist
+	// как создать и получить информационный объект
+	// нужен кроссгрупповой запрос в транзакции
+	// http://stackoverflow.com/questions/22362192/create-or-err-with-objectify
+	//
+	// https://groups.google.com/forum/#!topic/objectify-appengine/Xt7HJMppcZ4
+	// The username must be the primary key of the entity
+	// https://sites.google.com/site/io/under-the-covers-of-the-google-app-engine-datastore
+	//
+	//
+	//На локальной машине, либо с первого раза, либо никогда - on GAE - хз
 	// срабатывает либо быстро, либо очень долго, так что ждем немного
 	// https://groups.google.com/forum/#!msg/objectify-appengine/p4UylG6jTwU/qIT8sqrPBokJ
 	// FIXME: куча проблем с удалением и консистентностью

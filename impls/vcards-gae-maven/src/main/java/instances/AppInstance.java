@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
@@ -22,7 +21,10 @@ import com.google.common.collect.ImmutableList;
 import cross_cuttings_layer.GlobalIO;
 
 public class AppInstance {
-	private static final Integer CACHE_SIZE = 5;	
+	public static final String defaultPageName = "DefaultPage";
+	public static final String defaultGeneratorName = "Default";
+	public static final String defaultUserId = "DefaultUser";
+	private static final Integer CACHE_SIZE = 5;
 	
 	GAEStoreAccessManager store = new GAEStoreAccessManager();
 	
@@ -89,12 +91,19 @@ public class AppInstance {
 	}
 	
 	private void createDefaultPage() {
-		String name = TextPipeline.defaultPageName;
+		String name = defaultPageName;
 		String text = GlobalIO.getGetPlainTextFromFile(getTestFileName());
 		PageKind.createPageIfNotExist_eventually(name, text);
 	}
 	
 	public AppInstance() {
+		while (true) {
+			//if (!exsits)
+			//	create;
+			break;
+		}
+
+		//read and use;
 
 	}
 	
