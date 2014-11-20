@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import org.apache.log4j.BasicConfigurator;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
@@ -97,14 +98,8 @@ public class AppInstance {
 	}
 	
 	public AppInstance() {
-		while (true) {
-			//if (!exsits)
-			//	create;
-			break;
-		}
-
-		//read and use;
-
+		// FIXME: load user info
+		//BasicConfigurator.configure();  // bad!
 	}
 	
 	// FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
