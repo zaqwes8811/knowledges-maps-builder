@@ -62,11 +62,7 @@ public class AppInstance {
 		PageKind.createPageIfNotExist_eventually(name, text);
 		pagesCache.invalidate(name);
 	}
-	
-	public PageKind syncCreatePageIfNotExist(String name, String text) {
-		return PageKind.createPageIfNotExist_eventually(name, text);
-	}
-	
+
 	private void fullDeletePage(String name) {
 		//try {
 			Optional<PageKind> page = getPage(name);
@@ -124,7 +120,7 @@ public class AppInstance {
 		
 		List<PageKind> pages = store.getAllPages_evCons();
 		
-		List<PageSummaryValue> r = new ArrayList<PageSummaryValue>();
+		List<PageSummaryValue> r = new ArrayList<>();
 		for (PageKind page: pages) 
 			r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
 		
