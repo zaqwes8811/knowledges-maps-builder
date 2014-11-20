@@ -28,7 +28,7 @@ public class AppInstanceTest {
 		AppInstance a = AppInstance.getInstance();
 		try (Closeable c = ObjectifyService.begin()) {
 			// do your work.
-			new Gson().toJson(a.getUserInformation(AppInstance.defaultUserId));
+			new Gson().toJson(a.getUserInformation());
 		}
 	}
 

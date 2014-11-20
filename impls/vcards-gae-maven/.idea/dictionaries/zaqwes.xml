@@ -2,6 +2,7 @@
   <dictionary name="zaqwes">
     <words>
       <w>importances</w>
+      <w>stemmer</w>
     </words>
   </dictionary>
 </component>

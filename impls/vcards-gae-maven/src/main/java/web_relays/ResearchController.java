@@ -70,7 +70,7 @@ public class ResearchController {
     try {
       TextPackage p = new ObjectMapper().readValue(getData(request), TextPackage.class);
       if (p.getText().isPresent() && p.getName().isPresent()) {
-        app.createOrRecreatePage(p.getName().get(), p.getText().get());
+        app.createOrReplacePage(p.getName().get(), p.getText().get());
       } else {
         throw new IllegalArgumentException();
       }
@@ -90,10 +90,8 @@ public class ResearchController {
         PathValue path = new ObjectMapper().readValue(value.get(), PathValue.class);
         Optional<String> pageName = path.getPageName();
         if (pageName.isPresent()) {
-          Optional<PageKind> p = app.getPage(path.getPageName().get());
-          if (p.isPresent()) {
-            return p.get().getLengthsSentences();
-          }
+          PageKind p = app.getPage(path.getPageName().get());
+          return p.getLengthsSentences();
         }
       } catch (IOException ex) {}
     }

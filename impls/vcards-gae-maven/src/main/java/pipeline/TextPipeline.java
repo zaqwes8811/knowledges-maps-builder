@@ -1,15 +1,16 @@
 package pipeline;
 
+import com.google.common.collect.HashMultimap;
 import gae_store_space.NGramKind;
 import gae_store_space.PageKind;
 import gae_store_space.SentenceKind;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
+import org.apache.log4j.Logger;
+import org.javatuples.Pair;
+import org.javatuples.Triplet;
+import org.tartarus.snowball.ext.englishStemmer;
 import pipeline.nlp.PlainTextTokenizer;
 import pipeline.statistics_collectors.StatisticCollector;
 import pipeline.text_extractors.Converter;
@@ -19,6 +20,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 
 public class TextPipeline {
+  private static Logger log = Logger.getLogger(TextPipeline.class.getName());
+
   private Converter converter = new SubtitlesToPlainText();
 	private PlainTextTokenizer tokenizer = new PlainTextTokenizer();
 	private StatisticCollector statisticCollector = new StatisticCollector();
@@ -56,10 +59,48 @@ public class TextPipeline {
     }
     return kinds;
   }
+
+  private String getStem(String value) {
+    englishStemmer stemmer = new englishStemmer();
+    String lowWord = value.toLowerCase();
+    stemmer.setCurrent(lowWord);
+    if (stemmer.stem())
+      return stemmer.getCurrent();
+    return lowWord;
+  }
   
   private ArrayList<NGramKind> calcImportances(ArrayList<NGramKind> kinds) {
   	for (NGramKind k: kinds)
   		k.calcImportance();
+
+    // FIXME: for stems set sum frequency - word remain but change frequency
+    //   It's change source distribution but wight grow two times.
+    Multimap<String, Triplet<String, Integer, Integer>> statistic = HashMultimap.create();
+
+    {
+      Integer position = 0;
+      for (NGramKind k: kinds) {
+        String stem = getStem(k.getNGram());
+        statistic.put(stem, Triplet.with(k.getNGram(), k.getImportance(), position));
+        position++;
+      }
+    }
+
+    //if (statistic.size() < kinds.size())
+    //  throw new AssertionError();
+    for (String stem: statistic.keySet()) {
+      Integer volume = 0;
+      for (Triplet<String, Integer, Integer> elem : statistic.get(stem)) {
+        volume += elem.getValue1();
+      }
+
+      for (Triplet<String, Integer, Integer> elem : statistic.get(stem)) {
+        Integer t = kinds.get(elem.getValue2()).getImportance();
+        kinds.get(elem.getValue2()).setImportance(volume);
+        //log.info(t-volume);
+      }
+    }
+
   	return kinds;
   }
   
