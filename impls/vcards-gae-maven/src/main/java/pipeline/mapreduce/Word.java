@@ -12,13 +12,13 @@ public final class Word {
 	}
 	
 	public static Word build(String value) {
-		englishStemmer stemmer = new englishStemmer();
+		/*englishStemmer stemmer = new englishStemmer();
   	String lowWord = value.toLowerCase();
   	stemmer.setCurrent(lowWord);
     if (stemmer.stem()) {
       return new Word(stemmer.getCurrent(), value);  
-    } else {
+    } else {*/
       return new Word(value, value); 
-    }
+    //}
   }
 } 

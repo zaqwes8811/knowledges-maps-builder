@@ -109,7 +109,7 @@ public class GeneratorKind
 
   private void checkIndex(Integer idx) {
     if (idx >= distribution.size() || idx < 0)
-      throw new IndexOutOfBoundsException("On get element");  // сообщения безсмысленны, тип важнее
+      throw new IndexOutOfBoundsException();  // сообщения безсмысленны, тип важнее
   }
 
   public Integer getMaxImportance() {
