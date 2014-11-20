@@ -1,36 +1,26 @@
 package gae_store_space;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
-
+import com.google.common.collect.ImmutableList;
+import com.googlecode.objectify.annotation.Entity;
 import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
+import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class NGramKind {
-	//private NGramKind() { }
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 2;
 	
 	// FIXME: inject it?
 	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
-	//SimpleImportanceProcessor();
-	
+
+  @Deprecated
 	private final Set<String> sources;
 	
-	@Deprecated
-  @Id
-  Long id;
+	//@Deprecated
+  //@Id
+  //Long id;
 
   // TODO: может хранится стем или пара-тройка слов.
   private String nGram;
@@ -42,18 +32,17 @@ public class NGramKind {
   private Integer importance = 0;
   
   // May be make final
-  private Set<SentenceKind> sentences = new HashSet<SentenceKind>();
+  private Set<SentenceKind> sentences = new HashSet<>();
 
   public String getValue() {
   	return nGram;
   }
   
   public String pack() {
-  	ArrayList<String> tmp = new ArrayList<String>(sources);
-  	Collections.shuffle(tmp);
-  	String r = Joiner.on(" / ").join(tmp);
-  	//return nGram;
-  	return r;
+  	//ArrayList<String> tmp = new ArrayList<String>(sources);
+  	//Collections.shuffle(tmp);
+    //return nGram;
+  	return nGram;//Joiner.on(" / ").join(tmp);
   }
 
   public Integer getImportance() {
@@ -75,7 +64,7 @@ public class NGramKind {
   public ImmutableList<SentenceKind> getContendKinds() {
   	// берем часть
   	// FIXME: делать выборки с перемешиванием 	
-  	ArrayList<SentenceKind> tmp = new ArrayList<SentenceKind>(sentences);
+  	ArrayList<SentenceKind> tmp = new ArrayList<>(sentences);
   	
   	long seed = System.nanoTime();
   	Collections.shuffle(tmp, new Random(seed));
@@ -95,7 +84,7 @@ public class NGramKind {
 
   public NGramKind(
   		String nGram, 
-  		Collection<SentenceKind> sentencess, 
+  		Collection<SentenceKind> sentences,
   		int rawFrequency,
   		Set<String> sources) {
     this.nGram = nGram;
@@ -106,7 +95,7 @@ public class NGramKind {
     this.sources = sources;
 
     // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
-    sentences.addAll(sentencess);
+    this.sentences.addAll(sentences);
   }
 
   private static class ImportanceComparator implements Comparator<NGramKind> {

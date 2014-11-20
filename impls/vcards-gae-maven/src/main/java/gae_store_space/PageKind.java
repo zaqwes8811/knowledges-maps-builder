@@ -159,8 +159,7 @@ public class PageKind {
 
   // Пришлось раскрыть
   private void setGenerator(GeneratorKind gen) {
-  	Key<GeneratorKind> k = Key.create(gen);
-    generator = k;
+		generator = Key.create(gen);
   }
 
   // Это при создании с нуля
@@ -271,7 +270,9 @@ public class PageKind {
   
   private void checkDistributionInvariant(ArrayList<DistributionElement> d) {
   	if (d.size() != unigramKinds.size())
-  		throw new IllegalStateException();
+  		throw new IllegalStateException(
+				String.format("Distribution size = %d / Element count = %d"
+					, d.size(), unigramKinds.size()));
   }
   
   // About: Возвращать пустое распределение
