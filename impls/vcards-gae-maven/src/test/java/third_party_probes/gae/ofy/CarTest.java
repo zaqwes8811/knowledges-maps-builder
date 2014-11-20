@@ -114,7 +114,7 @@ public class CarTest {
 
         Key<Car> thingKey = Key.create(Car.class, porsche.id);
         // Get it back
-        //Car fetched1 = ofy().cache(false).load().key(thingKey).getValue();
+        //Car fetched1 = ofy().cache(false).load().key(thingKey).getNGram();
         //assert fetched1.equals(porsche);  // TODO: возможно и не должно
 
         List<Car> result = OfyService.ofy().load().type(Car.class).list();

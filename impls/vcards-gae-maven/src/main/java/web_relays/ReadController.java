@@ -27,7 +27,7 @@ public class ReadController {
 	@RequestMapping(value="/user_summary", method = RequestMethod.GET, headers="Accept=application/json")
 	public @ResponseBody
 	List<PageSummaryValue> get(HttpServletRequest request, HttpServletResponse res) {
-		return app.getUserInformation(AppInstance.defaultUserId);
+		return app.getUserInformation();
 	}
 
 	@RequestMapping(value="/pkg", method = RequestMethod.GET, headers="Accept=application/json")
@@ -40,11 +40,9 @@ public class ReadController {
 
 			PathValue path = new ObjectMapper().readValue(value, PathValue.class);
 
-			Optional<PageKind> p = app.getPage(path.getPageName().get());
-			if (!p.isPresent())
-				throw new IllegalStateException();
+			PageKind p = app.getPage(path.getPageName().get());
 
-			return p.get().getWordData().get();
+			return p.getWordData().get();
 		} catch (IOException ex) {
 			res.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 		}

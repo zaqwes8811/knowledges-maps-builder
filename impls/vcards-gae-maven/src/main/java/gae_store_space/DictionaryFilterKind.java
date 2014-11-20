@@ -1,5 +1,10 @@
 package gae_store_space;
 
-public class DictionaryFilterKind {
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 
+@Entity
+public class DictionaryFilterKind {
+  @Id
+  Long id;
 }

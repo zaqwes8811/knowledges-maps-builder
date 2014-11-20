@@ -232,7 +232,7 @@ public class PageKind {
   private static class Tmp implements Predicate<NGramKind> {
 		@Override
 		public boolean evaluate(NGramKind o) {
-			return o.getValue().equals(ngram);
+			return o.getNGram().equals(ngram);
 		}
 		
 		String ngram;
@@ -302,7 +302,7 @@ public class PageKind {
     	checkAccessIndex(index);
     	
     	// Проверка! Тестов как таковых нет, так что пока так
-    	if (!unigramKinds.get(index).getValue().equals(ngram))
+    	if (!unigramKinds.get(index).getNGram().equals(ngram))
     		throw new AssertException();
     	
     	d.get(index).markInBoundary();

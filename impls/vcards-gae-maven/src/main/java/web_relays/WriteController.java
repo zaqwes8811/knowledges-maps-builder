@@ -20,7 +20,7 @@ public class WriteController {
 
   @RequestMapping(value="/reset_storage", method = RequestMethod.GET, headers="Accept=application/json")
   public void doGet(HttpServletRequest request, HttpServletResponse response) {
-    app.resetFullStore();
+    app.eraseStore();
   }
 
   @RequestMapping(value="/know_it", method = RequestMethod.PUT, headers="Accept=application/json")

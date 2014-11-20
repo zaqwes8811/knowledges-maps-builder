@@ -8,6 +8,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
+import org.apache.log4j.BasicConfigurator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,11 +33,14 @@ public class PageKindTest {
 
   public void buildAndStoreContentPage(String pageName) {
   	String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
-    app.createOrRecreatePage(pageName, plainText);
+    app.createOrReplacePage(pageName, plainText);
   }
 
   @Before
-  public void setUp() { helper.setUp(); }
+  public void setUp() {
+    BasicConfigurator.configure();
+    helper.setUp();
+  }
 
   @After
   public void tearDown() {

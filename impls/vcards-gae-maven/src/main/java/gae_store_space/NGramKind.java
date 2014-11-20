@@ -34,7 +34,7 @@ public class NGramKind {
   // May be make final
   private Set<SentenceKind> sentences = new HashSet<>();
 
-  public String getValue() {
+  public String getNGram() {
   	return nGram;
   }
   
@@ -51,6 +51,11 @@ public class NGramKind {
   
   public void calcImportance() {
   	importance = estimator.process(rawFrequency, sentences);
+  }
+
+  // wrong but need
+  public void setImportance(Integer value) {
+    importance = value;
   }
 
   public static NGramKind create(
