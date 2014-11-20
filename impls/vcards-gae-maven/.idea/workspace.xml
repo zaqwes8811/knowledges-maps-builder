@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/UserKindTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zaqwes.xml" />
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\test\java\bleeding_edge\AnchorFakeTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/instances/AppInstance.java" afterPath="$PROJECT_DIR$/src/main/java/instances/AppInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/instances/AppInstanceTest.java" afterPath="$PROJECT_DIR$/src/test/java/instances/AppInstanceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/GAEStoreAccessManager.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/GAEStoreAccessManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/GeneratorKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/GeneratorKind.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/GeneratorKindTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/OfyService.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/OfyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web_relays/ReadController.java" afterPath="$PROJECT_DIR$/src/main/java/web_relays/ReadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/text_extractors/SubtitlesToPlainText.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/text_extractors/SubtitlesToPlainText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\UserSummaryKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/UserKind.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\text_extractors\Convertor.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/text_extractors/Converter.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\test\java\third_party_probes\CSVTest.java" afterPath="$PROJECT_DIR$/src/test/java/bleeding_edge/CSVTest.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\test\java\third_party_probes\Person.java" afterPath="$PROJECT_DIR$/src/test/java/bleeding_edge/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/UserKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/UserKind.java" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +71,8 @@
       <file leaf-file-name="UserKind.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/UserKind.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49377593" vertical-offset="493" max-vertical-offset="1224">
-              <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.2593361" vertical-offset="997" max-vertical-offset="1479">
+              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1073#1368#0" expanded="true" />
@@ -1257,8 +1239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/UserKind.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49377593" vertical-offset="493" max-vertical-offset="1224">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.2593361" vertical-offset="997" max-vertical-offset="1479">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1073#1368#0" expanded="true" />

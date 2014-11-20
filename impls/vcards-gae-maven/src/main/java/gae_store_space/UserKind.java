@@ -54,15 +54,28 @@ public class UserKind {
     return r;
   }
 
-  public synchronized boolean tryPushPage(String pageName) {
-    if (pagesNames.contains(pageName))
-      return false;
+  private void checkPageName(String pageName) {
+    if (pageName == null)
+      throw new IllegalArgumentException();
+  }
 
-    pagesNames.add(pageName);
-    return true;
+  public synchronized boolean tryPushPage(String pageName) {
+    checkPageName(pageName);
+    boolean wasInserted = false;
+    if (!pagesNames.contains(pageName)) {
+      pagesNames.add(pageName);
+      wasInserted = true;
+    }
+    return wasInserted;
+  }
+
+  public synchronized boolean removePage(String pageName) {
+    checkPageName(pageName);
+    return pagesNames.remove(pageName);
   }
 
   public synchronized boolean isContain(String pageName) {
+    checkPageName(pageName);
     return pagesNames.contains(pageName);
   }
 }
