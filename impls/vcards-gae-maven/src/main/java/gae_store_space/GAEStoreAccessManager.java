@@ -1,17 +1,6 @@
 package gae_store_space;
 
-import com.google.common.base.Optional;
-import com.googlecode.objectify.Key;
-import com.googlecode.objectify.LoadResult;
-import com.googlecode.objectify.VoidWork;
-import com.googlecode.objectify.Work;
-import com.googlecode.objectify.cmd.Query;
-
-import java.util.List;
-
-import static gae_store_space.OfyService.ofy;
-
-public class GAEStoreAccessManager {
+public final class GAEStoreAccessManager {
 	/*
 	// FIXME: Dev server
    You're right, as usual. My current
@@ -70,59 +59,12 @@ public class GAEStoreAccessManager {
 	// limits changes to the guestbook to no more than 1 write per second (the supported limit for entity groups)." 
 	//
 	// Вобщем если что-то включить в EG то писать можно будет только раз в секунду - сохранять например.
-  private static int COUNT_REPEATS = 3;
+	//@Deprecated
+  public static int COUNT_REPEATS = 3;
 
 	// r/w limit 1Mb? Or?
 	// http://stackoverflow.com/questions/9127982/avoiding-memcache-1m-limit-of-values
 	// http://stackoverflow.com/questions/5522804/1mb-quota-limit-for-a-blobstore-object-in-google-app-engine
 	// FIXME: may store in blob store but how access to it?
 	public static long LIMIT_DATA_STORE_SIZE = 1000000;  // bytes
-	
-	public void asyncPersist(PageKind kind) {
-		ofy().save().entity(kind).now();
-	}
-	
-	public void asyncPersist(GeneratorKind kind) {
-		ofy().save().entity(kind).now();
-	}
-	
-	public void asyncDeleteGenerators(List<Key<GeneratorKind>> generators) {
-		ofy().delete().keys(generators).now();
-	}
-	
-	public Optional<GeneratorKind> restoreGenerator_eventually(Key<GeneratorKind> g) {
-		return GeneratorKind.restoreById(g.getId());
-	}
-	
-	// FIXME: можно прочитать только ключи, а потом делать выборки
-	// FIXME: bad design
-	public PageKind restorePageByName(String name) {
-   	List<PageKind> pages = 
-   			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
- 		
- 		if (pages.size() > 1)
- 			throw new StoreIsCorruptedException();
- 		
-		if (pages.size() == 0)
-			throw new IllegalStateException();	//return Optional.absent();
-		 
-		return pages.get(0);
-	}
-	
-	public List<PageKind> getPagesByName_eventually(String name) {
-		return ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
-	}
-	
-	public List<PageKind> getAllPages_eventually() {
-		return ofy().load().type(PageKind.class).list();
-	}
-	
-	
-	public PageKind firstPersist(Work<PageKind> work) {
-		return ofy().transactNew(COUNT_REPEATS, work);
-	}
-	
-	public void transact(VoidWork work) {
-		ofy().transactNew(COUNT_REPEATS, work);
-	}
 }

@@ -123,26 +123,42 @@ public class PageKind {
   		r.add(k.getCountWords());
   	return r;
   }
+
+	public static Optional<GeneratorKind> restoreOneGenerator(Key<GeneratorKind> g) {
+		return GeneratorKind.restoreById(g.getId());
+	}
+
+	// FIXME: можно прочитать только ключи, а потом делать выборки
+	// FIXME: bad design
+	public static Optional<PageKind> restorePageByName(String name) {
+		List<PageKind> pages =
+			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
+
+		if (pages.size() > 1) {
+			// can delete by id
+			throw new StoreIsCorruptedException();
+		}
+
+		if (pages.size() == 0)
+			return Optional.absent();
+		//throw new IllegalStateException();
+
+		return Optional.of(pages.get(0));
+	}
    
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
 	// DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
   public static Optional<PageKind> restore(String pageName) {
-  	GAEStoreAccessManager store = new GAEStoreAccessManager();
 		try {
-			PageKind page = store.restorePageByName(pageName);
-			page.assign(buildPipeline().pass(page.name, page.rawSource));
-			page.generatorCache = store.restoreGenerator_eventually(page.generator).get();
-			return Optional.of(page);
+			Optional<PageKind> page = restorePageByName(pageName);
+			if (page.isPresent()) {
+				PageKind p = page.get();
+				p.assign(buildPipeline().pass(p.name, p.rawSource));
+				p.generatorCache = restoreOneGenerator(p.generator).get();
+			}
+			return page;
 		} catch (StoreIsCorruptedException ex) {
-			// Экстренные меры
-			/*List<PageKind> pages = ofy().transactionless().load().type(PageKind.class).filter("name = ", pageName).list();
-			for (PageKind p : pages)
-				p.deleteFromStore_strong();
-
-			log.info("index corrupted");
-			*/
-
 			throw new RuntimeException(ex.getCause());
 		}
   }
@@ -165,7 +181,7 @@ public class PageKind {
   }
 
   // Пришлось раскрыть
-  private void setGenerator(GeneratorKind gen) {
+  public void setGenerator(GeneratorKind gen) {
 		generator = Key.create(gen);
   }
 
@@ -179,9 +195,7 @@ public class PageKind {
     this.rawSource = rawSource;
   }
 
-  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
-	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public static PageKind createPage_eventually(final String name, String text) {
+	public static Pair<PageKind, GeneratorKind> process(String name, String text) {
 		// check-then-act/read-modify-write
 		// FIXME: Looks like imposable without races.
 		// Doesn't help really
@@ -197,9 +211,16 @@ public class PageKind {
 		if (page.getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
 			throw new IllegalArgumentException();
 
-		final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
-		//page.persist();  // no way here
+		GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
+		return Pair.with(page, g);
+	}
 
+  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
+	//   Иначе будут гонки. А может быть есть транзации на GAE?
+	public static PageKind atomicCreatePage(String name, String text) {
+		Pair<PageKind, GeneratorKind> pair = process(name, text);
+		final PageKind page = pair.getValue0();
+		final GeneratorKind g = pair.getValue1();
 		{
 			// transaction boundary
 			Work<PageKind> work = new Work<PageKind>() {
@@ -216,10 +237,10 @@ public class PageKind {
 			// FIXME: база данный в каком состоянии будет тут? согласованном?
 			// check here, but what can do?
 
-			return new GAEStoreAccessManager().firstPersist(work);
+			return ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
 		}
 	}
-  
+
   private Set<String> getNGramms(Integer boundary) {
   	Integer end = sentencesKinds.size();
   	
@@ -419,7 +440,7 @@ public class PageKind {
   	final PageKind p = this;
   	
   	// execution on dal - можно транслировать ошибку нижнего слоя
-  	store.transact(new VoidWork() {
+		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
 	    public void vrun() {
 	    	ofy().save().entity(p.getGeneratorCache()).now();
 	    	ofy().save().entity(p).now();
@@ -427,13 +448,13 @@ public class PageKind {
 		});
   }
   
-  public void deleteFromStore_strong() {
+  public void atomicDelete() {
   	final PageKind p = this;
-  	store.transact(new VoidWork() {
-	    public void vrun() {
-	    	ofy().delete().entity(p.getGeneratorCache()).now();
-	    	ofy().delete().entity(p).now();
-	    }
+		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
+			public void vrun() {
+				ofy().delete().entity(p.getGeneratorCache()).now();
+				ofy().delete().entity(p).now();
+			}
 		});
   }
 }
