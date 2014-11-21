@@ -50,8 +50,7 @@ class TestSequenceFunctions(unittest.TestCase):
         server = 'http://localhost'
         port = 8080
         self.research_ajax = http_bridge.ResearchAjax(server, port)
-        #self.research_ajax.create_or_replace_page()
-        time.sleep(2)
+        self.research_ajax.create_or_replace_page()
         self.arg0 = pro.PathValue(self.research_ajax.get_research_page_name())
 
         self.app_ajax = http_bridge.AppAjax(server, port)
@@ -62,8 +61,6 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def accept_ngram_data(self):
         r = self.app_ajax.get_item(self.arg0)
-        #self.assertIsNotNone(r)
-
         new_arg0 = self.arg0.clone()
         new_arg0.set_position(r.get_position())
         return new_arg0
@@ -97,16 +94,22 @@ class TestSequenceFunctions(unittest.TestCase):
         self.accept_ngram_data()
 
     def test_boundary_expand(self):
-        self.plot_distribution()
+        #self.plot_distribution()
+        #print 'b'
+        #arg0 = self.accept_ngram_data()
+        #self.app_ajax.mark_known(arg0)
+        #print 'end'
 
-        if False:
+        if True:
             for j in range(3):
                 for i in range(50):
+                    print 'b'
                     arg0 = self.accept_ngram_data()
                     self.app_ajax.mark_known(arg0)
+                    print 'e', i
 
                 self.plot_distribution()
-        plt.show()
+       # plt.show()
 
     def test_equalizer(self):
         r = self.research_ajax.dev_equalizer()

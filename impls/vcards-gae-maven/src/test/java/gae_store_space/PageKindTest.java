@@ -9,6 +9,7 @@ import com.googlecode.objectify.util.Closeable;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
 import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,9 @@ import static org.junit.Assert.assertTrue;
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
 public class PageKindTest {
-  private AppInstance app = AppInstance.getInstance();
+  //private AppInstance app = AppInstance.getInstance();
+
+  private static Logger log = Logger.getLogger(PageKindTest.class.getName());
 
   private final String testFilePath = "src/test/resources/fakes/lor.txt";
 
@@ -30,11 +33,6 @@ public class PageKindTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
               .setDefaultHighRepJobPolicyUnappliedJobPercentage(50));
-
-  public void buildAndStoreContentPage(String pageName) {
-  	String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
-    app.createOrReplacePage(pageName, plainText);
-  }
 
   @Before
   public void setUp() {
@@ -44,14 +42,19 @@ public class PageKindTest {
 
   @After
   public void tearDown() {
+    try (Closeable c = ObjectifyService.begin()) {
+      OfyService.clearStore();
+    }
     helper.tearDown();
   }
 
   @Test
   public void testCreateAndPersist() throws Exception {
     try (Closeable c = ObjectifyService.begin()) {
-      buildAndStoreContentPage(AppInstance.defaultPageName);
+      String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 
+      AppInstance app = new AppInstance();
+      app.createOrReplacePage(AppInstance.defaultPageName, plainText);
       Optional<PageKind> page = Optional.absent();
       // FIXME: просто греем процессор - bad!
       // ! Мы знаем точно что страница там есть! Это важно!
@@ -69,7 +72,10 @@ public class PageKindTest {
   @Test
   public void testGetDistribution() throws IOException {
     try (Closeable c = ObjectifyService.begin()) {
-      buildAndStoreContentPage(AppInstance.defaultPageName);
+      String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
+
+      AppInstance app = new AppInstance();
+      app.createOrReplacePage(AppInstance.defaultPageName, plainText);
 
       Optional<PageKind> page = Optional.absent();
       // FIXME: просто греем процессор - bad!
