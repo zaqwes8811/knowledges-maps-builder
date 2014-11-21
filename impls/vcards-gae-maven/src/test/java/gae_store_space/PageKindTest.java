@@ -4,6 +4,7 @@ import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestC
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
 import com.google.common.collect.Ordering;
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import cross_cuttings_layer.GlobalIO;
@@ -17,9 +18,12 @@ import pipeline.math.DistributionElement;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
@@ -55,15 +59,16 @@ public class PageKindTest {
       String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 
       AppInstance app = new AppInstance();
-      app.createOrReplacePage(AppInstance.defaultPageName, plainText);
-      Optional<PageKind> page = Optional.absent();
+      PageKind page = app.createOrReplacePage(AppInstance.defaultPageName, plainText);
+
+      //Key<PageKind> k = Key.create(page);
       // FIXME: просто греем процессор - bad!
       // ! Мы знаем точно что страница там есть! Это важно!
       // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
       int countTries = 100;  // random
-      while (!page.isPresent()) {
+      while (page == null) {
         try {
-          page = PageKind.restore(AppInstance.defaultPageName);
+          page = app.getPage(AppInstance.defaultPageName);
         } catch (IllegalStateException ex) {
 
         }
@@ -71,6 +76,8 @@ public class PageKindTest {
           assertTrue(false);
         countTries--;
       }
+
+      assertNotNull(page);
     }
   }
 
@@ -79,31 +86,43 @@ public class PageKindTest {
     try (Closeable c = ObjectifyService.begin()) {
       String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 
-      AppInstance app = new AppInstance();
-      app.createOrReplacePage(AppInstance.defaultPageName, plainText);
+      Set<Key<PageKind>> filter = new HashSet<>();
 
-      Optional<PageKind> page = Optional.absent();
-      // FIXME: просто греем процессор - bad!
+      {
+        AppInstance app = new AppInstance();
+        Optional<PageKind> page
+            = Optional.fromNullable(app.createOrReplacePage(AppInstance.defaultPageName, plainText));
 
-      int countTries = 100;  // random
-      while (!page.isPresent()) {
-        try {
-          page = PageKind.restore(AppInstance.defaultPageName);
-        } catch (IllegalStateException ex) {
+        assertTrue(page.isPresent());
 
-        }
-        if (countTries < 0)
-          assertTrue(false);
-        countTries--;
+
+        filter.add(Key.create(page.get()));
       }
 
-      // Queries
-      ArrayList<DistributionElement> distribution = page.get().getDistribution();
-      assertFalse(distribution.isEmpty());
+      {
+        Optional<PageKind> page = Optional.absent();
+        int countTries = 100;  // random
+        while (!page.isPresent()) {
+          try {
+            page = PageKind.restore(AppInstance.defaultPageName, filter);
+          } catch (IllegalStateException ex) {
 
-      // TODO: how do that?
-      boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
-      assertTrue(sorted);
+          }
+          if (countTries < 0)
+            assertTrue(false);
+          countTries--;
+        }
+
+        assertTrue(page.isPresent());
+
+        // Queries
+        ArrayList<DistributionElement> distribution = page.get().getDistribution();
+        assertFalse(distribution.isEmpty());
+
+        // TODO: how do that?
+        boolean sorted = Ordering.natural().reverse().isOrdered(distribution);
+        assertTrue(sorted);
+      }
     }
   }
 
