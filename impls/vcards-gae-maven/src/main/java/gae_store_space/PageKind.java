@@ -28,6 +28,7 @@ import instances.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
 
 import org.apache.commons.collections4.Predicate;
+import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 
 import pipeline.TextPipeline;
@@ -53,9 +54,10 @@ import cross_cuttings_layer.OwnCollections;
 @NotThreadSafe
 @Entity
 public class PageKind {
+	private static Logger log = Logger.getLogger(UserKind.class.getName());
   private PageKind() { }
 
-  public @Id Long id;
+  public @Id Long id;  // FIXME: make as string
 
 	// Assumption: raw source >> sum(other fields)
 	public long getPageByteSize() {
@@ -123,20 +125,25 @@ public class PageKind {
    
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
-  public static Optional<PageKind> restore(final String pageName) {
+	// DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
+  public static Optional<PageKind> restore(String pageName) {
   	GAEStoreAccessManager store = new GAEStoreAccessManager();
-  	Optional<PageKind> page = store.restorePageByName_eventually(pageName);
-  	
-  	if (page.isPresent()) {
-	    String rawSource = page.get().rawSource;
-	    
-	    PageKind tmpPage = buildPipeline().pass(page.get().name, rawSource);
+		try {
+			PageKind page = store.restorePageByName(pageName);
+			page.assign(buildPipeline().pass(page.name, page.rawSource));
+			page.generatorCache = store.restoreGenerator_eventually(page.generator).get();
+			return Optional.of(page);
+		} catch (StoreIsCorruptedException ex) {
+			// Экстренные меры
+			/*List<PageKind> pages = ofy().transactionless().load().type(PageKind.class).filter("name = ", pageName).list();
+			for (PageKind p : pages)
+				p.deleteFromStore_strong();
 
-	    page.get().assign(tmpPage);
-	    // загружается только при восстановлении
-	    page.get().generatorCache = store.restoreGenerator_eventually(page.get().generator).get();
-    }
-    return page;  // 1 item
+			log.info("index corrupted");
+			*/
+
+			throw new RuntimeException(ex.getCause());
+		}
   }
   
   private GeneratorKind getGeneratorCache() {
@@ -181,6 +188,7 @@ public class PageKind {
 			throw new IllegalArgumentException();
 
 		// local work
+		// FIXME: need processing but only for fill generator!
 		TextPipeline processor = new TextPipeline();
 		final PageKind page = processor.pass(name, text);
 
@@ -190,7 +198,6 @@ public class PageKind {
 
 		final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
 		//page.persist();  // no way here
-
 
 		{
 			// transaction boundary
@@ -327,7 +334,7 @@ public class PageKind {
 		r.setImportance(ngramKind.getImportance());
 		// max import
 		r.setMaxImportance(getMaxImportancy());
-		
+
 		return Optional.of(r);
   }
    
