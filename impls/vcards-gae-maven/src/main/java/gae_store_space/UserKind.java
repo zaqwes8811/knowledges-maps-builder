@@ -4,8 +4,8 @@ import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import com.google.common.util.concurrent.UncheckedExecutionException;
 import com.googlecode.objectify.Key;
+import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -14,6 +14,7 @@ import com.googlecode.objectify.annotation.Serialize;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
 import org.apache.log4j.Logger;
+import org.javatuples.Pair;
 import web_relays.protocols.PageSummaryValue;
 
 import java.util.ArrayList;
@@ -118,33 +119,55 @@ public class UserKind {
   // https://code.google.com/p/objectify-appengine/wiki/Transactions
   // FIXME: вот тут важна транзактивность
   public synchronized void createOrReplacePage(String pageName, String text) {
+    log.info("Create = " + pageName);
+    log.info(pageNamesRegister);
     // check register
     if (isContain(pageName)) {
       // страница была сохранена до этого
-      Optional<PageKind> page = getPage(pageName);
-
+      PageKind page = getPage(pageName).get();
       removePage(pageName);
-
-      page.get().deleteFromStore_strong();
+      page.atomicDelete();
       pagesCache.invalidate(pageName);
-    } else {
-      // FIXME: on development store can be broken
-      /*while (true) {
-        try {
-          Optional<PageKind> page = getPage(pageName);
-          page.get().deleteFromStore_strong();
-        } finally {
-
-        }
-        break;
-      }
-      */
     }
 
     // Нужно чтобы ни в памяти, ни в хранилище не было пар!
     // это проверка только из памяти!!
     checkNotContain(pageName);
-    createPage(pageName, text);
+
+    boolean success = false;
+    try {
+      pageNamesRegister.add(pageName);
+      //PageKind.atomicCreatePage(pageName, text);
+
+      Pair<PageKind, GeneratorKind> pair = PageKind.process(pageName, text);
+      final PageKind page = pair.getValue0();
+      final GeneratorKind g = pair.getValue1();
+      final UserKind user = this;
+
+      // transaction boundary
+      VoidWork work = new VoidWork() {
+        @Override
+        public void vrun() {
+          ofy().save().entity(g).now();
+
+          // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
+          page.setGenerator(g);
+
+          ofy().save().entity(page).now();
+
+          // need to save user!
+          ofy().save().entity(user).now();
+        }
+      };
+      // FIXME: база данный в каком состоянии будет тут? согласованном?
+      // check here, but what can do?
+
+      ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
+      success = true;
+    } finally {
+      if (!success)
+        pageNamesRegister.remove(pageName);
+    }
   }
 
   public synchronized PageKind getPagePure(String pageName) {
@@ -167,13 +190,14 @@ public class UserKind {
     while (true) {
       try {
         r = pagesCache.get(pageName);
-      } catch (UncheckedExecutionException ex) {
+      //} catch (UncheckedExecutionException ex) {
 
       } catch (ExecutionException ex) { }
 
       if (r.isPresent())
         break;
 
+      // insert into cache but absent
       pagesCache.invalidate(pageName);
       countTries--;
       if (countTries < 0)
@@ -203,7 +227,7 @@ public class UserKind {
     try {
       checkNotContain(pageName);
       pageNamesRegister.add(pageName);
-      PageKind.createPage_eventually(pageName, text);
+      PageKind.atomicCreatePage(pageName, text);
       success = true;
     } finally {
       if (!success)
@@ -212,7 +236,7 @@ public class UserKind {
   }
 
   public List<PageSummaryValue> getUserInformation() {
-    List<PageKind> pages = store.getAllPages_eventually();
+    List<PageKind> pages = ofy().load().type(PageKind.class).list();
 
     List<PageSummaryValue> r = new ArrayList<>();
     for (PageKind page: pages)
