@@ -18,17 +18,27 @@ public class AppInstance {
 	public static final String defaultGeneratorName = "Default";
 	public static final String defaultUserId = "DefaultUser";
 
-	public AppInstance() {	}
-
 	public static class Holder {
 		static final AppInstance w = new AppInstance();
+	}
+
+	public AppInstance() {
+
+	}
+
+	private synchronized UserKind getUser() {
+		if (defaultUser == null) {
+			// http://stackoverflow.com/questions/7325579/java-lang-noclassdeffounderror-could-not-initialize-class-xxx
+			defaultUser = UserKind.createOrRestoreById(defaultUserId);
+		}
+		return defaultUser;
 	}
 
 	public static AppInstance getInstance() {
 		return Holder.w;
 	}
 
-	UserKind defaultUser = new UserKind();
+	UserKind defaultUser = null;
 	
 	static public String getTestFileName() {
     return "./fakes/lor.txt";
@@ -41,31 +51,32 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-  	PageKind page = defaultUser.getPagePure(path.getPageName().get());
+  	PageKind page = getUser().getPagePure(path.getPageName().get());
    	return ImmutableList.copyOf(page.getDistribution());
   }
 
 	public void eraseStore() {
 		OfyService.clearStore();
-		defaultUser.createDefaultPage();
+		getUser().clear();
+		getUser().createDefaultPage();
 	}
 
-	public void createOrReplacePage(String name, String text) {
-		defaultUser.createOrReplacePage(name, text);
+	public void createOrReplacePage(String pageName, String text) {
+		getUser().createOrReplacePage(pageName, text);
 	}
 
 	public PageKind getPage(String pageName) {
-		return defaultUser.getPagePure(pageName);
+		return getUser().getPagePure(pageName);
 	}
 
 	// пока не ясно, что за идентификация будет для пользователя
 	// данных может и не быть, так что 
 	public List<PageSummaryValue> getUserInformation() {
-		return defaultUser.getUserInformation();
+		return getUser().getUserInformation();
 	}
-	
+
 	public void disablePoint(PathValue p) {
-		PageKind page = defaultUser.getPagePure(p.getPageName().get());
+		PageKind page = getUser().getPagePure(p.getPageName().get());
 		page.disablePoint(p);		
 	} 
 }

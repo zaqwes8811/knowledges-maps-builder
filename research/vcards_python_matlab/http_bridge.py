@@ -106,4 +106,4 @@ class ResearchAjax(object):
 
     @staticmethod
     def get_research_page_name():
-        return 'DefaultPage'#research_page'
+        return 'research_page'

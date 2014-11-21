@@ -4,7 +4,7 @@ package pipeline.text_extractors;
  * Created by zaqwes on 5/11/14.
  */
 public class SpecialSymbols {
-  public final char APOSTROPHE = '’';  // TODO: it's trouble. Константа в коде - юникодная.
+  public final char APOSTROPHE = '\'' ;//’';  // TODO: it's trouble. Константа в коде - юникодная.
   public final char ONE_QUOTE = '\'';
   public final char LEFT_ANGLE_BRACKET = '[';
   public final char DOT = '.';

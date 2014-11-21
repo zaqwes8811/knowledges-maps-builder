@@ -45,13 +45,7 @@ public class UserKind {
   // FIXME: если кеш убрать работает много стабильнее
   private static final Integer CACHE_SIZE = 5;
   @Ignore
-  LoadingCache<String, Optional<PageKind>> pagesCache = CacheBuilder.newBuilder()
-    .maximumSize(CACHE_SIZE)
-    .build(
-      new CacheLoader<String, Optional<PageKind>>() {
-        @Override
-        public Optional<PageKind> load(String key) { return PageKind.restore(key); }
-      });
+  LoadingCache<String, Optional<PageKind>> pagesCache = null;
 
   @Ignore
   GAEStoreAccessManager store = new GAEStoreAccessManager();
@@ -68,6 +62,21 @@ public class UserKind {
   private void reset() {
     if (!Optional.fromNullable(pageNamesRegister).isPresent())
       pageNamesRegister = new HashSet<>();
+
+    if (pagesCache == null)
+      pagesCache = CacheBuilder.newBuilder()
+        .maximumSize(CACHE_SIZE)
+        .build(
+          new CacheLoader<String, Optional<PageKind>>() {
+            @Override
+            public Optional<PageKind> load(String key) {
+              return PageKind.restore(key);
+            }
+          });
+  }
+
+  public void clear() {
+    pageNamesRegister.clear();
   }
 
   public static UserKind createOrRestoreById(final String id) {
@@ -94,22 +103,12 @@ public class UserKind {
       throw new IllegalArgumentException();
   }
 
-  public synchronized boolean tryPushPage(String pageName) {
-    checkPageName(pageName);
-    boolean wasInserted = false;
-    if (!pageNamesRegister.contains(pageName)) {
-      pageNamesRegister.add(pageName);
-      wasInserted = true;
-    }
-    return wasInserted;
-  }
-
-  public synchronized boolean removePage(String pageName) {
+  private boolean removePage(String pageName) {
     checkPageName(pageName);
     return pageNamesRegister.remove(pageName);
   }
 
-  public synchronized boolean isContain(String pageName) {
+  private boolean isContain(String pageName) {
     checkPageName(pageName);
     return pageNamesRegister.contains(pageName);
   }
@@ -117,44 +116,95 @@ public class UserKind {
   // скорее исследовательский метод
   // https://code.google.com/p/objectify-appengine/wiki/Transactions
   // FIXME: вот тут важна транзактивность
-  public void createOrReplacePage(String name, String text) {
+  public synchronized void createOrReplacePage(String pageName, String text) {
     // check register
+    if (isContain(pageName)) {
+      // страница была сохранена до этого
+      Optional<PageKind> page = getPage(pageName);
 
-    // check key set
+      removePage(pageName);
 
-    // create and persist - store access
-
-    // finally rollback if failure - in memory simple rollback
-
-    Optional<PageKind> page = getPage(name);
-    if (page.isPresent())
       page.get().deleteFromStore_strong();
+      pagesCache.invalidate(pageName);
+    } else {
+      // FIXME: on development store can be broken
+      /*while (true) {
+        try {
+          Optional<PageKind> page = getPage(pageName);
+          page.get().deleteFromStore_strong();
+        } finally {
 
-    pagesCache.invalidate(name);
+        }
+        break;
+      }
+      */
+    }
 
-    PageKind.createPageIfNotExist_eventually(name, text);
+    // Нужно чтобы ни в памяти, ни в хранилище не было пар!
+    // это проверка только из памяти!!
+    checkNotContain(pageName);
+    createPage(pageName, text);
   }
 
-  public PageKind getPagePure(String pageName) {
+  public synchronized PageKind getPagePure(String pageName) {
     // check register
+    Optional<PageKind> r = getPage(pageName);
+    if (!r.isPresent())
+      throw new IllegalArgumentException();
 
-    return getPage(pageName).get();
+    return r.get();
   }
 
   // FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
   private Optional<PageKind> getPage(String pageName) {
+    if (!isContain(pageName))
+      return Optional.absent();
+
     try {
-      return pagesCache.get(pageName);
+      Optional<PageKind> r = Optional.absent();
+      // FIXME: danger but must work
+      Integer countTries = 10000;
+      while (true) {
+        r = pagesCache.get(pageName);
+        if (r.isPresent())
+          break;
+        countTries--;
+        if (countTries < 0)
+          throw new IllegalStateException(pageName);
+      }
+      return r;
     } catch (ExecutionException e) {
       throw new RuntimeException(e);
     }
   }
 
-  public void createDefaultPage() {
+  public synchronized void createDefaultPage() {
     pagesCache.cleanUp();
-    String name = AppInstance.defaultPageName;
+    String pageName = AppInstance.defaultPageName;
+
+    if (isContain(pageName))
+      return;
+
     String text = GlobalIO.getGetPlainTextFromFile(AppInstance.getTestFileName());
-    PageKind.createPageIfNotExist_eventually(name, text);
+    createPage(pageName, text);
+  }
+
+  private void checkNotContain(String pageName) {
+    if (isContain(pageName))
+      throw new AssertionError();
+  }
+
+  private void createPage(String pageName, String text) {
+    boolean success = false;
+    try {
+      checkNotContain(pageName);
+      pageNamesRegister.add(pageName);
+      PageKind.createPage_eventually(pageName, text);
+      success = true;
+    } finally {
+      if (!success)
+        pageNamesRegister.remove(pageName);
+    }
   }
 
   public List<PageSummaryValue> getUserInformation() {

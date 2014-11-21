@@ -173,12 +173,14 @@ public class PageKind {
 
   // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
 	//   Иначе будут гонки. А может быть есть транзации на GAE?
-	public static PageKind createPageIfNotExist_eventually(final String name, String text) {
+	public static PageKind createPage_eventually(final String name, String text) {
+		// check-then-act/read-modify-write
+		// FIXME: Looks like imposable without races.
+		// Doesn't help really
 		if (text.length() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
 			throw new IllegalArgumentException();
 
 		// local work
-		final GAEStoreAccessManager store = new GAEStoreAccessManager();
 		TextPipeline processor = new TextPipeline();
 		final PageKind page = processor.pass(name, text);
 
@@ -187,17 +189,10 @@ public class PageKind {
 			throw new IllegalArgumentException();
 
 		final GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
+		//page.persist();  // no way here
 
-		// check-then-act/read-modify-write
-		// FIXME: Looks like imposable without races.
-		// Doesn't help really
+
 		{
-			// https://cloud.google.com/appengine/articles/transaction_isolation - Isolation
-			List<PageKind> pages = store.getPagesByName_eventually(name);
-			if (pages.size() >= 1) {
-				throw new IllegalArgumentException();
-			}
-
 			// transaction boundary
 			Work<PageKind> work = new Work<PageKind>() {
 				public PageKind run() {
@@ -213,7 +208,7 @@ public class PageKind {
 			// FIXME: база данный в каком состоянии будет тут? согласованном?
 			// check here, but what can do?
 
-			return store.firstPersist(work);
+			return new GAEStoreAccessManager().firstPersist(work);
 		}
 	}
   
@@ -385,7 +380,7 @@ public class PageKind {
   		}
   		
   		// state change
-  		persist(); 
+  		//persist();
   	}
   }
   
