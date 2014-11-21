@@ -124,38 +124,37 @@ public class PageKind {
   	return r;
   }
 
-	public static Optional<GeneratorKind> restoreOneGenerator(Key<GeneratorKind> g) {
-		return GeneratorKind.restoreById(g.getId());
+	private static void checkNonEmpty(Set<Key<PageKind>> keys) {
+		if (keys.isEmpty())
+			throw new AssertionError();
 	}
 
-	// FIXME: можно прочитать только ключи, а потом делать выборки
-	// FIXME: bad design
-	public static Optional<PageKind> restorePageByName(String name) {
-		List<PageKind> pages =
-			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
-
-		if (pages.size() > 1) {
-			// can delete by id
-			throw new StoreIsCorruptedException();
-		}
-
-		if (pages.size() == 0)
-			return Optional.absent();
-		//throw new IllegalStateException();
-
-		return Optional.of(pages.get(0));
-	}
-   
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
 	// DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
-  public static Optional<PageKind> restore(String pageName) {
+  public static Optional<PageKind> restore(String pageName, Set<Key<PageKind>> keys) {
+		checkNonEmpty(keys);
+
 		try {
-			Optional<PageKind> page = restorePageByName(pageName);
+			List<PageKind> pages =
+				ofy().transactionless().load().type(PageKind.class)
+					.filterKey("in", keys)
+					.filter("name = ", pageName)
+					.list();
+
+			if (pages.size() > 1) {
+				// can delete by id
+				throw new StoreIsCorruptedException();
+			}
+
+			if (pages.size() == 0)
+				return Optional.absent();
+
+			Optional<PageKind> page = Optional.of(pages.get(0));
 			if (page.isPresent()) {
 				PageKind p = page.get();
 				p.assign(buildPipeline().pass(p.name, p.rawSource));
-				p.generatorCache = restoreOneGenerator(p.generator).get();
+				p.generatorCache = GeneratorKind.restoreById(p.generator.getId()).get();
 			}
 			return page;
 		} catch (StoreIsCorruptedException ex) {

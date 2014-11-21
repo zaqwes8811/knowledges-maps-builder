@@ -1,5 +1,6 @@
 package web_relays.protocols;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PageSummaryValue {
@@ -13,5 +14,11 @@ public class PageSummaryValue {
 	
 	public static PageSummaryValue create(String pageName, List<String> genNames) {
 		return new PageSummaryValue(pageName, genNames);
+	}
+
+	public static PageSummaryValue create(String pageName, String genNames) {
+		ArrayList<String> s = new ArrayList<>();
+		s.add(genNames);
+		return new PageSummaryValue(pageName, s);
 	}
 }

@@ -10,7 +10,6 @@ import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 public class AppInstance {
@@ -61,8 +60,8 @@ public class AppInstance {
 		getUser().createDefaultPage();
 	}
 
-	public void createOrReplacePage(String pageName, String text) {
-		getUser().createOrReplacePage(pageName, text);
+	public PageKind createOrReplacePage(String pageName, String text) {
+		return getUser().replacePage(pageName, text);
 	}
 
 	public PageKind getPage(String pageName) {
