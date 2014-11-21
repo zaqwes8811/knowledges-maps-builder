@@ -67,7 +67,7 @@ class TestSequenceFunctions(unittest.TestCase):
 
     # TESTs
     def test_base(self):
-        for i in range(10):
+        for i in range(4):
             self.research_ajax.create_or_replace_page()
 
         #self.plot_distribution()
