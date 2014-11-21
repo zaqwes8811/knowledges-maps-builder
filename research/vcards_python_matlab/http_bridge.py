@@ -10,8 +10,10 @@ import json
 
 
 class AppAjax(object):
+    # http://stackoverflow.com/questions/25239650/python-requests-speed-up-using-keep-alive
     def __init__(self, url, port):
         self.server = url + ":" + str(port)
+        self.s = requests.Session()
 
     def pack_arg0(self, arg0):
         payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
@@ -22,7 +24,7 @@ class AppAjax(object):
 
     def get_user_summary_sync(self):
         uri = '/user_summary'
-        r = requests.get(self._build_url(uri))
+        r = self.s.get(self._build_url(uri))
         r.raise_for_status()
 
         tmp = r.json()
@@ -34,7 +36,7 @@ class AppAjax(object):
     def get_item(self, arg0):
         url = '/pkg'
         payload = self.pack_arg0(arg0)
-        r = requests.get(self._build_url(url), params=payload)
+        r = self.s.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
         return pro.NGramData(r.json())
@@ -42,13 +44,14 @@ class AppAjax(object):
     def mark_known(self, arg0):
         url = '/know_it'
         #payload = self.pack_arg0(arg0)
-        r = requests.put(self._build_url(url), data=json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True))
+        r = self.s.put(self._build_url(url), data=json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True))
         r.raise_for_status()
 
 
 class ResearchAjax(object):
     def __init__(self, url, port):
         self.server = url + ":" + str(port)
+        self.s = requests.Session()
 
     def pack_arg0(self, arg0):
         payload = {'arg0': json.dumps(arg0, default=lambda o: o.__dict__, sort_keys=True)}
@@ -58,7 +61,7 @@ class ResearchAjax(object):
         # FIXME: запрос длины предложений - статистика длин
         url = '/get_lengths_sentences'
         payload = self.pack_arg0(arg0)
-        r = requests.get(self._build_url(url), params=payload)
+        r = self.s.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
         return r.json()
@@ -69,7 +72,7 @@ class ResearchAjax(object):
     def get_distribution_sync(self, arg0):
         url = '/research/get_distribution'
         payload = self.pack_arg0(arg0)
-        r = requests.get(self._build_url(url), params=payload)
+        r = self.s.get(self._build_url(url), params=payload)
         r.raise_for_status()
 
         tmp = r.json()
@@ -95,7 +98,7 @@ class ResearchAjax(object):
         url = '/research/accept_text'
 
         payload = {'name': self.get_research_page_name(), 'text': data}
-        r = requests.post(self._build_url(url), data=json.dumps(payload))
+        r = self.s.post(self._build_url(url), data=json.dumps(payload))
         r.raise_for_status()
 
     def dev_equalizer(self):
@@ -106,4 +109,4 @@ class ResearchAjax(object):
 
     @staticmethod
     def get_research_page_name():
-        return 'research_page'
+        return 'ResearchPage'
