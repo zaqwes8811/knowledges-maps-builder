@@ -57,7 +57,8 @@ public class PageKind {
 	private static Logger log = Logger.getLogger(UserKind.class.getName());
   private PageKind() { }
 
-  public @Id Long id;  // FIXME: make as string
+  public @Id Long id;  // FIXME: make as string - UserId.pageName
+	// FIXME: можно еще доступ сереализовать
 
 	// Assumption: raw source >> sum(other fields)
 	public long getPageByteSize() {
