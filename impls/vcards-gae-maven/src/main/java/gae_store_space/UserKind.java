@@ -5,7 +5,6 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
-import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -49,9 +48,6 @@ public class UserKind {
   @Ignore
   LoadingCache<String, Optional<PageKind>> pagesCache = null;
 
-  @Ignore
-  GAEStoreAccessManager store = new GAEStoreAccessManager();
-
   public String getId() {
     return id;
   }
@@ -72,13 +68,15 @@ public class UserKind {
           new CacheLoader<String, Optional<PageKind>>() {
             @Override
             public Optional<PageKind> load(String key) {
-              return PageKind.restore(key);
+              //pageKeys;
+              return PageKind.restore(key, pageKeys);
             }
           });
   }
 
   public void clear() {
     pageNamesRegister.clear();
+    pageKeys.clear();  // FIXME: may be leak
   }
 
   public static UserKind createOrRestoreById(final String id) {
@@ -115,39 +113,52 @@ public class UserKind {
     return pageNamesRegister.contains(pageName);
   }
 
+  private void checkPagesInvariant() {
+    if (pageNamesRegister.size() != pageKeys.size()) {
+      log.info(pageNamesRegister);
+      log.info(pageKeys);
+      throw new AssertionError();
+    }
+  }
+
+  private void checkTrue(boolean value) {
+    if (!value)
+      throw new AssertionError();
+  }
+
   // скорее исследовательский метод
   // https://code.google.com/p/objectify-appengine/wiki/Transactions
   // FIXME: вот тут важна транзактивность
-  public synchronized void createOrReplacePage(String pageName, String text) {
-    log.info("Create = " + pageName);
-    log.info(pageNamesRegister);
+  public synchronized PageKind replacePage(String pageName, String text) {
     // check register
     if (isContain(pageName)) {
       // страница была сохранена до этого
       PageKind page = getPage(pageName).get();
       removePage(pageName);
       page.atomicDelete();
+
+      // нужно как-то удалить ключ
+      checkTrue(pageKeys.remove(Key.create(page)));
+
       pagesCache.invalidate(pageName);
     }
 
     // Нужно чтобы ни в памяти, ни в хранилище не было пар!
     // это проверка только из памяти!!
     checkNotContain(pageName);
+    checkPagesInvariant();
 
     boolean success = false;
     try {
-      pageNamesRegister.add(pageName);
-      //PageKind.atomicCreatePage(pageName, text);
-
       Pair<PageKind, GeneratorKind> pair = PageKind.process(pageName, text);
       final PageKind page = pair.getValue0();
       final GeneratorKind g = pair.getValue1();
       final UserKind user = this;
 
       // transaction boundary
-      VoidWork work = new VoidWork() {
+      Work<PageKind> work = new Work<PageKind>() {
         @Override
-        public void vrun() {
+        public PageKind run() {
           ofy().save().entity(g).now();
 
           // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
@@ -155,18 +166,31 @@ public class UserKind {
 
           ofy().save().entity(page).now();
 
+          // can add key
+          Key<PageKind> key = Key.create(page);
+          user.pageKeys.add(key);  // FIXME: а откатит ли? думаю нет
+
           // need to save user!
           ofy().save().entity(user).now();
+          return page;
         }
       };
+
+      pageNamesRegister.add(pageName);
       // FIXME: база данный в каком состоянии будет тут? согласованном?
       // check here, but what can do?
+      PageKind r = ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
+      checkPagesInvariant();
 
-      ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
       success = true;
+      return r;
     } finally {
-      if (!success)
+      if (!success) {
+        //pageKeys.remove()
         pageNamesRegister.remove(pageName);
+      }
+
+      checkPagesInvariant();
     }
   }
 
@@ -179,10 +203,16 @@ public class UserKind {
     return r.get();
   }
 
+  private void checkPageIsActive(Optional<PageKind> o) {
+    if (!o.isPresent())
+      throw new AssertionError();
+  }
+
   // FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
   private Optional<PageKind> getPage(String pageName) {
-    if (!isContain(pageName))
+    if (!isContain(pageName)) {
       return Optional.absent();
+    }
 
     Optional<PageKind> r = Optional.absent();
     // FIXME: danger but must work
@@ -203,18 +233,16 @@ public class UserKind {
       if (countTries < 0)
         throw new IllegalStateException(pageName);
     }
+
+    checkPageIsActive(r);
+
     return r;
   }
 
   public synchronized void createDefaultPage() {
-    pagesCache.cleanUp();
     String pageName = AppInstance.defaultPageName;
-
-    if (isContain(pageName))
-      return;
-
     String text = GlobalIO.getGetPlainTextFromFile(AppInstance.getTestFileName());
-    createPage(pageName, text);
+    replacePage(pageName, text);
   }
 
   private void checkNotContain(String pageName) {
@@ -222,25 +250,10 @@ public class UserKind {
       throw new AssertionError();
   }
 
-  private void createPage(String pageName, String text) {
-    boolean success = false;
-    try {
-      checkNotContain(pageName);
-      pageNamesRegister.add(pageName);
-      PageKind.atomicCreatePage(pageName, text);
-      success = true;
-    } finally {
-      if (!success)
-        pageNamesRegister.remove(pageName);
-    }
-  }
-
   public List<PageSummaryValue> getUserInformation() {
-    List<PageKind> pages = ofy().load().type(PageKind.class).list();
-
     List<PageSummaryValue> r = new ArrayList<>();
-    for (PageKind page: pages)
-      r.add(PageSummaryValue.create(page.getName(), page.getGenNames()));
+    for (String page: pageNamesRegister)
+      r.add(PageSummaryValue.create(page, AppInstance.defaultGeneratorName));
 
     return r;
   }
