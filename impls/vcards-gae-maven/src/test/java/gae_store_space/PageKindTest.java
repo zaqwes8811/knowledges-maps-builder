@@ -17,6 +17,7 @@ import pipeline.math.DistributionElement;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -61,7 +62,11 @@ public class PageKindTest {
       // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
       int countTries = 100;  // random
       while (!page.isPresent()) {
-        page = PageKind.restore(AppInstance.defaultPageName);
+        try {
+          page = PageKind.restore(AppInstance.defaultPageName);
+        } catch (IllegalStateException ex) {
+
+        }
         if (countTries < 0)
           assertTrue(false);
         countTries--;
@@ -79,8 +84,17 @@ public class PageKindTest {
 
       Optional<PageKind> page = Optional.absent();
       // FIXME: просто греем процессор - bad!
+
+      int countTries = 100;  // random
       while (!page.isPresent()) {
-        page = PageKind.restore(AppInstance.defaultPageName);
+        try {
+          page = PageKind.restore(AppInstance.defaultPageName);
+        } catch (IllegalStateException ex) {
+
+        }
+        if (countTries < 0)
+          assertTrue(false);
+        countTries--;
       }
 
       // Queries

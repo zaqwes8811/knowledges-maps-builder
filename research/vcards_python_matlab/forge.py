@@ -67,7 +67,10 @@ class TestSequenceFunctions(unittest.TestCase):
 
     # TESTs
     def test_base(self):
-        self.plot_distribution()
+        for i in range(10):
+            self.research_ajax.create_or_replace_page()
+
+        #self.plot_distribution()
 
     def test_clustering(self):
         d = self.research_ajax.get_pure_distribution(self.arg0)
@@ -94,21 +97,46 @@ class TestSequenceFunctions(unittest.TestCase):
         self.accept_ngram_data()
 
     def test_boundary_expand(self):
+        self.plot_distribution()
+
+        def it():
+            for i in range(5):
+                arg0 = self.accept_ngram_data()
+                self.app_ajax.mark_known(arg0)
+        if True:
+            for j in range(5):
+                it()
+                self.plot_distribution()
+
+        plt.show()
+
+    def benchmark_boundary_expand(self):
+        import cProfile, pstats, StringIO
+        pr = cProfile.Profile()
+        pr.enable()
+
         #self.plot_distribution()
-        #print 'b'
-        #arg0 = self.accept_ngram_data()
-        #self.app_ajax.mark_known(arg0)
-        #print 'end'
+
+        def it():
+            for i in range(10):
+                arg0 = self.accept_ngram_data()
+                self.app_ajax.mark_known(arg0)
+
+        #cProfile.run('it()')
 
         if True:
-            for j in range(3):
-                for i in range(50):
-                    print 'b'
-                    arg0 = self.accept_ngram_data()
-                    self.app_ajax.mark_known(arg0)
-                    print 'e', i
+            for j in range(1):
+                it()
+                #self.plot_distribution()
 
-                self.plot_distribution()
+        pr.disable()
+
+        s = StringIO.StringIO()
+        sortby = 'cumulative'
+        ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+        ps.print_stats()
+        print s.getvalue()
+
        # plt.show()
 
     def test_equalizer(self):

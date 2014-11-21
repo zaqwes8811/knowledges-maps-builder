@@ -96,17 +96,17 @@ public class GAEStoreAccessManager {
 	
 	// FIXME: можно прочитать только ключи, а потом делать выборки
 	// FIXME: bad design
-	public Optional<PageKind> restorePageByName_eventually(String name) {
+	public PageKind restorePageByName(String name) {
    	List<PageKind> pages = 
    			ofy().transactionless().load().type(PageKind.class).filter("name = ", name).list();
  		
  		if (pages.size() > 1)
- 			throw new IllegalStateException();
+ 			throw new StoreIsCorruptedException();
  		
 		if (pages.size() == 0)
-		 	return Optional.absent();
+			throw new IllegalStateException();	//return Optional.absent();
 		 
-		return Optional.of(pages.get(0));
+		return pages.get(0);
 	}
 	
 	public List<PageKind> getPagesByName_eventually(String name) {

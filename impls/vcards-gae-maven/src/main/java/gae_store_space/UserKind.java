@@ -4,6 +4,7 @@ import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import com.google.common.util.concurrent.UncheckedExecutionException;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
@@ -160,22 +161,25 @@ public class UserKind {
     if (!isContain(pageName))
       return Optional.absent();
 
-    try {
-      Optional<PageKind> r = Optional.absent();
-      // FIXME: danger but must work
-      Integer countTries = 10000;
-      while (true) {
+    Optional<PageKind> r = Optional.absent();
+    // FIXME: danger but must work
+    Integer countTries = 1000;
+    while (true) {
+      try {
         r = pagesCache.get(pageName);
-        if (r.isPresent())
-          break;
-        countTries--;
-        if (countTries < 0)
-          throw new IllegalStateException(pageName);
-      }
-      return r;
-    } catch (ExecutionException e) {
-      throw new RuntimeException(e);
+      } catch (UncheckedExecutionException ex) {
+
+      } catch (ExecutionException ex) { }
+
+      if (r.isPresent())
+        break;
+
+      pagesCache.invalidate(pageName);
+      countTries--;
+      if (countTries < 0)
+        throw new IllegalStateException(pageName);
     }
+    return r;
   }
 
   public synchronized void createDefaultPage() {
