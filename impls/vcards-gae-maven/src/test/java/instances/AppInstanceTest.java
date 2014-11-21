@@ -13,7 +13,8 @@ import com.google.gson.Gson;
 
 public class AppInstanceTest {
 	private static final LocalServiceTestHelper helper =
-	    new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig());
+		new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
+			.setDefaultHighRepJobPolicyUnappliedJobPercentage(50));
 
   @Before
   public void setUp() { helper.setUp(); }

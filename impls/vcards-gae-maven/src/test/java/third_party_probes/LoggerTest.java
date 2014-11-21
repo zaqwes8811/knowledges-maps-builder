@@ -15,6 +15,6 @@ public class LoggerTest {
   public void test() {
     //PropertyConfigurator.configure("log4j.properties");
     BasicConfigurator.configure();
-    log.info("trace");
+    //log.info("trace");
   }
 }
