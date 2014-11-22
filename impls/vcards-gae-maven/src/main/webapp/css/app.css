@@ -11,6 +11,14 @@ body {
 	padding-left: 4cm;
 	padding-right: 4cm;
 	}
+
+.add-information-hidded {
+    visibility: hidden;
+}
+
+.add-information-visible {
+    visibility: visible;
+}
 	
 /**/
 html,body { 

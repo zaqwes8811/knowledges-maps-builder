@@ -124,10 +124,22 @@ View.prototype.draNGramStatistic = function (imp) {
 View.prototype.redrawSentences = function (sentences, word) {
   var dom = $('#sentences');
   var one = sentences[0];
+
+  // FIXME: need smart replace! A in smArt also change
+  // FIXME: may be not one occurence in sentence
   var one = one.replace(word, '<b>' + word + '</b>')
+
   var sent = [one];
   dom.empty();
   _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
+}
+
+View.prototype.showSettings = function() {
+  $('#settings_id').toggleClass("add-information-hidded");
+}
+
+View.prototype.hideSettings = function() {
+  $('#settings_id').toggleClass("add-information-hidded");
 }
 
 View.prototype._markIsKnowIt = function() {
