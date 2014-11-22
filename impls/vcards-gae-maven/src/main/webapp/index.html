@@ -25,26 +25,29 @@
 All data can be removed in any time.</div>
 
 <!-- Main -->
-<h4 class="center"><span id="word_holder_id">Nothing</span></h4>
-<ul id="sentences"><li>Nothing</li></ul>
-
-<!--input type="checkbox" id="know_it" value="Bike">I know it</input-->
-<input type="button" class="btn btn-warning btn-sm" value="I know it" onclick="gView._markIsKnowIt()"/>
-<input type="button" class="btn btn-primary btn-sm" value="Get new word" onclick="gView.onGetWordPackage()"/>
-
-<span class="">
+<input type="button" class="btn btn-warning" value="I know it" onclick="gView._markIsKnowIt()"/>
+<input type="button" class="btn btn-primary" value="Get new word" onclick="gView.onGetWordPackage()"/>
+<span>
   Importance note:<span class="backspace"></span>
   <b><span id="count_occurance"></span></b>
 </span>
-
 <br/>
+
+<h4 class="center"><span id="word_holder_id">Nothing</span></h4>
+<ul id="sentences"><li>Nothing</li></ul>
 <hr/>
+<input type="button" class="btn btn-primary" value="Show settings" onclick="gView.showSettings()"/>
+<br/>
+<br/>
 
 <!-- errors -->
 <div id = "log"></div>
 
 <!--  Other -->
-<div>
+<div id="settings_id" class="add-information-hidded">
+  <input type="button" class="btn btn-primary" value="Hide settings" onclick="gView.hideSettings()"/>
+  <br/>
+  <br/>
   <select id="pages"></select>
   <select id="pageGenerators"></select>
 
