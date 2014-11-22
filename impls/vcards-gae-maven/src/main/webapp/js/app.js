@@ -121,9 +121,11 @@ View.prototype.draNGramStatistic = function (imp) {
   $("#count_occurance").text(imp);
 }
 
-View.prototype.redrawSentences = function (sentences) {
+View.prototype.redrawSentences = function (sentences, word) {
   var dom = $('#sentences');
-  var sent = [sentences[0]];
+  var one = sentences[0];
+  var one = one.replace(word, '<b>' + word + '</b>')
+  var sent = [one];
   dom.empty();
   _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
 }
@@ -155,7 +157,7 @@ View.prototype.reload = function() {
     });
 
   // don't work in constructor
-  $('#know_it').change(function() {
+  /*$('#know_it').change(function() {
     if (self.currentWordData.isActive()) {
       var $this = $(this);
       if ($this.is(':checked')) {
@@ -163,6 +165,7 @@ View.prototype.reload = function() {
       }
     }
   });
+*/
 
   // don't work in constructor
   $('#pages').change(function() {
@@ -181,11 +184,13 @@ View.prototype.onGetWordPackage = function () {
       var v = data;
       self.currentWordData.set(v);
       self.drawWordValue(v.word);
-      self.redrawSentences(v.sentences);
+      
+      self.redrawSentences(v.sentences, v.word);
+
       self.draNGramStatistic(v.importance + " from " + v.maxImportance);
 
       // сбрасываем флаг "i know"
-      $('#know_it').prop('checked', false);
+      //$('#know_it').prop('checked', false);
     }, point);
 }
 
