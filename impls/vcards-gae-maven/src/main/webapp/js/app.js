@@ -134,13 +134,10 @@ View.prototype.redrawSentences = function (sentences, word) {
   _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
 }
 
-View.prototype.showSettings = function() {
+View.prototype.toggleSettings = function() {
   $('#settings_id').toggleClass("add-information-hidded");
 }
 
-View.prototype.hideSettings = function() {
-  $('#settings_id').toggleClass("add-information-hidded");
-}
 
 View.prototype._markIsKnowIt = function() {
   // думается лучше выполнить синхронно, хотя если здесь, то все равно
