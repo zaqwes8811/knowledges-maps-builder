@@ -56,14 +56,14 @@ DataAccessLayer.prototype.putPage = function (page, done, error) {
 }
 
 // FIXME: нужны параметры
-DataAccessLayer.prototype.getWordPkgAsync = function (callback, arg0) {
+DataAccessLayer.prototype.getWordPkgAsync = function (successHandler, errorHandler, arg0) {
   // делаем запрос
   var self = this;
   var uri = '/pkg';  // FIXME: looks like shit
   var args = {'arg0': JSON.stringify(arg0)};
   $.get(uri, args)
-    .success(callback)
-    .error(function(data) { self.onError(data); });
+    .success(successHandler)
+    .error(errorHandler);
 }
 
 DataAccessLayer.prototype.getDistributionAsync = function (callback, arg0) {
