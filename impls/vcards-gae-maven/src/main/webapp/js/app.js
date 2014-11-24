@@ -18,6 +18,7 @@ MessagesQueue.prototype.push = function(message) {
 }
 
 function Message(text) {
+  var self = this;
   // Now just indicate
   // http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm
   var button = null;
@@ -27,7 +28,16 @@ function Message(text) {
        text,
     '</div>'].join('\n');
 
-  this.r = $.parseHTML(value);
+  var r = $.parseHTML(value);
+
+  // connect closer
+  $(r).first().click(function(e) { 
+    self.selfDelete();
+  });
+
+
+  // State
+  self.r = r;
 }
 
 Message.prototype.get = function() {
@@ -36,6 +46,7 @@ Message.prototype.get = function() {
 
 Message.prototype.selfDelete = function () {
   // delete with childs
+  alert('delete event');
 }
 
 // Class
