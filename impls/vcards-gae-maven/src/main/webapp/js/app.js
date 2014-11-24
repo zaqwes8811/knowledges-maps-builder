@@ -1,4 +1,7 @@
 // String formatter: http://stackoverflow.com/questions/1038746/equivalent-of-string-format-in-jquery
+//
+// http://callbackhell.com/
+// https://blog.domenic.me/youre-missing-the-point-of-promises/
 
 // Class
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
@@ -106,7 +109,12 @@ View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
-View.prototype.draNGramStatistic = function (imp) {
+View.prototype._drawPageSummary = function() {
+  var currentPageName = this.getCurrentPageName();
+  $('#pageNameView').text(currentPageName);
+}
+
+View.prototype.drawNGramStatistic = function (imp) {
   $("#count_occurance").text(imp);
 }
 
@@ -148,7 +156,7 @@ View.prototype._getUserSummary = function() {
   // Get user data
   var self = this;
 
-  var waitMessage = gMessageBuilder.buildInfo('Wait please...');
+  var waitMessage = gMessageBuilder.buildInfo('Loading user information. Wait please...');
   gMessagesQueue.push(waitMessage);
 
   var errorHandler = function(data) { 
@@ -162,6 +170,8 @@ View.prototype._getUserSummary = function() {
     self.userSummary.reset(data);
     var pages = self.userSummary.getPageNames();
     self.resetPagesOptions(pages);
+
+    self._drawPageSummary();
   };
 
   this.dal.getUserSummary(successHandler, errorHandler);
@@ -169,12 +179,18 @@ View.prototype._getUserSummary = function() {
 
 // Actions
 View.prototype.reload = function() {
+  var self = this;
   this._getUserSummary();
 
   // don't work in constructor
   $('#pages').change(function() {
     self.resetGenNames();
+    self._drawPageSummary();
   })
+}
+
+View.prototype.buildPage = function() {
+  // Build page by settings
 }
 
 View.prototype.onGetWordPackage = function () { 
@@ -182,17 +198,31 @@ View.prototype.onGetWordPackage = function () {
 
   // Нужны еще данные - страница и имя генератора
   var point = this._makePoint();
+  
+  // FIXME: blinking now - need to think
+  //var waitMessage = gMessageBuilder.buildInfo('Accepting new word. Wait please...');
+  //gMessagesQueue.push(waitMessage);
+
+  var errorHandler = function(data) {
+    //waitMessage.selfDelete();
+    var tmp = data.statusText;
+    gMessagesQueue.push(gMessageBuilder.buildError(tmp)); 
+  };
+
+  var successHandler = function(data) {
+    //waitMessage.selfDelete();
+
+    var v = data;
+    self.currentWordData.set(v);
+    self.drawWordValue(v.word);
+    
+    self.redrawSentences(v.sentences, v.word);
+
+    self.drawNGramStatistic(v.importance + " from " + v.maxImportance);
+  };
 
   // делаем запрос
-  this.dal.getWordPkgAsync(function(data) {
-      var v = data;
-      self.currentWordData.set(v);
-      self.drawWordValue(v.word);
-      
-      self.redrawSentences(v.sentences, v.word);
-
-      self.draNGramStatistic(v.importance + " from " + v.maxImportance);
-    }, point);
+  this.dal.getWordPkgAsync(successHandler, errorHandler, point);
 }
 
 // State
