@@ -13,6 +13,7 @@ function View(dal) {
   this.userSummary = new UserSummary([]);
   this.currentTextFilename = "";
 
+  this.log = gMessagesQueue;
 }
 
 View.prototype.setCurrentTextFilename = function (/*value*/) {
@@ -151,7 +152,8 @@ View.prototype.markIsKnowIt = function() {
   {
     // FIXME: Danger! Data races!! На сервер запросы приходят в случайном порядке!
     // FIXME: add callbacks of futures
-    var point = this._makePoint();
+    // http://stackoverflow.com/questions/26625671/rest-without-put
+    var point = this.makePoint__();
 
     this.dal.markIsDone(point);
 
@@ -162,24 +164,24 @@ View.prototype.markIsKnowIt = function() {
   }
 }
 
-View.prototype._makePoint = function () {
+View.prototype.makePoint__ = function () {
   var page = this.getCurrentPageName();
   var gen = this.getCurrentGenName();
   var pointPos = this.currentWordData.getPos();
   return new protocols.PathValue(page, gen, pointPos);
 }
 
-View.prototype._getUserSummary = function() {
+View.prototype.getUserSummary__ = function() {
   // Get user data
   var self = this;
 
   var waitMessage = gMessageBuilder.buildInfo('Loading user information. Wait please...');
-  gMessagesQueue.push(waitMessage);
+  this.log.push(waitMessage);
 
   var errorHandler = function(data) { 
     waitMessage.selfDelete();
     var tmp = data.statusText;
-    gMessagesQueue.push(gMessageBuilder.buildError(tmp)); 
+    self.log.push(gMessageBuilder.buildError(tmp)); 
   };
 
   var successHandler = function(data) {
@@ -197,7 +199,7 @@ View.prototype._getUserSummary = function() {
 // Actions
 View.prototype.reload = function() {
   var self = this;
-  this._getUserSummary();
+  this.getUserSummary__();
 
   // don't work in constructor
   $('#pages').change(function() {
@@ -214,7 +216,7 @@ View.prototype.onGetWordPackage = function () {
   var self = this;
 
   // Нужны еще данные - страница и имя генератора
-  var point = this._makePoint();
+  var point = this.makePoint__();
   
   // FIXME: blinking now - need to think
   //var waitMessage = gMessageBuilder.buildInfo('Accepting new word. Wait please...');
@@ -223,7 +225,7 @@ View.prototype.onGetWordPackage = function () {
   var errorHandler = function(data) {
     //waitMessage.selfDelete();
     var tmp = data.statusText;
-    gMessagesQueue.push(gMessageBuilder.buildError(tmp)); 
+    self.log.push(gMessageBuilder.buildError(tmp)); 
   };
 
   var successHandler = function(data) {
