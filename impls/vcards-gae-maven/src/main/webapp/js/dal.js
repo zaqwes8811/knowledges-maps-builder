@@ -75,16 +75,11 @@ DataAccessLayer.prototype.getDistributionAsync = function (callback, arg0) {
     .error(function(data) { self.onError(data); });
 }
 
-DataAccessLayer.prototype.getUserSummary = function (successHandler) {
+DataAccessLayer.prototype.getUserSummary = function (successHandler, errorHandler) {
   var self = this;
   // Get user data
   // Нужно по имени страницы получать список генераторов
   var uri = '/user_summary';
-
-  var errorHandler = function(data) { 
-    self.onError(data); 
-  };
-
   $.get(uri)
     .success(successHandler)
     .error(errorHandler);
