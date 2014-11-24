@@ -1,0 +1,3 @@
+maven http://java.awsblog.com/post/TxBQSY5CJQNVSN/AWS-SDK-for-Java-Maven-Archetype
+
+https://help.ubuntu.com/community/EC2StartersGuide
