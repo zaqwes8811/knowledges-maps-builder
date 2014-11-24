@@ -1,14 +1,41 @@
+// String formatter: http://stackoverflow.com/questions/1038746/equivalent-of-string-format-in-jquery
+
 function UserException(message) {
    this.message = message;
    this.name = "UserException";
 }
 
-function Logger() {
+function MessagesQueue(space) {
+  this.space = space;
 
+  this.selector = '#log';
+  //this.space = $('#log');  // don't work
+  
 }
 
-Logger.prototype.putWarning = function(message) {
+MessagesQueue.prototype.push = function(message) {
+  $(this.selector).append(message);
+}
 
+function Message(text) {
+  // Now just indicate
+  // http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm
+  var button = null;
+  var value = 
+    ['<div class="alert alert-success alert-dismissable">',
+       '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>',
+       text,
+    '</div>'].join('\n');
+
+  this.r = $.parseHTML(value);
+}
+
+Message.prototype.get = function() {
+  return this.r;
+}
+
+Message.prototype.selfDelete = function () {
+  // delete with childs
 }
 
 // Class
@@ -166,17 +193,6 @@ View.prototype.reload = function() {
     });
 
   // don't work in constructor
-  /*$('#know_it').change(function() {
-    if (self.currentWordData.isActive()) {
-      var $this = $(this);
-      if ($this.is(':checked')) {
-        self._markIsKnowIt();
-      }
-    }
-  });
-*/
-
-  // don't work in constructor
   $('#pages').change(function() {
     self.resetGenNames();
   })
@@ -208,6 +224,7 @@ View.prototype.onGetWordPackage = function () {
 var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
+var gMessagesQueue = new MessagesQueue();
 
 $(function() {
   // Handler for .ready() called.
@@ -217,5 +234,8 @@ $(function() {
   $("#fileInput").change(function(e) {
     gView.setCurrentTextFilename();
   })
+
+  var m = new Message('hello');
+  gMessagesQueue.push(m.get());
 
 });

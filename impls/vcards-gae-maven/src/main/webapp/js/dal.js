@@ -30,7 +30,7 @@ var protocols = {
 function DataAccessLayer() { }
 
 DataAccessLayer.prototype.onError = function (message) {
-  alert("error: " + message);
+  //alert("error: " + message);
 }
 
 DataAccessLayer.prototype.markIsDone = function (point) {
