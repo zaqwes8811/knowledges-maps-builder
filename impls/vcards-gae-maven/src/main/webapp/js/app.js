@@ -148,13 +148,18 @@ View.prototype.markIsKnowIt = function() {
   // думается лучше выполнить синхронно, хотя если здесь, то все равно
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
   
-  // FIXME: add callbacks of futures
-  var point = this._makePoint();
-  this.dal.markIsDone(point);
-  gPlotView.onGetData();
+  {
+    // FIXME: Danger! Data races!! На сервер запросы приходят в случайном порядке!
+    // FIXME: add callbacks of futures
+    var point = this._makePoint();
 
-  // Get page
-  this.onGetWordPackage();
+    this.dal.markIsDone(point);
+
+    gPlotView.onGetData();
+
+    // Get page
+    this.onGetWordPackage();
+  }
 }
 
 View.prototype._makePoint = function () {
