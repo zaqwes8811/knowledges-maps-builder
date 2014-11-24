@@ -1,67 +1,5 @@
 // String formatter: http://stackoverflow.com/questions/1038746/equivalent-of-string-format-in-jquery
 
-function UserException(message) {
-   this.message = message;
-   this.name = "UserException";
-}
-
-function MessagesQueue(space) {
-  this.space = space;
-  this.selector = '#log';
-  //this.space = $('#log');  // don't work - not exist in time
-}
-
-MessagesQueue.prototype.push = function(message) {
-  message.appendTo(this.selector);
-}
-
-function MessageBuilder() {
-
-}
-
-MessageBuilder.prototype.buildInfo = function(text) {
-  return new Message(text, 'info');
-}
-
-MessageBuilder.prototype.buildWarning = function(text) {
-  return new Message(text, 'warning');
-}
-
-// type - 'success', 'info', warning, danger
-function Message(text, type) {
-  var self = this;
-  // Now just indicate
-  // http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm
-  var button = null;
-  var value = 
-    ['<div class="alert alert-' + type + ' alert-dismissable">',
-       '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>',
-       text,
-    '</div>'].join('\n');
-
-  var r = $.parseHTML(value);
-
-  // connect closer
-  $(r).first().click(function(e) { 
-    self.selfDelete();
-  });
-
-
-  // State
-  self.r = r;
-}
-
-Message.prototype.appendTo = function(domParent) {
-  $(domParent).append(this.r);
-  //return this.r;
-}
-
-Message.prototype.selfDelete = function () {
-  // delete with childs
-  // FIXME: delete all!!  http://api.jquery.com/remove/
-  $(this.r).remove();//empty();  // .parent()
-}
-
 // Class
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
@@ -206,15 +144,32 @@ View.prototype._makePoint = function () {
   return new protocols.PathValue(page, gen, pointPos);
 }
 
-// Actions
-View.prototype.reload = function() {
+View.prototype._getUserSummary = function() {
   // Get user data
   var self = this;
-  this.dal.getUserSummary(function(data) {
-      self.userSummary.reset(data);
-      var pages = self.userSummary.getPageNames();
-      self.resetPagesOptions(pages);
-    });
+
+  var waitMessage = gMessageBuilder.buildInfo('Wait please...');
+  gMessagesQueue.push(waitMessage);
+
+  var errorHandler = function(data) { 
+    waitMessage.selfDelete();
+    var tmp = data.statusText;
+    gMessagesQueue.push(gMessageBuilder.buildError(tmp)); 
+  };
+
+  var successHandler = function(data) {
+    waitMessage.selfDelete();
+    self.userSummary.reset(data);
+    var pages = self.userSummary.getPageNames();
+    self.resetPagesOptions(pages);
+  };
+
+  this.dal.getUserSummary(successHandler, errorHandler);
+}
+
+// Actions
+View.prototype.reload = function() {
+  this._getUserSummary();
 
   // don't work in constructor
   $('#pages').change(function() {
@@ -237,19 +192,19 @@ View.prototype.onGetWordPackage = function () {
       self.redrawSentences(v.sentences, v.word);
 
       self.draNGramStatistic(v.importance + " from " + v.maxImportance);
-
-      // сбрасываем флаг "i know"
-      //$('#know_it').prop('checked', false);
     }, point);
 }
 
 // State
 // создаются до загрузки DOM?
+var gMessagesQueue = new message_subsystem.MessagesQueue();
+var gMessageBuilder = new message_subsystem.MessageBuilder();
+
 var gDataAccessLayer = new DataAccessLayer();
+
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
-var gMessagesQueue = new MessagesQueue();
-var gMessageBuilder = new MessageBuilder();
+
 
 $(function() {
   // Handler for .ready() called.
@@ -263,8 +218,4 @@ $(function() {
   gMessagesQueue.push(
     gMessageBuilder.buildWarning('<b>Warning:</b> Project under development. One user for everyone. \
       All data can be removed in any time.'));
-
-  //gMessagesQueue.push(gMessageBuilder.buildInfo('done'));
-  //gMessagesQueue.push(gMessageBuilder.buildInfo('try again'));
-
 });
