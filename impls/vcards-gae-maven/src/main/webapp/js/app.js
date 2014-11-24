@@ -119,14 +119,18 @@ View.prototype.drawNGramStatistic = function (imp) {
 }
 
 View.prototype.redrawSentences = function (sentences, word) {
+  var sent = [];
+
+  _.each(sentences, function(e) {
+    var one = e;
+
+    // FIXME: need smart replace! A in smArt also change
+    // FIXME: may be not one occurence in sentence
+    var one = one.replace(word, '<b>' + word + '</b>')
+    sent.push(one);
+  });
+
   var dom = $('#sentences');
-  var one = sentences[0];
-
-  // FIXME: need smart replace! A in smArt also change
-  // FIXME: may be not one occurence in sentence
-  var one = one.replace(word, '<b>' + word + '</b>')
-
-  var sent = [one];
   dom.empty();
   _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
 }
@@ -135,14 +139,22 @@ View.prototype.toggleSettings = function() {
   $('#settings_id').toggleClass("add-information-hidded");
 }
 
+View.prototype.togglePageInfo = function() {
+  $('#pageInfoID').toggleClass("add-information-hidded");
+}
 
-View.prototype._markIsKnowIt = function() {
+
+View.prototype.markIsKnowIt = function() {
   // думается лучше выполнить синхронно, хотя если здесь, то все равно
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
   
+  // FIXME: add callbacks of futures
   var point = this._makePoint();
   this.dal.markIsDone(point);
   gPlotView.onGetData();
+
+  // Get page
+  this.onGetWordPackage();
 }
 
 View.prototype._makePoint = function () {
