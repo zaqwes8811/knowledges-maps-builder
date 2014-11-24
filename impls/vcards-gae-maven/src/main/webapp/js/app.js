@@ -7,23 +7,34 @@ function UserException(message) {
 
 function MessagesQueue(space) {
   this.space = space;
-
   this.selector = '#log';
-  //this.space = $('#log');  // don't work
-  
+  //this.space = $('#log');  // don't work - not exist in time
 }
 
 MessagesQueue.prototype.push = function(message) {
-  $(this.selector).append(message);
+  message.appendTo(this.selector);
 }
 
-function Message(text) {
+function MessageBuilder() {
+
+}
+
+MessageBuilder.prototype.buildInfo = function(text) {
+  return new Message(text, 'info');
+}
+
+MessageBuilder.prototype.buildWarning = function(text) {
+  return new Message(text, 'warning');
+}
+
+// type - 'success', 'info', warning, danger
+function Message(text, type) {
   var self = this;
   // Now just indicate
   // http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm
   var button = null;
   var value = 
-    ['<div class="alert alert-success alert-dismissable">',
+    ['<div class="alert alert-' + type + ' alert-dismissable">',
        '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>',
        text,
     '</div>'].join('\n');
@@ -40,13 +51,15 @@ function Message(text) {
   self.r = r;
 }
 
-Message.prototype.get = function() {
-  return this.r;
+Message.prototype.appendTo = function(domParent) {
+  $(domParent).append(this.r);
+  //return this.r;
 }
 
 Message.prototype.selfDelete = function () {
   // delete with childs
-  alert('delete event');
+  // FIXME: delete all!!  http://api.jquery.com/remove/
+  $(this.r).remove();//empty();  // .parent()
 }
 
 // Class
@@ -236,6 +249,7 @@ var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
 var gMessagesQueue = new MessagesQueue();
+var gMessageBuilder = new MessageBuilder();
 
 $(function() {
   // Handler for .ready() called.
@@ -246,7 +260,11 @@ $(function() {
     gView.setCurrentTextFilename();
   })
 
-  var m = new Message('hello');
-  gMessagesQueue.push(m.get());
+  gMessagesQueue.push(
+    gMessageBuilder.buildWarning('<b>Warning:</b> Project under development. One user for everyone. \
+      All data can be removed in any time.'));
+
+  //gMessagesQueue.push(gMessageBuilder.buildInfo('done'));
+  //gMessagesQueue.push(gMessageBuilder.buildInfo('try again'));
 
 });
