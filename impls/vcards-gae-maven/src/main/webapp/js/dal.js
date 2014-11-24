@@ -1,3 +1,5 @@
+var dal = dal || {};
+
 // TODO: think try CoffeeScript
 // FIXME: 
 var protocols = {
@@ -27,6 +29,7 @@ var protocols = {
 };
 
 // Ajax wrapper
+//dal. 
 function DataAccessLayer() { }
 
 DataAccessLayer.prototype.onError = function (message) {
