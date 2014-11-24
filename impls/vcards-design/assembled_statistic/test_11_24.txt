@@ -27,3 +27,7 @@ Get gen info make синей
 
 Consistence:
 - композитная операция (несколько ajax-запросов) приводит к data races!!
+
+API:
+http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
+http://www.slideshare.net/linkedin/building-consistent-restful-apis-in-a-highperformance-environment
