@@ -10,7 +10,7 @@ import java.util.*;
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 @Entity
 public class NGramKind {
-	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 2;
+	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 3;
 	
 	// FIXME: inject it?
 	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
