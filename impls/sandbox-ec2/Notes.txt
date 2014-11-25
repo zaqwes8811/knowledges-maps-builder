@@ -1,7 +1,8 @@
 ﻿
-FIRST:Tomcat
+FIRST:Tomcat + Maven
 http://www.ibm.com/developerworks/library/os-eclipse-tomcat/
 http://www.coreservlets.com/Apache-Tomcat-Tutorial/eclipse.html#More-Info
+http://bigleap.co.in/corp/2013/06/running-maven-project-within-eclipse-on-tomcat/
 
 Elastic
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Java.sdlc.html
@@ -23,6 +24,11 @@ http://aws.amazon.com/ru/blogs/aws/dynamodb-transaction-library/
 http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html
 400kb!!!!
 http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html
++ maven + local
+http://www.yegor256.com/2014/05/01/dynamodb-local-maven-plugin.html
+http://dynamodb.jcabi.com/
 
 Amazon SimpleDB 
 http://docs.aws.amazon.com/AmazonSimpleDB/latest/GettingStartedGuide/Welcome.html
+
+
