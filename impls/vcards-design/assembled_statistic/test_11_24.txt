@@ -31,3 +31,6 @@ Consistence:
 API:
 http://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
 http://www.slideshare.net/linkedin/building-consistent-restful-apis-in-a-highperformance-environment
+
+Design RestFul or SOAP
+http://www.slideshare.net/cesare.pautasso/rest-vs-soap-making-the-right-architectural-decision-1st-international-soa-symposium-amsterdam-october-2008-presentation
