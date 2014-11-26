@@ -1,4 +1,4 @@
-package gae_store_space;
+package entities;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -8,6 +8,10 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.GlobalIO;
+import gae_store_space.GAEStoreAccessManager;
+import gae_store_space.GeneratorKind;
+import gae_store_space.PageKind;
+import gae_store_space.UserKind;
 import instances.AppInstance;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
@@ -134,7 +138,7 @@ public class UserFrontend {
 
           // can add key
           Key<PageKind> key = Key.create(page);
-          user.pageKeys.add(key);  // FIXME: а откатит ли? думаю нет
+          user.getPageKeys().add(key);  // FIXME: а откатит ли? думаю нет
 
           // need to save user!
           ofy().save().entity(user).now();
