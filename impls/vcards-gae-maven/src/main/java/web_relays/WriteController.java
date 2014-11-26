@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 @Controller
 @RequestMapping("/")
 public class WriteController {
-  private AppInstance app = AppInstance.getInstance();
+  private final AppInstance app = AppInstance.getInstance();
 
   @RequestMapping(value="/reset_storage", method = RequestMethod.GET, headers="Accept=application/json")
   public void doGet(HttpServletRequest request, HttpServletResponse response) {
@@ -42,20 +42,17 @@ public class WriteController {
   @RequestMapping(value="/mark-known-and-get-new-word", method = RequestMethod.PUT)
   public @ResponseBody
   WordDataValue markKnownAndGetNewWord(HttpServletRequest request) {
-    String value = request.getParameter("arg0");
-    if (value == null)
-      throw new IllegalArgumentException();
-
     try {
-      PathValue path = new ObjectMapper().readValue(value, PathValue.class);
-      String pageName = path.getPageName().get();
       BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
       PathValue p = new ObjectMapper().readValue(br.readLine(), PathValue.class);
+      String pageName = p.getPageName().get();
 
       {
         // FIXME: make atomic
-        app.disablePoint(p);
-        return app.getWordData(pageName);
+        synchronized (app) {
+          app.disablePoint(p);
+          return app.getWordData(pageName);
+        }
       }
     } catch (IOException e) {
       throw new IllegalStateException(e);

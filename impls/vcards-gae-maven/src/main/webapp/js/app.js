@@ -146,25 +146,21 @@ View.prototype.togglePageInfo = function() {
 
 
 View.prototype.markIsKnowIt = function() {
-  // думается лучше выполнить синхронно, хотя если здесь, то все равно
+  var self = this;
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-  
-  {
-    // FIXME: Danger! Data races!! На сервер запросы приходят в случайном порядке!
-    // FIXME: add callbacks of futures
-    // http://stackoverflow.com/questions/26625671/rest-without-put
-    var point = this.makePoint__();
 
-    this.dal.markIsDone(point);
-
-    gPlotView.onGetData();
-
-    // Get page
-    this.onGetWordPackage();
+  var errorHandler = function(data) { self.getWordError(data) };
+  var successHandler = function(data) { 
+    onGetData();  // тоже вариант
+    self.getWordSuccess(data); 
   }
+
+  var point = this.makePoint();
+  this.dal.markIsDone(point, successHandler, errorHandler);
+  
 }
 
-View.prototype.makePoint__ = function () {
+View.prototype.makePoint = function () {
   var page = this.getCurrentPageName();
   var gen = this.getCurrentGenName();
   var pointPos = this.currentWordData.getPos();
@@ -212,33 +208,26 @@ View.prototype.buildPage = function() {
   // Build page by settings
 }
 
+View.prototype.getWordSuccess = function(data) {
+  this.currentWordData.set(data);
+  this.drawWordValue(data.word);
+  this.redrawSentences(data.sentences, data.word);
+  this.drawNGramStatistic(data.importance + " from " + data.maxImportance);
+};
+
+View.prototype.getWordError = function(data) {
+  this.log.push(gMessageBuilder.buildError(data.statusText)); 
+};
+
 View.prototype.onGetWordPackage = function () { 
   var self = this;
 
   // Нужны еще данные - страница и имя генератора
-  var point = this.makePoint__();
+  var point = this.makePoint();
   
   // FIXME: blinking now - need to think
-  //var waitMessage = gMessageBuilder.buildInfo('Accepting new word. Wait please...');
-  //gMessagesQueue.push(waitMessage);
-
-  var errorHandler = function(data) {
-    //waitMessage.selfDelete();
-    var tmp = data.statusText;
-    self.log.push(gMessageBuilder.buildError(tmp)); 
-  };
-
-  var successHandler = function(data) {
-    //waitMessage.selfDelete();
-
-    var v = data;
-    self.currentWordData.set(v);
-    self.drawWordValue(v.word);
-    
-    self.redrawSentences(v.sentences, v.word);
-
-    self.drawNGramStatistic(v.importance + " from " + v.maxImportance);
-  };
+  var errorHandler = function(data) { self.getWordError(data) };
+  var successHandler = function(data) { self.getWordSuccess(data); }
 
   // делаем запрос
   this.dal.getWordPkgAsync(successHandler, errorHandler, point);
@@ -253,6 +242,11 @@ var gDataAccessLayer = new DataAccessLayer();
 
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
+
+function onGetData() {
+  var point = gView.makePoint();
+  gPlotView.onGetData(point);
+}
 
 
 $(function() {

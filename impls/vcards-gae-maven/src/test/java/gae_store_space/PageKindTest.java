@@ -58,26 +58,33 @@ public class PageKindTest {
     try (Closeable c = ObjectifyService.begin()) {
       String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 
-      AppInstance app = new AppInstance();
-      PageKind page = app.createOrReplacePage(AppInstance.defaultPageName, plainText);
-
-      //Key<PageKind> k = Key.create(page);
-      // FIXME: просто греем процессор - bad!
-      // ! Мы знаем точно что страница там есть! Это важно!
-      // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
-      int countTries = 100;  // random
-      while (page == null) {
-        try {
-          page = app.getPage(AppInstance.defaultPageName);
-        } catch (IllegalStateException ex) {
-
-        }
-        if (countTries < 0)
-          assertTrue(false);
-        countTries--;
+      {
+        AppInstance app = new AppInstance();
+        app.createOrReplacePage(AppInstance.defaultPageName, plainText);
       }
 
-      assertNotNull(page);
+      {
+        AppInstance app = new AppInstance();
+        // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
+        int countTries = 100;  // random
+        PageFrontend page = null;
+        while (page == null) {
+          try {
+            page = app.getPage(AppInstance.defaultPageName);
+          } catch (IllegalStateException ex) {
+
+          }
+          if (countTries < 0)
+            assertTrue(false);
+          countTries--;
+        }
+
+        assertNotNull(page);
+
+        // Queries
+        ArrayList<DistributionElement> distribution = page.getDistribution();
+        assertFalse(distribution.isEmpty());
+      }
     }
   }
 
@@ -90,24 +97,19 @@ public class PageKindTest {
 
       {
         AppInstance app = new AppInstance();
-        Optional<PageKind> page
-            = Optional.fromNullable(app.createOrReplacePage(AppInstance.defaultPageName, plainText));
+        PageKind page = app.createOrReplacePage(AppInstance.defaultPageName, plainText);
 
-        assertTrue(page.isPresent());
-
-
-        filter.add(Key.create(page.get()));
+        assertNotNull(page);
+        filter.add(Key.create(page));
       }
 
       {
-        Optional<PageKind> page = Optional.absent();
+        Optional<PageFrontend> page = Optional.absent();
         int countTries = 100;  // random
         while (!page.isPresent()) {
           try {
-            page = PageKind.restore(AppInstance.defaultPageName, filter);
-          } catch (IllegalStateException ex) {
-
-          }
+            page = PageFrontend.restore(AppInstance.defaultPageName, filter);
+          } catch (IllegalStateException ex) { }
           if (countTries < 0)
             assertTrue(false);
           countTries--;
@@ -126,55 +128,40 @@ public class PageKindTest {
     }
   }
 
-  @Deprecated
   @Test
-  public void testGetWordData() {
-    // Получаем все сразу, но это никчему. Можно передать подсписок, но это не то что хотелось бы.
-    // Хотелось бы выбирать по некоторому критерию.
-    // https://groups.google.com/forum/#!topic/objectify-appengine/scb3xNPFszE
-    // http://stackoverflow.com/questions/9867401/objectify-query-filter-by-list-in-entity-contains-search-parameter
-    // http://bighow.net/3869301-Objectify___how_to__Load_a_List_lt_Ref_lt___gt__gt__.html
-    //
-    // http://stackoverflow.com/questions/11924572/using-in-query-in-objectify
-    //
-    // https://www.mail-archive.com/google-appengine-java@googlegroups.com/msg09389.html
-    //
-    // TODO: troubles. Может добавить метод выкалывания точек?
-    // TODO: Может лучше сделать ссылкой-ключом?
-    // TODO: может лучше внешний, а данные получать из страницы. Но будут доп. обращ. к базе.
-    //   можно использовать кэши, но как быть с обновлением данных?
-  	//PageKind page = putPagesInStore();
+  public void testGetWordData() throws Exception {
+    try (Closeable c = ObjectifyService.begin()) {
+      String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 
-    // store_specific
-    //Integer pointPosition = page.getGenerator(TextPipeline.defaultGeneratorName).getPosition();
+      {
+        AppInstance app = new AppInstance();
+        app.createOrReplacePage(AppInstance.defaultPageName, plainText);
+      }
 
-    /*
-    // слово одно, но если страниц много, то получим для всех
-    List<WordKind> words = ofy().load()
-        .type(WordKind.class)
-        //.ancestor(page)  // don't work
-        //.parent(page)  // don't work
-        .filterKey("in", page.getWordKeys()).filter("pointPos =", pointPosition)
-        .list();
-    assertEquals(words.size(), 1);  // не прошли не свои страницы
-    
-    WordKind word = words.get(0);
-    
-    List<SentenceKind> content = word.getContendKinds();
+      {
+        AppInstance app = new AppInstance();
+        // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
+        int countTries = 100;  // random
+        PageFrontend page = null;
+        while (page == null) {
+          try {
+            page = app.getPage(AppInstance.defaultPageName);
+          } catch (IllegalStateException ex) {
 
-    for (SentenceKind e: content) {
-      String v = e.getSentence();
+          }
+          if (countTries < 0)
+            assertTrue(false);
+          countTries--;
+        }
 
-      // TODO: пока будет работать. Сейчас используется только стеммер
-      // http://stackoverflow.com/questions/2275004/in-java-how-to-check-if-a-string-contains-a-substring-ignoring-the-case
-      boolean in = v.toLowerCase().contains(word.getWord().toLowerCase());
-      assertTrue(in);
+        assertNotNull(page);
+
+        // Queries
+        app.getWordData(AppInstance.defaultPageName);
+
+        ArrayList<DistributionElement> distribution = page.getDistribution();
+        assertFalse(distribution.isEmpty());
+      }
     }
-    // запрещаем точку
-    */
-
-  	//PageKind page = putDefaultPagesInStore();
-  	//Optional<WordDataValue> v = page.getWordData(TextPipeline.defaultGeneratorName);
-  	//assertTrue(v.isPresent());
-  } 
+  }
 }
