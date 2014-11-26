@@ -67,7 +67,7 @@ public class UserKind {
 
   // FIXME: keys for pages!
   // FIXME: keys for filters!
-  Set<Key<PageKind>> pageKeys = new HashSet<>();
+  private Set<Key<PageKind>> pageKeys = new HashSet<>();
   public String getId() {
     return id;
   }
