@@ -12,6 +12,7 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Serialize;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
+import net.jcip.annotations.NotThreadSafe;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 import web_relays.protocols.PageSummaryValue;
@@ -27,9 +28,12 @@ import static gae_store_space.OfyService.ofy;
 // Must be full thread-safe
 //
 // Очень важен - попробую им гарантировать согласованность
+// FIXME: хранить только данные, так проще будет мигрировать
+//   http://habrahabr.ru/post/138461/
+@NotThreadSafe
 @Entity
 public class UserKind {
-  private static Logger log = Logger.getLogger(UserKind.class.getName());
+  //@State
   //private  // FIXME:
   public UserKind() { }
 
@@ -40,22 +44,44 @@ public class UserKind {
   @Id private String id;
   @Serialize private Set<String> pageNamesRegister;
   // FIXME: keys for pages!
-  Set<Key<PageKind>> pageKeys = new HashSet<>();
   // FIXME: keys for filters!
-
-  // FIXME: если кеш убрать работает много стабильнее
-  private static final Integer CACHE_SIZE = 5;
-  @Ignore
-  LoadingCache<String, Optional<PageKind>> pagesCache = null;
-
+  Set<Key<PageKind>> pageKeys = new HashSet<>();
   public String getId() {
     return id;
+  }
+
+  //@Logic
+  public static UserKind createOrRestoreById(final String id) {
+    UserKind r = ofy().transact(new Work<UserKind>() {
+      @Override
+      public UserKind run() {
+        UserKind th = ofy().load().type(UserKind.class).id(id).now();
+        if (th == null) {
+          th = new UserKind();
+          th.id = id;
+          ofy().save().entity(th);
+        }
+        return th;
+      }
+    });
+
+    r.checkPersisted();  // Это должно быть здесь
+    r.reset();
+    return r;
   }
 
   private void checkPersisted() {
     if (id == null)
       throw new IllegalStateException();
   }
+
+
+  // Frontend
+  private static Logger log = Logger.getLogger(UserKind.class.getName());
+  // FIXME: если кеш убрать работает много стабильнее
+  private static final Integer CACHE_SIZE = 5;
+  @Ignore
+  LoadingCache<String, Optional<PageKind>> pagesCache = null;
 
   private void reset() {
     if (!Optional.fromNullable(pageNamesRegister).isPresent())
@@ -77,25 +103,6 @@ public class UserKind {
   public void clear() {
     pageNamesRegister.clear();
     pageKeys.clear();  // FIXME: may be leak
-  }
-
-  public static UserKind createOrRestoreById(final String id) {
-    UserKind r = ofy().transact(new Work<UserKind>() {
-      @Override
-      public UserKind run() {
-        UserKind th = ofy().load().type(UserKind.class).id(id).now();
-        if (th == null) {
-          th = new UserKind();
-          th.id = id;
-          ofy().save().entity(th);
-        }
-        return th;
-      }
-    });
-
-    r.checkPersisted();  // Это должно быть здесь
-    r.reset();
-    return r;
   }
 
   private void checkPageName(String pageName) {
@@ -220,7 +227,7 @@ public class UserKind {
     while (true) {
       try {
         r = pagesCache.get(pageName);
-      //} catch (UncheckedExecutionException ex) {
+        //} catch (UncheckedExecutionException ex) {
 
       } catch (ExecutionException ex) { }
 
