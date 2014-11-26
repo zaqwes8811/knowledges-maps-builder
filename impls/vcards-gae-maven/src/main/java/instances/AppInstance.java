@@ -5,6 +5,7 @@ import gae_store_space.OfyService;
 
 import java.util.List;
 
+import gae_store_space.UserFrontend;
 import gae_store_space.UserKind;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
@@ -29,10 +30,10 @@ public class AppInstance {
 		return p.getWordData().get();
 	}
 
-	private synchronized UserKind getUser() {
+	private synchronized UserFrontend getUser() {
 		if (defaultUser == null) {
 			// http://stackoverflow.com/questions/7325579/java-lang-noclassdeffounderror-could-not-initialize-class-xxx
-			defaultUser = UserKind.createOrRestoreById(defaultUserId);
+			defaultUser = UserFrontend.createOrRestoreById(defaultUserId);
 		}
 		return defaultUser;
 	}
@@ -41,7 +42,7 @@ public class AppInstance {
 		return Holder.w;
 	}
 
-	UserKind defaultUser = null;
+	UserFrontend defaultUser = null;
 	
 	static public String getTestFileName() {
     return "./fakes/lor.txt";
