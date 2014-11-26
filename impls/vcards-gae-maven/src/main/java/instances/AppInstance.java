@@ -6,7 +6,7 @@ import gae_store_space.OfyService;
 
 import java.util.List;
 
-import entities.UserFrontend;
+import gae_store_space.UserFrontend;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;

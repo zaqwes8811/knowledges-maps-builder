@@ -32,18 +32,6 @@ import java.util.Set;
 
 import static gae_store_space.OfyService.ofy;
 
-class Tmp implements Predicate<NGramKind> {
-	@Override
-	public boolean evaluate(NGramKind o) {
-		return o.getNGram().equals(ngram);
-	}
-
-	String ngram;
-	public Tmp(String value) {
-		ngram = value;
-	}
-}
-
 @NotThreadSafe
 @Entity
 public class PageKind {
