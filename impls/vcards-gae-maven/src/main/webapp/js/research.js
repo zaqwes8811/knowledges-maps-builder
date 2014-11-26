@@ -6,12 +6,8 @@ function PlotView(dal) {
   this.previousPoint = null;
 }
 
-PlotView.prototype.onGetData = function () {
+PlotView.prototype.onGetData = function (point) {
   var self = this;
-
-  // тоже нужно сделать точку
-  var point = gView._makePoint();
-
   this.dal.getDistributionAsync(function(data) { 
     self.plot(data); 
   }, point);

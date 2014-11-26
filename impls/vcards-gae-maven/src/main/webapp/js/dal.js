@@ -36,14 +36,19 @@ DataAccessLayer.prototype.onError = function (message) {
   alert("error: " + message);
 }
 
-DataAccessLayer.prototype.markIsDone = function (point) {
+// FIXME: Danger! Data races!! На сервер запросы приходят в случайном порядке!
+// FIXME: add callbacks of futures
+// http://stackoverflow.com/questions/26625671/rest-without-put
+DataAccessLayer.prototype.markIsDone = function (point, successHandler, errorHandler) {
   var self = this;
-  var uri = '/know_it';
+  var uri = '/mark-known-and-get-new-word';
   $.ajax({
     type: "PUT",
     url: uri,
     data : JSON.stringify(point)
-  }).error(function(data) { self.onError(data); });
+  })
+  .success(successHandler)
+  .error(errorHandler);
 }
 
 DataAccessLayer.prototype.putPage = function (page, done, error) {
