@@ -8,6 +8,7 @@ import com.googlecode.objectify.Work;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
 import instances.AppInstance;
+import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 import pipeline.TextPipeline;
@@ -67,10 +68,8 @@ public class PageFrontend {
 
   private PageKind kind = null;
 
-  //@Ignore
-  GAEStoreAccessManager store = new GAEStoreAccessManager();
+  private GAEStoreAccessManager store = new GAEStoreAccessManager();
 
-  //@Ignore
   private static TextPipeline buildPipeline() {
     return new TextPipeline();
   }
@@ -96,7 +95,6 @@ public class PageFrontend {
       Optional<PageKind> page = PageKind.getPageKind(pageName, keys);
       Optional<PageFrontend> r = Optional.absent();
 
-      // Страница восстановлена
       if (page.isPresent()) {
         PageKind p = page.get();
         PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
@@ -128,7 +126,7 @@ public class PageFrontend {
     sentencesKinds = rhs.sentencesKinds;
   }
 
-  public List<String> getGenNames() {
+  private List<String> getGenNames() {
     ArrayList<String> r = new ArrayList<>();
     r.add(AppInstance.defaultGeneratorName);
     return r;
@@ -166,32 +164,6 @@ public class PageFrontend {
     return Pair.with(page.get(), g);
   }
 
-  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
-  //   Иначе будут гонки. А может быть есть транзации на GAE?
-  public static PageKind atomicCreatePage(String name, String text) {
-    Pair<PageKind, GeneratorKind> pair = process(name, text);
-    final PageKind page = pair.getValue0();
-    final GeneratorKind g = pair.getValue1();
-    {
-      // transaction boundary
-      Work<PageKind> work = new Work<PageKind>() {
-        public PageKind run() {
-          ofy().save().entity(g).now();
-
-          // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
-          page.setGenerator(g);
-
-          ofy().save().entity(page).now();
-          return page;
-        }
-      };
-      // FIXME: база данный в каком состоянии будет тут? согласованном?
-      // check here, but what can do?
-
-      return ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
-    }
-  }
-
   private Set<String> getNGramms(Integer boundary) {
     Integer end = sentencesKinds.size();
 
@@ -205,6 +177,19 @@ public class PageFrontend {
   }
 
   private Integer getUnigramIndex(String ngram) {
+    // FIXME: How hide it?
+    class Tmp implements Predicate<NGramKind> {
+      @Override
+      public boolean evaluate(NGramKind o) {
+        return o.getNGram().equals(ngram);
+      }
+
+      String ngram;
+      public Tmp(String value) {
+        ngram = value;
+      }
+    }
+
     Tmp p = new Tmp(ngram);
 
     Pair<NGramKind, Integer> k = OwnCollections.find(unigramKinds, p);

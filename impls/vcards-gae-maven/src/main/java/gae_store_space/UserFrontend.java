@@ -1,4 +1,4 @@
-package entities;
+package gae_store_space;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -8,7 +8,6 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.GlobalIO;
-import gae_store_space.*;
 import instances.AppInstance;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
@@ -21,12 +20,16 @@ import java.util.concurrent.ExecutionException;
 import static gae_store_space.OfyService.ofy;
 
 public class UserFrontend {
+  // State
   private static Logger log = Logger.getLogger(UserKind.class.getName());
-
-  UserFrontend() {}
-
+  // FIXME: если кеш убрать работает много стабильнее
+  private static final Integer CACHE_SIZE = 5;
+  @Ignore
+  private LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
   private UserKind kind = null;
 
+  // Actions
+  UserFrontend() {}
   private UserKind get() {
     return Optional.fromNullable(kind).get();
   }
@@ -38,13 +41,6 @@ public class UserFrontend {
     frontend.reset();
     return frontend;
   }
-
-  // Frontend
-
-  // FIXME: если кеш убрать работает много стабильнее
-  private static final Integer CACHE_SIZE = 5;
-  @Ignore
-  LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
 
   private void reset() {
     if (pagesCache == null)
@@ -133,7 +129,9 @@ public class UserFrontend {
 
           // can add key
           Key<PageKind> key = Key.create(page);
-          user.getPageKeys().add(key);  // FIXME: а откатит ли? думаю нет
+          // FIXME: а откатит ли? думаю нет
+          // FIXME: а если ключ уже был? Не может быть - создаем с нуля
+          user.getPageKeys().add(key);
 
           // need to save user!
           ofy().save().entity(user).now();
@@ -145,12 +143,14 @@ public class UserFrontend {
       // FIXME: база данный в каком состоянии будет тут? согласованном?
       // check here, but what can do?
       PageKind r = ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
+
       checkPagesInvariant();
 
       success = true;
       return r;
     } finally {
       if (!success) {
+        // FIXME:
         //pageKeys.remove()
         get().getPageNamesRegister().remove(pageName);
       }
