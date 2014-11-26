@@ -17,15 +17,23 @@
 package gae_store_space;
 
 
+import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
+import com.googlecode.objectify.VoidWork;
+import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import net.jcip.annotations.NotThreadSafe;
 import org.apache.commons.collections4.Predicate;
+import org.javatuples.Pair;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import static gae_store_space.OfyService.ofy;
 
 class Tmp implements Predicate<NGramKind> {
 	@Override
@@ -80,10 +88,60 @@ public class PageKind {
 		generator = Key.create(gen);
 	}
 
-	public PageKind(
-		String name, ArrayList<SentenceKind> items, ArrayList<NGramKind> words, String rawSource)
-	{
+	public PageKind(String name,String rawSource) {
 		this.name = name;
 		this.rawSource = rawSource;
+	}
+
+	private void checkConnectionPage(PageKind p) {
+		if (!p.getId().equals(id))
+			throw new IllegalArgumentException();
+	}
+
+	private void checkConnectionGenerator(GeneratorKind g) {
+		if (!g.getId().equals(generator.getId()))
+			throw new IllegalArgumentException();
+	}
+
+	public void atomicDelete(final PageKind p, final GeneratorKind g) {
+		checkConnectionPage(p);
+		checkConnectionGenerator(g);
+
+		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
+			public void vrun() {
+				ofy().delete().entity(g).now();
+				ofy().delete().entity(p).now();
+			}
+		});
+	}
+
+	public static Optional<PageKind> getPageKind(String pageName, Set<Key<PageKind>> keys) {
+		List<PageKind> pages =
+			ofy().transactionless().load().type(PageKind.class)
+				.filterKey("in", keys)
+				.filter("name = ", pageName)
+				.list();
+
+		if (pages.size() > 1) {
+			throw new StoreIsCorruptedException();
+		}
+
+		if (pages.size() == 0)
+			return Optional.absent();
+
+		return Optional.of(pages.get(0));
+	}
+
+	public void persist(final PageKind p, final GeneratorKind g) {
+		checkConnectionPage(p);
+		checkConnectionGenerator(g);
+
+		// execution on dal - можно транслировать ошибку нижнего слоя
+		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
+			public void vrun() {
+				ofy().save().entity(g).now();
+				ofy().save().entity(p).now();
+			}
+		});
 	}
 }
