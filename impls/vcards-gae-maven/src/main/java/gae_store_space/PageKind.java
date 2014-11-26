@@ -20,16 +20,13 @@ package gae_store_space;
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.VoidWork;
-import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import net.jcip.annotations.NotThreadSafe;
 import org.apache.commons.collections4.Predicate;
-import org.javatuples.Pair;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 

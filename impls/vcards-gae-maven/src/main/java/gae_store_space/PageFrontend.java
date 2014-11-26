@@ -4,9 +4,7 @@ package gae_store_space;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
-import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.Work;
-import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
 import instances.AppInstance;
@@ -36,6 +34,11 @@ public class PageFrontend {
   // Хранить строго как в исходном контексте
   //@Ignore
   private ArrayList<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
+
+  public void setGeneratorCache(GeneratorKind generatorCache) {
+    this.generatorCache = generatorCache;
+  }
+
   //@Ignore
   private GeneratorKind generatorCache;
 
@@ -47,8 +50,12 @@ public class PageFrontend {
   static final Integer STEP_WINDOW_SIZE = 8;
   //@Ignore
   private static final Double SWITCH_THRESHOLD = 0.2;
-  private PageKind get() {
-    return Optional.fromNullable(kind).get();
+
+  public PageKind get() {
+    if (kind == null)
+      throw new AssertionError();
+
+    return kind;
   }
 
   private void set(PageKind k) {
@@ -87,15 +94,23 @@ public class PageFrontend {
     checkNonEmpty(keys);
     try {
       Optional<PageKind> page = PageKind.getPageKind(pageName, keys);
-      Optional<PageFrontend> r = Optional.of(new PageFrontend());
+      Optional<PageFrontend> r = Optional.absent();
 
       // Страница восстановлена
       if (page.isPresent()) {
         PageKind p = page.get();
         PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
-        r.get().assign(tmp);
-        r.get().generatorCache = GeneratorKind.restoreById(p.generator.getId()).get();
+
+        PageFrontend frontend = new PageFrontend();
+
+        frontend.assign(tmp);
+        GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
+        frontend.setGeneratorCache(g);
+        frontend.set(page.get());
+
+        r = Optional.of(frontend);
       }
+
       return r;
     } catch (StoreIsCorruptedException ex) {
       throw new RuntimeException(ex.getCause());
@@ -103,7 +118,7 @@ public class PageFrontend {
   }
 
   private GeneratorKind getGeneratorCache() {
-    if (!Optional.fromNullable(generatorCache).isPresent())
+    if (generatorCache == null)
       throw new IllegalStateException();
     return generatorCache;
   }
@@ -149,6 +164,32 @@ public class PageFrontend {
 
     GeneratorKind g = GeneratorKind.create(d);
     return Pair.with(page.get(), g);
+  }
+
+  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
+  //   Иначе будут гонки. А может быть есть транзации на GAE?
+  public static PageKind atomicCreatePage(String name, String text) {
+    Pair<PageKind, GeneratorKind> pair = process(name, text);
+    final PageKind page = pair.getValue0();
+    final GeneratorKind g = pair.getValue1();
+    {
+      // transaction boundary
+      Work<PageKind> work = new Work<PageKind>() {
+        public PageKind run() {
+          ofy().save().entity(g).now();
+
+          // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
+          page.setGenerator(g);
+
+          ofy().save().entity(page).now();
+          return page;
+        }
+      };
+      // FIXME: база данный в каком состоянии будет тут? согласованном?
+      // check here, but what can do?
+
+      return ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
+    }
   }
 
   private Set<String> getNGramms(Integer boundary) {
@@ -233,7 +274,7 @@ public class PageFrontend {
   }
 
   private Integer getMaxImportancy() {
-    return this.generatorCache.getMaxImportance();
+    return getGeneratorCache().getMaxImportance();
   }
 
   public Optional<WordDataValue> getWordData() {

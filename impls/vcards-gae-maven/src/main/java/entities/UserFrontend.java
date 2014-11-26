@@ -8,10 +8,7 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.GlobalIO;
-import gae_store_space.GAEStoreAccessManager;
-import gae_store_space.GeneratorKind;
-import gae_store_space.PageKind;
-import gae_store_space.UserKind;
+import gae_store_space.*;
 import instances.AppInstance;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
@@ -47,18 +44,18 @@ public class UserFrontend {
   // FIXME: если кеш убрать работает много стабильнее
   private static final Integer CACHE_SIZE = 5;
   @Ignore
-  LoadingCache<String, Optional<PageKind>> pagesCache = null;
+  LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
 
   private void reset() {
     if (pagesCache == null)
       pagesCache = CacheBuilder.newBuilder()
         .maximumSize(CACHE_SIZE)
         .build(
-          new CacheLoader<String, Optional<PageKind>>() {
+          new CacheLoader<String, Optional<PageFrontend>>() {
             @Override
-            public Optional<PageKind> load(String key) {
+            public Optional<PageFrontend> load(String key) {
               //pageKeys;
-              return PageKind.restore(key, get().getPageKeys());
+              return PageFrontend.restore(key, get().getPageKeys());
             }
           });
   }
@@ -85,8 +82,6 @@ public class UserFrontend {
 
   private void checkPagesInvariant() {
     if (get().getPageNamesRegister().size() != get().getPageKeys().size()) {
-      log.info(get().getPageNamesRegister());
-      log.info(get().getPageKeys());
       throw new AssertionError();
     }
   }
@@ -103,12 +98,12 @@ public class UserFrontend {
     // check register
     if (isContain(pageName)) {
       // страница была сохранена до этого
-      PageKind page = getPage(pageName).get();
+      PageFrontend page = getPage(pageName).get();
       removePage(pageName);
       page.atomicDelete();
 
       // нужно как-то удалить ключ
-      checkTrue(get().getPageKeys().remove(Key.create(page)));
+      checkTrue(get().getPageKeys().remove(Key.create(page.get())));
 
       pagesCache.invalidate(pageName);
     }
@@ -120,7 +115,7 @@ public class UserFrontend {
 
     boolean success = false;
     try {
-      Pair<PageKind, GeneratorKind> pair = PageKind.process(pageName, text);
+      Pair<PageKind, GeneratorKind> pair = PageFrontend.process(pageName, text);
       final PageKind page = pair.getValue0();
       final GeneratorKind g = pair.getValue1();
       final UserKind user = get();
@@ -164,27 +159,27 @@ public class UserFrontend {
     }
   }
 
-  public synchronized PageKind getPagePure(String pageName) {
+  public synchronized PageFrontend getPagePure(String pageName) {
     // check register
-    Optional<PageKind> r = getPage(pageName);
+    Optional<PageFrontend> r = getPage(pageName);
     if (!r.isPresent())
       throw new IllegalArgumentException();
 
     return r.get();
   }
 
-  private void checkPageIsActive(Optional<PageKind> o) {
+  private void checkPageIsActive(Optional<PageFrontend> o) {
     if (!o.isPresent())
       throw new AssertionError();
   }
 
   // FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-  private Optional<PageKind> getPage(String pageName) {
+  private Optional<PageFrontend> getPage(String pageName) {
     if (!isContain(pageName)) {
       return Optional.absent();
     }
 
-    Optional<PageKind> r = Optional.absent();
+    Optional<PageFrontend> r = Optional.absent();
     // FIXME: danger but must work
     Integer countTries = 1000;
     while (true) {
