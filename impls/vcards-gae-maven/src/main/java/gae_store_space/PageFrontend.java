@@ -25,6 +25,7 @@ import java.util.Set;
 import static gae_store_space.OfyService.ofy;
 
 public class PageFrontend {
+  private PageFrontend() {}
   // Frontend
   private static Logger log = Logger.getLogger(UserKind.class.getName());
   // Формированием не управляет, но остальным управляет.
@@ -47,7 +48,14 @@ public class PageFrontend {
   //@Ignore
   private static final Double SWITCH_THRESHOLD = 0.2;
   private PageKind get() {
-    return kind;
+    return Optional.fromNullable(kind).get();
+  }
+
+  private void set(PageKind k) {
+    if (kind != null)
+      throw new AssertionError();
+
+    kind = k;
   }
 
   private PageKind kind = null;
@@ -77,31 +85,18 @@ public class PageFrontend {
   // DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
   public static Optional<PageFrontend> restore(String pageName, Set<Key<PageKind>> keys) {
     checkNonEmpty(keys);
-
     try {
-      List<PageKind> pages =
-        ofy().transactionless().load().type(PageKind.class)
-          .filterKey("in", keys)
-          .filter("name = ", pageName)
-          .list();
+      Optional<PageKind> page = PageKind.getPageKind(pageName, keys);
+      Optional<PageFrontend> r = Optional.of(new PageFrontend());
 
-      if (pages.size() > 1) {
-        // can delete by id
-        throw new StoreIsCorruptedException();
-      }
-
-      if (pages.size() == 0)
-        return Optional.absent();
-
-      Optional<PageKind> page = Optional.of(pages.get(0));
-
+      // Страница восстановлена
       if (page.isPresent()) {
         PageKind p = page.get();
-        PageKind tmp = buildPipeline().pass(p.name, p.rawSource);
-        p.assign(tmp);
-        p.generatorCache = GeneratorKind.restoreById(p.generator.getId()).get();
+        PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
+        r.get().assign(tmp);
+        r.get().generatorCache = GeneratorKind.restoreById(p.generator.getId()).get();
       }
-      return page;
+      return r;
     } catch (StoreIsCorruptedException ex) {
       throw new RuntimeException(ex.getCause());
     }
@@ -126,10 +121,12 @@ public class PageFrontend {
 
   // Это при создании с нуля
   public PageFrontend(
-    String name, ArrayList<SentenceKind> items, ArrayList<NGramKind> words, String rawSource)
+    String pageName, ArrayList<SentenceKind> items, ArrayList<NGramKind> words, String rawSource)
   {
     this.unigramKinds = words;
     this.sentencesKinds = items;
+
+    this.kind = new PageKind(pageName, rawSource);
   }
 
   public static Pair<PageKind, GeneratorKind> process(String name, String text) {
@@ -142,40 +139,16 @@ public class PageFrontend {
     // local work
     // FIXME: need processing but only for fill generator!
     TextPipeline processor = new TextPipeline();
-    final PageKind page = processor.pass(name, text);
+    PageFrontend page = processor.pass(name, text);
 
     // FIXME: how to know object size - need todo it!
-    if (page.getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+    if (page.get().getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
       throw new IllegalArgumentException();
 
-    GeneratorKind g = GeneratorKind.create(page.buildSourceImportanceDistribution());
-    return Pair.with(page, g);
-  }
+    ArrayList<DistributionElement> d = page.buildSourceImportanceDistribution();
 
-  // FIXME: вот эту операцию лучше синхронизировать. И пользователю высветить, что идет процесс
-  //   Иначе будут гонки. А может быть есть транзации на GAE?
-  public static PageKind atomicCreatePage(String name, String text) {
-    Pair<PageKind, GeneratorKind> pair = process(name, text);
-    final PageKind page = pair.getValue0();
-    final GeneratorKind g = pair.getValue1();
-    {
-      // transaction boundary
-      Work<PageKind> work = new Work<PageKind>() {
-        public PageKind run() {
-          ofy().save().entity(g).now();
-
-          // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
-          page.setGenerator(g);
-
-          ofy().save().entity(page).now();
-          return page;
-        }
-      };
-      // FIXME: база данный в каком состоянии будет тут? согласованном?
-      // check here, but what can do?
-
-      return ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
-    }
+    GeneratorKind g = GeneratorKind.create(d);
+    return Pair.with(page.get(), g);
   }
 
   private Set<String> getNGramms(Integer boundary) {
@@ -349,9 +322,7 @@ public class PageFrontend {
 
     // Читаем заново
     GeneratorKind g = getGeneratorCache();
-
     checkAccessIndex(pos);
-
     g.disablePoint(pos);
 
     // Если накопили все в пределах границы сделано, то нужно сдвинуть границу и перегрузить генератор.
@@ -359,24 +330,10 @@ public class PageFrontend {
   }
 
   private void persist() {
-    final PageKind p = get();
-
-    // execution on dal - можно транслировать ошибку нижнего слоя
-    ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
-      public void vrun() {
-        ofy().save().entity(p.getGeneratorCache()).now();
-        ofy().save().entity(p).now();
-      }
-    });
+    get().persist(get(), getGeneratorCache());
   }
 
   public void atomicDelete() {
-    final PageKind p = get();
-    ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
-      public void vrun() {
-        ofy().delete().entity(p.getGeneratorCache()).now();
-        ofy().delete().entity(p).now();
-      }
-    });
+    get().atomicDelete(get(), getGeneratorCache());
   }
 }
