@@ -34,15 +34,14 @@ public class ReadController {
 	public @ResponseBody
 	WordDataValue getterSingleWord(HttpServletRequest request, HttpServletResponse res) {
 		String value = request.getParameter("arg0");
-		try {
-			if (value == null)
-				throw new IllegalArgumentException();
+		if (value == null)
+			throw new IllegalArgumentException();
 
+		try {
 			PathValue path = new ObjectMapper().readValue(value, PathValue.class);
 
-			PageKind p = app.getPage(path.getPageName().get());
-
-			return p.getWordData().get();
+			String pageName = path.getPageName().get();
+			return app.getWordData(pageName);
 		} catch (IOException ex) {
 			res.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 		}

@@ -5,7 +5,9 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import web_relays.protocols.PathValue;
+import web_relays.protocols.WordDataValue;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,6 +34,29 @@ public class WriteController {
       PathValue p = new ObjectMapper().readValue(br.readLine(), PathValue.class);
 
       app.disablePoint(p);
+    } catch (IOException e) {
+      throw new IllegalStateException(e);
+    }
+  }
+
+  @RequestMapping(value="/mark-known-and-get-new-word", method = RequestMethod.PUT)
+  public @ResponseBody
+  WordDataValue markKnownAndGetNewWord(HttpServletRequest request) {
+    String value = request.getParameter("arg0");
+    if (value == null)
+      throw new IllegalArgumentException();
+
+    try {
+      PathValue path = new ObjectMapper().readValue(value, PathValue.class);
+      String pageName = path.getPageName().get();
+      BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+      PathValue p = new ObjectMapper().readValue(br.readLine(), PathValue.class);
+
+      {
+        // FIXME: make atomic
+        app.disablePoint(p);
+        return app.getWordData(pageName);
+      }
     } catch (IOException e) {
       throw new IllegalStateException(e);
     }

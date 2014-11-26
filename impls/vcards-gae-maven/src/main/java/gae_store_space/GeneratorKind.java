@@ -45,7 +45,7 @@ public class GeneratorKind
   @Id public Long id;
   @Index private String name;
   @Serialize private ArrayList<DistributionElement> distribution;  // порядок элементов важен
-  @Serialize private ArrayList<Integer> equalizeMask_;  // same size as distribution
+  //@Serialize private ArrayList<Integer> equalizeMask_;  // same size as distribution
 
   @Ignore private Optional<GeneratorAnyDistribution> generator = Optional.absent();
 

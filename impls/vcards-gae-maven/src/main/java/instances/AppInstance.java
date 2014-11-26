@@ -11,6 +11,7 @@ import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
 
 import com.google.common.collect.ImmutableList;
+import web_relays.protocols.WordDataValue;
 
 public class AppInstance {
 	public static final String defaultPageName = "DefaultPage";
@@ -21,8 +22,11 @@ public class AppInstance {
 		static final AppInstance w = new AppInstance();
 	}
 
-	public AppInstance() {
+	public AppInstance() {	}
 
+	public WordDataValue getWordData(String pageName) {
+		PageKind p = getPage(pageName);
+		return p.getWordData().get();
 	}
 
 	private synchronized UserKind getUser() {
