@@ -12,9 +12,14 @@ import java.util.ArrayList;
  */
 public interface PageFrontend {
   public ArrayList<Integer> getLengthsSentences();
+
   public ArrayList<DistributionElement> getImportanceDistribution();
+
   public ArrayList<DistributionElement> buildImportanceDistribution();
+
   public void disablePoint(PathValue p);
+  
   public void atomicDeleteRawPage();
+
   public Optional<WordDataValue> getWordData();
 }
