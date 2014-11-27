@@ -5,6 +5,7 @@ import com.googlecode.objectify.Key;
 import gae_store_space.GeneratorKind;
 import gae_store_space.PageKind;
 import gae_store_space.StoreIsCorruptedException;
+import pipeline.PipelineResult;
 import pipeline.TextPipeline;
 
 import java.util.Set;
@@ -34,11 +35,12 @@ public class PageBuilder {
       {
         if (rawPage.isPresent()) {
           PageKind p = rawPage.get();
-          PageWithBoundary tmp = buildPipeline().pass(p.getName(), p.getRawSource());
-
+          PipelineResult tmp = buildPipeline().pass(p.getName(), p.getRawSource());
           PageWithBoundary frontend = PageWithBoundary.buildEmpty();
 
-          frontend.assign(tmp);
+          frontend.assign(
+            new PageWithBoundary(tmp.PAGE_NAME, tmp.SOURCE, tmp.SENTENCES_KINDS, tmp.UNIGRAMS));
+
           GeneratorKind g = GeneratorKind.restoreById(p.getGeneratorId()).get();
           frontend.setGeneratorCache(g);
           frontend.set(p);

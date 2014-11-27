@@ -1,9 +1,5 @@
 package pipeline;
 
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-
-//@Entity
 public class ContentItem {
   // ctor/...
   private ContentItem() {}
@@ -11,9 +7,6 @@ public class ContentItem {
   public ContentItem(String sentence) {
     this.sentence = sentence;
   }
-
-  //@Id
-  //Long id;
 
   // value <= 500 symbols // TODO: 500 чего именно?
   String sentence;
