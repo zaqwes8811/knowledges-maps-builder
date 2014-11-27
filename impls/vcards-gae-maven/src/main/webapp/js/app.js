@@ -2,6 +2,9 @@
 //
 // http://callbackhell.com/
 // https://blog.domenic.me/youre-missing-the-point-of-promises/
+//
+// Promises
+//   http://www.html5rocks.com/en/tutorials/es6/promises/?redirect_from_locale=ru
 
 // Class
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
@@ -144,14 +147,15 @@ View.prototype.togglePageInfo = function() {
   $('#pageInfoID').toggleClass("add-information-hidded");
 }
 
-
 View.prototype.markIsKnowIt = function() {
-  var self = this;
+  // тоже вариант, Но разбить на части все равно нельзя 
+  //   - операция послед. для одного клиента, но если клиентов много, то гонки данных
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+  var self = this;
 
   var errorHandler = function(data) { self.getWordError(data) };
   var successHandler = function(data) { 
-    onGetData();  // тоже вариант
+    onGetData();  
     self.getWordSuccess(data); 
   }
 
@@ -262,3 +266,7 @@ $(function() {
     gMessageBuilder.buildWarning('<b>Warning:</b> Project under development. One user for everyone. \
       All data can be removed in any time.'));
 });
+
+function test() {
+
+}
