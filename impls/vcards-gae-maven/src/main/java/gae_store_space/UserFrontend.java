@@ -10,10 +10,12 @@ import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
+import org.apache.xmlbeans.impl.piccolo.xml.Piccolo;
 import org.javatuples.Pair;
 import pages.PageBuilder;
 import pages.PageFrontend;
 import pages.PageWithBoundary;
+import pipeline.PipelineResult;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 
@@ -97,7 +99,9 @@ public class UserFrontend {
       throw new IllegalArgumentException();
 
     // FIXME: need processing but only for fill generator
-    PageWithBoundary page = PageBuilder.buildPipeline().pass(name, text);
+    PipelineResult r = PageBuilder.buildPipeline().pass(name, text);
+    PageFrontend page =
+      new PageWithBoundary(r.PAGE_NAME, r.SOURCE, r.SENTENCES_KINDS, r.UNIGRAMS);
     PageKind raw = page.getRawPage();
 
     // FIXME: how to know object size - need todo it
