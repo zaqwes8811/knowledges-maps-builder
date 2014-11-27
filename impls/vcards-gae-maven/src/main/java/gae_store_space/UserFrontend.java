@@ -6,7 +6,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
-import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
@@ -54,7 +53,7 @@ public class UserFrontend {
             @Override
             public Optional<PageFrontend> load(String key) {
               //pageKeys;
-              return PageFrontend.restore(key, get().getPageKeys());
+              return PageBuilder.restore(key, get().getPageKeys());
             }
           });
   }
@@ -91,27 +90,20 @@ public class UserFrontend {
       throw new AssertionError();
   }
 
-
   public static Pair<PageKind, GeneratorKind> process(String name, String text) {
-    // check-then-act/read-modify-write
-    // FIXME: Looks like imposable without races.
-    // Doesn't help really
     if (text.length() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
       throw new IllegalArgumentException();
 
-    // local work
-    // FIXME: need processing but only for fill generator!
-    TextPipeline processor = new TextPipeline();
-    PageFrontend page = processor.pass(name, text);
+    // FIXME: need processing but only for fill generator
+    PageFrontend page = PageBuilder.buildPipeline().pass(name, text);
+    PageKind raw = page.getRawPage();
 
-    // FIXME: how to know object size - need todo it!
-    if (page.get().getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+    // FIXME: how to know object size - need todo it
+    if (raw.getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
       throw new IllegalArgumentException();
 
-    ArrayList<DistributionElement> d = page.buildSourceImportanceDistribution();
-
-    GeneratorKind g = GeneratorKind.create(d);
-    return Pair.with(page.get(), g);
+    ArrayList<DistributionElement> d = page.createImportanceDistribution();
+    return Pair.with(raw, GeneratorKind.create(d));
   }
 
   // скорее исследовательский метод
@@ -125,8 +117,10 @@ public class UserFrontend {
       removePage(pageName);
       page.atomicDelete();
 
+      PageKind rawPage = page.getRawPage();
+
       // нужно как-то удалить ключ
-      checkTrue(get().getPageKeys().remove(Key.create(page.get())));
+      checkTrue(get().getPageKeys().remove(Key.create(rawPage)));
 
       pagesCache.invalidate(pageName);
     }
