@@ -108,7 +108,7 @@ public class PageKindTest {
         int countTries = 100;  // random
         while (!page.isPresent()) {
           try {
-            page = PageFrontend.restore(AppInstance.defaultPageName, filter);
+            page = PageBuilder.restore(AppInstance.defaultPageName, filter);
           } catch (IllegalStateException ex) { }
           if (countTries < 0)
             assertTrue(false);

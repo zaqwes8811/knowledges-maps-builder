@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
-import instances.AppInstance;
 import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
@@ -17,58 +16,49 @@ import web_relays.protocols.WordDataValue;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 
 public class PageFrontend {
   private PageFrontend() {}
   // Frontend
-  private static Logger log = Logger.getLogger(UserKind.class.getName());
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  //@Ignore
   private ArrayList<NGramKind> unigramKinds = new ArrayList<>();
 
   // Хранить строго как в исходном контексте
-  //@Ignore
-  private ArrayList<SentenceKind> sentencesKinds = new ArrayList<SentenceKind>();
+  private ArrayList<SentenceKind> sentencesKinds = new ArrayList<>();
+  private GeneratorKind generatorCache;
+  private PageKind kind = null;
+
+  // по столько будем шагать
+  // По малу шагать плохо тем что распределение может снова стать равном.
+  // 10 * 20 = 200 слов, почти уникальных, лучше меньше
+  public static final Integer STEP_WINDOW_SIZE = 8;
+  private static final Double SWITCH_THRESHOLD = 0.2;
+
+  // Actions
+  private static Logger log = Logger.getLogger(UserKind.class.getName());
+
+  public static PageFrontend buildEmpty() {
+    return new PageFrontend();
+  }
 
   public void setGeneratorCache(GeneratorKind generatorCache) {
     this.generatorCache = generatorCache;
   }
 
-  //@Ignore
-  private GeneratorKind generatorCache;
-
-  // по столько будем шагать
-  // По малу шагать плохо тем что распределение может снова стать равном.
-  // 10 * 20 = 200 слов, почти уникальных, лучше меньше
-  //@Ignore
-  //private
-  static final Integer STEP_WINDOW_SIZE = 8;
-  //@Ignore
-  private static final Double SWITCH_THRESHOLD = 0.2;
-
-  public PageKind get() {
+  public PageKind getRawPage() {
     if (kind == null)
       throw new AssertionError();
 
     return kind;
   }
 
-  private void set(PageKind k) {
+  public void set(PageKind k) {
     if (kind != null)
       throw new AssertionError();
 
     kind = k;
-  }
-
-  private PageKind kind = null;
-
-  private GAEStoreAccessManager store = new GAEStoreAccessManager();
-
-  private static TextPipeline buildPipeline() {
-    return new TextPipeline();
   }
 
   public ArrayList<Integer> getLengthsSentences() {
@@ -78,59 +68,15 @@ public class PageFrontend {
     return r;
   }
 
-  private static void checkNonEmpty(Set<Key<PageKind>> keys) {
-    if (keys.isEmpty())
-      throw new AssertionError();
-  }
-
-  // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
-  // Да кажется можно, просто не ясно зачем
-  // DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
-  public static Optional<PageFrontend> restore(String pageName, Set<Key<PageKind>> keys) {
-    checkNonEmpty(keys);
-    Optional<PageFrontend> r = Optional.absent();
-    try {
-      // Load page data from store
-      Optional<PageKind> rawPage = PageKind.getPageKind(pageName, keys);
-
-      // Conditional processing raw page
-      if (true) {
-        if (rawPage.isPresent()) {
-          PageKind p = rawPage.get();
-          PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
-
-          PageFrontend frontend = new PageFrontend();
-
-          frontend.assign(tmp);
-          GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
-          frontend.setGeneratorCache(g);
-          frontend.set(p);
-
-          r = Optional.of(frontend);
-        }
-      }
-
-      return r;
-    } catch (StoreIsCorruptedException ex) {
-      throw new RuntimeException(ex.getCause());
-    }
-  }
-
   private GeneratorKind getGeneratorCache() {
     if (generatorCache == null)
       throw new IllegalStateException();
     return generatorCache;
   }
 
-  private void assign(PageFrontend rhs) {
+  public void assign(PageFrontend rhs) {
     unigramKinds = rhs.unigramKinds;
     sentencesKinds = rhs.sentencesKinds;
-  }
-
-  private List<String> getGenNames() {
-    ArrayList<String> r = new ArrayList<>();
-    r.add(AppInstance.defaultGeneratorName);
-    return r;
   }
 
   // Это при создании с нуля
@@ -151,7 +97,7 @@ public class PageFrontend {
     // [.., end)
     ArrayList<SentenceKind> kinds = new ArrayList<>(sentencesKinds.subList(0, end));
 
-    return buildPipeline().getNGrams(kinds);
+    return PageBuilder.buildPipeline().getNGrams(kinds);
   }
 
   private Integer getUnigramIndex(String ngram) {
@@ -201,7 +147,7 @@ public class PageFrontend {
   }
 
   // About: Возвращать пустое распределение
-  public ArrayList<DistributionElement> buildSourceImportanceDistribution() {
+  public ArrayList<DistributionElement> createImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);
@@ -221,7 +167,7 @@ public class PageFrontend {
     checkDistributionInvariant(d);
 
     // Get word befor boundary
-    Set<String> ngramms = getNGramms(get().boundaryPtr);
+    Set<String> ngramms = getNGramms(getRawPage().boundaryPtr);
 
     for (String ngram: ngramms) {
       Integer index = getUnigramIndex(ngram);
@@ -271,9 +217,9 @@ public class PageFrontend {
   }
 
   private void IncBoundary() {
-    get().boundaryPtr += STEP_WINDOW_SIZE;
-    if (get().boundaryPtr > sentencesKinds.size())
-      get().boundaryPtr = sentencesKinds.size();
+    getRawPage().boundaryPtr += STEP_WINDOW_SIZE;
+    if (getRawPage().boundaryPtr > sentencesKinds.size())
+      getRawPage().boundaryPtr = sentencesKinds.size();
   }
 
   private Integer getAmongCurrentActivePoints() {
@@ -281,7 +227,7 @@ public class PageFrontend {
   }
 
   private void setVolume(Integer val) {
-    get().referenceVolume = val;
+    getRawPage().referenceVolume = val;
   }
 
   private void setDistribution(ArrayList<DistributionElement> d) {
@@ -292,17 +238,17 @@ public class PageFrontend {
   private void moveBoundary() {
     Integer currentVolume = getAmongCurrentActivePoints();
 
-    if (currentVolume < SWITCH_THRESHOLD * get().referenceVolume) {
+    if (currentVolume < SWITCH_THRESHOLD * getRawPage().referenceVolume) {
       // FIXME: no exception safe
       // перезагружаем генератор
-      Integer currBoundary = get().boundaryPtr;
+      Integer currBoundary = getRawPage().boundaryPtr;
       IncBoundary();
 
       if (getAmongCurrentActivePoints() < 2)
         IncBoundary();  // пока один раз
 
       // подошли к концу
-      if (!currBoundary.equals(get().boundaryPtr)) {
+      if (!currBoundary.equals(getRawPage().boundaryPtr)) {
         ArrayList<DistributionElement> d = getDistribution();
         d = applyBoundary(d);
 
@@ -315,7 +261,7 @@ public class PageFrontend {
   public void disablePoint(PathValue p) {
     Integer pos = p.pointPos;
     // лучше здесь
-    if (get().referenceVolume.equals(0)) {
+    if (getRawPage().referenceVolume.equals(0)) {
       if (getAmongCurrentActivePoints() < 2)
         throw new IllegalStateException();
 
@@ -334,10 +280,10 @@ public class PageFrontend {
   }
 
   private void persist() {
-    get().persist(get(), getGeneratorCache());
+    getRawPage().persist(getRawPage(), getGeneratorCache());
   }
 
   public void atomicDelete() {
-    get().atomicDelete(get(), getGeneratorCache());
+    getRawPage().atomicDelete(getRawPage(), getGeneratorCache());
   }
 }
