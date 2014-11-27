@@ -1,6 +1,6 @@
 package pipeline.mapreduce;
 
-import gae_store_space.SentenceKind;
+import pipeline.ContentItem;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ public class SourceMapper implements CounterMapper {
   }
    
   @Override
-  public void map(List<SentenceKind> contentItemKinds) {
+  public void map(List<ContentItem> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
-    for (SentenceKind item : contentItemKinds) {
+    for (ContentItem item : contentItemKinds) {
       List<String> tokens = tokenizer.getWords(item.getSentence());
       for (String token: tokens) {
         Word w = Word.build(token);

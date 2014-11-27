@@ -3,6 +3,7 @@
     <words>
       <w>importances</w>
       <w>stemmer</w>
+      <w>unigram</w>
     </words>
   </dictionary>
 </component>
