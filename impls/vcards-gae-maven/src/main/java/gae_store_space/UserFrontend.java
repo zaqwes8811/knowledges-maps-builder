@@ -12,6 +12,8 @@ import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
+import pipeline.TextPipeline;
+import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 
 import java.util.ArrayList;
@@ -57,6 +59,7 @@ public class UserFrontend {
           });
   }
 
+  // Удаляет только ключи, базу не трогает
   public void clear() {
     get().getPageNamesRegister().clear();
     get().getPageKeys().clear();  // FIXME: may be leak
@@ -88,6 +91,29 @@ public class UserFrontend {
       throw new AssertionError();
   }
 
+
+  public static Pair<PageKind, GeneratorKind> process(String name, String text) {
+    // check-then-act/read-modify-write
+    // FIXME: Looks like imposable without races.
+    // Doesn't help really
+    if (text.length() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+      throw new IllegalArgumentException();
+
+    // local work
+    // FIXME: need processing but only for fill generator!
+    TextPipeline processor = new TextPipeline();
+    PageFrontend page = processor.pass(name, text);
+
+    // FIXME: how to know object size - need todo it!
+    if (page.get().getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
+      throw new IllegalArgumentException();
+
+    ArrayList<DistributionElement> d = page.buildSourceImportanceDistribution();
+
+    GeneratorKind g = GeneratorKind.create(d);
+    return Pair.with(page.get(), g);
+  }
+
   // скорее исследовательский метод
   // https://code.google.com/p/objectify-appengine/wiki/Transactions
   // FIXME: вот тут важна транзактивность
@@ -112,7 +138,7 @@ public class UserFrontend {
 
     boolean success = false;
     try {
-      Pair<PageKind, GeneratorKind> pair = PageFrontend.process(pageName, text);
+      Pair<PageKind, GeneratorKind> pair = process(pageName, text);
       final PageKind page = pair.getValue0();
       final GeneratorKind g = pair.getValue1();
       final UserKind user = get();
