@@ -8,6 +8,7 @@ import gae_store_space.*;
 import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
+import pipeline.ContentItem;
 import pipeline.Unigram;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PathValue;
@@ -25,7 +26,7 @@ public class PageWithBoundary implements PageFrontend {
   private ArrayList<Unigram> unigramKinds = new ArrayList<>();
 
   // Хранить строго как в исходном контексте
-  private ArrayList<SentenceKind> sentencesKinds = new ArrayList<>();
+  private ArrayList<ContentItem> sentencesKinds = new ArrayList<>();
   private GeneratorKind generatorCache;
   private PageKind kind = null;
 
@@ -64,7 +65,7 @@ public class PageWithBoundary implements PageFrontend {
   @Override
   public ArrayList<Integer> getLengthsSentences() {
     ArrayList<Integer> r = new ArrayList<>();
-    for (SentenceKind k : sentencesKinds)
+    for (ContentItem k : sentencesKinds)
       r.add(k.getCountWords());
     return r;
   }
@@ -84,7 +85,7 @@ public class PageWithBoundary implements PageFrontend {
   public PageWithBoundary(
     String pageName,
     String rawSource,
-    ArrayList<SentenceKind> items,
+    ArrayList<ContentItem> items,
     ArrayList<Unigram> words)
   {
     this.unigramKinds = words;
@@ -99,7 +100,7 @@ public class PageWithBoundary implements PageFrontend {
       end = boundary;
 
     // [.., end)
-    ArrayList<SentenceKind> kinds = new ArrayList<>(sentencesKinds.subList(0, end));
+    ArrayList<ContentItem> kinds = new ArrayList<>(sentencesKinds.subList(0, end));
 
     return PageBuilder.buildPipeline().getNGrams(kinds);
   }
@@ -109,7 +110,7 @@ public class PageWithBoundary implements PageFrontend {
     class Tmp implements Predicate<Unigram> {
       @Override
       public boolean evaluate(Unigram o) {
-        return o.getNGram().equals(ngram);
+        return o.getValue().equals(ngram);
       }
 
       String ngram;
@@ -180,7 +181,7 @@ public class PageWithBoundary implements PageFrontend {
       checkAccessIndex(index);
 
       // Проверка! Тестов как таковых нет, так что пока так
-      if (!unigramKinds.get(index).getNGram().equals(ngram))
+      if (!unigramKinds.get(index).getValue().equals(ngram))
         throw new AssertException();
 
       d.get(index).markInBoundary();
@@ -198,11 +199,11 @@ public class PageWithBoundary implements PageFrontend {
 
     Integer pointPosition = go.getPosition();
     Unigram ngram =  getNGram(pointPosition);
-    String value = ngram.pack();
-    ImmutableList<SentenceKind> sentenceKinds = ngram.getContendKinds();
+    String value = ngram.getValue();
+    ImmutableList<ContentItem> contentItems = ngram.getContendKinds();
 
     ArrayList<String> content = new ArrayList<>();
-    for (SentenceKind k: sentenceKinds)
+    for (ContentItem k: contentItems)
       content.add(k.getSentence());
 
     WordDataValue r = new WordDataValue(value, content, pointPosition);

@@ -1,6 +1,6 @@
 package pipeline.estimators;
 
-import gae_store_space.SentenceKind;
+import pipeline.ContentItem;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,11 +14,11 @@ public class AdvImportanceProcessor implements ImportanceProcessor {
 	private static Integer MAX_FOR_LOW_FREQ = 5;
 	private static Integer PROCESS_THRESH = 1;
 	
-	private Integer getLocalMaxSentenceLength(ImmutableSet<SentenceKind> s) {
-		SentenceKind elem = Collections.max(s, 
-				new Comparator<SentenceKind>() {
+	private Integer getLocalMaxSentenceLength(ImmutableSet<ContentItem> s) {
+		ContentItem elem = Collections.max(s,
+				new Comparator<ContentItem>() {
 					@Override
-					public int compare(SentenceKind o1, SentenceKind o2) {
+					public int compare(ContentItem o1, ContentItem o2) {
 						return Integer.compare(o1.getCountWords(), o2.getCountWords());
 					}
 				});
@@ -26,7 +26,7 @@ public class AdvImportanceProcessor implements ImportanceProcessor {
 	}
 	
 	@Override
-	public Integer process(Integer freq, Set<SentenceKind> s) {
+	public Integer process(Integer freq, Set<ContentItem> s) {
 		Integer r = freq * SCALE_FACTOR;
 		
 		// if (f < 5)

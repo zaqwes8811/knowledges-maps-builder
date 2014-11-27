@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f57a5e66-7f67-4c0e-8efd-d94d1b6e3301" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\NGramKind.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/instances/AppInstance.java" afterPath="$PROJECT_DIR$/src/main/java/instances/AppInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/OwnCollections.java" afterPath="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/OwnCollections.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/PageKindTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web_relays/ResearchController.java" afterPath="$PROJECT_DIR$/src/main/java/web_relays/ResearchController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pipeline/PipelineResult.java" />
+      <change type="DELETED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\SentenceKind.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/estimators/AdvImportanceProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/estimators/AdvImportanceProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/CarTest.java" afterPath="$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/CarTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/CounterMapper.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/CounterMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/CounterMapperImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/CounterMapperImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/estimators/ImportanceProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/estimators/ImportanceProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java" afterPath="$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/estimators/SimpleImportanceProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/estimators/SimpleImportanceProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/SourceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/mapreduce/SourceMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/statistics_collectors/StatisticCollector.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/statistics_collectors/StatisticCollector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gae_store_space/UserFrontend.java" afterPath="$PROJECT_DIR$/src/main/java/gae_store_space/UserFrontend.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\PageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/pages/PageBuilder.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\PageFrontend.java" afterPath="$PROJECT_DIR$/src/main/java/pages/PageFrontend.java" />
-      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\PageFrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/zaqwes.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/zaqwes.xml" />
+      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\gae_store_space\SentenceKind.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/ContentItem.java" />
+      <change type="MOVED" beforePath="D:\work\apps\smart-vocabulary-cards\impls\vcards-gae-maven\src\main\java\pipeline\UniGram.java" afterPath="$PROJECT_DIR$/src/main/java/pipeline/Unigram.java" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +46,8 @@
       <file leaf-file-name="PageKind.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2142">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2142">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#1853#1854#0" expanded="true" />
                 <element signature="e#1882#1883#0" expanded="true" />
@@ -62,72 +66,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageWithBoundary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="4964">
-              <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserFrontend.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/UserFrontend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4182">
-              <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Unigram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/Unigram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordKindTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4240363" vertical-offset="0" max-vertical-offset="459">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/PageBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1071">
-              <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#375#376#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TextPipeline.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="2125">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2363">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentItem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/ContentItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3824131" vertical-offset="51" max-vertical-offset="595">
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PipelineResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/PipelineResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,11 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/Person.java" />
-        <option value="$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/OfyService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/relationships/PersonRelTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/third_party_probes/tika/UseTikaTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/third_party_probes/tika/TikaPdfTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cross_cuttings_layer/GlobalIO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/third_party_probes/Person.java" />
@@ -189,13 +150,18 @@
         <option value="$PROJECT_DIR$/src/main/java/gae_store_space/PageWithBoundary.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/PageBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java" />
         <option value="$PROJECT_DIR$/src/main/java/gae_store_space/NGramKind.java" />
         <option value="$PROJECT_DIR$/src/main/java/pipeline/NGramKind.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/pipeline/UniGram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pipeline/Unigram.java" />
         <option value="$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pipeline/Unigram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pipeline/PipelineResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gae_store_space/SentenceKind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pipeline/SentenceKind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pipeline/ContentItem.java" />
       </list>
     </option>
   </component>
@@ -313,58 +279,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae_store_space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -403,32 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcard-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vcards-gae-maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,7 +400,7 @@
       <recent name="gae_store_space" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.test">
+  <component name="RunManager" selected="Maven.run">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -868,11 +756,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25086805" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39248705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21632124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33031088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33031088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18836805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -912,27 +800,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/third_party_probes/tika/TikaPdfTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="867">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/third_party_probes/gae/ofy/relationships/PersonRelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.286" vertical-offset="282" max-vertical-offset="782">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/estimators/SimpleImportanceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/estimators/AdvImportanceProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
@@ -1234,9 +1101,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4240363" vertical-offset="0" max-vertical-offset="459">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/PageBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1071">
+        <state vertical-scroll-proportion="1.0408163" vertical-offset="357" max-vertical-offset="1071">
           <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1246,10 +1121,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3457" max-vertical-offset="4964">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3016627" vertical-offset="944" max-vertical-offset="1649">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/UserFrontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4387947" vertical-offset="154" max-vertical-offset="4182">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/Unigram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.53571427" vertical-offset="595" max-vertical-offset="1428">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/PageKind.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2142">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2142">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#1853#1854#0" expanded="true" />
             <element signature="e#1882#1883#0" expanded="true" />
@@ -1267,48 +1179,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/PipelineResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/TextPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="2125">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2380">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gae_store_space/UserFrontend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/ContentItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1435" max-vertical-offset="4182">
-          <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/PageWithBoundary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2363" max-vertical-offset="4964">
-          <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pipeline/Unigram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/gae_store_space/WordKindTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4240363" vertical-offset="0" max-vertical-offset="459">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.3824131" vertical-offset="51" max-vertical-offset="595">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding />
         </state>
       </provider>

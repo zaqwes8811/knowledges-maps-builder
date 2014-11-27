@@ -1,10 +1,8 @@
 package pipeline.statistics_collectors;
 
-import gae_store_space.SentenceKind;
+import pipeline.ContentItem;
 
 import java.util.ArrayList;
-
-import org.javatuples.Pair;
 
 import pipeline.mapreduce.CountReducer;
 import pipeline.mapreduce.CountReducerImpl;
@@ -18,11 +16,11 @@ import com.google.common.collect.Multimap;
 // Не очень хорошо - трудно будет параметризовать
 // Это не обязательно будет через MapReduce
 public class StatisticCollector {
-	public Multimap<String, SentenceKind> buildNGramHisto(ArrayList<SentenceKind> items) {
+	public Multimap<String, ContentItem> buildNGramHisto(ArrayList<ContentItem> items) {
   	
-		Multimap<String, SentenceKind> histo = HashMultimap.create();
+		Multimap<String, ContentItem> histo = HashMultimap.create();
 
-    CountReducer<SentenceKind> reducer = new CountReducerImpl<SentenceKind>(histo);
+    CountReducer<ContentItem> reducer = new CountReducerImpl<ContentItem>(histo);
     
     CounterMapper mapper = new CounterMapperImpl(reducer);
 
@@ -31,7 +29,7 @@ public class StatisticCollector {
     return histo;
   }
 	
-	public Multimap<String, String> buildStemSourceHisto(ArrayList<SentenceKind> items) {
+	public Multimap<String, String> buildStemSourceHisto(ArrayList<ContentItem> items) {
 		Multimap<String, String> sources = HashMultimap.create();
 		CountReducer<String> r = new CountReducerImpl<String>(sources);
 		CounterMapper m = new SourceMapper(r);

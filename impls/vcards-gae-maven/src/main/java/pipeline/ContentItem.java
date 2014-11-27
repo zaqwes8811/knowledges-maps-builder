@@ -1,19 +1,19 @@
-package gae_store_space;
+package pipeline;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
-@Entity
-public class SentenceKind {
+//@Entity
+public class ContentItem {
   // ctor/...
-  private SentenceKind() {}
+  private ContentItem() {}
   
-  public SentenceKind(String sentence) {
+  public ContentItem(String sentence) {
     this.sentence = sentence;
   }
 
-  @Id
-  Long id;
+  //@Id
+  //Long id;
 
   // value <= 500 symbols // TODO: 500 чего именно?
   String sentence;
