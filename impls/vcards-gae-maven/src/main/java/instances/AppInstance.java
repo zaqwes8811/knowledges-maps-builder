@@ -1,12 +1,10 @@
 package instances;
 
-import gae_store_space.PageFrontendImpl;
-import gae_store_space.PageKind;
-import gae_store_space.OfyService;
+import gae_store_space.*;
 
 import java.util.List;
 
-import gae_store_space.UserFrontend;
+import pages.PageFrontend;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 import web_relays.protocols.PathValue;
@@ -26,7 +24,7 @@ public class AppInstance {
 	public AppInstance() {	}
 
 	public WordDataValue getWordData(String pageName) {
-		PageFrontendImpl p = getPage(pageName);
+		PageFrontend p = getPage(pageName);
 		return p.getWordData().get();
 	}
 
@@ -55,7 +53,7 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-		PageFrontendImpl page = getUser().getPagePure(path.getPageName().get());
+		PageFrontend page = getUser().getPagePure(path.getPageName().get());
    	return ImmutableList.copyOf(page.getImportanceDistribution());
   }
 
@@ -69,7 +67,7 @@ public class AppInstance {
 		return getUser().replacePage(pageName, text);
 	}
 
-	public PageFrontendImpl getPage(String pageName) {
+	public PageFrontend getPage(String pageName) {
 		return getUser().getPagePure(pageName);
 	}
 
@@ -80,7 +78,7 @@ public class AppInstance {
 	}
 
 	public void disablePoint(PathValue p) {
-		PageFrontendImpl page = getUser().getPagePure(p.getPageName().get());
+		PageFrontend page = getUser().getPagePure(p.getPageName().get());
 		page.disablePoint(p);		
 	} 
 }

@@ -1,8 +1,7 @@
 package pipeline;
 
 import com.google.common.collect.HashMultimap;
-import gae_store_space.NGramKind;
-import gae_store_space.PageFrontendImpl;
+import pages.PageWithBoundary;
 import gae_store_space.SentenceKind;
 
 import java.util.*;
@@ -36,23 +35,23 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<NGramKind> sortByImportance(ArrayList<NGramKind> kinds) {
-  	Collections.sort(kinds, NGramKind.createImportanceComparator());
+  private ArrayList<Unigram> sortByImportance(ArrayList<Unigram> kinds) {
+  	Collections.sort(kinds, Unigram.createImportanceComparator());
     Collections.reverse(kinds);
     return kinds;
   }
 
-  private ArrayList<NGramKind> unpackHisto(
+  private ArrayList<Unigram> unpackHisto(
   		Multimap<String, SentenceKind> histo,
   		Multimap<String, String> sourcesHist) {
-  	ArrayList<NGramKind> kinds = new ArrayList<NGramKind>();
+  	ArrayList<Unigram> kinds = new ArrayList<Unigram>();
   	
     for (String stem: histo.keySet()) {
     	Set<String> s = new HashSet<String>(sourcesHist.get(stem));
     	
       Collection<SentenceKind> content = histo.get(stem);
       int rawFrequency = content.size();
-      NGramKind kind = NGramKind.create(stem, content, rawFrequency, s);
+      Unigram kind = Unigram.create(stem, content, rawFrequency);
       
       kinds.add(kind);
     }
@@ -68,8 +67,8 @@ public class TextPipeline {
     return lowWord;
   }
   
-  private ArrayList<NGramKind> calcImportances(ArrayList<NGramKind> kinds) {
-  	for (NGramKind k: kinds)
+  private ArrayList<Unigram> calcImportances(ArrayList<Unigram> kinds) {
+  	for (Unigram k: kinds)
   		k.calcImportance();
 
     // FIXME: for stems set sum frequency - word remain but change frequency
@@ -78,7 +77,7 @@ public class TextPipeline {
 
     {
       Integer position = 0;
-      for (NGramKind k: kinds) {
+      for (Unigram k: kinds) {
         String stem = getStem(k.getNGram());
         statistic.put(stem, Triplet.with(k.getNGram(), k.getImportance(), position));
         position++;
@@ -111,7 +110,7 @@ public class TextPipeline {
   // Now no store operations
   // Performance:
   //   text size around 1 Mb calc near 16 sec. - 4/2 1.6 GHz
-  public PageFrontendImpl pass(String pageName, String rawText) {
+  public PageWithBoundary pass(String pageName, String rawText) {
   	String pureText = removeFormatting(rawText);
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
@@ -124,13 +123,14 @@ public class TextPipeline {
     Multimap<String, SentenceKind> histo = statisticCollector.buildNGramHisto(sentencesKinds);
     Multimap<String, String> sources = statisticCollector.buildStemSourceHisto(sentencesKinds);
 
-    ArrayList<NGramKind> nGramKinds = unpackHisto(histo, sources);
+    ArrayList<Unigram> unigrams = unpackHisto(histo, sources);
     
-    nGramKinds = calcImportances(nGramKinds);
+    unigrams = calcImportances(unigrams);
 
     // Sort words by frequency
-    nGramKinds = sortByImportance(nGramKinds);
+    unigrams = sortByImportance(unigrams);
 
-    return new PageFrontendImpl(pageName, sentencesKinds, nGramKinds, rawText);
+    //Quartet<>
+    return new PageWithBoundary(pageName, rawText, sentencesKinds, unigrams);
   }
 }

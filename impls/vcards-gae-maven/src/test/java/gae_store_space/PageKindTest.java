@@ -14,6 +14,8 @@ import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import pages.PageBuilder;
+import pages.PageFrontend;
 import pipeline.math.DistributionElement;
 
 import java.io.IOException;
@@ -66,7 +68,7 @@ public class PageKindTest {
         AppInstance app = new AppInstance();
         // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
         int countTries = 100;  // random
-        PageFrontendImpl page = null;
+        PageFrontend page = null;
         while (page == null) {
           try {
             page = app.getPage(AppInstance.defaultPageName);
@@ -103,7 +105,7 @@ public class PageKindTest {
       }
 
       {
-        Optional<PageFrontendImpl> page = Optional.absent();
+        Optional<PageFrontend> page = Optional.absent();
         int countTries = 100;  // random
         while (!page.isPresent()) {
           try {
@@ -141,7 +143,7 @@ public class PageKindTest {
         AppInstance app = new AppInstance();
         // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
         int countTries = 100;  // random
-        PageFrontendImpl page = null;
+        PageFrontend page = null;
         while (page == null) {
           try {
             page = app.getPage(AppInstance.defaultPageName);

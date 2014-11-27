@@ -25,6 +25,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import net.jcip.annotations.NotThreadSafe;
+import pages.PageWithBoundary;
 
 import java.util.List;
 import java.util.Set;
@@ -39,19 +40,26 @@ public class PageKind {
   public @Id Long id;  // FIXME: make as string - UserId.pageName
 	// FIXME: можно еще доступ сереализовать
 
-  @Index String name;
-  String rawSource;  // для обновленной версии
+  @Index
+	private String name;
+	private String rawSource;  // для обновленной версии
 
   // Теперь страница полностью управляет временем жизни
   // удобен разве что для запроса
   // Можно загружать по нему при загрузке страницы, а потом пользоваться кешем
   @Load  
-  //private
-	Key<GeneratorKind> generator;
-	//private
-	Integer boundaryPtr = PageFrontendImpl.STEP_WINDOW_SIZE;  // указатель на текущyю границу
-	//private
-	Integer referenceVolume = 0;
+  private	Key<GeneratorKind> generator;
+	private Integer boundaryPtr = PageWithBoundary.STEP_WINDOW_SIZE;  // указатель на текущyю границу
+	private Integer referenceVolume = 0;
+
+	// Actions
+	public Integer getReferenceVolume() {
+		return referenceVolume;
+	}
+
+	public void setReferenceVolume(Integer referenceVolume) {
+		this.referenceVolume = referenceVolume;
+	}
 	// Assumption: raw source >> sum(other fields)
 	public long getPageByteSize() {
 		// it's trouble
@@ -59,6 +67,22 @@ public class PageKind {
 		// http://stackoverflow.com/questions/52353/in-java-what-is-the-best-way-to-determine-the-size-of-an-object
 		//
 		return rawSource.length();
+	}
+
+	public Integer getBoundaryPtr() {
+		return boundaryPtr;
+	}
+
+	public void setBoundaryPtr(Integer boundaryPtr) {
+		this.boundaryPtr = boundaryPtr;
+	}
+
+	public String getRawSource() {
+		return rawSource;
+	}
+
+	public Long getGeneratorId() {
+		return generator.getId();
 	}
 
 	public Long getId() { return id; }
