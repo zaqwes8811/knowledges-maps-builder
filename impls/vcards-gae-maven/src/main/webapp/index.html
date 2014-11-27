@@ -6,6 +6,7 @@
   <title>Smart vocabulary card</title>
 
   <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/3rdparty/excanvas.min.js"></script><![endif]-->
+  <script type="text/javascript" src="3rdparty/js/q-1.1.1/q.js"></script>
   <script type="text/javascript" src="3rdparty/jquery.js"></script>
   <script type="text/javascript" src="3rdparty/jquery.flot.js"></script>
   <script type="text/javascript" src="3rdparty/jquery.tinyscrollbar.min.js"></script>
@@ -62,7 +63,7 @@
 
     <!-- -->
     <select id="availabeFilters"></select>
-    <button class="btn btn-warning">Apply</button>
+    <button class="btn btn-warning" onclick="test()">Apply</button>
     <hr/>
 
     <input type="button" class="btn btn-primary" value="Get page info" onclick="onGetData()"/>

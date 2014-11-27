@@ -9,6 +9,7 @@ import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Ignore;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
+import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 import web_relays.protocols.PageSummaryValue;
@@ -21,12 +22,12 @@ import static gae_store_space.OfyService.ofy;
 
 public class UserFrontend {
   // State
-  private static Logger log = Logger.getLogger(UserKind.class.getName());
-  // FIXME: если кеш убрать работает много стабильнее
   private static final Integer CACHE_SIZE = 5;
-  @Ignore
-  private LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
-  private UserKind kind = null;
+  private @GuardedBy("this") LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
+  private @GuardedBy("this") UserKind kind = null;
+
+  // Services
+  private static Logger log = Logger.getLogger(UserKind.class.getName());
 
   // Actions
   UserFrontend() {}
