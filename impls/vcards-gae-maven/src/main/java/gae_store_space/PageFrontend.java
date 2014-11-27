@@ -4,7 +4,6 @@ package gae_store_space;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.Key;
-import com.googlecode.objectify.Work;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
 import instances.AppInstance;
@@ -20,8 +19,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
-import static gae_store_space.OfyService.ofy;
 
 public class PageFrontend {
   private PageFrontend() {}
@@ -91,22 +88,26 @@ public class PageFrontend {
   // DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
   public static Optional<PageFrontend> restore(String pageName, Set<Key<PageKind>> keys) {
     checkNonEmpty(keys);
+    Optional<PageFrontend> r = Optional.absent();
     try {
-      Optional<PageKind> page = PageKind.getPageKind(pageName, keys);
-      Optional<PageFrontend> r = Optional.absent();
+      // Load page data from store
+      Optional<PageKind> rawPage = PageKind.getPageKind(pageName, keys);
 
-      if (page.isPresent()) {
-        PageKind p = page.get();
-        PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
+      // Conditional processing raw page
+      if (true) {
+        if (rawPage.isPresent()) {
+          PageKind p = rawPage.get();
+          PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
 
-        PageFrontend frontend = new PageFrontend();
+          PageFrontend frontend = new PageFrontend();
 
-        frontend.assign(tmp);
-        GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
-        frontend.setGeneratorCache(g);
-        frontend.set(page.get());
+          frontend.assign(tmp);
+          GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
+          frontend.setGeneratorCache(g);
+          frontend.set(p);
 
-        r = Optional.of(frontend);
+          r = Optional.of(frontend);
+        }
       }
 
       return r;
@@ -138,30 +139,7 @@ public class PageFrontend {
   {
     this.unigramKinds = words;
     this.sentencesKinds = items;
-
     this.kind = new PageKind(pageName, rawSource);
-  }
-
-  public static Pair<PageKind, GeneratorKind> process(String name, String text) {
-    // check-then-act/read-modify-write
-    // FIXME: Looks like imposable without races.
-    // Doesn't help really
-    if (text.length() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
-      throw new IllegalArgumentException();
-
-    // local work
-    // FIXME: need processing but only for fill generator!
-    TextPipeline processor = new TextPipeline();
-    PageFrontend page = processor.pass(name, text);
-
-    // FIXME: how to know object size - need todo it!
-    if (page.get().getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
-      throw new IllegalArgumentException();
-
-    ArrayList<DistributionElement> d = page.buildSourceImportanceDistribution();
-
-    GeneratorKind g = GeneratorKind.create(d);
-    return Pair.with(page.get(), g);
   }
 
   private Set<String> getNGramms(Integer boundary) {
@@ -223,7 +201,7 @@ public class PageFrontend {
   }
 
   // About: Возвращать пустое распределение
-  private ArrayList<DistributionElement> buildSourceImportanceDistribution() {
+  public ArrayList<DistributionElement> buildSourceImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
     Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
     Collections.reverse(unigramKinds);

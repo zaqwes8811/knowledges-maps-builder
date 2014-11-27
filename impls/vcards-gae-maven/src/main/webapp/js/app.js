@@ -268,5 +268,18 @@ $(function() {
 });
 
 function test() {
+  function square(x) {
+    return x * x;
+  }
+  function plus1(x) {
+      return x + 1;
+  }
+
+  Q.fcall(function () {return 4;})
+  .then(plus1)
+  .then(square)
+  .then(function(z) {
+      alert("square of (value+1) = " + z);
+  });
 
 }
