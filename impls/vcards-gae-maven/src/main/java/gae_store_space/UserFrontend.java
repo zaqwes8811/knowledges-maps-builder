@@ -11,6 +11,9 @@ import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
+import pages.PageBuilder;
+import pages.PageFrontend;
+import pages.PageWithBoundary;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 
@@ -23,7 +26,7 @@ import static gae_store_space.OfyService.ofy;
 public class UserFrontend {
   // State
   private static final Integer CACHE_SIZE = 5;
-  private @GuardedBy("this") LoadingCache<String, Optional<PageFrontendImpl>> pagesCache = null;
+  private @GuardedBy("this") LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
   private @GuardedBy("this") UserKind kind = null;
 
   // Services
@@ -48,9 +51,9 @@ public class UserFrontend {
       pagesCache = CacheBuilder.newBuilder()
         .maximumSize(CACHE_SIZE)
         .build(
-          new CacheLoader<String, Optional<PageFrontendImpl>>() {
+          new CacheLoader<String, Optional<PageFrontend>>() {
             @Override
-            public Optional<PageFrontendImpl> load(String key) {
+            public Optional<PageFrontend> load(String key) {
               //pageKeys;
               return PageBuilder.restore(key, getRaw().getPageKeys());
             }
@@ -94,7 +97,7 @@ public class UserFrontend {
       throw new IllegalArgumentException();
 
     // FIXME: need processing but only for fill generator
-    PageFrontendImpl page = PageBuilder.buildPipeline().pass(name, text);
+    PageWithBoundary page = PageBuilder.buildPipeline().pass(name, text);
     PageKind raw = page.getRawPage();
 
     // FIXME: how to know object size - need todo it
@@ -112,7 +115,7 @@ public class UserFrontend {
     // check register
     if (isContain(pageName)) {
       // страница была сохранена до этого
-      PageFrontendImpl page = getPage(pageName).get();
+      PageFrontend page = getPage(pageName).get();
       removePage(pageName);
       page.atomicDeleteRawPage();
 
@@ -179,27 +182,27 @@ public class UserFrontend {
     }
   }
 
-  public synchronized PageFrontendImpl getPagePure(String pageName) {
+  public synchronized PageFrontend getPagePure(String pageName) {
     // check register
-    Optional<PageFrontendImpl> r = getPage(pageName);
+    Optional<PageFrontend> r = getPage(pageName);
     if (!r.isPresent())
       throw new IllegalArgumentException();
 
     return r.get();
   }
 
-  private void checkPageIsActive(Optional<PageFrontendImpl> o) {
+  private void checkPageIsActive(Optional<PageFrontend> o) {
     if (!o.isPresent())
       throw new AssertionError();
   }
 
   // FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-  private Optional<PageFrontendImpl> getPage(String pageName) {
+  private Optional<PageFrontend> getPage(String pageName) {
     if (!isContain(pageName)) {
       return Optional.absent();
     }
 
-    Optional<PageFrontendImpl> r = Optional.absent();
+    Optional<PageFrontend> r = Optional.absent();
     // FIXME: danger but must work
     Integer countTries = 1000;
     while (true) {

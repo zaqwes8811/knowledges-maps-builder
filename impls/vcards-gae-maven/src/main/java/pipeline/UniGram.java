@@ -1,26 +1,19 @@
-package gae_store_space;
+package pipeline;
 
 import com.google.common.collect.ImmutableList;
-import com.googlecode.objectify.annotation.Entity;
+import gae_store_space.SentenceKind;
 import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
 
 import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
-@Entity
-public class NGramKind {
+// Хранить их точно не буду - съест лимиты
+public class Unigram {
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 3;
 	
 	// FIXME: inject it?
 	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
-
-  @Deprecated
-	private final Set<String> sources;
-	
-	//@Deprecated
-  //@Id
-  //Long id;
 
   // TODO: может хранится стем или пара-тройка слов.
   private String nGram;
@@ -58,12 +51,11 @@ public class NGramKind {
     importance = value;
   }
 
-  public static NGramKind create(
+  public static Unigram create(
   		String ngramValue, 
   		Collection<SentenceKind> sentences, 
-  		int rawFrequency,
-  		Set<String> s) {
-    return new NGramKind(ngramValue, sentences, rawFrequency, s);
+  		int rawFrequency) {
+    return new Unigram(ngramValue, sentences, rawFrequency);
   }
 
   public ImmutableList<SentenceKind> getContendKinds() {
@@ -87,33 +79,30 @@ public class NGramKind {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  public NGramKind(
-  		String nGram, 
-  		Collection<SentenceKind> sentences,
-  		int rawFrequency,
-  		Set<String> sources) {
+  public Unigram(
+    String nGram,
+    Collection<SentenceKind> sentences,
+    int rawFrequency) {
     this.nGram = nGram;
     
     // Частоту берем из списка ссылок.
     this.rawFrequency = rawFrequency;
-    
-    this.sources = sources;
 
     // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
     this.sentences.addAll(sentences);
   }
 
-  private static class ImportanceComparator implements Comparator<NGramKind> {
+  private static class ImportanceComparator implements Comparator<Unigram> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(NGramKind o1, NGramKind o2) {
+    public int compare(Unigram o1, Unigram o2) {
       return o1.getImportance().compareTo(o2.getImportance());
     }
   }
 
-  public static Comparator<NGramKind> createImportanceComparator() {
+  public static Comparator<Unigram> createImportanceComparator() {
     return new ImportanceComparator();
   }
 }

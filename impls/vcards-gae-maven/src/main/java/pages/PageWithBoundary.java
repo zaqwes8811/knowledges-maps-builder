@@ -1,13 +1,14 @@
-package gae_store_space;
-
+package pages;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import cross_cuttings_layer.AssertException;
 import cross_cuttings_layer.OwnCollections;
+import gae_store_space.*;
 import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
+import pipeline.Unigram;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PathValue;
 import web_relays.protocols.WordDataValue;
@@ -16,12 +17,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Set;
 
-public class PageFrontendImpl implements PageFrontend {
-  private PageFrontendImpl() {}
+public class PageWithBoundary implements PageFrontend {
+  private PageWithBoundary() {}
   // Frontend
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  private ArrayList<NGramKind> unigramKinds = new ArrayList<>();
+  private ArrayList<Unigram> unigramKinds = new ArrayList<>();
 
   // Хранить строго как в исходном контексте
   private ArrayList<SentenceKind> sentencesKinds = new ArrayList<>();
@@ -37,14 +38,15 @@ public class PageFrontendImpl implements PageFrontend {
   // Actions
   private static Logger log = Logger.getLogger(UserKind.class.getName());
 
-  public static PageFrontendImpl buildEmpty() {
-    return new PageFrontendImpl();
+  public static PageWithBoundary buildEmpty() {
+    return new PageWithBoundary();
   }
 
   public void setGeneratorCache(GeneratorKind generatorCache) {
     this.generatorCache = generatorCache;
   }
 
+  @Override
   public PageKind getRawPage() {
     if (kind == null)
       throw new AssertionError();
@@ -73,17 +75,17 @@ public class PageFrontendImpl implements PageFrontend {
     return generatorCache;
   }
 
-  public void assign(PageFrontendImpl rhs) {
+  public void assign(PageWithBoundary rhs) {
     unigramKinds = rhs.unigramKinds;
     sentencesKinds = rhs.sentencesKinds;
   }
 
   // Это при создании с нуля
-  public PageFrontendImpl(
+  public PageWithBoundary(
     String pageName,
+    String rawSource,
     ArrayList<SentenceKind> items,
-    ArrayList<NGramKind> words,
-    String rawSource)
+    ArrayList<Unigram> words)
   {
     this.unigramKinds = words;
     this.sentencesKinds = items;
@@ -104,9 +106,9 @@ public class PageFrontendImpl implements PageFrontend {
 
   private Integer getUnigramIndex(String ngram) {
     // FIXME: How hide it?
-    class Tmp implements Predicate<NGramKind> {
+    class Tmp implements Predicate<Unigram> {
       @Override
-      public boolean evaluate(NGramKind o) {
+      public boolean evaluate(Unigram o) {
         return o.getNGram().equals(ngram);
       }
 
@@ -118,7 +120,7 @@ public class PageFrontendImpl implements PageFrontend {
 
     Tmp p = new Tmp(ngram);
 
-    Pair<NGramKind, Integer> k = OwnCollections.find(unigramKinds, p);
+    Pair<Unigram, Integer> k = OwnCollections.find(unigramKinds, p);
     if (k.getValue1().equals(-1))
       throw new IllegalStateException();
 
@@ -153,12 +155,12 @@ public class PageFrontendImpl implements PageFrontend {
   @Override
   public ArrayList<DistributionElement> buildImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(unigramKinds, NGramKind.createImportanceComparator());
+    Collections.sort(unigramKinds, Unigram.createImportanceComparator());
     Collections.reverse(unigramKinds);
 
     // Form result
     ArrayList<DistributionElement> r = new ArrayList<>();
-    for (NGramKind word : unigramKinds)
+    for (Unigram word : unigramKinds)
       r.add(new DistributionElement(word.getImportance()));
 
     r = applyBoundary(r);
@@ -171,7 +173,7 @@ public class PageFrontendImpl implements PageFrontend {
     checkDistributionInvariant(d);
 
     // Get word befor boundary
-    Set<String> ngramms = getNGramms(getRawPage().boundaryPtr);
+    Set<String> ngramms = getNGramms(getRawPage().getBoundaryPtr());
 
     for (String ngram: ngramms) {
       Integer index = getUnigramIndex(ngram);
@@ -195,9 +197,9 @@ public class PageFrontendImpl implements PageFrontend {
     GeneratorKind go = getGeneratorCache();  // FIXME: нужно нормально обработать
 
     Integer pointPosition = go.getPosition();
-    NGramKind ngramKind =  getNGram(pointPosition);
-    String value = ngramKind.pack();
-    ImmutableList<SentenceKind> sentenceKinds = ngramKind.getContendKinds();
+    Unigram ngram =  getNGram(pointPosition);
+    String value = ngram.pack();
+    ImmutableList<SentenceKind> sentenceKinds = ngram.getContendKinds();
 
     ArrayList<String> content = new ArrayList<>();
     for (SentenceKind k: sentenceKinds)
@@ -206,7 +208,7 @@ public class PageFrontendImpl implements PageFrontend {
     WordDataValue r = new WordDataValue(value, content, pointPosition);
 
     //
-    r.setImportance(ngramKind.getImportance());
+    r.setImportance(ngram.getImportance());
     // max import
     r.setMaxImportance(getMaxImportancy());
 
@@ -216,15 +218,15 @@ public class PageFrontendImpl implements PageFrontend {
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
-  private NGramKind getNGram(Integer pos) {
+  private Unigram getNGram(Integer pos) {
     checkAccessIndex(pos);
     return unigramKinds.get(pos);
   }
 
   private void IncBoundary() {
-    getRawPage().boundaryPtr += STEP_WINDOW_SIZE;
-    if (getRawPage().boundaryPtr > sentencesKinds.size())
-      getRawPage().boundaryPtr = sentencesKinds.size();
+    getRawPage().setBoundaryPtr(STEP_WINDOW_SIZE + getRawPage().getBoundaryPtr());
+    if (getRawPage().getBoundaryPtr() > sentencesKinds.size())
+      getRawPage().setBoundaryPtr(sentencesKinds.size());
   }
 
   private Integer getAmongCurrentActivePoints() {
@@ -232,7 +234,7 @@ public class PageFrontendImpl implements PageFrontend {
   }
 
   private void setVolume(Integer val) {
-    getRawPage().referenceVolume = val;
+    getRawPage().setReferenceVolume(val);
   }
 
   private void setDistribution(ArrayList<DistributionElement> d) {
@@ -243,17 +245,17 @@ public class PageFrontendImpl implements PageFrontend {
   private void moveBoundary() {
     Integer currentVolume = getAmongCurrentActivePoints();
 
-    if (currentVolume < SWITCH_THRESHOLD * getRawPage().referenceVolume) {
+    if (currentVolume < SWITCH_THRESHOLD * getRawPage().getReferenceVolume()) {
       // FIXME: no exception safe
       // перезагружаем генератор
-      Integer currBoundary = getRawPage().boundaryPtr;
+      Integer currBoundary = getRawPage().getBoundaryPtr();
       IncBoundary();
 
       if (getAmongCurrentActivePoints() < 2)
         IncBoundary();  // пока один раз
 
       // подошли к концу
-      if (!currBoundary.equals(getRawPage().boundaryPtr)) {
+      if (!currBoundary.equals(getRawPage().getBoundaryPtr())) {
         ArrayList<DistributionElement> d = getImportanceDistribution();
         d = applyBoundary(d);
 
@@ -267,7 +269,7 @@ public class PageFrontendImpl implements PageFrontend {
   public void disablePoint(PathValue p) {
     Integer pos = p.pointPos;
     // лучше здесь
-    if (getRawPage().referenceVolume.equals(0)) {
+    if (getRawPage().getReferenceVolume().equals(0)) {
       if (getAmongCurrentActivePoints() < 2)
         throw new IllegalStateException();
 

@@ -1,7 +1,10 @@
-package gae_store_space;
+package pages;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
+import gae_store_space.GeneratorKind;
+import gae_store_space.PageKind;
+import gae_store_space.StoreIsCorruptedException;
 import pipeline.TextPipeline;
 
 import java.util.Set;
@@ -19,9 +22,9 @@ public class PageBuilder {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   // DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
-  public static Optional<PageFrontendImpl> restore(String pageName, Set<Key<PageKind>> keys) {
+  public static Optional<PageFrontend> restore(String pageName, Set<Key<PageKind>> keys) {
     checkNonEmpty(keys);
-    Optional<PageFrontendImpl> r = Optional.absent();
+    Optional<PageFrontend> r = Optional.absent();
     try {
       // Load page data from store
       Optional<PageKind> rawPage = PageKind.getPageKind(pageName, keys);
@@ -31,16 +34,17 @@ public class PageBuilder {
       {
         if (rawPage.isPresent()) {
           PageKind p = rawPage.get();
-          PageFrontendImpl tmp = buildPipeline().pass(p.name, p.rawSource);
+          PageWithBoundary tmp = buildPipeline().pass(p.getName(), p.getRawSource());
 
-          PageFrontendImpl frontend = PageFrontendImpl.buildEmpty();
+          PageWithBoundary frontend = PageWithBoundary.buildEmpty();
 
           frontend.assign(tmp);
-          GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
+          GeneratorKind g = GeneratorKind.restoreById(p.getGeneratorId()).get();
           frontend.setGeneratorCache(g);
           frontend.set(p);
 
-          r = Optional.of(frontend);
+          PageFrontend t = frontend;  // FIXME: polym. doesn't work
+          r = Optional.of(t);
         }
       }
 

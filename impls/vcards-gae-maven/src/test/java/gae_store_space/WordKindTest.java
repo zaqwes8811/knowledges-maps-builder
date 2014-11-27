@@ -3,9 +3,9 @@ package gae_store_space;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import org.junit.Test;
+import pipeline.Unigram;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Created by zaqwes on 5/12/14.
@@ -17,10 +17,10 @@ public class WordKindTest {
       SentenceKind kind = new SentenceKind("fake");
       ArrayList<SentenceKind> s = new ArrayList<SentenceKind>();
       s.add(kind);
-      NGramKind o1 = NGramKind.create("hello", s, 1, null);
-      NGramKind o2 = NGramKind.create("dfasdf", s, 1, null);
+      Unigram o1 = Unigram.create("hello", s, 1);
+      Unigram o2 = Unigram.create("dfasdf", s, 1);
 
-      assert 0 == NGramKind.createImportanceComparator().compare(o1, o2);
+      assert 0 == Unigram.createImportanceComparator().compare(o1, o2);
     }
   }
 }
