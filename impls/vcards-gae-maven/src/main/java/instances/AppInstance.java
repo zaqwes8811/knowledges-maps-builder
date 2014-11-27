@@ -1,6 +1,6 @@
 package instances;
 
-import gae_store_space.PageFrontend;
+import gae_store_space.PageFrontendImpl;
 import gae_store_space.PageKind;
 import gae_store_space.OfyService;
 
@@ -26,7 +26,7 @@ public class AppInstance {
 	public AppInstance() {	}
 
 	public WordDataValue getWordData(String pageName) {
-		PageFrontend p = getPage(pageName);
+		PageFrontendImpl p = getPage(pageName);
 		return p.getWordData().get();
 	}
 
@@ -55,8 +55,8 @@ public class AppInstance {
 		// Срабатывает только один раз
 		// TODO: Генератора реально может и не быть, или не найтись. Тогда лучше вернуть не ноль, а что-то другое 
 		// FIXME: страница тоже может быть не найдена
-		PageFrontend page = getUser().getPagePure(path.getPageName().get());
-   	return ImmutableList.copyOf(page.getDistribution());
+		PageFrontendImpl page = getUser().getPagePure(path.getPageName().get());
+   	return ImmutableList.copyOf(page.getImportanceDistribution());
   }
 
 	public void eraseStore() {
@@ -69,7 +69,7 @@ public class AppInstance {
 		return getUser().replacePage(pageName, text);
 	}
 
-	public PageFrontend getPage(String pageName) {
+	public PageFrontendImpl getPage(String pageName) {
 		return getUser().getPagePure(pageName);
 	}
 
@@ -80,7 +80,7 @@ public class AppInstance {
 	}
 
 	public void disablePoint(PathValue p) {
-		PageFrontend page = getUser().getPagePure(p.getPageName().get());
+		PageFrontendImpl page = getUser().getPagePure(p.getPageName().get());
 		page.disablePoint(p);		
 	} 
 }

@@ -19,9 +19,9 @@ public class PageBuilder {
   // Транзакцией сделать нельзя - поиск это сразу больше 5 EG
   // Да кажется можно, просто не ясно зачем
   // DANGER: если не удача всегда! кидается исключение, это не дает загрузиться кешу!
-  public static Optional<PageFrontend> restore(String pageName, Set<Key<PageKind>> keys) {
+  public static Optional<PageFrontendImpl> restore(String pageName, Set<Key<PageKind>> keys) {
     checkNonEmpty(keys);
-    Optional<PageFrontend> r = Optional.absent();
+    Optional<PageFrontendImpl> r = Optional.absent();
     try {
       // Load page data from store
       Optional<PageKind> rawPage = PageKind.getPageKind(pageName, keys);
@@ -31,9 +31,9 @@ public class PageBuilder {
       {
         if (rawPage.isPresent()) {
           PageKind p = rawPage.get();
-          PageFrontend tmp = buildPipeline().pass(p.name, p.rawSource);
+          PageFrontendImpl tmp = buildPipeline().pass(p.name, p.rawSource);
 
-          PageFrontend frontend = PageFrontend.buildEmpty();
+          PageFrontendImpl frontend = PageFrontendImpl.buildEmpty();
 
           frontend.assign(tmp);
           GeneratorKind g = GeneratorKind.restoreById(p.generator.getId()).get();
