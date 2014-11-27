@@ -1,10 +1,10 @@
 package pipeline.mapreduce;
 
-import gae_store_space.SentenceKind;
+import pipeline.ContentItem;
 
 import java.util.List;
 
 public interface CounterMapper {
 
-	public void map(List<SentenceKind> contentItemKinds);
+	public void map(List<ContentItem> contentItemKinds);
 }

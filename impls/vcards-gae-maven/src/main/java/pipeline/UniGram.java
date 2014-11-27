@@ -1,7 +1,6 @@
 package pipeline;
 
 import com.google.common.collect.ImmutableList;
-import gae_store_space.SentenceKind;
 import pipeline.estimators.AdvImportanceProcessor;
 import pipeline.estimators.ImportanceProcessor;
 
@@ -11,31 +10,20 @@ import java.util.*;
 // Хранить их точно не буду - съест лимиты
 public class Unigram {
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 3;
-	
-	// FIXME: inject it?
 	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
 
   // TODO: может хранится стем или пара-тройка слов.
-  private String nGram;
+  private String value;
 
-  // TODO: возможно лучше хранить логарифм от нормированной частоты
-  // Сколько раз встретилось слово.
-  private Integer rawFrequency = 0;  // это и есть важность, но пока это частота  
-  
+  // Сколько раз встретилось слово
+  private Integer rawFrequency = 0;
   private Integer importance = 0;
   
   // May be make final
-  private Set<SentenceKind> sentences = new HashSet<>();
+  private Set<ContentItem> smallInvertedIndex = new HashSet<>();
 
-  public String getNGram() {
-  	return nGram;
-  }
-  
-  public String pack() {
-  	//ArrayList<String> tmp = new ArrayList<String>(sources);
-  	//Collections.shuffle(tmp);
-    //return nGram;
-  	return nGram;//Joiner.on(" / ").join(tmp);
+  public String getValue() {
+  	return value;
   }
 
   public Integer getImportance() {
@@ -43,7 +31,7 @@ public class Unigram {
   }
   
   public void calcImportance() {
-  	importance = estimator.process(rawFrequency, sentences);
+  	importance = estimator.process(rawFrequency, smallInvertedIndex);
   }
 
   // wrong but need
@@ -51,17 +39,14 @@ public class Unigram {
     importance = value;
   }
 
-  public static Unigram create(
-  		String ngramValue, 
-  		Collection<SentenceKind> sentences, 
-  		int rawFrequency) {
-    return new Unigram(ngramValue, sentences, rawFrequency);
+  public static
+      Unigram create(String value, Collection<ContentItem> sentences, int rawFrequency) {
+    return new Unigram(value, sentences, rawFrequency);
   }
 
-  public ImmutableList<SentenceKind> getContendKinds() {
-  	// берем часть
-  	// FIXME: делать выборки с перемешиванием 	
-  	ArrayList<SentenceKind> tmp = new ArrayList<>(sentences);
+  public ImmutableList<ContentItem> getContendKinds() {
+  	// FIXME: делать выборки с перемешиванием
+  	ArrayList<ContentItem> tmp = new ArrayList<>(smallInvertedIndex);
   	
   	long seed = System.nanoTime();
   	Collections.shuffle(tmp, new Random(seed));
@@ -79,17 +64,12 @@ public class Unigram {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  public Unigram(
-    String nGram,
-    Collection<SentenceKind> sentences,
-    int rawFrequency) {
-    this.nGram = nGram;
-    
-    // Частоту берем из списка ссылок.
+  public Unigram(String value, Collection<ContentItem> smallInvertedIndex, int rawFrequency) {
+    this.value = value;
     this.rawFrequency = rawFrequency;
 
     // FIXME: Ссылки должны быть уникальными. Но уникальны ли они тут?
-    this.sentences.addAll(sentences);
+    this.smallInvertedIndex.addAll(smallInvertedIndex);
   }
 
   private static class ImportanceComparator implements Comparator<Unigram> {

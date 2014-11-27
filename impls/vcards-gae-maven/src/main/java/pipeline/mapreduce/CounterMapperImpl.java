@@ -1,7 +1,7 @@
 package pipeline.mapreduce;
 
 
-import gae_store_space.SentenceKind;
+import pipeline.ContentItem;
 
 import java.util.List;
 
@@ -17,19 +17,19 @@ import pipeline.nlp.SentenceTokenizer;
 
 @NotThreadSafe
 public class CounterMapperImpl implements CounterMapper {
-  private final CountReducer<SentenceKind> reducer_;
-  public CounterMapperImpl(CountReducer<SentenceKind> reducer) {
+  private final CountReducer<ContentItem> reducer_;
+  public CounterMapperImpl(CountReducer<ContentItem> reducer) {
     reducer_ = reducer;
   }
 
-  private void emit(String key, SentenceKind value) {
+  private void emit(String key, ContentItem value) {
     reducer_.reduce(key, value);
   }
    
   @Override
-  public void map(List<SentenceKind> contentItemKinds) {
+  public void map(List<ContentItem> contentItemKinds) {
     SentenceTokenizer tokenizer = new SentenceTokenizer();
-    for (SentenceKind item : contentItemKinds) {
+    for (ContentItem item : contentItemKinds) {
       List<String> tokens = tokenizer.getWords(item.getSentence());
       for (String token: tokens) {
         Word w = Word.build(token);
