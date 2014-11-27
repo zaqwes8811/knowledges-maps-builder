@@ -2,14 +2,12 @@ package pipeline;
 
 import com.google.common.collect.HashMultimap;
 import gae_store_space.NGramKind;
-import gae_store_space.PageFrontend;
-import gae_store_space.PageKind;
+import gae_store_space.PageFrontendImpl;
 import gae_store_space.SentenceKind;
 
 import java.util.*;
 
 import org.apache.log4j.Logger;
-import org.javatuples.Pair;
 import org.javatuples.Triplet;
 import org.tartarus.snowball.ext.englishStemmer;
 import pipeline.nlp.PlainTextTokenizer;
@@ -113,7 +111,7 @@ public class TextPipeline {
   // Now no store operations
   // Performance:
   //   text size around 1 Mb calc near 16 sec. - 4/2 1.6 GHz
-  public PageFrontend pass(String pageName, String rawText) {
+  public PageFrontendImpl pass(String pageName, String rawText) {
   	String pureText = removeFormatting(rawText);
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
@@ -133,6 +131,6 @@ public class TextPipeline {
     // Sort words by frequency
     nGramKinds = sortByImportance(nGramKinds);
 
-    return new PageFrontend(pageName, sentencesKinds, nGramKinds, rawText);
+    return new PageFrontendImpl(pageName, sentencesKinds, nGramKinds, rawText);
   }
 }

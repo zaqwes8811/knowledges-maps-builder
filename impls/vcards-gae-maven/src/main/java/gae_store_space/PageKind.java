@@ -25,7 +25,6 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
 import net.jcip.annotations.NotThreadSafe;
-import org.apache.commons.collections4.Predicate;
 
 import java.util.List;
 import java.util.Set;
@@ -50,7 +49,7 @@ public class PageKind {
   //private
 	Key<GeneratorKind> generator;
 	//private
-	Integer boundaryPtr = PageFrontend.STEP_WINDOW_SIZE;  // указатель на текущyю границу
+	Integer boundaryPtr = PageFrontendImpl.STEP_WINDOW_SIZE;  // указатель на текущyю границу
 	//private
 	Integer referenceVolume = 0;
 	// Assumption: raw source >> sum(other fields)

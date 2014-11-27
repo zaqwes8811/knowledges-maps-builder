@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -67,7 +66,7 @@ public class PageKindTest {
         AppInstance app = new AppInstance();
         // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
         int countTries = 100;  // random
-        PageFrontend page = null;
+        PageFrontendImpl page = null;
         while (page == null) {
           try {
             page = app.getPage(AppInstance.defaultPageName);
@@ -82,7 +81,7 @@ public class PageKindTest {
         assertNotNull(page);
 
         // Queries
-        ArrayList<DistributionElement> distribution = page.getDistribution();
+        ArrayList<DistributionElement> distribution = page.getImportanceDistribution();
         assertFalse(distribution.isEmpty());
       }
     }
@@ -104,7 +103,7 @@ public class PageKindTest {
       }
 
       {
-        Optional<PageFrontend> page = Optional.absent();
+        Optional<PageFrontendImpl> page = Optional.absent();
         int countTries = 100;  // random
         while (!page.isPresent()) {
           try {
@@ -118,7 +117,7 @@ public class PageKindTest {
         assertTrue(page.isPresent());
 
         // Queries
-        ArrayList<DistributionElement> distribution = page.get().getDistribution();
+        ArrayList<DistributionElement> distribution = page.get().getImportanceDistribution();
         assertFalse(distribution.isEmpty());
 
         // TODO: how do that?
@@ -142,7 +141,7 @@ public class PageKindTest {
         AppInstance app = new AppInstance();
         // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
         int countTries = 100;  // random
-        PageFrontend page = null;
+        PageFrontendImpl page = null;
         while (page == null) {
           try {
             page = app.getPage(AppInstance.defaultPageName);
@@ -159,7 +158,7 @@ public class PageKindTest {
         // Queries
         app.getWordData(AppInstance.defaultPageName);
 
-        ArrayList<DistributionElement> distribution = page.getDistribution();
+        ArrayList<DistributionElement> distribution = page.getImportanceDistribution();
         assertFalse(distribution.isEmpty());
       }
     }

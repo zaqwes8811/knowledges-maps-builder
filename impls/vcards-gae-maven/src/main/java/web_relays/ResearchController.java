@@ -3,9 +3,8 @@ package web_relays;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import gae_store_space.PageFrontend;
+import gae_store_space.PageFrontendImpl;
 import instances.AppInstance;
-import gae_store_space.PageKind;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -91,7 +90,7 @@ public class ResearchController {
         PathValue path = new ObjectMapper().readValue(value.get(), PathValue.class);
         Optional<String> pageName = path.getPageName();
         if (pageName.isPresent()) {
-          PageFrontend p = app.getPage(path.getPageName().get());
+          PageFrontendImpl p = app.getPage(path.getPageName().get());
           return p.getLengthsSentences();
         }
       } catch (IOException ex) {}

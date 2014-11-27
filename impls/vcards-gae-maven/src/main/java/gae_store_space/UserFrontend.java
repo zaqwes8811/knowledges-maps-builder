@@ -11,7 +11,6 @@ import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
-import pipeline.TextPipeline;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;
 
@@ -24,7 +23,7 @@ import static gae_store_space.OfyService.ofy;
 public class UserFrontend {
   // State
   private static final Integer CACHE_SIZE = 5;
-  private @GuardedBy("this") LoadingCache<String, Optional<PageFrontend>> pagesCache = null;
+  private @GuardedBy("this") LoadingCache<String, Optional<PageFrontendImpl>> pagesCache = null;
   private @GuardedBy("this") UserKind kind = null;
 
   // Services
@@ -32,7 +31,7 @@ public class UserFrontend {
 
   // Actions
   UserFrontend() {}
-  private UserKind get() {
+  private UserKind getRaw() {
     return Optional.fromNullable(kind).get();
   }
 
@@ -49,19 +48,19 @@ public class UserFrontend {
       pagesCache = CacheBuilder.newBuilder()
         .maximumSize(CACHE_SIZE)
         .build(
-          new CacheLoader<String, Optional<PageFrontend>>() {
+          new CacheLoader<String, Optional<PageFrontendImpl>>() {
             @Override
-            public Optional<PageFrontend> load(String key) {
+            public Optional<PageFrontendImpl> load(String key) {
               //pageKeys;
-              return PageBuilder.restore(key, get().getPageKeys());
+              return PageBuilder.restore(key, getRaw().getPageKeys());
             }
           });
   }
 
   // Удаляет только ключи, базу не трогает
   public void clear() {
-    get().getPageNamesRegister().clear();
-    get().getPageKeys().clear();  // FIXME: may be leak
+    getRaw().getPageNamesRegister().clear();
+    getRaw().getPageKeys().clear();  // FIXME: may be leak
   }
 
   private void checkPageName(String pageName) {
@@ -71,16 +70,16 @@ public class UserFrontend {
 
   private boolean removePage(String pageName) {
     checkPageName(pageName);
-    return get().getPageNamesRegister().remove(pageName);
+    return getRaw().getPageNamesRegister().remove(pageName);
   }
 
   private boolean isContain(String pageName) {
     checkPageName(pageName);
-    return get().getPageNamesRegister().contains(pageName);
+    return getRaw().getPageNamesRegister().contains(pageName);
   }
 
   private void checkPagesInvariant() {
-    if (get().getPageNamesRegister().size() != get().getPageKeys().size()) {
+    if (getRaw().getPageNamesRegister().size() != getRaw().getPageKeys().size()) {
       throw new AssertionError();
     }
   }
@@ -95,14 +94,14 @@ public class UserFrontend {
       throw new IllegalArgumentException();
 
     // FIXME: need processing but only for fill generator
-    PageFrontend page = PageBuilder.buildPipeline().pass(name, text);
+    PageFrontendImpl page = PageBuilder.buildPipeline().pass(name, text);
     PageKind raw = page.getRawPage();
 
     // FIXME: how to know object size - need todo it
     if (raw.getPageByteSize() > GAEStoreAccessManager.LIMIT_DATA_STORE_SIZE)
       throw new IllegalArgumentException();
 
-    ArrayList<DistributionElement> d = page.createImportanceDistribution();
+    ArrayList<DistributionElement> d = page.buildImportanceDistribution();
     return Pair.with(raw, GeneratorKind.create(d));
   }
 
@@ -113,14 +112,14 @@ public class UserFrontend {
     // check register
     if (isContain(pageName)) {
       // страница была сохранена до этого
-      PageFrontend page = getPage(pageName).get();
+      PageFrontendImpl page = getPage(pageName).get();
       removePage(pageName);
-      page.atomicDelete();
+      page.atomicDeleteRawPage();
 
       PageKind rawPage = page.getRawPage();
 
       // нужно как-то удалить ключ
-      checkTrue(get().getPageKeys().remove(Key.create(rawPage)));
+      checkTrue(getRaw().getPageKeys().remove(Key.create(rawPage)));
 
       pagesCache.invalidate(pageName);
     }
@@ -135,7 +134,7 @@ public class UserFrontend {
       Pair<PageKind, GeneratorKind> pair = process(pageName, text);
       final PageKind page = pair.getValue0();
       final GeneratorKind g = pair.getValue1();
-      final UserKind user = get();
+      final UserKind user = getRaw();
 
       // transaction boundary
       Work<PageKind> work = new Work<PageKind>() {
@@ -160,7 +159,7 @@ public class UserFrontend {
         }
       };
 
-      get().getPageNamesRegister().add(pageName);
+      getRaw().getPageNamesRegister().add(pageName);
       // FIXME: база данный в каком состоянии будет тут? согласованном?
       // check here, but what can do?
       PageKind r = ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
@@ -173,34 +172,34 @@ public class UserFrontend {
       if (!success) {
         // FIXME:
         //pageKeys.remove()
-        get().getPageNamesRegister().remove(pageName);
+        getRaw().getPageNamesRegister().remove(pageName);
       }
 
       checkPagesInvariant();
     }
   }
 
-  public synchronized PageFrontend getPagePure(String pageName) {
+  public synchronized PageFrontendImpl getPagePure(String pageName) {
     // check register
-    Optional<PageFrontend> r = getPage(pageName);
+    Optional<PageFrontendImpl> r = getPage(pageName);
     if (!r.isPresent())
       throw new IllegalArgumentException();
 
     return r.get();
   }
 
-  private void checkPageIsActive(Optional<PageFrontend> o) {
+  private void checkPageIsActive(Optional<PageFrontendImpl> o) {
     if (!o.isPresent())
       throw new AssertionError();
   }
 
   // FIXME: may be non thread safe. Да вроде бы должно быть база то потокобезопасная?
-  private Optional<PageFrontend> getPage(String pageName) {
+  private Optional<PageFrontendImpl> getPage(String pageName) {
     if (!isContain(pageName)) {
       return Optional.absent();
     }
 
-    Optional<PageFrontend> r = Optional.absent();
+    Optional<PageFrontendImpl> r = Optional.absent();
     // FIXME: danger but must work
     Integer countTries = 1000;
     while (true) {
@@ -238,7 +237,7 @@ public class UserFrontend {
 
   public List<PageSummaryValue> getUserInformation() {
     List<PageSummaryValue> r = new ArrayList<>();
-    for (String page: get().getPageNamesRegister())
+    for (String page: getRaw().getPageNamesRegister())
       r.add(PageSummaryValue.create(page, AppInstance.defaultGeneratorName));
 
     return r;
