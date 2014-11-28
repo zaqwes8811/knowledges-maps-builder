@@ -1,4 +1,4 @@
-package gae_store_space;
+package kinds;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -7,10 +7,10 @@ import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import cross_cuttings_layer.GlobalIO;
+import gae_store_space.GAEStoreAccessManager;
 import instances.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
-import org.apache.xmlbeans.impl.piccolo.xml.Piccolo;
 import org.javatuples.Pair;
 import pages.PageBuilder;
 import pages.PageFrontend;

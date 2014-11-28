@@ -130,6 +130,8 @@ public class TextPipeline {
     // Sort words by frequency
     unigrams = sortByImportance(unigrams);
 
+    // Can filter it now
+
     return new PipelineResult(pageName, rawText, sentencesKinds, unigrams);
   }
 }

@@ -9,6 +9,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
+import kinds.PageKind;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.junit.After;

@@ -1,4 +1,4 @@
-package gae_store_space;
+package kinds;
 
 import java.util.ArrayList;
 
