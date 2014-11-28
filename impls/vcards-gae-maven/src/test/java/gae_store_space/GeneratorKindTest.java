@@ -6,6 +6,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
+import kinds.GeneratorKind;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

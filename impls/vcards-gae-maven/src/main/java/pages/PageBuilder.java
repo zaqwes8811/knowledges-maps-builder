@@ -2,8 +2,8 @@ package pages;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
-import gae_store_space.GeneratorKind;
-import gae_store_space.PageKind;
+import kinds.GeneratorKind;
+import kinds.PageKind;
 import gae_store_space.StoreIsCorruptedException;
 import pipeline.PipelineResult;
 import pipeline.TextPipeline;

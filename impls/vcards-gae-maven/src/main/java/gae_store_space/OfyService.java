@@ -6,6 +6,9 @@ package gae_store_space;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
+import kinds.GeneratorKind;
+import kinds.PageKind;
+import kinds.UserKind;
 
 public class OfyService {
   static {

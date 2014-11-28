@@ -14,7 +14,7 @@
  *   Отражает один элемент данный пользователя, например, один файл субтитров.
  */
 
-package gae_store_space;
+package kinds;
 
 
 import com.google.common.base.Optional;
@@ -24,6 +24,8 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Load;
+import gae_store_space.GAEStoreAccessManager;
+import gae_store_space.StoreIsCorruptedException;
 import net.jcip.annotations.NotThreadSafe;
 import pages.PageWithBoundary;
 

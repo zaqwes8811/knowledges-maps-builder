@@ -5,6 +5,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import instances.AppInstance;
+import kinds.UserKind;
 import org.apache.log4j.BasicConfigurator;
 import org.junit.After;
 import org.junit.Before;
