@@ -1,27 +1,15 @@
-package gae_store_space;
+package kinds;
 
 import com.google.common.base.Optional;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Serialize;
-import cross_cuttings_layer.GlobalIO;
-import instances.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
-import org.apache.log4j.Logger;
-import org.javatuples.Pair;
-import web_relays.protocols.PageSummaryValue;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
 
 import static gae_store_space.OfyService.ofy;
 

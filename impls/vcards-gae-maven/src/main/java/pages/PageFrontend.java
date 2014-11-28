@@ -1,7 +1,7 @@
 package pages;
 
 import com.google.common.base.Optional;
-import gae_store_space.PageKind;
+import kinds.PageKind;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PathValue;
 import web_relays.protocols.WordDataValue;

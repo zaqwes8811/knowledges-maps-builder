@@ -4,6 +4,8 @@ import gae_store_space.*;
 
 import java.util.List;
 
+import kinds.PageKind;
+import kinds.UserFrontend;
 import pages.PageFrontend;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PageSummaryValue;

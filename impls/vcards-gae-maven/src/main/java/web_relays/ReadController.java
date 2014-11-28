@@ -1,8 +1,6 @@
 package web_relays;
 
-import com.google.common.base.Optional;
 import instances.AppInstance;
-import gae_store_space.PageKind;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
