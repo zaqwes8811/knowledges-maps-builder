@@ -111,7 +111,7 @@ public class TextPipeline {
   static <T> T kinds(T t){  return t; }
 
   public PipelineResult pass(String pageName, String rawText) {
-  	String pureText = removeFormatting(rawText);
+  	String pureText = removeFormatting(rawText);  // FIXME: very slow!!
   	
   	ImmutableList<String> sentences = tokenizer.getSentences(pureText);
   	
@@ -130,7 +130,7 @@ public class TextPipeline {
     // Sort words by frequency
     unigrams = sortByImportance(unigrams);
 
-    // Can filter it now
+    // Can filter it now - not here - best assemble full statistic
 
     return new PipelineResult(pageName, rawText, sentencesKinds, unigrams);
   }

@@ -19,6 +19,13 @@
     
 <dependencies>
 
+<!-- https://code.google.com/p/caliper/ -->
+<dependency>
+  <groupId>com.google.caliper</groupId>
+  <artifactId>caliper</artifactId>
+  <version>1.0-beta-1</version>
+</dependency>
+
 <!-- Spring -->
 <dependency>
    <groupId>org.springframework</groupId>
