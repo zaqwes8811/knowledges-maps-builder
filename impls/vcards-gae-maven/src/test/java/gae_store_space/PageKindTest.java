@@ -1,5 +1,7 @@
 package gae_store_space;
 
+import com.carrotsearch.junitbenchmarks.AbstractBenchmark;
+import com.carrotsearch.junitbenchmarks.BenchmarkRule;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
@@ -7,14 +9,19 @@ import com.google.common.collect.Ordering;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
+
 import cross_cuttings_layer.GlobalIO;
 import instances.AppInstance;
 import kinds.PageKind;
+
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
+
 import pages.PageBuilder;
 import pages.PageFrontend;
 import pipeline.math.DistributionElement;
@@ -29,7 +36,10 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 // Это таки юнитест, т.к. работает с фейковой базой данных
-public class PageKindTest {
+public class PageKindTest //extends AbstractBenchmark // don't work
+{
+	//@Rule
+	//public TestRule benchmarkRun = new BenchmarkRule();
   //private AppInstance app = AppInstance.getInstance();
 
   private static Logger log = Logger.getLogger(PageKindTest.class.getName());
