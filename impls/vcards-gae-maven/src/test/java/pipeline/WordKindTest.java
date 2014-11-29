@@ -1,4 +1,4 @@
-package gae_store_space;
+package pipeline;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;

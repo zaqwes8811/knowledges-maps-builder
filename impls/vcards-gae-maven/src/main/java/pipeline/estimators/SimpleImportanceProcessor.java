@@ -9,4 +9,4 @@ public class SimpleImportanceProcessor implements ImportanceProcessor {
 	public Integer process(Integer freq, Set<ContentItem> s) {
 		return freq;
 	}
-};
+}
