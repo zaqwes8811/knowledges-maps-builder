@@ -61,30 +61,21 @@
 
     <button>Delete page</button>
 
-    <!-- -->
     <select id="availabeFilters"></select>
     <button class="btn btn-warning" onclick="test()">Apply</button>
-    <hr/>
 
-    <input type="button" class="btn btn-primary" value="Get page info" onclick="onGetData()"/>
-    <div id="placeholder" style="width:500px; height:180px"></div>
-    <hr/>
-
-    <!--form-->
     <div>
       <br/>
       <input type="file" id="fileInput">
       <br/>
-      <button 
-        class="btn btn-primary btn-sm" 
-        value="" 
-        onclick="gView.onUploadTextFile()">Process file  (only subtitles and plain text files)</button>
+      <input type="button" class="btn btn-primary" 
+        value="Process file  (subtitles and plain text files only)" 
+        onclick="gView.onUploadTextFile()"/>
+      <input type="button" class="btn btn-danger" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"/>
+      <input type="button" class="btn btn-primary" value="Get page info" onclick="onGetData()"/>
     </div>
-    <!--/form-->
+    <div id="placeholder" style="width:500px; height:180px"></div>
 
-    <hr/>
-
-    <input type="button" class="btn btn-danger" value="Clear store. Danger!" onclick="gDataAccessLayer.resetFullStore()"></input>
     <hr/>
   </div>
 </body>
