@@ -1,14 +1,22 @@
 package pipeline.nlp;
 
+import com.carrotsearch.junitbenchmarks.AbstractBenchmark;
+import com.carrotsearch.junitbenchmarks.BenchmarkRule;
 import com.google.common.base.Splitter;
 
 import cross_cuttings_layer.GlobalIO;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
 
 import static org.junit.Assert.*;
 
-public class SentenceTokenizerTest {
+public class SentenceTokenizerTest //extends AbstractBenchmark 
+{
+	@Rule
+	public TestRule benchmarkRun = new BenchmarkRule();
+	
   @Test
   public void testDevelop() {
     String sent = "Прочие, связанные с аудиторской деятельностью услуги представляют собой:  "+
