@@ -12,3 +12,5 @@ http://code.google.com/a/eclipselabs.org/p/jvmmonitor/
 
 // deploy and devserver
 http://stackoverflow.com/questions/21628560/java-lang-noclassdeffounderror-com-googlecode-objectify-objectifyservice
+http://stackoverflow.com/questions/646322/jboss5-cannot-deploy-due-to-java-util-zip-zipexception-error-in-opening-zip-fi
+http://flummox-engineering.blogspot.ru/2014/01/appengine-deployment.html
