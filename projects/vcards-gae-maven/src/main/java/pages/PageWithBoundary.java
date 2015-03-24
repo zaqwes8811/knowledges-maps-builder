@@ -11,7 +11,7 @@ import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 import pipeline.ContentItem;
-import pipeline.Unigram;
+import pipeline.UniGram;
 import pipeline.math.DistributionElement;
 import web_relays.protocols.PathValue;
 import web_relays.protocols.WordDataValue;
@@ -25,7 +25,7 @@ public class PageWithBoundary implements PageFrontend {
   // Frontend
   // Формированием не управляет, но остальным управляет.
   // Обязательно отсортировано
-  private ArrayList<Unigram> unigramKinds = new ArrayList<>();
+  private ArrayList<UniGram> unigramKinds = new ArrayList<>();
 
   // Хранить строго как в исходном контексте
   private ArrayList<ContentItem> sentencesKinds = new ArrayList<>();
@@ -88,7 +88,7 @@ public class PageWithBoundary implements PageFrontend {
     String pageName,
     String rawSource,
     ArrayList<ContentItem> items,
-    ArrayList<Unigram> words)
+    ArrayList<UniGram> words)
   {
     this.unigramKinds = words;
     this.sentencesKinds = items;
@@ -109,9 +109,9 @@ public class PageWithBoundary implements PageFrontend {
 
   private Integer getUnigramIndex(String ngram) {
     // FIXME: How hide it?
-    class Tmp implements Predicate<Unigram> {
+    class Tmp implements Predicate<UniGram> {
       @Override
-      public boolean evaluate(Unigram o) {
+      public boolean evaluate(UniGram o) {
         return o.getValue().equals(ngram);
       }
 
@@ -123,7 +123,7 @@ public class PageWithBoundary implements PageFrontend {
 
     Tmp p = new Tmp(ngram);
 
-    Pair<Unigram, Integer> k = OwnCollections.find(unigramKinds, p);
+    Pair<UniGram, Integer> k = OwnCollections.find(unigramKinds, p);
     if (k.getValue1().equals(-1))
       throw new IllegalStateException();
 
@@ -158,12 +158,12 @@ public class PageWithBoundary implements PageFrontend {
   @Override
   public ArrayList<DistributionElement> buildImportanceDistribution() {
     // Сортируем - элементы могут прийти в случайном порядке
-    Collections.sort(unigramKinds, Unigram.createImportanceComparator());
+    Collections.sort(unigramKinds, UniGram.createImportanceComparator());
     Collections.reverse(unigramKinds);
 
     // Form result
     ArrayList<DistributionElement> r = new ArrayList<>();
-    for (Unigram word : unigramKinds)
+    for (UniGram word : unigramKinds)
       r.add(new DistributionElement(word.getImportance()));
 
     r = applyBoundary(r);
@@ -200,7 +200,7 @@ public class PageWithBoundary implements PageFrontend {
     GeneratorKind go = getGeneratorCache();  // FIXME: нужно нормально обработать
 
     Integer pointPosition = go.getPosition();
-    Unigram ngram =  getNGram(pointPosition);
+    UniGram ngram =  getNGram(pointPosition);
     String value = ngram.getValue();
     ImmutableList<ContentItem> contentItems = ngram.getContendKinds();
 
@@ -221,7 +221,7 @@ public class PageWithBoundary implements PageFrontend {
   // FIXME: а логика разрешает Отсутствующее значение?
   // http://stackoverflow.com/questions/2758224/assertion-in-java
   // генераторы могут быть разными, но набор слов один.
-  private Unigram getNGram(Integer pos) {
+  private UniGram getNGram(Integer pos) {
     checkAccessIndex(pos);
     return unigramKinds.get(pos);
   }
