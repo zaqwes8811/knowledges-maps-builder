@@ -152,7 +152,7 @@
 <dependency>
     <groupId>com.google.appengine</groupId>
     <artifactId>appengine-api-1.0-sdk</artifactId>
-    <version>1.9.18</version>
+    <version>1.9.10</version>
 </dependency>
 <dependency>
     <groupId>javax.servlet</groupId>
@@ -205,20 +205,20 @@
 <dependency>
     <groupId>com.google.appengine</groupId>
     <artifactId>appengine-testing</artifactId>
-    <version>1.9.18</version>
+    <version>1.9.10</version>
     <scope>test</scope>
 </dependency>
 <dependency>
     <groupId>com.google.appengine</groupId>
     <artifactId>appengine-api-stubs</artifactId>
-    <version>1.9.18</version>
+    <version>1.9.10</version>
     <scope>test</scope>
 </dependency>
 
 <dependency>
     <groupId>com.google.appengine</groupId>
     <artifactId>appengine-api-labs</artifactId>
-    <version>1.9.18</version>
+    <version>1.9.10</version>
     <!--scope>test</scope-->
 </dependency>
 <dependency>
@@ -286,7 +286,7 @@
             <plugin>
                 <groupId>com.google.appengine</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>1.9.18</version>
+                <version>1.9.10</version>
                 <configuration>
                     <enableJarClasses>false</enableJarClasses>
                     <!-- Comment in the below snippet to bind to all IPs instead of just localhost -->
