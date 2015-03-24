@@ -31,23 +31,23 @@ public class TextPipeline {
     return r;
   }
   
-  private ArrayList<Unigram> sortByImportance(ArrayList<Unigram> kinds) {
-  	Collections.sort(kinds, Unigram.createImportanceComparator());
+  private ArrayList<UniGram> sortByImportance(ArrayList<UniGram> kinds) {
+  	Collections.sort(kinds, UniGram.createImportanceComparator());
     Collections.reverse(kinds);
     return kinds;
   }
 
-  private ArrayList<Unigram> unpackHisto(
+  private ArrayList<UniGram> unpackHisto(
   		Multimap<String, ContentItem> histo,
   		Multimap<String, String> sourcesHist) {
-  	ArrayList<Unigram> kinds = new ArrayList<Unigram>();
+  	ArrayList<UniGram> kinds = new ArrayList<UniGram>();
   	
     for (String stem: histo.keySet()) {
     	Set<String> s = new HashSet<String>(sourcesHist.get(stem));
     	
       Collection<ContentItem> content = histo.get(stem);
       int rawFrequency = content.size();
-      Unigram kind = Unigram.create(stem, content, rawFrequency);
+      UniGram kind = UniGram.create(stem, content, rawFrequency);
       
       kinds.add(kind);
     }
@@ -63,8 +63,8 @@ public class TextPipeline {
     return lowWord;
   }
   
-  private ArrayList<Unigram> calcImportances(ArrayList<Unigram> kinds) {
-  	for (Unigram k: kinds)
+  private ArrayList<UniGram> calcImportances(ArrayList<UniGram> kinds) {
+  	for (UniGram k: kinds)
   		k.calcImportance();
 
     // FIXME: for stems set sum frequency - word remain but change frequency
@@ -73,7 +73,7 @@ public class TextPipeline {
 
     {
       Integer position = 0;
-      for (Unigram k: kinds) {
+      for (UniGram k: kinds) {
         String stem = getStem(k.getValue());
         statistic.put(stem, Triplet.with(k.getValue(), k.getImportance(), position));
         position++;
@@ -123,15 +123,15 @@ public class TextPipeline {
     Multimap<String, ContentItem> histo = statisticCollector.buildNGramHisto(sentencesKinds);
     Multimap<String, String> sources = statisticCollector.buildStemSourceHisto(sentencesKinds);
 
-    ArrayList<Unigram> unigrams = unpackHisto(histo, sources);
+    ArrayList<UniGram> UniGrams = unpackHisto(histo, sources);
     
-    unigrams = calcImportances(unigrams);
+    UniGrams = calcImportances(UniGrams);
 
     // Sort words by frequency
-    unigrams = sortByImportance(unigrams);
+    UniGrams = sortByImportance(UniGrams);
 
     // Can filter it now - not here - best assemble full statistic
 
-    return new PipelineResult(pageName, rawText, sentencesKinds, unigrams);
+    return new PipelineResult(pageName, rawText, sentencesKinds, UniGrams);
   }
 }
