@@ -1,0 +1,2 @@
+for Maven project deploy only from command line.
+Eclipse lost dependencies
