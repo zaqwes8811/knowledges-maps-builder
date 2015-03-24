@@ -8,7 +8,7 @@ import java.util.*;
 
 // TODO: Переименовать. Вообще хранятся не слова, а, например, стемы.
 // Хранить их точно не буду - съест лимиты
-public class Unigram {
+public class UniGram {
 	public static final Integer MAX_CONTENT_ITEMS_IN_PACK = 3;
 	private final ImportanceProcessor estimator = new AdvImportanceProcessor();
 
@@ -40,8 +40,8 @@ public class Unigram {
   }
 
   public static
-      Unigram create(String value, Collection<ContentItem> sentences, int rawFrequency) {
-    return new Unigram(value, sentences, rawFrequency);
+  UniGram create(String value, Collection<ContentItem> sentences, int rawFrequency) {
+    return new UniGram(value, sentences, rawFrequency);
   }
 
   public ImmutableList<ContentItem> getContendKinds() {
@@ -64,7 +64,7 @@ public class Unigram {
   	return ImmutableList.copyOf(tmp.subList(0, toIndex));
   }
 
-  public Unigram(String value, Collection<ContentItem> smallInvertedIndex, int rawFrequency) {
+  public UniGram(String value, Collection<ContentItem> smallInvertedIndex, int rawFrequency) {
     this.value = value;
     this.rawFrequency = rawFrequency;
 
@@ -72,17 +72,17 @@ public class Unigram {
     this.smallInvertedIndex.addAll(smallInvertedIndex);
   }
 
-  private static class ImportanceComparator implements Comparator<Unigram> {
+  private static class ImportanceComparator implements Comparator<UniGram> {
     // http://stackoverflow.com/questions/10017381/compareto-method-java
     //
     // In "Effective Java"
     @Override
-    public int compare(Unigram o1, Unigram o2) {
+    public int compare(UniGram o1, UniGram o2) {
       return o1.getImportance().compareTo(o2.getImportance());
     }
   }
 
-  public static Comparator<Unigram> createImportanceComparator() {
+  public static Comparator<UniGram> createImportanceComparator() {
     return new ImportanceComparator();
   }
 }

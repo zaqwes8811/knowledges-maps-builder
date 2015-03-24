@@ -4,7 +4,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 import org.junit.Test;
 import pipeline.ContentItem;
-import pipeline.Unigram;
+import pipeline.UniGram;
 
 import java.util.ArrayList;
 
@@ -18,10 +18,10 @@ public class WordKindTest {
       ContentItem kind = new ContentItem("fake");
       ArrayList<ContentItem> s = new ArrayList<ContentItem>();
       s.add(kind);
-      Unigram o1 = Unigram.create("hello", s, 1);
-      Unigram o2 = Unigram.create("dfasdf", s, 1);
+      UniGram o1 = UniGram.create("hello", s, 1);
+      UniGram o2 = UniGram.create("dfasdf", s, 1);
 
-      assert 0 == Unigram.createImportanceComparator().compare(o1, o2);
+      assert 0 == UniGram.createImportanceComparator().compare(o1, o2);
     }
   }
 }
