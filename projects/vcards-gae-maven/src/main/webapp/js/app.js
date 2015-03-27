@@ -1,3 +1,7 @@
+// FIXME: Sign what page processed
+// FIXME: on clear store send update user info
+// FIXME: Make Apply worked
+
 // String formatter: http://stackoverflow.com/questions/1038746/equivalent-of-string-format-in-jquery
 //
 // http://callbackhell.com/
@@ -265,6 +269,8 @@ $(function() {
   gMessagesQueue.push(
     gMessageBuilder.buildWarning('<b>Warning:</b> Project under development. One user for everyone. \
       All data can be removed in any time.'));
+
+  gMessagesQueue.push(gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only"));
 });
 
 function test() {

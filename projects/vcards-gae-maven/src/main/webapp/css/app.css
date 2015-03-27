@@ -7,13 +7,14 @@ response.files.insert(6,URL('static','css/app_carcass.css'))
 /* Special grid styles
 -------------------------------------------------- */
 body {
-	background-color:lightgray;
+	background-color: #E6E6FA;
 	padding-left: 4cm;
 	padding-right: 4cm;
 	}
 
 .add-information-hidded {
     visibility: hidden;
+    height: 0px;
 }
 
 .add-information-visible {
