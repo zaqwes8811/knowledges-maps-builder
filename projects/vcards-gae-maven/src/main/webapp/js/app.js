@@ -40,7 +40,9 @@ View.prototype.sendPage = function(page) {
 
   var errorHandler = function(e) {
     try {
-      self.log.push(gMessageBuilder.buildError('Error occure, Master'));
+      var m = gMessageBuilder.buildError('Error occure, Master');
+      self.RemoveAfter(m, 2);
+      self.log.push(m);
     } catch (ex) {
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
       //if (e if e instanceof RangeError)
@@ -48,7 +50,9 @@ View.prototype.sendPage = function(page) {
   };
 
   var successHandler = function(data) {
-    self.log.push(gMessageBuilder.buildInfo('Done, Master'));
+    var m = gMessageBuilder.buildInfo('Done, Master');
+    self.RemoveAfter(m, 2);
+    self.log.push(m);
     self.UpdateUserInfo();
   };
 
@@ -215,6 +219,10 @@ View.prototype._GetUserSummary = function() {
   this.dal.getUserSummary(successHandler, errorHandler);
 }
 
+View.prototype.RemoveAfter = function (m, sec) {
+  setTimeout(function() { m.selfDelete(); }, sec * 1000);
+}
+
 // Actions
 View.prototype.reload = function() {
   var self = this;
@@ -282,11 +290,15 @@ $(function() {
     gView.setCurrentTextFilename();
   })
 
-  gErrorActor.push(
-    gMessageBuilder.buildWarning(
-      '<b>Warning:</b> Project under development. One user for everyone. All data can be removed in any time.'));
+  var m = gMessageBuilder.buildWarning(
+      '<b>Warning:</b> Project under development. One user for everyone. All data can be removed in any time.');
 
-  gErrorActor.push(gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only"));
+  gView.RemoveAfter(m, 5);
+  gErrorActor.push(m);
+
+  var m1 = gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only");
+  gView.RemoveAfter(m1, 5);
+  gErrorActor.push(m1);
 });
 
 function test() {
