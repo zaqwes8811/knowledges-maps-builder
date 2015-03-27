@@ -20,7 +20,7 @@ function View(dal) {
   this.userSummary = new UserSummary([]);
   this.currentTextFilename = "";
 
-  this.log = gMessagesQueue;
+  this.log = gErrorActor;
 }
 
 View.prototype.setCurrentTextFilename = function (/*value*/) {
@@ -30,24 +30,29 @@ View.prototype.setCurrentTextFilename = function (/*value*/) {
   this.currentTextFilename = file;
 }
 
+View.prototype.UpdateUserInfo = function() {
+  var self = this;
+  setTimeout(function() { self.reload(); }, 5000);
+}
+
 View.prototype.sendPage = function(page) {
   var self = this;
 
   var errorHandler = function(e) {
     try {
-      alert(JSON.parse(e));
+      self.log.push(gMessageBuilder.buildError('Error occure, Master'));
     } catch (ex) {
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
       //if (e if e instanceof RangeError)
-
     }
   };
 
   var successHandler = function(data) {
-
+    self.log.push(gMessageBuilder.buildInfo('Done, Master'));
+    self.UpdateUserInfo();
   };
 
-  this.dal.putPage(page);//, successHandler, errorHandler);
+  this.dal.putPage(page, successHandler, errorHandler);
 }
 
 View.prototype.onUploadTextFile = function () {
@@ -58,12 +63,8 @@ View.prototype.onUploadTextFile = function () {
     return;    
   }
 
-  // FIXME:
-  // if not match
-  if (false) {
-
-  }
-
+  // FIXME: if not match
+  if (false) {  }
   
   // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
   // Вроде бы трудно на голом jQ and Ajax - "Doing this kind of uploading hacks is not an enjoyable experience"
@@ -80,45 +81,57 @@ View.prototype.onUploadTextFile = function () {
     self.sendPage(page);
   };
 
-  // FIXME: page is reload here
-
   reader.readAsText(file);
 }
 
-View.prototype.onUploadFilterFile = function() {
-  // FIXME: 
-}
-
-View.prototype.getCurrentPageName = function () {
+View.prototype.GetCurrentPageName = function () {
   return $('#pages > option:selected').text();
 }
 
-View.prototype.getCurrentGenName = function() {
+View.prototype.GetCurrentGeneratorName = function() {
   return $('#pageGenerators > option:selected').text();
 };
 
-View.prototype.resetPagesOptions = function(newNames) {
+/**
+  \brief 
+*/
+View.prototype.ResetPageOptions = function(updatedNames) 
+{
+  // Need store, and active
+  var currentPageName = this.GetCurrentPageName();
+
+  // Old pages
   var pageSelect = $('#pages');
   pageSelect.empty();
-  _.each(newNames, function(e) { pageSelect.append(new Option(e, e, true, true)); });  
+
+  _.each(updatedNames, function(e) { 
+    pageSelect.append(new Option(e, e, true, true)); 
+  });
+
+  if (currentPageName) {
+    if ($("#pages option[value='" + currentPageName + "']").length > 0) {
+      $("#pages").val(currentPageName)  
+    }
+  }
   
-  this.resetGenNames();
+  var pageName = this.GetCurrentPageName();
+  this.ResetGeneratorOptions(pageName);
 }
 
-View.prototype.resetGenNames = function() {
-  var currentPageName = this.getCurrentPageName();
-  var genNames = this.userSummary.getGenNames(currentPageName);
+View.prototype.ResetGeneratorOptions = function(pageName) {
   var pageGens = $('#pageGenerators');
   pageGens.empty();
-  _.each(genNames, function(e) { pageGens.append(new Option(e, e, true, true)); });  
+
+  _.each(this.userSummary.getGenNames(pageName), 
+    function(e) { pageGens.append(new Option(e, e, true, true)); });  
 }
 
 View.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
 }
 
-View.prototype._drawPageSummary = function() {
-  var currentPageName = this.getCurrentPageName();
+View.prototype._DrawPageSummary = function() {
+  var currentPageName = this.GetCurrentPageName();
   $('#pageNameView').text(currentPageName);
 }
 
@@ -169,13 +182,13 @@ View.prototype.markIsKnowIt = function() {
 }
 
 View.prototype.makePoint = function () {
-  var page = this.getCurrentPageName();
-  var gen = this.getCurrentGenName();
+  var page = this.GetCurrentPageName();
+  var gen = this.GetCurrentGeneratorName();
   var pointPos = this.currentWordData.getPos();
   return new protocols.PathValue(page, gen, pointPos);
 }
 
-View.prototype.getUserSummary__ = function() {
+View.prototype._GetUserSummary = function() {
   // Get user data
   var self = this;
 
@@ -190,11 +203,13 @@ View.prototype.getUserSummary__ = function() {
 
   var successHandler = function(data) {
     waitMessage.selfDelete();
-    self.userSummary.reset(data);
-    var pages = self.userSummary.getPageNames();
-    self.resetPagesOptions(pages);
 
-    self._drawPageSummary();
+    self.userSummary.reset(data);
+
+    var pages = self.userSummary.getPageNames();
+    self.ResetPageOptions(pages);
+
+    self._DrawPageSummary();
   };
 
   this.dal.getUserSummary(successHandler, errorHandler);
@@ -203,17 +218,13 @@ View.prototype.getUserSummary__ = function() {
 // Actions
 View.prototype.reload = function() {
   var self = this;
-  this.getUserSummary__();
+  this._GetUserSummary();
 
   // don't work in constructor
   $('#pages').change(function() {
-    self.resetGenNames();
-    self._drawPageSummary();
+    self.ResetGeneratorOptions(self.GetCurrentPageName());
+    self._DrawPageSummary();
   })
-}
-
-View.prototype.buildPage = function() {
-  // Build page by settings
 }
 
 View.prototype.getWordSuccess = function(data) {
@@ -241,9 +252,14 @@ View.prototype.onGetWordPackage = function () {
   this.dal.getWordPkgAsync(successHandler, errorHandler, point);
 }
 
+View.prototype.activatePipeline = function () {
+  // Build page by settings
+  this.onGetWordPackage();
+}
+
 // State
 // создаются до загрузки DOM?
-var gMessagesQueue = new message_subsystem.MessagesQueue();
+var gErrorActor = new message_subsystem.MessagesQueue();
 var gMessageBuilder = new message_subsystem.MessageBuilder();
 
 var gDataAccessLayer = new DataAccessLayer();
@@ -266,11 +282,11 @@ $(function() {
     gView.setCurrentTextFilename();
   })
 
-  gMessagesQueue.push(
-    gMessageBuilder.buildWarning('<b>Warning:</b> Project under development. One user for everyone. \
-      All data can be removed in any time.'));
+  gErrorActor.push(
+    gMessageBuilder.buildWarning(
+      '<b>Warning:</b> Project under development. One user for everyone. All data can be removed in any time.'));
 
-  gMessagesQueue.push(gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only"));
+  gErrorActor.push(gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only"));
 });
 
 function test() {
@@ -287,5 +303,4 @@ function test() {
   .then(function(z) {
       alert("square of (value+1) = " + z);
   });
-
 }
