@@ -29,15 +29,20 @@
 
 	<!--  Other -->
 	Current page: <b><span id="pageNameView">Choose please...</span></b>
-	<input type="button" class="btn btn-primary" value="Toggle settings" onclick="gView.toggleSettings()"/>
+	&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Toggle settings" onclick="gView.toggleSettings()"/>
 	<input type="button" class="btn btn-danger" value="Clear store" onclick="gDataAccessLayer.resetFullStore()"/>
 	<br/>
 	<br/>
 	<div id="settings_id" class="add-information-hidded">
 		<select id="pages"></select>
+		<br/><br/>
 		<select id="pageGenerators"></select>
+		<br/><br/>
 		<select id="availabeFilters"></select>
-		<input type="button" class="btn btn-primary" value="Apply" onclick="test()"/> 
+		<br/>
+		<br/>
+
+		<input type="button" class="btn btn-primary" value="Apply" onclick="gView.activatePipeline()"/> 
 		<button class="btn btn-warning">Delete page</button>
 		
 
