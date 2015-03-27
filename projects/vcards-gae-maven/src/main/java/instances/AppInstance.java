@@ -15,9 +15,9 @@ import com.google.common.collect.ImmutableList;
 import web_relays.protocols.WordDataValue;
 
 public class AppInstance {
-	public static final String defaultPageName = "DefaultPage";
-	public static final String defaultGeneratorName = "Default";
-	public static final String defaultUserId = "DefaultUser";
+	public static final String defaultPageName = "Default page";
+	public static final String defaultGeneratorName = "Default generator";
+	public static final String defaultUserId = "Default user";
 
 	public static class Holder {
 		static final AppInstance w = new AppInstance();
@@ -45,8 +45,8 @@ public class AppInstance {
 	UserFrontend defaultUser = null;
 	
 	static public String getTestFileName() {
-    return "./fakes/lor.txt";
-  }
+	return "./fakes/lor.txt";
+	  }
 
 	public ImmutableList<DistributionElement> getDistribution(PathValue path) {
 		if (!(path.getPageName().isPresent() && path.getGenName().isPresent())) 
