@@ -14,31 +14,30 @@
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
 
-function View(dal) {
+/**
+  \brief Work with summary information of user.
+*/
+function SummaryWidget(dal) {
   var self = this;
-  this.dal = dal;
-  this.userSummary = new UserSummary([]);
-  this.currentTextFilename = "";
-
-  // Obj. graph
-  this.log = gErrorActor;
+  this.m_dal = dal;
+  this.m_userSummary = new UserSummary([]);
+  this.m_log = gErrorActor;
 }
 
-View.prototype.UpdateUserInfo = function() {
+SummaryWidget.prototype.UpdateUserInfo = function() {
   var self = this;
   setTimeout(function() { self.reload(); }, 5000);
 }
 
-
-View.prototype.GetCurrentPageName = function () {
+SummaryWidget.prototype.GetCurrentPageName = function () {
   return $('#pages > option:selected').text();
 }
 
-View.prototype.GetCurrentGeneratorName = function() {
+SummaryWidget.prototype.GetCurrentGeneratorName = function() {
   return $('#pageGenerators > option:selected').text();
 };
 
-View.prototype.ResetPageOptions = function(updatedNames) 
+SummaryWidget.prototype.ResetPageOptions = function(updatedNames) 
 {
   // Need store, and active
   var currentPageName = this.GetCurrentPageName();
@@ -61,86 +60,107 @@ View.prototype.ResetPageOptions = function(updatedNames)
   this.ResetGeneratorOptions(pageName);
 }
 
-View.prototype.ResetGeneratorOptions = function(pageName) {
+SummaryWidget.prototype.ResetGeneratorOptions = function(pageName) {
   var pageGens = $('#pageGenerators');
   pageGens.empty();
 
-  _.each(this.userSummary.getGenNames(pageName), 
+  _.each(this.m_userSummary.getGenNames(pageName), 
     function(e) { pageGens.append(new Option(e, e, true, true)); });  
 }
 
-View.prototype.toggleSettings = function() {
+SummaryWidget.prototype.toggleSettings = function() {
   $('#settings_id').toggleClass("add-information-hidded");
 }
 
-View.prototype.togglePageInfo = function() {
+SummaryWidget.prototype.togglePageInfo = function() {
   $('#pageInfoID').toggleClass("add-information-hidded");
 }
 
-View.prototype.makePoint = function (pointPos) {
+SummaryWidget.prototype.makePoint = function (pointPos) {
   var page = this.GetCurrentPageName();
   var gen = this.GetCurrentGeneratorName();
   return new protocols.PathValue(page, gen, pointPos);
 }
 
-View.prototype._GetUserSummary = function() {
+SummaryWidget.prototype._GetUserSummary = function() {
   // Get user data
   var self = this;
 
   var waitMessage = gMessageBuilder.buildInfo('Loading user information. Wait please...');
-  this.log.push(waitMessage);
+  this.m_log.push(waitMessage);
 
-  var errorHandler = function(data) { 
+  var onError = function(data) { 
     waitMessage.selfDelete();
     var tmp = data.statusText;
     self.log.push(gMessageBuilder.buildError(tmp)); 
   };
 
-  var successHandler = function(data) {
+  var onSuccess = function(data) {
     waitMessage.selfDelete();
 
-    self.userSummary.reset(data);
+    self.m_userSummary.reset(data);
 
-    var pages = self.userSummary.getPageNames();
+    var pages = self.m_userSummary.getPageNames();
     self.ResetPageOptions(pages);
 
-    self._DrawPageSummary();
+    self.drawPageSummary_();
+
+    // Need it. Usability
+    self.activatePipeline();
   };
 
-  this.dal.getUserSummary(successHandler, errorHandler);
+  this.m_dal.getUserSummary(onSuccess, onError);
 }
 
-// Actions
-View.prototype.reload = function() {
+SummaryWidget.prototype.reload = function() {
   var self = this;
   this._GetUserSummary();
 
   // don't work in constructor
   $('#pages').change(function() {
     self.ResetGeneratorOptions(self.GetCurrentPageName());
-    self._DrawPageSummary();
+    self.drawPageSummary_();
   })
 }
 
-View.prototype.activatePipeline = function () {
+SummaryWidget.prototype.activatePipeline = function () {
   // Build page by settings
-  gCardWidget.onGetWordPackage();
+  var pointPos = 0 + 1;
+  var point = this.makePoint(pointPos);
+
+  // FIXME: remove from here - cyclic dependency
+  gCardWidget.onGetWordPackage(point);
+}
+
+SummaryWidget.prototype.drawPageSummary_ = function() {
+  var currentPageName = this.GetCurrentPageName();
+  $('#pageNameView').text(currentPageName);
 }
 
 /// /// ///
 
-function CardWidget() {
+/**
+  \fixme Generate DOM
+
+  \fixme Expose dependencies
+  
+*/
+function CardWidget(summary) {
   this.m_currentWordData = new CurrentWordData();
+  this.m_dal = gDataAccessLayer;
+  this.m_log = gErrorActor;
+  this.m_summary = summary;
 }
 
 CardWidget.prototype.getWordError = function(data) {
-  this.log.push(gMessageBuilder.buildError(data.statusText)); 
+  this.m_log.push(gMessageBuilder.buildError(data.statusText)); 
 };
 
-CardWidget.prototype.onGetWordPackage = function () { 
+CardWidget.prototype.Do = function () { 
   var self = this;
   var pointPos = this.m_currentWordData.getPos();
-  this.onGetWordPackage(this.makePoint(pointPos));
+  var point = this.m_summary.makePoint(pointPos);
+  this.onGetWordPackage(point);
 }
 
 CardWidget.prototype.getWordSuccess = function(data) {
@@ -152,11 +172,6 @@ CardWidget.prototype.getWordSuccess = function(data) {
 
 CardWidget.prototype.drawWordValue = function (word) {
   $("#word_holder_id").text(word);
-}
-
-CardWidget.prototype._DrawPageSummary = function() {
-  var currentPageName = this.GetCurrentPageName();
-  $('#pageNameView').text(currentPageName);
 }
 
 CardWidget.prototype.drawNGramStatistic = function (imp) {
@@ -171,6 +186,7 @@ CardWidget.prototype.redrawSentences = function (sentences, word) {
 
     // FIXME: need smart replace! A in smArt also change
     // FIXME: may be not one occurence in sentence
+    // FIXME: Bugs live here
     var one = one.replace(word, '<b>' + word + '</b>')
     sent.push(one);
   });
@@ -184,11 +200,11 @@ CardWidget.prototype.onGetWordPackage = function (point) {
   var self = this;
   
   // FIXME: blinking now - need to think
-  var errorHandler = function(data) { self.getWordError(data) };
-  var successHandler = function(data) { self.getWordSuccess(data); }
+  var onError = function(data) { self.getWordError(data) };
+  var onSuccess = function(data) { self.getWordSuccess(data); }
 
   // делаем запрос
-  this.dal.getWordPkgAsync(successHandler, errorHandler, point);
+  this.m_dal.getWordPkgAsync(onSuccess, onError, point);
 }
 
 
@@ -198,41 +214,37 @@ CardWidget.prototype.markIsKnowIt = function() {
   // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
   var self = this;
 
-  var errorHandler = function(data) { self.getWordError(data) };
-  var successHandler = function(data) { 
-    onGetData();  
-    self.getWordSuccess(data); 
-  }
+  var onError = function(data) { self.getWordError(data) };
+  var onSuccess = function(data) { self.getWordSuccess(data); };
 
-  var point = this.makePoint();
-  this.dal.markIsDone(point, successHandler, errorHandler);
+  var pointPos = this.m_currentWordData.getPos();
+  var point = this.m_summary.makePoint(pointPos);
+  this.m_dal.markIsDone(point, 
+      onSuccess, 
+      onError);
 }
 
 /// /// ///
 
-// State
-// создаются до загрузки DOM?
+// Level > 1
 var gErrorActor = new message_subsystem.MessagesQueue();
 var gMessageBuilder = new message_subsystem.MessageBuilder();
 var gDataAccessLayer = new DataAccessLayer();
-var gView = new View(gDataAccessLayer);
-var gPlotView = new PlotView(gDataAccessLayer);
-var gStoreController = new StoreControllerWidget();
-var gCardWidget = new CardWidget();
 
-function onGetData() {
-  var point = gView.makePoint();
-  gPlotView.onGetData(point);
-}
+// Level 1
+var gView = new SummaryWidget(gDataAccessLayer);
 
+// Level 0
+var gStoreController = new widgets.StoreControllerWidget();
+var gCardWidget = new CardWidget(gView);
 
 $(function() {
   // Handler for .ready() called.
-  gView.reload();
+  Q.fcall(function () { gView.reload(); });
+  //.then(plus1);  // Don't know how connect
+  
 
-  $("#fileInput").change(function(e) {
-    gStoreControllerWidget.FillCurrentFilename();
-  })
+  $("#fileInput").change(function(e) { gStoreControllerWidget.FillCurrentFilename(); })
 
   var m = gMessageBuilder.buildWarning(
       '<b>Warning:</b> Project under development. ' 

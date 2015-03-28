@@ -1,0 +1,6 @@
+Browser
+0: Card, Store controller
+1: User summary
+2: DAL
+
+Backend

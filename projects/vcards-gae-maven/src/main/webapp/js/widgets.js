@@ -1,6 +1,8 @@
  var widgets = widgets || {};
 
- // Top object
+/**
+  \brief Controller pages lifetime
+*/
 widgets.StoreControllerWidget = function () {
   
   // Obj. graph
@@ -25,7 +27,7 @@ widgets.StoreControllerWidget.prototype.sendPage = function(page) {
       //if (e if e instanceof RangeError)
     }
   };
-
+  
   var onSuccess = function(data) {
     var m = gMessageBuilder.buildInfo('Done, Master');
     gMessageBuilder.RemoveAfter(m, 2);
