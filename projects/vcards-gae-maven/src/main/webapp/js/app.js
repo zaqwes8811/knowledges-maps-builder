@@ -13,35 +13,28 @@
 // Class
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
-function View(dal) {
-  var self = this;
-  this.dal = dal;
-  this.currentWordData = new CurrentWordData();
-  this.userSummary = new UserSummary([]);
-  this.currentTextFilename = "";
 
+/// /// ///
+
+// Top object
+function StoreController() {
+  
+  // Obj. graph
   this.log = gErrorActor;
+  this.dal = gDataAccessLayer;
 }
 
-View.prototype.setCurrentTextFilename = function (/*value*/) {
-  var fileInput = $("#fileInput");
-  var file = fileInput[0].files[0];
-
-  this.currentTextFilename = file;
+StoreController.prototype.ResetFullStore = function () {
+  gDataAccessLayer.resetFullStore();
 }
 
-View.prototype.UpdateUserInfo = function() {
-  var self = this;
-  setTimeout(function() { self.reload(); }, 5000);
-}
-
-View.prototype.sendPage = function(page) {
+StoreController.prototype.sendPage = function(page) {
   var self = this;
 
-  var errorHandler = function(e) {
+  var onError = function(e) {
     try {
       var m = gMessageBuilder.buildError('Error occure, Master');
-      self.RemoveAfter(m, 2);
+      gMessageBuilder.RemoveAfter(m, 2);
       self.log.push(m);
     } catch (ex) {
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
@@ -49,17 +42,25 @@ View.prototype.sendPage = function(page) {
     }
   };
 
-  var successHandler = function(data) {
+  var onSuccess = function(data) {
     var m = gMessageBuilder.buildInfo('Done, Master');
-    self.RemoveAfter(m, 2);
+    gMessageBuilder.RemoveAfter(m, 2);
     self.log.push(m);
-    self.UpdateUserInfo();
+    gView.UpdateUserInfo();
   };
 
-  this.dal.putPage(page, successHandler, errorHandler);
+  this.dal.putPage(page, onSuccess, onError);
 }
 
-View.prototype.onUploadTextFile = function () {
+StoreController.prototype.setCurrentTextFilename = function (/*value*/) {
+  var fileInput = $("#fileInput");
+  var file = fileInput[0].files[0];
+
+  this.currentTextFilename = file;
+}
+
+
+StoreController.prototype.onUploadTextFile = function () {
   var self = this;
   var file = this.currentTextFilename;
   var pageName = file.name;  // FIXME: не очень, но пока так
@@ -87,6 +88,25 @@ View.prototype.onUploadTextFile = function () {
 
   reader.readAsText(file);
 }
+
+/// /// ///
+
+function View(dal) {
+  var self = this;
+  this.dal = dal;
+  this.currentWordData = new CurrentWordData();
+  this.userSummary = new UserSummary([]);
+  this.currentTextFilename = "";
+
+  // Obj. graph
+  this.log = gErrorActor;
+}
+
+View.prototype.UpdateUserInfo = function() {
+  var self = this;
+  setTimeout(function() { self.reload(); }, 5000);
+}
+
 
 View.prototype.GetCurrentPageName = function () {
   return $('#pages > option:selected').text();
@@ -219,10 +239,6 @@ View.prototype._GetUserSummary = function() {
   this.dal.getUserSummary(successHandler, errorHandler);
 }
 
-View.prototype.RemoveAfter = function (m, sec) {
-  setTimeout(function() { m.selfDelete(); }, sec * 1000);
-}
-
 // Actions
 View.prototype.reload = function() {
   var self = this;
@@ -265,15 +281,18 @@ View.prototype.activatePipeline = function () {
   this.onGetWordPackage();
 }
 
+function CardWidget() {
+
+}
+
 // State
 // создаются до загрузки DOM?
 var gErrorActor = new message_subsystem.MessagesQueue();
 var gMessageBuilder = new message_subsystem.MessageBuilder();
-
 var gDataAccessLayer = new DataAccessLayer();
-
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
+var gStoreController = new StoreController();
 
 function onGetData() {
   var point = gView.makePoint();
@@ -284,20 +303,20 @@ function onGetData() {
 $(function() {
   // Handler for .ready() called.
   gView.reload();
-  gPlotView.reset();
 
   $("#fileInput").change(function(e) {
-    gView.setCurrentTextFilename();
+    gStoreController.setCurrentTextFilename();
   })
 
   var m = gMessageBuilder.buildWarning(
-      '<b>Warning:</b> Project under development. One user for everyone. All data can be removed in any time.');
+      '<b>Warning:</b> Project under development. ' 
+      + 'One user for everyone. All data can be removed in any time.');
 
-  gView.RemoveAfter(m, 5);
+  gMessageBuilder.RemoveAfter(m, 5);
   gErrorActor.push(m);
 
   var m1 = gMessageBuilder.buildWarning("<b>Warning:</b> Subtitles and plain text files only");
-  gView.RemoveAfter(m1, 5);
+  gMessageBuilder.RemoveAfter(m1, 5);
   gErrorActor.push(m1);
 });
 

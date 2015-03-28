@@ -18,6 +18,11 @@ message_subsystem.MessageBuilder.prototype.buildInfo = function(text) {
   return new message_subsystem.Message(text, 'info');
 }
 
+message_subsystem.MessageBuilder.prototype.RemoveAfter = function (m, sec) {
+  setTimeout(function() { m.selfDelete(); }, sec * 1000);
+}
+
+
 message_subsystem.MessageBuilder.prototype.buildWarning = function(text) {
   return new message_subsystem.Message(text, 'warning');
 }

@@ -30,7 +30,6 @@
 	<!--  Other -->
 	Current page: <b><span id="pageNameView">Choose please...</span></b>
 	&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Toggle settings" onclick="gView.toggleSettings()"/>
-	<input type="button" class="btn btn-danger" value="Clear store" onclick="gDataAccessLayer.resetFullStore()"/>
 	<br/>
 	<br/>
 	<div id="settings_id" class="add-information-hidded">
@@ -47,12 +46,15 @@
 		
 
 		<!-- FIXME: Dirty, but else bad looks. -->
+		<hr/>
 		<div>
 			<br/>
 			<input type="file" id="fileInput">
 			<br/>
-			<input type="button" class="btn btn-primary" value="Process file" onclick="gView.onUploadTextFile()"/>		
+			<input type="button" class="btn btn-primary" value="Process file" onclick="gStoreController.onUploadTextFile()"/>
+			<input type="button" class="btn btn-danger" value="Clear store" onclick="gStoreController.ResetFullStore()"/>		
 		</div>
+		<hr/>
 		<br/>
 	</div>
 
