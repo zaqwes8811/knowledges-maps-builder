@@ -14,87 +14,9 @@
 // http://www.electrictoolbox.com/jquery-add-option-select-jquery/
 // http://stackoverflow.com/questions/47824/how-do-you-remove-all-the-options-of-a-select-box-and-then-add-one-option-and-se
 
-/// /// ///
-
-// Top object
-function StoreController() {
-  
-  // Obj. graph
-  this.log = gErrorActor;
-  this.dal = gDataAccessLayer;
-}
-
-StoreController.prototype.ResetFullStore = function () {
-  gDataAccessLayer.resetFullStore();
-}
-
-StoreController.prototype.sendPage = function(page) {
-  var self = this;
-
-  var onError = function(e) {
-    try {
-      var m = gMessageBuilder.buildError('Error occure, Master');
-      gMessageBuilder.RemoveAfter(m, 2);
-      self.log.push(m);
-    } catch (ex) {
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
-      //if (e if e instanceof RangeError)
-    }
-  };
-
-  var onSuccess = function(data) {
-    var m = gMessageBuilder.buildInfo('Done, Master');
-    gMessageBuilder.RemoveAfter(m, 2);
-    self.log.push(m);
-    gView.UpdateUserInfo();
-  };
-
-  this.dal.putPage(page, onSuccess, onError);
-}
-
-StoreController.prototype.setCurrentTextFilename = function (/*value*/) {
-  var fileInput = $("#fileInput");
-  var file = fileInput[0].files[0];
-
-  this.currentTextFilename = file;
-}
-
-
-StoreController.prototype.onUploadTextFile = function () {
-  var self = this;
-  var file = this.currentTextFilename;
-  var pageName = file.name;  // FIXME: не очень, но пока так
-  if (!file) {
-    return;    
-  }
-
-  // FIXME: if not match
-  if (false) {  }
-  
-  // FIXME: http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
-  // Вроде бы трудно на голом jQ and Ajax - "Doing this kind of uploading hacks is not an enjoyable experience"
-  // http://malsup.com/jquery/form/#ajaxForm
-
-  // FIXME: to html5 
-  // http://www.matlus.com/html5-file-upload-with-progress/
-  // http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
-  var reader = new FileReader();
-
-  reader.onload = function(e) {
-    var text = reader.result;
-    var page = new protocols.TextPackage(pageName, text);
-    self.sendPage(page);
-  };
-
-  reader.readAsText(file);
-}
-
-/// /// ///
-
 function View(dal) {
   var self = this;
   this.dal = dal;
-  this.currentWordData = new CurrentWordData();
   this.userSummary = new UserSummary([]);
   this.currentTextFilename = "";
 
@@ -116,9 +38,6 @@ View.prototype.GetCurrentGeneratorName = function() {
   return $('#pageGenerators > option:selected').text();
 };
 
-/**
-  \brief 
-*/
 View.prototype.ResetPageOptions = function(updatedNames) 
 {
   // Need store, and active
@@ -150,36 +69,6 @@ View.prototype.ResetGeneratorOptions = function(pageName) {
     function(e) { pageGens.append(new Option(e, e, true, true)); });  
 }
 
-View.prototype.drawWordValue = function (word) {
-  $("#word_holder_id").text(word);
-}
-
-View.prototype._DrawPageSummary = function() {
-  var currentPageName = this.GetCurrentPageName();
-  $('#pageNameView').text(currentPageName);
-}
-
-View.prototype.drawNGramStatistic = function (imp) {
-  $("#count_occurance").text(imp);
-}
-
-View.prototype.redrawSentences = function (sentences, word) {
-  var sent = [];
-
-  _.each(sentences, function(e) {
-    var one = e;
-
-    // FIXME: need smart replace! A in smArt also change
-    // FIXME: may be not one occurence in sentence
-    var one = one.replace(word, '<b>' + word + '</b>')
-    sent.push(one);
-  });
-
-  var dom = $('#sentences');
-  dom.empty();
-  _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
-}
-
 View.prototype.toggleSettings = function() {
   $('#settings_id').toggleClass("add-information-hidded");
 }
@@ -188,27 +77,9 @@ View.prototype.togglePageInfo = function() {
   $('#pageInfoID').toggleClass("add-information-hidded");
 }
 
-View.prototype.markIsKnowIt = function() {
-  // тоже вариант, Но разбить на части все равно нельзя 
-  //   - операция послед. для одного клиента, но если клиентов много, то гонки данных
-  // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
-  var self = this;
-
-  var errorHandler = function(data) { self.getWordError(data) };
-  var successHandler = function(data) { 
-    onGetData();  
-    self.getWordSuccess(data); 
-  }
-
-  var point = this.makePoint();
-  this.dal.markIsDone(point, successHandler, errorHandler);
-  
-}
-
-View.prototype.makePoint = function () {
+View.prototype.makePoint = function (pointPos) {
   var page = this.GetCurrentPageName();
   var gen = this.GetCurrentGeneratorName();
-  var pointPos = this.currentWordData.getPos();
   return new protocols.PathValue(page, gen, pointPos);
 }
 
@@ -251,22 +122,66 @@ View.prototype.reload = function() {
   })
 }
 
-View.prototype.getWordSuccess = function(data) {
-  this.currentWordData.set(data);
+View.prototype.activatePipeline = function () {
+  // Build page by settings
+  gCardWidget.onGetWordPackage();
+}
+
+/// /// ///
+
+function CardWidget() {
+  this.m_currentWordData = new CurrentWordData();
+}
+
+CardWidget.prototype.getWordError = function(data) {
+  this.log.push(gMessageBuilder.buildError(data.statusText)); 
+};
+
+CardWidget.prototype.onGetWordPackage = function () { 
+  var self = this;
+  var pointPos = this.m_currentWordData.getPos();
+  this.onGetWordPackage(this.makePoint(pointPos));
+}
+
+CardWidget.prototype.getWordSuccess = function(data) {
+  this.m_currentWordData.set(data);
   this.drawWordValue(data.word);
   this.redrawSentences(data.sentences, data.word);
   this.drawNGramStatistic(data.importance + " from " + data.maxImportance);
 };
 
-View.prototype.getWordError = function(data) {
-  this.log.push(gMessageBuilder.buildError(data.statusText)); 
-};
+CardWidget.prototype.drawWordValue = function (word) {
+  $("#word_holder_id").text(word);
+}
 
-View.prototype.onGetWordPackage = function () { 
+CardWidget.prototype._DrawPageSummary = function() {
+  var currentPageName = this.GetCurrentPageName();
+  $('#pageNameView').text(currentPageName);
+}
+
+CardWidget.prototype.drawNGramStatistic = function (imp) {
+  $("#count_occurance").text(imp);
+}
+
+CardWidget.prototype.redrawSentences = function (sentences, word) {
+  var sent = [];
+
+  _.each(sentences, function(e) {
+    var one = e;
+
+    // FIXME: need smart replace! A in smArt also change
+    // FIXME: may be not one occurence in sentence
+    var one = one.replace(word, '<b>' + word + '</b>')
+    sent.push(one);
+  });
+
+  var dom = $('#sentences');
+  dom.empty();
+  _.each(sent, function(e) { dom.append('<li>'+ e + '</li>')});
+}
+
+CardWidget.prototype.onGetWordPackage = function (point) { 
   var self = this;
-
-  // Нужны еще данные - страница и имя генератора
-  var point = this.makePoint();
   
   // FIXME: blinking now - need to think
   var errorHandler = function(data) { self.getWordError(data) };
@@ -276,14 +191,24 @@ View.prototype.onGetWordPackage = function () {
   this.dal.getWordPkgAsync(successHandler, errorHandler, point);
 }
 
-View.prototype.activatePipeline = function () {
-  // Build page by settings
-  this.onGetWordPackage();
+
+CardWidget.prototype.markIsKnowIt = function() {
+  // тоже вариант, Но разбить на части все равно нельзя 
+  //   - операция послед. для одного клиента, но если клиентов много, то гонки данных
+  // http://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+  var self = this;
+
+  var errorHandler = function(data) { self.getWordError(data) };
+  var successHandler = function(data) { 
+    onGetData();  
+    self.getWordSuccess(data); 
+  }
+
+  var point = this.makePoint();
+  this.dal.markIsDone(point, successHandler, errorHandler);
 }
 
-function CardWidget() {
-
-}
+/// /// ///
 
 // State
 // создаются до загрузки DOM?
@@ -292,7 +217,8 @@ var gMessageBuilder = new message_subsystem.MessageBuilder();
 var gDataAccessLayer = new DataAccessLayer();
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
-var gStoreController = new StoreController();
+var gStoreController = new StoreControllerWidget();
+var gCardWidget = new CardWidget();
 
 function onGetData() {
   var point = gView.makePoint();
@@ -305,13 +231,12 @@ $(function() {
   gView.reload();
 
   $("#fileInput").change(function(e) {
-    gStoreController.setCurrentTextFilename();
+    gStoreControllerWidget.FillCurrentFilename();
   })
 
   var m = gMessageBuilder.buildWarning(
       '<b>Warning:</b> Project under development. ' 
       + 'One user for everyone. All data can be removed in any time.');
-
   gMessageBuilder.RemoveAfter(m, 5);
   gErrorActor.push(m);
 
@@ -320,18 +245,3 @@ $(function() {
   gErrorActor.push(m1);
 });
 
-function test() {
-  function square(x) {
-    return x * x;
-  }
-  function plus1(x) {
-      return x + 1;
-  }
-
-  Q.fcall(function () {return 4;})
-  .then(plus1)
-  .then(square)
-  .then(function(z) {
-      alert("square of (value+1) = " + z);
-  });
-}
