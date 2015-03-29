@@ -1,0 +1,2 @@
+Hard to connect 
+Maven >= 3.1 + Java + Kotlin + GAE + Eclipse/Idea
