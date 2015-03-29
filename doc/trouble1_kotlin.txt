@@ -1,2 +1,5 @@
 Hard to connect 
 Maven >= 3.1 + Java + Kotlin + GAE + Eclipse/Idea
+
+May be 3.0.5 for build plugins? not projects
+http://awesome-graphs-demo.stiltsoft.com/projects/JETBRAINS/repos/kotlin-eclipse/browse
