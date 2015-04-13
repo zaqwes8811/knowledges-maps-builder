@@ -7,6 +7,8 @@ import java.util.regex.Pattern
 class ServerTimeTest {
 
     Test fun formatting() {
+
+        assertTrue(true);
         //assertTrue(Pattern.matches("\\d\\d:\\d\\d:\\d\\d\r\n", formattedTime()))
     }
 

@@ -1,0 +1,8 @@
+Idea:
+https://www.jetbrains.com/idea/help/creating-maven-run-debug-configuration.html
+http://hippieitgeek.blogspot.se/2014/02/how-to-debug-maven-applications-in.html
+
+! http://stackoverflow.com/questions/3784781/in-intellij-how-do-i-debug-a-maven-test-goal
+http://maven.apache.org/surefire/maven-surefire-plugin/examples/debugging.html
+
+mvn -Dmaven.surefire.debug="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 -Xnoagent -Djava.compiler=NONE" test
