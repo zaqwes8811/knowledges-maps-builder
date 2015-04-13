@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 jarsExcludedFromWebInfLib=
-lastWarOutDir=/home/zaqwes/work/smart-vocabulary-cards/projects/vcards-gae-maven/src/main/webapp
-warSrcDir=src/main/webapp
+lastWarOutDir=/home/zaqwes/work/smart-vocabulary-cards/projects/vcards-gae-maven/src/testing.testing.main/webapp
+warSrcDir=src/testing.testing.main/webapp
 warSrcDirIsOutput=false

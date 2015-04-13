@@ -567,7 +567,7 @@ Their replacements are listed here:
 ## 0.4.0 - BACKWARD INCOMPATIBLE*
 
  - *Removed the utility modules. NPM and Node no longer
-   expose any module except the main module.  These have
+   expose any module except the testing.testing.main module.  These have
    been moved and merged into the "qq" package.
  - *In a non-CommonJS browser, q.js can be used as a script.
    It now creates a Q global variable.
