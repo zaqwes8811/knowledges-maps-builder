@@ -1,18 +1,17 @@
 package instances;
 
-import gae_store_space.*;
-
 import java.util.List;
 
-import kinds.PageKind;
-import kinds.UserFrontend;
-import pages.PageFrontend;
+import gae_data_source_layer.OfyService;
+import gae_data_source_layer.PageKind;
+import gae_data_source_layer.UserFrontend;
 import pipeline.math.DistributionElement;
-import web_relays.protocols.PageSummaryValue;
-import web_relays.protocols.PathValue;
+import pipeline.pages.PageFrontend;
+import service_layer.protocols.PageSummaryValue;
 
 import com.google.common.collect.ImmutableList;
-import web_relays.protocols.WordDataValue;
+import service_layer.protocols.PathValue;
+import service_layer.protocols.WordDataValue;
 
 public class AppInstance {
 	public static final String defaultPageName = "Default page";
