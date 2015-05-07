@@ -22,7 +22,7 @@ public class BleedingEdgeController
     // FIXME: http://stackoverflow.com/questions/11645266/java-annotation-parameters-in-kotlin
     // https://github.com/gzoritchak/kotlin-examples/tree/master/kotlin-angular-spring-mvc
     RequestMapping(
-            value=("/user_summary_kot"),  // not array(...)
+            value=("/user_summary_kot"),  // not array(...), if Scala conneced need array
             method=array(RequestMethod.GET),
             headers=array("Accept=application/json")  // is deprecated. Use arrayOf() instead. but not compiled
     )

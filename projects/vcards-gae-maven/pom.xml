@@ -359,7 +359,11 @@
                             <arg>${project.build.directory}/.scala_dependencies</arg>
                         </args>
                     </configuration>
+
+
                 </execution>
+
+
             </executions>
         </plugin>
 
@@ -375,13 +379,14 @@
                 <execution>
                     <id>compile</id>
                     <phase>process-sources</phase>
-                    <goals> <goal>compile</goal> </goals>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
 
                     <configuration>
                         <sourceDirs>
                             <source>src/main/java</source>
                             <source>src/main/scala</source>
-                            <source>src/main/kotlin</source>
                             <source>src/main/resources</source>
                         </sourceDirs>
                     </configuration>
@@ -395,7 +400,7 @@
                     <configuration>
                         <sourceDirs>
                             <source>src/test/java</source>
-                            <source>src/test/kotlin</source>
+                            <source>src/test/scala</source>
                             <source>src/test/resources</source>
                         </sourceDirs>
                     </configuration>
@@ -433,31 +438,17 @@
         <url>http://repository.jetbrains.com/all</url>
     </repository>
 
-    <!--repository>
-        <id>akka-snapshots</id>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-        <url>http://repo.akka.io/snapshots/</url>
-    </repository>
-
-    <repository>
-        <id>akka.repository</id>
-        <name>Akka Maven Repository</name>
-        <url>http://akka.io/repository</url>
-    </repository-->
-
 </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>http://repo.spring.io/libs-release</url>
-        </pluginRepository>
+<pluginRepositories>
+    <pluginRepository>
+        <id>spring-releases</id>
+        <url>http://repo.spring.io/libs-release</url>
+    </pluginRepository>
 
-        <pluginRepository>
-            <id>jetbrains-all</id>
-            <url>http://repository.jetbrains.com/all</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <pluginRepository>
+        <id>jetbrains-all</id>
+        <url>http://repository.jetbrains.com/all</url>
+    </pluginRepository>
+</pluginRepositories>
 </project>
