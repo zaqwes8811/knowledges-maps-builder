@@ -15,7 +15,7 @@
     <kotlin.version>0.1-SNAPSHOT</kotlin.version>
     <!--junit.version>4.10</junit.version-->
 
-    <scala.version>2.10.3</scala.version>
+    <scala.version>2.10.0</scala.version>
 </properties>
 
 <prerequisites>
@@ -43,12 +43,13 @@
     <scope>test</scope>
 </dependency>
 
-<!--dependency>
+<dependency>
     <groupId>org.scala-tools.testing</groupId>
-    <artifactId>specs_${scala.version}</artifactId>
+    <!--artifactId>specs_${scala.version}</artifactId-->
+    <artifactId>specs_2.10</artifactId>
     <version>1.6.9</version>
     <scope>test</scope>
-</dependency-->
+</dependency>
 
 
 
