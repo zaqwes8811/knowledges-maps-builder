@@ -58,12 +58,6 @@
     <version>1.0.0</version>
 </dependency>
 
-<dependency>
-    <groupId>org.jetbrains.kotlin</groupId>
-    <artifactId>kotlin-stdlib</artifactId>
-    <version>${kotlin.version}</version>
-</dependency>
-
 <!-- https://code.google.com/p/caliper/ -->
 <dependency>
   <groupId>com.google.caliper</groupId>
@@ -285,6 +279,16 @@
 
 
 <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <version>2.15.0</version>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+
     <!-- for hot reload of the web application-->
     <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
     <plugins>
@@ -312,6 +316,14 @@
                 <source>1.7</source>
                 <target>1.7</target>
             </configuration>
+            <executions>
+                <execution>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
+                </execution>
+            </executions>
         </plugin>
 
         <plugin>
@@ -341,90 +353,28 @@
             </configuration>
         </plugin>
 
-        <!-- Scala: Guava troubles-->
         <plugin>
             <groupId>org.scala-tools</groupId>
             <artifactId>maven-scala-plugin</artifactId>
-            <version>2.15.0</version>
             <executions>
                 <execution>
+                    <id>scala-compile-first</id>
+                    <phase>process-resources</phase>
                     <goals>
+                        <goal>add-source</goal>
                         <goal>compile</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>scala-test-compile</id>
+                    <phase>process-test-resources</phase>
+                    <goals>
                         <goal>testCompile</goal>
                     </goals>
-                    <configuration>
-                        <args>
-                            <arg>-make:transitive</arg>
-                            <arg>-dependencyfile</arg>
-                            <arg>${project.build.directory}/.scala_dependencies</arg>
-                        </args>
-                    </configuration>
-
-
-                </execution>
-
-
-            </executions>
-        </plugin>
-
-
-        <!-- kotlin -->
-        <plugin>
-            <artifactId>kotlin-maven-plugin</artifactId>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <version>${kotlin.version}</version>
-
-            <!-- http://kotlinlang.org/docs/reference/using-maven.html -->
-            <executions>
-                <execution>
-                    <id>compile</id>
-                    <phase>process-sources</phase>
-                    <goals>
-                        <goal>compile</goal>
-                    </goals>
-
-                    <configuration>
-                        <sourceDirs>
-                            <source>src/main/java</source>
-                            <source>src/main/scala</source>
-                            <source>src/main/resources</source>
-                        </sourceDirs>
-                    </configuration>
-                </execution>
-
-                <execution>
-                    <id>test-compile</id>
-                    <phase>process-test-sources</phase>
-                    <goals> <goal>test-compile</goal> </goals>
-
-                    <configuration>
-                        <sourceDirs>
-                            <source>src/test/java</source>
-                            <source>src/test/scala</source>
-                            <source>src/test/resources</source>
-                        </sourceDirs>
-                    </configuration>
                 </execution>
             </executions>
         </plugin>
-
     </plugins>
-
-    <pluginManagement>
-        <plugins>
-            <plugin>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <version>${kotlin.version}</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.scala-tools</groupId>
-                <artifactId>maven-scala-plugin</artifactId>
-                <version>2.15.0</version>
-            </plugin>
-        </plugins>
-    </pluginManagement>
 </build>
 
 <repositories>
@@ -432,23 +382,12 @@
         <id>spring-releases</id>
         <url>http://repo.spring.io/libs-release</url>
     </repository>
-
-    <repository>
-        <id>jetbrains-all</id>
-        <url>http://repository.jetbrains.com/all</url>
-    </repository>
-
 </repositories>
 
 <pluginRepositories>
     <pluginRepository>
         <id>spring-releases</id>
         <url>http://repo.spring.io/libs-release</url>
-    </pluginRepository>
-
-    <pluginRepository>
-        <id>jetbrains-all</id>
-        <url>http://repository.jetbrains.com/all</url>
     </pluginRepository>
 </pluginRepositories>
 </project>
