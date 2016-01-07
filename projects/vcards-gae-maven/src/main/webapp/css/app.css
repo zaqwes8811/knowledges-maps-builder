@@ -17,8 +17,9 @@ body {
     height: 0px;
 }
 
-.add-information-visible {
-    visibility: visible;
+.work-space-hidded {
+    visibility: hidden;
+    height: 0px;
 }
 	
 /**/
