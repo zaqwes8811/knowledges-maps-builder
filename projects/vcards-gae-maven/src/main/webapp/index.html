@@ -30,20 +30,18 @@
 	<!--  Other -->
 	Current page: <b><span id="pageNameView">Choose please...</span></b>
 	&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Toggle settings" onclick="gView.toggleSettings()"/>
-	<input type="button" class="btn btn-danger" value="Clear store" onclick="gDataAccessLayer.resetFullStore()"/>
 	<br/>
 	<br/>
 	<div id="settings_id" class="add-information-hidded">
 		<select id="pages"></select>
-		<br/><br/>
 		<select id="pageGenerators"></select>
-		<br/><br/>
 		<select id="availabeFilters"></select>
 		<br/>
 		<br/>
 
-		<input type="button" class="btn btn-primary" value="Apply" onclick="gView.activatePipeline()"/> 
+		<input type="button" class="btn btn-primary" value="Set selected page as current" onclick="gView.activatePipeline()"/> 
 		<button class="btn btn-warning">Delete page</button>
+		<input type="button" class="btn btn-danger" value="Clear store" onclick="gDataAccessLayer.resetFullStore()"/>
 		
 
 		<!-- FIXME: Dirty, but else bad looks. -->
@@ -51,21 +49,25 @@
 			<br/>
 			<input type="file" id="fileInput">
 			<br/>
-			<input type="button" class="btn btn-primary" value="Process file" onclick="gView.onUploadTextFile()"/>		
+			<input type="button" class="btn btn-primary" value="Load chosen file" onclick="gView.onUploadTextFile()"/>		
 		</div>
 		<br/>
 	</div>
 
-	<!-- Main -->
-	<input type="button" class="btn btn-warning" value="I know it" onclick="gView.markIsKnowIt()"/>
-	<input type="button" class="btn btn-primary" value="Get new word" onclick="gView.onGetWordPackage()"/>
-	<br/>
-	<h4 class="center"><span id="word_holder_id">No word here. Need get new word.</span></h4>
-	<ul id="sentences"><li>No sentences here</li></ul>
-	<br/>
-	<span>
-		Importance note:<span class="backspace"></span>
-		<b><span id="count_occurance"></span></b>
-	</span>
+	<div id="work_space">
+		<!-- Main -->
+		<input type="button" class="btn btn-primary" value="New word" onclick="gView.onGetWordPackage()"/>
+		<br/>
+		<h4 class="center"><span id="word_holder_id">No word here</span></h4>
+		<ul id="sentences"><li>No sentences here</li></ul>
+		<br/>
+		<span>
+			Importance note:<span class="backspace"></span>
+			<b><span id="count_occurance"></span></b>
+		</span>
+		<br/>
+		<br/>
+		<input type="button" class="btn btn-warning" value="Known to me" onclick="gView.markIsKnowIt()"/>
+	</div>
 </body>
 </html>

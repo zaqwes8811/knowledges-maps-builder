@@ -162,6 +162,7 @@ View.prototype.redrawSentences = function (sentences, word) {
 
 View.prototype.toggleSettings = function() {
   $('#settings_id').toggleClass("add-information-hidded");
+  $('#work_space').toggleClass("work-space-hidded");
 }
 
 View.prototype.togglePageInfo = function() {
