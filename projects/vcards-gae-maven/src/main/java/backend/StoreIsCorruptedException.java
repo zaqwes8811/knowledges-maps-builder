@@ -1,4 +1,4 @@
-package gae_related;
+package backend;
 
 /**
  * Created by zaqwes on 11/21/2014.

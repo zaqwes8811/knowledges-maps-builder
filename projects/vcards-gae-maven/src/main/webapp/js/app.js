@@ -266,6 +266,11 @@ View.prototype.activatePipeline = function () {
   this.onGetWordPackage();
 }
 
+//=====================================================
+
+
+//=====================================================
+
 // State
 // создаются до загрузки DOM?
 var gErrorActor = new message_subsystem.MessagesQueue();
@@ -275,6 +280,7 @@ var gDataAccessLayer = new DataAccessLayer();
 
 var gView = new View(gDataAccessLayer);
 var gPlotView = new PlotView(gDataAccessLayer);
+var gDictResearch = new DictResearch();
 
 function onGetData() {
   var point = gView.makePoint();

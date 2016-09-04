@@ -1,4 +1,4 @@
-package gae_related;
+package backend;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
@@ -10,8 +10,6 @@ import net.jcip.annotations.NotThreadSafe;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import static gae_related.OfyService.ofy;
 
 // Must be full thread-safe
 //
@@ -62,14 +60,14 @@ public class UserKind {
 
   //@Logic
   public static UserKind createOrRestoreById(final String id) {
-    UserKind r = ofy().transact(new Work<UserKind>() {
+    UserKind r = OfyService.ofy().transact(new Work<UserKind>() {
       @Override
       public UserKind run() {
-        UserKind th = ofy().load().type(UserKind.class).id(id).now();
+        UserKind th = OfyService.ofy().load().type(UserKind.class).id(id).now();
         if (th == null) {
           th = new UserKind();
           th.id = id;
-          ofy().save().entity(th);
+          OfyService.ofy().save().entity(th);
         }
         return th;
       }

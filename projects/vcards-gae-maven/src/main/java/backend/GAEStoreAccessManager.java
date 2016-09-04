@@ -1,4 +1,4 @@
-package gae_related;
+package backend;
 
 public final class GAEStoreAccessManager {
 	/*

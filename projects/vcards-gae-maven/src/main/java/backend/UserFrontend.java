@@ -1,4 +1,4 @@
-package gae_related;
+package backend;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -6,8 +6,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
-import backend.GlobalIO;
-import backend.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
@@ -21,8 +19,6 @@ import http_related.PageSummaryValue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-
-import static gae_related.OfyService.ofy;
 
 public class UserFrontend {
   // State
@@ -146,12 +142,12 @@ public class UserFrontend {
       Work<PageKind> work = new Work<PageKind>() {
         @Override
         public PageKind run() {
-          ofy().save().entity(g).now();
+          OfyService.ofy().save().entity(g).now();
 
           // нельзя не сохраненны присоединять - поэтому нельзя восп. сущ. методом
           page.setGenerator(g);
 
-          ofy().save().entity(page).now();
+          OfyService.ofy().save().entity(page).now();
 
           // can add key
           Key<PageKind> key = Key.create(page);
@@ -160,7 +156,7 @@ public class UserFrontend {
           user.getPageKeys().add(key);
 
           // need to save user!
-          ofy().save().entity(user).now();
+          OfyService.ofy().save().entity(user).now();
           return page;
         }
       };
@@ -168,7 +164,7 @@ public class UserFrontend {
       getRaw().getPageNamesRegister().add(pageName);
       // FIXME: база данный в каком состоянии будет тут? согласованном?
       // check here, but what can do?
-      PageKind r = ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
+      PageKind r = OfyService.ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, work);
 
       checkPagesInvariant();
 

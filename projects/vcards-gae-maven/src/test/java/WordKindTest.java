@@ -1,10 +1,12 @@
+import backend.DictionaryKind;
+import backend.GoogleTranslatorRecord;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.common.base.Optional;
 import com.google.common.io.Closer;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import gae_related.OfyService;
-import gae_related.GoogleTranslatorKind;
+import backend.OfyService;
 import org.apache.log4j.BasicConfigurator;
 import org.jsefa.Deserializer;
 import org.jsefa.csv.CsvIOFactory;
@@ -28,7 +30,7 @@ import java.util.List;
 public class WordKindTest {
     private static final LocalServiceTestHelper helper =
             new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
-                    .setDefaultHighRepJobPolicyUnappliedJobPercentage(50));
+                    .setDefaultHighRepJobPolicyUnappliedJobPercentage(10));
 
     private static final String csvFn = "../../materials/Phrasebook - Sheet 1.csv";
 
@@ -62,7 +64,7 @@ public class WordKindTest {
     @Test
     public void testGoogleCsv()throws IOException {
         Closer closer = Closer.create();
-        List<GoogleTranslatorKind> kinds = new ArrayList<>();
+        List<GoogleTranslatorRecord> records = new ArrayList<>();
         try {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
@@ -75,13 +77,13 @@ public class WordKindTest {
             csvConfig.setQuoteCharacter('\"');
 
             Deserializer deserializer = CsvIOFactory.createFactory(csvConfig,
-                    GoogleTranslatorKind.class).createDeserializer();
+                    GoogleTranslatorRecord.class).createDeserializer();
             deserializer.open(reader);
 
             while (deserializer.hasNext()) {
-                GoogleTranslatorKind p = deserializer.next();
+                GoogleTranslatorRecord p = deserializer.next();
                 if(p.from.equals("English")){
-                    kinds.add(p);
+                    records.add(p);
                 }
             }
             deserializer.close(true);
@@ -96,10 +98,17 @@ public class WordKindTest {
         try (Closeable c = ObjectifyService.begin()) {
             // Нельзя сохранять поштучно
             // Строки тоже короткие
-            GoogleTranslatorKind kind = new GoogleTranslatorKind();
-            kind.persist();
 
-            assert kind.id != null;
+            DictionaryKind dict = new DictionaryKind();
+            dict.records = records;
+            dict.name = "1";
+
+            dict.persist();
+            assert dict.id != null;
+
+            // load
+            Optional<DictionaryKind> loaded = OfyService.getPageKind("1");
+//            assert loaded.isPresent();
         }
     }
 }
