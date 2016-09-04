@@ -1,4 +1,4 @@
-package web_relays.protocols;
+package http_related;
 
 import java.util.ArrayList;
 import java.util.List;

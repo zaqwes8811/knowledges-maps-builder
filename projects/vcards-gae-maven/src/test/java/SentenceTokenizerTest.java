@@ -1,8 +1,5 @@
-import com.carrotsearch.junitbenchmarks.AbstractBenchmark;
 import com.carrotsearch.junitbenchmarks.BenchmarkRule;
 import com.google.common.base.Splitter;
-
-import cross_cuttings_layer.GlobalIO;
 
 import org.junit.Rule;
 import org.junit.Test;

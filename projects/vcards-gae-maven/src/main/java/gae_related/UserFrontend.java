@@ -1,4 +1,4 @@
-package kinds;
+package gae_related;
 
 import com.google.common.base.Optional;
 import com.google.common.cache.CacheBuilder;
@@ -6,24 +6,23 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Work;
-import cross_cuttings_layer.GlobalIO;
-import gae_store_space.GAEStoreAccessManager;
-import instances.AppInstance;
+import backend.GlobalIO;
+import backend.AppInstance;
 import net.jcip.annotations.GuardedBy;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
-import pages.PageBuilder;
-import pages.PageFrontend;
-import pages.PageWithBoundary;
+import http_related.PageBuilder;
+import http_related.PageFrontend;
+import http_related.PageWithBoundary;
 import pipeline.PipelineResult;
 import pipeline.math.DistributionElement;
-import web_relays.protocols.PageSummaryValue;
+import http_related.PageSummaryValue;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_related.OfyService.ofy;
 
 public class UserFrontend {
   // State

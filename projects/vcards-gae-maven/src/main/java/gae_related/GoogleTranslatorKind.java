@@ -1,4 +1,4 @@
-package kinds;
+package gae_related;
 /**
  * Created by zaqwes on 04/09/16.
  */
@@ -6,12 +6,11 @@ package kinds;
 import com.googlecode.objectify.VoidWork;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import gae_store_space.GAEStoreAccessManager;
 import net.jcip.annotations.NotThreadSafe;
 import org.jsefa.csv.annotation.CsvDataType;
 import org.jsefa.csv.annotation.CsvField;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_related.OfyService.ofy;
 
 @NotThreadSafe
 @Entity
@@ -36,9 +35,9 @@ public class GoogleTranslatorKind {
     public String translate;
 
     // must be final
-    public void persist(final GoogleTranslatorKind kind)
+    public void persist()
     {
-        // execution on dal - можно транслировать ошибку нижнего слоя
+        final GoogleTranslatorKind kind = this;
         ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
             public void vrun() {
                 ofy().save().entity(kind).now();

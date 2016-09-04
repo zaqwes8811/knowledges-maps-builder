@@ -1,17 +1,26 @@
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.common.io.Closer;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import gae_store_space.OfyService;
-import kinds.GoogleTranslatorKind;
+import gae_related.OfyService;
+import gae_related.GoogleTranslatorKind;
 import org.apache.log4j.BasicConfigurator;
+import org.jsefa.Deserializer;
+import org.jsefa.csv.CsvIOFactory;
+import org.jsefa.csv.config.CsvConfiguration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import pipeline.ContentItem;
 import pipeline.UniGram;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zaqwes on 5/12/14.
@@ -20,6 +29,8 @@ public class WordKindTest {
     private static final LocalServiceTestHelper helper =
             new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
                     .setDefaultHighRepJobPolicyUnappliedJobPercentage(50));
+
+    private static final String csvFn = "../../materials/Phrasebook - Sheet 1.csv";
 
     @Before
     public void setUp() {
@@ -49,10 +60,44 @@ public class WordKindTest {
     }
 
     @Test
-    public void testGoogleCsv() {
+    public void testGoogleCsv()throws IOException {
+        Closer closer = Closer.create();
+        List<GoogleTranslatorKind> kinds = new ArrayList<>();
+        try {
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream(csvFn), "UTF8"));
+            closer.register(reader);
+
+            CsvConfiguration csvConfig = new CsvConfiguration();
+            csvConfig.setFieldDelimiter(',');
+            csvConfig.setLineBreak("\n");
+            csvConfig.setQuoteCharacter('\"');
+
+            Deserializer deserializer = CsvIOFactory.createFactory(csvConfig,
+                    GoogleTranslatorKind.class).createDeserializer();
+            deserializer.open(reader);
+
+            while (deserializer.hasNext()) {
+                GoogleTranslatorKind p = deserializer.next();
+                if(p.from.equals("English")){
+                    kinds.add(p);
+                }
+            }
+            deserializer.close(true);
+
+        } catch (Throwable e) {
+            closer.rethrow(e);
+        } finally {
+            closer.close();
+        }
+
+        // Сохраняем
         try (Closeable c = ObjectifyService.begin()) {
+            // Нельзя сохранять поштучно
+            // Строки тоже короткие
             GoogleTranslatorKind kind = new GoogleTranslatorKind();
-            kind.persist(kind);
+            kind.persist();
 
             assert kind.id != null;
         }

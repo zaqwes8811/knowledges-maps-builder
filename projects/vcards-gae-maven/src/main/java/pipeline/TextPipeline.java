@@ -80,7 +80,7 @@ public class TextPipeline {
       }
     }
 
-    //if (statistic.size() < kinds.size())
+    //if (statistic.size() < gae_related.size())
     //  throw new AssertionError();
     for (String stem: statistic.keySet()) {
       Integer volume = 0;

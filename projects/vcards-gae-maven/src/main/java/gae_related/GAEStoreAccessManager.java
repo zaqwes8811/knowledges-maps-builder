@@ -1,4 +1,4 @@
-package gae_store_space;
+package gae_related;
 
 public final class GAEStoreAccessManager {
 	/*

@@ -1,4 +1,4 @@
-package kinds;
+package gae_related;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
@@ -11,7 +11,7 @@ import net.jcip.annotations.NotThreadSafe;
 import java.util.HashSet;
 import java.util.Set;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_related.OfyService.ofy;
 
 // Must be full thread-safe
 //

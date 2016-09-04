@@ -3,7 +3,7 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import kinds.GeneratorKind;
+import gae_related.GeneratorKind;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_related.OfyService.ofy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 

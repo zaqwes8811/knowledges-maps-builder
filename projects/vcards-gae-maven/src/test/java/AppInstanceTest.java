@@ -1,6 +1,6 @@
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import instances.AppInstance;
+import backend.AppInstance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
