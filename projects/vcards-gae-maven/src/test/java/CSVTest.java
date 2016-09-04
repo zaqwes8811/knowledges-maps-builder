@@ -1,5 +1,5 @@
 import com.google.common.io.Closer;
-import kinds.GoogleTranslatorKind;
+import gae_related.GoogleTranslatorKind;
 import org.jsefa.Deserializer;
 import org.jsefa.csv.CsvIOFactory;
 import org.jsefa.csv.config.CsvConfiguration;

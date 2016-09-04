@@ -1,10 +1,8 @@
-package pages;
+package http_related;
 
 import com.google.common.base.Optional;
-import kinds.PageKind;
+import gae_related.PageKind;
 import pipeline.math.DistributionElement;
-import web_relays.protocols.PathValue;
-import web_relays.protocols.WordDataValue;
 
 import java.util.ArrayList;
 

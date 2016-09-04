@@ -1,4 +1,4 @@
-package web_relays.protocols;
+package http_related;
 
 import com.google.common.base.Optional;
 

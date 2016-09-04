@@ -1,10 +1,10 @@
-package pages;
+package http_related;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
-import kinds.GeneratorKind;
-import kinds.PageKind;
-import gae_store_space.StoreIsCorruptedException;
+import gae_related.GeneratorKind;
+import gae_related.PageKind;
+import gae_related.StoreIsCorruptedException;
 import pipeline.PipelineResult;
 import pipeline.TextPipeline;
 

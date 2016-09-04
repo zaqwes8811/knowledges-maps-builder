@@ -1,4 +1,4 @@
-package gae_store_space;
+package gae_related;
 
 // Run outside 'normal'
 // https://groups.google.com/forum/#!topic/objectify-appengine/fZltoWFwbrs
@@ -6,10 +6,10 @@ package gae_store_space;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
-import kinds.GeneratorKind;
-import kinds.GoogleTranslatorKind;
-import kinds.PageKind;
-import kinds.UserKind;
+import gae_related.GeneratorKind;
+import gae_related.GoogleTranslatorKind;
+import gae_related.PageKind;
+import gae_related.UserKind;
 
 public class OfyService {
   static {

@@ -6,10 +6,10 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 
-import cross_cuttings_layer.GlobalIO;
-import gae_store_space.OfyService;
-import instances.AppInstance;
-import kinds.PageKind;
+import backend.GlobalIO;
+import gae_related.OfyService;
+import backend.AppInstance;
+import gae_related.PageKind;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -17,8 +17,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import pages.PageBuilder;
-import pages.PageFrontend;
+import http_related.PageBuilder;
+import http_related.PageFrontend;
 import pipeline.math.DistributionElement;
 
 import java.io.IOException;

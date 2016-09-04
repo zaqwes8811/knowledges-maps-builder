@@ -1,9 +1,9 @@
-package kinds;
+package gae_related;
 
 import java.util.ArrayList;
 
 import com.googlecode.objectify.LoadResult;
-import instances.AppInstance;
+import backend.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorAnyDistribution;
@@ -15,7 +15,7 @@ import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
 
-import static gae_store_space.OfyService.ofy;
+import static gae_related.OfyService.ofy;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения

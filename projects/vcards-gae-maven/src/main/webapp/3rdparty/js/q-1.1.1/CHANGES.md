@@ -12,7 +12,7 @@
    environment variable `Q_DEBUG=1`.
  - Introduces the `tap` method to promises, which will see a value
    pass through without alteration.
- - Use instanceof to recognize own promise instances as opposed to
+ - Use instanceof to recognize own promise backend as opposed to
    thenables.
  - Construct timeout errors with `code === ETIMEDOUT` (Kornel Lesiński)
  - More descriminant CommonJS module environment detection.
@@ -648,7 +648,7 @@ Their replacements are listed here:
 ## 0.2.5
 
  - Changed promises into a duck-type such that multiple
-   instances of the Q module can exchange promise objects.
+   backend of the Q module can exchange promise objects.
    A promise is now defined as "an object that implements the
    `promiseSend(op, resolved, ...)` method and `valueOf`".
  - Exceptions in promises are now captured and returned

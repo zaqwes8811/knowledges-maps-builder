@@ -1,4 +1,4 @@
-package gae_store_space;
+package gae_related;
 
 /**
  * Created by zaqwes on 11/21/2014.

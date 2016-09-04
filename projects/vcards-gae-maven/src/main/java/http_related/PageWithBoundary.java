@@ -1,20 +1,18 @@
-package pages;
+package http_related;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
-import cross_cuttings_layer.AssertException;
-import cross_cuttings_layer.OwnCollections;
-import kinds.GeneratorKind;
-import kinds.PageKind;
-import kinds.UserKind;
+import backend.AssertException;
+import backend.OwnCollections;
+import gae_related.GeneratorKind;
+import gae_related.PageKind;
+import gae_related.UserKind;
 import org.apache.commons.collections4.Predicate;
 import org.apache.log4j.Logger;
 import org.javatuples.Pair;
 import pipeline.ContentItem;
 import pipeline.UniGram;
 import pipeline.math.DistributionElement;
-import web_relays.protocols.PathValue;
-import web_relays.protocols.WordDataValue;
 
 import java.util.ArrayList;
 import java.util.Collections;
