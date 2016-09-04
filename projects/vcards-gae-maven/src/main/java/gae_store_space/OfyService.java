@@ -7,16 +7,16 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 import kinds.GeneratorKind;
+import kinds.GoogleTranslatorKind;
 import kinds.PageKind;
 import kinds.UserKind;
 
 public class OfyService {
   static {
-    //factory().register(SentenceKind.class);
+    factory().register(GoogleTranslatorKind.class);
     factory().register(PageKind.class);
     factory().register(GeneratorKind.class);
     factory().register(UserKind.class);
-    //factory().register(NGramKind.class);
     //factory().register(DistributionGen.class);  // интерфейс не регистрируетс
   }
 
@@ -33,5 +33,6 @@ public class OfyService {
   	ofy().delete().keys(ofy().load().type(PageKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(GeneratorKind.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(UserKind.class).keys()).now();
+    ofy().delete().keys(ofy().load().type(GoogleTranslatorKind.class).keys()).now();
   }
 }
