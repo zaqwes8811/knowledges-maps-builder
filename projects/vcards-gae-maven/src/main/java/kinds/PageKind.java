@@ -38,12 +38,13 @@ import static gae_store_space.OfyService.ofy;
 @Entity
 public class PageKind {
 	// State
-  private PageKind() { }
-  public @Id Long id;  // FIXME: make as string - UserId.pageName
+	private PageKind() { }
+  	public @Id Long id;  // FIXME: make as string - UserId.pageName
 	// FIXME: можно еще доступ сереализовать
 
-  @Index
+  	@Index
 	private String name;
+
 	private String rawSource;  // для обновленной версии
 
   // Теперь страница полностью управляет временем жизни
