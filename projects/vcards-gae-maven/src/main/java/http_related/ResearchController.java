@@ -18,12 +18,13 @@ import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/research")
-public class ResearchController {
-  private AppInstance app = AppInstance.getInstance();
+public class ResearchController
+{
+    private AppInstance app = AppInstance.getInstance();
 
-  @RequestMapping(value="/get_distribution", method = RequestMethod.GET, headers="Accept=application/json")
-  public @ResponseBody
-  ImmutableList<DistributionElement> getDistribution(HttpServletRequest request, HttpServletResponse res) {
+    @RequestMapping(value="/get_distribution", method = RequestMethod.GET, headers="Accept=application/json")
+    public @ResponseBody
+    ImmutableList<DistributionElement> getDistribution(HttpServletRequest request, HttpServletResponse res) {
     Optional<String> v = Optional.fromNullable(request.getParameter("arg0"));
     ImmutableList<DistributionElement> empty = ImmutableList.copyOf(new ArrayList<DistributionElement>());
     if (v.isPresent()) {
@@ -35,9 +36,9 @@ public class ResearchController {
       res.setStatus(HttpServletResponse.SC_BAD_REQUEST);
     }
     return empty;
-  }
+    }
 
-  public String getData(HttpServletRequest request) throws IOException {
+    public String getData(HttpServletRequest request) throws IOException {
     // http://stackoverflow.com/questions/1829784/should-i-close-the-servlet-outputstream
     // not need it
     //Closer closer = Closer.create();
@@ -60,10 +61,10 @@ public class ResearchController {
     //  closer.close();  // нужно ли его вообще закрывать?
     //}
     return Joiner.on("").join(lines);
-  }
+    }
 
-  @RequestMapping(value="/accept_text", method = RequestMethod.POST, headers="Accept=application/json")
-  public void createOrRecreatePage(HttpServletRequest request, HttpServletResponse res) {
+    @RequestMapping(value="/accept_text", method = RequestMethod.POST, headers="Accept=application/json")
+    public void createOrRecreatePage(HttpServletRequest request, HttpServletResponse res) {
     try {
       TextPackage p = new ObjectMapper().readValue(getData(request), TextPackage.class);
       if (p.getText().isPresent() && p.getName().isPresent()) {
@@ -74,11 +75,28 @@ public class ResearchController {
     } catch (IOException e) {
       res.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }
-  }
+    }
 
-  @RequestMapping(value="/get_lengths_sentences", method = RequestMethod.GET, headers="Accept=application/json")
-  public @ResponseBody
-  ArrayList<Integer> getSentencesLengths(HttpServletRequest request, HttpServletResponse res) {
+    @RequestMapping(value="/accept_dict", method = RequestMethod.POST, headers="Accept=application/json")
+    public void createOrRecreateDict(HttpServletRequest request, HttpServletResponse res) {
+
+        try {
+            TextPackage p = new ObjectMapper().readValue(getData(request), TextPackage.class);
+            if (p.getText().isPresent() && p.getName().isPresent()) {
+                //app.createOrReplacePage(p.getName().get(), p.getText().get());
+                res.setStatus(HttpServletResponse.SC_OK);
+            } else {
+                throw new IllegalArgumentException();
+            }
+        } catch (IOException e) {
+            res.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        }
+    }
+
+
+    @RequestMapping(value="/get_lengths_sentences", method = RequestMethod.GET, headers="Accept=application/json")
+    public @ResponseBody ArrayList<Integer> getSentencesLengths(
+          HttpServletRequest request, HttpServletResponse res) {
     ArrayList<Integer> empty = new ArrayList<Integer>();
     Optional<String> value = Optional.fromNullable(request.getParameter("arg0"));
 
@@ -93,5 +111,5 @@ public class ResearchController {
       } catch (IOException ex) {}
     }
     return empty;
-  }
+    }
 }

@@ -2,9 +2,9 @@ package http_related;
 
 import com.google.common.base.Optional;
 import com.googlecode.objectify.Key;
-import gae_related.GeneratorKind;
-import gae_related.PageKind;
-import gae_related.StoreIsCorruptedException;
+import backend.GeneratorKind;
+import backend.PageKind;
+import backend.StoreIsCorruptedException;
 import pipeline.PipelineResult;
 import pipeline.TextPipeline;
 

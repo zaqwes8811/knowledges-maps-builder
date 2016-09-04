@@ -1,7 +1,7 @@
 package http_related;
 
 import com.google.common.base.Optional;
-import gae_related.PageKind;
+import backend.PageKind;
 import pipeline.math.DistributionElement;
 
 import java.util.ArrayList;

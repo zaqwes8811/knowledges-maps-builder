@@ -1,5 +1,5 @@
+import backend.GoogleTranslatorRecord;
 import com.google.common.io.Closer;
-import gae_related.GoogleTranslatorKind;
 import org.jsefa.Deserializer;
 import org.jsefa.csv.CsvIOFactory;
 import org.jsefa.csv.config.CsvConfiguration;
@@ -41,11 +41,11 @@ public class CSVTest {
       csvConfig.setQuoteCharacter('\"');
 
       Deserializer deserializer = CsvIOFactory.createFactory(csvConfig,
-              GoogleTranslatorKind.class).createDeserializer();
+              GoogleTranslatorRecord.class).createDeserializer();
       deserializer.open(reader);
 
       while (deserializer.hasNext()) {
-        GoogleTranslatorKind p = deserializer.next();
+        GoogleTranslatorRecord p = deserializer.next();
         if(p.from.equals("English")){
 //            out.println(p.what);
         }

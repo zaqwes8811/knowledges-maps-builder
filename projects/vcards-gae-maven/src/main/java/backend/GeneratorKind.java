@@ -1,9 +1,8 @@
-package gae_related;
+package backend;
 
 import java.util.ArrayList;
 
 import com.googlecode.objectify.LoadResult;
-import backend.AppInstance;
 import net.jcip.annotations.NotThreadSafe;
 import pipeline.math.DistributionElement;
 import pipeline.math.GeneratorAnyDistribution;
@@ -14,8 +13,6 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Ignore;
 import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Serialize;
-
-import static gae_related.OfyService.ofy;
 
 // About:
 //   Класс способен генерировать последовательности любого дискретного распределения
@@ -126,7 +123,7 @@ public class GeneratorKind
   // похоже при восстановлении вызывается он
   // TODO: момент похоже скользкий - а будет ли распределение инициализировано?
   public static Optional<GeneratorKind> restoreById(Long id) {
-    LoadResult<GeneratorKind> q = ofy().load().type(GeneratorKind.class).id(id);
+    LoadResult<GeneratorKind> q = OfyService.ofy().load().type(GeneratorKind.class).id(id);
     Optional<GeneratorKind> g = Optional.fromNullable(q.now());
     if (g.isPresent()) {
       if (!Optional.fromNullable(g.get().distribution).isPresent())

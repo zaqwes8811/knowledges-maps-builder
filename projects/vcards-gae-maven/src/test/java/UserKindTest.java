@@ -2,9 +2,9 @@ import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestC
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import gae_related.OfyService;
+import backend.OfyService;
 import backend.AppInstance;
-import gae_related.UserKind;
+import backend.UserKind;
 import org.apache.log4j.BasicConfigurator;
 import org.junit.After;
 import org.junit.Before;

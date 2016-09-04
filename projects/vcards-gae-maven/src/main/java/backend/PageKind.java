@@ -14,7 +14,7 @@
  *   Отражает один элемент данный пользователя, например, один файл субтитров.
  */
 
-package gae_related;
+package backend;
 
 
 import com.google.common.base.Optional;
@@ -29,8 +29,6 @@ import http_related.PageWithBoundary;
 
 import java.util.List;
 import java.util.Set;
-
-import static gae_related.OfyService.ofy;
 
 @NotThreadSafe
 @Entity
@@ -116,17 +114,17 @@ public class PageKind {
 		checkConnectionPage(p);
 		checkConnectionGenerator(g);
 
-		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
+		OfyService.ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
 			public void vrun() {
-				ofy().delete().entity(g).now();
-				ofy().delete().entity(p).now();
+				OfyService.ofy().delete().entity(g).now();
+				OfyService.ofy().delete().entity(p).now();
 			}
 		});
 	}
 
 	public static Optional<PageKind> getPageKind(String pageName, Set<Key<PageKind>> keys) {
 		List<PageKind> pages =
-			ofy().transactionless().load().type(PageKind.class)
+			OfyService.ofy().transactionless().load().type(PageKind.class)
 				.filterKey("in", keys)
 				.filter("name = ", pageName)
 				.list();
@@ -146,10 +144,10 @@ public class PageKind {
 		checkConnectionGenerator(g);
 
 		// execution on dal - можно транслировать ошибку нижнего слоя
-		ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
+		OfyService.ofy().transactNew(GAEStoreAccessManager.COUNT_REPEATS, new VoidWork() {
 			public void vrun() {
-				ofy().save().entity(g).now();
-				ofy().save().entity(p).now();
+				OfyService.ofy().save().entity(g).now();
+				OfyService.ofy().save().entity(p).now();
 			}
 		});
 	}
