@@ -1,4 +1,4 @@
-import backend.DictionaryKind;
+import backend.KindDictionary;
 import backend.GoogleTranslatorRecord;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
@@ -14,8 +14,8 @@ import org.jsefa.csv.config.CsvConfiguration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pipeline.ContentItem;
-import pipeline.UniGram;
+import backend.ContentItem;
+import backend.UniGram;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -99,7 +99,7 @@ public class WordKindTest {
             // Нельзя сохранять поштучно
             // Строки тоже короткие
 
-            DictionaryKind dict = new DictionaryKind();
+            KindDictionary dict = new KindDictionary();
             dict.records = records;
             dict.name = "1";
 
@@ -107,7 +107,7 @@ public class WordKindTest {
             assert dict.id != null;
 
             // load
-            Optional<DictionaryKind> loaded = OfyService.getPageKind("1");
+            Optional<KindDictionary> loaded = OfyService.getPageKind("1");
 //            assert loaded.isPresent();
         }
     }

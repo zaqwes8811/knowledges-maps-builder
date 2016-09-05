@@ -1,30 +1,4 @@
-import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
-import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.google.common.base.Optional;
-import com.google.common.collect.Ordering;
-import com.googlecode.objectify.Key;
-import com.googlecode.objectify.ObjectifyService;
-import com.googlecode.objectify.util.Closeable;
-
-import backend.GlobalIO;
-import backend.OfyService;
-import backend.AppInstance;
-import backend.PageKind;
-
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import http_related.PageBuilder;
-import http_related.PageFrontend;
-import pipeline.math.DistributionElement;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -74,7 +48,7 @@ public class PageKindTest //extends AbstractBenchmark // don't work
 //        AppInstance app = new AppInstance();
 //        // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
 //        int countTries = 100;  // random
-//        PageFrontend page = null;
+//        PageWrapper page = null;
 //        while (page == null) {
 //          try {
 //            page = app.getPage(AppInstance.defaultPageName);
@@ -100,18 +74,18 @@ public class PageKindTest //extends AbstractBenchmark // don't work
 //    try (Closeable c = ObjectifyService.begin()) {
 //      String plainText = GlobalIO.getGetPlainTextFromFile(testFilePath);
 //
-//      Set<Key<PageKind>> filter = new HashSet<>();
+//      Set<Key<KindPage>> filter = new HashSet<>();
 //
 //      {
 //        AppInstance app = new AppInstance();
-//        PageKind page = app.createOrReplacePage(AppInstance.defaultPageName, plainText);
+//        KindPage page = app.createOrReplacePage(AppInstance.defaultPageName, plainText);
 //
 //        assertNotNull(page);
 //        filter.add(Key.create(page));
 //      }
 //
 //      {
-//        Optional<PageFrontend> page = Optional.absent();
+//        Optional<PageWrapper> page = Optional.absent();
 //        int countTries = 100;  // random
 //        while (!page.isPresent()) {
 //          try {
@@ -149,7 +123,7 @@ public class PageKindTest //extends AbstractBenchmark // don't work
 //        AppInstance app = new AppInstance();
 //        // Если идет доступ к странице и ее может не быть, то нужно ограничить число попыток.
 //        int countTries = 100;  // random
-//        PageFrontend page = null;
+//        PageWrapper page = null;
 //        while (page == null) {
 //          try {
 //            page = app.getPage(AppInstance.defaultPageName);

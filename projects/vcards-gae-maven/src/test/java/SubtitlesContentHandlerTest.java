@@ -1,6 +1,6 @@
 import org.junit.Test;
 import org.xml.sax.ContentHandler;
-import pipeline.text_extractors.SubtitlesContentHandler;
+import backend.text_extractors.SubtitlesContentHandler;
 
 import java.util.ArrayList;
 import java.util.List;
