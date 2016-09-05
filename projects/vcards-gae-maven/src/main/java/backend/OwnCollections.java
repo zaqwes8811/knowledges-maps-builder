@@ -1,7 +1,5 @@
 package backend;
 
-import pipeline.UniGram;
-
 import java.util.ArrayList;
 
 import org.apache.commons.collections4.Predicate;
