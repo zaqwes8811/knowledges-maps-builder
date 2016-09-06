@@ -15,7 +15,7 @@ public class OfyService {
 //    factory().register(GoogleTranslatorRecord.class);
     factory().register(KindPage.class);
     factory().register(KindGenerator.class);
-    factory().register(KindUser.class);
+    factory().register(UserKind.class);
     factory().register(KindDictionary.class);
     //factory().register(DistributionGen.class);  // интерфейс не регистрируетс
   }
@@ -32,7 +32,7 @@ public class OfyService {
   public static void clearStore() {
   	ofy().delete().keys(ofy().load().type(KindPage.class).keys()).now();
   	ofy().delete().keys(ofy().load().type(KindGenerator.class).keys()).now();
-  	ofy().delete().keys(ofy().load().type(KindUser.class).keys()).now();
+  	ofy().delete().keys(ofy().load().type(UserKind.class).keys()).now();
 //    ofy().delete().keys(ofy().load().type(GoogleTranslatorRecord.class).keys()).now();
     ofy().delete().keys(ofy().load().type(KindDictionary.class).keys()).now();
   }

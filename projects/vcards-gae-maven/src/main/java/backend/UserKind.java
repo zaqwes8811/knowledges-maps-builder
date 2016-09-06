@@ -22,10 +22,10 @@ import java.util.Set;
 
 @NotThreadSafe
 @Entity
-public class KindUser {
+public class UserKind {
   //@State
   //private  // FIXME:
-  public KindUser() { }
+  public UserKind() { }
 
   // FIXME: external lock
   // http://stackoverflow.com/questions/13197756/synchronized-method-calls-itself-recursively-is-this-broken
@@ -33,15 +33,7 @@ public class KindUser {
   // user is unique! can't do that with pages!
   @Id private String id;
 
-  public Set<String> getPageNamesRegister() {
-    return pageNamesRegister;
-  }
-
-  public void setPageNamesRegister(Set<String> pageNamesRegister) {
-    this.pageNamesRegister = pageNamesRegister;
-  }
-
-  @Serialize private Set<String> pageNamesRegister;
+  @Serialize public Set<String> pageNamesRegister;
 
   public Set<Key<KindPage>> getPageKeys() {
     return pageKeys;
@@ -59,13 +51,13 @@ public class KindUser {
   }
 
   //@Logic
-  public static KindUser createOrRestoreById(final String id) {
-    KindUser r = OfyService.ofy().transact(new Work<KindUser>() {
+  public static UserKind createOrRestoreById(final String id) {
+    UserKind r = OfyService.ofy().transact(new Work<UserKind>() {
       @Override
-      public KindUser run() {
-        KindUser th = OfyService.ofy().load().type(KindUser.class).id(id).now();
+      public UserKind run() {
+        UserKind th = OfyService.ofy().load().type(UserKind.class).id(id).now();
         if (th == null) {
-          th = new KindUser();
+          th = new UserKind();
           th.id = id;
           OfyService.ofy().save().entity(th);
         }
@@ -87,4 +79,23 @@ public class KindUser {
     if (!Optional.fromNullable(pageNamesRegister).isPresent())
       pageNamesRegister = new HashSet<>();
   }
+
+    // Удаляет только ключи, базу не трогает
+    public void clear() {
+        pageNamesRegister.clear();
+        getPageKeys().clear();  // FIXME: may be leak
+    }
+    public void checkPagesInvariant() {
+        if (pageNamesRegister.size() != getPageKeys().size()) {
+            throw new AssertionError();
+        }
+    }
+
+    public boolean removePage(String pageName) {
+        return pageNamesRegister.remove(pageName);
+    }
+
+    public boolean isContain(String pageName) {
+        return pageNamesRegister.contains(pageName);
+    }
 }

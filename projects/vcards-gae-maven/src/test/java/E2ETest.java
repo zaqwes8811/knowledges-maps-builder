@@ -1,12 +1,10 @@
-import backend.KindDictionary;
-import backend.GoogleTranslatorRecord;
+import backend.*;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.common.base.Optional;
 import com.google.common.io.Closer;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
-import backend.OfyService;
 import org.apache.log4j.BasicConfigurator;
 import org.jsefa.Deserializer;
 import org.jsefa.csv.CsvIOFactory;
@@ -14,8 +12,6 @@ import org.jsefa.csv.config.CsvConfiguration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import backend.ContentItem;
-import backend.UniGram;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -27,7 +23,7 @@ import java.util.List;
 /**
  * Created by zaqwes on 5/12/14.
  */
-public class WordKindTest {
+public class E2ETest {
     private static final LocalServiceTestHelper helper =
             new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig()
                     .setDefaultHighRepJobPolicyUnappliedJobPercentage(10));
@@ -110,5 +106,13 @@ public class WordKindTest {
             Optional<KindDictionary> loaded = OfyService.getPageKind("1");
 //            assert loaded.isPresent();
         }
+    }
+
+    @Test
+    public void testLoadDict()
+    {
+        AppInstance app = new AppInstance();
+        String text = "";
+        app.createOrReplaceDict("my", text);
     }
 }
