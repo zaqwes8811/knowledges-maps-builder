@@ -2,6 +2,9 @@ package backend;
 
 import java.util.List;
 
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import http_api.*;
 import backend.math.DistributionElement;
 
@@ -12,7 +15,8 @@ public class AppInstance {
 	public static final String defaultGeneratorName = "Default generator";
 	public static final String defaultUserId = "Default user";
 	UserAccessor defaultUser = null;
-
+	private static final Integer CACHE_SIZE = 5;
+	LoadingCache<String, Integer> dictsCache = null;
 
 	//===========================================================
 
@@ -56,13 +60,13 @@ public class AppInstance {
 
 	public void eraseStore() {
 		OfyService.clearStore();
-		getUser().clear();
+		getUser().getUserKind().clear();
 		getUser().createDefaultPage();
 	}
 
 	public void createOrReplacePage(String pageName, String text)
 	{
-		getUser().replacePage(pageName, text);
+		getUser().createOrReplacePage(pageName, text);
 	}
 
 	public PageWrapper getPage(String pageName) {
@@ -80,8 +84,29 @@ public class AppInstance {
 		page.disablePoint(p);		
 	}
 
+
+	private void initDictsCache()
+	{
+		if (dictsCache != null){
+			return;
+		}
+		dictsCache = CacheBuilder.newBuilder()
+			.maximumSize(CACHE_SIZE)
+			.build(
+					new CacheLoader<String, Integer>() {
+						@Override
+						public Integer load(String key) {
+							return 0;
+						}
+					});
+	}
+
 	public void createOrReplaceDict(String name, String text)
 	{
+		initDictsCache();
+
+		// Проверяем нет ли такого словаря? - store is eventually consistent - how to check?
+		//dictsCache.get(name);
 
 	}
 }

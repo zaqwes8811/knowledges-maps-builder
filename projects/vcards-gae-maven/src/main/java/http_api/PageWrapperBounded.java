@@ -35,7 +35,7 @@ public class PageWrapperBounded implements PageWrapper {
   private static final Double SWITCH_THRESHOLD = 0.2;
 
   // Actions
-  private static Logger log = Logger.getLogger(KindUser.class.getName());
+  private static Logger log = Logger.getLogger(UserKind.class.getName());
 
   public static PageWrapperBounded buildEmpty() {
     return new PageWrapperBounded();
