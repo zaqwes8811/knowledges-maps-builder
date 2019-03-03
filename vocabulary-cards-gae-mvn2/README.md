@@ -25,10 +25,15 @@ git commit -m 'Removing impls/vcard-gae-maven/target from git history'
 git gc
 git push origin master --force
 
+#
+git filter-branch --tree-filter 'rm -rf war' --prune-empty HEAD
+git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+
+
 # Install mvn2 ubuntu
 
 sudo apt-get install maven
-
+ 
 # Build
 https://www.vogella.com/tutorials/ApacheMaven/article.html
 
@@ -41,3 +46,7 @@ git rev-list --objects --all \
 | sort --numeric-sort --key=2 \
 | cut -c 1-12,41- \
 | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+
+ git log --all --full-history --  war/WEB-INF/appengine-generated/local_db.bin
+
+ https://dalibornasevic.com/posts/2-permanently-remove-files-and-folders-from-a-git-repository
