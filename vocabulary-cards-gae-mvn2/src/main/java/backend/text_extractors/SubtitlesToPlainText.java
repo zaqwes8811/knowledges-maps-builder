@@ -15,30 +15,30 @@ import com.google.common.io.Closer;
 
 
 public class SubtitlesToPlainText implements Converter {
-	//FIXME: make strategy
-	@Override
-	public String convert(String content) {
-		try {
-			// Пока файл строго юникод - UTF-8
-			Closer closer = Closer.create();
-			try {
-			  // http://stackoverflow.com/questions/247161/how-do-i-turn-a-string-into-a-stream-in-java
-			  InputStream in = closer.register(new ByteArrayInputStream(content.getBytes(Charsets.UTF_8)));
-			  Parser parser = new SubtitlesParser();
-			  List<String> sink = new ArrayList<String>();
-			  ContentHandler handler = new SubtitlesContentHandler(sink);
-			  parser.parse(in, handler, null, null);
-			
-			  // Получили список строк.
-	      SpecialSymbols symbols = new SpecialSymbols();
-	      return Joiner.on(symbols.WHITESPACE_STRING).join(sink);
-	    } catch (Throwable e) {
-	      throw closer.rethrow(e);
-	    } finally {
-	      closer.close();
-	    }
-   	} catch(IOException e) {
-   		throw new RuntimeException(e);
-   	}
-	}
+    //FIXME: make strategy
+    @Override
+    public String convert(String content) {
+        try {
+            // Пока файл строго юникод - UTF-8
+            Closer closer = Closer.create();
+            try {
+                // http://stackoverflow.com/questions/247161/how-do-i-turn-a-string-into-a-stream-in-java
+                InputStream in = closer.register(new ByteArrayInputStream(content.getBytes(Charsets.UTF_8)));
+                Parser parser = new SubtitlesParser();
+                List<String> sink = new ArrayList<String>();
+                ContentHandler handler = new SubtitlesContentHandler(sink);
+                parser.parse(in, handler, null, null);
+
+                // Получили список строк.
+                SpecialSymbols symbols = new SpecialSymbols();
+                return Joiner.on(symbols.WHITESPACE_STRING).join(sink);
+            } catch (Throwable e) {
+                throw closer.rethrow(e);
+            } finally {
+                closer.close();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

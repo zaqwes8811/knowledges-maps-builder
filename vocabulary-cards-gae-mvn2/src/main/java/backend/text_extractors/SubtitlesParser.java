@@ -21,68 +21,66 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 
 public class SubtitlesParser implements org.apache.tika.parser.Parser {
-  private static final long serialVersionUID = -4009566128194090587L;
+    private static final long serialVersionUID = -4009566128194090587L;
 
-	@Override
-  public Set<MediaType> getSupportedTypes(ParseContext parseContext) {
-    return null;
-  }
-
-  // TODO: it's weak. 00:31:19,764 --> 00:31:22,823. Усилить бы регулярным выражением
-  private static final String TIME_TICKET_SIGN_ = "-->";
-  private static final String CONST_0_ = "- ";
-  
-  // http://stackoverflow.com/questions/407929/how-do-i-change-eclipse-to-use-spaces-instead-of-tabs
-  // StringUtils.isNumeric(line) - on gae throw exception
-  public boolean isNumeric(String s) {  
-    return s.matches("[-+]?\\d*\\.?\\d+");  
-	}
-
-  // Передать любой handler нельзя.
-  @Override
-  public void parse(
-      InputStream stream, ContentHandler handler,
-      Metadata metadata, ParseContext context) throws IOException, SAXException, TikaException
-    {
-    SpecialSymbols symbols = new SpecialSymbols();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(stream
-        ,
-        //Charsets.US_ASCII
-        Charsets.UTF_8
-      ));
-
-    handler.startDocument();
-    while (true) {
-      String buffer;
-      if ((buffer = reader.readLine()) == null)
-        break;
-
-      // TODO: not effective
-      // TODO: Делим пробелами, разделить не только пробелами
-      ImmutableList<String> list = ImmutableList.copyOf(
-        Splitter.on(CharMatcher.WHITESPACE)
-          .trimResults()
-          .omitEmptyStrings()
-          .split(buffer));
-
-      // Удаляем просто числа
-      String line = Joiner.on(symbols.EMPTY_STRING).join(list);
-
-      if (!list.isEmpty()
-          && !(list.size() == 1 && isNumeric(line))
-          && !buffer.contains(TIME_TICKET_SIGN_))
-        {
-        // Некоторые замены исходя из статистики
-        // TODO: Убирать бы знаки прямой речи, но можно потерять информацию.
-        buffer = CharMatcher.is(symbols.LEFT_ANGLE_BRACKET).replaceFrom(buffer, symbols.WHITESPACE);
-        buffer = CharMatcher.is(symbols.RIGHT_ANGLE_BRACKET).replaceFrom(buffer, symbols.DOT);
-        buffer = CharMatcher.is(symbols.APOSTROPHE).replaceFrom(buffer, symbols.ONE_QUOTE);
-        buffer = buffer.replace(CONST_0_, symbols.WHITESPACE_STRING);
-
-        handler.characters(buffer.toCharArray(), 0, buffer.length());
-      }
+    @Override
+    public Set<MediaType> getSupportedTypes(ParseContext parseContext) {
+        return null;
     }
-    // Summary
-    handler.endDocument();
-  }
+
+    // TODO: it's weak. 00:31:19,764 --> 00:31:22,823. Усилить бы регулярным выражением
+    private static final String TIME_TICKET_SIGN_ = "-->";
+    private static final String CONST_0_ = "- ";
+
+    // http://stackoverflow.com/questions/407929/how-do-i-change-eclipse-to-use-spaces-instead-of-tabs
+    // StringUtils.isNumeric(line) - on gae throw exception
+    public boolean isNumeric(String s) {
+        return s.matches("[-+]?\\d*\\.?\\d+");
+    }
+
+    // Передать любой handler нельзя.
+    @Override
+    public void parse(
+            InputStream stream, ContentHandler handler,
+            Metadata metadata, ParseContext context) throws IOException, SAXException, TikaException {
+        SpecialSymbols symbols = new SpecialSymbols();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream
+                ,
+                //Charsets.US_ASCII
+                Charsets.UTF_8
+        ));
+
+        handler.startDocument();
+        while (true) {
+            String buffer;
+            if ((buffer = reader.readLine()) == null)
+                break;
+
+            // TODO: not effective
+            // TODO: Делим пробелами, разделить не только пробелами
+            ImmutableList<String> list = ImmutableList.copyOf(
+                    Splitter.on(CharMatcher.WHITESPACE)
+                            .trimResults()
+                            .omitEmptyStrings()
+                            .split(buffer));
+
+            // Удаляем просто числа
+            String line = Joiner.on(symbols.EMPTY_STRING).join(list);
+
+            if (!list.isEmpty()
+                    && !(list.size() == 1 && isNumeric(line))
+                    && !buffer.contains(TIME_TICKET_SIGN_)) {
+                // Некоторые замены исходя из статистики
+                // TODO: Убирать бы знаки прямой речи, но можно потерять информацию.
+                buffer = CharMatcher.is(symbols.LEFT_ANGLE_BRACKET).replaceFrom(buffer, symbols.WHITESPACE);
+                buffer = CharMatcher.is(symbols.RIGHT_ANGLE_BRACKET).replaceFrom(buffer, symbols.DOT);
+                buffer = CharMatcher.is(symbols.APOSTROPHE).replaceFrom(buffer, symbols.ONE_QUOTE);
+                buffer = buffer.replace(CONST_0_, symbols.WHITESPACE_STRING);
+
+                handler.characters(buffer.toCharArray(), 0, buffer.length());
+            }
+        }
+        // Summary
+        handler.endDocument();
+    }
 }
