@@ -82,3 +82,4 @@ nosetests.xml
 .pydevproject
 /netbeans-sln/core-layer/nbproject/private/
 /netbeans-sln/app/nbproject/private/
+projects/research/test_data/
