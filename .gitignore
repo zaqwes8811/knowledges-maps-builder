@@ -5,6 +5,8 @@ out
 *~
 *.war
 *target*
+*.idea
+
 
 web-pages/closure-library
 

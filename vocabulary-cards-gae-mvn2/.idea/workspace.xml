@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7398d133-a053-4496-a50c-a80058856e66" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/GlobalIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/GlobalIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/nlp/PlainTextTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/nlp/PlainTextTokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/nlp/SentenceTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/nlp/SentenceTokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/text_extractors/SubtitlesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/text_extractors/SubtitlesParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/text_extractors/SubtitlesToPlainText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/text_extractors/SubtitlesToPlainText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
     </list>
     <ignored path="vcard-gae-maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,12 +25,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SpecWordsApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="467">
               <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -210,6 +201,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,11 +482,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AppInstanceTest" />
       <item itemvalue="JUnit.CSVTest" />
       <item itemvalue="JUnit.E2ETest" />
-      <item itemvalue="JUnit.KindGeneratorTest" />
       <item itemvalue="JUnit.E2ETest.testGoogleCsv" />
-      <item itemvalue="JUnit.AppInstanceTest" />
+      <item itemvalue="JUnit.KindGeneratorTest" />
       <item itemvalue="Maven.mvn devserver" />
     </list>
     <recent_temporary>
@@ -555,13 +547,13 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20563847" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20784964" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Palette&#9;" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49117422" weight="0.31656805" />
@@ -573,8 +565,6 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5088258" side_tool="true" weight="0.31656805" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4973139" weight="0.32988167" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2494244" />
@@ -582,6 +572,8 @@
       <window_info anchor="right" id="Designer" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -954,12 +946,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SpecWordsApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="467">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
           </folding>
         </state>
       </provider>
