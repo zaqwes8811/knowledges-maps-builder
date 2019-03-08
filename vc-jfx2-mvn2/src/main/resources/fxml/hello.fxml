@@ -4,17 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<!--  -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0"
-            prefWidth="247.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2"
-            fx:controller="MainController">
-    <children>
-        <Label layoutX="24.0" layoutY="14.0" text="Login:" />
-        <Label layoutX="24.0" layoutY="63.0" text="Password:" />
-        <TextField layoutX="24.0" layoutY="30.0" prefWidth="200.0" />
-        <PasswordField layoutX="24.0" layoutY="86.0" prefWidth="200.0" />
-        <Button layoutX="168.0" layoutY="124.0" mnemonicParsing="false" text="Log In" />
-    </children>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="601.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="MainController">
+  <children>
+    <Label layoutX="14.0" layoutY="59.0" text="Regex:" />
+    <TextField fx:id="regexTf" layoutX="70.0" layoutY="56.0" prefWidth="395.0" />
+    <Button fx:id="hwBt" layoutX="483.0" layoutY="22.0" mnemonicParsing="false" text="Select folder" />
+    <TextArea fx:id="respTa" layoutX="14.0" layoutY="89.0" prefHeight="462.0" prefWidth="573.0" wrapText="true" />
+    <TextField fx:id="folderTf" layoutX="70.0" layoutY="22.0" prefWidth="395.0" />
+    <Label layoutX="14.0" layoutY="24.0" text="Folder:" />
+    <Button fx:id="applyBt" layoutX="483.0" layoutY="55.0" mnemonicParsing="false" prefWidth="104.0" text="Apply" />
+  </children>
 </AnchorPane>
