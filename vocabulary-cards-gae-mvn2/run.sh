@@ -11,7 +11,8 @@ export STR_FILENAME="$ROOT/Merlin - 1x08 - The Beginning Of The End.PDTV.AFFiNiT
 # export PATTERN="(either)"
 # export PATTERN="(used to)"
 # export PATTERN="(would)|(wouldn't)"
-export PATTERN="(ed )"
+#export PATTERN="(ed )"
+export PATTERN="(would)|(wouldn't)"
 
 # FIXME: faster!
 #mvn test -Dtest=SpecWordsApp.select
