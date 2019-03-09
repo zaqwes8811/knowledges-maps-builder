@@ -6,14 +6,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <!--  -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="601.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="MainController">
-  <children>
-    <Label layoutX="14.0" layoutY="59.0" text="Regex:" />
-    <TextField fx:id="regexTf" layoutX="70.0" layoutY="56.0" prefWidth="395.0" />
-    <Button fx:id="hwBt" layoutX="483.0" layoutY="22.0" mnemonicParsing="false" text="Select folder" />
-    <TextArea fx:id="respTa" layoutX="14.0" layoutY="89.0" prefHeight="462.0" prefWidth="573.0" wrapText="true" />
-    <TextField fx:id="folderTf" layoutX="70.0" layoutY="22.0" prefWidth="395.0" />
-    <Label layoutX="14.0" layoutY="24.0" text="Folder:" />
-    <Button fx:id="applyBt" layoutX="483.0" layoutY="55.0" mnemonicParsing="false" prefWidth="104.0" text="Apply" />
-  </children>
+<?import org.fxmisc.richtext.StyleClassedTextArea?>
+<?import org.fxmisc.richtext.InlineCssTextArea?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="565.0" prefWidth="601.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="MainController">
+    <children>
+        <Label layoutX="14.0" layoutY="59.0" text="Regex:"/>
+        <TextField fx:id="regexTf" layoutX="70.0" layoutY="56.0" prefWidth="395.0"/>
+        <Button fx:id="hwBt" layoutX="483.0" layoutY="22.0" mnemonicParsing="false" text="Select folder"/>
+        <!--TextArea fx:id="respTa" layoutX="14.0" layoutY="89.0" prefHeight="462.0" prefWidth="573.0" wrapText="true" /-->
+
+        <InlineCssTextArea fx:id="textReachTa" layoutX="14.0" layoutY="89.0" prefHeight="462.0" prefWidth="573.0"
+                           wrapText="true"
+        />
+
+        <!--StyleClassedTextArea fx:id="textReachTa" layoutX="14.0" layoutY="89.0" prefHeight="462.0" prefWidth="573.0"
+                              wrapText="true"
+        /-->
+
+
+        <TextField fx:id="folderTf" layoutX="70.0" layoutY="22.0" prefWidth="395.0"/>
+        <Label layoutX="14.0" layoutY="24.0" text="Folder:"/>
+        <Button fx:id="applyBt" layoutX="483.0" layoutY="55.0" mnemonicParsing="false" prefWidth="104.0" text="Apply"/>
+    </children>
 </AnchorPane>

@@ -1,100 +1,33 @@
+// Text highlighting
+// https://stackoverflow.com/questions/6530105/highlighting-text-in-java - Swing
+// https://stackoverflow.com/questions/9128535/highlighting-strings-in-javafx-textarea - javafx
+// ReachTextFx
+// https://github.com/FXMisc/RichTextFX/issues/442
+//
+// https://ru.stackoverflow.com/questions/861957/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-richtextfx
+
 import java.io.*;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.prefs.Preferences;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import backend.nlp.PlainTextTokenizer;
-import backend.text_extractors.SpecialSymbols;
-import backend.text_extractors.SubtitlesContentHandler;
-import backend.text_extractors.SubtitlesParser;
-import com.google.common.base.Joiner;
-import com.google.common.io.Closer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
-import org.apache.tika.parser.Parser;
-import org.xml.sax.ContentHandler;
-
-class StrLoader {
-    void cout(String str) {
-        System.out.println(str);
-    }
-
-    public List<String> select(String str_filename, String regex) {
-        Pattern p = Pattern.compile(regex);
-
-        cout("Orig:" + str_filename);
-
-        File tmpDir = new File(str_filename);
-
-        List<String> result = new ArrayList<>();
-        boolean exists = tmpDir.exists();
-        if (!exists) {
-            cout("No file:" + str_filename);
-            return result;
-        }
-        // FIXME: побольше контекста вокруг
-        // FIXME: файлы пачкой по расширению
-        // FIXME: проверить что это srt-файлы
-
-        try {
-            // Пока файл строго юникод - UTF-8
-            Closer closer = Closer.create();
-            try {
-                File file = new File(str_filename);
-                byte[] content = Files.readAllBytes(file.toPath());
-                InputStream in = closer.register(new ByteArrayInputStream(content));
-                Parser parser = new SubtitlesParser();
-                List<String> sink = new ArrayList<String>();
-                ContentHandler handler = new SubtitlesContentHandler(sink);
-                parser.parse(in, handler, null, null);
-
-                // Получили список строк.
-                SpecialSymbols symbols = new SpecialSymbols();
-                String resp = Joiner.on(symbols.WHITESPACE_STRING).join(sink);
-
-                // could be split to sentences
-//                SentenceTokenizer tokenizer = new SentenceTokenizer();
-                PlainTextTokenizer tokenizer = new PlainTextTokenizer();
-                List<String> rows = tokenizer.getSentences(resp);
-
-                // https://stackoverflow.com/questions/9464261/how-to-find-the-exact-word-using-a-regex-in-java
-                for (String v : rows) {
-                    Matcher m = p.matcher(v);
-                    List<String> matches = new ArrayList<>();
-                    while (m.find()) {
-                        matches.add(m.group(0));
-                    }
-                    if (!matches.isEmpty()) {
-                        cout(v);
-                        result.add(v);
-                    }
-                }
-//                result = rows;
-
-            } catch (Throwable e) {
-                throw closer.rethrow(e);
-            } finally {
-                closer.close();
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return result;
-    }
-}
+import org.fxmisc.richtext.InlineCssTextArea;
+import org.fxmisc.richtext.StyleClassedTextArea;
+import org.javatuples.Pair;
 
 
 // https://stackoverflow.com/questions/42497507/javafx-fxml-controller-event-handler-and-initialization-best-practice
 public class MainController {
+    // FIXME: Сохранять бы позицию полосы прокрутки
+    // FIXME: считаь файлы раз
+    // FIXME: Добавить заметки, чтобы можно было копировать регексы
 
     @FXML
     public Button hwBt;
@@ -108,8 +41,15 @@ public class MainController {
     @FXML
     public TextField regexTf;
 
+//    @FXML
+//    private StyleClassedTextArea textReachTa;
+
     @FXML
-    private TextArea respTa;
+    private InlineCssTextArea textReachTa;
+
+
+//    @FXML
+//    private TextArea respTa;
 
     public Stage stage = null;
 
@@ -119,35 +59,45 @@ public class MainController {
 
     public File[] finder(String dirName) {
         File dir = new File(dirName);
-
         return dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String filename) {
                 return filename.endsWith(".srt");
             }
         });
-
     }
 
-    private StrLoader strLoader = null;
+    private SrtLoader srtLoader = null;
 
     private String readDefaultPath() {
-        Preferences pref;
-        pref = Preferences.userNodeForPackage(MainController.class);
-        return pref.get("defaultRoot", "/mnt");
+        return read("defaultRoot", "/mnt");
     }
 
     private void saveDefaultRootPath(String startRoot) {
+        save("defaultRoot", startRoot);
+    }
+
+    private String read(String key, String defaultVal) {
         Preferences pref;
         pref = Preferences.userNodeForPackage(MainController.class);
-        pref.put("defaultRoot", startRoot);
+        return pref.get(key, defaultVal);
+    }
+
+    private void save(String key, String val) {
+        Preferences pref;
+        pref = Preferences.userNodeForPackage(MainController.class);
+        pref.put(key, val);
     }
 
     @FXML
     private void initialize() {
-        strLoader = new StrLoader();
+        srtLoader = new SrtLoader();
 
         folderTf.setText(readDefaultPath());
-        regexTf.setText("have");
+        regexTf.setText(read("lastRegex", "have"));
+
+        // http://qaru.site/questions/788947/javafx-textarea-hiding-scroll-bars
+//        ScrollBar scrollBarv = (ScrollBar) textReachTa.lookup(".scroll-bar:vertical");
+//        scrollBarv.setDisable(false);
 
         hwBt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -166,28 +116,68 @@ public class MainController {
                 String selectedPath = selectedDirectory.getAbsolutePath();
                 saveDefaultRootPath(selectedPath);
                 folderTf.setText(selectedPath);
+
+                loadText();
             }
         });
 
         applyBt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                // Load files
-                File[] files = finder(readDefaultPath());
-                String regex = regexTf.getText();
-                List<String> l = new ArrayList<>();
-                for (File f : files) {
-                    String fn = f.getAbsolutePath();
-                    List<String> resp = strLoader.select(fn, regex);
-                    l.addAll(resp);
-                }
-
-                // draw
-                if (!l.isEmpty()) {
-                    respTa.setText(Joiner.on("\n").join(l));
-                }
+                applyRegex();
             }
         });
+
+        loadText();
+//        applyRegex();
     }
 
+    private void applyRegex() {
+        // С нуля
+        textReachTa.clear();
+        textReachTa.setStyle(0, textReachTa.getLength(), RD);
+
+        // Load files
+        String regex = regexTf.getText();
+        for (List<String> rows : content) {
+            SrtLoader.ReturnValue resp = srtLoader.select(rows, regex);
+
+            for (int i = 0; i < resp.ptrs.size(); ++i) {
+                String message = resp.rows.get(i) + "\n\n";
+                int base = textReachTa.getLength(); // here
+
+                textReachTa.appendText(message);
+                List<Pair<Integer, Integer>> ptrs = resp.ptrs.get(i);
+
+                for (int j = 0; j < ptrs.size(); ++j) {
+                    int from = base + ptrs.get(j).getValue0();
+                    int to = base + ptrs.get(j).getValue1();
+                    // добавили сообещние
+
+                    // указали для него стиль
+                    textReachTa.setStyle(from, to, SEL);
+                }
+
+//                real_base += message.length();
+            }
+        }
+
+
+        save("lastRegex", regex);
+    }
+
+    private void loadText() {
+        content.clear();
+        File[] files = finder(readDefaultPath());
+        for (File f : files) {
+            String fn = f.getAbsolutePath();
+            List<String> rows = srtLoader.getSentences(fn);
+            content.add(rows);
+        }
+    }
+
+    private List<List<String>> content = new ArrayList<>();
+
+    private static final String SEL = "-rtfx-background-color: lightgreen;";
+    private static final String RD = "-rtfx-background-color: white;";
 }
