@@ -17,3 +17,7 @@ export PATTERN="(would)|(wouldn't)"
 # FIXME: faster!
 #mvn test -Dtest=SpecWordsApp.select
 mvn test -Dtest=SpecWordsApp
+
+# /home/zaqwes/.m2/repository/org/fxmisc/richtext/richtextfx/0.9.3/richtextfx-0.9.3.jar
+#  whereis java
+ # https://stackoverflow.com/questions/51112367/where-is-located-jar-fxml-manager-option-in-javafx-scene-builder-1-1

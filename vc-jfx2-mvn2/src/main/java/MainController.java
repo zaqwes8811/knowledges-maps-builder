@@ -15,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
@@ -41,15 +42,12 @@ public class MainController {
     @FXML
     public TextField regexTf;
 
-//    @FXML
-//    private StyleClassedTextArea textReachTa;
-
     @FXML
     private InlineCssTextArea textReachTa;
 
 
-//    @FXML
-//    private TextArea respTa;
+    @FXML
+    private TextArea notesTa;
 
     public Stage stage = null;
 
@@ -143,9 +141,15 @@ public class MainController {
             SrtLoader.ReturnValue resp = srtLoader.select(rows, regex);
 
             for (int i = 0; i < resp.ptrs.size(); ++i) {
-                String message = resp.rows.get(i) + "\n\n";
-                int base = textReachTa.getLength(); // here
+                // prev
+                String prev = resp.prevs.get(i);
+                if (!prev.isEmpty()) {
+                    textReachTa.appendText(prev);
+                }
 
+                // current
+                String message = resp.rows.get(i);
+                int base = textReachTa.getLength(); // here
                 textReachTa.appendText(message);
                 List<Pair<Integer, Integer>> ptrs = resp.ptrs.get(i);
 
@@ -158,7 +162,12 @@ public class MainController {
                     textReachTa.setStyle(from, to, SEL);
                 }
 
-//                real_base += message.length();
+                // next
+                String next = resp.nexts.get(i);
+                if (!next.isEmpty()) {
+                    textReachTa.appendText(next);
+                }
+                textReachTa.appendText("\n\n");
             }
         }
 

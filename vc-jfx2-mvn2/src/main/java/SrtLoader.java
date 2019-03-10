@@ -26,6 +26,8 @@ class SrtLoader {
 
     public class ReturnValue {
         List<String> rows = new ArrayList<>();
+        List<String> prevs = new ArrayList<>();
+        List<String> nexts = new ArrayList<>();
 
         // [beg, end)
         List<List<Pair<Integer, Integer>>> ptrs = new ArrayList<>();
@@ -81,7 +83,8 @@ class SrtLoader {
         ReturnValue rt = new ReturnValue();
         Pattern p = Pattern.compile(regex);
         // https://stackoverflow.com/questions/9464261/how-to-find-the-exact-word-using-a-regex-in-java
-        for (final String v : rows) {
+        for (int i = 0; i < rows.size(); ++i) {
+            final String v = rows.get(i);
             Matcher m = p.matcher(v);
             List<Pair<Integer, Integer>> matches = new ArrayList<>();
 
@@ -93,6 +96,19 @@ class SrtLoader {
             if (!matches.isEmpty()) {
                 rt.ptrs.add(matches);
                 rt.rows.add(v);
+
+                // Ищем предыдущие и последующие, и в любом случае добавляем, хотя и пустое
+                if (i == 0) {
+                    rt.prevs.add("");
+                } else {
+                    rt.prevs.add(rows.get(i - 1));
+                }
+
+                if (i == rows.size() - 1) {
+                    rt.nexts.add("");
+                } else {
+                    rt.nexts.add(rows.get(i + 1));
+                }
             }
         }
         return rt;
